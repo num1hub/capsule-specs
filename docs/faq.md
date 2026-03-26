@@ -23,3 +23,7 @@ To show the difference between structural correctness and trust. A capsule can l
 ## How do I validate linked examples?
 
 Use the known-ID catalog in `examples/example-known-ids.json` when your validator supports link-resolution inputs. The project-hub example is designed to demonstrate graph semantics, not just single-file shape.
+
+## How should a reviewer inspect this repository quickly?
+
+Start with `README.md`, `docs/reviewer-guide.md`, `PUBLIC_PROJECT_PROFILE.json`, and `PUBLIC_RELEASE_METADATA.json`. Those surfaces explain scope, health signals, and where the strongest public evidence lives.

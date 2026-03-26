@@ -1,0 +1,84 @@
+{
+  "profile_version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "repository_identity": {
+    "owner": "n1hub",
+    "name": "specs",
+    "package_name": "@n1hub/specs",
+    "homepage": "https://github.com/n1hub/specs",
+    "license": "Apache-2.0",
+    "stability_phase": "0.x",
+    "primary_maintainer": "egor-n1"
+  },
+  "purpose": {
+    "summary": "Public specification and reference surface for the capsule-first, validator-backed foundations behind N1Hub and CapsuleOS.",
+    "intended_audiences": [
+      "contributors",
+      "integrators",
+      "tool-builders",
+      "reviewers"
+    ],
+    "publishes": [
+      "capsule law docs",
+      "validator-facing docs and OpenAPI",
+      "machine-readable schemas",
+      "public-safe examples",
+      "consumer recipes",
+      "machine-readable provenance and release evidence"
+    ],
+    "does_not_publish": [
+      "private vault contents",
+      "internal operator tooling",
+      "managed-cloud internals",
+      "private prompts or secrets"
+    ]
+  },
+  "surface_summary": {
+    "total_files": 106,
+    "markdown_files": 50,
+    "schema_files": 6,
+    "raw_capsule_files": 4,
+    "example_capsules": 5,
+    "api_example_files": 11,
+    "client_recipe_files": 5,
+    "workflow_files": 1,
+    "issue_templates": 4
+  },
+  "health_signals": {
+    "community_files_present": true,
+    "issue_templates_present": true,
+    "pull_request_template_present": true,
+    "codeowners_present": true,
+    "machine_readable_manifest_present": true,
+    "machine_readable_contract_catalog_present": true,
+    "machine_readable_release_metadata_present": true,
+    "machine_readable_project_profile_present": true,
+    "community_health_doc_present": true,
+    "reviewer_guide_present": true,
+    "single_repo_verify_entrypoint_present": true
+  },
+  "verification_summary": {
+    "entrypoint": "npm run verify:repo",
+    "repo_local_check_count": 11,
+    "upstream_validator_check_count": 5
+  },
+  "reviewer_shortcuts": {
+    "readme": "README.md",
+    "quickstart": "QUICKSTART.md",
+    "reviewer_guide": "docs/reviewer-guide.md",
+    "contract_index": "docs/public-contract-index.md",
+    "release_evidence": "docs/release-evidence.md",
+    "contract_catalog": "PUBLIC_CONTRACT_CATALOG.json",
+    "release_metadata": "PUBLIC_RELEASE_METADATA.json",
+    "project_profile": "PUBLIC_PROJECT_PROFILE.json"
+  },
+  "program_readiness": {
+    "maintainer_owned": true,
+    "public_contract_surface": true,
+    "consumer_examples_present": true,
+    "provenance_tracked": true,
+    "release_evidence_tracked": true,
+    "community_intake_explicit": true,
+    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, or live validator behavior."
+  }
+}

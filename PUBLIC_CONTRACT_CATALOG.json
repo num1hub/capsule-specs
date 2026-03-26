@@ -252,6 +252,21 @@
       ]
     },
     {
+      "id": "schema.project-profile",
+      "path": "schemas/public-project-profile.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:project-profile",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "schema.validator-api-envelopes",
       "path": "schemas/validator-api-envelopes.schema.json",
       "kind": "schema",
@@ -593,6 +608,22 @@
       ]
     },
     {
+      "id": "governance.project-profile",
+      "path": "PUBLIC_PROJECT_PROFILE.json",
+      "kind": "release-metadata",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:project-profile",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.contract-index",
       "path": "docs/public-contract-index.md",
       "kind": "index",
@@ -620,6 +651,22 @@
       "verify_commands": [
         "npm run check:docs",
         "npm run check:community-health",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.reviewer-guide",
+      "path": "docs/reviewer-guide.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:project-profile",
         "npm run check:catalog",
         "npm run check:surface"
       ]
@@ -780,6 +827,21 @@
       ],
       "verify_commands": [
         "npm run check:community-health",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.project-profile-check",
+      "path": "scripts/check-project-profile.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:project-profile",
         "npm run check:catalog",
         "npm run check:surface"
       ]

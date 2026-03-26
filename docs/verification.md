@@ -30,6 +30,8 @@ This executes all repository-local checks in the expected order.
   Verifies Markdown links across the public documentation surface.
 - `npm run check:catalog`
   Verifies `PUBLIC_CONTRACT_CATALOG.json` structure, version parity, and required entries.
+- `npm run check:project-profile`
+  Verifies `PUBLIC_PROJECT_PROFILE.json` against real repo counts, maintainer identity, reviewer shortcuts, and verification surfaces.
 - `npm run check:surface`
   Verifies cross-surface coherence between the catalog, manifest, package scripts, and human-readable index/review files.
 - `npm run check:release`
@@ -50,6 +52,7 @@ Serious public changes should not be considered complete until:
 - `npm run verify:repo` passes
 - changed examples or contracts are rechecked against the live validator where applicable
 - `CHANGELOG.md`, `PUBLIC_RELEASE_REVIEW.md`, `PUBLIC_RELEASE_METADATA.json`, and `PUBLIC_CONTRACT_CATALOG.json` stay aligned
+- `PUBLIC_PROJECT_PROFILE.json` stays aligned with the real repository shape and reviewer-facing docs
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`
 - client recipes stay aligned with the API examples and route docs

@@ -1,0 +1,325 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-project-profile.schema.json",
+  "title": "N1Hub Public Project Profile",
+  "description": "Machine-readable profile of the public repository surface for reviewers, programs, and tooling.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile_version",
+    "reviewed_at",
+    "repository_identity",
+    "purpose",
+    "surface_summary",
+    "health_signals",
+    "verification_summary",
+    "reviewer_shortcuts",
+    "program_readiness"
+  ],
+  "properties": {
+    "profile_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "reviewed_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner",
+        "name",
+        "package_name",
+        "homepage",
+        "license",
+        "stability_phase",
+        "primary_maintainer"
+      ],
+      "properties": {
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "package_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "homepage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stability_phase": {
+          "type": "string",
+          "minLength": 1
+        },
+        "primary_maintainer": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "purpose": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "summary",
+        "intended_audiences",
+        "publishes",
+        "does_not_publish"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intended_audiences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "publishes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "does_not_publish": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "surface_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_files",
+        "markdown_files",
+        "schema_files",
+        "raw_capsule_files",
+        "example_capsules",
+        "api_example_files",
+        "client_recipe_files",
+        "workflow_files",
+        "issue_templates"
+      ],
+      "properties": {
+        "total_files": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "markdown_files": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema_files": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "raw_capsule_files": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "example_capsules": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "api_example_files": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "client_recipe_files": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "workflow_files": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "issue_templates": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "health_signals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "community_files_present",
+        "issue_templates_present",
+        "pull_request_template_present",
+        "codeowners_present",
+        "machine_readable_manifest_present",
+        "machine_readable_contract_catalog_present",
+        "machine_readable_release_metadata_present",
+        "machine_readable_project_profile_present",
+        "community_health_doc_present",
+        "reviewer_guide_present",
+        "single_repo_verify_entrypoint_present"
+      ],
+      "properties": {
+        "community_files_present": {
+          "type": "boolean"
+        },
+        "issue_templates_present": {
+          "type": "boolean"
+        },
+        "pull_request_template_present": {
+          "type": "boolean"
+        },
+        "codeowners_present": {
+          "type": "boolean"
+        },
+        "machine_readable_manifest_present": {
+          "type": "boolean"
+        },
+        "machine_readable_contract_catalog_present": {
+          "type": "boolean"
+        },
+        "machine_readable_release_metadata_present": {
+          "type": "boolean"
+        },
+        "machine_readable_project_profile_present": {
+          "type": "boolean"
+        },
+        "community_health_doc_present": {
+          "type": "boolean"
+        },
+        "reviewer_guide_present": {
+          "type": "boolean"
+        },
+        "single_repo_verify_entrypoint_present": {
+          "type": "boolean"
+        }
+      }
+    },
+    "verification_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entrypoint",
+        "repo_local_check_count",
+        "upstream_validator_check_count"
+      ],
+      "properties": {
+        "entrypoint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repo_local_check_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "upstream_validator_check_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "reviewer_shortcuts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "readme",
+        "quickstart",
+        "reviewer_guide",
+        "contract_index",
+        "release_evidence",
+        "contract_catalog",
+        "release_metadata",
+        "project_profile"
+      ],
+      "properties": {
+        "readme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quickstart": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewer_guide": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contract_index": {
+          "type": "string",
+          "minLength": 1
+        },
+        "release_evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contract_catalog": {
+          "type": "string",
+          "minLength": 1
+        },
+        "release_metadata": {
+          "type": "string",
+          "minLength": 1
+        },
+        "project_profile": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "program_readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "maintainer_owned",
+        "public_contract_surface",
+        "consumer_examples_present",
+        "provenance_tracked",
+        "release_evidence_tracked",
+        "community_intake_explicit",
+        "notes"
+      ],
+      "properties": {
+        "maintainer_owned": {
+          "type": "boolean"
+        },
+        "public_contract_surface": {
+          "type": "boolean"
+        },
+        "consumer_examples_present": {
+          "type": "boolean"
+        },
+        "provenance_tracked": {
+          "type": "boolean"
+        },
+        "release_evidence_tracked": {
+          "type": "boolean"
+        },
+        "community_intake_explicit": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

@@ -93,6 +93,10 @@ assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:community-health'),
   'release metadata must include the community-health verification check'
 );
+assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
+  'release metadata must include the project-profile verification check'
+);
 for (const check of metadata.repo_local_checks || []) {
   assert(check.status === 'pass', `release metadata check ${check.command} must be pass`);
   assert(packageScripts.has(check.command), `release metadata references unknown package script ${check.command}`);

@@ -1,0 +1,51 @@
+# Reviewer Guide
+
+Use this guide when you need to assess the repository quickly as a reviewer, grant program, or external evaluator.
+
+## Fast path
+
+1. Read [`../README.md`](../README.md)
+   Understand what the repository publishes and what it intentionally excludes.
+2. Read [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
+   Get a machine-readable snapshot of maintainer ownership, public-surface counts, and health signals.
+3. Read [`public-contract-index.md`](public-contract-index.md)
+   Jump to the highest-signal public artifacts without browsing the whole tree.
+4. Read [`release-evidence.md`](release-evidence.md)
+   See how provenance, release review, and verification evidence fit together.
+5. Read [`community-health.md`](community-health.md)
+   Confirm that contributor intake and maintainer expectations are explicit.
+
+## Strongest signals
+
+If you only have a few minutes, inspect these surfaces first:
+
+- [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
+- [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
+- [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
+- [`../PUBLIC_RELEASE_REVIEW.md`](../PUBLIC_RELEASE_REVIEW.md)
+- [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
+- [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
+- [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
+
+## What to verify
+
+- the repository has a clear public boundary
+- the maintainer identity is explicit
+- docs, schemas, examples, and release evidence are all present
+- repo-local verification is not symbolic; it is wired to actual files
+- the public surface is usable by both humans and tools
+
+## Practical interpretation
+
+This repository should read as a deliberately maintained public contract surface, not as a bulk export of a private repo. The best indicators are:
+
+- strong front-door docs
+- machine-readable provenance
+- machine-readable contract discovery
+- release metadata and review evidence
+- contributor intake templates
+- client-facing examples and schema-backed API envelopes
+
+## Important boundary
+
+This guide helps reviewers assess the public projection surface only. It does not claim to expose the full private N1Hub runtime or all internal development history.

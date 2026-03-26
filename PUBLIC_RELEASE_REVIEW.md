@@ -11,6 +11,7 @@
 - explicit versioning policy in `VERSIONING.md`
 - machine-readable public contract catalog in `PUBLIC_CONTRACT_CATALOG.json` plus the companion guide in `docs/contract-catalog.md`
 - machine-readable release evidence in `PUBLIC_RELEASE_METADATA.json` plus schema-backed release metadata
+- machine-readable reviewer/program profile in `PUBLIC_PROJECT_PROFILE.json` plus a reviewer guide
 - machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
@@ -49,11 +50,12 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-api-schemas.js`: pass
 - `node scripts/check-client-recipes.js`: pass
 - `node scripts/check-community-health.js`: pass
+- `node scripts/check-project-profile.js`: pass
 - `node scripts/check-doc-links.js`: pass
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `102` files / `102` manifest entries
+- manifest coverage: `106` files / `106` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

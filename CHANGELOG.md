@@ -16,6 +16,7 @@
 - added consumer-facing client recipes, trust-model docs, and recipe verification
 - added machine-readable validator API envelope schema coverage plus repo-local schema validation for public API examples
 - added community-health docs, intake templates, and automated verification for contributor-facing surfaces
+- added reviewer guide and machine-readable public project profile for external evaluation and program readiness
 
 ## 0.1.0 - 2026-03-26
 

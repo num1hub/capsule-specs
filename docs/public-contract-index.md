@@ -11,6 +11,8 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../VERSIONING.md`](../VERSIONING.md)
 - [`contract-catalog.md`](contract-catalog.md)
 - [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
+- [`reviewer-guide.md`](reviewer-guide.md)
+- [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
 - [`release-evidence.md`](release-evidence.md)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
 - [`repository-scope.md`](repository-scope.md)
@@ -40,6 +42,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
 - [`../schemas/neuro-concentrate.schema.json`](../schemas/neuro-concentrate.schema.json)
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
+- [`../schemas/public-project-profile.schema.json`](../schemas/public-project-profile.schema.json)
 
 ## Examples
 
@@ -56,4 +59,5 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../SOURCE_MANIFEST.json`](../SOURCE_MANIFEST.json)
 - [`../schemas/public-contract-catalog.schema.json`](../schemas/public-contract-catalog.schema.json)
 - [`../schemas/public-release-metadata.schema.json`](../schemas/public-release-metadata.schema.json)
+- [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
 - [`../PUBLIC_RELEASE_REVIEW.md`](../PUBLIC_RELEASE_REVIEW.md)

@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 102,
-    "manifest_entries": 102
+    "files": 106,
+    "manifest_entries": 106
   },
   "surface_summary": {
-    "catalog_entries": 54,
+    "catalog_entries": 58,
     "example_capsules": 5,
     "api_example_files": 11,
-    "markdown_files": 49
+    "markdown_files": 50
   },
   "repo_local_checks": [
     {
@@ -46,6 +46,10 @@
     },
     {
       "command": "npm run check:catalog",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:project-profile",
       "status": "pass"
     },
     {
@@ -88,6 +92,7 @@
     "validator API envelope schemas are public projections aligned to OpenAPI and curated examples, but the live validator remains the stronger source of truth for runtime-only behavior",
     "client recipes assume a compatible deployed validator base URL and bearer-token auth model rather than representing a guaranteed hosted endpoint",
     "local hidden Codex state is excluded via .gitignore and must remain outside any public commit",
-    "community intake is public and explicit, but maintainer responsiveness and future issue volume still depend on actual GitHub operation after publication"
+    "community intake is public and explicit, but maintainer responsiveness and future issue volume still depend on actual GitHub operation after publication",
+    "PUBLIC_PROJECT_PROFILE.json is a concise reviewer/program summary and can lag behind the stronger source surfaces if maintainers stop updating it together with release evidence"
   ]
 }

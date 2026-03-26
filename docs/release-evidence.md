@@ -17,6 +17,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Structured release evidence for tooling, audits, and future automation.
 - [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
   Structured map of the public contract surface and its verification paths.
+- [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
+  Machine-readable reviewer/program profile for fast external evaluation.
 - [`../schemas/public-release-metadata.schema.json`](../schemas/public-release-metadata.schema.json)
   JSON Schema for the release-metadata file.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
@@ -31,6 +33,8 @@ The client recipes and trust-model docs do not replace release evidence, but the
 The API envelope schema and its dedicated verification script strengthen that claim by keeping the public HTTP example layer machine-checkable.
 
 The community-health doc and its dedicated verification script strengthen the repository's OSS maintainership surface by keeping contributor intake explicit and reviewable.
+
+The reviewer guide and public project profile strengthen external evaluation by making repository maturity legible without scraping the whole tree.
 
 ## Release discipline
 
