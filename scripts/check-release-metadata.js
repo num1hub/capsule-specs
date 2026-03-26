@@ -85,6 +85,10 @@ assert(
 );
 
 assert(Array.isArray(metadata.repo_local_checks) && metadata.repo_local_checks.length >= 1, 'release metadata must define repo_local_checks');
+assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:api-schemas'),
+  'release metadata must include the API schema verification check'
+);
 for (const check of metadata.repo_local_checks || []) {
   assert(check.status === 'pass', `release metadata check ${check.command} must be pass`);
   assert(packageScripts.has(check.command), `release metadata references unknown package script ${check.command}`);

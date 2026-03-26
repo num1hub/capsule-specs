@@ -19,10 +19,16 @@ This repository keeps release evidence in both human-readable and machine-readab
   Structured map of the public contract surface and its verification paths.
 - [`../schemas/public-release-metadata.schema.json`](../schemas/public-release-metadata.schema.json)
   JSON Schema for the release-metadata file.
+- [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
+  JSON Schema bundle for the public validator request and response envelope layer.
 
 ## Why this split exists
 
 The Markdown review surfaces are optimized for people. The JSON surfaces are optimized for consistency checks, future generators, and external programs that want structured evidence instead of scraped prose.
+
+The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable.
+
+The API envelope schema and its dedicated verification script strengthen that claim by keeping the public HTTP example layer machine-checkable.
 
 ## Release discipline
 

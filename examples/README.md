@@ -28,3 +28,5 @@ Use them to:
   JSON-array known-ID catalog for link-aware validation.
 - `api/`
   Validator HTTP payload examples for integrators and client builders.
+- `client/`
+  Minimal curl and Node recipes for external consumers.

@@ -28,6 +28,8 @@ The Markdown docs are optimized for people. The catalog is optimized for machine
 - future tooling can read the catalog without scraping prose docs
 - reviewers can correlate route docs, examples, and verification commands from one machine-readable source
 - release tooling can connect the catalog to `PUBLIC_RELEASE_METADATA.json` without scraping prose docs
+- consumer recipes and trust-layer docs can be tracked as first-class public surfaces instead of informal extras
+- schema-backed API envelope artifacts can be tracked as first-class machine-readable surfaces instead of only as examples
 
 ## Important boundary
 

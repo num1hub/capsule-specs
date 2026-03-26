@@ -18,8 +18,11 @@ Welcome to the public N1Hub specification surface.
 - Read [`docs/schema-reference.md`](docs/schema-reference.md).
 - Read [`docs/validator.md`](docs/validator.md) and [`docs/openapi.md`](docs/openapi.md).
 - Read [`docs/api-envelopes.md`](docs/api-envelopes.md) and [`docs/compatibility.md`](docs/compatibility.md).
+- Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need a machine-readable validator envelope bundle.
 - Read [`docs/integration-guide.md`](docs/integration-guide.md) and [`VERSIONING.md`](VERSIONING.md) before treating the repo as an integration dependency.
 - Read [`docs/route-reference.md`](docs/route-reference.md) for the route-by-route validator map.
+- Read [`docs/client-recipes.md`](docs/client-recipes.md) and inspect [`examples/client/`](examples/client/) for copyable consumer snippets.
+- Read [`docs/trust-model.md`](docs/trust-model.md) before treating prose examples as stronger than schemas or the live validator.
 - Read [`docs/contract-catalog.md`](docs/contract-catalog.md) and inspect [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json) if you need a machine-readable public surface map.
 - Read [`docs/release-evidence.md`](docs/release-evidence.md) and inspect [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) if you need structured release evidence.
 - Read [`docs/source-materials.md`](docs/source-materials.md) so projection provenance stays explicit.
@@ -39,3 +42,4 @@ Welcome to the public N1Hub specification surface.
 - Run `npm run verify:repo` and refresh [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md) before proposing a release-facing change.
 - Read [`docs/verification.md`](docs/verification.md) if you need to interpret a failing repo-local check.
 - Keep [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) and [`NOTICE`](NOTICE) aligned with release-facing changes.
+- Keep client recipes aligned with API example payloads and route docs when HTTP surfaces change.

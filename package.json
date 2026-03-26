@@ -28,10 +28,12 @@
     "audit:public-surface": "node scripts/audit-public-surface.js",
     "check:examples": "node scripts/check-example-contracts.js",
     "check:api-examples": "node scripts/check-api-examples.js",
+    "check:api-schemas": "node scripts/check-api-schemas.js",
+    "check:client-recipes": "node scripts/check-client-recipes.js",
     "check:docs": "node scripts/check-doc-links.js",
     "check:catalog": "node scripts/check-contract-catalog.js",
     "check:surface": "node scripts/check-surface-coherence.js",
     "check:release": "node scripts/check-release-metadata.js",
-    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:docs && npm run check:catalog && npm run check:surface && npm run check:release"
+    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:api-schemas && npm run check:client-recipes && npm run check:docs && npm run check:catalog && npm run check:surface && npm run check:release"
   }
 }

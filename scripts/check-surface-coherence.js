@@ -41,7 +41,10 @@ const expectedPublicIndexLinks = [
   'release-evidence.md',
   '../PUBLIC_RELEASE_METADATA.json',
   'route-reference.md',
-  'integration-guide.md'
+  'integration-guide.md',
+  '../schemas/validator-api-envelopes.schema.json',
+  'client-recipes.md',
+  'trust-model.md'
 ];
 
 for (const needle of expectedPublicIndexLinks) {
@@ -50,13 +53,20 @@ for (const needle of expectedPublicIndexLinks) {
 
 assert(readme.includes('PUBLIC_CONTRACT_CATALOG.json'), 'README.md must mention PUBLIC_CONTRACT_CATALOG.json');
 assert(readme.includes('PUBLIC_RELEASE_METADATA.json'), 'README.md must mention PUBLIC_RELEASE_METADATA.json');
+assert(readme.includes('schemas/validator-api-envelopes.schema.json'), 'README.md must mention schemas/validator-api-envelopes.schema.json');
 assert(readme.includes('NOTICE'), 'README.md must mention NOTICE');
+assert(readme.includes('examples/client/'), 'README.md must mention examples/client/');
 assert(readme.includes('npm run verify:repo'), 'README.md must mention npm run verify:repo');
 assert(releaseReview.includes('check-contract-catalog.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-contract-catalog.js');
 assert(releaseReview.includes('check-release-metadata.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-release-metadata.js');
+assert(releaseReview.includes('check-api-schemas.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-api-schemas.js');
+assert(releaseReview.includes('check-client-recipes.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-client-recipes.js');
 assert(verificationDoc.includes('check:surface'), 'docs/verification.md must explain check:surface');
 assert(verificationDoc.includes('check:release'), 'docs/verification.md must explain check:release');
+assert(verificationDoc.includes('check:api-schemas'), 'docs/verification.md must explain check:api-schemas');
+assert(verificationDoc.includes('check:client-recipes'), 'docs/verification.md must explain check:client-recipes');
 assert(releaseEvidenceDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'docs/release-evidence.md must mention PUBLIC_RELEASE_METADATA.json');
+assert(releaseEvidenceDoc.includes('validator-api-envelopes.schema.json'), 'docs/release-evidence.md must mention validator-api-envelopes.schema.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

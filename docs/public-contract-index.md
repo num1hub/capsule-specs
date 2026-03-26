@@ -16,6 +16,8 @@ This index maps the highest-signal public surfaces in the repository.
 - [`repository-scope.md`](repository-scope.md)
 - [`compatibility.md`](compatibility.md)
 - [`integration-guide.md`](integration-guide.md)
+- [`client-recipes.md`](client-recipes.md)
+- [`trust-model.md`](trust-model.md)
 
 ## Core law
 
@@ -36,12 +38,14 @@ This index maps the highest-signal public surfaces in the repository.
 - [`schema-reference.md`](schema-reference.md)
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
 - [`../schemas/neuro-concentrate.schema.json`](../schemas/neuro-concentrate.schema.json)
+- [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
 
 ## Examples
 
 - [`examples.md`](examples.md)
 - [`../examples/README.md`](../examples/README.md)
 - [`../examples/api/README.md`](../examples/api/README.md)
+- [`../examples/client/README.md`](../examples/client/README.md)
 
 ## Provenance and governance
 

@@ -6,6 +6,7 @@ This guide shows the safest path for building against the public N1Hub specifica
 
 - read [`schema-reference.md`](schema-reference.md)
 - inspect [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
+- inspect [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
 - inspect [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
 
 The schemas and OpenAPI artifacts should shape your parser, validator client, and payload expectations.
@@ -42,7 +43,9 @@ The linked example passes only when known-ID resolution is active.
 Read:
 
 - [`api-envelopes.md`](api-envelopes.md)
+- [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
 - [`../examples/api/`](../examples/api/)
+- [`client-recipes.md`](client-recipes.md)
 
 These show how the public examples appear at the validator HTTP boundary for `validate`, `batch`, and `fix` flows.
 
@@ -52,4 +55,4 @@ This repository is a public projection surface. When edge-case semantics matter:
 
 - prefer the live validator over prose-only inference
 - prefer the schema and OpenAPI artifacts over informal assumptions
-- check [`compatibility.md`](compatibility.md) and [`../VERSIONING.md`](../VERSIONING.md) before depending on a detail
+- check [`compatibility.md`](compatibility.md), [`trust-model.md`](trust-model.md), and [`../VERSIONING.md`](../VERSIONING.md) before depending on a detail

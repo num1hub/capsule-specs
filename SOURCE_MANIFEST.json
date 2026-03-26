@@ -2,14 +2,16 @@
   "README.md": {
     "source_paths": [
       "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
-      "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json"
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
   },
   "QUICKSTART.md": {
     "source_paths": [
-      "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json"
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "derived",
     "notes": "Root-level fast entry path for public contributors."
@@ -17,7 +19,8 @@
   "ONBOARDING.md": {
     "source_paths": [
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.onboarding.v1.json",
-      "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json"
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "derived",
     "notes": "Root-level onboarding guide adapted to the narrower public repository."
@@ -53,7 +56,9 @@
     "notes": "Apache-2.0 attribution and notice surface for redistribution and review."
   },
   "RELEASING.md": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
     "transformation_type": "generated",
     "notes": "Release checklist for keeping docs, examples, and provenance aligned."
   },
@@ -111,7 +116,9 @@
     "notes": "Repository hygiene rules, including exclusion of local Codex state."
   },
   "package.json": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+    ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface."
   },
@@ -203,7 +210,8 @@
   "docs/schema-reference.md": {
     "source_paths": [
       "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json",
-      "/home/n1/n1hub.com/docs/validator.md"
+      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "derived",
     "notes": "Field-level capsule schema guide."
@@ -221,7 +229,8 @@
       "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
       "/home/n1/n1hub.com/docs/validator.md",
       "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Public integrator guide to validator HTTP envelopes and sample payloads."
@@ -242,10 +251,29 @@
       "/home/n1/codex-workspace/examples/example-project-hub.capsule.json",
       "/home/n1/codex-workspace/examples/example-known-ids.json",
       "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
-      "/home/n1/n1hub.com/docs/validator.md"
+      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Recommended integration path across schema, examples, graph validation, and HTTP envelopes."
+  },
+  "docs/client-recipes.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Consumer-oriented curl and Node usage guide for the validator HTTP surface."
+  },
+  "docs/trust-model.md": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Source-of-truth hierarchy across validator behavior, schemas, prose docs, and illustrative examples."
   },
   "docs/examples.md": {
     "source_paths": [
@@ -271,7 +299,9 @@
     "notes": "Short answers to scope and validation questions for the public repository."
   },
   "docs/public-contract-index.md": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
   },
@@ -279,7 +309,8 @@
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_RELEASE_REVIEW.md",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
-      "/home/n1/codex-workspace/VERSIONING.md"
+      "/home/n1/codex-workspace/VERSIONING.md",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
@@ -289,8 +320,12 @@
       "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/scripts/check-example-contracts.js",
       "/home/n1/codex-workspace/scripts/check-api-examples.js",
+      "/home/n1/codex-workspace/scripts/check-client-recipes.js",
       "/home/n1/codex-workspace/scripts/check-doc-links.js",
-      "/home/n1/codex-workspace/scripts/check-contract-catalog.js"
+      "/home/n1/codex-workspace/scripts/check-contract-catalog.js",
+      "/home/n1/codex-workspace/scripts/check-release-metadata.js",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects."
@@ -299,7 +334,8 @@
     "source_paths": [
       "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json",
-      "/home/n1/n1hub.com/docs/validator.md"
+      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Projection and provenance summary for the public-safe source classes."
@@ -335,7 +371,9 @@
     "notes": "JSON Schema describing the machine-readable release-evidence metadata."
   },
   "schemas/README.md": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
     "transformation_type": "generated",
     "notes": "Directory guide for schema artifacts."
   },
@@ -388,10 +426,18 @@
   },
   "examples/api/README.md": {
     "source_paths": [
-      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for validator HTTP request and response examples."
+  },
+  "examples/client/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/client-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for curl and Node consumer recipe snippets."
   },
   "examples/api/validate-request.single.json": {
     "source_paths": [
@@ -480,6 +526,41 @@
     "transformation_type": "generated",
     "notes": "Small gate-definition response sample for the validator gates route."
   },
+  "examples/client/curl-validate-single.sh": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Shell recipe for POST /api/validate using the public single-request example."
+  },
+  "examples/client/curl-validate-batch.sh": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Shell recipe for POST /api/validate/batch using the public batch-request example."
+  },
+  "examples/client/curl-validate-fix.sh": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Shell recipe for POST /api/validate/fix using the public fix-request example."
+  },
+  "examples/client/node-validate-single.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal Node fetch recipe for POST /api/validate."
+  },
+  "examples/client/node-validate-batch.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal Node fetch recipe for POST /api/validate/batch."
+  },
   "OPEN_CORE_PLAN.md": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -491,24 +572,34 @@
     "notes": "Provenance index for every public file in the repository."
   },
   "PUBLIC_CONTRACT_CATALOG.json": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+    ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths."
   },
   "PUBLIC_RELEASE_METADATA.json": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+    ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
   },
   "PUBLIC_RELEASE_REVIEW.md": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+    ],
     "transformation_type": "generated",
     "notes": "Public-release review and validation summary."
   },
   "docs/contract-catalog.md": {
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
-      "/home/n1/codex-workspace/VERSIONING.md"
+      "/home/n1/codex-workspace/VERSIONING.md",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable explanation of the machine-readable public contract catalog."
@@ -528,23 +619,34 @@
     "transformation_type": "generated",
     "notes": "Repository-local checks for validator HTTP request and response examples."
   },
+  "scripts/check-client-recipes.js": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository-local checks for curl and Node consumer recipe snippets."
+  },
   "scripts/check-doc-links.js": {
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Repository-local Markdown link integrity checks for the public docs surface."
   },
   "scripts/check-contract-catalog.js": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
     "transformation_type": "generated",
     "notes": "Repository-local validation for the machine-readable public contract catalog."
   },
   "scripts/check-surface-coherence.js": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
     "transformation_type": "generated",
     "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts."
   },
   "scripts/check-release-metadata.js": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+    ],
     "transformation_type": "generated",
     "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence."
   },
@@ -587,5 +689,44 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Directory guide for curated raw public capsules."
+  },
+  "schemas/validator-api-envelopes.schema.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Machine-readable public schema bundle for validator request and response envelopes."
+  },
+  "scripts/check-api-schemas.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local schema coverage check for public validator API example payloads."
   }
 }

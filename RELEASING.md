@@ -13,8 +13,10 @@ This repository is small, but releases should still be explicit and reviewable.
 7. Review [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) when release evidence changed.
 8. Review [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md).
 9. Review [`docs/verification.md`](docs/verification.md) if a repo-local check changed or a new check was added.
-10. Keep [`NOTICE`](NOTICE) accurate when attribution or legal surface changed.
-11. Create a release tag and short release notes.
+10. Review [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) when API example files or route envelope assumptions changed.
+11. Keep [`NOTICE`](NOTICE) accurate when attribution or legal surface changed.
+12. Recheck [`examples/client/`](examples/client/) and [`docs/client-recipes.md`](docs/client-recipes.md) when route or auth assumptions changed.
+13. Create a release tag and short release notes.
 
 ## Release posture
 

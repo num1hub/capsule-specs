@@ -17,12 +17,14 @@ Use this guide when you want the shortest safe entry into the repository.
 
 - Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
 - Inspect [`schemas/neuro-concentrate.schema.json`](schemas/neuro-concentrate.schema.json).
+- Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json).
 - Inspect [`openapi/validate.openapi.json`](openapi/validate.openapi.json).
 - Read [`docs/api-envelopes.md`](docs/api-envelopes.md) and the payloads under [`examples/api/`](examples/api/).
 - Read [`docs/integration-guide.md`](docs/integration-guide.md) before wiring a real client or parser.
 - Skim [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json) if you need a machine-readable map of stable surfaces.
 - Read [`docs/route-reference.md`](docs/route-reference.md) if you want a route-by-route validator view.
 - Inspect [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) if you want machine-readable release evidence.
+- Read [`docs/client-recipes.md`](docs/client-recipes.md) if you want to call the validator quickly from curl or Node.
 
 ## 4. Inspect examples
 
@@ -36,3 +38,4 @@ Use this guide when you want the shortest safe entry into the repository.
 - Run `npm run verify:repo` before publishing a serious change to the public surface.
 - Read [`docs/verification.md`](docs/verification.md) if you need to understand what each repo-local check protects.
 - Read [`NOTICE`](NOTICE) if you need the Apache-2 attribution surface for redistribution.
+- Read [`docs/trust-model.md`](docs/trust-model.md) if you need the source-of-truth hierarchy before integrating.

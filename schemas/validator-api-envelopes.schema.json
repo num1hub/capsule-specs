@@ -1,0 +1,487 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/validator-api-envelopes.schema.json",
+  "title": "N1Hub Validator API Envelopes",
+  "description": "Public JSON Schema bundle for validator-facing request and response envelopes published in the N1Hub specs repository.",
+  "$defs": {
+    "validationOptions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "skipG16": {
+          "type": "boolean"
+        },
+        "allowRefutes": {
+          "type": "boolean"
+        },
+        "existingIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "validatorIssue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gate",
+        "path",
+        "message"
+      ],
+      "properties": {
+        "gate": {
+          "type": "string",
+          "pattern": "^G\\d{2}$"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "warningItem": {
+      "type": "object"
+    },
+    "validateSingleRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capsule",
+        "options",
+        "autoFix"
+      ],
+      "properties": {
+        "capsule": {
+          "$ref": "./capsule-schema.json"
+        },
+        "options": {
+          "$ref": "#/$defs/validationOptions"
+        },
+        "autoFix": {
+          "type": "boolean"
+        }
+      }
+    },
+    "validateBatchRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capsules",
+        "options"
+      ],
+      "properties": {
+        "capsules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "./capsule-schema.json"
+          }
+        },
+        "options": {
+          "$ref": "#/$defs/validationOptions"
+        }
+      }
+    },
+    "validateFixRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capsule",
+        "options"
+      ],
+      "properties": {
+        "capsule": {
+          "$ref": "./capsule-schema.json"
+        },
+        "options": {
+          "$ref": "#/$defs/validationOptions"
+        }
+      }
+    },
+    "validatePassResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "valid",
+        "errors",
+        "warnings",
+        "computedHash",
+        "appliedFixes"
+      ],
+      "properties": {
+        "valid": {
+          "const": true
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/validatorIssue"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/warningItem"
+          }
+        },
+        "computedHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{128}$"
+        },
+        "appliedFixes": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "validateFailResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "valid",
+        "errors",
+        "warnings",
+        "computedHash"
+      ],
+      "properties": {
+        "valid": {
+          "const": false
+        },
+        "errors": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/validatorIssue"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/warningItem"
+          }
+        },
+        "computedHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{128}$"
+        }
+      }
+    },
+    "validateBatchResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capsuleId",
+        "valid",
+        "errors",
+        "warnings",
+        "computedHash"
+      ],
+      "properties": {
+        "capsuleId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "valid": {
+          "type": "boolean"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/validatorIssue"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/warningItem"
+          }
+        },
+        "computedHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{128}$"
+        }
+      }
+    },
+    "validateBatchResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "summary",
+        "results"
+      ],
+      "properties": {
+        "summary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "total",
+            "valid",
+            "invalid",
+            "withWarnings",
+            "totalErrors",
+            "totalWarnings"
+          ],
+          "properties": {
+            "total": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "valid": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "invalid": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "withWarnings": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "totalErrors": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "totalWarnings": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "results": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/validateBatchResult"
+          }
+        }
+      }
+    },
+    "validateFixResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "valid",
+        "errors",
+        "warnings",
+        "computedHash",
+        "fixedCapsule"
+      ],
+      "properties": {
+        "valid": {
+          "const": true
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/validatorIssue"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/warningItem"
+          }
+        },
+        "computedHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{128}$"
+        },
+        "fixedCapsule": {
+          "$ref": "./capsule-schema.json"
+        }
+      }
+    },
+    "gateDescriptor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "severity",
+        "autoFixable"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^G\\d{2}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "error",
+            "warning"
+          ]
+        },
+        "autoFixable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "gatesResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gates"
+      ],
+      "properties": {
+        "gates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/gateDescriptor"
+          }
+        }
+      }
+    },
+    "statsRecentItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capsuleId",
+        "valid",
+        "timestamp"
+      ],
+      "properties": {
+        "capsuleId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "valid": {
+          "type": "boolean"
+        },
+        "timestamp": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "statsTrendItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bucket",
+        "passed",
+        "failed"
+      ],
+      "properties": {
+        "bucket": {
+          "type": "string",
+          "minLength": 1
+        },
+        "passed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "statsGateItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gate",
+        "count"
+      ],
+      "properties": {
+        "gate": {
+          "type": "string",
+          "pattern": "^G\\d{2}$"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "statsResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total",
+        "passed",
+        "failed",
+        "warned",
+        "passRate",
+        "recent",
+        "trend",
+        "gates"
+      ],
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "passed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "warned": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "passRate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "recent": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/statsRecentItem"
+          }
+        },
+        "trend": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/statsTrendItem"
+          }
+        },
+        "gates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/statsGateItem"
+          }
+        }
+      }
+    },
+    "simpleErrorResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "error"
+      ],
+      "properties": {
+        "error": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

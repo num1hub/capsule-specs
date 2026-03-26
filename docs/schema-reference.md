@@ -2,6 +2,15 @@
 
 This document summarizes the public capsule schema at a field level.
 
+## Related machine-readable schemas
+
+- [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
+  Canonical public schema for the five-element capsule artifact.
+- [`../schemas/neuro-concentrate.schema.json`](../schemas/neuro-concentrate.schema.json)
+  Public schema for the semantic summary layer.
+- [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
+  Public schema bundle for validator request and response envelopes.
+
 ## Root shape
 
 Every capsule contains exactly five roots:

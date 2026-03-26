@@ -14,6 +14,7 @@ This repository is assembled from public-safe source surfaces rather than from a
 - live validator docs and OpenAPI material
 - synthetic public examples derived from safe example fixtures rather than copied from private vault state
 - API request and response examples derived from the published OpenAPI contract plus live validator outputs on the public example set
+- validator API envelope schemas derived from the public OpenAPI, the API examples, and the published capsule schema
 
 ## Projection strategy
 
@@ -24,6 +25,8 @@ This repository is assembled from public-safe source surfaces rather than from a
 - public contract discovery is tracked in [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
 - repo-local verification meaning is tracked in [`verification.md`](verification.md)
 - machine-readable release evidence is tracked in [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
+- machine-readable API envelope coverage is tracked in [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
+- consumer snippets derive from the public API example payloads rather than from private runtime secrets or internal deploy tooling
 
 ## Why this matters
 

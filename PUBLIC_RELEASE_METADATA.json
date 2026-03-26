@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 87,
-    "manifest_entries": 87
+    "files": 98,
+    "manifest_entries": 98
   },
   "surface_summary": {
-    "catalog_entries": 35,
+    "catalog_entries": 46,
     "example_capsules": 5,
     "api_example_files": 11,
-    "markdown_files": 43
+    "markdown_files": 46
   },
   "repo_local_checks": [
     {
@@ -26,6 +26,14 @@
     },
     {
       "command": "npm run check:api-examples",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:api-schemas",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:client-recipes",
       "status": "pass"
     },
     {
@@ -73,6 +81,8 @@
     "some source materials come from a public-oriented vault snapshot rather than from a standalone published repository",
     "JSON Schema files are public projections aligned to live validator behavior, but the validator remains the stronger source of truth for edge-case semantics",
     "API response examples are illustrative contract samples, not recorded live HTTP captures from a deployed public service",
+    "validator API envelope schemas are public projections aligned to OpenAPI and curated examples, but the live validator remains the stronger source of truth for runtime-only behavior",
+    "client recipes assume a compatible deployed validator base URL and bearer-token auth model rather than representing a guaranteed hosted endpoint",
     "local hidden Codex state is excluded via .gitignore and must remain outside any public commit"
   ]
 }

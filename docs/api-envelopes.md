@@ -2,6 +2,8 @@
 
 This repository publishes the validator OpenAPI document and a small set of concrete API payload examples for integrators.
 
+The request and response examples are also covered by [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json), which gives tooling a machine-readable contract bundle for the public envelope layer.
+
 ## Covered example files
 
 - [`../examples/api/validate-request.single.json`](../examples/api/validate-request.single.json)
@@ -34,7 +36,8 @@ This repository publishes the validator OpenAPI document and a small set of conc
 - `POST /api/validate/batch`
   Uses `{ capsules, options }`.
 - `POST /api/validate/fix`
-  Uses `{ capsule, options, policy }`.
+  The current public example surface uses `{ capsule, options }`.
+  Policy variants may exist upstream, but the public repository only schema-covers the documented example envelope.
 
 The public repo currently includes concrete examples for the first two request envelopes and for common response shapes. That keeps the reference surface useful without trying to mirror every internal runtime path.
 
@@ -43,3 +46,5 @@ The `fix` response sample is intentionally illustrative: it is derived from the 
 ## Why this matters
 
 OpenAPI alone tells tooling what shapes exist. Example envelopes show human readers and downstream builders how those shapes feel in real use, especially when validator options or mixed batch outcomes are involved.
+
+The dedicated API envelope schema keeps these example files machine-readable without forcing consumers to infer shape rules from prose alone.

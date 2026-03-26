@@ -10,9 +10,10 @@
 - explicit versioning policy in `VERSIONING.md`
 - machine-readable public contract catalog in `PUBLIC_CONTRACT_CATALOG.json` plus the companion guide in `docs/contract-catalog.md`
 - machine-readable release evidence in `PUBLIC_RELEASE_METADATA.json` plus schema-backed release metadata
-- machine-readable schemas
+- machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
+- client recipes and trust-model docs for external consumers
 - raw public law capsules
 - live validator OpenAPI reference
 
@@ -44,11 +45,13 @@ Repository-local audit on 2026-03-26:
 - `node scripts/audit-public-surface.js`: pass
 - `node scripts/check-example-contracts.js`: pass
 - `node scripts/check-api-examples.js`: pass
+- `node scripts/check-api-schemas.js`: pass
+- `node scripts/check-client-recipes.js`: pass
 - `node scripts/check-doc-links.js`: pass
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `87` files / `87` manifest entries
+- manifest coverage: `98` files / `98` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -63,4 +66,6 @@ Upstream validator checks on 2026-03-26:
 - some source materials come from a public-oriented vault snapshot rather than from a standalone published repository
 - JSON Schema files are public projections aligned to live validator behavior, but the validator remains the stronger source of truth for edge-case semantics
 - API response examples are illustrative contract samples, not recorded live HTTP captures from a deployed public service
+- validator API envelope schemas are public projections aligned to OpenAPI and curated examples, but the live validator remains the stronger source of truth for runtime-only behavior
+- client recipes assume a compatible deployed validator base URL and bearer-token auth model rather than representing a guaranteed hosted endpoint
 - `/home/n1/codex-workspace` still contains local hidden Codex state (`.codex/`, `.codexignore`), which is excluded via `.gitignore` and should remain out of any public commit

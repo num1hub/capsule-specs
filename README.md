@@ -8,7 +8,7 @@ This repository is intentionally narrow. It does not try to expose the full priv
 - the 16 validation gates
 - canonical relation types
 - validator-facing docs and OpenAPI
-- JSON schema and neuro-concentrate schema
+- JSON schema, validator API envelope schema, and neuro-concentrate schema
 - minimal example capsules
 - a small curated capsule source set
 
@@ -25,6 +25,7 @@ This repository is that home.
 - [`docs/overview.md`](docs/overview.md) for the public boundary
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
+- [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) for machine-readable validator envelope contracts
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
 - [`docs/route-reference.md`](docs/route-reference.md) for per-route sample mapping
 - [`docs/public-contract-index.md`](docs/public-contract-index.md) for a complete public surface map
@@ -42,11 +43,13 @@ This repository is that home.
 - `docs/`
   Public human-readable reference docs.
 - `schemas/`
-  Machine-readable JSON Schema artifacts for capsules.
+  Machine-readable JSON Schema artifacts for capsules and validator API envelopes.
 - `examples/`
   Minimal example capsules for documentation and validation.
 - `examples/api/`
   Concrete validator request and response payload examples.
+- `examples/client/`
+  Minimal curl and Node recipes for external consumers.
 - `openapi/`
   OpenAPI reference for validator-facing HTTP surfaces.
 - `capsules/`
@@ -64,8 +67,10 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - a public-release review in [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md)
 - repo-local verification via `npm run verify:repo`
 - local validator-backed example checks
+- machine-readable validator API envelope schemas backed by repo-local validation
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
 - API payload examples under [`examples/api/`](examples/api/)
+- consumer recipes under [`examples/client/`](examples/client/)
 - route-level reference docs under [`docs/route-reference.md`](docs/route-reference.md)
 - a release checklist in [`RELEASING.md`](RELEASING.md)
 - Apache-2 attribution guidance in [`NOTICE`](NOTICE)
@@ -88,9 +93,10 @@ Maintainer and review policy:
 1. Read [`docs/overview.md`](docs/overview.md).
 2. Read [`docs/5-element-law.md`](docs/5-element-law.md) and [`docs/16-gates.md`](docs/16-gates.md).
 3. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
-4. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-5. Review the raw capsule sources in [`capsules/`](capsules/).
-6. Run `npm run verify:repo` for the repository-local integrity checks.
+4. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
+5. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+6. Review the raw capsule sources in [`capsules/`](capsules/).
+7. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

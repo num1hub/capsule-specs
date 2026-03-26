@@ -40,4 +40,5 @@ This page maps each published validator route to the strongest public example su
 
 - the route contracts live in OpenAPI and remain stronger than prose summaries
 - some response samples are illustrative rather than deployed HTTP captures
+- consumer snippets live in [`client-recipes.md`](client-recipes.md) and [`../examples/client/`](../examples/client/)
 - when route behavior changes, update this map, the OpenAPI file, the API examples, and the contract catalog together

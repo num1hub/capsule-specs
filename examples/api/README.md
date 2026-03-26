@@ -35,3 +35,5 @@ Use these files to:
 - prototype integrations without opening the full private runtime repo
 - test serializers and API clients against public-safe payloads
 - compare direct validation, batch validation, and fix-route shapes side by side
+
+The example set is schema-covered by [`../../schemas/validator-api-envelopes.schema.json`](../../schemas/validator-api-envelopes.schema.json).

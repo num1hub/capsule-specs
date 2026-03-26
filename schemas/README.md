@@ -12,6 +12,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable public contract catalog.
 - `public-release-metadata.schema.json`
   JSON Schema for the machine-readable release-evidence file.
+- `validator-api-envelopes.schema.json`
+  JSON Schema bundle for validator request and response envelopes published under `examples/api/`.
 
 ## Notes
 
