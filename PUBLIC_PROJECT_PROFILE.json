@@ -24,7 +24,8 @@
       "machine-readable schemas",
       "public-safe examples",
       "consumer recipes",
-      "machine-readable provenance and release evidence"
+      "machine-readable provenance and release evidence",
+      "machine-readable reviewer and capability summaries"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -34,9 +35,9 @@
     ]
   },
   "surface_summary": {
-    "total_files": 106,
-    "markdown_files": 50,
-    "schema_files": 6,
+    "total_files": 110,
+    "markdown_files": 51,
+    "schema_files": 7,
     "raw_capsule_files": 4,
     "example_capsules": 5,
     "api_example_files": 11,
@@ -53,19 +54,21 @@
     "machine_readable_contract_catalog_present": true,
     "machine_readable_release_metadata_present": true,
     "machine_readable_project_profile_present": true,
+    "machine_readable_capability_matrix_present": true,
     "community_health_doc_present": true,
     "reviewer_guide_present": true,
     "single_repo_verify_entrypoint_present": true
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 11,
+    "repo_local_check_count": 12,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
     "readme": "README.md",
     "quickstart": "QUICKSTART.md",
     "reviewer_guide": "docs/reviewer-guide.md",
+    "capability_matrix": "PUBLIC_CAPABILITY_MATRIX.json",
     "contract_index": "docs/public-contract-index.md",
     "release_evidence": "docs/release-evidence.md",
     "contract_catalog": "PUBLIC_CONTRACT_CATALOG.json",

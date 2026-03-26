@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-capability-matrix.schema.json",
+  "title": "N1Hub Public Capability Matrix",
+  "description": "Machine-readable matrix of what an external reader, contributor, integrator, or reviewer can do with the public N1Hub specs repository.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "matrix_version",
+    "reviewed_at",
+    "capabilities"
+  ],
+  "properties": {
+    "matrix_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "reviewed_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "audience",
+          "readiness",
+          "outcome",
+          "strongest_surfaces",
+          "supporting_surfaces",
+          "verify_commands"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "audience": {
+            "type": "string",
+            "enum": [
+              "contributors",
+              "integrators",
+              "tool-builders",
+              "reviewers"
+            ]
+          },
+          "readiness": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "illustrative",
+              "reviewable"
+            ]
+          },
+          "outcome": {
+            "type": "string",
+            "minLength": 1
+          },
+          "strongest_surfaces": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "supporting_surfaces": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "verify_commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^npm run .+"
+            }
+          }
+        }
+      }
+    }
+  }
+}

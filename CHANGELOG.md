@@ -17,6 +17,7 @@
 - added machine-readable validator API envelope schema coverage plus repo-local schema validation for public API examples
 - added community-health docs, intake templates, and automated verification for contributor-facing surfaces
 - added reviewer guide and machine-readable public project profile for external evaluation and program readiness
+- added machine-readable public capability matrix and automated checks for practical repo usability
 
 ## 0.1.0 - 2026-03-26
 

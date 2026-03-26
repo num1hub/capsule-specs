@@ -173,6 +173,7 @@
         "machine_readable_contract_catalog_present",
         "machine_readable_release_metadata_present",
         "machine_readable_project_profile_present",
+        "machine_readable_capability_matrix_present",
         "community_health_doc_present",
         "reviewer_guide_present",
         "single_repo_verify_entrypoint_present"
@@ -200,6 +201,9 @@
           "type": "boolean"
         },
         "machine_readable_project_profile_present": {
+          "type": "boolean"
+        },
+        "machine_readable_capability_matrix_present": {
           "type": "boolean"
         },
         "community_health_doc_present": {
@@ -243,6 +247,7 @@
         "readme",
         "quickstart",
         "reviewer_guide",
+        "capability_matrix",
         "contract_index",
         "release_evidence",
         "contract_catalog",
@@ -259,6 +264,10 @@
           "minLength": 1
         },
         "reviewer_guide": {
+          "type": "string",
+          "minLength": 1
+        },
+        "capability_matrix": {
           "type": "string",
           "minLength": 1
         },

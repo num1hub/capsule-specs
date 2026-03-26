@@ -1,0 +1,192 @@
+{
+  "matrix_version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "capabilities": [
+    {
+      "id": "inspect-capsule-law",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Understand the five-element capsule model, validation gates, and relation semantics without reading the private runtime repository.",
+      "strongest_surfaces": [
+        "docs/5-element-law.md",
+        "docs/16-gates.md",
+        "docs/relation-types.md",
+        "capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
+        "capsules/capsule.foundation.capsuleos.16-gates.v1.json"
+      ],
+      "supporting_surfaces": [
+        "docs/overview.md",
+        "docs/schema-reference.md",
+        "schemas/capsule-schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
+      "id": "validate-public-examples-locally",
+      "audience": "integrators",
+      "readiness": "ready",
+      "outcome": "Inspect and locally validate public-safe capsule examples, including a graph-linked example and an intentional G16 failure path.",
+      "strongest_surfaces": [
+        "examples/example-note.capsule.json",
+        "examples/example-task.capsule.json",
+        "examples/example-project-hub.capsule.json",
+        "examples/example-validator-invalid-g16.capsule.json",
+        "examples/example-known-ids.json"
+      ],
+      "supporting_surfaces": [
+        "docs/examples.md",
+        "docs/verification.md",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "verify_commands": [
+        "npm run check:examples",
+        "npm run check:release",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
+      "id": "build-validator-client-from-public-contracts",
+      "audience": "tool-builders",
+      "readiness": "ready",
+      "outcome": "Build a validator-facing client from public OpenAPI, schema-backed envelopes, and copyable client recipes.",
+      "strongest_surfaces": [
+        "openapi/validate.openapi.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "docs/api-envelopes.md",
+        "docs/client-recipes.md",
+        "examples/client/node-validate-single.mjs"
+      ],
+      "supporting_surfaces": [
+        "docs/route-reference.md",
+        "examples/api/validate-request.single.json",
+        "examples/api/validate-request.batch.json",
+        "examples/api/validate-request.fix.json"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:client-recipes",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
+      "id": "understand-trust-boundaries",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "See which public artifacts are strongest sources of truth and where docs or examples are intentionally secondary to the live validator.",
+      "strongest_surfaces": [
+        "docs/trust-model.md",
+        "docs/compatibility.md",
+        "docs/release-evidence.md",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "docs/validator.md",
+        "schemas/capsule-schema.json",
+        "schemas/validator-api-envelopes.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:release",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
+      "id": "review-repository-maturity-quickly",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Assess repository maturity, maintainer ownership, and public-surface coherence in a short reviewer pass.",
+      "strongest_surfaces": [
+        "README.md",
+        "docs/reviewer-guide.md",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_RELEASE_METADATA.json",
+        "docs/public-contract-index.md",
+        "docs/community-health.md"
+      ],
+      "verify_commands": [
+        "npm run check:project-profile",
+        "npm run check:catalog",
+        "npm run check:surface",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
+      "id": "contribute-safely-to-public-surface",
+      "audience": "contributors",
+      "readiness": "ready",
+      "outcome": "Open scoped issues or pull requests against the public projection surface without crossing into private runtime or operator-only territory.",
+      "strongest_surfaces": [
+        "CONTRIBUTING.md",
+        "docs/community-health.md",
+        ".github/ISSUE_TEMPLATE/bug_report.md",
+        ".github/ISSUE_TEMPLATE/integration_question.md",
+        ".github/PULL_REQUEST_TEMPLATE.md"
+      ],
+      "supporting_surfaces": [
+        "SUPPORT.md",
+        "SECURITY.md",
+        "GOVERNANCE.md",
+        "MAINTAINERS.md"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:surface",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
+      "id": "trace-provenance-and-release-state",
+      "audience": "contributors",
+      "readiness": "ready",
+      "outcome": "Trace where public artifacts came from and which verification evidence supports the current public release state.",
+      "strongest_surfaces": [
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_RELEASE_REVIEW.md",
+        "docs/source-materials.md"
+      ],
+      "supporting_surfaces": [
+        "RELEASING.md",
+        "docs/release-evidence.md",
+        "NOTICE"
+      ],
+      "verify_commands": [
+        "npm run audit:public-surface",
+        "npm run check:release",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
+      "id": "locate-high-signal-public-artifacts",
+      "audience": "contributors",
+      "readiness": "ready",
+      "outcome": "Jump directly to the strongest public docs, schemas, examples, and governance artifacts without scanning the whole repository tree.",
+      "strongest_surfaces": [
+        "docs/public-contract-index.md",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_CAPABILITY_MATRIX.json"
+      ],
+      "supporting_surfaces": [
+        "QUICKSTART.md",
+        "docs/reviewer-guide.md",
+        "docs/capability-matrix.md"
+      ],
+      "verify_commands": [
+        "npm run check:catalog",
+        "npm run check:project-profile",
+        "npm run check:capability-matrix",
+        "npm run check:surface"
+      ]
+    }
+  ]
+}

@@ -7,7 +7,9 @@
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/scripts/check-community-health.js",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/docs/reviewer-guide.md"
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/docs/capability-matrix.md"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
@@ -47,7 +49,8 @@
   "CHANGELOG.md": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/community-health.md",
-      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json"
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection."
@@ -135,7 +138,9 @@
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/scripts/check-community-health.js",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/scripts/check-project-profile.js"
+      "/home/n1/codex-workspace/scripts/check-project-profile.js",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface."
@@ -312,7 +317,9 @@
     "notes": "Stability and change-discipline guidance for integrators."
   },
   "docs/faq.md": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
+    ],
     "transformation_type": "generated",
     "notes": "Short answers to scope and validation questions for the public repository."
   },
@@ -321,7 +328,9 @@
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/docs/reviewer-guide.md"
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/docs/capability-matrix.md"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
@@ -334,7 +343,9 @@
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/docs/reviewer-guide.md"
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/docs/capability-matrix.md"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
@@ -353,7 +364,9 @@
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/scripts/check-community-health.js",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/scripts/check-project-profile.js"
+      "/home/n1/codex-workspace/scripts/check-project-profile.js",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects."
@@ -400,7 +413,8 @@
   },
   "schemas/README.md": {
     "source_paths": [
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for schema artifacts."
@@ -596,7 +610,8 @@
   },
   "SOURCE_MANIFEST.json": {
     "source_paths": [
-      "/home/n1/codex-workspace/docs/reviewer-guide.md"
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/docs/capability-matrix.md"
     ],
     "transformation_type": "generated",
     "notes": "Provenance index for every public file in the repository."
@@ -614,7 +629,11 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/docs/reviewer-guide.md",
       "/home/n1/codex-workspace/scripts/check-project-profile.js",
-      "/home/n1/codex-workspace/schemas/public-project-profile.schema.json"
+      "/home/n1/codex-workspace/schemas/public-project-profile.schema.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/docs/capability-matrix.md",
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
+      "/home/n1/codex-workspace/schemas/public-capability-matrix.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths."
@@ -626,7 +645,9 @@
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/scripts/check-community-health.js",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/scripts/check-project-profile.js"
+      "/home/n1/codex-workspace/scripts/check-project-profile.js",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
@@ -638,7 +659,9 @@
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/scripts/check-community-health.js",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/scripts/check-project-profile.js"
+      "/home/n1/codex-workspace/scripts/check-project-profile.js",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Public-release review and validation summary."
@@ -681,7 +704,8 @@
     "source_paths": [
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/codex-workspace/docs/community-health.md",
-      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json"
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local validation for the machine-readable public contract catalog."
@@ -692,7 +716,9 @@
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/scripts/check-community-health.js",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/scripts/check-project-profile.js"
+      "/home/n1/codex-workspace/scripts/check-project-profile.js",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts."
@@ -703,7 +729,9 @@
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/scripts/check-community-health.js",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/scripts/check-project-profile.js"
+      "/home/n1/codex-workspace/scripts/check-project-profile.js",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence."
@@ -841,14 +869,16 @@
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
       "/home/n1/codex-workspace/docs/reviewer-guide.md",
-      "/home/n1/codex-workspace/docs/community-health.md"
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals."
   },
   "schemas/public-project-profile.schema.json": {
     "source_paths": [
-      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json"
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
     ],
     "transformation_type": "generated",
     "notes": "JSON Schema for the machine-readable public project profile."
@@ -860,7 +890,9 @@
       "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/docs/public-contract-index.md",
-      "/home/n1/codex-workspace/docs/release-evidence.md"
+      "/home/n1/codex-workspace/docs/release-evidence.md",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/docs/capability-matrix.md"
     ],
     "transformation_type": "generated",
     "notes": "Fast evaluator path through the strongest public surfaces."
@@ -871,9 +903,52 @@
       "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/README.md",
-      "/home/n1/codex-workspace/docs/reviewer-guide.md"
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
     ],
     "transformation_type": "generated",
     "notes": "Repo-local consistency check for the public project profile and reviewer-facing shortcuts."
+  },
+  "PUBLIC_CAPABILITY_MATRIX.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/README.md",
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/docs/capability-matrix.md",
+      "/home/n1/codex-workspace/docs/reviewer-guide.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface."
+  },
+  "schemas/public-capability-matrix.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "JSON Schema for the machine-readable public capability matrix."
+  },
+  "docs/capability-matrix.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Human-readable guide to the capability matrix and supported public outcomes."
+  },
+  "scripts/check-capability-matrix.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-capability-matrix.schema.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
+      "/home/n1/codex-workspace/README.md",
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/docs/capability-matrix.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local consistency check for the machine-readable capability matrix."
   }
 }

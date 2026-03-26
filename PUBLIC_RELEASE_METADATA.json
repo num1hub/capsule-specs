@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 106,
-    "manifest_entries": 106
+    "files": 110,
+    "manifest_entries": 110
   },
   "surface_summary": {
-    "catalog_entries": 58,
+    "catalog_entries": 62,
     "example_capsules": 5,
     "api_example_files": 11,
-    "markdown_files": 50
+    "markdown_files": 51
   },
   "repo_local_checks": [
     {
@@ -50,6 +50,10 @@
     },
     {
       "command": "npm run check:project-profile",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:capability-matrix",
       "status": "pass"
     },
     {
@@ -93,6 +97,7 @@
     "client recipes assume a compatible deployed validator base URL and bearer-token auth model rather than representing a guaranteed hosted endpoint",
     "local hidden Codex state is excluded via .gitignore and must remain outside any public commit",
     "community intake is public and explicit, but maintainer responsiveness and future issue volume still depend on actual GitHub operation after publication",
-    "PUBLIC_PROJECT_PROFILE.json is a concise reviewer/program summary and can lag behind the stronger source surfaces if maintainers stop updating it together with release evidence"
+    "PUBLIC_PROJECT_PROFILE.json is a concise reviewer/program summary and can lag behind the stronger source surfaces if maintainers stop updating it together with release evidence",
+    "PUBLIC_CAPABILITY_MATRIX.json is a high-level usability summary and can drift if maintainers add or remove strong public surfaces without updating the matrix"
   ]
 }

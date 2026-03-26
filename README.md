@@ -31,6 +31,7 @@ This repository is that home.
 - [`docs/public-contract-index.md`](docs/public-contract-index.md) for a complete public surface map
 - [`docs/contract-catalog.md`](docs/contract-catalog.md) for the machine-readable contract map
 - [`docs/reviewer-guide.md`](docs/reviewer-guide.md) for the fastest evaluator/reviewer path through the repository
+- [`docs/capability-matrix.md`](docs/capability-matrix.md) for the concrete “what can I do with this repo?” view
 - [`docs/verification.md`](docs/verification.md) for the repo verification stack
 - [`docs/community-health.md`](docs/community-health.md) for contributor intake and maintainer-facing community boundaries
 - [`docs/release-evidence.md`](docs/release-evidence.md) for human and machine-readable release evidence
@@ -68,6 +69,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable contract discovery in [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json)
 - machine-readable release evidence in [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json)
 - machine-readable reviewer/program profile in [`PUBLIC_PROJECT_PROFILE.json`](PUBLIC_PROJECT_PROFILE.json)
+- machine-readable capability matrix in [`PUBLIC_CAPABILITY_MATRIX.json`](PUBLIC_CAPABILITY_MATRIX.json)
 - a public-release review in [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md)
 - repo-local verification via `npm run verify:repo`
 - local validator-backed example checks

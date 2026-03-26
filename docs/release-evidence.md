@@ -19,6 +19,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Structured map of the public contract surface and its verification paths.
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
   Machine-readable reviewer/program profile for fast external evaluation.
+- [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
+  Machine-readable matrix of what the current public surface supports in practical terms.
 - [`../schemas/public-release-metadata.schema.json`](../schemas/public-release-metadata.schema.json)
   JSON Schema for the release-metadata file.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
@@ -36,6 +38,8 @@ The community-health doc and its dedicated verification script strengthen the re
 
 The reviewer guide and public project profile strengthen external evaluation by making repository maturity legible without scraping the whole tree.
 
+The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
+
 ## Release discipline
 
 When the public surface changes, these files should move together:
@@ -44,5 +48,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_RELEASE_REVIEW.md`
 - `PUBLIC_RELEASE_METADATA.json`
 - `PUBLIC_CONTRACT_CATALOG.json`
+- `PUBLIC_PROJECT_PROFILE.json`
+- `PUBLIC_CAPABILITY_MATRIX.json`
 
 If they drift, the release evidence is incomplete even if the individual docs still read well.

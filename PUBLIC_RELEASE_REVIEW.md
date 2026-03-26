@@ -12,6 +12,7 @@
 - machine-readable public contract catalog in `PUBLIC_CONTRACT_CATALOG.json` plus the companion guide in `docs/contract-catalog.md`
 - machine-readable release evidence in `PUBLIC_RELEASE_METADATA.json` plus schema-backed release metadata
 - machine-readable reviewer/program profile in `PUBLIC_PROJECT_PROFILE.json` plus a reviewer guide
+- machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
@@ -51,11 +52,12 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-client-recipes.js`: pass
 - `node scripts/check-community-health.js`: pass
 - `node scripts/check-project-profile.js`: pass
+- `node scripts/check-capability-matrix.js`: pass
 - `node scripts/check-doc-links.js`: pass
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `106` files / `106` manifest entries
+- manifest coverage: `110` files / `110` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -73,3 +75,4 @@ Upstream validator checks on 2026-03-26:
 - validator API envelope schemas are public projections aligned to OpenAPI and curated examples, but the live validator remains the stronger source of truth for runtime-only behavior
 - client recipes assume a compatible deployed validator base URL and bearer-token auth model rather than representing a guaranteed hosted endpoint
 - `/home/n1/codex-workspace` still contains local hidden Codex state (`.codex/`, `.codexignore`), which is excluded via `.gitignore` and should remain out of any public commit
+- `PUBLIC_PROJECT_PROFILE.json` and `PUBLIC_CAPABILITY_MATRIX.json` are intentionally concise summaries and must stay subordinate to the stronger source docs, schemas, OpenAPI, and release evidence

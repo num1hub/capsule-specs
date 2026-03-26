@@ -78,6 +78,7 @@ assert(profile.health_signals?.community_files_present === true, 'project profil
 assert(profile.health_signals?.issue_templates_present === true, 'project profile must mark issue_templates_present true');
 assert(profile.health_signals?.pull_request_template_present === true, 'project profile must mark pull_request_template_present true');
 assert(profile.health_signals?.machine_readable_project_profile_present === true, 'project profile must mark machine_readable_project_profile_present true');
+assert(profile.health_signals?.machine_readable_capability_matrix_present === true, 'project profile must mark machine_readable_capability_matrix_present true');
 assert(profile.health_signals?.reviewer_guide_present === true, 'project profile must mark reviewer_guide_present true');
 assert(profile.health_signals?.single_repo_verify_entrypoint_present === true, 'project profile must mark single_repo_verify_entrypoint_present true');
 
@@ -86,13 +87,16 @@ assert(profile.verification_summary?.repo_local_check_count === repoLocalCheckCo
 assert(profile.verification_summary?.upstream_validator_check_count === upstreamValidatorCheckCount, 'project profile upstream_validator_check_count must match release metadata');
 
 assert(profile.reviewer_shortcuts?.reviewer_guide === 'docs/reviewer-guide.md', 'project profile reviewer_guide shortcut must point to docs/reviewer-guide.md');
+assert(profile.reviewer_shortcuts?.capability_matrix === 'PUBLIC_CAPABILITY_MATRIX.json', 'project profile capability_matrix shortcut must point to PUBLIC_CAPABILITY_MATRIX.json');
 assert(profile.reviewer_shortcuts?.project_profile === 'PUBLIC_PROJECT_PROFILE.json', 'project profile project_profile shortcut must point to itself');
 
 const readme = readText('README.md');
 const reviewerGuide = readText('docs/reviewer-guide.md');
 assert(readme.includes('PUBLIC_PROJECT_PROFILE.json'), 'README.md must mention PUBLIC_PROJECT_PROFILE.json');
+assert(readme.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'README.md must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(reviewerGuide.includes('PUBLIC_PROJECT_PROFILE.json'), 'reviewer guide must mention PUBLIC_PROJECT_PROFILE.json');
+assert(reviewerGuide.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'reviewer guide must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(reviewerGuide.includes('PUBLIC_CONTRACT_CATALOG.json'), 'reviewer guide must mention PUBLIC_CONTRACT_CATALOG.json');
 assert(reviewerGuide.includes('PUBLIC_RELEASE_METADATA.json'), 'reviewer guide must mention PUBLIC_RELEASE_METADATA.json');
 

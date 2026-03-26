@@ -16,6 +16,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema bundle for validator request and response envelopes published under `examples/api/`.
 - `public-project-profile.schema.json`
   JSON Schema for the machine-readable reviewer/program profile file.
+- `public-capability-matrix.schema.json`
+  JSON Schema for the machine-readable capability matrix file.
 
 ## Notes
 

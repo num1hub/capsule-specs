@@ -26,4 +26,4 @@ Use the known-ID catalog in `examples/example-known-ids.json` when your validato
 
 ## How should a reviewer inspect this repository quickly?
 
-Start with `README.md`, `docs/reviewer-guide.md`, `PUBLIC_PROJECT_PROFILE.json`, and `PUBLIC_RELEASE_METADATA.json`. Those surfaces explain scope, health signals, and where the strongest public evidence lives.
+Start with `README.md`, `docs/reviewer-guide.md`, `PUBLIC_PROJECT_PROFILE.json`, `PUBLIC_CAPABILITY_MATRIX.json`, and `PUBLIC_RELEASE_METADATA.json`. Those surfaces explain scope, health signals, supported outcomes, and where the strongest public evidence lives.

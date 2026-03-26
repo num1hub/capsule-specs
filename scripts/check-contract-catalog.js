@@ -76,6 +76,7 @@ const requiredIds = [
   'schema.validator-api-envelopes',
   'governance.community-health',
   'governance.project-profile',
+  'governance.capability-matrix',
   'examples.note',
   'governance.manifest',
   'governance.contract-index',
