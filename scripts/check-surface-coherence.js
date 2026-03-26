@@ -43,11 +43,13 @@ const expectedPublicIndexLinks = [
   '../PUBLIC_EVALUATION_PACKET.json',
   '../PUBLIC_FAILURE_MODEL.json',
   '../PUBLIC_EXAMPLE_COVERAGE.json',
+  '../PUBLIC_MAINTENANCE_MODEL.json',
   '../PUBLIC_TRACEABILITY_MATRIX.json',
   'reviewer-guide.md',
   'evaluation-packet.md',
   'failure-model.md',
   'example-coverage.md',
+  'maintainer-operations.md',
   'traceability.md',
   '../PUBLIC_PROJECT_PROFILE.json',
   'capability-matrix.md',
@@ -68,6 +70,7 @@ const expectedPublicIndexLinks = [
   '../schemas/public-evaluation-packet.schema.json',
   '../schemas/public-failure-model.schema.json',
   '../schemas/public-example-coverage.schema.json',
+  '../schemas/public-maintenance-model.schema.json',
   '../schemas/public-traceability-matrix.schema.json',
   'community-health.md',
   'client-recipes.md',
@@ -87,6 +90,7 @@ assert(readme.includes('PUBLIC_PORTABILITY_PROFILE.json'), 'README.md must menti
 assert(readme.includes('PUBLIC_EVALUATION_PACKET.json'), 'README.md must mention PUBLIC_EVALUATION_PACKET.json');
 assert(readme.includes('PUBLIC_FAILURE_MODEL.json'), 'README.md must mention PUBLIC_FAILURE_MODEL.json');
 assert(readme.includes('PUBLIC_EXAMPLE_COVERAGE.json'), 'README.md must mention PUBLIC_EXAMPLE_COVERAGE.json');
+assert(readme.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'README.md must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(readme.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'README.md must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(readme.includes('schemas/validator-api-envelopes.schema.json'), 'README.md must mention schemas/validator-api-envelopes.schema.json');
 assert(readme.includes('docs/portability.md'), 'README.md must mention docs/portability.md');
@@ -94,6 +98,7 @@ assert(readme.includes('docs/archive-bundles.md'), 'README.md must mention docs/
 assert(readme.includes('docs/evaluation-packet.md'), 'README.md must mention docs/evaluation-packet.md');
 assert(readme.includes('docs/failure-model.md'), 'README.md must mention docs/failure-model.md');
 assert(readme.includes('docs/example-coverage.md'), 'README.md must mention docs/example-coverage.md');
+assert(readme.includes('docs/maintainer-operations.md'), 'README.md must mention docs/maintainer-operations.md');
 assert(readme.includes('docs/traceability.md'), 'README.md must mention docs/traceability.md');
 assert(readme.includes('docs/community-health.md'), 'README.md must mention docs/community-health.md');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
@@ -111,6 +116,7 @@ assert(releaseReview.includes('check-example-coverage.js'), 'PUBLIC_RELEASE_REVI
 assert(releaseReview.includes('check-boundary-map.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-boundary-map.js');
 assert(releaseReview.includes('check-client-recipes.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-client-recipes.js');
 assert(releaseReview.includes('check-community-health.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-community-health.js');
+assert(releaseReview.includes('check-maintenance-model.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-maintenance-model.js');
 assert(releaseReview.includes('check-project-profile.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-project-profile.js');
 assert(releaseReview.includes('check-capability-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-capability-matrix.js');
 assert(releaseReview.includes('check-traceability-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-traceability-matrix.js');
@@ -125,6 +131,7 @@ assert(verificationDoc.includes('check:traceability'), 'docs/verification.md mus
 assert(verificationDoc.includes('check:portability'), 'docs/verification.md must explain check:portability');
 assert(verificationDoc.includes('check:client-recipes'), 'docs/verification.md must explain check:client-recipes');
 assert(verificationDoc.includes('check:community-health'), 'docs/verification.md must explain check:community-health');
+assert(verificationDoc.includes('check:maintenance-model'), 'docs/verification.md must explain check:maintenance-model');
 assert(verificationDoc.includes('check:project-profile'), 'docs/verification.md must explain check:project-profile');
 assert(verificationDoc.includes('check:capability-matrix'), 'docs/verification.md must explain check:capability-matrix');
 assert(releaseEvidenceDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'docs/release-evidence.md must mention PUBLIC_RELEASE_METADATA.json');
@@ -137,6 +144,7 @@ assert(releaseEvidenceDoc.includes('PUBLIC_PORTABILITY_PROFILE.json'), 'docs/rel
 assert(releaseEvidenceDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'docs/release-evidence.md must mention PUBLIC_EVALUATION_PACKET.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_FAILURE_MODEL.json'), 'docs/release-evidence.md must mention PUBLIC_FAILURE_MODEL.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_EXAMPLE_COVERAGE.json'), 'docs/release-evidence.md must mention PUBLIC_EXAMPLE_COVERAGE.json');
+assert(releaseEvidenceDoc.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'docs/release-evidence.md must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'docs/release-evidence.md must mention PUBLIC_TRACEABILITY_MATRIX.json');
 
 if (process.exitCode) {

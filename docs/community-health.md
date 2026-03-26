@@ -23,6 +23,8 @@ The repository keeps explicit intake paths so outside contributors do not need t
 
 These templates keep issues scoped to the public projection surface instead of drifting into private runtime or product-doctrine requests.
 
+The bounded public maintainer posture for intake, review, and release work is summarized in [`../PUBLIC_MAINTENANCE_MODEL.json`](../PUBLIC_MAINTENANCE_MODEL.json).
+
 ## Maintainer expectations
 
 Maintainers should:

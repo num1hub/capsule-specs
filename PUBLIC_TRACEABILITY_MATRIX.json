@@ -172,7 +172,8 @@
         "CONTRIBUTING.md",
         "SUPPORT.md",
         "SECURITY.md",
-        "PUBLIC_CAPABILITY_MATRIX.json"
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_MAINTENANCE_MODEL.json"
       ],
       "supporting_surfaces": [
         ".github/ISSUE_TEMPLATE/integration_question.md",
@@ -180,12 +181,14 @@
         "CODEOWNERS",
         "GOVERNANCE.md",
         "docs/capability-matrix.md",
-        "docs/example-coverage.md"
+        "docs/example-coverage.md",
+        "docs/maintainer-operations.md"
       ],
       "verify_commands": [
         "npm run check:community-health",
         "npm run check:capability-matrix",
-        "npm run check:traceability"
+        "npm run check:traceability",
+        "npm run check:maintenance-model"
       ]
     }
   ],

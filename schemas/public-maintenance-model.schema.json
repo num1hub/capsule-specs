@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-maintenance-model.schema.json",
+  "title": "Public Maintenance Model",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "reviewed_at",
+    "primary_maintainer",
+    "supported_channels",
+    "change_classes",
+    "required_evidence",
+    "operating_rules",
+    "non_claims",
+    "review_commands"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "reviewed_at": { "type": "string" },
+    "primary_maintainer": { "type": "string" },
+    "supported_channels": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "change_classes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "summary",
+          "strongest_surfaces",
+          "verify_commands"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "summary": { "type": "string" },
+          "strongest_surfaces": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          },
+          "verify_commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "required_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "operating_rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "non_claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "review_commands": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -40,6 +40,8 @@ const communityDoc = readText('docs/community-health.md');
 const readme = readText('README.md');
 const onboarding = readText('ONBOARDING.md');
 const contributing = readText('CONTRIBUTING.md');
+const maintainers = readText('MAINTAINERS.md');
+const maintenanceModel = readText('PUBLIC_MAINTENANCE_MODEL.json');
 const support = readText('SUPPORT.md');
 const config = readText('.github/ISSUE_TEMPLATE/config.yml');
 const integrationTemplate = readText('.github/ISSUE_TEMPLATE/integration_question.md');
@@ -50,13 +52,17 @@ assert(communityDoc.includes('GitHub issues'), 'docs/community-health.md must me
 assert(communityDoc.includes('Pull requests'), 'docs/community-health.md must mention pull requests');
 assert(communityDoc.includes('SECURITY.md'), 'docs/community-health.md must mention SECURITY.md');
 assert(communityDoc.includes('CONTRIBUTING.md'), 'docs/community-health.md must mention CONTRIBUTING.md');
+assert(communityDoc.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'docs/community-health.md must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(communityDoc.includes('integration questions'), 'docs/community-health.md must mention integration questions');
 assert(communityDoc.includes('contract change proposals'), 'docs/community-health.md must mention contract change proposals');
 
 assert(readme.includes('docs/community-health.md'), 'README.md must mention docs/community-health.md');
 assert(onboarding.includes('docs/community-health.md'), 'ONBOARDING.md must mention docs/community-health.md');
 assert(contributing.includes('issue template'), 'CONTRIBUTING.md must mention issue templates');
+assert(contributing.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'CONTRIBUTING.md must mention PUBLIC_MAINTENANCE_MODEL.json');
+assert(maintainers.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'MAINTAINERS.md must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(support.includes('docs/community-health.md'), 'SUPPORT.md must mention docs/community-health.md');
+assert(maintenanceModel.includes('GitHub issues'), 'PUBLIC_MAINTENANCE_MODEL.json must mention GitHub issues');
 
 assert(config.includes('Integration guide'), '.github/ISSUE_TEMPLATE/config.yml must include the integration guide contact link');
 assert(config.includes('Security reports'), '.github/ISSUE_TEMPLATE/config.yml must keep the security contact link');

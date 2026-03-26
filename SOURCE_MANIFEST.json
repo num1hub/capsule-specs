@@ -24,7 +24,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
@@ -41,7 +43,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "derived",
     "notes": "Root-level fast entry path for public contributors."
@@ -60,7 +64,9 @@
   "GOVERNANCE.md": {
     "source_paths": [
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.contributing.v1.json",
-      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json"
+      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Public governance and projection-boundary guide for this repository."
@@ -82,7 +88,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection."
@@ -101,13 +109,18 @@
   },
   "RELEASING.md": {
     "source_paths": [
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Release checklist for keeping docs, examples, and provenance aligned."
   },
   "MAINTAINERS.md": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+    ],
     "transformation_type": "generated",
     "notes": "Maintainer identity and responsibilities."
   },
@@ -127,7 +140,9 @@
     "source_paths": [
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.contributing.v1.json",
       "/home/n1/codex-workspace/docs/community-health.md",
-      "/home/n1/codex-workspace/scripts/check-community-health.js"
+      "/home/n1/codex-workspace/scripts/check-community-health.js",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "derived",
     "notes": "Adapted for the narrower public specs surface."
@@ -186,7 +201,10 @@
       "/home/n1/codex-workspace/scripts/check-traceability-matrix.js",
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
-      "/home/n1/codex-workspace/scripts/check-example-coverage.js"
+      "/home/n1/codex-workspace/scripts/check-example-coverage.js",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/scripts/check-maintenance-model.js"
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface."
@@ -384,7 +402,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Short answers to scope and validation questions for the public repository."
@@ -419,7 +439,10 @@
       "/home/n1/codex-workspace/schemas/public-traceability-matrix.schema.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
-      "/home/n1/codex-workspace/schemas/public-example-coverage.schema.json"
+      "/home/n1/codex-workspace/schemas/public-example-coverage.schema.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/schemas/public-maintenance-model.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
@@ -442,7 +465,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
@@ -475,7 +500,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects."
@@ -541,7 +568,10 @@
       "/home/n1/codex-workspace/schemas/public-traceability-matrix.schema.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
-      "/home/n1/codex-workspace/schemas/public-example-coverage.schema.json"
+      "/home/n1/codex-workspace/schemas/public-example-coverage.schema.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/schemas/public-maintenance-model.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for schema artifacts."
@@ -772,7 +802,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths."
@@ -796,7 +828,10 @@
       "/home/n1/codex-workspace/scripts/check-traceability-matrix.js",
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
-      "/home/n1/codex-workspace/scripts/check-example-coverage.js"
+      "/home/n1/codex-workspace/scripts/check-example-coverage.js",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/scripts/check-maintenance-model.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
@@ -824,7 +859,10 @@
       "/home/n1/codex-workspace/scripts/check-traceability-matrix.js",
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
-      "/home/n1/codex-workspace/scripts/check-example-coverage.js"
+      "/home/n1/codex-workspace/scripts/check-example-coverage.js",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/scripts/check-maintenance-model.js"
     ],
     "transformation_type": "generated",
     "notes": "Public-release review and validation summary."
@@ -991,7 +1029,9 @@
       "/home/n1/codex-workspace/MAINTAINERS.md",
       "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/bug_report.md",
       "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/feature_request.md",
-      "/home/n1/codex-workspace/.github/PULL_REQUEST_TEMPLATE.md"
+      "/home/n1/codex-workspace/.github/PULL_REQUEST_TEMPLATE.md",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Public contributor-intake and community-health guide for the specs repository."
@@ -1046,7 +1086,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals."
@@ -1077,7 +1119,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Fast evaluator path through the strongest public surfaces."
@@ -1117,7 +1161,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface."
@@ -1142,7 +1188,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the capability matrix and supported public outcomes."
@@ -1288,7 +1336,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable evaluation packet for external reviewers and programs."
@@ -1306,7 +1356,9 @@
       "/home/n1/codex-workspace/docs/traceability.md",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling."
@@ -1405,7 +1457,9 @@
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/SOURCE_MANIFEST.json",
       "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json"
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface."
@@ -1490,5 +1544,48 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for public example coverage and its surrounding example surfaces."
+  },
+  "docs/maintainer-operations.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/MAINTAINERS.md",
+      "/home/n1/codex-workspace/CONTRIBUTING.md",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/RELEASING.md",
+      "/home/n1/codex-workspace/GOVERNANCE.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Human-readable guide to the bounded public maintainer workflow."
+  },
+  "PUBLIC_MAINTENANCE_MODEL.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/MAINTAINERS.md",
+      "/home/n1/codex-workspace/CONTRIBUTING.md",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/RELEASING.md",
+      "/home/n1/codex-workspace/GOVERNANCE.md",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable summary of public maintainer workflow and release posture."
+  },
+  "schemas/public-maintenance-model.schema.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "JSON Schema for the machine-readable public maintenance model."
+  },
+  "scripts/check-maintenance-model.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/schemas/public-maintenance-model.schema.json",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/MAINTAINERS.md",
+      "/home/n1/codex-workspace/CONTRIBUTING.md",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/RELEASING.md",
+      "/home/n1/codex-workspace/GOVERNANCE.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for the public maintenance model and maintainer-facing workflow docs."
   }
 }

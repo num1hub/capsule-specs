@@ -16,7 +16,8 @@ This repository is small, but releases should still be explicit and reviewable.
 10. Review [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) when API example files or route envelope assumptions changed.
 11. Keep [`NOTICE`](NOTICE) accurate when attribution or legal surface changed.
 12. Recheck [`examples/client/`](examples/client/) and [`docs/client-recipes.md`](docs/client-recipes.md) when route or auth assumptions changed.
-13. Create a release tag and short release notes.
+13. Review [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) when public maintainer workflow, change classes, or expected evidence changed.
+14. Create a release tag and short release notes.
 
 ## Release posture
 

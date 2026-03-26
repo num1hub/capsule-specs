@@ -292,6 +292,30 @@
       ]
     },
     {
+      "id": "inspect-maintainer-operations",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Inspect how the public repo is actually maintained, which changes require evidence, and how contributor intake routes through bounded public-safe workflow.",
+      "strongest_surfaces": [
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "docs/maintainer-operations.md",
+        "MAINTAINERS.md",
+        "RELEASING.md",
+        "docs/community-health.md"
+      ],
+      "supporting_surfaces": [
+        "CONTRIBUTING.md",
+        "GOVERNANCE.md",
+        "PUBLIC_RELEASE_METADATA.json",
+        "schemas/public-maintenance-model.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:community-health",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "trace-provenance-and-release-state",
       "audience": "contributors",
       "readiness": "ready",

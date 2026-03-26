@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 142,
-    "manifest_entries": 142
+    "files": 146,
+    "manifest_entries": 146
   },
   "surface_summary": {
-    "catalog_entries": 93,
+    "catalog_entries": 97,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 61
+    "markdown_files": 62
   },
   "repo_local_checks": [
     {
@@ -46,6 +46,10 @@
     },
     {
       "command": "npm run check:community-health",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:maintenance-model",
       "status": "pass"
     },
     {
@@ -128,6 +132,7 @@
     "PUBLIC_EVALUATION_PACKET.json is a reviewer shortcut layer and must stay subordinate to the stronger docs, schemas, release evidence, and machine-readable source surfaces",
     "PUBLIC_FAILURE_MODEL.json is a bounded negative-evidence summary and must stay subordinate to the stronger examples, validator docs, OpenAPI, and portability surfaces",
     "PUBLIC_TRACEABILITY_MATRIX.json is a curated cross-surface map and can drift if maintainers stop updating it together with docs, schemas, examples, and verification artifacts",
-    "PUBLIC_EXAMPLE_COVERAGE.json is a curated coverage summary and can drift if maintainers add or remove examples without updating the coverage layer"
+    "PUBLIC_EXAMPLE_COVERAGE.json is a curated coverage summary and can drift if maintainers add or remove examples without updating the coverage layer",
+    "PUBLIC_MAINTENANCE_MODEL.json is a bounded workflow summary and can drift if maintainers change public intake or release posture without updating the maintenance layer"
   ]
 }

@@ -1,0 +1,108 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "primary_maintainer": "egor-n1",
+  "supported_channels": [
+    "GitHub issues for public bugs, docs gaps, integration questions, and contract change proposals.",
+    "Pull requests for bounded public-surface edits to docs, schemas, examples, and machine-readable release artifacts.",
+    "Private security reporting through SECURITY.md for trust-sensitive disclosures."
+  ],
+  "change_classes": [
+    {
+      "id": "docs-and-guides",
+      "summary": "Documentation and orientation changes should keep front-door and reviewer paths coherent.",
+      "strongest_surfaces": [
+        "README.md",
+        "QUICKSTART.md",
+        "docs/reviewer-guide.md",
+        "docs/public-contract-index.md"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:surface",
+        "npm run check:maintenance-model"
+      ]
+    },
+    {
+      "id": "schemas-and-openapi",
+      "summary": "Schema or OpenAPI changes require aligned examples and explicit verification evidence.",
+      "strongest_surfaces": [
+        "schemas/capsule-schema.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "openapi/validate.openapi.json",
+        "docs/api-envelopes.md"
+      ],
+      "verify_commands": [
+        "npm run check:api-schemas",
+        "npm run check:catalog",
+        "npm run check:maintenance-model"
+      ]
+    },
+    {
+      "id": "examples-and-negative-paths",
+      "summary": "Example changes should preserve public-safe fixtures, negative-path coverage, and route-level alignment.",
+      "strongest_surfaces": [
+        "docs/examples.md",
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "PUBLIC_FAILURE_MODEL.json",
+        "docs/route-reference.md"
+      ],
+      "verify_commands": [
+        "npm run check:examples",
+        "npm run check:api-examples",
+        "npm run check:example-coverage",
+        "npm run check:maintenance-model"
+      ]
+    },
+    {
+      "id": "release-and-provenance-surfaces",
+      "summary": "Release-facing changes must keep provenance, catalog, release metadata, and release review synchronized.",
+      "strongest_surfaces": [
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "verify_commands": [
+        "npm run audit:public-surface",
+        "npm run check:catalog",
+        "npm run check:release",
+        "npm run check:maintenance-model"
+      ]
+    },
+    {
+      "id": "community-and-intake-surfaces",
+      "summary": "Contributor-facing changes must preserve issue intake, security routing, maintainer posture, and release discipline.",
+      "strongest_surfaces": [
+        "MAINTAINERS.md",
+        "CONTRIBUTING.md",
+        "docs/community-health.md",
+        "docs/maintainer-operations.md"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:maintenance-model"
+      ]
+    }
+  ],
+  "required_evidence": [
+    "npm run verify:repo",
+    "updated release-facing artifacts when the public surface changes",
+    "upstream validator rechecks for example changes where applicable"
+  ],
+  "operating_rules": [
+    "Keep the public boundary intentional and do not widen scope by accident.",
+    "Prefer small, reviewable changes over oversized public dumps.",
+    "Keep SOURCE_MANIFEST.json and PUBLIC_CONTRACT_CATALOG.json aligned with new or changed public artifacts.",
+    "Require explicit verification evidence when schemas, examples, OpenAPI, or release surfaces change.",
+    "Route trust-sensitive disclosures through SECURITY.md instead of public issue intake."
+  ],
+  "non_claims": [
+    "This file does not promise a guaranteed response-time SLA for public issues or pull requests.",
+    "This file does not expose private internal workflow details from the upstream N1Hub runtime."
+  ],
+  "review_commands": [
+    "npm run check:maintenance-model",
+    "npm run verify:repo"
+  ]
+}

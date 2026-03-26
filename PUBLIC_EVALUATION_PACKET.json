@@ -23,7 +23,8 @@
     "PUBLIC_RELEASE_METADATA.json",
     "PUBLIC_RELEASE_REVIEW.md",
     "PUBLIC_TRACEABILITY_MATRIX.json",
-    "PUBLIC_EXAMPLE_COVERAGE.json"
+    "PUBLIC_EXAMPLE_COVERAGE.json",
+    "PUBLIC_MAINTENANCE_MODEL.json"
   ],
   "strongest_evidence": {
     "contract_surface": [
@@ -46,7 +47,8 @@
       "docs/public-contract-index.md",
       "docs/projection-doctrine.md",
       "docs/domain-boundaries.md",
-      "docs/portability.md"
+      "docs/portability.md",
+      "docs/maintainer-operations.md"
     ],
     "machine_readable_evidence": [
       "PUBLIC_CONTRACT_CATALOG.json",
@@ -55,7 +57,8 @@
       "PUBLIC_BOUNDARY_MAP.json",
       "PUBLIC_PORTABILITY_PROFILE.json",
       "PUBLIC_RELEASE_METADATA.json",
-      "PUBLIC_TRACEABILITY_MATRIX.json"
+      "PUBLIC_TRACEABILITY_MATRIX.json",
+      "PUBLIC_MAINTENANCE_MODEL.json"
     ]
   },
   "review_commands": [
@@ -66,7 +69,8 @@
     "The repo exposes both human-readable and machine-readable evidence for external review.",
     "The repo makes scope, portability posture, and published-vs-deferred boundaries explicit.",
     "The repo makes claim-to-evidence traceability explicit instead of leaving reviewers to infer it from scattered files.",
-    "The repo makes public example coverage explicit instead of leaving reviewers to guess which fixtures exercise which contracts."
+    "The repo makes public example coverage explicit instead of leaving reviewers to guess which fixtures exercise which contracts.",
+    "The repo makes public maintainer workflow and release posture explicit instead of relying on implied maintenance behavior."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",

@@ -1388,6 +1388,64 @@
         "npm run check:example-coverage",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "governance.maintainer-operations-doc",
+      "path": "docs/maintainer-operations.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:maintenance-model",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.maintenance-model",
+      "path": "PUBLIC_MAINTENANCE_MODEL.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.maintenance-model",
+      "path": "schemas/public-maintenance-model.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.maintenance-model-check",
+      "path": "scripts/check-maintenance-model.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:catalog"
+      ]
     }
   ]
 }
