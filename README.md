@@ -30,6 +30,7 @@ This repository is that home.
 - [`docs/archive-bundles.md`](docs/archive-bundles.md) for the archive export / replay contract
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
+- [`docs/example-coverage.md`](docs/example-coverage.md) for the bounded map of what the public examples actually cover
 - [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) for machine-readable validator envelope contracts
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
 - [`docs/route-reference.md`](docs/route-reference.md) for per-route sample mapping
@@ -79,6 +80,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable reviewer/program profile in [`PUBLIC_PROJECT_PROFILE.json`](PUBLIC_PROJECT_PROFILE.json)
 - machine-readable evaluation packet in [`PUBLIC_EVALUATION_PACKET.json`](PUBLIC_EVALUATION_PACKET.json)
 - machine-readable failure model in [`PUBLIC_FAILURE_MODEL.json`](PUBLIC_FAILURE_MODEL.json)
+- machine-readable example coverage in [`PUBLIC_EXAMPLE_COVERAGE.json`](PUBLIC_EXAMPLE_COVERAGE.json)
 - machine-readable traceability matrix in [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json)
 - machine-readable capability matrix in [`PUBLIC_CAPABILITY_MATRIX.json`](PUBLIC_CAPABILITY_MATRIX.json)
 - machine-readable boundary map in [`PUBLIC_BOUNDARY_MAP.json`](PUBLIC_BOUNDARY_MAP.json)
@@ -116,9 +118,10 @@ Maintainer and review policy:
 5. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
 6. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
 7. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
-8. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-9. Review the raw capsule sources in [`capsules/`](capsules/).
-10. Run `npm run verify:repo` for the repository-local integrity checks.
+8. Inspect [`PUBLIC_EXAMPLE_COVERAGE.json`](PUBLIC_EXAMPLE_COVERAGE.json) if you want the bounded map from examples to covered routes, law surfaces, and negative paths.
+9. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+10. Review the raw capsule sources in [`capsules/`](capsules/).
+11. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

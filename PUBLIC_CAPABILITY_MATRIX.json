@@ -49,6 +49,31 @@
       ]
     },
     {
+      "id": "assess-example-coverage",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "See which public examples cover schema, validator routes, graph links, and negative-path behavior without reverse-engineering the fixture set.",
+      "strongest_surfaces": [
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "docs/example-coverage.md",
+        "docs/examples.md",
+        "docs/route-reference.md",
+        "examples/api/README.md"
+      ],
+      "supporting_surfaces": [
+        "examples/README.md",
+        "PUBLIC_FAILURE_MODEL.json",
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "schemas/public-example-coverage.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:example-coverage",
+        "npm run check:examples",
+        "npm run check:api-examples",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",

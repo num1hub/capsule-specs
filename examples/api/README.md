@@ -41,3 +41,5 @@ Use these files to:
 - compare direct validation, batch validation, and fix-route shapes side by side
 
 The example set is schema-covered by [`../../schemas/validator-api-envelopes.schema.json`](../../schemas/validator-api-envelopes.schema.json).
+
+The bounded map of how these payloads relate to capsule examples and public review surfaces lives in [`../../PUBLIC_EXAMPLE_COVERAGE.json`](../../PUBLIC_EXAMPLE_COVERAGE.json).

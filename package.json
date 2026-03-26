@@ -29,6 +29,7 @@
     "check:examples": "node scripts/check-example-contracts.js",
     "check:api-examples": "node scripts/check-api-examples.js",
     "check:api-schemas": "node scripts/check-api-schemas.js",
+    "check:example-coverage": "node scripts/check-example-coverage.js",
     "check:boundary-map": "node scripts/check-boundary-map.js",
     "check:client-recipes": "node scripts/check-client-recipes.js",
     "check:community-health": "node scripts/check-community-health.js",
@@ -42,6 +43,6 @@
     "check:project-profile": "node scripts/check-project-profile.js",
     "check:surface": "node scripts/check-surface-coherence.js",
     "check:release": "node scripts/check-release-metadata.js",
-    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:api-schemas && npm run check:boundary-map && npm run check:client-recipes && npm run check:community-health && npm run check:docs && npm run check:catalog && npm run check:evaluation-packet && npm run check:failure-model && npm run check:traceability && npm run check:portability && npm run check:project-profile && npm run check:capability-matrix && npm run check:surface && npm run check:release"
+    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:api-schemas && npm run check:example-coverage && npm run check:boundary-map && npm run check:client-recipes && npm run check:community-health && npm run check:docs && npm run check:catalog && npm run check:evaluation-packet && npm run check:failure-model && npm run check:traceability && npm run check:portability && npm run check:project-profile && npm run check:capability-matrix && npm run check:surface && npm run check:release"
   }
 }

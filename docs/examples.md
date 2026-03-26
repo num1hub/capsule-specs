@@ -27,6 +27,8 @@ The three positive examples were validated with the live validator from the upst
 
 The project-hub example is also intended to pass, but only when validation is given a known-ID catalog so the link targets can resolve. In the upstream validator that means passing `--ids-file examples/example-known-ids.json`.
 
+For the bounded machine-readable map of what each capsule and API example covers, see [`../PUBLIC_EXAMPLE_COVERAGE.json`](../PUBLIC_EXAMPLE_COVERAGE.json) and [`example-coverage.md`](example-coverage.md).
+
 ## API payload examples
 
 The sibling directory [`../examples/api/`](../examples/api/) contains public-safe validator request and response payloads. Those examples complement the capsule examples here by showing how the same artifacts appear at the HTTP boundary.

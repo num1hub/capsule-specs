@@ -81,6 +81,7 @@ const requiredIds = [
   'governance.portability-profile',
   'governance.evaluation-packet',
   'governance.failure-model',
+  'governance.example-coverage',
   'governance.traceability-matrix',
   'governance.projection-doctrine',
   'governance.domain-boundaries',
@@ -89,11 +90,13 @@ const requiredIds = [
   'governance.archive-bundles-doc',
   'governance.evaluation-packet-doc',
   'governance.failure-model-doc',
+  'governance.example-coverage-doc',
   'governance.traceability-doc',
   'schema.archive-bundle',
   'schema.portability-profile',
   'schema.evaluation-packet',
   'schema.failure-model',
+  'schema.example-coverage',
   'schema.traceability-matrix',
   'examples.note',
   'examples.archive-bundle',
@@ -106,6 +109,7 @@ const requiredIds = [
   'governance.portability-check',
   'governance.evaluation-packet-check',
   'governance.failure-model-check',
+  'governance.example-coverage-check',
   'governance.traceability-check'
 ];
 

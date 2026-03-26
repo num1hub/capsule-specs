@@ -22,6 +22,7 @@ Each capability captures:
 - review repository maturity quickly
 - follow the shortest external evaluation path
 - inspect fail-closed public behavior
+- assess example coverage
 - trace public claims end-to-end
 - understand projection and domain boundaries
 - review portability and archive trust posture
@@ -44,6 +45,8 @@ Good OSS repositories are not only readable; they are usable. The capability mat
   Answers: what an external reviewer should inspect first, which evidence is strongest, and which claims are intentionally not being made.
 - [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
   Answers: which high-signal negative paths and bounded rejection behaviors are explicitly documented on the public surface.
+- [`../PUBLIC_EXAMPLE_COVERAGE.json`](../PUBLIC_EXAMPLE_COVERAGE.json)
+  Answers: which public examples cover which capsule, route, graph-link, and negative-path surfaces.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Answers: how the strongest public claims connect to docs, schemas, examples, and verification commands.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)

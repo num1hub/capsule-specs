@@ -44,7 +44,8 @@
         "docs/route-reference.md",
         "docs/integration-guide.md",
         "examples/api/validate-request.single.json",
-        "examples/api/validate-response.pass.json"
+        "examples/api/validate-response.pass.json",
+        "PUBLIC_EXAMPLE_COVERAGE.json"
       ],
       "verify_commands": [
         "npm run check:api-examples",
@@ -71,7 +72,8 @@
         "examples/api/validate-response.fail.json",
         "docs/openapi.md",
         "docs/portability.md",
-        "schemas/public-failure-model.schema.json"
+        "schemas/public-failure-model.schema.json",
+        "PUBLIC_EXAMPLE_COVERAGE.json"
       ],
       "verify_commands": [
         "npm run check:failure-model",
@@ -177,7 +179,8 @@
         ".github/ISSUE_TEMPLATE/contract_change.md",
         "CODEOWNERS",
         "GOVERNANCE.md",
-        "docs/capability-matrix.md"
+        "docs/capability-matrix.md",
+        "docs/example-coverage.md"
       ],
       "verify_commands": [
         "npm run check:community-health",

@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-example-coverage.schema.json",
+  "title": "Public Example Coverage",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "reviewed_at",
+    "summary",
+    "capsule_examples",
+    "api_examples",
+    "non_claims",
+    "review_commands"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "reviewed_at": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capsule_examples",
+        "api_examples",
+        "positive_capsules",
+        "negative_capsules",
+        "graph_examples"
+      ],
+      "properties": {
+        "capsule_examples": { "type": "integer", "minimum": 1 },
+        "api_examples": { "type": "integer", "minimum": 1 },
+        "positive_capsules": { "type": "integer", "minimum": 0 },
+        "negative_capsules": { "type": "integer", "minimum": 0 },
+        "graph_examples": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "capsule_examples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "capsule_id",
+          "path",
+          "role",
+          "validator_status",
+          "coverage_tags",
+          "related_api_examples",
+          "verify_commands"
+        ],
+        "properties": {
+          "capsule_id": { "type": "string" },
+          "path": { "type": "string" },
+          "role": { "type": "string" },
+          "validator_status": { "type": "string" },
+          "coverage_tags": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          },
+          "related_api_examples": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "verify_commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "api_examples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "route",
+          "example_kind",
+          "coverage_tags",
+          "related_capsule_ids",
+          "verify_commands"
+        ],
+        "properties": {
+          "path": { "type": "string" },
+          "route": { "type": "string" },
+          "example_kind": { "type": "string" },
+          "coverage_tags": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          },
+          "related_capsule_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "verify_commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "non_claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "review_commands": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    }
+  }
+}

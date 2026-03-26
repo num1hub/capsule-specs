@@ -90,6 +90,10 @@ assert(
   'release metadata must include the API schema verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:example-coverage'),
+  'release metadata must include the example-coverage verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:boundary-map'),
   'release metadata must include the boundary-map verification check'
 );
@@ -148,6 +152,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_FAILURE_MODEL.json')),
   'release metadata residual risks must mention PUBLIC_FAILURE_MODEL.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_EXAMPLE_COVERAGE.json')),
+  'release metadata residual risks must mention PUBLIC_EXAMPLE_COVERAGE.json'
 );
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_TRACEABILITY_MATRIX.json')),

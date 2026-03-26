@@ -27,7 +27,7 @@
       "projection and boundary doctrine",
       "portability docs and archive bundle contracts",
       "machine-readable provenance and release evidence",
-      "machine-readable reviewer, capability, boundary, and traceability summaries"
+      "machine-readable reviewer, capability, boundary, traceability, and example-coverage summaries"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -37,9 +37,9 @@
     ]
   },
   "surface_summary": {
-    "total_files": 138,
-    "markdown_files": 60,
-    "schema_files": 13,
+    "total_files": 142,
+    "markdown_files": 61,
+    "schema_files": 14,
     "raw_capsule_files": 4,
     "example_capsules": 5,
     "api_example_files": 13,
@@ -64,11 +64,12 @@
     "machine_readable_portability_profile_present": true,
     "machine_readable_evaluation_packet_present": true,
     "machine_readable_failure_model_present": true,
-    "machine_readable_traceability_matrix_present": true
+    "machine_readable_traceability_matrix_present": true,
+    "machine_readable_example_coverage_present": true
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 17,
+    "repo_local_check_count": 18,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -85,7 +86,8 @@
     "portability_profile": "PUBLIC_PORTABILITY_PROFILE.json",
     "evaluation_packet": "PUBLIC_EVALUATION_PACKET.json",
     "failure_model": "PUBLIC_FAILURE_MODEL.json",
-    "traceability_matrix": "PUBLIC_TRACEABILITY_MATRIX.json"
+    "traceability_matrix": "PUBLIC_TRACEABILITY_MATRIX.json",
+    "example_coverage": "PUBLIC_EXAMPLE_COVERAGE.json"
   },
   "program_readiness": {
     "maintainer_owned": true,
@@ -96,10 +98,11 @@
     "projection_doctrine_explicit": true,
     "boundary_map_present": true,
     "community_intake_explicit": true,
-    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, boundary doctrine, portability posture, evaluation packet references, failure-model evidence, traceability evidence, or live validator behavior.",
+    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, boundary doctrine, portability posture, evaluation packet references, failure-model evidence, traceability evidence, example-coverage evidence, or live validator behavior.",
     "portability_posture_explicit": true,
     "evaluation_packet_present": true,
     "failure_model_explicit": true,
-    "traceability_matrix_present": true
+    "traceability_matrix_present": true,
+    "example_coverage_explicit": true
   }
 }

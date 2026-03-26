@@ -22,7 +22,8 @@
     "PUBLIC_PORTABILITY_PROFILE.json",
     "PUBLIC_RELEASE_METADATA.json",
     "PUBLIC_RELEASE_REVIEW.md",
-    "PUBLIC_TRACEABILITY_MATRIX.json"
+    "PUBLIC_TRACEABILITY_MATRIX.json",
+    "PUBLIC_EXAMPLE_COVERAGE.json"
   ],
   "strongest_evidence": {
     "contract_surface": [
@@ -37,7 +38,8 @@
       "examples/example-project-hub.capsule.json",
       "examples/api/validate-request.single.json",
       "examples/client/node-validate-single.mjs",
-      "examples/archive/archive-bundle.sample.json"
+      "examples/archive/archive-bundle.sample.json",
+      "PUBLIC_EXAMPLE_COVERAGE.json"
     ],
     "governance_and_review": [
       "docs/reviewer-guide.md",
@@ -63,7 +65,8 @@
     "The repo publishes a real public contract surface for CapsuleOS and validator-facing artifacts.",
     "The repo exposes both human-readable and machine-readable evidence for external review.",
     "The repo makes scope, portability posture, and published-vs-deferred boundaries explicit.",
-    "The repo makes claim-to-evidence traceability explicit instead of leaving reviewers to infer it from scattered files."
+    "The repo makes claim-to-evidence traceability explicit instead of leaving reviewers to infer it from scattered files.",
+    "The repo makes public example coverage explicit instead of leaving reviewers to guess which fixtures exercise which contracts."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",

@@ -23,6 +23,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable fast-review packet for bounded external evaluation.
 - [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
   Machine-readable summary of the public fail-closed and negative-evidence posture.
+- [`../PUBLIC_EXAMPLE_COVERAGE.json`](../PUBLIC_EXAMPLE_COVERAGE.json)
+  Machine-readable map of which public examples cover which capsule, route, and negative-path surfaces.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Machine-readable map from public claims to strongest surfaces and verification commands.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
@@ -52,6 +54,8 @@ The evaluation packet strengthens that path further by giving external reviewers
 
 The failure model strengthens trust review by making bounded negative paths explicit instead of leaving failure semantics implicit in scattered examples.
 
+The example coverage layer strengthens reviewability by making the public fixture set legible as a bounded coverage pack instead of a random pile of sample files.
+
 The traceability matrix strengthens reviewability by making claim-to-evidence and claim-to-verification links explicit instead of leaving them implicit across multiple files.
 
 The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
@@ -71,6 +75,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_PROJECT_PROFILE.json`
 - `PUBLIC_EVALUATION_PACKET.json`
 - `PUBLIC_FAILURE_MODEL.json`
+- `PUBLIC_EXAMPLE_COVERAGE.json`
 - `PUBLIC_TRACEABILITY_MATRIX.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`

@@ -1329,6 +1329,65 @@
         "npm run check:traceability",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "governance.example-coverage-doc",
+      "path": "docs/example-coverage.md",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:example-coverage",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.example-coverage",
+      "path": "PUBLIC_EXAMPLE_COVERAGE.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:example-coverage",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.example-coverage",
+      "path": "schemas/public-example-coverage.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:example-coverage",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.example-coverage-check",
+      "path": "scripts/check-example-coverage.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:example-coverage",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

@@ -11,6 +11,7 @@ Use them to:
 - inspect validator HTTP request and response envelopes
 - build tutorials or integration demos without touching private vault data
 - follow a stable public contract map before depending on edge-case behavior
+- inspect a bounded coverage map in `../PUBLIC_EXAMPLE_COVERAGE.json`
 
 ## Files
 

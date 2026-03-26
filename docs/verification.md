@@ -22,6 +22,8 @@ This executes all repository-local checks in the expected order.
   Verifies validator request and response sample payloads and keeps them aligned with the capsule examples.
 - `npm run check:api-schemas`
   Validates the published API example payloads against `schemas/validator-api-envelopes.schema.json`.
+- `npm run check:example-coverage`
+  Verifies `PUBLIC_EXAMPLE_COVERAGE.json`, capsule/API example coverage links, and surrounding example docs.
 - `npm run check:boundary-map`
   Verifies `PUBLIC_BOUNDARY_MAP.json`, the new projection/boundary docs, and their contract-catalog coverage.
 - `npm run check:client-recipes`
@@ -70,6 +72,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_PORTABILITY_PROFILE.json` stays aligned with the portability docs, archive schema, and archive example surfaces
 - `PUBLIC_EVALUATION_PACKET.json` stays aligned with reviewer docs, strongest-evidence references, and release-evidence surfaces
 - `PUBLIC_FAILURE_MODEL.json` stays aligned with negative examples, fail-closed docs, and validator / portability trust surfaces
+- `PUBLIC_EXAMPLE_COVERAGE.json` stays aligned with the real capsule examples, API examples, route docs, and failure-model surfaces it summarizes
 - `PUBLIC_TRACEABILITY_MATRIX.json` stays aligned with the real docs, schemas, examples, and verification commands it claims to connect
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`

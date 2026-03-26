@@ -1,0 +1,343 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "summary": {
+    "capsule_examples": 5,
+    "api_examples": 13,
+    "positive_capsules": 4,
+    "negative_capsules": 1,
+    "graph_examples": 1
+  },
+  "capsule_examples": [
+    {
+      "capsule_id": "capsule.example.note.v1",
+      "path": "examples/example-note.capsule.json",
+      "role": "minimal-note",
+      "validator_status": "pass",
+      "coverage_tags": [
+        "five-element-law",
+        "capsule-schema",
+        "single-validate-route",
+        "client-smoke"
+      ],
+      "related_api_examples": [
+        "examples/api/validate-request.single.json",
+        "examples/api/validate-response.pass.json",
+        "examples/api/validate-request.batch.json",
+        "examples/api/validate-response.batch.json"
+      ],
+      "verify_commands": [
+        "npm run check:examples",
+        "npm run check:api-examples",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "capsule_id": "capsule.example.task.v1",
+      "path": "examples/example-task.capsule.json",
+      "role": "minimal-task",
+      "validator_status": "pass",
+      "coverage_tags": [
+        "five-element-law",
+        "task-payload-shape",
+        "capsule-schema"
+      ],
+      "related_api_examples": [],
+      "verify_commands": [
+        "npm run check:examples",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "capsule_id": "capsule.example.validator-valid.v1",
+      "path": "examples/example-validator-valid.capsule.json",
+      "role": "validator-smoke",
+      "validator_status": "pass",
+      "coverage_tags": [
+        "validator-smoke",
+        "capsule-schema",
+        "graph-hub-target"
+      ],
+      "related_api_examples": [
+        "examples/api/gates-response.sample.json",
+        "examples/api/stats-response.sample.json"
+      ],
+      "verify_commands": [
+        "npm run check:examples",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "capsule_id": "capsule.example.validator-invalid-g16.v1",
+      "path": "examples/example-validator-invalid-g16.capsule.json",
+      "role": "negative-g16",
+      "validator_status": "expected_fail_g16",
+      "coverage_tags": [
+        "negative-path",
+        "g16",
+        "fix-route-input",
+        "batch-invalid"
+      ],
+      "related_api_examples": [
+        "examples/api/validate-request.batch.json",
+        "examples/api/validate-response.fail.json",
+        "examples/api/validate-request.fix.json",
+        "examples/api/validate-response.fix.sample.json"
+      ],
+      "verify_commands": [
+        "npm run check:examples",
+        "npm run check:api-examples",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "capsule_id": "capsule.example.project-hub.v1",
+      "path": "examples/example-project-hub.capsule.json",
+      "role": "graph-hub",
+      "validator_status": "pass_with_known_ids",
+      "coverage_tags": [
+        "graph-links",
+        "known-id-resolution",
+        "public-reference-graph"
+      ],
+      "related_api_examples": [],
+      "verify_commands": [
+        "npm run check:examples",
+        "npm run check:release",
+        "npm run check:example-coverage"
+      ]
+    }
+  ],
+  "api_examples": [
+    {
+      "path": "examples/api/validate-request.single.json",
+      "route": "POST /api/validate",
+      "example_kind": "request",
+      "coverage_tags": [
+        "single-route",
+        "request-envelope",
+        "note-example"
+      ],
+      "related_capsule_ids": [
+        "capsule.example.note.v1"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/validate-request.batch.json",
+      "route": "POST /api/validate/batch",
+      "example_kind": "request",
+      "coverage_tags": [
+        "batch-route",
+        "mixed-validity",
+        "negative-input"
+      ],
+      "related_capsule_ids": [
+        "capsule.example.note.v1",
+        "capsule.example.validator-invalid-g16.v1"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/validate-request.fix.json",
+      "route": "POST /api/validate/fix",
+      "example_kind": "request",
+      "coverage_tags": [
+        "fix-route",
+        "negative-input",
+        "g16-remediation"
+      ],
+      "related_capsule_ids": [
+        "capsule.example.validator-invalid-g16.v1"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/validate-response.pass.json",
+      "route": "POST /api/validate",
+      "example_kind": "response",
+      "coverage_tags": [
+        "single-route",
+        "positive-response",
+        "hash-parity"
+      ],
+      "related_capsule_ids": [
+        "capsule.example.note.v1"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/validate-response.fail.json",
+      "route": "POST /api/validate",
+      "example_kind": "response",
+      "coverage_tags": [
+        "single-route",
+        "negative-response",
+        "g16"
+      ],
+      "related_capsule_ids": [
+        "capsule.example.validator-invalid-g16.v1"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/validate-response.batch.json",
+      "route": "POST /api/validate/batch",
+      "example_kind": "response",
+      "coverage_tags": [
+        "batch-route",
+        "mixed-results",
+        "negative-summary"
+      ],
+      "related_capsule_ids": [
+        "capsule.example.note.v1",
+        "capsule.example.validator-invalid-g16.v1"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/validate-response.fix.sample.json",
+      "route": "POST /api/validate/fix",
+      "example_kind": "response",
+      "coverage_tags": [
+        "fix-route",
+        "remediation-output",
+        "corrected-seal"
+      ],
+      "related_capsule_ids": [
+        "capsule.example.validator-invalid-g16.v1"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/gates-response.sample.json",
+      "route": "GET /api/validate/gates",
+      "example_kind": "response",
+      "coverage_tags": [
+        "gate-reference",
+        "validator-law"
+      ],
+      "related_capsule_ids": [
+        "capsule.example.validator-valid.v1"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/stats-response.sample.json",
+      "route": "GET /api/validate/stats",
+      "example_kind": "response",
+      "coverage_tags": [
+        "stats-route",
+        "gate-aggregates"
+      ],
+      "related_capsule_ids": [
+        "capsule.example.validator-valid.v1"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/error-response.sample.json",
+      "route": "shared-error-envelope",
+      "example_kind": "response",
+      "coverage_tags": [
+        "generic-error",
+        "bounded-rejection"
+      ],
+      "related_capsule_ids": [],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/unauthorized-response.sample.json",
+      "route": "shared-error-envelope",
+      "example_kind": "response",
+      "coverage_tags": [
+        "unauthorized",
+        "bounded-access-rejection"
+      ],
+      "related_capsule_ids": [],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/conflict-response.sample.json",
+      "route": "shared-error-envelope",
+      "example_kind": "response",
+      "coverage_tags": [
+        "conflict",
+        "bounded-state-rejection"
+      ],
+      "related_capsule_ids": [],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/rate-limit-response.sample.json",
+      "route": "shared-error-envelope",
+      "example_kind": "response",
+      "coverage_tags": [
+        "rate-limit",
+        "bounded-throttle"
+      ],
+      "related_capsule_ids": [],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This file does not enumerate every private upstream test fixture or every runtime-only validator scenario.",
+    "This file does not replace the stronger capsule examples, API payloads, route docs, or live validator checks it references."
+  ],
+  "review_commands": [
+    "npm run check:example-coverage",
+    "npm run verify:repo"
+  ]
+}

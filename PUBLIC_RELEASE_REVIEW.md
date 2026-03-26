@@ -16,6 +16,7 @@
 - machine-readable reviewer/program profile in `PUBLIC_PROJECT_PROFILE.json` plus a reviewer guide
 - machine-readable evaluation packet in `PUBLIC_EVALUATION_PACKET.json` plus a concise external-review doc
 - machine-readable failure model in `PUBLIC_FAILURE_MODEL.json` plus fail-closed public docs
+- machine-readable example coverage in `PUBLIC_EXAMPLE_COVERAGE.json` plus a bounded example-coverage guide
 - machine-readable traceability matrix in `PUBLIC_TRACEABILITY_MATRIX.json` plus an end-to-end traceability guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
@@ -54,6 +55,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-example-contracts.js`: pass
 - `node scripts/check-api-examples.js`: pass
 - `node scripts/check-api-schemas.js`: pass
+- `node scripts/check-example-coverage.js`: pass
 - `node scripts/check-boundary-map.js`: pass
 - `node scripts/check-client-recipes.js`: pass
 - `node scripts/check-community-health.js`: pass
@@ -67,7 +69,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `138` files / `138` manifest entries
+- manifest coverage: `142` files / `142` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -90,4 +92,5 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_PORTABILITY_PROFILE.json` and the archive-bundle sample are public contract summaries, not proof of a deployed hosted export/import service
 - `PUBLIC_EVALUATION_PACKET.json` is a reviewer shortcut layer and must stay subordinate to the stronger docs, schemas, release evidence, and machine-readable source surfaces
 - `PUBLIC_FAILURE_MODEL.json` is a bounded negative-evidence summary and must stay subordinate to the stronger examples, validator docs, OpenAPI, and portability surfaces
+- `PUBLIC_EXAMPLE_COVERAGE.json` is a curated fixture-coverage summary and must stay subordinate to the stronger example files, route docs, and validator-backed checks it references
 - `PUBLIC_TRACEABILITY_MATRIX.json` is a curated reviewer-facing map and must stay subordinate to the stronger docs, schemas, examples, and verification artifacts it references

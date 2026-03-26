@@ -18,6 +18,7 @@ Each trace connects:
 - capsule law and schema
 - validator API and client-facing contracts
 - negative evidence and fail-closed behavior
+- example coverage across capsule and API fixtures
 - projection boundaries and provenance
 - reviewer and release evidence
 - portability and archive trust

@@ -26,6 +26,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable external evaluation packet.
 - `public-failure-model.schema.json`
   JSON Schema for the machine-readable fail-closed public failure model.
+- `public-example-coverage.schema.json`
+  JSON Schema for the machine-readable capsule/API example coverage map.
 - `public-traceability-matrix.schema.json`
   JSON Schema for the machine-readable claim-to-evidence traceability matrix.
 
