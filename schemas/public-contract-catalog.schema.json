@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-contract-catalog.schema.json",
+  "title": "Public Contract Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["catalog_version", "generated_at", "entries"],
+  "properties": {
+    "catalog_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "path", "kind", "stability", "audiences", "verify_commands"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "stability": {
+            "type": "string"
+          },
+          "audiences": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "verify_commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

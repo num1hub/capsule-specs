@@ -22,6 +22,7 @@ const allowedKinds = new Set([
   'api-example',
   'provenance',
   'release-review',
+  'release-metadata',
   'index'
 ]);
 
@@ -67,11 +68,13 @@ for (const entry of catalog.entries) {
 const requiredIds = [
   'repo.readme',
   'repo.versioning',
+  'repo.notice',
   'validator.openapi',
   'schema.capsule',
   'examples.note',
   'governance.manifest',
-  'governance.contract-index'
+  'governance.contract-index',
+  'governance.release-metadata'
 ];
 
 for (const requiredId of requiredIds) {

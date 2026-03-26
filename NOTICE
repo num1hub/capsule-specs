@@ -1,0 +1,12 @@
+N1Hub Specs
+Copyright 2026 egor-n1
+
+This repository contains public specification, schema, example, and contract-projection artifacts
+for the capsule-first foundations behind N1Hub and CapsuleOS.
+
+The public files in this repository are intentionally narrower than the full upstream private
+working system. They are maintained as a reviewable open-core reference surface for contributors,
+integrators, reviewers, and tooling.
+
+Project names, trade names, and product identifiers remain subject to the trademark and attribution
+boundaries described by the Apache License, Version 2.0.

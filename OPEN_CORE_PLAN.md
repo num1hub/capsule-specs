@@ -41,6 +41,7 @@ Create a small, public-safe repository that explains the capsule model, publishe
 - integration and versioning docs so external consumers can reason about stability instead of inferring it
 - a machine-readable contract catalog so public surfaces can be indexed without scraping prose docs
 - a route reference and verification guide so integrators and reviewers can navigate the public surface operationally
+- machine-readable release evidence and schema-backed metadata so external review flows can consume repo state without scraping Markdown
 - repo-local package metadata and verification scripts for reviewable maintainer workflows
 - provenance and release-review artifacts
 

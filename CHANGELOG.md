@@ -12,6 +12,7 @@
 - added Markdown link verification to keep the public docs surface coherent
 - added a machine-readable public contract catalog plus catalog verification
 - added route-by-route validator reference, verification guide, and stronger surface-coherence checks
+- added machine-readable release metadata, release schemas, and Apache-2 notice hygiene
 
 ## 0.1.0 - 2026-03-26
 

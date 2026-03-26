@@ -21,6 +21,7 @@ Welcome to the public N1Hub specification surface.
 - Read [`docs/integration-guide.md`](docs/integration-guide.md) and [`VERSIONING.md`](VERSIONING.md) before treating the repo as an integration dependency.
 - Read [`docs/route-reference.md`](docs/route-reference.md) for the route-by-route validator map.
 - Read [`docs/contract-catalog.md`](docs/contract-catalog.md) and inspect [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json) if you need a machine-readable public surface map.
+- Read [`docs/release-evidence.md`](docs/release-evidence.md) and inspect [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) if you need structured release evidence.
 - Read [`docs/source-materials.md`](docs/source-materials.md) so projection provenance stays explicit.
 - Compare the raw capsules in [`capsules/`](capsules/) with the machine-readable schemas in [`schemas/`](schemas/).
 - Inspect [`docs/examples.md`](docs/examples.md) and [`examples/example-known-ids.json`](examples/example-known-ids.json) before changing graph-linked examples.
@@ -37,3 +38,4 @@ Welcome to the public N1Hub specification surface.
 - Open an issue first when a change would alter the capsule law, validator semantics, or public repository scope.
 - Run `npm run verify:repo` and refresh [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md) before proposing a release-facing change.
 - Read [`docs/verification.md`](docs/verification.md) if you need to interpret a failing repo-local check.
+- Keep [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) and [`NOTICE`](NOTICE) aligned with release-facing changes.

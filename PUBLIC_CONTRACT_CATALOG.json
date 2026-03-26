@@ -19,6 +19,14 @@
       "verify_commands": ["npm run check:docs", "npm run check:catalog"]
     },
     {
+      "id": "repo.notice",
+      "path": "NOTICE",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": ["contributors", "reviewers"],
+      "verify_commands": ["npm run check:release", "npm run check:catalog"]
+    },
+    {
       "id": "law.5-element",
       "path": "docs/5-element-law.md",
       "kind": "law-doc",
@@ -97,6 +105,22 @@
       "stability": "maintained",
       "audiences": ["integrators", "tool-builders"],
       "verify_commands": ["npm run audit:public-surface", "npm run check:catalog"]
+    },
+    {
+      "id": "schema.contract-catalog",
+      "path": "schemas/public-contract-catalog.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": ["tool-builders", "reviewers"],
+      "verify_commands": ["npm run check:catalog", "npm run check:release"]
+    },
+    {
+      "id": "schema.release-metadata",
+      "path": "schemas/public-release-metadata.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": ["tool-builders", "reviewers"],
+      "verify_commands": ["npm run check:release", "npm run check:catalog"]
     },
     {
       "id": "examples.note",
@@ -227,6 +251,14 @@
       "verify_commands": ["npm run check:docs", "npm run check:catalog"]
     },
     {
+      "id": "governance.release-metadata",
+      "path": "PUBLIC_RELEASE_METADATA.json",
+      "kind": "release-metadata",
+      "stability": "maintained",
+      "audiences": ["reviewers", "contributors", "tool-builders"],
+      "verify_commands": ["npm run check:release", "npm run check:catalog", "npm run check:surface"]
+    },
+    {
       "id": "governance.contract-index",
       "path": "docs/public-contract-index.md",
       "kind": "index",
@@ -241,6 +273,14 @@
       "stability": "maintained",
       "audiences": ["contributors", "reviewers"],
       "verify_commands": ["npm run check:docs", "npm run check:surface", "npm run check:catalog"]
+    },
+    {
+      "id": "governance.release-evidence-doc",
+      "path": "docs/release-evidence.md",
+      "kind": "release-review",
+      "stability": "maintained",
+      "audiences": ["contributors", "reviewers"],
+      "verify_commands": ["npm run check:docs", "npm run check:release", "npm run check:catalog"]
     }
   ]
 }

@@ -10,9 +10,11 @@ This repository is small, but releases should still be explicit and reviewable.
 4. Review [`VERSIONING.md`](VERSIONING.md) when a contract-facing change may alter release semantics.
 5. Update [`CHANGELOG.md`](CHANGELOG.md).
 6. Review [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json) when a public surface was added, removed, or reclassified.
-7. Review [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md).
-8. Review [`docs/verification.md`](docs/verification.md) if a repo-local check changed or a new check was added.
-9. Create a release tag and short release notes.
+7. Review [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) when release evidence changed.
+8. Review [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md).
+9. Review [`docs/verification.md`](docs/verification.md) if a repo-local check changed or a new check was added.
+10. Keep [`NOTICE`](NOTICE) accurate when attribution or legal surface changed.
+11. Create a release tag and short release notes.
 
 ## Release posture
 

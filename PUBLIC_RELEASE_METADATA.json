@@ -1,0 +1,78 @@
+{
+  "version": "0.1.0",
+  "catalog_version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "license": "Apache-2.0",
+  "notice_file": "NOTICE",
+  "stability_phase": "0.x",
+  "manifest_coverage": {
+    "files": 87,
+    "manifest_entries": 87
+  },
+  "surface_summary": {
+    "catalog_entries": 35,
+    "example_capsules": 5,
+    "api_example_files": 11,
+    "markdown_files": 43
+  },
+  "repo_local_checks": [
+    {
+      "command": "npm run audit:public-surface",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:examples",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:api-examples",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:docs",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:catalog",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:surface",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:release",
+      "status": "pass"
+    }
+  ],
+  "upstream_validator_checks": [
+    {
+      "path": "examples/example-note.capsule.json",
+      "status": "pass"
+    },
+    {
+      "path": "examples/example-task.capsule.json",
+      "status": "pass"
+    },
+    {
+      "path": "examples/example-validator-valid.capsule.json",
+      "status": "pass"
+    },
+    {
+      "path": "examples/example-validator-invalid-g16.capsule.json",
+      "status": "expected_fail",
+      "gate": "G16"
+    },
+    {
+      "path": "examples/example-project-hub.capsule.json",
+      "status": "pass",
+      "notes": "validated with --ids-file examples/example-known-ids.json"
+    }
+  ],
+  "residual_risks": [
+    "some source materials come from a public-oriented vault snapshot rather than from a standalone published repository",
+    "JSON Schema files are public projections aligned to live validator behavior, but the validator remains the stronger source of truth for edge-case semantics",
+    "API response examples are illustrative contract samples, not recorded live HTTP captures from a deployed public service",
+    "local hidden Codex state is excluded via .gitignore and must remain outside any public commit"
+  ]
+}

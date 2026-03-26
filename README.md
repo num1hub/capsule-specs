@@ -30,6 +30,7 @@ This repository is that home.
 - [`docs/public-contract-index.md`](docs/public-contract-index.md) for a complete public surface map
 - [`docs/contract-catalog.md`](docs/contract-catalog.md) for the machine-readable contract map
 - [`docs/verification.md`](docs/verification.md) for the repo verification stack
+- [`docs/release-evidence.md`](docs/release-evidence.md) for human and machine-readable release evidence
 - [`docs/source-materials.md`](docs/source-materials.md) for provenance and projection inputs
 - [`docs/faq.md`](docs/faq.md) for the shortest answers to scope questions
 - [`docs/compatibility.md`](docs/compatibility.md) for stability expectations
@@ -59,6 +60,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - issue and pull-request templates
 - machine-readable provenance in [`SOURCE_MANIFEST.json`](SOURCE_MANIFEST.json)
 - machine-readable contract discovery in [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json)
+- machine-readable release evidence in [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json)
 - a public-release review in [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md)
 - repo-local verification via `npm run verify:repo`
 - local validator-backed example checks
@@ -66,6 +68,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - API payload examples under [`examples/api/`](examples/api/)
 - route-level reference docs under [`docs/route-reference.md`](docs/route-reference.md)
 - a release checklist in [`RELEASING.md`](RELEASING.md)
+- Apache-2 attribution guidance in [`NOTICE`](NOTICE)
 
 ## Scope
 

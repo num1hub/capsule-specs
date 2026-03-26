@@ -22,6 +22,7 @@ Use this guide when you want the shortest safe entry into the repository.
 - Read [`docs/integration-guide.md`](docs/integration-guide.md) before wiring a real client or parser.
 - Skim [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json) if you need a machine-readable map of stable surfaces.
 - Read [`docs/route-reference.md`](docs/route-reference.md) if you want a route-by-route validator view.
+- Inspect [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) if you want machine-readable release evidence.
 
 ## 4. Inspect examples
 
@@ -34,3 +35,4 @@ Use this guide when you want the shortest safe entry into the repository.
 - Read [`SECURITY.md`](SECURITY.md) before reporting trust-sensitive problems.
 - Run `npm run verify:repo` before publishing a serious change to the public surface.
 - Read [`docs/verification.md`](docs/verification.md) if you need to understand what each repo-local check protects.
+- Read [`NOTICE`](NOTICE) if you need the Apache-2 attribution surface for redistribution.

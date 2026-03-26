@@ -26,6 +26,8 @@ This executes all repository-local checks in the expected order.
   Verifies `PUBLIC_CONTRACT_CATALOG.json` structure, version parity, and required entries.
 - `npm run check:surface`
   Verifies cross-surface coherence between the catalog, manifest, package scripts, and human-readable index/review files.
+- `npm run check:release`
+  Verifies `PUBLIC_RELEASE_METADATA.json`, coverage counts, legal notice presence, and release-evidence consistency.
 
 ## Upstream validator checks
 
@@ -41,4 +43,4 @@ Serious public changes should not be considered complete until:
 
 - `npm run verify:repo` passes
 - changed examples or contracts are rechecked against the live validator where applicable
-- `CHANGELOG.md`, `PUBLIC_RELEASE_REVIEW.md`, and `PUBLIC_CONTRACT_CATALOG.json` stay aligned
+- `CHANGELOG.md`, `PUBLIC_RELEASE_REVIEW.md`, `PUBLIC_RELEASE_METADATA.json`, and `PUBLIC_CONTRACT_CATALOG.json` stay aligned

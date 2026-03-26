@@ -33,10 +33,13 @@ const publicIndex = readText('docs/public-contract-index.md');
 const readme = readText('README.md');
 const releaseReview = readText('PUBLIC_RELEASE_REVIEW.md');
 const verificationDoc = readText('docs/verification.md');
+const releaseEvidenceDoc = readText('docs/release-evidence.md');
 
 const expectedPublicIndexLinks = [
   'contract-catalog.md',
   '../PUBLIC_CONTRACT_CATALOG.json',
+  'release-evidence.md',
+  '../PUBLIC_RELEASE_METADATA.json',
   'route-reference.md',
   'integration-guide.md'
 ];
@@ -46,9 +49,14 @@ for (const needle of expectedPublicIndexLinks) {
 }
 
 assert(readme.includes('PUBLIC_CONTRACT_CATALOG.json'), 'README.md must mention PUBLIC_CONTRACT_CATALOG.json');
+assert(readme.includes('PUBLIC_RELEASE_METADATA.json'), 'README.md must mention PUBLIC_RELEASE_METADATA.json');
+assert(readme.includes('NOTICE'), 'README.md must mention NOTICE');
 assert(readme.includes('npm run verify:repo'), 'README.md must mention npm run verify:repo');
 assert(releaseReview.includes('check-contract-catalog.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-contract-catalog.js');
+assert(releaseReview.includes('check-release-metadata.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-release-metadata.js');
 assert(verificationDoc.includes('check:surface'), 'docs/verification.md must explain check:surface');
+assert(verificationDoc.includes('check:release'), 'docs/verification.md must explain check:release');
+assert(releaseEvidenceDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'docs/release-evidence.md must mention PUBLIC_RELEASE_METADATA.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

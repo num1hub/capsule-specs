@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-release-metadata.schema.json",
+  "title": "Public Release Metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "catalog_version",
+    "reviewed_at",
+    "license",
+    "notice_file",
+    "stability_phase",
+    "manifest_coverage",
+    "surface_summary",
+    "repo_local_checks",
+    "upstream_validator_checks",
+    "residual_risks"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "catalog_version": {
+      "type": "string"
+    },
+    "reviewed_at": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "notice_file": {
+      "type": "string"
+    },
+    "stability_phase": {
+      "type": "string"
+    },
+    "manifest_coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files", "manifest_entries"],
+      "properties": {
+        "files": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "manifest_entries": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "surface_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["catalog_entries", "example_capsules", "api_example_files", "markdown_files"],
+      "properties": {
+        "catalog_entries": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "example_capsules": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "api_example_files": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "markdown_files": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "repo_local_checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["command", "status"],
+        "properties": {
+          "command": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "upstream_validator_checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "status"],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "gate": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "residual_risks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

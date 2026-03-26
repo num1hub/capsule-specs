@@ -23,6 +23,7 @@ This repository is assembled from public-safe source surfaces rather than from a
 - provenance is tracked in [`../SOURCE_MANIFEST.json`](../SOURCE_MANIFEST.json)
 - public contract discovery is tracked in [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
 - repo-local verification meaning is tracked in [`verification.md`](verification.md)
+- machine-readable release evidence is tracked in [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
 
 ## Why this matters
 

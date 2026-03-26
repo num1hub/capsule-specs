@@ -8,6 +8,10 @@ This directory contains public machine-readable schema artifacts.
   Public JSON Schema for the five-element outer capsule structure.
 - `neuro-concentrate.schema.json`
   Public JSON Schema for the semantic summary layer.
+- `public-contract-catalog.schema.json`
+  JSON Schema for the machine-readable public contract catalog.
+- `public-release-metadata.schema.json`
+  JSON Schema for the machine-readable release-evidence file.
 
 ## Notes
 

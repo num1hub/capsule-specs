@@ -27,6 +27,7 @@ The Markdown docs are optimized for people. The catalog is optimized for machine
 - maintainers can track which artifacts need synchronized updates
 - future tooling can read the catalog without scraping prose docs
 - reviewers can correlate route docs, examples, and verification commands from one machine-readable source
+- release tooling can connect the catalog to `PUBLIC_RELEASE_METADATA.json` without scraping prose docs
 
 ## Important boundary
 

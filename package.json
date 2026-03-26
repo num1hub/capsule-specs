@@ -31,6 +31,7 @@
     "check:docs": "node scripts/check-doc-links.js",
     "check:catalog": "node scripts/check-contract-catalog.js",
     "check:surface": "node scripts/check-surface-coherence.js",
-    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:docs && npm run check:catalog && npm run check:surface"
+    "check:release": "node scripts/check-release-metadata.js",
+    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:docs && npm run check:catalog && npm run check:surface && npm run check:release"
   }
 }

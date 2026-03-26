@@ -45,6 +45,13 @@
     "transformation_type": "generated",
     "notes": "Versioning and contract-change policy for the public repository surface."
   },
+  "NOTICE": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.license.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Apache-2.0 attribution and notice surface for redistribution and review."
+  },
   "RELEASING.md": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -268,6 +275,15 @@
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
   },
+  "docs/release-evidence.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_REVIEW.md",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/VERSIONING.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
+  },
   "docs/verification.md": {
     "source_paths": [
       "/home/n1/codex-workspace/package.json",
@@ -303,6 +319,20 @@
     ],
     "transformation_type": "derived",
     "notes": "Public JSON Schema for the neuro-concentrate layer."
+  },
+  "schemas/public-contract-catalog.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "JSON Schema describing the machine-readable public contract catalog."
+  },
+  "schemas/public-release-metadata.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "JSON Schema describing the machine-readable release-evidence metadata."
   },
   "schemas/README.md": {
     "source_paths": [],
@@ -465,6 +495,11 @@
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths."
   },
+  "PUBLIC_RELEASE_METADATA.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
+  },
   "PUBLIC_RELEASE_REVIEW.md": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -507,6 +542,11 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts."
+  },
+  "scripts/check-release-metadata.js": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence."
   },
   "openapi/validate.openapi.json": {
     "source_paths": [
