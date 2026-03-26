@@ -3,7 +3,8 @@
 ## Included materials
 
 - community health files: `README`, `LICENSE`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `SUPPORT`
-- public docs for the capsule law, validator, relation types, and repository boundary
+- root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
+- public docs for the capsule law, validator, relation types, schema, examples, anchor governance, and repository boundary
 - machine-readable schemas
 - synthetic example capsules
 - raw public law capsules
@@ -31,6 +32,11 @@ Validated with the live validator from `/home/n1/n1hub.com` on 2026-03-26:
 - `examples/example-task.capsule.json`: pass
 - `examples/example-validator-valid.capsule.json`: pass
 - `examples/example-validator-invalid-g16.capsule.json`: expected fail on `G16`
+
+Repository-local audit on 2026-03-26:
+
+- `node scripts/audit-public-surface.js`: pass
+- manifest coverage: `48` files / `48` manifest entries
 
 ## Residual risks
 

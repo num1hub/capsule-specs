@@ -18,6 +18,14 @@ N1Hub is being built as a portable, validator-backed, open-core knowledge system
 
 This repository is that home.
 
+## Start here
+
+- [`QUICKSTART.md`](QUICKSTART.md) for the fastest safe orientation
+- [`ONBOARDING.md`](ONBOARDING.md) for the full contributor path
+- [`docs/overview.md`](docs/overview.md) for the public boundary
+- [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
+- [`ROADMAP.md`](ROADMAP.md) for the current evolution path
+
 ## Repository layout
 
 - `docs/`
@@ -31,6 +39,17 @@ This repository is that home.
 - `capsules/`
   Curated raw public capsules used as source material for the public specs.
 
+## Repository health
+
+The repository is structured to look like a serious OSS-maintained surface rather than a one-off export:
+
+- community files for contributions, conduct, support, and security
+- issue and pull-request templates
+- machine-readable provenance in [`SOURCE_MANIFEST.json`](SOURCE_MANIFEST.json)
+- a public-release review in [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md)
+- local validator-backed example checks
+- a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
+
 ## Scope
 
 This repository is a public specification and reference surface. It is not the complete N1Hub runtime, not a private vault dump, and not a release of internal operator tooling.
@@ -39,13 +58,23 @@ This repository is a public specification and reference surface. It is not the c
 
 Primary maintainer: `egor-n1`
 
+Maintainer and review policy:
+
+- [`MAINTAINERS.md`](MAINTAINERS.md)
+- [`GOVERNANCE.md`](GOVERNANCE.md)
+
 ## Quick start
 
 1. Read [`docs/overview.md`](docs/overview.md).
 2. Read [`docs/5-element-law.md`](docs/5-element-law.md) and [`docs/16-gates.md`](docs/16-gates.md).
 3. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
-4. Validate the example capsules against the published rules.
+4. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+5. Review the raw capsule sources in [`capsules/`](capsules/).
 
 ## Source of truth
 
 This repository is assembled from public-safe source materials curated out of the sovereign N1Hub vault and validator surfaces. Files here are projection artifacts for public use.
+
+## Current status
+
+This is the initial public projection of the N1Hub open-core specification surface. The current release focuses on schema, validator-facing contracts, examples, and repository health rather than on the full runtime codebase.

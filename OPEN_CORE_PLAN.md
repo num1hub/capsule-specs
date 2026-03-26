@@ -32,6 +32,7 @@ Create a small, public-safe repository that explains the capsule model, publishe
 ## Generated or adapted targets
 
 - community files for healthy public contribution flow
+- root onboarding, governance, maintainer, roadmap, and changelog files
 - public docs derived from capsules and validator docs
 - JSON Schema artifacts
 - synthetic examples for validation and education

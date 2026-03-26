@@ -7,6 +7,49 @@
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
   },
+  "QUICKSTART.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Root-level fast entry path for public contributors."
+  },
+  "ONBOARDING.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.onboarding.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Root-level onboarding guide adapted to the narrower public repository."
+  },
+  "GOVERNANCE.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.contributing.v1.json",
+      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Public governance and projection-boundary guide for this repository."
+  },
+  "ROADMAP.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Public roadmap for the open-core specification surface."
+  },
+  "CHANGELOG.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository changelog starting at the initial public projection."
+  },
+  "MAINTAINERS.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Maintainer identity and responsibilities."
+  },
+  "CODEOWNERS": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Simple ownership declaration for repository review routing."
+  },
   "LICENSE": {
     "source_paths": [
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.license.v1.json"
@@ -59,6 +102,16 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "PR template for public-surface changes."
+  },
+  ".github/ISSUE_TEMPLATE/config.yml": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Issue-template configuration for public reporting paths."
+  },
+  ".github/workflows/audit-public-surface.yml": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Lightweight CI workflow for public-surface auditing."
   },
   "docs/overview.md": {
     "source_paths": [
@@ -120,6 +173,32 @@
     "transformation_type": "derived",
     "notes": "Public summary of anchor governance."
   },
+  "docs/schema-reference.md": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json",
+      "/home/n1/n1hub.com/docs/validator.md"
+    ],
+    "transformation_type": "derived",
+    "notes": "Field-level capsule schema guide."
+  },
+  "docs/openapi.md": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/n1hub.com/docs/validator.md"
+    ],
+    "transformation_type": "derived",
+    "notes": "Human-readable note about the published OpenAPI surface."
+  },
+  "docs/examples.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.note-fixture.v1.json",
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.task-fixture.v1.json",
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.validator-valid-fixture.v1.json",
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.validator-invalid-g16-fixture.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Guide to the example set and expected validation behavior."
+  },
   "schemas/capsule-schema.json": {
     "source_paths": [
       "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json",
@@ -135,6 +214,11 @@
     ],
     "transformation_type": "derived",
     "notes": "Public JSON Schema for the neuro-concentrate layer."
+  },
+  "schemas/README.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Directory guide for schema artifacts."
   },
   "examples/example-note.capsule.json": {
     "source_paths": [
@@ -164,6 +248,11 @@
     "transformation_type": "generated",
     "notes": "Synthetic negative example with intentionally incorrect G16 seal."
   },
+  "examples/README.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Directory guide for example artifacts."
+  },
   "OPEN_CORE_PLAN.md": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -178,6 +267,11 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Public-release review and validation summary."
+  },
+  "scripts/audit-public-surface.js": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository-local audit script for manifest coverage and JSON integrity."
   },
   "openapi/validate.openapi.json": {
     "source_paths": [
@@ -213,5 +307,10 @@
     ],
     "transformation_type": "copied",
     "notes": "Raw public schema capsule."
+  },
+  "capsules/README.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Directory guide for curated raw public capsules."
   }
 }
