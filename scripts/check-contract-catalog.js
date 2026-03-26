@@ -83,6 +83,7 @@ const requiredIds = [
   'governance.failure-model',
   'governance.example-coverage',
   'governance.maintenance-model',
+  'governance.change-control-model',
   'governance.traceability-matrix',
   'governance.projection-doctrine',
   'governance.domain-boundaries',
@@ -93,6 +94,7 @@ const requiredIds = [
   'governance.failure-model-doc',
   'governance.example-coverage-doc',
   'governance.maintainer-operations-doc',
+  'governance.change-control-doc',
   'governance.traceability-doc',
   'schema.archive-bundle',
   'schema.portability-profile',
@@ -100,6 +102,7 @@ const requiredIds = [
   'schema.failure-model',
   'schema.example-coverage',
   'schema.maintenance-model',
+  'schema.change-control-model',
   'schema.traceability-matrix',
   'examples.note',
   'examples.archive-bundle',
@@ -114,6 +117,7 @@ const requiredIds = [
   'governance.failure-model-check',
   'governance.example-coverage-check',
   'governance.maintenance-model-check',
+  'governance.change-control-check',
   'governance.traceability-check'
 ];
 

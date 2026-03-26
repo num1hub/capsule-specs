@@ -27,6 +27,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable map of which public examples cover which capsule, route, and negative-path surfaces.
 - [`../PUBLIC_MAINTENANCE_MODEL.json`](../PUBLIC_MAINTENANCE_MODEL.json)
   Machine-readable summary of the bounded public maintainer workflow and release posture.
+- [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json)
+  Machine-readable summary of additive, deprecated, and breaking public change posture.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Machine-readable map from public claims to strongest surfaces and verification commands.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
@@ -60,6 +62,8 @@ The example coverage layer strengthens reviewability by making the public fixtur
 
 The maintenance model strengthens reviewability by making public maintainer workflow explicit instead of forcing outside readers to infer it from scattered community and release docs.
 
+The change-control model strengthens release review by making additive, deprecated, and breaking public-change posture explicit instead of leaving it scattered across versioning and changelog prose.
+
 The traceability matrix strengthens reviewability by making claim-to-evidence and claim-to-verification links explicit instead of leaving them implicit across multiple files.
 
 The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
@@ -81,6 +85,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_FAILURE_MODEL.json`
 - `PUBLIC_EXAMPLE_COVERAGE.json`
 - `PUBLIC_MAINTENANCE_MODEL.json`
+- `PUBLIC_CHANGE_CONTROL_MODEL.json`
 - `PUBLIC_TRACEABILITY_MATRIX.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`

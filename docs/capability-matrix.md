@@ -24,6 +24,7 @@ Each capability captures:
 - inspect fail-closed public behavior
 - assess example coverage
 - inspect maintainer operations
+- understand change control and deprecation
 - trace public claims end-to-end
 - understand projection and domain boundaries
 - review portability and archive trust posture
@@ -50,6 +51,8 @@ Good OSS repositories are not only readable; they are usable. The capability mat
   Answers: which public examples cover which capsule, route, graph-link, and negative-path surfaces.
 - [`../PUBLIC_MAINTENANCE_MODEL.json`](../PUBLIC_MAINTENANCE_MODEL.json)
   Answers: how the public intake, review, and release workflow is bounded for maintainers and outside contributors.
+- [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json)
+  Answers: how additive, deprecated, and breaking public changes should be classified and synchronized.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Answers: how the strongest public claims connect to docs, schemas, examples, and verification commands.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)

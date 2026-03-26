@@ -30,6 +30,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable capsule/API example coverage map.
 - `public-maintenance-model.schema.json`
   JSON Schema for the machine-readable public maintainer workflow model.
+- `public-change-control-model.schema.json`
+  JSON Schema for the machine-readable change-control and deprecation summary.
 - `public-traceability-matrix.schema.json`
   JSON Schema for the machine-readable claim-to-evidence traceability matrix.
 

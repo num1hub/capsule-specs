@@ -17,7 +17,8 @@ This repository is small, but releases should still be explicit and reviewable.
 11. Keep [`NOTICE`](NOTICE) accurate when attribution or legal surface changed.
 12. Recheck [`examples/client/`](examples/client/) and [`docs/client-recipes.md`](docs/client-recipes.md) when route or auth assumptions changed.
 13. Review [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) when public maintainer workflow, change classes, or expected evidence changed.
-14. Create a release tag and short release notes.
+14. Review [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) when additive, deprecated, or breaking public change posture changed.
+15. Create a release tag and short release notes.
 
 ## Release posture
 

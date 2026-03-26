@@ -1446,6 +1446,64 @@
         "npm run check:maintenance-model",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "governance.change-control-doc",
+      "path": "docs/change-control.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:change-control",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.change-control-model",
+      "path": "PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:change-control",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.change-control-model",
+      "path": "schemas/public-change-control-model.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:change-control",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.change-control-check",
+      "path": "scripts/check-change-control.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:change-control",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

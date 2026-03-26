@@ -25,8 +25,11 @@ When the public contract changes, update all of these together:
 - affected examples
 - affected schemas or OpenAPI files
 - [`CHANGELOG.md`](CHANGELOG.md)
+- [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json)
 - [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md)
 
 ## Stability reminder
 
 Even in `0.x`, this repository should behave like a maintained public surface. That means reviewers should be able to see what changed, why it changed, and which artifacts were kept in sync.
+
+The bounded machine-readable summary of this posture lives in [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json).

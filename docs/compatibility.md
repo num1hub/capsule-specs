@@ -29,6 +29,9 @@ When a breaking public contract change is necessary, update all of these togethe
 - affected schemas or OpenAPI
 - example payloads
 - [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
+- [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json)
 - [`../VERSIONING.md`](../VERSIONING.md)
 - [`CHANGELOG.md`](../CHANGELOG.md)
 - [`PUBLIC_RELEASE_REVIEW.md`](../PUBLIC_RELEASE_REVIEW.md)
+
+The bounded machine-readable summary of this posture lives in [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json).

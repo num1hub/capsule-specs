@@ -16,7 +16,8 @@ const requiredIds = [
   'projection-boundaries-and-provenance',
   'reviewer-and-release-evidence',
   'portability-and-archive-contracts',
-  'maintainer-intake-and-practical-usability'
+  'maintainer-intake-and-practical-usability',
+  'change-control-and-release-discipline'
 ];
 
 const allowedAudiences = new Set(['contributors', 'integrators', 'tool-builders', 'reviewers']);

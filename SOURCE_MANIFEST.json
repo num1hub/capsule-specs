@@ -26,7 +26,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
@@ -45,7 +47,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "derived",
     "notes": "Root-level fast entry path for public contributors."
@@ -66,7 +70,9 @@
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.contributing.v1.json",
       "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Public governance and projection-boundary guide for this repository."
@@ -90,13 +96,18 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection."
   },
   "VERSIONING.md": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
+    ],
     "transformation_type": "generated",
     "notes": "Versioning and contract-change policy for the public repository surface."
   },
@@ -111,7 +122,9 @@
     "source_paths": [
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Release checklist for keeping docs, examples, and provenance aligned."
@@ -119,7 +132,9 @@
   "MAINTAINERS.md": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Maintainer identity and responsibilities."
@@ -142,7 +157,9 @@
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/scripts/check-community-health.js",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "derived",
     "notes": "Adapted for the narrower public specs surface."
@@ -204,7 +221,9 @@
       "/home/n1/codex-workspace/scripts/check-example-coverage.js",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
       "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
-      "/home/n1/codex-workspace/scripts/check-maintenance-model.js"
+      "/home/n1/codex-workspace/scripts/check-maintenance-model.js",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface."
@@ -389,7 +408,9 @@
   "docs/compatibility.md": {
     "source_paths": [
       "/home/n1/n1hub.com/docs/validator.md",
-      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Stability and change-discipline guidance for integrators."
@@ -404,7 +425,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Short answers to scope and validation questions for the public repository."
@@ -442,7 +465,9 @@
       "/home/n1/codex-workspace/schemas/public-example-coverage.schema.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
       "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
-      "/home/n1/codex-workspace/schemas/public-maintenance-model.schema.json"
+      "/home/n1/codex-workspace/schemas/public-maintenance-model.schema.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
@@ -467,7 +492,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
@@ -502,7 +529,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects."
@@ -571,7 +600,9 @@
       "/home/n1/codex-workspace/schemas/public-example-coverage.schema.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
       "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
-      "/home/n1/codex-workspace/schemas/public-maintenance-model.schema.json"
+      "/home/n1/codex-workspace/schemas/public-maintenance-model.schema.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for schema artifacts."
@@ -804,7 +835,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths."
@@ -831,7 +864,9 @@
       "/home/n1/codex-workspace/scripts/check-example-coverage.js",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
       "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
-      "/home/n1/codex-workspace/scripts/check-maintenance-model.js"
+      "/home/n1/codex-workspace/scripts/check-maintenance-model.js",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
@@ -862,7 +897,9 @@
       "/home/n1/codex-workspace/scripts/check-example-coverage.js",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
       "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
-      "/home/n1/codex-workspace/scripts/check-maintenance-model.js"
+      "/home/n1/codex-workspace/scripts/check-maintenance-model.js",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Public-release review and validation summary."
@@ -1031,7 +1068,9 @@
       "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/feature_request.md",
       "/home/n1/codex-workspace/.github/PULL_REQUEST_TEMPLATE.md",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Public contributor-intake and community-health guide for the specs repository."
@@ -1088,7 +1127,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals."
@@ -1121,7 +1162,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Fast evaluator path through the strongest public surfaces."
@@ -1163,7 +1206,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface."
@@ -1190,7 +1235,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the capability matrix and supported public outcomes."
@@ -1338,7 +1385,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable evaluation packet for external reviewers and programs."
@@ -1358,7 +1407,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling."
@@ -1459,7 +1510,9 @@
       "/home/n1/codex-workspace/docs/example-coverage.md",
       "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface."
@@ -1551,7 +1604,9 @@
       "/home/n1/codex-workspace/CONTRIBUTING.md",
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/RELEASING.md",
-      "/home/n1/codex-workspace/GOVERNANCE.md"
+      "/home/n1/codex-workspace/GOVERNANCE.md",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the bounded public maintainer workflow."
@@ -1564,7 +1619,9 @@
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/RELEASING.md",
       "/home/n1/codex-workspace/GOVERNANCE.md",
-      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable summary of public maintainer workflow and release posture."
@@ -1587,5 +1644,47 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the public maintenance model and maintainer-facing workflow docs."
+  },
+  "docs/change-control.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/VERSIONING.md",
+      "/home/n1/codex-workspace/docs/compatibility.md",
+      "/home/n1/codex-workspace/RELEASING.md",
+      "/home/n1/codex-workspace/CHANGELOG.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Human-readable guide to additive, deprecated, and breaking public change posture."
+  },
+  "PUBLIC_CHANGE_CONTROL_MODEL.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/VERSIONING.md",
+      "/home/n1/codex-workspace/docs/compatibility.md",
+      "/home/n1/codex-workspace/RELEASING.md",
+      "/home/n1/codex-workspace/CHANGELOG.md",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture."
+  },
+  "schemas/public-change-control-model.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema for the machine-readable public change-control model."
+  },
+  "scripts/check-change-control.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/README.md",
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/docs/verification.md",
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repository-local verifier for change-control and deprecation coherence."
   }
 }

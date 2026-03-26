@@ -3,6 +3,7 @@
 This repository publishes a bounded maintainer-operations layer so outside contributors and reviewers can see how the public surface is actually maintained.
 
 The machine-readable form lives in [`../PUBLIC_MAINTENANCE_MODEL.json`](../PUBLIC_MAINTENANCE_MODEL.json).
+The bounded additive/deprecation/breaking-change posture lives in [`change-control.md`](change-control.md) and [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json).
 
 ## What this covers
 

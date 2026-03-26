@@ -1,0 +1,124 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "stability_phase": "0.x",
+  "change_classes": [
+    {
+      "id": "editorial-safe",
+      "summary": "Editorial clarifications may tighten wording, improve orientation, or fix obvious mistakes without changing contract meaning.",
+      "strongest_surfaces": [
+        "VERSIONING.md",
+        "docs/compatibility.md",
+        "docs/change-control.md",
+        "CHANGELOG.md"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:change-control"
+      ]
+    },
+    {
+      "id": "additive-compatible",
+      "summary": "Backward-compatible additions should expand docs, examples, schemas, or OpenAPI without invalidating existing consumers.",
+      "strongest_surfaces": [
+        "VERSIONING.md",
+        "docs/compatibility.md",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "verify_commands": [
+        "npm run check:catalog",
+        "npm run check:release",
+        "npm run check:change-control"
+      ]
+    },
+    {
+      "id": "deprecation-marking",
+      "summary": "Deprecations should be made reviewer-visible before removal when feasible and must keep docs, examples, and release notes synchronized.",
+      "strongest_surfaces": [
+        "docs/change-control.md",
+        "docs/compatibility.md",
+        "CHANGELOG.md",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "verify_commands": [
+        "npm run check:release",
+        "npm run check:change-control"
+      ]
+    },
+    {
+      "id": "breaking-contract-change",
+      "summary": "Breaking public changes require explicit reviewer-visible release evidence and synchronized updates across contracts, examples, and release surfaces.",
+      "strongest_surfaces": [
+        "VERSIONING.md",
+        "RELEASING.md",
+        "PUBLIC_RELEASE_REVIEW.md",
+        "PUBLIC_MAINTENANCE_MODEL.json"
+      ],
+      "verify_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:release",
+        "npm run check:change-control"
+      ]
+    }
+  ],
+  "deprecation_rules": [
+    {
+      "id": "mark-before-remove",
+      "summary": "Mark deprecations in docs and release evidence before removing a public artifact when a staged path is feasible.",
+      "strongest_surfaces": [
+        "docs/change-control.md",
+        "VERSIONING.md",
+        "CHANGELOG.md"
+      ],
+      "verify_commands": [
+        "npm run check:change-control",
+        "npm run check:docs"
+      ]
+    },
+    {
+      "id": "sync-teaching-surfaces",
+      "summary": "When a contract is deprecated or replaced, examples and teaching docs should not silently teach the stale path.",
+      "strongest_surfaces": [
+        "docs/examples.md",
+        "docs/route-reference.md",
+        "PUBLIC_EXAMPLE_COVERAGE.json"
+      ],
+      "verify_commands": [
+        "npm run check:example-coverage",
+        "npm run check:change-control"
+      ]
+    },
+    {
+      "id": "keep-reviewer-path-honest",
+      "summary": "Reviewer shortcuts and release-evidence summaries must reflect the current change posture instead of implying broader compatibility than the repo actually claims.",
+      "strongest_surfaces": [
+        "docs/reviewer-guide.md",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "verify_commands": [
+        "npm run check:project-profile",
+        "npm run check:release",
+        "npm run check:change-control"
+      ]
+    }
+  ],
+  "required_release_sync": [
+    "affected docs",
+    "affected schemas or OpenAPI files",
+    "affected examples and client recipes where applicable",
+    "CHANGELOG.md",
+    "PUBLIC_CONTRACT_CATALOG.json",
+    "PUBLIC_RELEASE_REVIEW.md",
+    "PUBLIC_RELEASE_METADATA.json"
+  ],
+  "non_claims": [
+    "This file does not promise indefinite backward compatibility for all public artifacts while the repository remains in 0.x.",
+    "This file does not expose private migration tooling or internal rollout procedures from the upstream N1Hub runtime."
+  ],
+  "review_commands": [
+    "npm run check:change-control",
+    "npm run verify:repo"
+  ]
+}

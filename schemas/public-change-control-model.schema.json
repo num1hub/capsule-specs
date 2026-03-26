@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-change-control-model.schema.json",
+  "title": "PublicChangeControlModel",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "reviewed_at",
+    "stability_phase",
+    "change_classes",
+    "deprecation_rules",
+    "required_release_sync",
+    "non_claims",
+    "review_commands"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "reviewed_at": {
+      "type": "string"
+    },
+    "stability_phase": {
+      "type": "string"
+    },
+    "change_classes": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "$ref": "#/$defs/changeRule"
+      }
+    },
+    "deprecation_rules": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/changeRule"
+      }
+    },
+    "required_release_sync": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "string"
+      }
+    },
+    "non_claims": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_commands": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "changeRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "summary",
+        "strongest_surfaces",
+        "verify_commands"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "strongest_surfaces": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "verify_commands": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

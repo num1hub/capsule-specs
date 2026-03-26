@@ -71,6 +71,7 @@ const reviewerGuide = fs.readFileSync(path.join(repoRoot, 'docs', 'reviewer-guid
 const releaseEvidence = fs.readFileSync(path.join(repoRoot, 'docs', 'release-evidence.md'), 'utf8');
 const verification = fs.readFileSync(path.join(repoRoot, 'docs', 'verification.md'), 'utf8');
 const capabilityDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'capability-matrix.md'), 'utf8');
+const maintainerOps = fs.readFileSync(path.join(repoRoot, 'docs', 'maintainer-operations.md'), 'utf8');
 const publicIndex = fs.readFileSync(path.join(repoRoot, 'docs', 'public-contract-index.md'), 'utf8');
 const schemasReadme = fs.readFileSync(path.join(repoRoot, 'schemas', 'README.md'), 'utf8');
 
@@ -86,6 +87,7 @@ assert(reviewerGuide.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'reviewer guide 
 assert(releaseEvidence.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'release-evidence doc must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(verification.includes('check:maintenance-model'), 'verification doc must mention check:maintenance-model');
 assert(capabilityDoc.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'capability-matrix doc must mention PUBLIC_MAINTENANCE_MODEL.json');
+assert(maintainerOps.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'maintainer-operations doc must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
 assert(publicIndex.includes('maintainer-operations.md'), 'public contract index must mention docs/maintainer-operations.md');
 assert(publicIndex.includes('../PUBLIC_MAINTENANCE_MODEL.json'), 'public contract index must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(publicIndex.includes('../schemas/public-maintenance-model.schema.json'), 'public contract index must mention public-maintenance schema');

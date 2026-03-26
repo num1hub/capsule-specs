@@ -61,13 +61,15 @@
         "SOURCE_MANIFEST.json",
         "PUBLIC_CONTRACT_CATALOG.json",
         "PUBLIC_RELEASE_METADATA.json",
-        "PUBLIC_RELEASE_REVIEW.md"
+        "PUBLIC_RELEASE_REVIEW.md",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json"
       ],
       "verify_commands": [
         "npm run audit:public-surface",
         "npm run check:catalog",
         "npm run check:release",
-        "npm run check:maintenance-model"
+        "npm run check:maintenance-model",
+        "npm run check:change-control"
       ]
     },
     {
@@ -88,7 +90,8 @@
   "required_evidence": [
     "npm run verify:repo",
     "updated release-facing artifacts when the public surface changes",
-    "upstream validator rechecks for example changes where applicable"
+    "upstream validator rechecks for example changes where applicable",
+    "updated PUBLIC_CHANGE_CONTROL_MODEL.json when public change posture changed"
   ],
   "operating_rules": [
     "Keep the public boundary intentional and do not widen scope by accident.",

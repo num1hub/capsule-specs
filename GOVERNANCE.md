@@ -34,6 +34,7 @@ Every serious change should keep these surfaces coherent:
 - `SOURCE_MANIFEST.json`
 - `PUBLIC_RELEASE_REVIEW.md`
 - `PUBLIC_MAINTENANCE_MODEL.json`
+- `PUBLIC_CHANGE_CONTROL_MODEL.json`
 - `scripts/audit-public-surface.js`
 - affected docs, examples, schemas, or raw capsules
 

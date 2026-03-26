@@ -122,6 +122,10 @@ assert(
   'release metadata must include the maintenance-model verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:change-control'),
+  'release metadata must include the change-control verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -164,6 +168,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_MAINTENANCE_MODEL.json')),
   'release metadata residual risks must mention PUBLIC_MAINTENANCE_MODEL.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_CHANGE_CONTROL_MODEL.json')),
+  'release metadata residual risks must mention PUBLIC_CHANGE_CONTROL_MODEL.json'
 );
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_TRACEABILITY_MATRIX.json')),

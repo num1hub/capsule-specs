@@ -316,6 +316,30 @@
       ]
     },
     {
+      "id": "understand-change-control-and-deprecation",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Understand how additive, deprecated, and breaking public changes are classified and kept reviewer-visible across docs, schemas, examples, and release evidence.",
+      "strongest_surfaces": [
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "docs/change-control.md",
+        "VERSIONING.md",
+        "docs/compatibility.md",
+        "RELEASING.md"
+      ],
+      "supporting_surfaces": [
+        "CHANGELOG.md",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_RELEASE_REVIEW.md",
+        "schemas/public-change-control-model.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:change-control",
+        "npm run check:release",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "trace-provenance-and-release-state",
       "audience": "contributors",
       "readiness": "ready",

@@ -25,6 +25,7 @@
 - added public traceability docs, a machine-readable traceability matrix, and verifier coverage for claim-to-evidence mapping
 - added machine-readable example coverage, an example-coverage guide, and verifier coverage for capsule/API fixture mapping
 - added machine-readable maintainer workflow modeling and verifier coverage for public intake/release posture
+- added machine-readable public change-control modeling and verifier coverage for additive, deprecated, and breaking contract posture
 
 ## 0.1.0 - 2026-03-26
 

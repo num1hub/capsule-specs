@@ -18,6 +18,7 @@
 - machine-readable failure model in `PUBLIC_FAILURE_MODEL.json` plus fail-closed public docs
 - machine-readable example coverage in `PUBLIC_EXAMPLE_COVERAGE.json` plus a bounded example-coverage guide
 - machine-readable maintenance model in `PUBLIC_MAINTENANCE_MODEL.json` plus a bounded maintainer-operations guide
+- machine-readable change-control model in `PUBLIC_CHANGE_CONTROL_MODEL.json` plus a bounded change-control guide
 - machine-readable traceability matrix in `PUBLIC_TRACEABILITY_MATRIX.json` plus an end-to-end traceability guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
@@ -61,6 +62,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-client-recipes.js`: pass
 - `node scripts/check-community-health.js`: pass
 - `node scripts/check-maintenance-model.js`: pass
+- `node scripts/check-change-control.js`: pass
 - `node scripts/check-project-profile.js`: pass
 - `node scripts/check-capability-matrix.js`: pass
 - `node scripts/check-evaluation-packet.js`: pass
@@ -71,7 +73,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `146` files / `146` manifest entries
+- manifest coverage: `150` files / `150` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -96,4 +98,5 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_FAILURE_MODEL.json` is a bounded negative-evidence summary and must stay subordinate to the stronger examples, validator docs, OpenAPI, and portability surfaces
 - `PUBLIC_EXAMPLE_COVERAGE.json` is a curated fixture-coverage summary and must stay subordinate to the stronger example files, route docs, and validator-backed checks it references
 - `PUBLIC_MAINTENANCE_MODEL.json` is a bounded workflow summary and must stay subordinate to the stronger maintainer docs, community intake surfaces, release docs, and verification evidence it references
+- `PUBLIC_CHANGE_CONTROL_MODEL.json` is a bounded change-control summary and must stay subordinate to the stronger versioning, compatibility, changelog, and release-evidence surfaces it references
 - `PUBLIC_TRACEABILITY_MATRIX.json` is a curated reviewer-facing map and must stay subordinate to the stronger docs, schemas, examples, and verification artifacts it references

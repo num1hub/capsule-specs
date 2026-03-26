@@ -13,6 +13,7 @@ When a change affects architectural truth, validation law, or the underlying cap
 Use the repository issue templates where possible. They keep bug reports, integration questions, and contract-change proposals scoped to the public surface.
 
 For the public maintainer workflow model, review [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) and [`docs/maintainer-operations.md`](docs/maintainer-operations.md).
+For the public change-control model, review [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) and [`docs/change-control.md`](docs/change-control.md).
 
 ## Required discipline
 
