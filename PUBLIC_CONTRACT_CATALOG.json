@@ -1114,6 +1114,68 @@
         "npm run check:catalog",
         "npm run check:surface"
       ]
+    },
+    {
+      "id": "governance.evaluation-packet-doc",
+      "path": "docs/evaluation-packet.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:evaluation-packet",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.evaluation-packet",
+      "path": "PUBLIC_EVALUATION_PACKET.json",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:evaluation-packet",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.evaluation-packet",
+      "path": "schemas/public-evaluation-packet.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:evaluation-packet",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.evaluation-packet-check",
+      "path": "scripts/check-evaluation-packet.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:evaluation-packet",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
     }
   ]
 }

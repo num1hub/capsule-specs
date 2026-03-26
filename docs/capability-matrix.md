@@ -20,6 +20,7 @@ Each capability captures:
 - validate public examples locally
 - build a validator client from OpenAPI and schema-backed envelopes
 - review repository maturity quickly
+- follow the shortest external evaluation path
 - understand projection and domain boundaries
 - review portability and archive trust posture
 - contribute safely to the public surface
@@ -37,6 +38,8 @@ Good OSS repositories are not only readable; they are usable. The capability mat
   Answers: what was verified for the current release state.
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
   Answers: what the repository is, who maintains it, and which high-level health signals it currently shows.
+- [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
+  Answers: what an external reviewer should inspect first, which evidence is strongest, and which claims are intentionally not being made.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
   Answers: which boundaries are published in this repo and which ones remain intentionally deferred.
 - [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)

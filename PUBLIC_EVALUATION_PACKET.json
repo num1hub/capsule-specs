@@ -1,0 +1,74 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "repository_identity": {
+    "owner": "n1hub",
+    "name": "specs",
+    "homepage": "https://github.com/n1hub/specs",
+    "license": "Apache-2.0",
+    "primary_maintainer": "egor-n1"
+  },
+  "evaluation_goals": [
+    "Understand the public scope without reading the private runtime repository.",
+    "See the strongest contract, review, and release-evidence surfaces quickly.",
+    "Verify that the repo behaves like a maintained OSS contract surface rather than a bulk export."
+  ],
+  "fast_review_path": [
+    "README.md",
+    "docs/reviewer-guide.md",
+    "PUBLIC_PROJECT_PROFILE.json",
+    "PUBLIC_CAPABILITY_MATRIX.json",
+    "PUBLIC_BOUNDARY_MAP.json",
+    "PUBLIC_PORTABILITY_PROFILE.json",
+    "PUBLIC_RELEASE_METADATA.json",
+    "PUBLIC_RELEASE_REVIEW.md"
+  ],
+  "strongest_evidence": {
+    "contract_surface": [
+      "docs/5-element-law.md",
+      "docs/16-gates.md",
+      "schemas/capsule-schema.json",
+      "openapi/validate.openapi.json",
+      "schemas/validator-api-envelopes.schema.json"
+    ],
+    "examples_and_consumability": [
+      "examples/example-note.capsule.json",
+      "examples/example-project-hub.capsule.json",
+      "examples/api/validate-request.single.json",
+      "examples/client/node-validate-single.mjs",
+      "examples/archive/archive-bundle.sample.json"
+    ],
+    "governance_and_review": [
+      "docs/reviewer-guide.md",
+      "docs/public-contract-index.md",
+      "docs/projection-doctrine.md",
+      "docs/domain-boundaries.md",
+      "docs/portability.md"
+    ],
+    "machine_readable_evidence": [
+      "PUBLIC_CONTRACT_CATALOG.json",
+      "PUBLIC_PROJECT_PROFILE.json",
+      "PUBLIC_CAPABILITY_MATRIX.json",
+      "PUBLIC_BOUNDARY_MAP.json",
+      "PUBLIC_PORTABILITY_PROFILE.json",
+      "PUBLIC_RELEASE_METADATA.json"
+    ]
+  },
+  "review_commands": [
+    "npm run verify:repo"
+  ],
+  "public_value_claims": [
+    "The repo publishes a real public contract surface for CapsuleOS and validator-facing artifacts.",
+    "The repo exposes both human-readable and machine-readable evidence for external review.",
+    "The repo makes scope, portability posture, and published-vs-deferred boundaries explicit."
+  ],
+  "non_claims": [
+    "This packet does not claim to expose the full private N1Hub runtime.",
+    "This packet does not claim that every upstream domain is public.",
+    "This packet does not replace the stronger underlying docs, schemas, OpenAPI, or release evidence."
+  ],
+  "residual_risk_surfaces": [
+    "PUBLIC_RELEASE_REVIEW.md",
+    "PUBLIC_RELEASE_METADATA.json"
+  ]
+}

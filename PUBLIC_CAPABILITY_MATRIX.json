@@ -120,6 +120,31 @@
       ]
     },
     {
+      "id": "follow-fast-external-evaluation-path",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Follow the shortest bounded evaluation path for external programs or reviewers without scraping the whole repository tree.",
+      "strongest_surfaces": [
+        "PUBLIC_EVALUATION_PACKET.json",
+        "docs/evaluation-packet.md",
+        "docs/reviewer-guide.md",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "README.md",
+        "docs/public-contract-index.md",
+        "PUBLIC_RELEASE_REVIEW.md",
+        "schemas/public-evaluation-packet.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:evaluation-packet",
+        "npm run check:catalog",
+        "npm run check:surface",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "understand-projection-and-domain-boundaries",
       "audience": "reviewers",
       "readiness": "ready",
@@ -223,7 +248,8 @@
         "PUBLIC_PROJECT_PROFILE.json",
         "PUBLIC_CAPABILITY_MATRIX.json",
         "PUBLIC_BOUNDARY_MAP.json",
-        "PUBLIC_PORTABILITY_PROFILE.json"
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json"
       ],
       "supporting_surfaces": [
         "QUICKSTART.md",

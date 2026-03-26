@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-evaluation-packet.schema.json",
+  "title": "Public Evaluation Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "reviewed_at",
+    "repository_identity",
+    "evaluation_goals",
+    "fast_review_path",
+    "strongest_evidence",
+    "review_commands",
+    "public_value_claims",
+    "non_claims",
+    "residual_risk_surfaces"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "reviewed_at": { "type": "string" },
+    "repository_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owner",
+        "name",
+        "homepage",
+        "license",
+        "primary_maintainer"
+      ],
+      "properties": {
+        "owner": { "type": "string" },
+        "name": { "type": "string" },
+        "homepage": { "type": "string" },
+        "license": { "type": "string" },
+        "primary_maintainer": { "type": "string" }
+      }
+    },
+    "evaluation_goals": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "fast_review_path": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "strongest_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contract_surface",
+        "examples_and_consumability",
+        "governance_and_review",
+        "machine_readable_evidence"
+      ],
+      "properties": {
+        "contract_surface": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "examples_and_consumability": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "governance_and_review": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "machine_readable_evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "review_commands": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "public_value_claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "non_claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "residual_risk_surfaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    }
+  }
+}

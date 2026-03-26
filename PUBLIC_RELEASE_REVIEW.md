@@ -14,6 +14,7 @@
 - machine-readable public contract catalog in `PUBLIC_CONTRACT_CATALOG.json` plus the companion guide in `docs/contract-catalog.md`
 - machine-readable release evidence in `PUBLIC_RELEASE_METADATA.json` plus schema-backed release metadata
 - machine-readable reviewer/program profile in `PUBLIC_PROJECT_PROFILE.json` plus a reviewer guide
+- machine-readable evaluation packet in `PUBLIC_EVALUATION_PACKET.json` plus a concise external-review doc
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
@@ -56,12 +57,13 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-community-health.js`: pass
 - `node scripts/check-project-profile.js`: pass
 - `node scripts/check-capability-matrix.js`: pass
+- `node scripts/check-evaluation-packet.js`: pass
 - `node scripts/check-portability-profile.js`: pass
 - `node scripts/check-doc-links.js`: pass
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `124` files / `124` manifest entries
+- manifest coverage: `128` files / `128` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -82,3 +84,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_PROJECT_PROFILE.json` and `PUBLIC_CAPABILITY_MATRIX.json` are intentionally concise summaries and must stay subordinate to the stronger source docs, schemas, OpenAPI, and release evidence
 - `PUBLIC_BOUNDARY_MAP.json` is a curated summary of published vs deferred domains and must stay subordinate to the stronger scope, doctrine, and source-material surfaces
 - `PUBLIC_PORTABILITY_PROFILE.json` and the archive-bundle sample are public contract summaries, not proof of a deployed hosted export/import service
+- `PUBLIC_EVALUATION_PACKET.json` is a reviewer shortcut layer and must stay subordinate to the stronger docs, schemas, release evidence, and machine-readable source surfaces

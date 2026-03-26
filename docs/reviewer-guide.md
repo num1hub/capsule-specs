@@ -8,17 +8,19 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
    Understand what the repository publishes and what it intentionally excludes.
 2. Read [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
    Get a machine-readable snapshot of maintainer ownership, public-surface counts, and health signals.
-3. Read [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
+3. Read [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
+   Use the condensed external-review packet when you need the shortest bounded summary of scope, strongest evidence, and review commands.
+4. Read [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
    See which boundaries are published here and which ones remain intentionally deferred.
-4. Read [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
+5. Read [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
    See what an outside reader can concretely do with the public surface right now.
-5. Read [`public-contract-index.md`](public-contract-index.md)
+6. Read [`public-contract-index.md`](public-contract-index.md)
    Jump to the highest-signal public artifacts without browsing the whole tree.
-6. Read [`release-evidence.md`](release-evidence.md)
+7. Read [`release-evidence.md`](release-evidence.md)
    See how provenance, release review, and verification evidence fit together.
-7. Read [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
+8. Read [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
    Confirm that portability and archive trust are described as governed public contracts rather than as vague product claims.
-8. Read [`community-health.md`](community-health.md)
+9. Read [`community-health.md`](community-health.md)
    Confirm that contributor intake and maintainer expectations are explicit.
 
 ## Strongest signals
@@ -26,6 +28,7 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
 If you only have a few minutes, inspect these surfaces first:
 
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
+- [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)

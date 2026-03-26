@@ -19,6 +19,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Structured map of the public contract surface and its verification paths.
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
   Machine-readable reviewer/program profile for fast external evaluation.
+- [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
+  Machine-readable fast-review packet for bounded external evaluation.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
   Machine-readable matrix of what the current public surface supports in practical terms.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
@@ -42,6 +44,8 @@ The community-health doc and its dedicated verification script strengthen the re
 
 The reviewer guide and public project profile strengthen external evaluation by making repository maturity legible without scraping the whole tree.
 
+The evaluation packet strengthens that path further by giving external reviewers one bounded summary of strongest evidence, review commands, and explicit non-claims.
+
 The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
 
 The boundary map strengthens scope review by making the published-vs-deferred split explicit rather than implicit.
@@ -57,6 +61,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_RELEASE_METADATA.json`
 - `PUBLIC_CONTRACT_CATALOG.json`
 - `PUBLIC_PROJECT_PROFILE.json`
+- `PUBLIC_EVALUATION_PACKET.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`
 - `PUBLIC_PORTABILITY_PROFILE.json`
