@@ -41,7 +41,8 @@
     "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
     "PUBLIC_DECISION_LOG.json",
     "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-    "PUBLIC_PROGRAM_FIT_MAP.json"
+    "PUBLIC_PROGRAM_FIT_MAP.json",
+    "PUBLIC_PUBLICATION_READINESS.json"
   ],
   "strongest_evidence": {
     "contract_surface": [
@@ -82,7 +83,8 @@
       "docs/ecosystem-value.md",
       "docs/decision-log.md",
       "docs/evidence-gaps.md",
-      "docs/program-fit.md"
+      "docs/program-fit.md",
+      "docs/publication-readiness.md"
     ],
     "machine_readable_evidence": [
       "PUBLIC_CONTRACT_CATALOG.json",
@@ -109,7 +111,8 @@
       "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "PUBLIC_DECISION_LOG.json",
       "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-      "PUBLIC_PROGRAM_FIT_MAP.json"
+      "PUBLIC_PROGRAM_FIT_MAP.json",
+      "PUBLIC_PUBLICATION_READINESS.json"
     ]
   },
   "review_commands": [
@@ -138,7 +141,8 @@
     "The repo makes ecosystem value explicit through bounded contracts, reviewer-facing summaries, adoption posture, and release-backed utility instead of relying on vague aspiration.",
     "The repo makes major public design decisions explicit through a bounded decision log instead of forcing reviewers to reverse-engineer intent from tree shape alone.",
     "The repo makes still-open public evidence gaps explicit instead of letting a polished public surface imply maturity that is not yet publicly proven.",
-    "The repo makes reviewer/program-fit explicit through a bounded machine-readable layer instead of forcing outside evaluators to infer OSS-support readiness from polish, counts, or aspiration."
+    "The repo makes reviewer/program-fit explicit through a bounded machine-readable layer instead of forcing outside evaluators to infer OSS-support readiness from polish, counts, or aspiration.",
+    "The repo makes publication readiness explicit through a bounded machine-readable layer instead of forcing maintainers or reviewers to infer GitHub-publication safety from polish, tree shape, or aspiration."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",
@@ -152,6 +156,7 @@
     "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
     "PUBLIC_DECISION_LOG.json",
     "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-    "PUBLIC_PROGRAM_FIT_MAP.json"
+    "PUBLIC_PROGRAM_FIT_MAP.json",
+    "PUBLIC_PUBLICATION_READINESS.json"
   ]
 }

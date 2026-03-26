@@ -55,6 +55,7 @@ The bounded ecosystem-value summary lives in [`../PUBLIC_ECOSYSTEM_VALUE_MAP.jso
 The bounded decision-rationale summary lives in [`../PUBLIC_DECISION_LOG.json`](../PUBLIC_DECISION_LOG.json).
 
 The bounded reviewer/program-fit summary lives in [`../PUBLIC_PROGRAM_FIT_MAP.json`](../PUBLIC_PROGRAM_FIT_MAP.json).
+The bounded publication-readiness summary lives in [`../PUBLIC_PUBLICATION_READINESS.json`](../PUBLIC_PUBLICATION_READINESS.json).
 
 The bounded public evidence-gaps summary lives in [`../PUBLIC_EVIDENCE_GAPS_REGISTER.json`](../PUBLIC_EVIDENCE_GAPS_REGISTER.json).
 ## Important boundary

@@ -29,7 +29,8 @@ const requiredIds = [
   'freshness-posture-explicit',
   'ecosystem-value-explicit',
   'evidence-gaps-explicit',
-  'program-fit-explicit'
+  'program-fit-explicit',
+  'publication-readiness-explicit'
 ];
 
 const allowedStatuses = new Set(['pass', 'bounded']);
@@ -126,11 +127,13 @@ assert(catalogPaths.has('PUBLIC_FRESHNESS_MODEL.json'), 'contract catalog must i
 assert(catalogPaths.has('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'contract catalog must include PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'contract catalog must include PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(catalogPaths.has('PUBLIC_PROGRAM_FIT_MAP.json'), 'contract catalog must include PUBLIC_PROGRAM_FIT_MAP.json');
+assert(catalogPaths.has('PUBLIC_PUBLICATION_READINESS.json'), 'contract catalog must include PUBLIC_PUBLICATION_READINESS.json');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:review-scorecard'), 'release metadata must include review-scorecard verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_REVIEW_SCORECARD.json')), 'release metadata residual risks must mention PUBLIC_REVIEW_SCORECARD.json');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json')), 'release metadata residual risks must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_PROGRAM_FIT_MAP.json')), 'release metadata residual risks must mention PUBLIC_PROGRAM_FIT_MAP.json');
+assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_PUBLICATION_READINESS.json')), 'release metadata residual risks must mention PUBLIC_PUBLICATION_READINESS.json');
 
 const verificationCriterion = scorecard.criteria.find((criterion) => criterion.id === 'verification-coverage-explicit');
 assert(verificationCriterion, 'review scorecard must define verification-coverage-explicit criterion');
@@ -156,6 +159,9 @@ assert(evidenceGapsCriterion.strongest_surfaces.includes('PUBLIC_EVIDENCE_GAPS_R
 const programFitCriterion = scorecard.criteria.find((criterion) => criterion.id === 'program-fit-explicit');
 assert(programFitCriterion, 'review scorecard must define program-fit-explicit criterion');
 assert(programFitCriterion.strongest_surfaces.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'program-fit-explicit must reference PUBLIC_PROGRAM_FIT_MAP.json');
+const publicationReadinessCriterion = scorecard.criteria.find((criterion) => criterion.id === 'publication-readiness-explicit');
+assert(publicationReadinessCriterion, 'review scorecard must define publication-readiness-explicit criterion');
+assert(publicationReadinessCriterion.strongest_surfaces.includes('PUBLIC_PUBLICATION_READINESS.json'), 'publication-readiness-explicit must reference PUBLIC_PUBLICATION_READINESS.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

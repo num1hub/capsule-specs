@@ -4154,5 +4154,54 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for program-fit cross-surface coherence."
+  },
+  "docs/publication-readiness.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+      "/home/n1/codex-workspace/PUBLIC_PROGRAM_FIT_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Bounded publication-readiness guidance derived from project-profile, release, verification, evidence-gap, program-fit, and limitation surfaces."
+  },
+  "PUBLIC_PUBLICATION_READINESS.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/publication-readiness.md",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+      "/home/n1/codex-workspace/PUBLIC_PROGRAM_FIT_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable publication-readiness layer derived from front-door, limitation, program-fit, verification, release, and bounded-maturity public surfaces."
+  },
+  "schemas/public-publication-readiness.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_PUBLICATION_READINESS.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema for the public publication-readiness map."
+  },
+  "scripts/check-publication-readiness.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_PUBLICATION_READINESS.json",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
+      "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_AUDIENCE_PATHS.json",
+      "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for publication-readiness cross-surface coherence."
   }
 }

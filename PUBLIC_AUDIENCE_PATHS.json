@@ -23,7 +23,8 @@
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
         "PUBLIC_DECISION_LOG.json",
         "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-        "PUBLIC_PROGRAM_FIT_MAP.json"
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_PUBLICATION_READINESS.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
@@ -157,7 +158,8 @@
         "PUBLIC_ADOPTION_READINESS.json",
         "PUBLIC_FRESHNESS_MODEL.json",
         "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-        "PUBLIC_PROGRAM_FIT_MAP.json"
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_PUBLICATION_READINESS.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",

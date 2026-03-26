@@ -150,7 +150,11 @@ const requiredIds = [
   'governance.program-fit-doc',
   'governance.program-fit-map',
   'governance.program-fit-schema',
-  'governance.program-fit-check'
+  'governance.program-fit-check',
+  'governance.publication-readiness-doc',
+  'governance.publication-readiness-map',
+  'governance.publication-readiness-schema',
+  'governance.publication-readiness-check'
 ];
 
 for (const requiredId of requiredIds) {

@@ -325,6 +325,21 @@
         "npm run check:program-fit",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "publication-readiness",
+      "path": "PUBLIC_PUBLICATION_READINESS.json",
+      "role": "publication-readiness-summary",
+      "depends_on": [
+        "reviewer-summaries",
+        "public-program-fit",
+        "public-evidence-gaps",
+        "release-evidence"
+      ],
+      "verify_commands": [
+        "npm run check:publication-readiness",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -347,6 +362,7 @@
         "freshness-and-staleness",
         "ecosystem-value-and-program-fit",
         "public-program-fit",
+        "publication-readiness",
         "public-decision-rationale",
         "public-evidence-gaps"
       ]
@@ -386,6 +402,7 @@
         "freshness-and-staleness",
         "ecosystem-value-and-program-fit",
         "public-program-fit",
+        "publication-readiness",
         "public-decision-rationale",
         "public-evidence-gaps"
       ]

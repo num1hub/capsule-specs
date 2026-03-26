@@ -1,0 +1,155 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Publish bounded pre-GitHub-publication readiness criteria so maintainers and reviewers can see why this public specs surface is safe and legible to publish now while keeping traction, adoption, and hosted-runtime claims explicitly deferred.",
+  "readiness_families": [
+    {
+      "id": "front-door-and-community-surface-ready",
+      "status": "ready",
+      "summary": "The repository has a clear front door, community-health files, maintainer identity, and contributor-facing guidance.",
+      "why_it_matters": "A public repository should be understandable and governable on first contact rather than looking like an internal dump.",
+      "strongest_current_surfaces": [
+        "README.md",
+        "QUICKSTART.md",
+        "CONTRIBUTING.md",
+        "CODE_OF_CONDUCT.md",
+        "SECURITY.md",
+        "SUPPORT.md",
+        "MAINTAINERS.md",
+        "docs/community-health.md"
+      ],
+      "publish_checks": [
+        "npm run check:publication-readiness",
+        "npm run check:community-health"
+      ],
+      "bounded_non_claims": [
+        "does not claim a large contributor community already exists",
+        "does not claim post-publication maintainer responsiveness beyond the explicit public intake posture"
+      ]
+    },
+    {
+      "id": "legal-boundary-and-scope-safety-ready",
+      "status": "ready",
+      "summary": "The public repo has explicit license, notice, boundary, limitations, and portability posture before publication.",
+      "why_it_matters": "Pre-publish safety depends on clear legal posture and explicit published-vs-deferred boundaries.",
+      "strongest_current_surfaces": [
+        "LICENSE",
+        "NOTICE",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "docs/repository-scope.md",
+        "docs/portability.md"
+      ],
+      "publish_checks": [
+        "npm run check:publication-readiness",
+        "npm run check:limitations-register",
+        "npm run check:portability"
+      ],
+      "bounded_non_claims": [
+        "does not claim that all upstream N1Hub domains are public here",
+        "does not treat publication readiness as proof of hosted-runtime export/import service maturity"
+      ]
+    },
+    {
+      "id": "contract-example-and-schema-surface-ready",
+      "status": "ready",
+      "summary": "The public repo already exposes usable docs, schemas, OpenAPI, examples, and client recipes.",
+      "why_it_matters": "A publish-ready specs repo should offer concrete consumability, not only governance prose.",
+      "strongest_current_surfaces": [
+        "schemas/capsule-schema.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "openapi/validate.openapi.json",
+        "examples/example-project-hub.capsule.json",
+        "examples/api/validate-request.single.json",
+        "examples/client/README.md",
+        "PUBLIC_EXAMPLE_COVERAGE.json"
+      ],
+      "publish_checks": [
+        "npm run check:publication-readiness",
+        "npm run check:examples",
+        "npm run check:api-schemas"
+      ],
+      "bounded_non_claims": [
+        "does not claim a full SDK or hosted endpoint already exists",
+        "does not replace live validator behavior with summary or example layers"
+      ]
+    },
+    {
+      "id": "reviewer-and-release-summaries-ready",
+      "status": "ready",
+      "summary": "Reviewer shortcuts, release evidence, traceability, capability summaries, and program-facing summaries are already explicit and machine-readable.",
+      "why_it_matters": "Publication readiness improves when outside readers can evaluate the repo quickly without scraping raw history or guessing stronger sources.",
+      "strongest_current_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_PROGRAM_FIT_MAP.json"
+      ],
+      "publish_checks": [
+        "npm run check:publication-readiness",
+        "npm run check:evaluation-packet",
+        "npm run check:traceability",
+        "npm run check:release"
+      ],
+      "bounded_non_claims": [
+        "does not claim summary layers are stronger than contracts, schemas, provenance, or release evidence",
+        "does not claim support-program acceptance from reviewer-readable summaries alone"
+      ]
+    },
+    {
+      "id": "verification-and-pre-publish-safety-ready",
+      "status": "ready",
+      "summary": "A single verify entrypoint, repo-local checks, and upstream validator checks make the public surface reviewable before publication.",
+      "why_it_matters": "A publish-ready repo should have a repeatable pre-publish integrity path instead of one-off manual inspection.",
+      "strongest_current_surfaces": [
+        "package.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "publish_checks": [
+        "npm run check:publication-readiness",
+        "npm run verify:repo"
+      ],
+      "bounded_non_claims": [
+        "does not claim formal external certification beyond the local verification stack",
+        "does not remove the need for deliberate maintainer review before a real GitHub push"
+      ]
+    },
+    {
+      "id": "post-publication-signals-still-deferred",
+      "status": "deferred",
+      "summary": "The repo can be published now even though external adoption, stars, issues, PR traffic, and support-program outcomes are still future signals.",
+      "why_it_matters": "Publication readiness should not be confused with already having a mature public operating history.",
+      "strongest_current_surfaces": [
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "publish_checks": [
+        "npm run check:publication-readiness",
+        "npm run check:evidence-gaps"
+      ],
+      "bounded_non_claims": [
+        "does not claim external stars, forks, issues, or contributor traffic already exist",
+        "does not claim public-hosted-service maturity, user adoption, or support-program approval"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This file does not claim that the repo has already been published to GitHub.",
+    "This file does not claim that publication readiness equals adoption, traction, or acceptance by any support program."
+  ],
+  "review_commands": [
+    "npm run check:publication-readiness",
+    "npm run verify:repo"
+  ]
+}

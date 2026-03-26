@@ -45,7 +45,8 @@
               "contributors",
               "integrators",
               "tool-builders",
-              "reviewers"
+              "reviewers",
+              "maintainers"
             ]
           },
           "readiness": {

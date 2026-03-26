@@ -2469,6 +2469,68 @@
         "npm run check:program-fit",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "governance.publication-readiness-doc",
+      "path": "docs/publication-readiness.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:publication-readiness",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.publication-readiness-map",
+      "path": "PUBLIC_PUBLICATION_READINESS.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:publication-readiness",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.publication-readiness-schema",
+      "path": "schemas/public-publication-readiness.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:publication-readiness",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.publication-readiness-check",
+      "path": "scripts/check-publication-readiness.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:publication-readiness",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

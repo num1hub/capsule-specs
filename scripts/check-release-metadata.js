@@ -186,6 +186,10 @@ assert(
   'release metadata must include the program-fit verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:publication-readiness'),
+  'release metadata must include the publication-readiness verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -300,6 +304,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_PROGRAM_FIT_MAP.json')),
   'release metadata residual risks must mention PUBLIC_PROGRAM_FIT_MAP.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_PUBLICATION_READINESS.json')),
+  'release metadata residual risks must mention PUBLIC_PUBLICATION_READINESS.json'
 );
 
 if (process.exitCode) {

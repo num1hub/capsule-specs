@@ -35,6 +35,7 @@ This repository includes a compact evaluation packet for external reviewers, pro
 - [`../PUBLIC_DECISION_LOG.json`](../PUBLIC_DECISION_LOG.json)
 - [`../PUBLIC_EVIDENCE_GAPS_REGISTER.json`](../PUBLIC_EVIDENCE_GAPS_REGISTER.json)
 - [`../PUBLIC_PROGRAM_FIT_MAP.json`](../PUBLIC_PROGRAM_FIT_MAP.json)
+- [`../PUBLIC_PUBLICATION_READINESS.json`](../PUBLIC_PUBLICATION_READINESS.json)
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
@@ -69,5 +70,7 @@ The ecosystem-value layer strengthens that path further by making external utili
 The decision-log layer strengthens that path further by making the major public design choices explicit instead of forcing reviewers to reverse-engineer intent from the repo shape alone.
 
 The program-fit layer strengthens that path further by making reviewer/program fit explicit as a bounded, artifact-backed claim instead of forcing outside evaluators to infer it from repo polish, raw counts, or maintainer intent alone.
+
+The publication-readiness layer closes that loop by making pre-publish safety and GitHub-publication readiness explicit as a bounded, artifact-backed claim instead of forcing reviewers to infer public-release readiness from repo polish or tree shape alone.
 
 The evidence-gaps layer strengthens that path further by making still-open public proof gaps explicit instead of forcing reviewers or programs to guess where maturity is already well evidenced and where it is not yet.

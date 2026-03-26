@@ -32,7 +32,8 @@ const requiredIds = [
   'freshness-and-stale-signals',
   'ecosystem-value-and-external-utility',
   'explicit-public-evidence-gaps',
-  'bounded-program-fit-for-reviewers-and-programs'
+  'bounded-program-fit-for-reviewers-and-programs',
+  'bounded-publication-readiness-and-pre-publish-safety'
 ];
 
 const allowedAudiences = new Set(['contributors', 'integrators', 'tool-builders', 'reviewers', 'maintainers']);
@@ -124,6 +125,7 @@ assert(evaluationDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'evaluation-packet
 assert(evaluationDoc.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'evaluation-packet doc must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(evaluationDoc.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'evaluation-packet doc must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(evaluationDoc.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'evaluation-packet doc must mention PUBLIC_PROGRAM_FIT_MAP.json');
+assert(evaluationDoc.includes('PUBLIC_PUBLICATION_READINESS.json'), 'evaluation-packet doc must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(evaluationDoc.includes('PUBLIC_OWNERSHIP_MAP.json'), 'evaluation-packet doc must mention PUBLIC_OWNERSHIP_MAP.json');
 const traceabilityDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'traceability.md'), 'utf8');
 assert(traceabilityDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'traceability doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
@@ -139,10 +141,12 @@ assert(traceabilityDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'traceability do
 assert(traceabilityDoc.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'traceability doc must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(traceabilityDoc.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'traceability doc must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(traceabilityDoc.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'traceability doc must mention PUBLIC_PROGRAM_FIT_MAP.json');
+assert(traceabilityDoc.includes('PUBLIC_PUBLICATION_READINESS.json'), 'traceability doc must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(schemasReadme.includes('public-traceability-matrix.schema.json'), 'schemas README must mention public-traceability schema');
 assert(schemasReadme.includes('public-freshness-model.schema.json'), 'schemas README must mention public-freshness-model schema');
 assert(schemasReadme.includes('public-ecosystem-value-map.schema.json'), 'schemas README must mention public-ecosystem-value schema');
 assert(schemasReadme.includes('public-program-fit-map.schema.json'), 'schemas README must mention public-program-fit schema');
+assert(schemasReadme.includes('public-publication-readiness.schema.json'), 'schemas README must mention public-publication-readiness schema');
 
 assert(catalogPaths.has('docs/traceability.md'), 'contract catalog must include docs/traceability.md');
 assert(catalogPaths.has('PUBLIC_TRACEABILITY_MATRIX.json'), 'contract catalog must include PUBLIC_TRACEABILITY_MATRIX.json');
@@ -172,6 +176,10 @@ assert(catalogPaths.has('docs/program-fit.md'), 'contract catalog must include d
 assert(catalogPaths.has('PUBLIC_PROGRAM_FIT_MAP.json'), 'contract catalog must include PUBLIC_PROGRAM_FIT_MAP.json');
 assert(catalogPaths.has('schemas/public-program-fit-map.schema.json'), 'contract catalog must include public-program-fit schema');
 assert(catalogPaths.has('scripts/check-program-fit.js'), 'contract catalog must include program-fit verifier');
+assert(catalogPaths.has('docs/publication-readiness.md'), 'contract catalog must include docs/publication-readiness.md');
+assert(catalogPaths.has('PUBLIC_PUBLICATION_READINESS.json'), 'contract catalog must include PUBLIC_PUBLICATION_READINESS.json');
+assert(catalogPaths.has('schemas/public-publication-readiness.schema.json'), 'contract catalog must include public-publication-readiness schema');
+assert(catalogPaths.has('scripts/check-publication-readiness.js'), 'contract catalog must include publication-readiness verifier');
 assert(catalogPaths.has('docs/evidence-timeline.md'), 'contract catalog must include docs/evidence-timeline.md');
 assert(catalogPaths.has('docs/review-scorecard.md'), 'contract catalog must include docs/review-scorecard.md');
 assert(catalogPaths.has('docs/verification-matrix.md'), 'contract catalog must include docs/verification-matrix.md');

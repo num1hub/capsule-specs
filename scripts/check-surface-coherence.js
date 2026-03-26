@@ -61,6 +61,7 @@ const expectedPublicIndexLinks = [
   '../PUBLIC_ECOSYSTEM_VALUE_MAP.json',
   '../PUBLIC_EVIDENCE_GAPS_REGISTER.json',
   '../PUBLIC_PROGRAM_FIT_MAP.json',
+  '../PUBLIC_PUBLICATION_READINESS.json',
   'reviewer-guide.md',
   'evaluation-packet.md',
   'failure-model.md',
@@ -83,6 +84,7 @@ const expectedPublicIndexLinks = [
   'ecosystem-value.md',
   'evidence-gaps.md',
   'program-fit.md',
+  'publication-readiness.md',
   '../PUBLIC_PROJECT_PROFILE.json',
   'capability-matrix.md',
   '../PUBLIC_CAPABILITY_MATRIX.json',
@@ -120,6 +122,7 @@ const expectedPublicIndexLinks = [
   '../schemas/public-ecosystem-value-map.schema.json',
   '../schemas/public-evidence-gaps-register.schema.json',
   '../schemas/public-program-fit-map.schema.json',
+  '../schemas/public-publication-readiness.schema.json',
   'community-health.md',
   'client-recipes.md',
   'trust-model.md'
@@ -156,6 +159,7 @@ assert(readme.includes('PUBLIC_FRESHNESS_MODEL.json'), 'README.md must mention P
 assert(readme.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'README.md must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(readme.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'README.md must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(readme.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'README.md must mention PUBLIC_PROGRAM_FIT_MAP.json');
+assert(readme.includes('PUBLIC_PUBLICATION_READINESS.json'), 'README.md must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(readme.includes('schemas/validator-api-envelopes.schema.json'), 'README.md must mention schemas/validator-api-envelopes.schema.json');
 assert(readme.includes('docs/portability.md'), 'README.md must mention docs/portability.md');
 assert(readme.includes('docs/archive-bundles.md'), 'README.md must mention docs/archive-bundles.md');
@@ -241,6 +245,7 @@ assert(verificationDoc.includes('check:freshness'), 'docs/verification.md must e
 assert(verificationDoc.includes('check:ecosystem-value'), 'docs/verification.md must explain check:ecosystem-value');
 assert(verificationDoc.includes('check:evidence-gaps'), 'docs/verification.md must explain check:evidence-gaps');
 assert(verificationDoc.includes('check:program-fit'), 'docs/verification.md must explain check:program-fit');
+assert(verificationDoc.includes('check:publication-readiness'), 'docs/verification.md must explain check:publication-readiness');
 assert(verificationDoc.includes('check:project-profile'), 'docs/verification.md must explain check:project-profile');
 assert(verificationDoc.includes('check:capability-matrix'), 'docs/verification.md must explain check:capability-matrix');
 assert(releaseEvidenceDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'docs/release-evidence.md must mention PUBLIC_RELEASE_METADATA.json');
@@ -271,6 +276,7 @@ assert(releaseEvidenceDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'docs/release
 assert(releaseEvidenceDoc.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'docs/release-evidence.md must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'docs/release-evidence.md must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'docs/release-evidence.md must mention PUBLIC_PROGRAM_FIT_MAP.json');
+assert(releaseEvidenceDoc.includes('PUBLIC_PUBLICATION_READINESS.json'), 'docs/release-evidence.md must mention PUBLIC_PUBLICATION_READINESS.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

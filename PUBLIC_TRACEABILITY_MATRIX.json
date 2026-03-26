@@ -645,6 +645,32 @@
         "npm run check:program-fit",
         "npm run check:traceability"
       ]
+    },
+    {
+      "id": "bounded-publication-readiness-and-pre-publish-safety",
+      "claim": "The public surface makes pre-GitHub publication readiness explicit as a bounded, artifact-backed layer instead of forcing maintainers or reviewers to infer public-release safety from polish, tree shape, or aspiration alone.",
+      "audiences": [
+        "reviewers",
+        "maintainers",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "docs/publication-readiness.md",
+        "PUBLIC_PUBLICATION_READINESS.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_PROJECT_PROFILE.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+        "docs/reviewer-guide.md",
+        "docs/release-evidence.md"
+      ],
+      "verify_commands": [
+        "npm run check:publication-readiness",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

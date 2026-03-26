@@ -322,6 +322,22 @@
         "npm run check:program-fit",
         "npm run check:review-scorecard"
       ]
+    },
+    {
+      "id": "publication-readiness-explicit",
+      "question": "Does the repo make pre-GitHub publication readiness explicit as a bounded, artifact-backed claim instead of forcing maintainers or reviewers to infer public-release safety from polish, counts, or tree shape?",
+      "status": "pass",
+      "summary": "The repo publishes a bounded publication-readiness layer that makes public-release safety explicit without claiming adoption, approval, or hosted-runtime maturity that the repo does not yet prove.",
+      "strongest_surfaces": [
+        "docs/publication-readiness.md",
+        "PUBLIC_PUBLICATION_READINESS.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
+      ],
+      "review_commands": [
+        "npm run check:publication-readiness",
+        "npm run check:review-scorecard"
+      ]
     }
   ],
   "important_limits": [

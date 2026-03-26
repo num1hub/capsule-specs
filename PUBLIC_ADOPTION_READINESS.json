@@ -27,7 +27,8 @@
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
         "PUBLIC_DECISION_LOG.json",
         "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-        "PUBLIC_PROGRAM_FIT_MAP.json"
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_PUBLICATION_READINESS.json"
       ],
       "bounded_non_goals": [
         "does not expose the private N1Hub runtime",
@@ -154,7 +155,8 @@
         "PUBLIC_ADOPTION_READINESS.json",
         "PUBLIC_FRESHNESS_MODEL.json",
         "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-        "PUBLIC_PROGRAM_FIT_MAP.json"
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_PUBLICATION_READINESS.json"
       ],
       "bounded_non_goals": [
         "does not expose private maintainer playbooks",

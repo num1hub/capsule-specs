@@ -138,7 +138,8 @@
         "npm run check:ecosystem-value",
         "npm run check:decision-log",
         "npm run check:evidence-gaps",
-        "npm run check:program-fit"
+        "npm run check:program-fit",
+        "npm run check:publication-readiness"
       ],
       "protects": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -152,7 +153,8 @@
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
         "PUBLIC_DECISION_LOG.json",
         "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-        "PUBLIC_PROGRAM_FIT_MAP.json"
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_PUBLICATION_READINESS.json"
       ],
       "strongest_surfaces": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -166,7 +168,8 @@
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
         "PUBLIC_DECISION_LOG.json",
         "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-        "PUBLIC_PROGRAM_FIT_MAP.json"
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_PUBLICATION_READINESS.json"
       ],
       "failure_modes_prevented": [
         "stale reviewer shortcuts",
@@ -180,7 +183,8 @@
         "opaque ecosystem value claims",
         "hidden decision rationale",
         "implicit evidence gaps and overstated maturity claims",
-        "implicit program-fit claims and overstated reviewer-program readiness"
+        "implicit program-fit claims and overstated reviewer-program readiness",
+        "implicit publication-readiness claims and unsafe public-release assumptions"
       ]
     },
     {
@@ -399,6 +403,30 @@
         "program-fit claims left implicit",
         "reviewer-program credibility drifting away from stronger release evidence",
         "support-program readiness overstated beyond the real public surface"
+      ]
+    },
+    {
+      "id": "publication-readiness-and-pre-publish-safety",
+      "summary": "Protects bounded publication-readiness claims so maintainers and reviewers can see why this public surface is safe to publish without mistaking that for proof of adoption, approval, or hosted-service maturity.",
+      "commands": [
+        "npm run check:publication-readiness",
+        "npm run check:evaluation-packet",
+        "npm run check:release"
+      ],
+      "protects": [
+        "PUBLIC_PUBLICATION_READINESS.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_PUBLICATION_READINESS.json",
+        "docs/publication-readiness.md",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
+      ],
+      "failure_modes_prevented": [
+        "publication-readiness claims left implicit",
+        "public-release safety drifting away from stronger release evidence",
+        "GitHub-publication readiness overstated beyond the real public surface"
       ]
     }
   ],

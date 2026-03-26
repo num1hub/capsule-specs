@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 214,
-    "manifest_entries": 214
+    "files": 218,
+    "manifest_entries": 218
   },
   "surface_summary": {
-    "catalog_entries": 165,
+    "catalog_entries": 169,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 79
+    "markdown_files": 80
   },
   "repo_local_checks": [
     {
@@ -121,6 +121,10 @@
       "status": "pass"
     },
     {
+      "command": "npm run check:publication-readiness",
+      "status": "pass"
+    },
+    {
       "command": "npm run check:capability-matrix",
       "status": "pass"
     },
@@ -218,6 +222,7 @@
     "PUBLIC_ECOSYSTEM_VALUE_MAP.json is a bounded external-utility summary and must stay subordinate to stronger contracts, capability evidence, reviewer docs, adoption posture, and release evidence surfaces it references",
     "PUBLIC_DECISION_LOG.json is a bounded rationale summary and must stay subordinate to stronger boundary, assurance, provenance, release-evidence, and trust-model surfaces it references",
     "PUBLIC_EVIDENCE_GAPS_REGISTER.json is a bounded maturity-gap summary and must stay subordinate to stronger release evidence, limitations, freshness, adoption, and ecosystem-value surfaces it references",
-    "PUBLIC_PROGRAM_FIT_MAP.json is a bounded reviewer/program-fit summary and must stay subordinate to stronger project-profile, evaluation, verification, ecosystem-value, evidence-gap, and release-evidence surfaces it references"
+    "PUBLIC_PROGRAM_FIT_MAP.json is a bounded reviewer/program-fit summary and must stay subordinate to stronger project-profile, evaluation, verification, ecosystem-value, evidence-gap, and release-evidence surfaces it references",
+    "PUBLIC_PUBLICATION_READINESS.json is a bounded pre-publish and public-release-safety summary and must stay subordinate to stronger front-door, boundary, verification, evidence-gap, and release-evidence surfaces it references"
   ]
 }

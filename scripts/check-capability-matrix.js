@@ -35,6 +35,7 @@ const requiredIds = [
   'inspect-ecosystem-value-and-external-utility',
   'inspect-public-evidence-gaps-and-review-needs',
   'assess-program-fit-for-oss-support-review',
+  'assess-pre-publish-publication-readiness',
   'trace-public-claims-end-to-end',
   'understand-projection-and-domain-boundaries',
   'evaluate-portability-and-import-trust',
@@ -43,7 +44,7 @@ const requiredIds = [
   'locate-high-signal-public-artifacts'
 ];
 
-const expectedAudiences = new Set(['contributors', 'integrators', 'tool-builders', 'reviewers']);
+const expectedAudiences = new Set(['contributors', 'integrators', 'tool-builders', 'reviewers', 'maintainers']);
 const expectedReadiness = new Set(['ready', 'illustrative', 'reviewable']);
 
 function assert(condition, message) {
@@ -116,6 +117,7 @@ assert(catalogPaths.has('PUBLIC_FRESHNESS_MODEL.json'), 'contract catalog must i
 assert(catalogPaths.has('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'contract catalog must include PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'contract catalog must include PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(catalogPaths.has('PUBLIC_PROGRAM_FIT_MAP.json'), 'contract catalog must include PUBLIC_PROGRAM_FIT_MAP.json');
+assert(catalogPaths.has('PUBLIC_PUBLICATION_READINESS.json'), 'contract catalog must include PUBLIC_PUBLICATION_READINESS.json');
 assert(catalogPaths.has('docs/capability-matrix.md'), 'contract catalog must include docs/capability-matrix.md');
 assert(catalogPaths.has('docs/example-coverage.md'), 'contract catalog must include docs/example-coverage.md');
 assert(catalogPaths.has('docs/maintainer-operations.md'), 'contract catalog must include docs/maintainer-operations.md');
@@ -136,6 +138,7 @@ assert(catalogPaths.has('docs/freshness.md'), 'contract catalog must include doc
 assert(catalogPaths.has('docs/ecosystem-value.md'), 'contract catalog must include docs/ecosystem-value.md');
 assert(catalogPaths.has('docs/evidence-gaps.md'), 'contract catalog must include docs/evidence-gaps.md');
 assert(catalogPaths.has('docs/program-fit.md'), 'contract catalog must include docs/program-fit.md');
+assert(catalogPaths.has('docs/publication-readiness.md'), 'contract catalog must include docs/publication-readiness.md');
 assert(catalogPaths.has('schemas/public-capability-matrix.schema.json'), 'contract catalog must include schemas/public-capability-matrix.schema.json');
 assert(catalogPaths.has('schemas/public-example-coverage.schema.json'), 'contract catalog must include schemas/public-example-coverage.schema.json');
 assert(catalogPaths.has('schemas/public-maintenance-model.schema.json'), 'contract catalog must include schemas/public-maintenance-model.schema.json');
@@ -156,11 +159,13 @@ assert(catalogPaths.has('schemas/public-freshness-model.schema.json'), 'contract
 assert(catalogPaths.has('schemas/public-ecosystem-value-map.schema.json'), 'contract catalog must include schemas/public-ecosystem-value-map.schema.json');
 assert(catalogPaths.has('schemas/public-evidence-gaps-register.schema.json'), 'contract catalog must include schemas/public-evidence-gaps-register.schema.json');
 assert(catalogPaths.has('schemas/public-program-fit-map.schema.json'), 'contract catalog must include schemas/public-program-fit-map.schema.json');
+assert(catalogPaths.has('schemas/public-publication-readiness.schema.json'), 'contract catalog must include schemas/public-publication-readiness.schema.json');
 assert(catalogPaths.has('scripts/check-capability-matrix.js'), 'contract catalog must include scripts/check-capability-matrix.js');
 assert(catalogPaths.has('scripts/check-freshness.js'), 'contract catalog must include scripts/check-freshness.js');
 assert(catalogPaths.has('scripts/check-ecosystem-value.js'), 'contract catalog must include scripts/check-ecosystem-value.js');
 assert(catalogPaths.has('scripts/check-evidence-gaps.js'), 'contract catalog must include scripts/check-evidence-gaps.js');
 assert(catalogPaths.has('scripts/check-program-fit.js'), 'contract catalog must include scripts/check-program-fit.js');
+assert(catalogPaths.has('scripts/check-publication-readiness.js'), 'contract catalog must include scripts/check-publication-readiness.js');
 
 const readme = fs.readFileSync(path.join(repoRoot, 'README.md'), 'utf8');
 const reviewerGuide = fs.readFileSync(path.join(repoRoot, 'docs', 'reviewer-guide.md'), 'utf8');
@@ -190,6 +195,7 @@ assert(readme.includes('PUBLIC_FRESHNESS_MODEL.json'), 'README.md must mention P
 assert(readme.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'README.md must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(readme.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'README.md must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(readme.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'README.md must mention PUBLIC_PROGRAM_FIT_MAP.json');
+assert(readme.includes('PUBLIC_PUBLICATION_READINESS.json'), 'README.md must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(reviewerGuide.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'reviewer guide must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'capability matrix doc must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_BOUNDARY_MAP.json'), 'capability matrix doc must mention PUBLIC_BOUNDARY_MAP.json');
@@ -215,6 +221,7 @@ assert(capabilityDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'capability matrix
 assert(capabilityDoc.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'capability matrix doc must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(capabilityDoc.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'capability matrix doc must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(capabilityDoc.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'capability matrix doc must mention PUBLIC_PROGRAM_FIT_MAP.json');
+assert(capabilityDoc.includes('PUBLIC_PUBLICATION_READINESS.json'), 'capability matrix doc must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(capabilityDoc.includes('PUBLIC_PROJECT_PROFILE.json'), 'capability matrix doc must mention PUBLIC_PROJECT_PROFILE.json');
 assert(capabilityDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'capability matrix doc must mention PUBLIC_RELEASE_METADATA.json');
 

@@ -62,6 +62,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable public evidence-gap and bounded-maturity posture.
 - `public-program-fit-map.schema.json`
   JSON Schema for the machine-readable bounded reviewer/program-fit posture.
+- `public-publication-readiness.schema.json`
+  JSON Schema for the machine-readable bounded pre-publish publication-readiness posture.
 - `public-traceability-matrix.schema.json`
   JSON Schema for the machine-readable claim-to-evidence traceability matrix.
 

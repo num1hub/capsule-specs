@@ -45,7 +45,8 @@
       "machine-readable ecosystem-value summaries",
       "machine-readable public-decision summaries",
       "machine-readable public-evidence-gap summaries",
-      "machine-readable public-program-fit summaries"
+      "machine-readable public-program-fit summaries",
+      "machine-readable publication-readiness summaries"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -55,9 +56,9 @@
     ]
   },
   "surface_summary": {
-    "total_files": 214,
-    "markdown_files": 79,
-    "schema_files": 32,
+    "total_files": 218,
+    "markdown_files": 80,
+    "schema_files": 33,
     "raw_capsule_files": 4,
     "example_capsules": 5,
     "api_example_files": 13,
@@ -101,11 +102,12 @@
     "machine_readable_ecosystem_value_present": true,
     "machine_readable_decision_log_present": true,
     "machine_readable_evidence_gaps_present": true,
-    "machine_readable_program_fit_present": true
+    "machine_readable_program_fit_present": true,
+    "machine_readable_publication_readiness_present": true
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 36,
+    "repo_local_check_count": 37,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -141,7 +143,8 @@
     "ecosystem_value_map": "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
     "decision_log": "PUBLIC_DECISION_LOG.json",
     "evidence_gaps": "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-    "program_fit_map": "PUBLIC_PROGRAM_FIT_MAP.json"
+    "program_fit_map": "PUBLIC_PROGRAM_FIT_MAP.json",
+    "publication_readiness": "PUBLIC_PUBLICATION_READINESS.json"
   },
   "program_readiness": {
     "maintainer_owned": true,
@@ -175,6 +178,7 @@
     "ecosystem_value_explicit": true,
     "decision_rationale_explicit": true,
     "evidence_gaps_explicit": true,
-    "program_fit_explicit": true
+    "program_fit_explicit": true,
+    "publication_readiness_explicit": true
   }
 }

@@ -71,6 +71,7 @@ assert(ids.has('freshness-and-staleness'), 'dependency graph must include freshn
 assert(ids.has('ecosystem-value-and-program-fit'), 'dependency graph must include ecosystem-value-and-program-fit node');
 assert(ids.has('public-evidence-gaps'), 'dependency graph must include public-evidence-gaps node');
 assert(ids.has('public-program-fit'), 'dependency graph must include public-program-fit node');
+assert(ids.has('publication-readiness'), 'dependency graph must include publication-readiness node');
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('maintenance-evolution')),
   'reviewer-fast-path must include maintenance-evolution'
@@ -112,6 +113,10 @@ assert(
   'reviewer-fast-path must include public-program-fit'
 );
 assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('publication-readiness')),
+  'reviewer-fast-path must include publication-readiness'
+);
+assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('maintenance-evolution')),
   'contributor-governance-path must include maintenance-evolution'
 );
@@ -150,6 +155,10 @@ assert(
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('public-program-fit')),
   'contributor-governance-path must include public-program-fit'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('publication-readiness')),
+  'contributor-governance-path must include publication-readiness'
 );
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'integrator-contract-path' && pathDef.steps.includes('audience-entry-paths')),
@@ -198,6 +207,7 @@ assert(releaseEvidence.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'release-e
 assert(releaseEvidence.includes('PUBLIC_FRESHNESS_MODEL.json'), 'release-evidence doc must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(releaseEvidence.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'release-evidence doc must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(releaseEvidence.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'release-evidence doc must mention PUBLIC_PROGRAM_FIT_MAP.json');
+assert(releaseEvidence.includes('PUBLIC_PUBLICATION_READINESS.json'), 'release-evidence doc must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(verification.includes('check:dependency-graph'), 'verification doc must mention check:dependency-graph');
 assert(capabilityDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'capability-matrix doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(evaluationDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'evaluation-packet doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
@@ -217,6 +227,9 @@ assert(publicIndex.includes('../schemas/public-evidence-gaps-register.schema.jso
 assert(publicIndex.includes('program-fit.md'), 'public contract index must mention docs/program-fit.md');
 assert(publicIndex.includes('../PUBLIC_PROGRAM_FIT_MAP.json'), 'public contract index must mention PUBLIC_PROGRAM_FIT_MAP.json');
 assert(publicIndex.includes('../schemas/public-program-fit-map.schema.json'), 'public contract index must mention public-program-fit schema');
+assert(publicIndex.includes('publication-readiness.md'), 'public contract index must mention docs/publication-readiness.md');
+assert(publicIndex.includes('../PUBLIC_PUBLICATION_READINESS.json'), 'public contract index must mention PUBLIC_PUBLICATION_READINESS.json');
+assert(publicIndex.includes('../schemas/public-publication-readiness.schema.json'), 'public contract index must mention public-publication-readiness schema');
 assert(faq.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'FAQ must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(faq.includes('PUBLIC_AUDIENCE_PATHS.json'), 'FAQ must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(faq.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'FAQ must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
@@ -224,11 +237,13 @@ assert(faq.includes('PUBLIC_FRESHNESS_MODEL.json'), 'FAQ must mention PUBLIC_FRE
 assert(faq.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'FAQ must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(faq.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'FAQ must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(faq.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'FAQ must mention PUBLIC_PROGRAM_FIT_MAP.json');
+assert(faq.includes('PUBLIC_PUBLICATION_READINESS.json'), 'FAQ must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(schemasReadme.includes('public-dependency-graph.schema.json'), 'schemas README must mention public-dependency-graph schema');
 assert(schemasReadme.includes('public-freshness-model.schema.json'), 'schemas README must mention public-freshness-model schema');
 assert(schemasReadme.includes('public-ecosystem-value-map.schema.json'), 'schemas README must mention public-ecosystem-value schema');
 assert(schemasReadme.includes('public-evidence-gaps-register.schema.json'), 'schemas README must mention public-evidence-gaps schema');
 assert(schemasReadme.includes('public-program-fit-map.schema.json'), 'schemas README must mention public-program-fit schema');
+assert(schemasReadme.includes('public-publication-readiness.schema.json'), 'schemas README must mention public-publication-readiness schema');
 
 assert(catalogPaths.has('docs/dependency-graph.md'), 'contract catalog must include docs/dependency-graph.md');
 assert(catalogPaths.has('PUBLIC_DEPENDENCY_GRAPH.json'), 'contract catalog must include PUBLIC_DEPENDENCY_GRAPH.json');
@@ -252,6 +267,10 @@ assert(catalogPaths.has('docs/program-fit.md'), 'contract catalog must include d
 assert(catalogPaths.has('PUBLIC_PROGRAM_FIT_MAP.json'), 'contract catalog must include PUBLIC_PROGRAM_FIT_MAP.json');
 assert(catalogPaths.has('schemas/public-program-fit-map.schema.json'), 'contract catalog must include public-program-fit schema');
 assert(catalogPaths.has('scripts/check-program-fit.js'), 'contract catalog must include program-fit verifier');
+assert(catalogPaths.has('docs/publication-readiness.md'), 'contract catalog must include docs/publication-readiness.md');
+assert(catalogPaths.has('PUBLIC_PUBLICATION_READINESS.json'), 'contract catalog must include PUBLIC_PUBLICATION_READINESS.json');
+assert(catalogPaths.has('schemas/public-publication-readiness.schema.json'), 'contract catalog must include public-publication-readiness schema');
+assert(catalogPaths.has('scripts/check-publication-readiness.js'), 'contract catalog must include publication-readiness verifier');
 
 if (process.exitCode) {
   process.exit(process.exitCode);
