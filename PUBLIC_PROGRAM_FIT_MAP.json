@@ -1,0 +1,169 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Make the main OSS-support and reviewer-program fit criteria explicit so outside evaluators can see why this public specs surface is credible today without implying acceptance, traction, or hosted-runtime maturity that the repo does not yet prove.",
+  "fit_families": [
+    {
+      "id": "maintainer-owned-public-surface",
+      "summary": "The repository presents a clear maintainer-owned public surface with explicit ownership, scope, and contributor-facing governance.",
+      "why_it_matters": "Programs and reviewers need to see that this is a real maintained public repository surface rather than an anonymous dump or one-off export.",
+      "strongest_current_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "README.md",
+        "MAINTAINERS.md",
+        "GOVERNANCE.md",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "bounded_fit_claims": [
+        "primary maintainer identity is explicit",
+        "public scope and repository purpose are explicit",
+        "maintainer-owned release and review posture is visible"
+      ],
+      "review_commands": [
+        "npm run check:program-fit",
+        "npm run check:project-profile"
+      ],
+      "bounded_non_claims": [
+        "does not claim a large maintainer team today",
+        "does not claim existing broad external governance participation"
+      ]
+    },
+    {
+      "id": "reviewer-readable-contract-and-governance-surface",
+      "summary": "The repository provides a bounded reviewer path through docs, machine-readable summaries, and public governance surfaces.",
+      "why_it_matters": "Programs need a fast, legible route to evaluate what is published, what is deferred, and which artifacts are strongest.",
+      "strongest_current_surfaces": [
+        "PUBLIC_EVALUATION_PACKET.json",
+        "docs/reviewer-guide.md",
+        "docs/public-contract-index.md",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_AUDIENCE_PATHS.json"
+      ],
+      "bounded_fit_claims": [
+        "external reviewers can follow a bounded fast path",
+        "public governance and review surfaces are legible without scraping the whole tree",
+        "reviewer shortcuts are explicit and machine-readable"
+      ],
+      "review_commands": [
+        "npm run check:program-fit",
+        "npm run check:evaluation-packet"
+      ],
+      "bounded_non_claims": [
+        "does not claim every possible reviewer question is pre-answered",
+        "does not replace stronger source contracts with reviewer summaries"
+      ]
+    },
+    {
+      "id": "machine-readable-verification-and-release-evidence",
+      "summary": "The repository exposes machine-readable provenance, verification coverage, and release evidence instead of relying only on prose claims.",
+      "why_it_matters": "Program reviewers often need confidence that the public surface is checked, synchronized, and not merely documented.",
+      "strongest_current_surfaces": [
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "SOURCE_MANIFEST.json",
+        "docs/verification.md"
+      ],
+      "bounded_fit_claims": [
+        "verification coverage is explicit and reviewable",
+        "release evidence is machine-readable",
+        "public artifact discovery and provenance are tracked"
+      ],
+      "review_commands": [
+        "npm run check:program-fit",
+        "npm run check:verification-matrix",
+        "npm run check:release"
+      ],
+      "bounded_non_claims": [
+        "does not claim formal certification beyond repo-local verification",
+        "does not replace live validator behavior with summary layers"
+      ]
+    },
+    {
+      "id": "ecosystem-utility-and-consumability",
+      "summary": "The repository exposes concrete public utility through schema, OpenAPI, examples, recipes, and explicit external-value surfaces.",
+      "why_it_matters": "A support program needs to see that the repo can help integrators, tool-builders, contributors, and reviewers today, not only in theory.",
+      "strongest_current_surfaces": [
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "examples/client/README.md",
+        "openapi/validate.openapi.json"
+      ],
+      "bounded_fit_claims": [
+        "public contracts are consumable today",
+        "external utility is described in bounded, artifact-backed terms",
+        "examples and recipes make the repo usable beyond prose"
+      ],
+      "review_commands": [
+        "npm run check:program-fit",
+        "npm run check:ecosystem-value",
+        "npm run check:capability-matrix"
+      ],
+      "bounded_non_claims": [
+        "does not claim current large-scale external adoption",
+        "does not treat recipes as proof of deployed hosted-service interoperability"
+      ]
+    },
+    {
+      "id": "active-hardening-and-change-discipline",
+      "summary": "The repository makes hardening history, change classes, update coherence, and release discipline explicit.",
+      "why_it_matters": "Programs need to see that the public surface is being actively shaped and maintained with deliberate release discipline.",
+      "strongest_current_surfaces": [
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "CHANGELOG.md",
+        "VERSIONING.md"
+      ],
+      "bounded_fit_claims": [
+        "active hardening is visible as public milestones",
+        "public change classes are explicit",
+        "co-moving summary and release surfaces are governed"
+      ],
+      "review_commands": [
+        "npm run check:program-fit",
+        "npm run check:evidence-timeline",
+        "npm run check:change-control"
+      ],
+      "bounded_non_claims": [
+        "does not claim long multi-year public maintenance history",
+        "does not treat one release posture document as proof of future release discipline"
+      ]
+    },
+    {
+      "id": "explicit-limits-and-honest-maturity-posture",
+      "summary": "The repository explicitly publishes limits, evidence gaps, non-claims, and bounded maturity posture instead of implying more than it can prove.",
+      "why_it_matters": "Programs often reject public surfaces that read as overclaimed or vague about missing proof and deferred scope.",
+      "strongest_current_surfaces": [
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_ASSURANCE_CASE.json",
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "bounded_fit_claims": [
+        "deferred scope and non-claims are explicit",
+        "still-open proof gaps are explicit",
+        "program-facing fit remains bounded by stronger release evidence"
+      ],
+      "review_commands": [
+        "npm run check:program-fit",
+        "npm run check:evidence-gaps",
+        "npm run check:assurance-case"
+      ],
+      "bounded_non_claims": [
+        "does not claim support-program acceptance",
+        "does not claim hosted-runtime maturity, traction, or service evidence that the repo does not yet publish"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This file does not claim acceptance by OpenAI or any other OSS-support program.",
+    "This file does not replace stronger contracts, provenance, release evidence, or future public adoption signals."
+  ],
+  "review_commands": [
+    "npm run check:program-fit",
+    "npm run verify:repo"
+  ]
+}

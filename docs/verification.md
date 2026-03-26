@@ -64,6 +64,8 @@ This executes all repository-local checks in the expected order.
   Verifies `PUBLIC_DECISION_LOG.json`, the bounded rationale behind major public design choices, and the surrounding reviewer / governance / release references.
 - `npm run check:evidence-gaps`
   Verifies `PUBLIC_EVIDENCE_GAPS_REGISTER.json`, the bounded map of still-open public evidence gaps, and the surrounding reviewer / release / adoption references.
+- `npm run check:program-fit`
+  Verifies `PUBLIC_PROGRAM_FIT_MAP.json`, the bounded reviewer/program-fit layer, and the surrounding profile / evaluation / release references.
 - `npm run check:docs`
   Verifies Markdown links across the public documentation surface.
 - `npm run check:catalog`
@@ -124,6 +126,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_ECOSYSTEM_VALUE_MAP.json` stays aligned with the real public utility, reviewer/program posture, capability surface, and release evidence it summarizes
 - `PUBLIC_DECISION_LOG.json` stays aligned with the real public design rationale, boundary posture, trust choices, and release evidence it summarizes
 - `PUBLIC_EVIDENCE_GAPS_REGISTER.json` stays aligned with the real public proof gaps, manual-review boundaries, and bounded maturity posture it summarizes
+- `PUBLIC_PROGRAM_FIT_MAP.json` stays aligned with the real maintainer, reviewer, verification, ecosystem, and bounded-maturity surfaces it summarizes
 - `PUBLIC_TRACEABILITY_MATRIX.json` stays aligned with the real docs, schemas, examples, and verification commands it claims to connect
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`

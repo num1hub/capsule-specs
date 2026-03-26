@@ -619,6 +619,32 @@
         "npm run check:evidence-gaps",
         "npm run check:traceability"
       ]
+    },
+    {
+      "id": "bounded-program-fit-for-reviewers-and-programs",
+      "claim": "The public surface makes its reviewer/program fit explicit as a bounded, artifact-backed layer instead of forcing outside evaluators to infer OSS-support credibility from polish, counts, or vague aspiration.",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "strongest_surfaces": [
+        "docs/program-fit.md",
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+        "docs/reviewer-guide.md",
+        "docs/faq.md"
+      ],
+      "verify_commands": [
+        "npm run check:program-fit",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

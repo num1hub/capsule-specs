@@ -137,7 +137,8 @@
         "npm run check:freshness",
         "npm run check:ecosystem-value",
         "npm run check:decision-log",
-        "npm run check:evidence-gaps"
+        "npm run check:evidence-gaps",
+        "npm run check:program-fit"
       ],
       "protects": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -150,7 +151,8 @@
         "PUBLIC_FRESHNESS_MODEL.json",
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
         "PUBLIC_DECISION_LOG.json",
-        "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+        "PUBLIC_PROGRAM_FIT_MAP.json"
       ],
       "strongest_surfaces": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -163,7 +165,8 @@
         "PUBLIC_FRESHNESS_MODEL.json",
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
         "PUBLIC_DECISION_LOG.json",
-        "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+        "PUBLIC_PROGRAM_FIT_MAP.json"
       ],
       "failure_modes_prevented": [
         "stale reviewer shortcuts",
@@ -176,7 +179,8 @@
         "hidden stale-summary triggers",
         "opaque ecosystem value claims",
         "hidden decision rationale",
-        "implicit evidence gaps and overstated maturity claims"
+        "implicit evidence gaps and overstated maturity claims",
+        "implicit program-fit claims and overstated reviewer-program readiness"
       ]
     },
     {
@@ -371,6 +375,30 @@
         "unstated public proof gaps",
         "bounded maturity claims drifting away from release evidence",
         "reviewer/program expectations outrunning the real public surface"
+      ]
+    },
+    {
+      "id": "program-fit-and-reviewer-program-criteria",
+      "summary": "Protects bounded reviewer/program-fit claims so outside evaluators can see why this public surface is credible without mistaking that for proof of acceptance, traction, or hosted-service maturity.",
+      "commands": [
+        "npm run check:program-fit",
+        "npm run check:evaluation-packet",
+        "npm run check:release"
+      ],
+      "protects": [
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "docs/program-fit.md",
+        "PUBLIC_PROJECT_PROFILE.json"
+      ],
+      "failure_modes_prevented": [
+        "program-fit claims left implicit",
+        "reviewer-program credibility drifting away from stronger release evidence",
+        "support-program readiness overstated beyond the real public surface"
       ]
     }
   ],

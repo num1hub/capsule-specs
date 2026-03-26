@@ -34,6 +34,7 @@ This repository includes a compact evaluation packet for external reviewers, pro
 - [`../PUBLIC_ECOSYSTEM_VALUE_MAP.json`](../PUBLIC_ECOSYSTEM_VALUE_MAP.json)
 - [`../PUBLIC_DECISION_LOG.json`](../PUBLIC_DECISION_LOG.json)
 - [`../PUBLIC_EVIDENCE_GAPS_REGISTER.json`](../PUBLIC_EVIDENCE_GAPS_REGISTER.json)
+- [`../PUBLIC_PROGRAM_FIT_MAP.json`](../PUBLIC_PROGRAM_FIT_MAP.json)
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
@@ -66,4 +67,7 @@ The freshness layer strengthens that path further by making stale-summary trigge
 The ecosystem-value layer strengthens that path further by making external utility explicit instead of forcing reviewers or programs to infer why the public surface matters from counts, filenames, or vague aspiration.
 
 The decision-log layer strengthens that path further by making the major public design choices explicit instead of forcing reviewers to reverse-engineer intent from the repo shape alone.
+
+The program-fit layer strengthens that path further by making reviewer/program fit explicit as a bounded, artifact-backed claim instead of forcing outside evaluators to infer it from repo polish, raw counts, or maintainer intent alone.
+
 The evidence-gaps layer strengthens that path further by making still-open public proof gaps explicit instead of forcing reviewers or programs to guess where maturity is already well evidenced and where it is not yet.

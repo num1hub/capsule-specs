@@ -2407,6 +2407,68 @@
         "npm run check:evidence-gaps",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "governance.program-fit-doc",
+      "path": "docs/program-fit.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:program-fit",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.program-fit-map",
+      "path": "PUBLIC_PROGRAM_FIT_MAP.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:program-fit",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.program-fit-schema",
+      "path": "schemas/public-program-fit-map.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:program-fit",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.program-fit-check",
+      "path": "scripts/check-program-fit.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:program-fit",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

@@ -41,6 +41,7 @@
 - added machine-readable public ecosystem-value modeling and verifier coverage for external utility, reviewer/program fit, and bounded OSS-support relevance
 - added machine-readable public decision-log modeling and verifier coverage for projection rationale, trust choices, and bounded public design intent
 - added machine-readable public evidence-gaps modeling and verifier coverage for still-open proof gaps, manual-review boundaries, and bounded maturity claims
+- added machine-readable public program-fit modeling and verifier coverage for bounded OSS-support and reviewer-program criteria
 ## 0.1.0 - 2026-03-26
 
 Initial public open-core projection from N1Hub:

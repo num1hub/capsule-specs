@@ -53,6 +53,9 @@ The bounded freshness and stale-summary summary lives in [`../PUBLIC_FRESHNESS_M
 The bounded ecosystem-value summary lives in [`../PUBLIC_ECOSYSTEM_VALUE_MAP.json`](../PUBLIC_ECOSYSTEM_VALUE_MAP.json).
 
 The bounded decision-rationale summary lives in [`../PUBLIC_DECISION_LOG.json`](../PUBLIC_DECISION_LOG.json).
+
+The bounded reviewer/program-fit summary lives in [`../PUBLIC_PROGRAM_FIT_MAP.json`](../PUBLIC_PROGRAM_FIT_MAP.json).
+
 The bounded public evidence-gaps summary lives in [`../PUBLIC_EVIDENCE_GAPS_REGISTER.json`](../PUBLIC_EVIDENCE_GAPS_REGISTER.json).
 ## Important boundary
 

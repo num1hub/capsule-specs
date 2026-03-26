@@ -306,6 +306,22 @@
         "npm run check:evidence-gaps",
         "npm run check:review-scorecard"
       ]
+    },
+    {
+      "id": "program-fit-explicit",
+      "question": "Does the repo make reviewer/program fit explicit as a bounded, artifact-backed claim instead of forcing outside evaluators to infer OSS-support credibility from polish, counts, or aspiration?",
+      "status": "pass",
+      "summary": "The repo publishes a bounded program-fit layer that makes maintainer-owned reviewer/program credibility explicit without claiming acceptance, traction, or hosted-runtime maturity it does not yet prove.",
+      "strongest_surfaces": [
+        "docs/program-fit.md",
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json"
+      ],
+      "review_commands": [
+        "npm run check:program-fit",
+        "npm run check:review-scorecard"
+      ]
     }
   ],
   "important_limits": [

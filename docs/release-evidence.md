@@ -59,6 +59,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable map of the major public design decisions and the rationale behind this repository's bounded shape.
 - [`../PUBLIC_EVIDENCE_GAPS_REGISTER.json`](../PUBLIC_EVIDENCE_GAPS_REGISTER.json)
   Machine-readable map of which important public-facing evidence is still intentionally incomplete and where review confidence should remain bounded.
+- [`../PUBLIC_PROGRAM_FIT_MAP.json`](../PUBLIC_PROGRAM_FIT_MAP.json)
+  Machine-readable map of why this public surface is reviewer/program-credible today without treating that as proof of support-program acceptance.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Machine-readable map from public claims to strongest surfaces and verification commands.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)

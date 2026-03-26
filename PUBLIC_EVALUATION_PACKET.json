@@ -40,7 +40,8 @@
     "PUBLIC_FRESHNESS_MODEL.json",
     "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
     "PUBLIC_DECISION_LOG.json",
-    "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
+    "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+    "PUBLIC_PROGRAM_FIT_MAP.json"
   ],
   "strongest_evidence": {
     "contract_surface": [
@@ -80,7 +81,8 @@
       "docs/freshness.md",
       "docs/ecosystem-value.md",
       "docs/decision-log.md",
-      "docs/evidence-gaps.md"
+      "docs/evidence-gaps.md",
+      "docs/program-fit.md"
     ],
     "machine_readable_evidence": [
       "PUBLIC_CONTRACT_CATALOG.json",
@@ -106,7 +108,8 @@
       "PUBLIC_FRESHNESS_MODEL.json",
       "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "PUBLIC_DECISION_LOG.json",
-      "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
+      "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+      "PUBLIC_PROGRAM_FIT_MAP.json"
     ]
   },
   "review_commands": [
@@ -134,7 +137,8 @@
     "The repo makes freshness expectations and stale-summary triggers explicit instead of leaving reviewers and programs to guess when public summary layers require refresh.",
     "The repo makes ecosystem value explicit through bounded contracts, reviewer-facing summaries, adoption posture, and release-backed utility instead of relying on vague aspiration.",
     "The repo makes major public design decisions explicit through a bounded decision log instead of forcing reviewers to reverse-engineer intent from tree shape alone.",
-    "The repo makes still-open public evidence gaps explicit instead of letting a polished public surface imply maturity that is not yet publicly proven."
+    "The repo makes still-open public evidence gaps explicit instead of letting a polished public surface imply maturity that is not yet publicly proven.",
+    "The repo makes reviewer/program-fit explicit through a bounded machine-readable layer instead of forcing outside evaluators to infer OSS-support readiness from polish, counts, or aspiration."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",
@@ -147,6 +151,7 @@
     "PUBLIC_FRESHNESS_MODEL.json",
     "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
     "PUBLIC_DECISION_LOG.json",
-    "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
+    "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+    "PUBLIC_PROGRAM_FIT_MAP.json"
   ]
 }

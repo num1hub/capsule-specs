@@ -4103,5 +4103,56 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for evidence-gap cross-surface coherence."
+  },
+  "docs/program-fit.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Bounded program-fit guidance derived from project-profile, evaluation, review, verification, ecosystem-value, evidence-gap, and release-evidence surfaces."
+  },
+  "PUBLIC_PROGRAM_FIT_MAP.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/program-fit.md",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable program-fit layer derived from project-profile, evaluation, review, verification, ecosystem-value, evidence-gap, and release-facing public surfaces."
+  },
+  "schemas/public-program-fit-map.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_PROGRAM_FIT_MAP.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema for the public program-fit map."
+  },
+  "scripts/check-program-fit.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_PROGRAM_FIT_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
+      "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_AUDIENCE_PATHS.json",
+      "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for program-fit cross-surface coherence."
   }
 }

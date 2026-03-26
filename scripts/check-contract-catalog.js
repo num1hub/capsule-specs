@@ -146,7 +146,11 @@ const requiredIds = [
   'governance.evidence-gaps-doc',
   'governance.evidence-gaps-register',
   'governance.evidence-gaps-schema',
-  'governance.evidence-gaps-check'
+  'governance.evidence-gaps-check',
+  'governance.program-fit-doc',
+  'governance.program-fit-map',
+  'governance.program-fit-schema',
+  'governance.program-fit-check'
 ];
 
 for (const requiredId of requiredIds) {

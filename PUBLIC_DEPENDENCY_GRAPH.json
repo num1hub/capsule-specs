@@ -310,6 +310,21 @@
         "npm run check:evidence-gaps",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "public-program-fit",
+      "path": "PUBLIC_PROGRAM_FIT_MAP.json",
+      "role": "program-fit-summary",
+      "depends_on": [
+        "reviewer-summaries",
+        "ecosystem-value-and-program-fit",
+        "public-evidence-gaps",
+        "release-evidence"
+      ],
+      "verify_commands": [
+        "npm run check:program-fit",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -331,6 +346,7 @@
         "update-coherence-and-sync",
         "freshness-and-staleness",
         "ecosystem-value-and-program-fit",
+        "public-program-fit",
         "public-decision-rationale",
         "public-evidence-gaps"
       ]
@@ -369,6 +385,7 @@
         "verification-coverage",
         "freshness-and-staleness",
         "ecosystem-value-and-program-fit",
+        "public-program-fit",
         "public-decision-rationale",
         "public-evidence-gaps"
       ]

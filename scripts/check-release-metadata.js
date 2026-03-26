@@ -182,6 +182,10 @@ assert(
   'release metadata must include the evidence-gaps verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:program-fit'),
+  'release metadata must include the program-fit verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -292,6 +296,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json')),
   'release metadata residual risks must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_PROGRAM_FIT_MAP.json')),
+  'release metadata residual risks must mention PUBLIC_PROGRAM_FIT_MAP.json'
 );
 
 if (process.exitCode) {

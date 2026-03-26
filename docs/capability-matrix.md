@@ -39,7 +39,9 @@ Each capability captures:
 - inspect freshness posture and stale-summary triggers across reviewer, release, governance, and adoption surfaces
 - inspect explicit ecosystem value and external utility across reviewer, integrator, contributor, tool-builder, and OSS-support-program paths
 - inspect bounded public design decisions and rationale across projection, trust, and release surfaces
-- inspect explicit public evidence gaps and still-open reviewer/program proof needs across release, adoption, and ecosystem surfaces- trace public claims end-to-end
+- inspect explicit public evidence gaps and still-open reviewer/program proof needs across release, adoption, and ecosystem surfaces
+- assess bounded reviewer/program fit for OSS-support evaluation without overclaiming acceptance or maturity
+- trace public claims end-to-end
 - understand projection and domain boundaries
 - review portability and archive trust posture
 - contribute safely to the public surface
@@ -96,7 +98,10 @@ Good OSS repositories are not only readable; they are usable. The capability mat
 - [`../PUBLIC_DECISION_LOG.json`](../PUBLIC_DECISION_LOG.json)
   Answers: which major public design decisions are intentional and which stronger surfaces justify them.
 - [`../PUBLIC_EVIDENCE_GAPS_REGISTER.json`](../PUBLIC_EVIDENCE_GAPS_REGISTER.json)
-  Answers: which important public proof gaps remain open today, why they exist, and where maturity claims should stay bounded.- [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
+  Answers: which important public proof gaps remain open today, why they exist, and where maturity claims should stay bounded.
+- [`../PUBLIC_PROGRAM_FIT_MAP.json`](../PUBLIC_PROGRAM_FIT_MAP.json)
+  Answers: why this public surface is already reviewer/program-credible today and which bounded criteria keep that fit honest.
+- [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Answers: how the strongest public claims connect to docs, schemas, examples, and verification commands.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
   Answers: which boundaries are published in this repo and which ones remain intentionally deferred.
