@@ -25,10 +25,12 @@ This repository is that home.
 - [`docs/overview.md`](docs/overview.md) for the public boundary
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
+- [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
 - [`docs/public-contract-index.md`](docs/public-contract-index.md) for a complete public surface map
 - [`docs/source-materials.md`](docs/source-materials.md) for provenance and projection inputs
 - [`docs/faq.md`](docs/faq.md) for the shortest answers to scope questions
 - [`docs/compatibility.md`](docs/compatibility.md) for stability expectations
+- [`VERSIONING.md`](VERSIONING.md) for release and contract-change policy
 - [`ROADMAP.md`](ROADMAP.md) for the current evolution path
 
 ## Repository layout

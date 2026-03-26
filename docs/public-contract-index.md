@@ -7,8 +7,10 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../README.md`](../README.md)
 - [`../QUICKSTART.md`](../QUICKSTART.md)
 - [`../ONBOARDING.md`](../ONBOARDING.md)
+- [`../VERSIONING.md`](../VERSIONING.md)
 - [`repository-scope.md`](repository-scope.md)
 - [`compatibility.md`](compatibility.md)
+- [`integration-guide.md`](integration-guide.md)
 
 ## Core law
 

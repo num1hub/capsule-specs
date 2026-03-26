@@ -10,6 +10,7 @@ Use them to:
 - inspect a tiny linked capsule graph
 - inspect validator HTTP request and response envelopes
 - build tutorials or integration demos without touching private vault data
+- follow a stable public contract map before depending on edge-case behavior
 
 ## Files
 

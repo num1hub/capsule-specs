@@ -28,5 +28,6 @@ When a breaking public contract change is necessary, update all of these togethe
 - affected docs
 - affected schemas or OpenAPI
 - example payloads
+- [`../VERSIONING.md`](../VERSIONING.md)
 - [`CHANGELOG.md`](../CHANGELOG.md)
 - [`PUBLIC_RELEASE_REVIEW.md`](../PUBLIC_RELEASE_REVIEW.md)

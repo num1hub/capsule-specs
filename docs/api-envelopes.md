@@ -14,6 +14,10 @@ This repository publishes the validator OpenAPI document and a small set of conc
   Negative single-capsule validation response showing an isolated `G16` failure.
 - [`../examples/api/validate-response.batch.json`](../examples/api/validate-response.batch.json)
   Mixed batch response with one valid and one invalid result item.
+- [`../examples/api/validate-request.fix.json`](../examples/api/validate-request.fix.json)
+  Fix-route request envelope using the intentionally invalid `G16` capsule.
+- [`../examples/api/validate-response.fix.sample.json`](../examples/api/validate-response.fix.sample.json)
+  Illustrative fix-route response showing the corrected capsule payload.
 - [`../examples/api/gates-response.sample.json`](../examples/api/gates-response.sample.json)
   Small sample response shape for `GET /api/validate/gates`.
 
@@ -27,6 +31,8 @@ This repository publishes the validator OpenAPI document and a small set of conc
   Uses `{ capsule, options, policy }`.
 
 The public repo currently includes concrete examples for the first two request envelopes and for common response shapes. That keeps the reference surface useful without trying to mirror every internal runtime path.
+
+The `fix` response sample is intentionally illustrative: it is derived from the published OpenAPI contract and from local validator behavior on the public negative `G16` example, not from a deployed public HTTP trace.
 
 ## Why this matters
 

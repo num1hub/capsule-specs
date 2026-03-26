@@ -19,6 +19,7 @@ Use this guide when you want the shortest safe entry into the repository.
 - Inspect [`schemas/neuro-concentrate.schema.json`](schemas/neuro-concentrate.schema.json).
 - Inspect [`openapi/validate.openapi.json`](openapi/validate.openapi.json).
 - Read [`docs/api-envelopes.md`](docs/api-envelopes.md) and the payloads under [`examples/api/`](examples/api/).
+- Read [`docs/integration-guide.md`](docs/integration-guide.md) before wiring a real client or parser.
 
 ## 4. Inspect examples
 

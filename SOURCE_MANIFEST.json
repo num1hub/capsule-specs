@@ -40,6 +40,11 @@
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection."
   },
+  "VERSIONING.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Versioning and contract-change policy for the public repository surface."
+  },
   "RELEASING.md": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -214,6 +219,17 @@
     "transformation_type": "generated",
     "notes": "Public integrator guide to validator HTTP envelopes and sample payloads."
   },
+  "docs/integration-guide.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-project-hub.capsule.json",
+      "/home/n1/codex-workspace/examples/example-known-ids.json",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/n1hub.com/docs/validator.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Recommended integration path across schema, examples, graph validation, and HTTP envelopes."
+  },
   "docs/examples.md": {
     "source_paths": [
       "/home/n1/n1hub-repo-vault/examples/capsule.example.note-fixture.v1.json",
@@ -343,6 +359,14 @@
     "transformation_type": "generated",
     "notes": "Batch validator request envelope with one valid and one intentionally invalid example capsule."
   },
+  "examples/api/validate-request.fix.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Fix-route validator request envelope using the public G16-negative example."
+  },
   "examples/api/validate-response.pass.json": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/example-note.capsule.json",
@@ -366,6 +390,14 @@
     ],
     "transformation_type": "generated",
     "notes": "Mixed batch validator response sample for integrator-facing HTTP clients."
+  },
+  "examples/api/validate-response.fix.sample.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Illustrative fix-route response sample with a corrected capsule seal."
   },
   "examples/api/gates-response.sample.json": {
     "source_paths": [
@@ -405,6 +437,11 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Repository-local checks for validator HTTP request and response examples."
+  },
+  "scripts/check-doc-links.js": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository-local Markdown link integrity checks for the public docs surface."
   },
   "openapi/validate.openapi.json": {
     "source_paths": [

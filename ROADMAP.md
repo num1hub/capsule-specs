@@ -17,6 +17,7 @@ This roadmap describes the next useful waves for the public N1Hub specification 
 - expand compatibility notes for downstream tool builders
 - deepen docs around validator request and response envelopes
 - add more API sample payloads as public routes stabilize
+- keep docs link integrity and public contract discoverability automated
 
 ## Wave 3: Projection-friendly references
 

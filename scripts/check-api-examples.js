@@ -10,9 +10,11 @@ const examplesDir = path.join(repoRoot, 'examples');
 const files = {
   singleRequest: 'validate-request.single.json',
   batchRequest: 'validate-request.batch.json',
+  fixRequest: 'validate-request.fix.json',
   passResponse: 'validate-response.pass.json',
   failResponse: 'validate-response.fail.json',
   batchResponse: 'validate-response.batch.json',
+  fixResponse: 'validate-response.fix.sample.json',
   gatesResponse: 'gates-response.sample.json'
 };
 
@@ -37,9 +39,11 @@ for (const fileName of Object.values(files)) {
 
 const singleRequest = readJson(files.singleRequest);
 const batchRequest = readJson(files.batchRequest);
+const fixRequest = readJson(files.fixRequest);
 const passResponse = readJson(files.passResponse);
 const failResponse = readJson(files.failResponse);
 const batchResponse = readJson(files.batchResponse);
+const fixResponse = readJson(files.fixResponse);
 const gatesResponse = readJson(files.gatesResponse);
 const noteExample = readExample('example-note.capsule.json');
 const invalidG16Example = readExample('example-validator-invalid-g16.capsule.json');
@@ -66,6 +70,12 @@ assert(
   'batch request must embed the exact public G16-negative example'
 );
 
+assert(fixRequest.capsule?.metadata?.capsule_id === 'capsule.example.validator-invalid-g16.v1', 'fix request must target the public G16-negative example');
+assert(
+  JSON.stringify(fixRequest.capsule) === JSON.stringify(invalidG16Example),
+  'fix request capsule must stay in sync with examples/example-validator-invalid-g16.capsule.json'
+);
+
 assert(passResponse.valid === true, 'pass response must be valid');
 assert(Array.isArray(passResponse.errors) && passResponse.errors.length === 0, 'pass response errors must be empty');
 assert(Array.isArray(passResponse.appliedFixes), 'pass response must define appliedFixes');
@@ -87,6 +97,17 @@ assert(batchResponse.results.some((result) => result.capsuleId === 'capsule.exam
 assert(
   batchResponse.results.some((result) => result.capsuleId === 'capsule.example.validator-invalid-g16.v1'),
   'batch response must mention the G16-negative example'
+);
+
+assert(fixResponse.valid === true, 'fix response sample must be valid');
+assert(Array.isArray(fixResponse.errors) && fixResponse.errors.length === 0, 'fix response sample must have no errors');
+assert(
+  JSON.stringify(fixResponse.fixedCapsule) !== JSON.stringify(invalidG16Example),
+  'fix response fixedCapsule must differ from the intentionally broken input example'
+);
+assert(
+  fixResponse.fixedCapsule?.integrity_sha3_512 === fixResponse.computedHash,
+  'fix response computedHash must match the corrected fixedCapsule seal'
 );
 
 assert(Array.isArray(gatesResponse.gates) && gatesResponse.gates.length >= 4, 'gates response sample must contain at least four gates');

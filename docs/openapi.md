@@ -26,3 +26,10 @@ Use these when you want sample envelopes instead of just schema-level contract d
 ## Important note
 
 The OpenAPI document is a projection artifact from the live validator surface. The validator implementation remains the stronger source of truth for fine-grained runtime behavior.
+
+## Recommended reading order for integrators
+
+1. [`schema-reference.md`](schema-reference.md)
+2. [`api-envelopes.md`](api-envelopes.md)
+3. [`integration-guide.md`](integration-guide.md)
+4. [`compatibility.md`](compatibility.md)

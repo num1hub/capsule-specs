@@ -5,7 +5,8 @@
 - community health files: `README`, `LICENSE`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `SUPPORT`
 - root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
 - repo ergonomics files: `.editorconfig`, `package.json`, `RELEASING`
-- public docs for the capsule law, validator, relation types, schema, API envelopes, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
+- public docs for the capsule law, validator, relation types, schema, API envelopes, integration guidance, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
+- explicit versioning policy in `VERSIONING.md`
 - machine-readable schemas
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request and response sample payloads for the validator HTTP surface
@@ -40,7 +41,8 @@ Repository-local audit on 2026-03-26:
 - `node scripts/audit-public-surface.js`: pass
 - `node scripts/check-example-contracts.js`: pass
 - `node scripts/check-api-examples.js`: pass
-- manifest coverage: `67` files / `67` manifest entries
+- `node scripts/check-doc-links.js`: pass
+- manifest coverage: `72` files / `72` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
