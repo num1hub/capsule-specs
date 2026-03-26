@@ -130,24 +130,28 @@
         "npm run check:project-profile",
         "npm run check:evaluation-packet",
         "npm run check:review-scorecard",
+        "npm run check:audience-paths",
         "npm run check:capability-matrix"
       ],
       "protects": [
         "PUBLIC_PROJECT_PROFILE.json",
         "PUBLIC_EVALUATION_PACKET.json",
         "PUBLIC_REVIEW_SCORECARD.json",
-        "PUBLIC_CAPABILITY_MATRIX.json"
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_AUDIENCE_PATHS.json"
       ],
       "strongest_surfaces": [
         "PUBLIC_PROJECT_PROFILE.json",
         "PUBLIC_EVALUATION_PACKET.json",
         "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_AUDIENCE_PATHS.json",
         "PUBLIC_CAPABILITY_MATRIX.json"
       ],
       "failure_modes_prevented": [
         "stale reviewer shortcuts",
         "hand-wavy maturity claims",
-        "unclear supported outcomes"
+        "unclear supported outcomes",
+        "role-inappropriate entry paths"
       ]
     },
     {

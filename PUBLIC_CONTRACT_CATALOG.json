@@ -179,6 +179,22 @@
       ]
     },
     {
+      "id": "governance.audience-paths-doc",
+      "path": "docs/audience-paths.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.capability-matrix-doc",
       "path": "docs/capability-matrix.md",
       "kind": "index",
@@ -982,6 +998,22 @@
       ]
     },
     {
+      "id": "governance.audience-paths",
+      "path": "PUBLIC_AUDIENCE_PATHS.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.boundary-map",
       "path": "PUBLIC_BOUNDARY_MAP.json",
       "kind": "index",
@@ -1350,6 +1382,22 @@
       ]
     },
     {
+      "id": "schema.audience-paths",
+      "path": "schemas/public-audience-paths.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "schema.boundary-map",
       "path": "schemas/public-boundary-map.schema.json",
       "kind": "schema",
@@ -1660,6 +1708,20 @@
       ],
       "verify_commands": [
         "npm run check:assurance-case",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.audience-paths-check",
+      "path": "scripts/check-audience-paths.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
         "npm run check:catalog"
       ]
     },

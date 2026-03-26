@@ -27,6 +27,7 @@ This repository includes a compact evaluation packet for external reviewers, pro
 - [`../PUBLIC_EVIDENCE_TIMELINE.json`](../PUBLIC_EVIDENCE_TIMELINE.json)
 - [`../PUBLIC_REVIEW_SCORECARD.json`](../PUBLIC_REVIEW_SCORECARD.json)
 - [`../PUBLIC_VERIFICATION_MATRIX.json`](../PUBLIC_VERIFICATION_MATRIX.json)
+- [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json)
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
@@ -47,3 +48,5 @@ The evidence timeline strengthens that path further by making active maintenance
 The review scorecard strengthens that path further by making the repository assessable against explicit bounded criteria instead of leaving external evaluation as a matter of taste or intuition.
 
 The verification matrix strengthens that path further by making the check stack legible as protected coverage instead of forcing reviewers to guess what `verify:repo` actually guards.
+
+The audience-paths layer strengthens that path further by making role-specific entry paths explicit instead of assuming that every reviewer, contributor, integrator, and maintainer should navigate the same way.

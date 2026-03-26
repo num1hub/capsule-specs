@@ -34,6 +34,7 @@
 - added machine-readable public evidence-timeline modeling and verifier coverage for active maintenance and public-surface hardening history
 - added machine-readable public review-scorecard modeling and verifier coverage for bounded external repo-evaluation criteria
 - added machine-readable public verification-matrix modeling and verifier coverage for explicit check-family coverage across public surfaces
+- added machine-readable public audience-paths modeling and verifier coverage for role-specific entry paths through the public surface
 
 ## 0.1.0 - 2026-03-26
 

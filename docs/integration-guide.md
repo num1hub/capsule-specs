@@ -56,3 +56,5 @@ This repository is a public projection surface. When edge-case semantics matter:
 - prefer the live validator over prose-only inference
 - prefer the schema and OpenAPI artifacts over informal assumptions
 - check [`compatibility.md`](compatibility.md), [`trust-model.md`](trust-model.md), and [`../VERSIONING.md`](../VERSIONING.md) before depending on a detail
+
+If you want the bounded integrator-specific reading order instead of the general repo path, inspect [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json).

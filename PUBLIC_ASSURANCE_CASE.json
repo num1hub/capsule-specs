@@ -55,7 +55,9 @@
         "PUBLIC_REVIEW_SCORECARD.json",
         "docs/review-scorecard.md",
         "PUBLIC_VERIFICATION_MATRIX.json",
-        "docs/verification-matrix.md"
+        "docs/verification-matrix.md",
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "docs/audience-paths.md"
       ],
       "bounded_by": [
         "docs/release-evidence.md",
@@ -123,7 +125,8 @@
         "PUBLIC_EVIDENCE_TIMELINE.json",
         "docs/evidence-timeline.md",
         "PUBLIC_REVIEW_SCORECARD.json",
-        "PUBLIC_VERIFICATION_MATRIX.json"
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_AUDIENCE_PATHS.json"
       ],
       "bounded_by": [
         "docs/release-evidence.md",

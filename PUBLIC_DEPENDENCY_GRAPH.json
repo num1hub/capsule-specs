@@ -209,6 +209,19 @@
         "npm run check:verification-matrix",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "audience-entry-paths",
+      "path": "PUBLIC_AUDIENCE_PATHS.json",
+      "role": "audience-summary",
+      "depends_on": [
+        "reviewer-summaries",
+        "verification-coverage"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -224,6 +237,7 @@
         "maintenance-evolution",
         "review-scorecard",
         "verification-coverage",
+        "audience-entry-paths",
         "update-coherence-and-sync"
       ]
     },
@@ -232,6 +246,7 @@
       "audience": "integrators",
       "steps": [
         "repo-readme",
+        "audience-entry-paths",
         "law-and-schema",
         "validator-http-contract",
         "examples-and-fixtures",
@@ -247,6 +262,7 @@
         "maintenance-and-change",
         "ownership-and-authority",
         "update-coherence-and-sync",
+        "audience-entry-paths",
         "release-evidence",
         "maintenance-evolution",
         "review-scorecard",

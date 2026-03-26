@@ -430,6 +430,33 @@
         "npm run check:traceability",
         "npm run check:release"
       ]
+    },
+    {
+      "id": "audience-specific-entry-paths",
+      "claim": "The public surface publishes bounded role-specific entry paths instead of assuming every audience should navigate the same generic walkthrough.",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/audience-paths.md",
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "docs/reviewer-guide.md",
+        "ONBOARDING.md",
+        "docs/integration-guide.md"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "docs/maintainer-operations.md"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

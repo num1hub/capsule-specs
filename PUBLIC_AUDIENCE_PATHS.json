@@ -1,0 +1,166 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Publish bounded entry paths for the main public audiences so reviewers, integrators, contributors, tool-builders, and maintainers can follow the right surfaces without guessing from folder layout alone.",
+  "audiences": [
+    {
+      "id": "reviewers",
+      "summary": "Use this path when evaluating maturity, public scope, strongest evidence, and review discipline.",
+      "starting_points": [
+        "README.md",
+        "docs/reviewer-guide.md",
+        "PUBLIC_EVALUATION_PACKET.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:evaluation-packet",
+        "npm run check:review-scorecard",
+        "npm run check:project-profile"
+      ],
+      "completion_signals": [
+        "can explain what the repo publishes and what it explicitly does not publish",
+        "can identify the strongest reviewer-facing machine-readable evidence",
+        "can describe the bounded limitations and review posture without reading the private runtime repo"
+      ],
+      "bounded_non_goals": [
+        "does not expose the full private N1Hub runtime",
+        "does not claim a hosted service SLA"
+      ]
+    },
+    {
+      "id": "integrators",
+      "summary": "Use this path when wiring a parser, validator client, or consumer workflow against the published HTTP and schema surfaces.",
+      "starting_points": [
+        "QUICKSTART.md",
+        "docs/integration-guide.md",
+        "docs/api-envelopes.md"
+      ],
+      "strongest_surfaces": [
+        "schemas/validator-api-envelopes.schema.json",
+        "openapi/validate.openapi.json",
+        "examples/api/README.md",
+        "docs/client-recipes.md",
+        "PUBLIC_EXAMPLE_COVERAGE.json"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:api-schemas",
+        "npm run check:api-examples",
+        "npm run check:client-recipes"
+      ],
+      "completion_signals": [
+        "can build requests and interpret bounded response envelopes",
+        "can identify the negative-path and graph-aware examples",
+        "can explain where the live validator remains stronger than public prose"
+      ],
+      "bounded_non_goals": [
+        "does not promise a public hosted endpoint",
+        "does not replace live validator behavior for edge-case semantics"
+      ]
+    },
+    {
+      "id": "contributors",
+      "summary": "Use this path when preparing a docs, example, schema, or public-boundary change to the public specs surface.",
+      "starting_points": [
+        "ONBOARDING.md",
+        "CONTRIBUTING.md",
+        "docs/community-health.md"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_VERIFICATION_MATRIX.json"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:community-health",
+        "npm run check:maintenance-model",
+        "npm run check:change-control"
+      ],
+      "completion_signals": [
+        "can distinguish issue-first changes from pull-request-safe projection edits",
+        "can explain which reviewer and release surfaces must move together",
+        "can name the verification evidence expected for a release-facing change"
+      ],
+      "bounded_non_goals": [
+        "does not grant access to private upstream workflow internals",
+        "does not replace the stronger source-of-truth capsule and validator surfaces"
+      ]
+    },
+    {
+      "id": "tool-builders",
+      "summary": "Use this path when generating tooling from public schemas, OpenAPI, and machine-readable contract summaries.",
+      "starting_points": [
+        "QUICKSTART.md",
+        "docs/schema-reference.md",
+        "docs/integration-guide.md"
+      ],
+      "strongest_surfaces": [
+        "schemas/capsule-schema.json",
+        "schemas/neuro-concentrate.schema.json",
+        "openapi/validate.openapi.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_CAPABILITY_MATRIX.json"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:catalog",
+        "npm run check:api-schemas",
+        "npm run check:capability-matrix"
+      ],
+      "completion_signals": [
+        "can locate stable machine-readable artifacts quickly",
+        "can map examples to contract surfaces without guessing",
+        "can explain the stronger-source hierarchy for public generation targets"
+      ],
+      "bounded_non_goals": [
+        "does not guarantee a feature-complete SDK",
+        "does not expose private runtime internals beyond the published contract surface"
+      ]
+    },
+    {
+      "id": "maintainers",
+      "summary": "Use this path when keeping reviewer, release, and audience-facing surfaces synchronized as the public repo evolves.",
+      "starting_points": [
+        "MAINTAINERS.md",
+        "GOVERNANCE.md",
+        "docs/maintainer-operations.md"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_AUDIENCE_PATHS.json"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:maintenance-model",
+        "npm run check:update-coherence",
+        "npm run check:release"
+      ],
+      "completion_signals": [
+        "can explain which public role paths must be refreshed when the repo grows",
+        "can identify which summary layers must move with release evidence",
+        "can keep reviewer shortcuts aligned with the real public artifact set"
+      ],
+      "bounded_non_goals": [
+        "does not expose private operator playbooks",
+        "does not replace stronger release, provenance, and boundary evidence surfaces"
+      ]
+    }
+  ],
+  "review_commands": [
+    "npm run check:audience-paths",
+    "npm run verify:repo"
+  ]
+}

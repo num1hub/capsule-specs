@@ -158,6 +158,10 @@ assert(
   'release metadata must include the verification-matrix verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:audience-paths'),
+  'release metadata must include the audience-paths verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -244,6 +248,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_VERIFICATION_MATRIX.json')),
   'release metadata residual risks must mention PUBLIC_VERIFICATION_MATRIX.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_AUDIENCE_PATHS.json')),
+  'release metadata residual risks must mention PUBLIC_AUDIENCE_PATHS.json'
 );
 
 if (process.exitCode) {

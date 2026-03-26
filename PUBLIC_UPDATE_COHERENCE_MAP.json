@@ -8,7 +8,8 @@
       "change_triggers": [
         "new reviewer-facing machine-readable surface",
         "reordered fast-review path",
-        "changed public orientation or quickstart flow"
+        "changed public orientation or quickstart flow",
+        "changed role-specific audience path"
       ],
       "required_surfaces": [
         "README.md",
@@ -19,11 +20,13 @@
         "PUBLIC_EVALUATION_PACKET.json",
         "PUBLIC_EVIDENCE_TIMELINE.json",
         "PUBLIC_REVIEW_SCORECARD.json",
-        "PUBLIC_VERIFICATION_MATRIX.json"
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_AUDIENCE_PATHS.json"
       ],
       "verify_commands": [
         "npm run check:project-profile",
         "npm run check:evaluation-packet",
+        "npm run check:audience-paths",
         "npm run check:update-coherence"
       ]
     },
@@ -85,7 +88,8 @@
       "change_triggers": [
         "new reviewer-facing claim",
         "changed maintenance or change-control posture",
-        "changed ownership, dependency, or assurance summaries"
+        "changed ownership, dependency, or assurance summaries",
+        "changed audience-specific entry-path posture"
       ],
       "required_surfaces": [
         "PUBLIC_MAINTENANCE_MODEL.json",
@@ -97,10 +101,12 @@
         "PUBLIC_CAPABILITY_MATRIX.json",
         "PUBLIC_EVIDENCE_TIMELINE.json",
         "PUBLIC_REVIEW_SCORECARD.json",
-        "PUBLIC_VERIFICATION_MATRIX.json"
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_AUDIENCE_PATHS.json"
       ],
       "verify_commands": [
         "npm run check:maintenance-model",
+        "npm run check:audience-paths",
         "npm run check:change-control",
         "npm run check:dependency-graph",
         "npm run check:assurance-case",

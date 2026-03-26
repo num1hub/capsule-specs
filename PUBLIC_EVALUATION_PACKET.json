@@ -19,6 +19,7 @@
     "PUBLIC_PROJECT_PROFILE.json",
     "PUBLIC_REVIEW_SCORECARD.json",
     "PUBLIC_VERIFICATION_MATRIX.json",
+    "PUBLIC_AUDIENCE_PATHS.json",
     "PUBLIC_CAPABILITY_MATRIX.json",
     "PUBLIC_BOUNDARY_MAP.json",
     "PUBLIC_PORTABILITY_PROFILE.json",
@@ -66,7 +67,8 @@
       "docs/limitations-register.md",
       "docs/evidence-timeline.md",
       "docs/review-scorecard.md",
-      "docs/verification-matrix.md"
+      "docs/verification-matrix.md",
+      "docs/audience-paths.md"
     ],
     "machine_readable_evidence": [
       "PUBLIC_CONTRACT_CATALOG.json",
@@ -85,7 +87,8 @@
       "PUBLIC_LIMITATIONS_REGISTER.json",
       "PUBLIC_EVIDENCE_TIMELINE.json",
       "PUBLIC_REVIEW_SCORECARD.json",
-      "PUBLIC_VERIFICATION_MATRIX.json"
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "PUBLIC_AUDIENCE_PATHS.json"
     ]
   },
   "review_commands": [
@@ -106,7 +109,8 @@
     "The repo makes deferred scope and non-promised behavior explicit instead of leaving reviewers to infer limits from scattered caveat prose.",
     "The repo makes active maintenance and public-surface hardening visible through a bounded machine-readable timeline instead of requiring reviewers to infer evolution from raw git history.",
     "The repo makes bounded external review criteria explicit through a machine-readable review scorecard instead of leaving maturity assessment to raw counts or intuition.",
-    "The repo makes verification coverage explicit through a machine-readable matrix instead of hiding trust in one opaque verify command."
+    "The repo makes verification coverage explicit through a machine-readable matrix instead of hiding trust in one opaque verify command.",
+    "The repo makes audience-specific entry paths explicit instead of assuming one generic repo walkthrough fits reviewers, contributors, integrators, tool-builders, and maintainers equally."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",

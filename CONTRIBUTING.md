@@ -14,6 +14,7 @@ Use the repository issue templates where possible. They keep bug reports, integr
 
 For the public maintainer workflow model, review [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) and [`docs/maintainer-operations.md`](docs/maintainer-operations.md).
 For the public change-control model, review [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) and [`docs/change-control.md`](docs/change-control.md).
+For the bounded contributor/reviewer/integrator entry paths, review [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) and [`docs/audience-paths.md`](docs/audience-paths.md).
 
 ## Required discipline
 

@@ -101,7 +101,8 @@
     "updated PUBLIC_LIMITATIONS_REGISTER.json when deferred scope or public non-promises changed",
     "updated PUBLIC_EVIDENCE_TIMELINE.json when public hardening milestones or reviewer-facing maintenance history changed",
     "updated PUBLIC_REVIEW_SCORECARD.json when reviewer-facing maturity criteria or strongest public evidence changed",
-    "updated PUBLIC_VERIFICATION_MATRIX.json when repo-local check coverage or protected public surfaces changed"
+    "updated PUBLIC_VERIFICATION_MATRIX.json when repo-local check coverage or protected public surfaces changed",
+    "updated PUBLIC_AUDIENCE_PATHS.json when role-specific entry paths or public audience expectations changed"
   ],
   "operating_rules": [
     "Keep the public boundary intentional and do not widen scope by accident.",
@@ -113,7 +114,8 @@
     "Keep PUBLIC_LIMITATIONS_REGISTER.json aligned with boundary docs, scope docs, reviewer paths, and release evidence when public limits change.",
     "Keep PUBLIC_EVIDENCE_TIMELINE.json aligned with CHANGELOG.md, reviewer docs, and release evidence when the bounded public hardening history changes.",
     "Keep PUBLIC_REVIEW_SCORECARD.json aligned with reviewer docs, release evidence, limitations, and the strongest criteria evidence it summarizes.",
-    "Keep PUBLIC_VERIFICATION_MATRIX.json aligned with the real check stack, release evidence, and reviewer-facing verification docs."
+    "Keep PUBLIC_VERIFICATION_MATRIX.json aligned with the real check stack, release evidence, and reviewer-facing verification docs.",
+    "Keep PUBLIC_AUDIENCE_PATHS.json aligned with onboarding, reviewer, contributor, integration, and maintainer-facing docs."
   ],
   "non_claims": [
     "This file does not promise a guaranteed response-time SLA for public issues or pull requests.",

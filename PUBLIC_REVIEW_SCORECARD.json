@@ -193,6 +193,23 @@
         "npm run check:verification-matrix",
         "npm run check:review-scorecard"
       ]
+    },
+    {
+      "id": "audience-entry-paths-explicit",
+      "question": "Are audience-specific entry paths explicit instead of assuming one generic walkthrough fits every public reader?",
+      "status": "pass",
+      "summary": "The repo publishes bounded role-specific entry paths for reviewers, contributors, integrators, tool-builders, and maintainers instead of relying on folder layout intuition.",
+      "strongest_surfaces": [
+        "docs/audience-paths.md",
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "ONBOARDING.md",
+        "docs/integration-guide.md",
+        "docs/maintainer-operations.md"
+      ],
+      "review_commands": [
+        "npm run check:audience-paths",
+        "npm run check:review-scorecard"
+      ]
     }
   ],
   "important_limits": [

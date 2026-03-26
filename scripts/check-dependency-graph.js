@@ -64,6 +64,7 @@ for (const pathDef of graph.reading_paths) {
 assert(ids.has('maintenance-evolution'), 'dependency graph must include maintenance-evolution node');
 assert(ids.has('review-scorecard'), 'dependency graph must include review-scorecard node');
 assert(ids.has('verification-coverage'), 'dependency graph must include verification-coverage node');
+assert(ids.has('audience-entry-paths'), 'dependency graph must include audience-entry-paths node');
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('maintenance-evolution')),
   'reviewer-fast-path must include maintenance-evolution'
@@ -77,6 +78,10 @@ assert(
   'reviewer-fast-path must include verification-coverage'
 );
 assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('audience-entry-paths')),
+  'reviewer-fast-path must include audience-entry-paths'
+);
+assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('maintenance-evolution')),
   'contributor-governance-path must include maintenance-evolution'
 );
@@ -87,6 +92,14 @@ assert(
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('verification-coverage')),
   'contributor-governance-path must include verification-coverage'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('audience-entry-paths')),
+  'contributor-governance-path must include audience-entry-paths'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'integrator-contract-path' && pathDef.steps.includes('audience-entry-paths')),
+  'integrator-contract-path must include audience-entry-paths'
 );
 
 for (const command of graph.review_commands) {
@@ -110,6 +123,7 @@ assert(readme.includes('docs/dependency-graph.md'), 'README.md must mention docs
 assert(quickstart.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'QUICKSTART.md must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(reviewerGuide.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'reviewer guide must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(releaseEvidence.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'release-evidence doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
+assert(releaseEvidence.includes('PUBLIC_AUDIENCE_PATHS.json'), 'release-evidence doc must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(verification.includes('check:dependency-graph'), 'verification doc must mention check:dependency-graph');
 assert(capabilityDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'capability-matrix doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(evaluationDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'evaluation-packet doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
@@ -118,10 +132,12 @@ assert(publicIndex.includes('dependency-graph.md'), 'public contract index must 
 assert(publicIndex.includes('../PUBLIC_DEPENDENCY_GRAPH.json'), 'public contract index must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(publicIndex.includes('../schemas/public-dependency-graph.schema.json'), 'public contract index must mention public-dependency-graph schema');
 assert(faq.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'FAQ must mention PUBLIC_DEPENDENCY_GRAPH.json');
+assert(faq.includes('PUBLIC_AUDIENCE_PATHS.json'), 'FAQ must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(schemasReadme.includes('public-dependency-graph.schema.json'), 'schemas README must mention public-dependency-graph schema');
 
 assert(catalogPaths.has('docs/dependency-graph.md'), 'contract catalog must include docs/dependency-graph.md');
 assert(catalogPaths.has('PUBLIC_DEPENDENCY_GRAPH.json'), 'contract catalog must include PUBLIC_DEPENDENCY_GRAPH.json');
+assert(catalogPaths.has('PUBLIC_AUDIENCE_PATHS.json'), 'contract catalog must include PUBLIC_AUDIENCE_PATHS.json');
 assert(catalogPaths.has('schemas/public-dependency-graph.schema.json'), 'contract catalog must include public-dependency-graph schema');
 assert(catalogPaths.has('scripts/check-dependency-graph.js'), 'contract catalog must include dependency-graph verifier');
 

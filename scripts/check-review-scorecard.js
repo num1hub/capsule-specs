@@ -22,7 +22,8 @@ const requiredIds = [
   'active-maintenance-history-visible',
   'limits-and-non-claims-explicit',
   'single-verification-entrypoint-present',
-  'verification-coverage-explicit'
+  'verification-coverage-explicit',
+  'audience-entry-paths-explicit'
 ];
 
 const allowedStatuses = new Set(['pass', 'bounded']);
@@ -100,6 +101,7 @@ assert(capabilityDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'capability-matri
 assert(faq.includes('PUBLIC_REVIEW_SCORECARD.json'), 'FAQ must mention PUBLIC_REVIEW_SCORECARD.json');
 assert(traceabilityDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'traceability doc must mention PUBLIC_REVIEW_SCORECARD.json');
 assert(reviewScorecardDoc.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'review-scorecard doc must mention PUBLIC_VERIFICATION_MATRIX.json');
+assert(reviewScorecardDoc.includes('PUBLIC_AUDIENCE_PATHS.json'), 'review-scorecard doc must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(schemasReadme.includes('public-review-scorecard.schema.json'), 'schemas README must mention public-review-scorecard schema');
 
 assert(profile.health_signals?.machine_readable_review_scorecard_present === true, 'project profile must mark machine_readable_review_scorecard_present true');
@@ -110,6 +112,7 @@ assert(catalogPaths.has('PUBLIC_REVIEW_SCORECARD.json'), 'contract catalog must 
 assert(catalogPaths.has('schemas/public-review-scorecard.schema.json'), 'contract catalog must include public-review-scorecard schema');
 assert(catalogPaths.has('scripts/check-review-scorecard.js'), 'contract catalog must include review-scorecard verifier');
 assert(catalogPaths.has('PUBLIC_VERIFICATION_MATRIX.json'), 'contract catalog must include PUBLIC_VERIFICATION_MATRIX.json');
+assert(catalogPaths.has('PUBLIC_AUDIENCE_PATHS.json'), 'contract catalog must include PUBLIC_AUDIENCE_PATHS.json');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:review-scorecard'), 'release metadata must include review-scorecard verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_REVIEW_SCORECARD.json')), 'release metadata residual risks must mention PUBLIC_REVIEW_SCORECARD.json');
@@ -117,6 +120,9 @@ assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' &&
 const verificationCriterion = scorecard.criteria.find((criterion) => criterion.id === 'verification-coverage-explicit');
 assert(verificationCriterion, 'review scorecard must define verification-coverage-explicit criterion');
 assert(verificationCriterion.strongest_surfaces.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'verification-coverage-explicit must reference PUBLIC_VERIFICATION_MATRIX.json');
+const audienceCriterion = scorecard.criteria.find((criterion) => criterion.id === 'audience-entry-paths-explicit');
+assert(audienceCriterion, 'review scorecard must define audience-entry-paths-explicit criterion');
+assert(audienceCriterion.strongest_surfaces.includes('PUBLIC_AUDIENCE_PATHS.json'), 'audience-entry-paths-explicit must reference PUBLIC_AUDIENCE_PATHS.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

@@ -580,6 +580,30 @@
         "npm run check:capability-matrix",
         "npm run check:release"
       ]
+    },
+    {
+      "id": "follow-role-specific-audience-paths",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Follow the bounded role-specific entry path for the public audience you care about instead of navigating the repo in one generic order.",
+      "strongest_surfaces": [
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "docs/audience-paths.md",
+        "docs/reviewer-guide.md",
+        "ONBOARDING.md",
+        "docs/integration-guide.md"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "docs/maintainer-operations.md"
+      ],
+      "verify_commands": [
+        "npm run check:audience-paths",
+        "npm run check:evaluation-packet",
+        "npm run check:capability-matrix"
+      ]
     }
   ]
 }

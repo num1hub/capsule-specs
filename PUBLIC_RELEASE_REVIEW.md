@@ -28,6 +28,7 @@
 - machine-readable evidence timeline in `PUBLIC_EVIDENCE_TIMELINE.json` plus a bounded active-maintenance and hardening guide
 - machine-readable review scorecard in `PUBLIC_REVIEW_SCORECARD.json` plus a bounded reviewer-grade repo-maturity checklist
 - machine-readable verification matrix in `PUBLIC_VERIFICATION_MATRIX.json` plus a bounded check-family coverage guide
+- machine-readable audience paths in `PUBLIC_AUDIENCE_PATHS.json` plus a bounded role-specific entry-path guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
@@ -79,6 +80,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-evidence-timeline.js`: pass
 - `node scripts/check-review-scorecard.js`: pass
 - `node scripts/check-verification-matrix.js`: pass
+- `node scripts/check-audience-paths.js`: pass
 - `node scripts/check-project-profile.js`: pass
 - `node scripts/check-capability-matrix.js`: pass
 - `node scripts/check-evaluation-packet.js`: pass
@@ -89,7 +91,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `182` files / `182` manifest entries
+- manifest coverage: `186` files / `186` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -124,3 +126,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_EVIDENCE_TIMELINE.json` is a bounded maintenance-history summary and must stay subordinate to the stronger changelog, release-evidence, reviewer, and git-history surfaces it references
 - `PUBLIC_REVIEW_SCORECARD.json` is a bounded reviewer checklist and must stay subordinate to the stronger docs, schemas, examples, release evidence, and git-backed maintenance history it references
 - `PUBLIC_VERIFICATION_MATRIX.json` is a bounded verification-coverage summary and must stay subordinate to the stronger check scripts, release evidence, and live validator behavior it references
+- `PUBLIC_AUDIENCE_PATHS.json` is a bounded role-specific navigation summary and must stay subordinate to the stronger onboarding, reviewer, maintainer, integration, and release surfaces it references

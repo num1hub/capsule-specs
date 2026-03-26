@@ -6,6 +6,7 @@ Welcome to the public N1Hub specification surface.
 
 - Read [`README.md`](README.md) for the repository map.
 - Read [`QUICKSTART.md`](QUICKSTART.md) if you need the shortest entry path.
+- Read [`docs/audience-paths.md`](docs/audience-paths.md) if you want the bounded role-specific path before diving deeper.
 - Read [`docs/repository-scope.md`](docs/repository-scope.md) to understand what is intentionally excluded.
 
 ## Step 2: Understand the rules

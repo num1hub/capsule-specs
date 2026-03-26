@@ -25,6 +25,8 @@ The explicit limits on the scorecard live in [`../PUBLIC_LIMITATIONS_REGISTER.js
 
 The verification coverage behind the scorecard lives in [`../PUBLIC_VERIFICATION_MATRIX.json`](../PUBLIC_VERIFICATION_MATRIX.json).
 
+The bounded role-specific reviewer, contributor, integrator, tool-builder, and maintainer entry paths live in [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json).
+
 ## Important boundary
 
 The scorecard is a bounded public reviewer aid. It does not replace the stronger docs, schemas, examples, release evidence, or raw git history it references.

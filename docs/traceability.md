@@ -44,6 +44,8 @@ The bounded reviewer-criteria summary lives in [`../PUBLIC_REVIEW_SCORECARD.json
 
 The bounded verification-coverage summary lives in [`../PUBLIC_VERIFICATION_MATRIX.json`](../PUBLIC_VERIFICATION_MATRIX.json).
 
+The bounded role-specific navigation summary lives in [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json).
+
 ## Important boundary
 
 The traceability matrix is a curated public summary. It does not claim to capture every private runtime dependency or every internal change path from the upstream N1Hub repository.
