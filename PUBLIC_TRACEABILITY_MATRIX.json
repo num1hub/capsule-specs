@@ -297,6 +297,34 @@
         "npm run check:traceability",
         "npm run check:release"
       ]
+    },
+    {
+      "id": "co-moving-review-and-release-surfaces",
+      "claim": "Co-moving reviewer, release, contract, and teaching surfaces are explicit instead of being left to maintainer memory.",
+      "audiences": [
+        "reviewers",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "docs/update-coherence.md",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_RELEASE_REVIEW.md",
+        "PUBLIC_CONTRACT_CATALOG.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_ASSURANCE_CASE.json",
+        "schemas/public-update-coherence-map.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:update-coherence",
+        "npm run check:maintenance-model",
+        "npm run check:change-control",
+        "npm run check:release",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

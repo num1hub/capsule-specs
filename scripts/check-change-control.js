@@ -63,6 +63,7 @@ const verification = fs.readFileSync(path.join(repoRoot, 'docs', 'verification.m
 const publicIndex = fs.readFileSync(path.join(repoRoot, 'docs', 'public-contract-index.md'), 'utf8');
 const capabilityDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'capability-matrix.md'), 'utf8');
 const faq = fs.readFileSync(path.join(repoRoot, 'docs', 'faq.md'), 'utf8');
+const changeControlDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'change-control.md'), 'utf8');
 const schemasReadme = fs.readFileSync(path.join(repoRoot, 'schemas', 'README.md'), 'utf8');
 
 assert(readme.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'README.md must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
@@ -74,6 +75,7 @@ assert(releasing.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'RELEASING.md mus
 assert(reviewerGuide.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'reviewer guide must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
 assert(releaseEvidence.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'release-evidence doc must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
 assert(verification.includes('check:change-control'), 'verification doc must mention check:change-control');
+assert(changeControlDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'change-control doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(publicIndex.includes('change-control.md'), 'public contract index must mention docs/change-control.md');
 assert(publicIndex.includes('../PUBLIC_CHANGE_CONTROL_MODEL.json'), 'public contract index must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
 assert(publicIndex.includes('../schemas/public-change-control-model.schema.json'), 'public contract index must mention public-change-control schema');

@@ -62,7 +62,8 @@
         "PUBLIC_CONTRACT_CATALOG.json",
         "PUBLIC_RELEASE_METADATA.json",
         "PUBLIC_RELEASE_REVIEW.md",
-        "PUBLIC_CHANGE_CONTROL_MODEL.json"
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json"
       ],
       "verify_commands": [
         "npm run audit:public-surface",
@@ -91,14 +92,16 @@
     "npm run verify:repo",
     "updated release-facing artifacts when the public surface changes",
     "upstream validator rechecks for example changes where applicable",
-    "updated PUBLIC_CHANGE_CONTROL_MODEL.json when public change posture changed"
+    "updated PUBLIC_CHANGE_CONTROL_MODEL.json when public change posture changed",
+    "updated PUBLIC_UPDATE_COHERENCE_MAP.json when public sync groups changed"
   ],
   "operating_rules": [
     "Keep the public boundary intentional and do not widen scope by accident.",
     "Prefer small, reviewable changes over oversized public dumps.",
     "Keep SOURCE_MANIFEST.json and PUBLIC_CONTRACT_CATALOG.json aligned with new or changed public artifacts.",
     "Require explicit verification evidence when schemas, examples, OpenAPI, or release surfaces change.",
-    "Route trust-sensitive disclosures through SECURITY.md instead of public issue intake."
+    "Route trust-sensitive disclosures through SECURITY.md instead of public issue intake.",
+    "Keep PUBLIC_UPDATE_COHERENCE_MAP.json aligned with release, reviewer, contract, and teaching surfaces when co-moving groups change."
   ],
   "non_claims": [
     "This file does not promise a guaranteed response-time SLA for public issues or pull requests.",

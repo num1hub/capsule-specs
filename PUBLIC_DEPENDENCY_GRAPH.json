@@ -141,6 +141,20 @@
         "npm run check:assurance-case",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "update-coherence-and-sync",
+      "path": "PUBLIC_UPDATE_COHERENCE_MAP.json",
+      "role": "sync-summary",
+      "depends_on": [
+        "maintenance-and-change",
+        "release-evidence",
+        "assurance-and-limits"
+      ],
+      "verify_commands": [
+        "npm run check:update-coherence",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -151,8 +165,9 @@
         "repo-readme",
         "reviewer-summaries",
         "traceability-and-capabilities",
+        "assurance-and-limits",
         "release-evidence",
-        "assurance-and-limits"
+        "update-coherence-and-sync"
       ]
     },
     {
@@ -174,6 +189,7 @@
         "provenance-and-boundaries",
         "maintenance-and-change",
         "ownership-and-authority",
+        "update-coherence-and-sync",
         "release-evidence"
       ]
     }

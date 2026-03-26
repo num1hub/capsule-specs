@@ -3,6 +3,7 @@
 This repository publishes a bounded change-control layer so contributors, integrators, and reviewers can see how public-surface changes should be classified and synchronized.
 
 The machine-readable form lives in [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json).
+The bounded co-movement map for reviewer, release, contract, and teaching surfaces lives in [`update-coherence.md`](update-coherence.md) and [`../PUBLIC_UPDATE_COHERENCE_MAP.json`](../PUBLIC_UPDATE_COHERENCE_MAP.json).
 
 ## What this covers
 

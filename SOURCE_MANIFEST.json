@@ -34,7 +34,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
@@ -61,7 +63,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "derived",
     "notes": "Root-level fast entry path for public contributors."
@@ -116,7 +120,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection."
@@ -247,7 +253,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface."
@@ -459,7 +467,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Short answers to scope and validation questions for the public repository."
@@ -505,7 +515,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
@@ -538,7 +550,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
@@ -581,7 +595,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects."
@@ -660,7 +676,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for schema artifacts."
@@ -901,7 +919,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths."
@@ -936,7 +956,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
@@ -1205,7 +1227,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals."
@@ -1246,7 +1270,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Fast evaluator path through the strongest public surfaces."
@@ -1296,7 +1322,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface."
@@ -1331,7 +1359,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the capability matrix and supported public outcomes."
@@ -1489,7 +1519,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable evaluation packet for external reviewers and programs."
@@ -1517,7 +1549,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling."
@@ -1602,7 +1636,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide for the public traceability layer."
@@ -1630,7 +1666,9 @@
       "/home/n1/codex-workspace/docs/dependency-graph.md",
       "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface."
@@ -1724,7 +1762,9 @@
       "/home/n1/codex-workspace/RELEASING.md",
       "/home/n1/codex-workspace/GOVERNANCE.md",
       "/home/n1/codex-workspace/docs/change-control.md",
-      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the bounded public maintainer workflow."
@@ -1739,7 +1779,9 @@
       "/home/n1/codex-workspace/GOVERNANCE.md",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/docs/change-control.md",
-      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable summary of public maintainer workflow and release posture."
@@ -1769,7 +1811,9 @@
       "/home/n1/codex-workspace/docs/compatibility.md",
       "/home/n1/codex-workspace/RELEASING.md",
       "/home/n1/codex-workspace/CHANGELOG.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to additive, deprecated, and breaking public change posture."
@@ -1781,7 +1825,9 @@
       "/home/n1/codex-workspace/docs/compatibility.md",
       "/home/n1/codex-workspace/RELEASING.md",
       "/home/n1/codex-workspace/CHANGELOG.md",
-      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture."
@@ -1866,7 +1912,9 @@
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable summary of public dependency structure and reading paths."
@@ -1908,7 +1956,9 @@
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded assurance layer for public review."
@@ -1930,5 +1980,47 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the public assurance-case layer."
+  },
+  "docs/update-coherence.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_REVIEW.md",
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Human-readable co-movement and sync-group guide for the public surface."
+  },
+  "PUBLIC_UPDATE_COHERENCE_MAP.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_REVIEW.md",
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable co-movement map for reviewer, release, contract, and teaching surfaces."
+  },
+  "schemas/public-update-coherence-map.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "JSON Schema for the update-coherence map."
+  },
+  "scripts/check-update-coherence.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for co-moving public surface groups."
   }
 }

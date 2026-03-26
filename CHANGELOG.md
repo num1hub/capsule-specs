@@ -29,6 +29,7 @@
 - added machine-readable public artifact-ownership modeling and verifier coverage for stronger-source hierarchy across public families
 - added machine-readable public dependency-graph modeling and verifier coverage for reading-order and dependency structure across public artifacts
 - added machine-readable public assurance-case modeling and verifier coverage for bounded claims, strongest evidence, and explicit review limits
+- added machine-readable public update-coherence modeling and verifier coverage for co-moving reviewer, release, contract, and teaching surfaces
 
 ## 0.1.0 - 2026-03-26
 

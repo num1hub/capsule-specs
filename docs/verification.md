@@ -40,6 +40,8 @@ This executes all repository-local checks in the expected order.
   Verifies `PUBLIC_DEPENDENCY_GRAPH.json`, dependency/reading-order docs, and reviewer-navigation references.
 - `npm run check:assurance-case`
   Verifies `PUBLIC_ASSURANCE_CASE.json`, its bounded claims, strongest-evidence references, and reviewer-facing assurance docs.
+- `npm run check:update-coherence`
+  Verifies `PUBLIC_UPDATE_COHERENCE_MAP.json`, sync-group docs, and release / reviewer references for co-moving surfaces.
 - `npm run check:docs`
   Verifies Markdown links across the public documentation surface.
 - `npm run check:catalog`
@@ -88,6 +90,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_OWNERSHIP_MAP.json` stays aligned with trust-model docs, source-material docs, projection doctrine, reviewer docs, and the artifact families it classifies
 - `PUBLIC_DEPENDENCY_GRAPH.json` stays aligned with reviewer docs, capability docs, traceability, release evidence, and the public artifact relationships it summarizes
 - `PUBLIC_ASSURANCE_CASE.json` stays aligned with reviewer docs, release evidence, failure posture, traceability, and the bounded claims and limits it summarizes
+- `PUBLIC_UPDATE_COHERENCE_MAP.json` stays aligned with maintenance docs, change-control docs, release evidence, reviewer docs, and the co-moving surface groups it summarizes
 - `PUBLIC_TRACEABILITY_MATRIX.json` stays aligned with the real docs, schemas, examples, and verification commands it claims to connect
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`

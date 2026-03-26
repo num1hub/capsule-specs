@@ -23,6 +23,7 @@
 - machine-readable traceability matrix in `PUBLIC_TRACEABILITY_MATRIX.json` plus an end-to-end traceability guide
 - machine-readable dependency graph in `PUBLIC_DEPENDENCY_GRAPH.json` plus a bounded dependency-and-reading-order guide
 - machine-readable assurance case in `PUBLIC_ASSURANCE_CASE.json` plus a bounded public-claims and explicit-limits guide
+- machine-readable update-coherence map in `PUBLIC_UPDATE_COHERENCE_MAP.json` plus a bounded sync-group and co-movement guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
@@ -69,6 +70,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-ownership-map.js`: pass
 - `node scripts/check-dependency-graph.js`: pass
 - `node scripts/check-assurance-case.js`: pass
+- `node scripts/check-update-coherence.js`: pass
 - `node scripts/check-project-profile.js`: pass
 - `node scripts/check-capability-matrix.js`: pass
 - `node scripts/check-evaluation-packet.js`: pass
@@ -79,7 +81,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `162` files / `162` manifest entries
+- manifest coverage: `166` files / `166` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -109,3 +111,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_TRACEABILITY_MATRIX.json` is a curated reviewer-facing map and must stay subordinate to the stronger docs, schemas, examples, and verification artifacts it references
 - `PUBLIC_DEPENDENCY_GRAPH.json` is a bounded dependency-and-reading-order summary and must stay subordinate to the stronger docs, schemas, provenance, and release-evidence surfaces it references
 - `PUBLIC_ASSURANCE_CASE.json` is a bounded reviewer-facing assurance summary and must stay subordinate to the stronger docs, schemas, examples, provenance, failure-model, and release-evidence surfaces it references
+- `PUBLIC_UPDATE_COHERENCE_MAP.json` is a bounded sync-group summary and must stay subordinate to the stronger release, provenance, contract, maintainer, and reviewer surfaces it references

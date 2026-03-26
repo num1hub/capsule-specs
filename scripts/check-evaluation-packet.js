@@ -75,6 +75,7 @@ assert(evaluationDoc.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'evaluation-p
 assert(evaluationDoc.includes('PUBLIC_OWNERSHIP_MAP.json'), 'evaluation-packet doc must mention PUBLIC_OWNERSHIP_MAP.json');
 assert(evaluationDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'evaluation-packet doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(evaluationDoc.includes('PUBLIC_ASSURANCE_CASE.json'), 'evaluation-packet doc must mention PUBLIC_ASSURANCE_CASE.json');
+assert(evaluationDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'evaluation-packet doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(faqDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'FAQ must mention PUBLIC_EVALUATION_PACKET.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'release-evidence doc must mention PUBLIC_EVALUATION_PACKET.json');
 assert(capabilityDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'capability-matrix doc must mention PUBLIC_EVALUATION_PACKET.json');
@@ -82,6 +83,7 @@ assert(quickstart.includes('PUBLIC_EVALUATION_PACKET.json'), 'QUICKSTART.md must
 
 assert(catalogPaths.has('PUBLIC_EVALUATION_PACKET.json'), 'contract catalog must include PUBLIC_EVALUATION_PACKET.json');
 assert(catalogPaths.has('PUBLIC_ASSURANCE_CASE.json'), 'contract catalog must include PUBLIC_ASSURANCE_CASE.json');
+assert(catalogPaths.has('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'contract catalog must include PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(catalogPaths.has('docs/evaluation-packet.md'), 'contract catalog must include docs/evaluation-packet.md');
 assert(catalogPaths.has('schemas/public-evaluation-packet.schema.json'), 'contract catalog must include public-evaluation-packet schema');
 assert(catalogPaths.has('scripts/check-evaluation-packet.js'), 'contract catalog must include evaluation-packet verifier');

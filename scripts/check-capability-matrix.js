@@ -23,6 +23,7 @@ const requiredIds = [
   'understand-artifact-ownership-and-authority',
   'follow-public-dependency-graph',
   'review-bounded-public-assurance-case',
+  'inspect-required-public-sync-groups',
   'trace-public-claims-end-to-end',
   'understand-projection-and-domain-boundaries',
   'evaluate-portability-and-import-trust',
@@ -92,6 +93,7 @@ assert(catalogPaths.has('PUBLIC_OWNERSHIP_MAP.json'), 'contract catalog must inc
 assert(catalogPaths.has('PUBLIC_TRACEABILITY_MATRIX.json'), 'contract catalog must include PUBLIC_TRACEABILITY_MATRIX.json');
 assert(catalogPaths.has('PUBLIC_DEPENDENCY_GRAPH.json'), 'contract catalog must include PUBLIC_DEPENDENCY_GRAPH.json');
 assert(catalogPaths.has('PUBLIC_ASSURANCE_CASE.json'), 'contract catalog must include PUBLIC_ASSURANCE_CASE.json');
+assert(catalogPaths.has('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'contract catalog must include PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(catalogPaths.has('docs/capability-matrix.md'), 'contract catalog must include docs/capability-matrix.md');
 assert(catalogPaths.has('docs/example-coverage.md'), 'contract catalog must include docs/example-coverage.md');
 assert(catalogPaths.has('docs/maintainer-operations.md'), 'contract catalog must include docs/maintainer-operations.md');
@@ -100,6 +102,7 @@ assert(catalogPaths.has('docs/artifact-ownership.md'), 'contract catalog must in
 assert(catalogPaths.has('docs/traceability.md'), 'contract catalog must include docs/traceability.md');
 assert(catalogPaths.has('docs/dependency-graph.md'), 'contract catalog must include docs/dependency-graph.md');
 assert(catalogPaths.has('docs/assurance-case.md'), 'contract catalog must include docs/assurance-case.md');
+assert(catalogPaths.has('docs/update-coherence.md'), 'contract catalog must include docs/update-coherence.md');
 assert(catalogPaths.has('schemas/public-capability-matrix.schema.json'), 'contract catalog must include schemas/public-capability-matrix.schema.json');
 assert(catalogPaths.has('schemas/public-example-coverage.schema.json'), 'contract catalog must include schemas/public-example-coverage.schema.json');
 assert(catalogPaths.has('schemas/public-maintenance-model.schema.json'), 'contract catalog must include schemas/public-maintenance-model.schema.json');
@@ -108,6 +111,7 @@ assert(catalogPaths.has('schemas/public-ownership-map.schema.json'), 'contract c
 assert(catalogPaths.has('schemas/public-traceability-matrix.schema.json'), 'contract catalog must include schemas/public-traceability-matrix.schema.json');
 assert(catalogPaths.has('schemas/public-dependency-graph.schema.json'), 'contract catalog must include schemas/public-dependency-graph.schema.json');
 assert(catalogPaths.has('schemas/public-assurance-case.schema.json'), 'contract catalog must include schemas/public-assurance-case.schema.json');
+assert(catalogPaths.has('schemas/public-update-coherence-map.schema.json'), 'contract catalog must include schemas/public-update-coherence-map.schema.json');
 assert(catalogPaths.has('scripts/check-capability-matrix.js'), 'contract catalog must include scripts/check-capability-matrix.js');
 
 const readme = fs.readFileSync(path.join(repoRoot, 'README.md'), 'utf8');
@@ -126,6 +130,7 @@ assert(readme.includes('PUBLIC_OWNERSHIP_MAP.json'), 'README.md must mention PUB
 assert(readme.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'README.md must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(readme.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'README.md must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(readme.includes('PUBLIC_ASSURANCE_CASE.json'), 'README.md must mention PUBLIC_ASSURANCE_CASE.json');
+assert(readme.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'README.md must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(reviewerGuide.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'reviewer guide must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'capability matrix doc must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_BOUNDARY_MAP.json'), 'capability matrix doc must mention PUBLIC_BOUNDARY_MAP.json');
@@ -139,6 +144,7 @@ assert(capabilityDoc.includes('PUBLIC_OWNERSHIP_MAP.json'), 'capability matrix d
 assert(capabilityDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'capability matrix doc must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'capability matrix doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(capabilityDoc.includes('PUBLIC_ASSURANCE_CASE.json'), 'capability matrix doc must mention PUBLIC_ASSURANCE_CASE.json');
+assert(capabilityDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'capability matrix doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(capabilityDoc.includes('PUBLIC_PROJECT_PROFILE.json'), 'capability matrix doc must mention PUBLIC_PROJECT_PROFILE.json');
 assert(capabilityDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'capability matrix doc must mention PUBLIC_RELEASE_METADATA.json');
 

@@ -1201,6 +1201,50 @@
       ]
     },
     {
+      "id": "governance.update-coherence",
+      "path": "PUBLIC_UPDATE_COHERENCE_MAP.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:update-coherence",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.update-coherence-check",
+      "path": "scripts/check-update-coherence.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:update-coherence",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.update-coherence-doc",
+      "path": "docs/update-coherence.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:update-coherence",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.verification",
       "path": "docs/verification.md",
       "kind": "verification-doc",
@@ -1555,6 +1599,20 @@
       ],
       "verify_commands": [
         "npm run check:traceability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "schema.update-coherence",
+      "path": "schemas/public-update-coherence-map.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:update-coherence",
         "npm run check:catalog"
       ]
     },

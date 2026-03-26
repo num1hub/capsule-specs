@@ -111,7 +111,8 @@
         "CHANGELOG.md",
         "PUBLIC_OWNERSHIP_MAP.json",
         "docs/compatibility.md",
-        "PUBLIC_DEPENDENCY_GRAPH.json"
+        "PUBLIC_DEPENDENCY_GRAPH.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json"
       ],
       "bounded_by": [
         "docs/release-evidence.md",

@@ -88,6 +88,7 @@ assert(releaseEvidence.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'release-evide
 assert(verification.includes('check:maintenance-model'), 'verification doc must mention check:maintenance-model');
 assert(capabilityDoc.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'capability-matrix doc must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(maintainerOps.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'maintainer-operations doc must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
+assert(maintainerOps.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'maintainer-operations doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(publicIndex.includes('maintainer-operations.md'), 'public contract index must mention docs/maintainer-operations.md');
 assert(publicIndex.includes('../PUBLIC_MAINTENANCE_MODEL.json'), 'public contract index must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(publicIndex.includes('../schemas/public-maintenance-model.schema.json'), 'public contract index must mention public-maintenance schema');

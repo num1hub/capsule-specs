@@ -35,6 +35,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable summary of which public artifacts depend on which stronger surfaces and the shortest reading paths through the stack.
 - [`../PUBLIC_ASSURANCE_CASE.json`](../PUBLIC_ASSURANCE_CASE.json)
   Machine-readable summary of bounded public claims, strongest evidence, and explicit review limits.
+- [`../PUBLIC_UPDATE_COHERENCE_MAP.json`](../PUBLIC_UPDATE_COHERENCE_MAP.json)
+  Machine-readable summary of which public surfaces must move together when release, reviewer, or contract layers change.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Machine-readable map from public claims to strongest surfaces and verification commands.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
@@ -76,6 +78,8 @@ The dependency graph strengthens reviewer navigation by making reading order and
 
 The assurance case strengthens bounded external evaluation by collecting public claims, strongest evidence, and explicit limits into one reviewer-facing machine-readable layer.
 
+The update-coherence map strengthens release discipline by making the expected co-movement groups explicit instead of leaving reviewer and release sync as an implicit maintainer habit.
+
 The traceability matrix strengthens reviewability by making claim-to-evidence and claim-to-verification links explicit instead of leaving them implicit across multiple files.
 
 The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
@@ -101,6 +105,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_OWNERSHIP_MAP.json`
 - `PUBLIC_DEPENDENCY_GRAPH.json`
 - `PUBLIC_ASSURANCE_CASE.json`
+- `PUBLIC_UPDATE_COHERENCE_MAP.json`
 - `PUBLIC_TRACEABILITY_MATRIX.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`
