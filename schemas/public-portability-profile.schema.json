@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-portability-profile.schema.json",
+  "title": "Public Portability Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "reviewed_at",
+    "summary",
+    "principles",
+    "public_surfaces",
+    "trust_requirements",
+    "lifecycle_posture",
+    "non_promises",
+    "verify_commands"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "reviewed_at": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "principles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "public_surfaces": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "overview_doc",
+        "archive_doc",
+        "archive_schema",
+        "archive_example",
+        "machine_profile"
+      ],
+      "properties": {
+        "overview_doc": { "type": "string" },
+        "archive_doc": { "type": "string" },
+        "archive_schema": { "type": "string" },
+        "archive_example": { "type": "string" },
+        "machine_profile": { "type": "string" }
+      }
+    },
+    "trust_requirements": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "lifecycle_posture": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "non_promises": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "verify_commands": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    }
+  }
+}

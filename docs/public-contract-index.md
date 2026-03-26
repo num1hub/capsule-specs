@@ -12,9 +12,12 @@ This index maps the highest-signal public surfaces in the repository.
 - [`projection-doctrine.md`](projection-doctrine.md)
 - [`domain-boundaries.md`](domain-boundaries.md)
 - [`generator-readiness.md`](generator-readiness.md)
+- [`portability.md`](portability.md)
+- [`archive-bundles.md`](archive-bundles.md)
 - [`contract-catalog.md`](contract-catalog.md)
 - [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
+- [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
 - [`reviewer-guide.md`](reviewer-guide.md)
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
 - [`capability-matrix.md`](capability-matrix.md)
@@ -48,8 +51,10 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
 - [`../schemas/neuro-concentrate.schema.json`](../schemas/neuro-concentrate.schema.json)
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
+- [`../schemas/archive-bundle.schema.json`](../schemas/archive-bundle.schema.json)
 - [`../schemas/public-project-profile.schema.json`](../schemas/public-project-profile.schema.json)
 - [`../schemas/public-capability-matrix.schema.json`](../schemas/public-capability-matrix.schema.json)
+- [`../schemas/public-portability-profile.schema.json`](../schemas/public-portability-profile.schema.json)
 
 ## Examples
 
@@ -57,6 +62,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../examples/README.md`](../examples/README.md)
 - [`../examples/api/README.md`](../examples/api/README.md)
 - [`../examples/client/README.md`](../examples/client/README.md)
+- [`../examples/archive/README.md`](../examples/archive/README.md)
 
 ## Provenance and governance
 

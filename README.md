@@ -26,6 +26,8 @@ This repository is that home.
 - [`docs/projection-doctrine.md`](docs/projection-doctrine.md) for the files-as-projections rule
 - [`docs/domain-boundaries.md`](docs/domain-boundaries.md) for published vs deferred domains
 - [`docs/generator-readiness.md`](docs/generator-readiness.md) for the generator/projection model
+- [`docs/portability.md`](docs/portability.md) for public portability and no-lock-in posture
+- [`docs/archive-bundles.md`](docs/archive-bundles.md) for the archive export / replay contract
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
 - [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) for machine-readable validator envelope contracts
@@ -74,6 +76,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable reviewer/program profile in [`PUBLIC_PROJECT_PROFILE.json`](PUBLIC_PROJECT_PROFILE.json)
 - machine-readable capability matrix in [`PUBLIC_CAPABILITY_MATRIX.json`](PUBLIC_CAPABILITY_MATRIX.json)
 - machine-readable boundary map in [`PUBLIC_BOUNDARY_MAP.json`](PUBLIC_BOUNDARY_MAP.json)
+- machine-readable portability profile in [`PUBLIC_PORTABILITY_PROFILE.json`](PUBLIC_PORTABILITY_PROFILE.json)
 - a public-release review in [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md)
 - repo-local verification via `npm run verify:repo`
 - local validator-backed example checks
@@ -103,11 +106,12 @@ Maintainer and review policy:
 1. Read [`docs/overview.md`](docs/overview.md).
 2. Read [`docs/projection-doctrine.md`](docs/projection-doctrine.md) and [`docs/domain-boundaries.md`](docs/domain-boundaries.md).
 3. Read [`docs/5-element-law.md`](docs/5-element-law.md) and [`docs/16-gates.md`](docs/16-gates.md).
-4. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
-5. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
-6. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-7. Review the raw capsule sources in [`capsules/`](capsules/).
-8. Run `npm run verify:repo` for the repository-local integrity checks.
+4. Read [`docs/portability.md`](docs/portability.md) if you need the public portability / archive trust posture.
+5. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
+6. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
+7. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+8. Review the raw capsule sources in [`capsules/`](capsules/).
+9. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

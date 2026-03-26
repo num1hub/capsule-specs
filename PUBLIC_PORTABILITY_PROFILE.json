@@ -1,0 +1,39 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "summary": "Public-safe portability and archive trust posture for the N1Hub specs repository.",
+  "principles": [
+    "Portability is governed rather than ad hoc.",
+    "Archive replay should remain validator-aware.",
+    "Checksum, scope, and policy evidence should stay visible across export and import.",
+    "Public docs should explain portability without implying trust-free bundle exchange."
+  ],
+  "public_surfaces": {
+    "overview_doc": "docs/portability.md",
+    "archive_doc": "docs/archive-bundles.md",
+    "archive_schema": "schemas/archive-bundle.schema.json",
+    "archive_example": "examples/archive/archive-bundle.sample.json",
+    "machine_profile": "PUBLIC_PORTABILITY_PROFILE.json"
+  },
+  "trust_requirements": [
+    "validator-aware replay before merge or replace modes",
+    "visible tenant scope and policy posture",
+    "export evidence and manifest checksums",
+    "fail-closed behavior when trust evidence is missing"
+  ],
+  "lifecycle_posture": [
+    "export is treated as a governed capability",
+    "deletion and replay should preserve auditability",
+    "retention and legal-hold posture should not be bypassed by portability workflows"
+  ],
+  "non_promises": [
+    "This repo does not publish a hosted import/export service.",
+    "This repo does not promise trust-free bundle exchange across arbitrary environments.",
+    "This repo does not expose the full private lifecycle and tenancy runtime."
+  ],
+  "verify_commands": [
+    "npm run check:portability",
+    "npm run check:catalog",
+    "npm run check:surface"
+  ]
+}

@@ -12,9 +12,11 @@ This repository is assembled from public-safe source surfaces rather than from a
 - public governance capsules that explain README, quickstart, contribution, security, and onboarding posture
 - public architecture capsules for capsules-as-projections and domain ownership
 - public generator-readiness doctrine and projection-index semantics
+- public portability source materials for archive bundles, import trust, and lifecycle posture
 - live law capsules for the five-element contract, relation types, and 16 gates
 - live validator docs and OpenAPI material
 - synthetic public examples derived from safe example fixtures rather than copied from private vault state
+- synthetic archive example derived from the public archive-bundle fixture rather than from hosted runtime state
 - API request and response examples derived from the published OpenAPI contract plus live validator outputs on the public example set
 - validator API envelope schemas derived from the public OpenAPI, the API examples, and the published capsule schema
 
@@ -30,6 +32,7 @@ This repository is assembled from public-safe source surfaces rather than from a
 - machine-readable release evidence is tracked in [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
 - machine-readable published-vs-deferred boundaries are tracked in [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - machine-readable API envelope coverage is tracked in [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
+- machine-readable portability posture is tracked in [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
 - consumer snippets derive from the public API example payloads rather than from private runtime secrets or internal deploy tooling
 
 ## Why this matters

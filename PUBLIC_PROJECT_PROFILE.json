@@ -25,6 +25,7 @@
       "public-safe examples",
       "consumer recipes",
       "projection and boundary doctrine",
+      "portability docs and archive bundle contracts",
       "machine-readable provenance and release evidence",
       "machine-readable reviewer, capability, and boundary summaries"
     ],
@@ -36,9 +37,9 @@
     ]
   },
   "surface_summary": {
-    "total_files": 116,
-    "markdown_files": 54,
-    "schema_files": 8,
+    "total_files": 124,
+    "markdown_files": 57,
+    "schema_files": 10,
     "raw_capsule_files": 4,
     "example_capsules": 5,
     "api_example_files": 11,
@@ -59,11 +60,12 @@
     "machine_readable_boundary_map_present": true,
     "community_health_doc_present": true,
     "reviewer_guide_present": true,
-    "single_repo_verify_entrypoint_present": true
+    "single_repo_verify_entrypoint_present": true,
+    "machine_readable_portability_profile_present": true
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 13,
+    "repo_local_check_count": 14,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -76,7 +78,8 @@
     "release_evidence": "docs/release-evidence.md",
     "contract_catalog": "PUBLIC_CONTRACT_CATALOG.json",
     "release_metadata": "PUBLIC_RELEASE_METADATA.json",
-    "project_profile": "PUBLIC_PROJECT_PROFILE.json"
+    "project_profile": "PUBLIC_PROJECT_PROFILE.json",
+    "portability_profile": "PUBLIC_PORTABILITY_PROFILE.json"
   },
   "program_readiness": {
     "maintainer_owned": true,
@@ -87,6 +90,7 @@
     "projection_doctrine_explicit": true,
     "boundary_map_present": true,
     "community_intake_explicit": true,
-    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, boundary doctrine, or live validator behavior."
+    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, boundary doctrine, portability posture, or live validator behavior.",
+    "portability_posture_explicit": true
   }
 }

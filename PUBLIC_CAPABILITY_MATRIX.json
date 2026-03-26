@@ -143,6 +143,30 @@
       ]
     },
     {
+      "id": "evaluate-portability-and-import-trust",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Evaluate public portability, archive trust, and no-lock-in posture without mistaking the specs repo for a hosted export/import runtime.",
+      "strongest_surfaces": [
+        "docs/portability.md",
+        "docs/archive-bundles.md",
+        "schemas/archive-bundle.schema.json",
+        "examples/archive/archive-bundle.sample.json",
+        "PUBLIC_PORTABILITY_PROFILE.json"
+      ],
+      "supporting_surfaces": [
+        "docs/trust-model.md",
+        "docs/source-materials.md",
+        "schemas/public-portability-profile.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:catalog",
+        "npm run check:surface",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "contribute-safely-to-public-surface",
       "audience": "contributors",
       "readiness": "ready",
@@ -198,7 +222,8 @@
         "PUBLIC_CONTRACT_CATALOG.json",
         "PUBLIC_PROJECT_PROFILE.json",
         "PUBLIC_CAPABILITY_MATRIX.json",
-        "PUBLIC_BOUNDARY_MAP.json"
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_PORTABILITY_PROFILE.json"
       ],
       "supporting_surfaces": [
         "QUICKSTART.md",

@@ -78,14 +78,21 @@ const requiredIds = [
   'governance.project-profile',
   'governance.capability-matrix',
   'governance.boundary-map',
+  'governance.portability-profile',
   'governance.projection-doctrine',
   'governance.domain-boundaries',
   'governance.generator-readiness',
+  'governance.portability-doc',
+  'governance.archive-bundles-doc',
+  'schema.archive-bundle',
+  'schema.portability-profile',
   'examples.note',
+  'examples.archive-bundle',
   'governance.manifest',
   'governance.contract-index',
   'governance.release-metadata',
-  'governance.boundary-map-check'
+  'governance.boundary-map-check',
+  'governance.portability-check'
 ];
 
 for (const requiredId of requiredIds) {

@@ -32,6 +32,8 @@ This executes all repository-local checks in the expected order.
   Verifies Markdown links across the public documentation surface.
 - `npm run check:catalog`
   Verifies `PUBLIC_CONTRACT_CATALOG.json` structure, version parity, and required entries.
+- `npm run check:portability`
+  Verifies `PUBLIC_PORTABILITY_PROFILE.json`, the archive-bundle schema, the sample archive payload, and portability references across the public docs.
 - `npm run check:project-profile`
   Verifies `PUBLIC_PROJECT_PROFILE.json` against real repo counts, maintainer identity, reviewer shortcuts, and verification surfaces.
 - `npm run check:capability-matrix`
@@ -59,6 +61,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_PROJECT_PROFILE.json` stays aligned with the real repository shape and reviewer-facing docs
 - `PUBLIC_CAPABILITY_MATRIX.json` stays aligned with the real public artifacts and supported user outcomes
 - `PUBLIC_BOUNDARY_MAP.json` stays aligned with the published-vs-deferred boundary posture and its doctrine docs
+- `PUBLIC_PORTABILITY_PROFILE.json` stays aligned with the portability docs, archive schema, and archive example surfaces
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`
 - client recipes stay aligned with the API examples and route docs

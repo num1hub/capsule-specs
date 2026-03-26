@@ -30,3 +30,5 @@ The project-hub example is also intended to pass, but only when validation is gi
 ## API payload examples
 
 The sibling directory [`../examples/api/`](../examples/api/) contains public-safe validator request and response payloads. Those examples complement the capsule examples here by showing how the same artifacts appear at the HTTP boundary.
+
+The sibling directory [`../examples/archive/`](../examples/archive/) contains a public-safe archive-bundle sample for portability and import-trust review.

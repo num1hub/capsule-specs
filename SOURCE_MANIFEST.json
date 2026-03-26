@@ -13,7 +13,10 @@
       "/home/n1/codex-workspace/docs/projection-doctrine.md",
       "/home/n1/codex-workspace/docs/domain-boundaries.md",
       "/home/n1/codex-workspace/docs/generator-readiness.md",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/docs/portability.md",
+      "/home/n1/codex-workspace/docs/archive-bundles.md",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
@@ -21,7 +24,10 @@
   "QUICKSTART.md": {
     "source_paths": [
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
+      "/home/n1/codex-workspace/docs/portability.md",
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json"
     ],
     "transformation_type": "derived",
     "notes": "Root-level fast entry path for public contributors."
@@ -54,7 +60,9 @@
     "source_paths": [
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/docs/portability.md",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection."
@@ -146,7 +154,9 @@
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
       "/home/n1/codex-workspace/scripts/check-boundary-map.js",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/scripts/check-portability-profile.js",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface."
@@ -302,7 +312,9 @@
     "source_paths": [
       "/home/n1/n1hub.com/docs/validator.md",
       "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/schemas/capsule-schema.json"
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Source-of-truth hierarchy across validator behavior, schemas, prose docs, and illustrative examples."
@@ -312,7 +324,8 @@
       "/home/n1/n1hub-repo-vault/examples/capsule.example.note-fixture.v1.json",
       "/home/n1/n1hub-repo-vault/examples/capsule.example.task-fixture.v1.json",
       "/home/n1/n1hub-repo-vault/examples/capsule.example.validator-valid-fixture.v1.json",
-      "/home/n1/n1hub-repo-vault/examples/capsule.example.validator-invalid-g16-fixture.v1.json"
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.validator-invalid-g16-fixture.v1.json",
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json"
     ],
     "transformation_type": "derived",
     "notes": "Guide to the example set and expected validation behavior."
@@ -344,7 +357,13 @@
       "/home/n1/codex-workspace/docs/domain-boundaries.md",
       "/home/n1/codex-workspace/docs/generator-readiness.md",
       "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
-      "/home/n1/codex-workspace/schemas/public-boundary-map.schema.json"
+      "/home/n1/codex-workspace/schemas/public-boundary-map.schema.json",
+      "/home/n1/codex-workspace/docs/portability.md",
+      "/home/n1/codex-workspace/docs/archive-bundles.md",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/schemas/public-portability-profile.schema.json",
+      "/home/n1/codex-workspace/examples/archive/README.md"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
@@ -360,7 +379,8 @@
       "/home/n1/codex-workspace/docs/reviewer-guide.md",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/capability-matrix.md",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
@@ -383,7 +403,9 @@
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
       "/home/n1/codex-workspace/scripts/check-boundary-map.js",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/scripts/check-portability-profile.js",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects."
@@ -397,7 +419,13 @@
       "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.capsules-as-projections.v1.json",
       "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.domain-ownership-map.v1.json",
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.generator-readiness.v1.json",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/n1hub-repo-vault/contracts/capsule.contract.archive-bundle.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.import-trust-policy.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.retention-policy.v1.json",
+      "/home/n1/n1hub-repo-vault/testing/capsule.testing.archive-portability-integration.v1.json",
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.archive-bundle-fixture.v1.json",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json"
     ],
     "transformation_type": "generated",
     "notes": "Projection and provenance summary for the public-safe source classes."
@@ -435,7 +463,9 @@
   "schemas/README.md": {
     "source_paths": [
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/schemas/public-portability-profile.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for schema artifacts."
@@ -483,7 +513,9 @@
     "notes": "Known-ID catalog used for link-aware validation of graph examples."
   },
   "examples/README.md": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json"
+    ],
     "transformation_type": "generated",
     "notes": "Directory guide for example artifacts."
   },
@@ -669,7 +701,8 @@
       "/home/n1/codex-workspace/scripts/check-project-profile.js",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
@@ -685,7 +718,9 @@
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
       "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
-      "/home/n1/codex-workspace/scripts/check-boundary-map.js"
+      "/home/n1/codex-workspace/scripts/check-boundary-map.js",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
+      "/home/n1/codex-workspace/scripts/check-portability-profile.js"
     ],
     "transformation_type": "generated",
     "notes": "Public-release review and validation summary."
@@ -895,7 +930,8 @@
       "/home/n1/codex-workspace/docs/reviewer-guide.md",
       "/home/n1/codex-workspace/docs/community-health.md",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals."
@@ -918,7 +954,8 @@
       "/home/n1/codex-workspace/docs/release-evidence.md",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/capability-matrix.md",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json"
     ],
     "transformation_type": "generated",
     "notes": "Fast evaluator path through the strongest public surfaces."
@@ -946,7 +983,11 @@
       "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
       "/home/n1/codex-workspace/docs/projection-doctrine.md",
       "/home/n1/codex-workspace/docs/domain-boundaries.md",
-      "/home/n1/codex-workspace/docs/generator-readiness.md"
+      "/home/n1/codex-workspace/docs/generator-readiness.md",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
+      "/home/n1/codex-workspace/docs/portability.md",
+      "/home/n1/codex-workspace/docs/archive-bundles.md",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface."
@@ -964,7 +1005,8 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the capability matrix and supported public outcomes."
@@ -1033,5 +1075,71 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the public boundary map and related doctrine surfaces."
+  },
+  "docs/portability.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.import-trust-policy.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.retention-policy.v1.json",
+      "/home/n1/n1hub-repo-vault/testing/capsule.testing.archive-portability-integration.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public portability and import-trust doctrine derived from public governance and testing capsules."
+  },
+  "docs/archive-bundles.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/contracts/capsule.contract.archive-bundle.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.import-trust-policy.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Human-readable reference for the archive-bundle contract and replay posture."
+  },
+  "examples/archive/README.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Directory guide for archive portability examples."
+  },
+  "examples/archive/archive-bundle.sample.json": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.archive-bundle-fixture.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public-safe synthetic archive bundle example adapted from the public fixture."
+  },
+  "schemas/archive-bundle.schema.json": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/contracts/capsule.contract.archive-bundle.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "JSON Schema projection of the public archive-bundle contract."
+  },
+  "PUBLIC_PORTABILITY_PROFILE.json": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.import-trust-policy.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.retention-policy.v1.json",
+      "/home/n1/n1hub-repo-vault/testing/capsule.testing.archive-portability-integration.v1.json",
+      "/home/n1/codex-workspace/docs/portability.md",
+      "/home/n1/codex-workspace/docs/archive-bundles.md",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable public portability and archive-trust summary for reviewers and tooling."
+  },
+  "schemas/public-portability-profile.schema.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Schema for the machine-readable public portability profile."
+  },
+  "scripts/check-portability-profile.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/schemas/public-portability-profile.schema.json",
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
+      "/home/n1/codex-workspace/docs/portability.md",
+      "/home/n1/codex-workspace/docs/archive-bundles.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for the portability profile, archive-bundle contract, and related public docs."
   }
 }

@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 116,
-    "manifest_entries": 116
+    "files": 124,
+    "manifest_entries": 124
   },
   "surface_summary": {
-    "catalog_entries": 68,
+    "catalog_entries": 75,
     "example_capsules": 5,
     "api_example_files": 11,
-    "markdown_files": 54
+    "markdown_files": 57
   },
   "repo_local_checks": [
     {
@@ -50,6 +50,10 @@
     },
     {
       "command": "npm run check:catalog",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:portability",
       "status": "pass"
     },
     {
@@ -103,6 +107,7 @@
     "community intake is public and explicit, but maintainer responsiveness and future issue volume still depend on actual GitHub operation after publication",
     "PUBLIC_PROJECT_PROFILE.json is a concise reviewer/program summary and can lag behind the stronger source surfaces if maintainers stop updating it together with release evidence",
     "PUBLIC_CAPABILITY_MATRIX.json is a high-level usability summary and can drift if maintainers add or remove strong public surfaces without updating the matrix",
-    "PUBLIC_BOUNDARY_MAP.json is a curated summary of published vs deferred boundaries and can drift if scope docs change without updating the boundary map"
+    "PUBLIC_BOUNDARY_MAP.json is a curated summary of published vs deferred boundaries and can drift if scope docs change without updating the boundary map",
+    "PUBLIC_PORTABILITY_PROFILE.json and the archive-bundle sample are public contract summaries, not proof of a deployed hosted export/import service"
   ]
 }

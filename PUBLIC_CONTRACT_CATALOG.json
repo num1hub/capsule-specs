@@ -1005,6 +1005,115 @@
         "npm run check:catalog",
         "npm run check:surface"
       ]
+    },
+    {
+      "id": "governance.portability-doc",
+      "path": "docs/portability.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:portability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.archive-bundles-doc",
+      "path": "docs/archive-bundles.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:portability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "schema.archive-bundle",
+      "path": "schemas/archive-bundle.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.archive-bundle",
+      "path": "examples/archive/archive-bundle.sample.json",
+      "kind": "example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.portability-profile",
+      "path": "PUBLIC_PORTABILITY_PROFILE.json",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.portability-profile",
+      "path": "schemas/public-portability-profile.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.portability-check",
+      "path": "scripts/check-portability-profile.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
     }
   ]
 }

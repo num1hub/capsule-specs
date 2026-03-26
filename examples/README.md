@@ -30,3 +30,5 @@ Use them to:
   Validator HTTP payload examples for integrators and client builders.
 - `client/`
   Minimal curl and Node recipes for external consumers.
+- `archive/`
+  Public-safe archive-bundle sample for portability review.

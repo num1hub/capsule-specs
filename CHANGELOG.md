@@ -19,6 +19,7 @@
 - added reviewer guide and machine-readable public project profile for external evaluation and program readiness
 - added machine-readable public capability matrix and automated checks for practical repo usability
 - added projection doctrine, domain-boundary guidance, generator-readiness docs, and a machine-readable public boundary map
+- added portability docs, archive-bundle schema/sample, and a machine-readable portability profile
 
 ## 0.1.0 - 2026-03-26
 

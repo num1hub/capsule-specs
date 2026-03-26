@@ -24,12 +24,14 @@ Use this guide when you want the shortest safe entry into the repository.
 - Skim [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json) if you need a machine-readable map of stable surfaces.
 - Read [`docs/route-reference.md`](docs/route-reference.md) if you want a route-by-route validator view.
 - Inspect [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) if you want machine-readable release evidence.
+- Inspect [`PUBLIC_PORTABILITY_PROFILE.json`](PUBLIC_PORTABILITY_PROFILE.json) if you want the public portability and archive-trust summary.
 - Read [`docs/client-recipes.md`](docs/client-recipes.md) if you want to call the validator quickly from curl or Node.
 
 ## 4. Inspect examples
 
 - Read [`docs/examples.md`](docs/examples.md).
 - Open the examples under [`examples/`](examples/).
+- Inspect [`examples/archive/`](examples/archive/) if you need the public archive-bundle example.
 
 ## 5. Contribute safely
 
@@ -39,3 +41,4 @@ Use this guide when you want the shortest safe entry into the repository.
 - Read [`docs/verification.md`](docs/verification.md) if you need to understand what each repo-local check protects.
 - Read [`NOTICE`](NOTICE) if you need the Apache-2 attribution surface for redistribution.
 - Read [`docs/trust-model.md`](docs/trust-model.md) if you need the source-of-truth hierarchy before integrating.
+- Read [`docs/portability.md`](docs/portability.md) if you need the public portability/no-lock-in posture.

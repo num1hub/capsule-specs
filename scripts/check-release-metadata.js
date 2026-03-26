@@ -94,6 +94,10 @@ assert(
   'release metadata must include the boundary-map verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:portability'),
+  'release metadata must include the portability verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:community-health'),
   'release metadata must include the community-health verification check'
 );
@@ -124,6 +128,10 @@ assert(Array.isArray(metadata.residual_risks) && metadata.residual_risks.length 
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_BOUNDARY_MAP.json')),
   'release metadata residual risks must mention PUBLIC_BOUNDARY_MAP.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_PORTABILITY_PROFILE.json')),
+  'release metadata residual risks must mention PUBLIC_PORTABILITY_PROFILE.json'
 );
 
 if (process.exitCode) {

@@ -23,6 +23,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable matrix of what the current public surface supports in practical terms.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
   Machine-readable summary of which domains are published here and which remain intentionally deferred.
+- [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
+  Machine-readable summary of the public portability and archive trust posture.
 - [`../schemas/public-release-metadata.schema.json`](../schemas/public-release-metadata.schema.json)
   JSON Schema for the release-metadata file.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
@@ -44,6 +46,8 @@ The capability matrix strengthens practical evaluation by showing what an outsid
 
 The boundary map strengthens scope review by making the published-vs-deferred split explicit rather than implicit.
 
+The portability profile strengthens trust review by making the public export/import posture explicit without pretending the full hosted lifecycle runtime is public.
+
 ## Release discipline
 
 When the public surface changes, these files should move together:
@@ -55,5 +59,6 @@ When the public surface changes, these files should move together:
 - `PUBLIC_PROJECT_PROFILE.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`
+- `PUBLIC_PORTABILITY_PROFILE.json`
 
 If they drift, the release evidence is incomplete even if the individual docs still read well.

@@ -24,6 +24,7 @@ These should stay aligned to the stronger contract surfaces, but they are still 
 - API response samples
 - negative-path examples
 - release metadata summaries
+- portability-profile summaries
 
 These are useful for learning, testing, and reviews, but they should not be mistaken for deployed service telemetry.
 
@@ -37,3 +38,5 @@ If you are:
   Prefer the live validator.
 - reviewing repository maturity
   Use the contract catalog, release metadata, and release review together.
+- evaluating portability posture
+  Use the archive-bundle schema, archive sample, portability docs, and `PUBLIC_PORTABILITY_PROFILE.json` together.
