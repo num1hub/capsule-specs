@@ -134,6 +134,10 @@ assert(
   'release metadata must include the dependency-graph verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:assurance-case'),
+  'release metadata must include the assurance-case verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -196,6 +200,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_DEPENDENCY_GRAPH.json')),
   'release metadata residual risks must mention PUBLIC_DEPENDENCY_GRAPH.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_ASSURANCE_CASE.json')),
+  'release metadata residual risks must mention PUBLIC_ASSURANCE_CASE.json'
 );
 
 if (process.exitCode) {

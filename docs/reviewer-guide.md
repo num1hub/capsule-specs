@@ -28,13 +28,15 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
    Confirm which public artifact families are actually maintained here and which stronger surfaces outrank reviewer-facing summaries or examples.
 12. Read [`../PUBLIC_DEPENDENCY_GRAPH.json`](../PUBLIC_DEPENDENCY_GRAPH.json)
    Confirm the shortest safe reading path through the public stack and which reviewer-facing summaries depend on stronger contract surfaces.
-13. Read [`release-evidence.md`](release-evidence.md)
+13. Read [`../PUBLIC_ASSURANCE_CASE.json`](../PUBLIC_ASSURANCE_CASE.json)
+   Confirm the bounded public claims, strongest evidence, explicit limits, and non-claims in one reviewer-facing surface.
+14. Read [`release-evidence.md`](release-evidence.md)
    See how provenance, release review, and verification evidence fit together.
-14. Read [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
+15. Read [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
    Confirm that the public surface documents bounded negative paths instead of only happy-path behavior.
-15. Read [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
+16. Read [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
    Confirm that portability and archive trust are described as governed public contracts rather than as vague product claims.
-16. Read [`community-health.md`](community-health.md)
+17. Read [`community-health.md`](community-health.md)
    Confirm that contributor intake and maintainer expectations are explicit.
 
 ## Strongest signals
@@ -50,6 +52,7 @@ If you only have a few minutes, inspect these surfaces first:
 - [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json)
 - [`../PUBLIC_OWNERSHIP_MAP.json`](../PUBLIC_OWNERSHIP_MAP.json)
 - [`../PUBLIC_DEPENDENCY_GRAPH.json`](../PUBLIC_DEPENDENCY_GRAPH.json)
+- [`../PUBLIC_ASSURANCE_CASE.json`](../PUBLIC_ASSURANCE_CASE.json)
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)

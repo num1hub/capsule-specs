@@ -32,6 +32,8 @@ This repository avoids that by linking docs, schemas, examples, machine-readable
 
 The bounded dependency and reading-order summary lives in [`../PUBLIC_DEPENDENCY_GRAPH.json`](../PUBLIC_DEPENDENCY_GRAPH.json).
 
+The bounded public assurance summary lives in [`../PUBLIC_ASSURANCE_CASE.json`](../PUBLIC_ASSURANCE_CASE.json).
+
 ## Important boundary
 
 The traceability matrix is a curated public summary. It does not claim to capture every private runtime dependency or every internal change path from the upstream N1Hub repository.

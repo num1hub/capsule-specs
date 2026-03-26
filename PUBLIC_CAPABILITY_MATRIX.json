@@ -388,6 +388,31 @@
       ]
     },
     {
+      "id": "review-bounded-public-assurance-case",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Review the bounded public claims, strongest evidence, and explicit limits without inferring them from scattered docs alone.",
+      "strongest_surfaces": [
+        "PUBLIC_ASSURANCE_CASE.json",
+        "docs/assurance-case.md",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_FAILURE_MODEL.json",
+        "PUBLIC_TRACEABILITY_MATRIX.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_DEPENDENCY_GRAPH.json",
+        "PUBLIC_RELEASE_REVIEW.md",
+        "schemas/public-assurance-case.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:assurance-case",
+        "npm run check:traceability",
+        "npm run check:release",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "trace-provenance-and-release-state",
       "audience": "contributors",
       "readiness": "ready",

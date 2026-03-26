@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-assurance-case.schema.json",
+  "title": "Public Assurance Case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "reviewed_at",
+    "objective",
+    "claims",
+    "non_claims",
+    "review_commands"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "reviewed_at": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "claim",
+          "audiences",
+          "strongest_surfaces",
+          "supporting_surfaces",
+          "bounded_by",
+          "verify_commands"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "audiences": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "strongest_surfaces": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "supporting_surfaces": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "bounded_by": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "verify_commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "non_claims": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_commands": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

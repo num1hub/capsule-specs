@@ -1,0 +1,136 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "objective": "Help reviewers evaluate the public specs surface as a bounded, maintained, evidence-backed OSS contract surface without mistaking it for the full private N1Hub runtime.",
+  "claims": [
+    {
+      "id": "bounded-public-scope",
+      "claim": "The repository is a bounded public projection rather than a private runtime dump.",
+      "audiences": [
+        "reviewers",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "docs/projection-doctrine.md",
+        "docs/domain-boundaries.md",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "SOURCE_MANIFEST.json"
+      ],
+      "supporting_surfaces": [
+        "docs/repository-scope.md",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_DEPENDENCY_GRAPH.json"
+      ],
+      "bounded_by": [
+        "docs/source-materials.md",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "verify_commands": [
+        "npm run audit:public-surface",
+        "npm run check:boundary-map",
+        "npm run check:assurance-case"
+      ]
+    },
+    {
+      "id": "reviewable-machine-readable-evidence",
+      "claim": "External reviewers can follow a bounded machine-readable review path for maturity, evidence, and release state instead of scraping the repository tree by intuition.",
+      "audiences": [
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "docs/reviewer-guide.md"
+      ],
+      "supporting_surfaces": [
+        "docs/evaluation-packet.md",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_DEPENDENCY_GRAPH.json",
+        "docs/public-contract-index.md"
+      ],
+      "bounded_by": [
+        "docs/release-evidence.md",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "verify_commands": [
+        "npm run check:project-profile",
+        "npm run check:evaluation-packet",
+        "npm run check:traceability",
+        "npm run check:assurance-case"
+      ]
+    },
+    {
+      "id": "fail-closed-and-bounded-negative-paths",
+      "claim": "The public surface includes bounded negative evidence and fail-closed trust posture instead of only happy-path examples.",
+      "audiences": [
+        "reviewers",
+        "integrators"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_FAILURE_MODEL.json",
+        "docs/failure-model.md",
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "examples/example-validator-invalid-g16.capsule.json",
+        "examples/api/validate-response.fail.json"
+      ],
+      "supporting_surfaces": [
+        "examples/api/unauthorized-response.sample.json",
+        "examples/api/conflict-response.sample.json",
+        "docs/portability.md",
+        "docs/openapi.md"
+      ],
+      "bounded_by": [
+        "docs/trust-model.md",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "verify_commands": [
+        "npm run check:failure-model",
+        "npm run check:example-coverage",
+        "npm run check:api-examples",
+        "npm run check:assurance-case"
+      ]
+    },
+    {
+      "id": "maintained-change-and-release-discipline",
+      "claim": "Public maintainer workflow, change control, and release evidence are explicit and machine-checkable rather than implied.",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "integrators"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "VERSIONING.md",
+        "RELEASING.md"
+      ],
+      "supporting_surfaces": [
+        "CHANGELOG.md",
+        "PUBLIC_OWNERSHIP_MAP.json",
+        "docs/compatibility.md",
+        "PUBLIC_DEPENDENCY_GRAPH.json"
+      ],
+      "bounded_by": [
+        "docs/release-evidence.md",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "verify_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:change-control",
+        "npm run check:release",
+        "npm run check:assurance-case"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This file does not claim to expose the full private N1Hub runtime or every upstream implementation detail.",
+    "This file does not replace the stronger docs, schemas, OpenAPI, examples, provenance, or release-evidence surfaces it references."
+  ],
+  "review_commands": [
+    "npm run check:assurance-case",
+    "npm run verify:repo"
+  ]
+}

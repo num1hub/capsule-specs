@@ -35,6 +35,7 @@ This repository is that home.
 - [`docs/change-control.md`](docs/change-control.md) for the explicit public change, deprecation, and breaking-change posture
 - [`docs/artifact-ownership.md`](docs/artifact-ownership.md) for the bounded ownership and stronger-source hierarchy across public artifact families
 - [`docs/dependency-graph.md`](docs/dependency-graph.md) for the bounded map of which public artifacts depend on which stronger surfaces
+- [`docs/assurance-case.md`](docs/assurance-case.md) for the bounded public claims, strongest evidence, and explicit limits
 - [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) for machine-readable validator envelope contracts
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
 - [`docs/route-reference.md`](docs/route-reference.md) for per-route sample mapping
@@ -89,6 +90,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable change-control model in [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json)
 - machine-readable ownership map in [`PUBLIC_OWNERSHIP_MAP.json`](PUBLIC_OWNERSHIP_MAP.json)
 - machine-readable dependency graph in [`PUBLIC_DEPENDENCY_GRAPH.json`](PUBLIC_DEPENDENCY_GRAPH.json)
+- machine-readable assurance case in [`PUBLIC_ASSURANCE_CASE.json`](PUBLIC_ASSURANCE_CASE.json)
 - machine-readable traceability matrix in [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json)
 - machine-readable capability matrix in [`PUBLIC_CAPABILITY_MATRIX.json`](PUBLIC_CAPABILITY_MATRIX.json)
 - machine-readable boundary map in [`PUBLIC_BOUNDARY_MAP.json`](PUBLIC_BOUNDARY_MAP.json)
@@ -131,9 +133,10 @@ Maintainer and review policy:
 10. Inspect [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) if you want the bounded model for additive, deprecated, and breaking public changes.
 11. Inspect [`PUBLIC_OWNERSHIP_MAP.json`](PUBLIC_OWNERSHIP_MAP.json) if you want the bounded map of which artifact families are maintained here and which stronger surfaces outrank them.
 12. Inspect [`PUBLIC_DEPENDENCY_GRAPH.json`](PUBLIC_DEPENDENCY_GRAPH.json) if you want the bounded map of which public artifacts depend on which stronger surfaces and in what order they are easiest to read.
-13. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-14. Review the raw capsule sources in [`capsules/`](capsules/).
-15. Run `npm run verify:repo` for the repository-local integrity checks.
+13. Inspect [`PUBLIC_ASSURANCE_CASE.json`](PUBLIC_ASSURANCE_CASE.json) if you want the bounded public claims, strongest evidence, and explicit non-claims in one reviewer-facing surface.
+14. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+15. Review the raw capsule sources in [`capsules/`](capsules/).
+16. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

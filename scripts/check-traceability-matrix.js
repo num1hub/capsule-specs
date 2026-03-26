@@ -19,7 +19,8 @@ const requiredIds = [
   'maintainer-intake-and-practical-usability',
   'change-control-and-release-discipline',
   'artifact-ownership-and-authority',
-  'dependency-order-and-reading-path'
+  'dependency-order-and-reading-path',
+  'bounded-public-assurance-and-limits'
 ];
 
 const allowedAudiences = new Set(['contributors', 'integrators', 'tool-builders', 'reviewers']);
@@ -99,15 +100,18 @@ assert(capabilityDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'capability-ma
 assert(faq.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'FAQ must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(evaluationDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'evaluation-packet doc must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(evaluationDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'evaluation-packet doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
+assert(evaluationDoc.includes('PUBLIC_ASSURANCE_CASE.json'), 'evaluation-packet doc must mention PUBLIC_ASSURANCE_CASE.json');
 assert(evaluationDoc.includes('PUBLIC_OWNERSHIP_MAP.json'), 'evaluation-packet doc must mention PUBLIC_OWNERSHIP_MAP.json');
 const traceabilityDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'traceability.md'), 'utf8');
 assert(traceabilityDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'traceability doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
+assert(traceabilityDoc.includes('PUBLIC_ASSURANCE_CASE.json'), 'traceability doc must mention PUBLIC_ASSURANCE_CASE.json');
 assert(schemasReadme.includes('public-traceability-matrix.schema.json'), 'schemas README must mention public-traceability schema');
 
 assert(catalogPaths.has('docs/traceability.md'), 'contract catalog must include docs/traceability.md');
 assert(catalogPaths.has('PUBLIC_TRACEABILITY_MATRIX.json'), 'contract catalog must include PUBLIC_TRACEABILITY_MATRIX.json');
 assert(catalogPaths.has('schemas/public-traceability-matrix.schema.json'), 'contract catalog must include public-traceability schema');
 assert(catalogPaths.has('scripts/check-traceability-matrix.js'), 'contract catalog must include traceability verifier');
+assert(catalogPaths.has('PUBLIC_ASSURANCE_CASE.json'), 'contract catalog must include PUBLIC_ASSURANCE_CASE.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

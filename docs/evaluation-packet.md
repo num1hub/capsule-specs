@@ -21,6 +21,7 @@ This repository includes a compact evaluation packet for external reviewers, pro
 - [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json)
 - [`../PUBLIC_OWNERSHIP_MAP.json`](../PUBLIC_OWNERSHIP_MAP.json)
 - [`../PUBLIC_DEPENDENCY_GRAPH.json`](../PUBLIC_DEPENDENCY_GRAPH.json)
+- [`../PUBLIC_ASSURANCE_CASE.json`](../PUBLIC_ASSURANCE_CASE.json)
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
@@ -29,3 +30,5 @@ This repository includes a compact evaluation packet for external reviewers, pro
 ## Why this exists
 
 Reviewers often need one bounded path through a repository. The evaluation packet is not stronger than the underlying docs, schemas, examples, and release evidence. It is a fast map of those surfaces so an external evaluator can inspect the repository without guessing where the strongest evidence lives.
+
+The assurance case strengthens that path further by making the bounded public claims, explicit non-claims, and stronger evidence limits legible in one reviewer-facing layer.

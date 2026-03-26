@@ -87,6 +87,7 @@ const requiredIds = [
   'governance.ownership-map',
   'governance.traceability-matrix',
   'governance.dependency-graph',
+  'governance.assurance-case',
   'governance.projection-doctrine',
   'governance.domain-boundaries',
   'governance.generator-readiness',
@@ -100,6 +101,7 @@ const requiredIds = [
   'governance.artifact-ownership-doc',
   'governance.traceability-doc',
   'governance.dependency-graph-doc',
+  'governance.assurance-case-doc',
   'schema.archive-bundle',
   'schema.portability-profile',
   'schema.evaluation-packet',
@@ -110,6 +112,7 @@ const requiredIds = [
   'schema.ownership-map',
   'schema.traceability-matrix',
   'schema.dependency-graph',
+  'schema.assurance-case',
   'examples.note',
   'examples.archive-bundle',
   'examples.api-unauthorized',
@@ -126,7 +129,8 @@ const requiredIds = [
   'governance.change-control-check',
   'governance.ownership-map-check',
   'governance.traceability-check',
-  'governance.dependency-graph-check'
+  'governance.dependency-graph-check',
+  'governance.assurance-case-check'
 ];
 
 for (const requiredId of requiredIds) {

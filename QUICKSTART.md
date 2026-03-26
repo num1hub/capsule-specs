@@ -31,6 +31,7 @@ Use this guide when you want the shortest safe entry into the repository.
 - Inspect [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) if you want the bounded posture for additive, deprecated, and breaking public changes.
 - Inspect [`PUBLIC_OWNERSHIP_MAP.json`](PUBLIC_OWNERSHIP_MAP.json) if you want the bounded map of which public artifact families are maintained here and which stronger surfaces outrank them.
 - Inspect [`PUBLIC_DEPENDENCY_GRAPH.json`](PUBLIC_DEPENDENCY_GRAPH.json) if you want the bounded map of which public artifacts depend on which stronger surfaces and the shortest reading paths through the repo.
+- Inspect [`PUBLIC_ASSURANCE_CASE.json`](PUBLIC_ASSURANCE_CASE.json) if you want the bounded public claims, strongest evidence, and explicit limits in one reviewer-facing surface.
 - Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the claim-to-evidence and claim-to-verification map.
 - Inspect [`PUBLIC_PORTABILITY_PROFILE.json`](PUBLIC_PORTABILITY_PROFILE.json) if you want the public portability and archive-trust summary.
 - Read [`docs/client-recipes.md`](docs/client-recipes.md) if you want to call the validator quickly from curl or Node.

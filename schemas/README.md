@@ -36,6 +36,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable artifact ownership and authority summary.
 - `public-dependency-graph.schema.json`
   JSON Schema for the machine-readable public dependency and reading-order summary.
+- `public-assurance-case.schema.json`
+  JSON Schema for the machine-readable bounded public assurance case.
 - `public-traceability-matrix.schema.json`
   JSON Schema for the machine-readable claim-to-evidence traceability matrix.
 
