@@ -24,6 +24,10 @@ This directory contains concrete JSON payloads for the validator HTTP surface.
   Small response example for validator statistics.
 - `error-response.sample.json`
   Shared generic error envelope.
+- `unauthorized-response.sample.json`
+  Small unauthorized example for a bounded access rejection.
+- `conflict-response.sample.json`
+  Small conflict example for a bounded state rejection.
 - `rate-limit-response.sample.json`
   Shared rate-limit envelope.
 

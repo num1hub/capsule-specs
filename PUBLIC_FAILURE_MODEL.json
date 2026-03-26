@@ -1,0 +1,75 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "principles": [
+    "Public boundaries should reject malformed input before trusted state changes.",
+    "Negative paths should stay typed and bounded rather than surfacing as unhandled failures.",
+    "Trust-sensitive portability workflows should fail closed when evidence is incomplete.",
+    "Published contract artifacts should be blocked when reference integrity or completeness breaks."
+  ],
+  "failure_classes": [
+    {
+      "id": "integrity-seal-rejection",
+      "summary": "Capsules that are structurally plausible but cryptographically wrong must fail at the final trust gate.",
+      "strongest_surfaces": [
+        "examples/example-validator-invalid-g16.capsule.json",
+        "examples/api/validate-response.fail.json",
+        "docs/examples.md"
+      ],
+      "verify_commands": [
+        "npm run check:examples",
+        "npm run check:api-examples",
+        "npm run check:failure-model"
+      ]
+    },
+    {
+      "id": "validator-input-rejection",
+      "summary": "Malformed validator route input should return bounded 4xx-style errors before any trusted mutation.",
+      "strongest_surfaces": [
+        "docs/api-envelopes.md",
+        "examples/api/error-response.sample.json",
+        "examples/api/unauthorized-response.sample.json",
+        "examples/api/conflict-response.sample.json"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:failure-model"
+      ]
+    },
+    {
+      "id": "portability-trust-block",
+      "summary": "Archive replay should stop when checksum, scope, or policy evidence is missing.",
+      "strongest_surfaces": [
+        "docs/portability.md",
+        "docs/archive-bundles.md",
+        "PUBLIC_PORTABILITY_PROFILE.json"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:failure-model"
+      ]
+    },
+    {
+      "id": "artifact-publication-block",
+      "summary": "OpenAPI or route-family artifacts with missing required paths or broken references should be rejected instead of published.",
+      "strongest_surfaces": [
+        "docs/openapi.md",
+        "openapi/validate.openapi.json",
+        "docs/failure-model.md"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:failure-model"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This file does not enumerate every private runtime failure case.",
+    "This file does not replace the stronger example, OpenAPI, or portability surfaces it references."
+  ],
+  "review_commands": [
+    "npm run check:failure-model",
+    "npm run verify:repo"
+  ]
+}

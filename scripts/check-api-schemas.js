@@ -18,6 +18,8 @@ const exampleSchemaMap = {
   'gates-response.sample.json': '#/$defs/gatesResponse',
   'stats-response.sample.json': '#/$defs/statsResponse',
   'error-response.sample.json': '#/$defs/simpleErrorResponse',
+  'unauthorized-response.sample.json': '#/$defs/simpleErrorResponse',
+  'conflict-response.sample.json': '#/$defs/simpleErrorResponse',
   'rate-limit-response.sample.json': '#/$defs/simpleErrorResponse'
 };
 

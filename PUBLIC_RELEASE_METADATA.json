@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 128,
-    "manifest_entries": 128
+    "files": 134,
+    "manifest_entries": 134
   },
   "surface_summary": {
-    "catalog_entries": 79,
+    "catalog_entries": 85,
     "example_capsules": 5,
-    "api_example_files": 11,
-    "markdown_files": 58
+    "api_example_files": 13,
+    "markdown_files": 59
   },
   "repo_local_checks": [
     {
@@ -54,6 +54,10 @@
     },
     {
       "command": "npm run check:evaluation-packet",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:failure-model",
       "status": "pass"
     },
     {
@@ -113,6 +117,7 @@
     "PUBLIC_CAPABILITY_MATRIX.json is a high-level usability summary and can drift if maintainers add or remove strong public surfaces without updating the matrix",
     "PUBLIC_BOUNDARY_MAP.json is a curated summary of published vs deferred boundaries and can drift if scope docs change without updating the boundary map",
     "PUBLIC_PORTABILITY_PROFILE.json and the archive-bundle sample are public contract summaries, not proof of a deployed hosted export/import service",
-    "PUBLIC_EVALUATION_PACKET.json is a reviewer shortcut layer and must stay subordinate to the stronger docs, schemas, release evidence, and machine-readable source surfaces"
+    "PUBLIC_EVALUATION_PACKET.json is a reviewer shortcut layer and must stay subordinate to the stronger docs, schemas, release evidence, and machine-readable source surfaces",
+    "PUBLIC_FAILURE_MODEL.json is a bounded negative-evidence summary and must stay subordinate to the stronger examples, validator docs, OpenAPI, and portability surfaces"
   ]
 }

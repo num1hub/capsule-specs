@@ -20,8 +20,10 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
 - [`reviewer-guide.md`](reviewer-guide.md)
 - [`evaluation-packet.md`](evaluation-packet.md)
+- [`failure-model.md`](failure-model.md)
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
 - [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
+- [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
 - [`capability-matrix.md`](capability-matrix.md)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`release-evidence.md`](release-evidence.md)
@@ -56,6 +58,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../schemas/archive-bundle.schema.json`](../schemas/archive-bundle.schema.json)
 - [`../schemas/public-project-profile.schema.json`](../schemas/public-project-profile.schema.json)
 - [`../schemas/public-evaluation-packet.schema.json`](../schemas/public-evaluation-packet.schema.json)
+- [`../schemas/public-failure-model.schema.json`](../schemas/public-failure-model.schema.json)
 - [`../schemas/public-capability-matrix.schema.json`](../schemas/public-capability-matrix.schema.json)
 - [`../schemas/public-portability-profile.schema.json`](../schemas/public-portability-profile.schema.json)
 

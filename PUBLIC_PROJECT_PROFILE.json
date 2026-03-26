@@ -37,12 +37,12 @@
     ]
   },
   "surface_summary": {
-    "total_files": 128,
-    "markdown_files": 58,
-    "schema_files": 11,
+    "total_files": 134,
+    "markdown_files": 59,
+    "schema_files": 12,
     "raw_capsule_files": 4,
     "example_capsules": 5,
-    "api_example_files": 11,
+    "api_example_files": 13,
     "client_recipe_files": 5,
     "workflow_files": 1,
     "issue_templates": 4
@@ -62,11 +62,12 @@
     "reviewer_guide_present": true,
     "single_repo_verify_entrypoint_present": true,
     "machine_readable_portability_profile_present": true,
-    "machine_readable_evaluation_packet_present": true
+    "machine_readable_evaluation_packet_present": true,
+    "machine_readable_failure_model_present": true
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 15,
+    "repo_local_check_count": 16,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -81,7 +82,8 @@
     "release_metadata": "PUBLIC_RELEASE_METADATA.json",
     "project_profile": "PUBLIC_PROJECT_PROFILE.json",
     "portability_profile": "PUBLIC_PORTABILITY_PROFILE.json",
-    "evaluation_packet": "PUBLIC_EVALUATION_PACKET.json"
+    "evaluation_packet": "PUBLIC_EVALUATION_PACKET.json",
+    "failure_model": "PUBLIC_FAILURE_MODEL.json"
   },
   "program_readiness": {
     "maintainer_owned": true,
@@ -92,8 +94,9 @@
     "projection_doctrine_explicit": true,
     "boundary_map_present": true,
     "community_intake_explicit": true,
-    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, boundary doctrine, portability posture, evaluation packet references, or live validator behavior.",
+    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, boundary doctrine, portability posture, evaluation packet references, failure-model evidence, or live validator behavior.",
     "portability_posture_explicit": true,
-    "evaluation_packet_present": true
+    "evaluation_packet_present": true,
+    "failure_model_explicit": true
   }
 }

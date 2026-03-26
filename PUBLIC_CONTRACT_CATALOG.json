@@ -1176,6 +1176,99 @@
         "npm run check:catalog",
         "npm run check:surface"
       ]
+    },
+    {
+      "id": "governance.failure-model-doc",
+      "path": "docs/failure-model.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "integrators",
+        "contributors"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:failure-model",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.failure-model",
+      "path": "PUBLIC_FAILURE_MODEL.json",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "integrators",
+        "contributors",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:failure-model",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.failure-model",
+      "path": "schemas/public-failure-model.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:failure-model",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.api-unauthorized",
+      "path": "examples/api/unauthorized-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:failure-model"
+      ]
+    },
+    {
+      "id": "examples.api-conflict",
+      "path": "examples/api/conflict-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:failure-model"
+      ]
+    },
+    {
+      "id": "governance.failure-model-check",
+      "path": "scripts/check-failure-model.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:failure-model",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
     }
   ]
 }

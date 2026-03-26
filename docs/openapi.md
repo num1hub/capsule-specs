@@ -23,6 +23,7 @@ Use these when you want sample envelopes instead of just schema-level contract d
 - [`api-envelopes.md`](api-envelopes.md)
 - [`route-reference.md`](route-reference.md)
 - [`../examples/api/`](../examples/api/)
+- [`failure-model.md`](failure-model.md)
 
 ## Important note
 

@@ -82,6 +82,7 @@ assert(profile.health_signals?.machine_readable_capability_matrix_present === tr
 assert(profile.health_signals?.machine_readable_boundary_map_present === true, 'project profile must mark machine_readable_boundary_map_present true');
 assert(profile.health_signals?.machine_readable_portability_profile_present === true, 'project profile must mark machine_readable_portability_profile_present true');
 assert(profile.health_signals?.machine_readable_evaluation_packet_present === true, 'project profile must mark machine_readable_evaluation_packet_present true');
+assert(profile.health_signals?.machine_readable_failure_model_present === true, 'project profile must mark machine_readable_failure_model_present true');
 assert(profile.health_signals?.reviewer_guide_present === true, 'project profile must mark reviewer_guide_present true');
 assert(profile.health_signals?.single_repo_verify_entrypoint_present === true, 'project profile must mark single_repo_verify_entrypoint_present true');
 
@@ -93,6 +94,7 @@ assert(profile.reviewer_shortcuts?.reviewer_guide === 'docs/reviewer-guide.md', 
 assert(profile.reviewer_shortcuts?.boundary_map === 'PUBLIC_BOUNDARY_MAP.json', 'project profile boundary_map shortcut must point to PUBLIC_BOUNDARY_MAP.json');
 assert(profile.reviewer_shortcuts?.portability_profile === 'PUBLIC_PORTABILITY_PROFILE.json', 'project profile portability_profile shortcut must point to PUBLIC_PORTABILITY_PROFILE.json');
 assert(profile.reviewer_shortcuts?.evaluation_packet === 'PUBLIC_EVALUATION_PACKET.json', 'project profile evaluation_packet shortcut must point to PUBLIC_EVALUATION_PACKET.json');
+assert(profile.reviewer_shortcuts?.failure_model === 'PUBLIC_FAILURE_MODEL.json', 'project profile failure_model shortcut must point to PUBLIC_FAILURE_MODEL.json');
 assert(profile.reviewer_shortcuts?.capability_matrix === 'PUBLIC_CAPABILITY_MATRIX.json', 'project profile capability_matrix shortcut must point to PUBLIC_CAPABILITY_MATRIX.json');
 assert(profile.reviewer_shortcuts?.project_profile === 'PUBLIC_PROJECT_PROFILE.json', 'project profile project_profile shortcut must point to itself');
 
@@ -103,12 +105,14 @@ assert(readme.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'README.md must mention
 assert(readme.includes('PUBLIC_BOUNDARY_MAP.json'), 'README.md must mention PUBLIC_BOUNDARY_MAP.json');
 assert(readme.includes('PUBLIC_PORTABILITY_PROFILE.json'), 'README.md must mention PUBLIC_PORTABILITY_PROFILE.json');
 assert(readme.includes('PUBLIC_EVALUATION_PACKET.json'), 'README.md must mention PUBLIC_EVALUATION_PACKET.json');
+assert(readme.includes('PUBLIC_FAILURE_MODEL.json'), 'README.md must mention PUBLIC_FAILURE_MODEL.json');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(reviewerGuide.includes('PUBLIC_PROJECT_PROFILE.json'), 'reviewer guide must mention PUBLIC_PROJECT_PROFILE.json');
 assert(reviewerGuide.includes('PUBLIC_BOUNDARY_MAP.json'), 'reviewer guide must mention PUBLIC_BOUNDARY_MAP.json');
 assert(reviewerGuide.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'reviewer guide must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(reviewerGuide.includes('PUBLIC_PORTABILITY_PROFILE.json'), 'reviewer guide must mention PUBLIC_PORTABILITY_PROFILE.json');
 assert(reviewerGuide.includes('PUBLIC_EVALUATION_PACKET.json'), 'reviewer guide must mention PUBLIC_EVALUATION_PACKET.json');
+assert(reviewerGuide.includes('PUBLIC_FAILURE_MODEL.json'), 'reviewer guide must mention PUBLIC_FAILURE_MODEL.json');
 assert(reviewerGuide.includes('PUBLIC_CONTRACT_CATALOG.json'), 'reviewer guide must mention PUBLIC_CONTRACT_CATALOG.json');
 assert(reviewerGuide.includes('PUBLIC_RELEASE_METADATA.json'), 'reviewer guide must mention PUBLIC_RELEASE_METADATA.json');
 

@@ -18,9 +18,11 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
    Jump to the highest-signal public artifacts without browsing the whole tree.
 7. Read [`release-evidence.md`](release-evidence.md)
    See how provenance, release review, and verification evidence fit together.
-8. Read [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
+8. Read [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
+   Confirm that the public surface documents bounded negative paths instead of only happy-path behavior.
+9. Read [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
    Confirm that portability and archive trust are described as governed public contracts rather than as vague product claims.
-9. Read [`community-health.md`](community-health.md)
+10. Read [`community-health.md`](community-health.md)
    Confirm that contributor intake and maintainer expectations are explicit.
 
 ## Strongest signals
@@ -29,6 +31,7 @@ If you only have a few minutes, inspect these surfaces first:
 
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
 - [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
+- [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)

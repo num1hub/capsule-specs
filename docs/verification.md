@@ -34,6 +34,8 @@ This executes all repository-local checks in the expected order.
   Verifies `PUBLIC_CONTRACT_CATALOG.json` structure, version parity, and required entries.
 - `npm run check:evaluation-packet`
   Verifies `PUBLIC_EVALUATION_PACKET.json`, its strongest-evidence references, and the surrounding review-path docs.
+- `npm run check:failure-model`
+  Verifies `PUBLIC_FAILURE_MODEL.json`, negative-path example references, and fail-closed review surfaces.
 - `npm run check:portability`
   Verifies `PUBLIC_PORTABILITY_PROFILE.json`, the archive-bundle schema, the sample archive payload, and portability references across the public docs.
 - `npm run check:project-profile`
@@ -65,6 +67,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_BOUNDARY_MAP.json` stays aligned with the published-vs-deferred boundary posture and its doctrine docs
 - `PUBLIC_PORTABILITY_PROFILE.json` stays aligned with the portability docs, archive schema, and archive example surfaces
 - `PUBLIC_EVALUATION_PACKET.json` stays aligned with reviewer docs, strongest-evidence references, and release-evidence surfaces
+- `PUBLIC_FAILURE_MODEL.json` stays aligned with negative examples, fail-closed docs, and validator / portability trust surfaces
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`
 - client recipes stay aligned with the API examples and route docs

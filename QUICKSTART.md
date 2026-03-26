@@ -25,6 +25,7 @@ Use this guide when you want the shortest safe entry into the repository.
 - Read [`docs/route-reference.md`](docs/route-reference.md) if you want a route-by-route validator view.
 - Inspect [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) if you want machine-readable release evidence.
 - Inspect [`PUBLIC_EVALUATION_PACKET.json`](PUBLIC_EVALUATION_PACKET.json) if you want the shortest external-review packet.
+- Inspect [`PUBLIC_FAILURE_MODEL.json`](PUBLIC_FAILURE_MODEL.json) if you want the bounded negative-path and fail-closed summary.
 - Inspect [`PUBLIC_PORTABILITY_PROFILE.json`](PUBLIC_PORTABILITY_PROFILE.json) if you want the public portability and archive-trust summary.
 - Read [`docs/client-recipes.md`](docs/client-recipes.md) if you want to call the validator quickly from curl or Node.
 

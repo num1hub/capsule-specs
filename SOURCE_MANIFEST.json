@@ -18,7 +18,9 @@
       "/home/n1/codex-workspace/docs/archive-bundles.md",
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
       "/home/n1/codex-workspace/docs/evaluation-packet.md",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/docs/failure-model.md",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
@@ -30,7 +32,8 @@
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
       "/home/n1/codex-workspace/docs/portability.md",
       "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "derived",
     "notes": "Root-level fast entry path for public contributors."
@@ -66,7 +69,8 @@
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/docs/portability.md",
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection."
@@ -162,7 +166,9 @@
       "/home/n1/codex-workspace/scripts/check-portability-profile.js",
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
       "/home/n1/codex-workspace/scripts/check-evaluation-packet.js",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/scripts/check-failure-model.js",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface."
@@ -267,7 +273,8 @@
   "docs/openapi.md": {
     "source_paths": [
       "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
-      "/home/n1/n1hub.com/docs/validator.md"
+      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/codex-workspace/docs/failure-model.md"
     ],
     "transformation_type": "derived",
     "notes": "Human-readable note about the published OpenAPI surface."
@@ -278,7 +285,10 @@
       "/home/n1/n1hub.com/docs/validator.md",
       "/home/n1/codex-workspace/examples/example-note.capsule.json",
       "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
+      "/home/n1/codex-workspace/docs/failure-model.md"
     ],
     "transformation_type": "generated",
     "notes": "Public integrator guide to validator HTTP envelopes and sample payloads."
@@ -347,7 +357,8 @@
   "docs/faq.md": {
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Short answers to scope and validation questions for the public repository."
@@ -373,7 +384,10 @@
       "/home/n1/codex-workspace/examples/archive/README.md",
       "/home/n1/codex-workspace/docs/evaluation-packet.md",
       "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
-      "/home/n1/codex-workspace/schemas/public-evaluation-packet.schema.json"
+      "/home/n1/codex-workspace/schemas/public-evaluation-packet.schema.json",
+      "/home/n1/codex-workspace/docs/failure-model.md",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json",
+      "/home/n1/codex-workspace/schemas/public-failure-model.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
@@ -391,7 +405,8 @@
       "/home/n1/codex-workspace/docs/capability-matrix.md",
       "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
@@ -418,7 +433,9 @@
       "/home/n1/codex-workspace/scripts/check-portability-profile.js",
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
       "/home/n1/codex-workspace/scripts/check-evaluation-packet.js",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/scripts/check-failure-model.js",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects."
@@ -535,7 +552,9 @@
   "examples/api/README.md": {
     "source_paths": [
       "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for validator HTTP request and response examples."
@@ -716,7 +735,8 @@
       "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
       "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
@@ -736,7 +756,9 @@
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
       "/home/n1/codex-workspace/scripts/check-portability-profile.js",
       "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
-      "/home/n1/codex-workspace/scripts/check-evaluation-packet.js"
+      "/home/n1/codex-workspace/scripts/check-evaluation-packet.js",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json",
+      "/home/n1/codex-workspace/scripts/check-failure-model.js"
     ],
     "transformation_type": "generated",
     "notes": "Public-release review and validation summary."
@@ -761,7 +783,10 @@
     "notes": "Repository-local example and known-ID consistency checks."
   },
   "scripts/check-api-examples.js": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json"
+    ],
     "transformation_type": "generated",
     "notes": "Repository-local checks for validator HTTP request and response examples."
   },
@@ -885,7 +910,9 @@
       "/home/n1/codex-workspace/examples/api/error-response.sample.json",
       "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json"
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Repo-local schema coverage check for public validator API example payloads."
@@ -948,7 +975,8 @@
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals."
@@ -974,7 +1002,8 @@
       "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
-      "/home/n1/codex-workspace/docs/evaluation-packet.md"
+      "/home/n1/codex-workspace/docs/evaluation-packet.md",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Fast evaluator path through the strongest public surfaces."
@@ -1008,7 +1037,9 @@
       "/home/n1/codex-workspace/docs/archive-bundles.md",
       "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
       "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
-      "/home/n1/codex-workspace/docs/evaluation-packet.md"
+      "/home/n1/codex-workspace/docs/evaluation-packet.md",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json",
+      "/home/n1/codex-workspace/docs/failure-model.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface."
@@ -1028,7 +1059,8 @@
       "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
       "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json"
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the capability matrix and supported public outcomes."
@@ -1203,5 +1235,56 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the public evaluation packet and its reviewer-path references."
+  },
+  "docs/failure-model.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/testing/capsule.testing.api-validate-negative.v1.json",
+      "/home/n1/n1hub-repo-vault/testing/capsule.testing.api-validate-fix-negative.v1.json",
+      "/home/n1/n1hub-repo-vault/testing/capsule.testing.cli-validate-negative.v1.json",
+      "/home/n1/n1hub-repo-vault/testing/capsule.testing.openapi-validate-family-negative.v1.json",
+      "/home/n1/n1hub-repo-vault/testing/capsule.testing.archive-portability-integration.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public fail-closed doctrine derived from validator, CLI, OpenAPI, and portability negative testing capsules."
+  },
+  "PUBLIC_FAILURE_MODEL.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/failure-model.md",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
+      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
+      "/home/n1/codex-workspace/docs/portability.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable public failure and fail-closed summary."
+  },
+  "schemas/public-failure-model.schema.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Schema for the machine-readable public failure model."
+  },
+  "examples/api/unauthorized-response.sample.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Bounded unauthorized response example for public negative-path review."
+  },
+  "examples/api/conflict-response.sample.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Bounded conflict response example for public negative-path review."
+  },
+  "scripts/check-failure-model.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json",
+      "/home/n1/codex-workspace/schemas/public-failure-model.schema.json",
+      "/home/n1/codex-workspace/docs/failure-model.md",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for the public failure model and negative-path review surfaces."
   }
 }

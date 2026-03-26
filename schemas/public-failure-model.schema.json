@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-failure-model.schema.json",
+  "title": "Public Failure Model",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "reviewed_at",
+    "principles",
+    "failure_classes",
+    "non_claims",
+    "review_commands"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "reviewed_at": { "type": "string" },
+    "principles": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "failure_classes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "summary",
+          "strongest_surfaces",
+          "verify_commands"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "summary": { "type": "string" },
+          "strongest_surfaces": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          },
+          "verify_commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "non_claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "review_commands": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    }
+  }
+}

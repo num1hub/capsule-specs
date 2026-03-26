@@ -21,6 +21,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable reviewer/program profile for fast external evaluation.
 - [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
   Machine-readable fast-review packet for bounded external evaluation.
+- [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
+  Machine-readable summary of the public fail-closed and negative-evidence posture.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
   Machine-readable matrix of what the current public surface supports in practical terms.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
@@ -46,6 +48,8 @@ The reviewer guide and public project profile strengthen external evaluation by 
 
 The evaluation packet strengthens that path further by giving external reviewers one bounded summary of strongest evidence, review commands, and explicit non-claims.
 
+The failure model strengthens trust review by making bounded negative paths explicit instead of leaving failure semantics implicit in scattered examples.
+
 The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
 
 The boundary map strengthens scope review by making the published-vs-deferred split explicit rather than implicit.
@@ -62,6 +66,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_CONTRACT_CATALOG.json`
 - `PUBLIC_PROJECT_PROFILE.json`
 - `PUBLIC_EVALUATION_PACKET.json`
+- `PUBLIC_FAILURE_MODEL.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`
 - `PUBLIC_PORTABILITY_PROFILE.json`

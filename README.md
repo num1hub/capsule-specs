@@ -37,6 +37,7 @@ This repository is that home.
 - [`docs/contract-catalog.md`](docs/contract-catalog.md) for the machine-readable contract map
 - [`docs/reviewer-guide.md`](docs/reviewer-guide.md) for the fastest evaluator/reviewer path through the repository
 - [`docs/evaluation-packet.md`](docs/evaluation-packet.md) for the condensed external review path
+- [`docs/failure-model.md`](docs/failure-model.md) for the fail-closed public trust posture
 - [`docs/capability-matrix.md`](docs/capability-matrix.md) for the concrete “what can I do with this repo?” view
 - [`docs/verification.md`](docs/verification.md) for the repo verification stack
 - [`docs/community-health.md`](docs/community-health.md) for contributor intake and maintainer-facing community boundaries
@@ -76,6 +77,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable release evidence in [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json)
 - machine-readable reviewer/program profile in [`PUBLIC_PROJECT_PROFILE.json`](PUBLIC_PROJECT_PROFILE.json)
 - machine-readable evaluation packet in [`PUBLIC_EVALUATION_PACKET.json`](PUBLIC_EVALUATION_PACKET.json)
+- machine-readable failure model in [`PUBLIC_FAILURE_MODEL.json`](PUBLIC_FAILURE_MODEL.json)
 - machine-readable capability matrix in [`PUBLIC_CAPABILITY_MATRIX.json`](PUBLIC_CAPABILITY_MATRIX.json)
 - machine-readable boundary map in [`PUBLIC_BOUNDARY_MAP.json`](PUBLIC_BOUNDARY_MAP.json)
 - machine-readable portability profile in [`PUBLIC_PORTABILITY_PROFILE.json`](PUBLIC_PORTABILITY_PROFILE.json)

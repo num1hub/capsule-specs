@@ -21,6 +21,7 @@
 - added projection doctrine, domain-boundary guidance, generator-readiness docs, and a machine-readable public boundary map
 - added portability docs, archive-bundle schema/sample, and a machine-readable portability profile
 - added reviewer/program evaluation packet, schema, and verification for faster bounded external review
+- added fail-closed public failure model, extra negative API examples, and verifier coverage for negative evidence
 
 ## 0.1.0 - 2026-03-26
 

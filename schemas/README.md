@@ -24,6 +24,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable portability-profile file.
 - `public-evaluation-packet.schema.json`
   JSON Schema for the machine-readable external evaluation packet.
+- `public-failure-model.schema.json`
+  JSON Schema for the machine-readable fail-closed public failure model.
 
 ## Notes
 

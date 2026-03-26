@@ -26,6 +26,10 @@ The request and response examples are also covered by [`../schemas/validator-api
   Small sample response shape for `GET /api/validate/stats`.
 - [`../examples/api/error-response.sample.json`](../examples/api/error-response.sample.json)
   Shared generic error envelope example.
+- [`../examples/api/unauthorized-response.sample.json`](../examples/api/unauthorized-response.sample.json)
+  Small bounded unauthorized example for rejection-path review.
+- [`../examples/api/conflict-response.sample.json`](../examples/api/conflict-response.sample.json)
+  Small bounded conflict example for rejection-path review.
 - [`../examples/api/rate-limit-response.sample.json`](../examples/api/rate-limit-response.sample.json)
   Shared rate-limit envelope example.
 
@@ -42,6 +46,8 @@ The request and response examples are also covered by [`../schemas/validator-api
 The public repo currently includes concrete examples for the first two request envelopes and for common response shapes. That keeps the reference surface useful without trying to mirror every internal runtime path.
 
 The `fix` response sample is intentionally illustrative: it is derived from the published OpenAPI contract and from local validator behavior on the public negative `G16` example, not from a deployed public HTTP trace.
+
+For the higher-level fail-closed summary across validator, OpenAPI, and portability surfaces, see [`failure-model.md`](failure-model.md).
 
 ## Why this matters
 

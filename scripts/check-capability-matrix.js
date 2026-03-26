@@ -16,6 +16,7 @@ const requiredIds = [
   'understand-trust-boundaries',
   'review-repository-maturity-quickly',
   'follow-fast-external-evaluation-path',
+  'inspect-fail-closed-public-behavior',
   'understand-projection-and-domain-boundaries',
   'evaluate-portability-and-import-trust',
   'contribute-safely-to-public-surface',
@@ -76,6 +77,7 @@ assert(catalogPaths.has('PUBLIC_CAPABILITY_MATRIX.json'), 'contract catalog must
 assert(catalogPaths.has('PUBLIC_BOUNDARY_MAP.json'), 'contract catalog must include PUBLIC_BOUNDARY_MAP.json');
 assert(catalogPaths.has('PUBLIC_PORTABILITY_PROFILE.json'), 'contract catalog must include PUBLIC_PORTABILITY_PROFILE.json');
 assert(catalogPaths.has('PUBLIC_EVALUATION_PACKET.json'), 'contract catalog must include PUBLIC_EVALUATION_PACKET.json');
+assert(catalogPaths.has('PUBLIC_FAILURE_MODEL.json'), 'contract catalog must include PUBLIC_FAILURE_MODEL.json');
 assert(catalogPaths.has('docs/capability-matrix.md'), 'contract catalog must include docs/capability-matrix.md');
 assert(catalogPaths.has('schemas/public-capability-matrix.schema.json'), 'contract catalog must include schemas/public-capability-matrix.schema.json');
 assert(catalogPaths.has('scripts/check-capability-matrix.js'), 'contract catalog must include scripts/check-capability-matrix.js');
@@ -88,11 +90,13 @@ assert(readme.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'README.md must mention
 assert(readme.includes('PUBLIC_BOUNDARY_MAP.json'), 'README.md must mention PUBLIC_BOUNDARY_MAP.json');
 assert(readme.includes('PUBLIC_PORTABILITY_PROFILE.json'), 'README.md must mention PUBLIC_PORTABILITY_PROFILE.json');
 assert(readme.includes('PUBLIC_EVALUATION_PACKET.json'), 'README.md must mention PUBLIC_EVALUATION_PACKET.json');
+assert(readme.includes('PUBLIC_FAILURE_MODEL.json'), 'README.md must mention PUBLIC_FAILURE_MODEL.json');
 assert(reviewerGuide.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'reviewer guide must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'capability matrix doc must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_BOUNDARY_MAP.json'), 'capability matrix doc must mention PUBLIC_BOUNDARY_MAP.json');
 assert(capabilityDoc.includes('PUBLIC_PORTABILITY_PROFILE.json'), 'capability matrix doc must mention PUBLIC_PORTABILITY_PROFILE.json');
 assert(capabilityDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'capability matrix doc must mention PUBLIC_EVALUATION_PACKET.json');
+assert(capabilityDoc.includes('PUBLIC_FAILURE_MODEL.json'), 'capability matrix doc must mention PUBLIC_FAILURE_MODEL.json');
 assert(capabilityDoc.includes('PUBLIC_PROJECT_PROFILE.json'), 'capability matrix doc must mention PUBLIC_PROJECT_PROFILE.json');
 assert(capabilityDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'capability matrix doc must mention PUBLIC_RELEASE_METADATA.json');
 

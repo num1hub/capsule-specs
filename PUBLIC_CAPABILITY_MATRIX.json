@@ -145,6 +145,31 @@
       ]
     },
     {
+      "id": "inspect-fail-closed-public-behavior",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Inspect the fail-closed public trust posture through negative examples, bounded error envelopes, and portability trust blocks.",
+      "strongest_surfaces": [
+        "PUBLIC_FAILURE_MODEL.json",
+        "docs/failure-model.md",
+        "examples/api/validate-response.fail.json",
+        "examples/api/unauthorized-response.sample.json",
+        "examples/api/conflict-response.sample.json"
+      ],
+      "supporting_surfaces": [
+        "examples/example-validator-invalid-g16.capsule.json",
+        "docs/api-envelopes.md",
+        "docs/portability.md",
+        "schemas/public-failure-model.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:failure-model",
+        "npm run check:api-examples",
+        "npm run check:surface",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "understand-projection-and-domain-boundaries",
       "audience": "reviewers",
       "readiness": "ready",
@@ -249,7 +274,8 @@
         "PUBLIC_CAPABILITY_MATRIX.json",
         "PUBLIC_BOUNDARY_MAP.json",
         "PUBLIC_PORTABILITY_PROFILE.json",
-        "PUBLIC_EVALUATION_PACKET.json"
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_FAILURE_MODEL.json"
       ],
       "supporting_surfaces": [
         "QUICKSTART.md",

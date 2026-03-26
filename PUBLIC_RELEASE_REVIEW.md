@@ -15,6 +15,7 @@
 - machine-readable release evidence in `PUBLIC_RELEASE_METADATA.json` plus schema-backed release metadata
 - machine-readable reviewer/program profile in `PUBLIC_PROJECT_PROFILE.json` plus a reviewer guide
 - machine-readable evaluation packet in `PUBLIC_EVALUATION_PACKET.json` plus a concise external-review doc
+- machine-readable failure model in `PUBLIC_FAILURE_MODEL.json` plus fail-closed public docs
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
@@ -58,12 +59,13 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-project-profile.js`: pass
 - `node scripts/check-capability-matrix.js`: pass
 - `node scripts/check-evaluation-packet.js`: pass
+- `node scripts/check-failure-model.js`: pass
 - `node scripts/check-portability-profile.js`: pass
 - `node scripts/check-doc-links.js`: pass
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `128` files / `128` manifest entries
+- manifest coverage: `134` files / `134` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -85,3 +87,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_BOUNDARY_MAP.json` is a curated summary of published vs deferred domains and must stay subordinate to the stronger scope, doctrine, and source-material surfaces
 - `PUBLIC_PORTABILITY_PROFILE.json` and the archive-bundle sample are public contract summaries, not proof of a deployed hosted export/import service
 - `PUBLIC_EVALUATION_PACKET.json` is a reviewer shortcut layer and must stay subordinate to the stronger docs, schemas, release evidence, and machine-readable source surfaces
+- `PUBLIC_FAILURE_MODEL.json` is a bounded negative-evidence summary and must stay subordinate to the stronger examples, validator docs, OpenAPI, and portability surfaces

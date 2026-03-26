@@ -18,6 +18,8 @@ const files = {
   gatesResponse: 'gates-response.sample.json',
   statsResponse: 'stats-response.sample.json',
   errorResponse: 'error-response.sample.json',
+  unauthorizedResponse: 'unauthorized-response.sample.json',
+  conflictResponse: 'conflict-response.sample.json',
   rateLimitResponse: 'rate-limit-response.sample.json'
 };
 
@@ -50,6 +52,8 @@ const fixResponse = readJson(files.fixResponse);
 const gatesResponse = readJson(files.gatesResponse);
 const statsResponse = readJson(files.statsResponse);
 const errorResponse = readJson(files.errorResponse);
+const unauthorizedResponse = readJson(files.unauthorizedResponse);
+const conflictResponse = readJson(files.conflictResponse);
 const rateLimitResponse = readJson(files.rateLimitResponse);
 const noteExample = readExample('example-note.capsule.json');
 const invalidG16Example = readExample('example-validator-invalid-g16.capsule.json');
@@ -129,6 +133,8 @@ assert(Array.isArray(statsResponse.trend), 'stats response sample must include t
 assert(Array.isArray(statsResponse.gates) && statsResponse.gates.some((gate) => gate.gate === 'G16'), 'stats response sample must include gate aggregates');
 
 assert(typeof errorResponse.error === 'string' && errorResponse.error.length > 0, 'error response sample must include an error string');
+assert(unauthorizedResponse.error === 'Unauthorized', 'unauthorized response sample must use a bounded unauthorized message');
+assert(typeof conflictResponse.error === 'string' && /conflict/i.test(conflictResponse.error), 'conflict response sample must include a conflict-oriented error string');
 assert(typeof rateLimitResponse.error === 'string' && rateLimitResponse.error.length > 0, 'rate-limit response sample must include an error string');
 
 if (process.exitCode) {

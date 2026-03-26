@@ -41,8 +41,10 @@ const expectedPublicIndexLinks = [
   '../PUBLIC_BOUNDARY_MAP.json',
   '../PUBLIC_PORTABILITY_PROFILE.json',
   '../PUBLIC_EVALUATION_PACKET.json',
+  '../PUBLIC_FAILURE_MODEL.json',
   'reviewer-guide.md',
   'evaluation-packet.md',
+  'failure-model.md',
   '../PUBLIC_PROJECT_PROFILE.json',
   'capability-matrix.md',
   '../PUBLIC_CAPABILITY_MATRIX.json',
@@ -60,6 +62,7 @@ const expectedPublicIndexLinks = [
   '../schemas/public-boundary-map.schema.json',
   '../schemas/public-portability-profile.schema.json',
   '../schemas/public-evaluation-packet.schema.json',
+  '../schemas/public-failure-model.schema.json',
   'community-health.md',
   'client-recipes.md',
   'trust-model.md'
@@ -76,10 +79,12 @@ assert(readme.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'README.md must mention
 assert(readme.includes('PUBLIC_BOUNDARY_MAP.json'), 'README.md must mention PUBLIC_BOUNDARY_MAP.json');
 assert(readme.includes('PUBLIC_PORTABILITY_PROFILE.json'), 'README.md must mention PUBLIC_PORTABILITY_PROFILE.json');
 assert(readme.includes('PUBLIC_EVALUATION_PACKET.json'), 'README.md must mention PUBLIC_EVALUATION_PACKET.json');
+assert(readme.includes('PUBLIC_FAILURE_MODEL.json'), 'README.md must mention PUBLIC_FAILURE_MODEL.json');
 assert(readme.includes('schemas/validator-api-envelopes.schema.json'), 'README.md must mention schemas/validator-api-envelopes.schema.json');
 assert(readme.includes('docs/portability.md'), 'README.md must mention docs/portability.md');
 assert(readme.includes('docs/archive-bundles.md'), 'README.md must mention docs/archive-bundles.md');
 assert(readme.includes('docs/evaluation-packet.md'), 'README.md must mention docs/evaluation-packet.md');
+assert(readme.includes('docs/failure-model.md'), 'README.md must mention docs/failure-model.md');
 assert(readme.includes('docs/community-health.md'), 'README.md must mention docs/community-health.md');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(readme.includes('docs/capability-matrix.md'), 'README.md must mention docs/capability-matrix.md');
@@ -102,6 +107,7 @@ assert(verificationDoc.includes('check:release'), 'docs/verification.md must exp
 assert(verificationDoc.includes('check:api-schemas'), 'docs/verification.md must explain check:api-schemas');
 assert(verificationDoc.includes('check:boundary-map'), 'docs/verification.md must explain check:boundary-map');
 assert(verificationDoc.includes('check:evaluation-packet'), 'docs/verification.md must explain check:evaluation-packet');
+assert(verificationDoc.includes('check:failure-model'), 'docs/verification.md must explain check:failure-model');
 assert(verificationDoc.includes('check:portability'), 'docs/verification.md must explain check:portability');
 assert(verificationDoc.includes('check:client-recipes'), 'docs/verification.md must explain check:client-recipes');
 assert(verificationDoc.includes('check:community-health'), 'docs/verification.md must explain check:community-health');
@@ -115,6 +121,7 @@ assert(releaseEvidenceDoc.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'docs/relea
 assert(releaseEvidenceDoc.includes('PUBLIC_BOUNDARY_MAP.json'), 'docs/release-evidence.md must mention PUBLIC_BOUNDARY_MAP.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_PORTABILITY_PROFILE.json'), 'docs/release-evidence.md must mention PUBLIC_PORTABILITY_PROFILE.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'docs/release-evidence.md must mention PUBLIC_EVALUATION_PACKET.json');
+assert(releaseEvidenceDoc.includes('PUBLIC_FAILURE_MODEL.json'), 'docs/release-evidence.md must mention PUBLIC_FAILURE_MODEL.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);
