@@ -182,6 +182,20 @@
         "npm run check:evidence-timeline",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "review-scorecard",
+      "path": "PUBLIC_REVIEW_SCORECARD.json",
+      "role": "reviewer-scorecard",
+      "depends_on": [
+        "reviewer-summaries",
+        "release-evidence",
+        "maintenance-evolution"
+      ],
+      "verify_commands": [
+        "npm run check:review-scorecard",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -195,6 +209,7 @@
         "limitations-and-deferred-scope",
         "release-evidence",
         "maintenance-evolution",
+        "review-scorecard",
         "update-coherence-and-sync"
       ]
     },
@@ -219,7 +234,8 @@
         "ownership-and-authority",
         "update-coherence-and-sync",
         "release-evidence",
-        "maintenance-evolution"
+        "maintenance-evolution",
+        "review-scorecard"
       ]
     }
   ],

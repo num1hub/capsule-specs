@@ -17,7 +17,8 @@
         "docs/evaluation-packet.md",
         "PUBLIC_PROJECT_PROFILE.json",
         "PUBLIC_EVALUATION_PACKET.json",
-        "PUBLIC_EVIDENCE_TIMELINE.json"
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_REVIEW_SCORECARD.json"
       ],
       "verify_commands": [
         "npm run check:project-profile",
@@ -66,7 +67,8 @@
         "PUBLIC_RELEASE_REVIEW.md",
         "CHANGELOG.md",
         "PUBLIC_UPDATE_COHERENCE_MAP.json",
-        "PUBLIC_EVIDENCE_TIMELINE.json"
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_REVIEW_SCORECARD.json"
       ],
       "verify_commands": [
         "npm run audit:public-surface",
@@ -91,7 +93,8 @@
         "PUBLIC_ASSURANCE_CASE.json",
         "PUBLIC_TRACEABILITY_MATRIX.json",
         "PUBLIC_CAPABILITY_MATRIX.json",
-        "PUBLIC_EVIDENCE_TIMELINE.json"
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_REVIEW_SCORECARD.json"
       ],
       "verify_commands": [
         "npm run check:maintenance-model",

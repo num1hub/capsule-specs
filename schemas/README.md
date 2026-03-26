@@ -44,6 +44,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable public limitations and deferred-scope register.
 - `public-evidence-timeline.schema.json`
   JSON Schema for the machine-readable public maintenance and hardening timeline.
+- `public-review-scorecard.schema.json`
+  JSON Schema for the machine-readable bounded external review scorecard.
 - `public-traceability-matrix.schema.json`
   JSON Schema for the machine-readable claim-to-evidence traceability matrix.
 

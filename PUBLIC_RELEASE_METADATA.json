@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 174,
-    "manifest_entries": 174
+    "files": 178,
+    "manifest_entries": 178
   },
   "surface_summary": {
-    "catalog_entries": 125,
+    "catalog_entries": 129,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 69
+    "markdown_files": 70
   },
   "repo_local_checks": [
     {
@@ -119,6 +119,10 @@
     {
       "command": "npm run check:evidence-timeline",
       "status": "pass"
+    },
+    {
+      "command": "npm run check:review-scorecard",
+      "status": "pass"
     }
   ],
   "upstream_validator_checks": [
@@ -168,6 +172,7 @@
     "PUBLIC_ASSURANCE_CASE.json is a bounded reviewer-facing assurance summary and must stay subordinate to the stronger docs, schemas, examples, provenance, failure-model, and release-evidence surfaces it references",
     "PUBLIC_UPDATE_COHERENCE_MAP.json is a bounded sync-group summary and must stay subordinate to the stronger release, provenance, contract, maintainer, and reviewer surfaces it references",
     "PUBLIC_LIMITATIONS_REGISTER.json is a bounded deferred-scope and non-promise summary and must stay subordinate to the stronger boundary, assurance, scope, and release surfaces it references",
-    "PUBLIC_EVIDENCE_TIMELINE.json is a bounded maintenance-history summary and must stay subordinate to the stronger changelog, release-evidence, reviewer, and git-history surfaces it references"
+    "PUBLIC_EVIDENCE_TIMELINE.json is a bounded maintenance-history summary and must stay subordinate to the stronger changelog, release-evidence, reviewer, and git-history surfaces it references",
+    "PUBLIC_REVIEW_SCORECARD.json is a bounded reviewer checklist and must stay subordinate to the stronger docs, schemas, examples, release evidence, and git-backed maintenance history it references"
   ]
 }

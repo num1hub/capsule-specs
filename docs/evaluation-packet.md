@@ -25,6 +25,7 @@ This repository includes a compact evaluation packet for external reviewers, pro
 - [`../PUBLIC_UPDATE_COHERENCE_MAP.json`](../PUBLIC_UPDATE_COHERENCE_MAP.json)
 - [`../PUBLIC_LIMITATIONS_REGISTER.json`](../PUBLIC_LIMITATIONS_REGISTER.json)
 - [`../PUBLIC_EVIDENCE_TIMELINE.json`](../PUBLIC_EVIDENCE_TIMELINE.json)
+- [`../PUBLIC_REVIEW_SCORECARD.json`](../PUBLIC_REVIEW_SCORECARD.json)
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
@@ -41,3 +42,5 @@ The update-coherence map strengthens that path further by making co-moving revie
 The limitations register strengthens that path by making deferred scope, non-promises, and bounded reviewer expectations explicit instead of leaving them scattered across caveat prose.
 
 The evidence timeline strengthens that path further by making active maintenance and public-surface hardening visible as a bounded reviewer-facing history instead of requiring raw git archaeology.
+
+The review scorecard strengthens that path further by making the repository assessable against explicit bounded criteria instead of leaving external evaluation as a matter of taste or intuition.

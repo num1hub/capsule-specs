@@ -475,6 +475,21 @@
       ]
     },
     {
+      "id": "governance.review-scorecard-doc",
+      "path": "docs/review-scorecard.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:review-scorecard",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.reviewer-guide",
       "path": "docs/reviewer-guide.md",
       "kind": "governance",
@@ -1187,6 +1202,21 @@
       ]
     },
     {
+      "id": "governance.review-scorecard",
+      "path": "PUBLIC_REVIEW_SCORECARD.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:review-scorecard",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.traceability-matrix",
       "path": "PUBLIC_TRACEABILITY_MATRIX.json",
       "kind": "provenance",
@@ -1502,6 +1532,20 @@
       ]
     },
     {
+      "id": "schema.review-scorecard",
+      "path": "schemas/public-review-scorecard.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:review-scorecard",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "schema.traceability-matrix",
       "path": "schemas/public-traceability-matrix.schema.json",
       "kind": "schema",
@@ -1794,6 +1838,20 @@
         "npm run check:project-profile",
         "npm run check:catalog",
         "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.review-scorecard-check",
+      "path": "scripts/check-review-scorecard.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:review-scorecard",
+        "npm run check:catalog"
       ]
     },
     {

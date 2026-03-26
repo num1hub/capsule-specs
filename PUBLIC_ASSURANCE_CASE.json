@@ -51,7 +51,9 @@
         "PUBLIC_DEPENDENCY_GRAPH.json",
         "docs/public-contract-index.md",
         "PUBLIC_LIMITATIONS_REGISTER.json",
-        "PUBLIC_EVIDENCE_TIMELINE.json"
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "docs/review-scorecard.md"
       ],
       "bounded_by": [
         "docs/release-evidence.md",
@@ -117,7 +119,8 @@
         "PUBLIC_DEPENDENCY_GRAPH.json",
         "PUBLIC_UPDATE_COHERENCE_MAP.json",
         "PUBLIC_EVIDENCE_TIMELINE.json",
-        "docs/evidence-timeline.md"
+        "docs/evidence-timeline.md",
+        "PUBLIC_REVIEW_SCORECARD.json"
       ],
       "bounded_by": [
         "docs/release-evidence.md",

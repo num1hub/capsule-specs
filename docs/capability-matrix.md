@@ -31,6 +31,7 @@ Each capability captures:
 - inspect required public update-coherence groups
 - inspect explicit deferred scope and public limitations
 - inspect active maintenance and public hardening history
+- apply a bounded review scorecard for external repo evaluation
 - trace public claims end-to-end
 - understand projection and domain boundaries
 - review portability and archive trust posture
@@ -71,6 +72,8 @@ Good OSS repositories are not only readable; they are usable. The capability mat
   Answers: which important domains remain deferred, which guarantees are not being made, and where the public specs surface intentionally stops.
 - [`../PUBLIC_EVIDENCE_TIMELINE.json`](../PUBLIC_EVIDENCE_TIMELINE.json)
   Answers: which major public-surface hardening milestones already happened and how active maintenance is made legible to reviewers.
+- [`../PUBLIC_REVIEW_SCORECARD.json`](../PUBLIC_REVIEW_SCORECARD.json)
+  Answers: which bounded reviewer criteria the repo currently satisfies and which strongest surfaces support each criterion.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Answers: how the strongest public claims connect to docs, schemas, examples, and verification commands.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)

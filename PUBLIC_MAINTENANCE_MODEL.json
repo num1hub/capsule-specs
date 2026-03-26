@@ -65,7 +65,8 @@
         "PUBLIC_CHANGE_CONTROL_MODEL.json",
         "PUBLIC_UPDATE_COHERENCE_MAP.json",
         "PUBLIC_LIMITATIONS_REGISTER.json",
-        "PUBLIC_EVIDENCE_TIMELINE.json"
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_REVIEW_SCORECARD.json"
       ],
       "verify_commands": [
         "npm run audit:public-surface",
@@ -97,7 +98,8 @@
     "updated PUBLIC_CHANGE_CONTROL_MODEL.json when public change posture changed",
     "updated PUBLIC_UPDATE_COHERENCE_MAP.json when public sync groups changed",
     "updated PUBLIC_LIMITATIONS_REGISTER.json when deferred scope or public non-promises changed",
-    "updated PUBLIC_EVIDENCE_TIMELINE.json when public hardening milestones or reviewer-facing maintenance history changed"
+    "updated PUBLIC_EVIDENCE_TIMELINE.json when public hardening milestones or reviewer-facing maintenance history changed",
+    "updated PUBLIC_REVIEW_SCORECARD.json when reviewer-facing maturity criteria or strongest public evidence changed"
   ],
   "operating_rules": [
     "Keep the public boundary intentional and do not widen scope by accident.",
@@ -107,7 +109,8 @@
     "Route trust-sensitive disclosures through SECURITY.md instead of public issue intake.",
     "Keep PUBLIC_UPDATE_COHERENCE_MAP.json aligned with release, reviewer, contract, and teaching surfaces when co-moving groups change.",
     "Keep PUBLIC_LIMITATIONS_REGISTER.json aligned with boundary docs, scope docs, reviewer paths, and release evidence when public limits change.",
-    "Keep PUBLIC_EVIDENCE_TIMELINE.json aligned with CHANGELOG.md, reviewer docs, and release evidence when the bounded public hardening history changes."
+    "Keep PUBLIC_EVIDENCE_TIMELINE.json aligned with CHANGELOG.md, reviewer docs, and release evidence when the bounded public hardening history changes.",
+    "Keep PUBLIC_REVIEW_SCORECARD.json aligned with reviewer docs, release evidence, limitations, and the strongest criteria evidence it summarizes."
   ],
   "non_claims": [
     "This file does not promise a guaranteed response-time SLA for public issues or pull requests.",

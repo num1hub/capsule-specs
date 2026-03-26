@@ -378,6 +378,32 @@
         "npm run check:traceability",
         "npm run check:release"
       ]
+    },
+    {
+      "id": "bounded-reviewer-criteria-scorecard",
+      "claim": "External reviewers can assess repository maturity against explicit bounded criteria instead of relying only on impressions, counts, or raw git history.",
+      "audiences": [
+        "reviewers",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "docs/review-scorecard.md",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_EVALUATION_PACKET.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_ASSURANCE_CASE.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "schemas/public-review-scorecard.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:review-scorecard",
+        "npm run check:traceability",
+        "npm run check:release"
+      ]
     }
   ],
   "non_claims": [

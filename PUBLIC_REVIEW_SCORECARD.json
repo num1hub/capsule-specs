@@ -1,0 +1,190 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Provide a bounded reviewer-grade checklist for assessing whether the public specs repository behaves like a maintained OSS contract surface.",
+  "criteria": [
+    {
+      "id": "public-boundary-explicit",
+      "question": "Is the public boundary explicit rather than implied?",
+      "status": "pass",
+      "summary": "The repository explains its projection doctrine, published boundaries, deferred domains, and scope limits in both docs and machine-readable form.",
+      "strongest_surfaces": [
+        "docs/projection-doctrine.md",
+        "docs/domain-boundaries.md",
+        "docs/repository-scope.md",
+        "PUBLIC_BOUNDARY_MAP.json"
+      ],
+      "review_commands": [
+        "npm run check:boundary-map",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "maintainer-identity-explicit",
+      "question": "Is maintainer ownership explicit on the public surface?",
+      "status": "pass",
+      "summary": "The repo names `egor-n1` as primary maintainer in human-facing and machine-readable reviewer surfaces.",
+      "strongest_surfaces": [
+        "README.md",
+        "MAINTAINERS.md",
+        "GOVERNANCE.md",
+        "PUBLIC_PROJECT_PROFILE.json"
+      ],
+      "review_commands": [
+        "npm run check:project-profile",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "provenance-and-release-evidence-machine-readable",
+      "question": "Are provenance and release evidence machine-readable and reviewable?",
+      "status": "pass",
+      "summary": "The repo publishes manifest, catalog, release metadata, and release review surfaces instead of relying on prose only.",
+      "strongest_surfaces": [
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "review_commands": [
+        "npm run audit:public-surface",
+        "npm run check:catalog",
+        "npm run check:release",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "contracts-examples-and-negative-paths-reviewable",
+      "question": "Are public contracts, examples, and negative paths reviewable as real artifacts?",
+      "status": "pass",
+      "summary": "The public surface includes schema, OpenAPI, capsule examples, API payloads, and bounded negative examples with dedicated verification.",
+      "strongest_surfaces": [
+        "schemas/capsule-schema.json",
+        "openapi/validate.openapi.json",
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "PUBLIC_FAILURE_MODEL.json",
+        "examples/example-validator-invalid-g16.capsule.json"
+      ],
+      "review_commands": [
+        "npm run check:example-coverage",
+        "npm run check:failure-model",
+        "npm run check:api-schemas",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "consumer-and-integrator-surface-usable",
+      "question": "Can an outside integrator do something concrete with the public surface?",
+      "status": "pass",
+      "summary": "The repo ships validator-facing contracts, route references, and copyable client recipes rather than documentation alone.",
+      "strongest_surfaces": [
+        "docs/integration-guide.md",
+        "docs/client-recipes.md",
+        "docs/route-reference.md",
+        "schemas/validator-api-envelopes.schema.json",
+        "examples/client/node-validate-single.mjs"
+      ],
+      "review_commands": [
+        "npm run check:client-recipes",
+        "npm run check:api-examples",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "reviewer-shortcuts-and-summary-layers-present",
+      "question": "Does the repo provide bounded reviewer shortcuts instead of making external evaluators scrape the whole tree?",
+      "status": "pass",
+      "summary": "The repo publishes reviewer guides, evaluation packets, capability maps, and traceability paths for bounded external evaluation.",
+      "strongest_surfaces": [
+        "docs/reviewer-guide.md",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_REVIEW_SCORECARD.json"
+      ],
+      "review_commands": [
+        "npm run check:evaluation-packet",
+        "npm run check:traceability",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "maintenance-governance-explicit",
+      "question": "Is maintainer workflow and change discipline explicit rather than implied?",
+      "status": "pass",
+      "summary": "The repo publishes public maintainer workflow, change-control, ownership, and co-movement layers for serious public maintenance.",
+      "strongest_surfaces": [
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_OWNERSHIP_MAP.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "docs/maintainer-operations.md"
+      ],
+      "review_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:change-control",
+        "npm run check:update-coherence",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "active-maintenance-history-visible",
+      "question": "Is active maintenance visible as bounded public evidence?",
+      "status": "pass",
+      "summary": "The repo publishes a machine-readable evidence timeline and changelog-backed hardening path instead of hiding maintenance history behind raw git output only.",
+      "strongest_surfaces": [
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "docs/evidence-timeline.md",
+        "CHANGELOG.md",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "review_commands": [
+        "npm run check:evidence-timeline",
+        "npm run check:release",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "limits-and-non-claims-explicit",
+      "question": "Are important limits and non-promises explicit rather than hidden in caveats?",
+      "status": "pass",
+      "summary": "The repo publishes bounded limitations and assurance surfaces so reviewers can see what is intentionally not being claimed.",
+      "strongest_surfaces": [
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_ASSURANCE_CASE.json",
+        "docs/limitations-register.md",
+        "docs/assurance-case.md"
+      ],
+      "review_commands": [
+        "npm run check:limitations-register",
+        "npm run check:assurance-case",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "single-verification-entrypoint-present",
+      "question": "Is there one serious repo-local verification entrypoint for the public surface?",
+      "status": "pass",
+      "summary": "The repo exposes one bounded verification command and records its expected sub-checks in release metadata.",
+      "strongest_surfaces": [
+        "package.json",
+        "docs/verification.md",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_CONTRACT_CATALOG.json"
+      ],
+      "review_commands": [
+        "npm run verify:repo",
+        "npm run check:review-scorecard"
+      ]
+    }
+  ],
+  "important_limits": [
+    "This scorecard applies to the public specs repository only, not to the full private N1Hub runtime.",
+    "The scorecard is a bounded reviewer aid and remains subordinate to the stronger docs, schemas, examples, release evidence, and git history it references.",
+    "The scorecard does not claim a public hosted service or complete upstream runtime publication."
+  ],
+  "review_commands": [
+    "npm run verify:repo",
+    "npm run check:review-scorecard"
+  ]
+}

@@ -17,6 +17,7 @@
     "README.md",
     "docs/reviewer-guide.md",
     "PUBLIC_PROJECT_PROFILE.json",
+    "PUBLIC_REVIEW_SCORECARD.json",
     "PUBLIC_CAPABILITY_MATRIX.json",
     "PUBLIC_BOUNDARY_MAP.json",
     "PUBLIC_PORTABILITY_PROFILE.json",
@@ -62,7 +63,8 @@
       "docs/assurance-case.md",
       "docs/update-coherence.md",
       "docs/limitations-register.md",
-      "docs/evidence-timeline.md"
+      "docs/evidence-timeline.md",
+      "docs/review-scorecard.md"
     ],
     "machine_readable_evidence": [
       "PUBLIC_CONTRACT_CATALOG.json",
@@ -79,7 +81,8 @@
       "PUBLIC_ASSURANCE_CASE.json",
       "PUBLIC_UPDATE_COHERENCE_MAP.json",
       "PUBLIC_LIMITATIONS_REGISTER.json",
-      "PUBLIC_EVIDENCE_TIMELINE.json"
+      "PUBLIC_EVIDENCE_TIMELINE.json",
+      "PUBLIC_REVIEW_SCORECARD.json"
     ]
   },
   "review_commands": [
@@ -98,7 +101,8 @@
     "The repo makes bounded public claims and explicit non-claims reviewable in one machine-readable assurance layer instead of leaving evaluators to infer scope and limits from scattered docs.",
     "The repo makes required co-movement between reviewer, release, contract, and teaching surfaces explicit instead of leaving release sync as maintainer folklore.",
     "The repo makes deferred scope and non-promised behavior explicit instead of leaving reviewers to infer limits from scattered caveat prose.",
-    "The repo makes active maintenance and public-surface hardening visible through a bounded machine-readable timeline instead of requiring reviewers to infer evolution from raw git history."
+    "The repo makes active maintenance and public-surface hardening visible through a bounded machine-readable timeline instead of requiring reviewers to infer evolution from raw git history.",
+    "The repo makes bounded external review criteria explicit through a machine-readable review scorecard instead of leaving maturity assessment to raw counts or intuition."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",

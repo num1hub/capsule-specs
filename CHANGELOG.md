@@ -32,6 +32,7 @@
 - added machine-readable public update-coherence modeling and verifier coverage for co-moving reviewer, release, contract, and teaching surfaces
 - added machine-readable public limitations-register modeling and verifier coverage for deferred scope, non-promises, and bounded review limits
 - added machine-readable public evidence-timeline modeling and verifier coverage for active maintenance and public-surface hardening history
+- added machine-readable public review-scorecard modeling and verifier coverage for bounded external repo-evaluation criteria
 
 ## 0.1.0 - 2026-03-26
 

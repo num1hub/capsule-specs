@@ -93,6 +93,7 @@ assert(profile.health_signals?.machine_readable_assurance_case_present === true,
 assert(profile.health_signals?.machine_readable_update_coherence_present === true, 'project profile must mark machine_readable_update_coherence_present true');
 assert(profile.health_signals?.machine_readable_limitations_register_present === true, 'project profile must mark machine_readable_limitations_register_present true');
 assert(profile.health_signals?.machine_readable_evidence_timeline_present === true, 'project profile must mark machine_readable_evidence_timeline_present true');
+assert(profile.health_signals?.machine_readable_review_scorecard_present === true, 'project profile must mark machine_readable_review_scorecard_present true');
 assert(profile.health_signals?.reviewer_guide_present === true, 'project profile must mark reviewer_guide_present true');
 assert(profile.health_signals?.single_repo_verify_entrypoint_present === true, 'project profile must mark single_repo_verify_entrypoint_present true');
 
@@ -115,9 +116,11 @@ assert(profile.reviewer_shortcuts?.assurance_case === 'PUBLIC_ASSURANCE_CASE.jso
 assert(profile.reviewer_shortcuts?.update_coherence === 'PUBLIC_UPDATE_COHERENCE_MAP.json', 'project profile update_coherence shortcut must point to PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(profile.reviewer_shortcuts?.limitations_register === 'PUBLIC_LIMITATIONS_REGISTER.json', 'project profile limitations_register shortcut must point to PUBLIC_LIMITATIONS_REGISTER.json');
 assert(profile.reviewer_shortcuts?.evidence_timeline === 'PUBLIC_EVIDENCE_TIMELINE.json', 'project profile evidence_timeline shortcut must point to PUBLIC_EVIDENCE_TIMELINE.json');
+assert(profile.reviewer_shortcuts?.review_scorecard === 'PUBLIC_REVIEW_SCORECARD.json', 'project profile review_scorecard shortcut must point to PUBLIC_REVIEW_SCORECARD.json');
 assert(profile.reviewer_shortcuts?.capability_matrix === 'PUBLIC_CAPABILITY_MATRIX.json', 'project profile capability_matrix shortcut must point to PUBLIC_CAPABILITY_MATRIX.json');
 assert(profile.reviewer_shortcuts?.project_profile === 'PUBLIC_PROJECT_PROFILE.json', 'project profile project_profile shortcut must point to itself');
 assert(profile.program_readiness?.active_maintenance_timeline_explicit === true, 'project profile must mark active_maintenance_timeline_explicit true');
+assert(profile.program_readiness?.review_scorecard_explicit === true, 'project profile must mark review_scorecard_explicit true');
 
 const readme = readText('README.md');
 const reviewerGuide = readText('docs/reviewer-guide.md');
@@ -137,6 +140,7 @@ assert(readme.includes('PUBLIC_ASSURANCE_CASE.json'), 'README.md must mention PU
 assert(readme.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'README.md must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(readme.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'README.md must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(readme.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'README.md must mention PUBLIC_EVIDENCE_TIMELINE.json');
+assert(readme.includes('PUBLIC_REVIEW_SCORECARD.json'), 'README.md must mention PUBLIC_REVIEW_SCORECARD.json');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(reviewerGuide.includes('PUBLIC_PROJECT_PROFILE.json'), 'reviewer guide must mention PUBLIC_PROJECT_PROFILE.json');
 assert(reviewerGuide.includes('PUBLIC_BOUNDARY_MAP.json'), 'reviewer guide must mention PUBLIC_BOUNDARY_MAP.json');
@@ -154,6 +158,7 @@ assert(reviewerGuide.includes('PUBLIC_ASSURANCE_CASE.json'), 'reviewer guide mus
 assert(reviewerGuide.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'reviewer guide must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(reviewerGuide.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'reviewer guide must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(reviewerGuide.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'reviewer guide must mention PUBLIC_EVIDENCE_TIMELINE.json');
+assert(reviewerGuide.includes('PUBLIC_REVIEW_SCORECARD.json'), 'reviewer guide must mention PUBLIC_REVIEW_SCORECARD.json');
 assert(reviewerGuide.includes('PUBLIC_CONTRACT_CATALOG.json'), 'reviewer guide must mention PUBLIC_CONTRACT_CATALOG.json');
 assert(reviewerGuide.includes('PUBLIC_RELEASE_METADATA.json'), 'reviewer guide must mention PUBLIC_RELEASE_METADATA.json');
 

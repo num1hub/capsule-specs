@@ -533,6 +533,30 @@
         "npm run check:release",
         "npm run check:capability-matrix"
       ]
+    },
+    {
+      "id": "apply-bounded-review-scorecard",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Assess the public repository against explicit bounded reviewer criteria without relying only on intuition, counts, or raw history.",
+      "strongest_surfaces": [
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "docs/review-scorecard.md",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_ASSURANCE_CASE.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "schemas/public-review-scorecard.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:review-scorecard",
+        "npm run check:project-profile",
+        "npm run check:capability-matrix"
+      ]
     }
   ]
 }

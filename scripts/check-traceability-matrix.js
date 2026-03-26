@@ -23,7 +23,8 @@ const requiredIds = [
   'bounded-public-assurance-and-limits',
   'co-moving-review-and-release-surfaces',
   'explicit-limitations-and-deferred-scope',
-  'active-maintenance-and-public-hardening-history'
+  'active-maintenance-and-public-hardening-history',
+  'bounded-reviewer-criteria-scorecard'
 ];
 
 const allowedAudiences = new Set(['contributors', 'integrators', 'tool-builders', 'reviewers']);
@@ -107,6 +108,7 @@ assert(evaluationDoc.includes('PUBLIC_ASSURANCE_CASE.json'), 'evaluation-packet 
 assert(evaluationDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'evaluation-packet doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(evaluationDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'evaluation-packet doc must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(evaluationDoc.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'evaluation-packet doc must mention PUBLIC_EVIDENCE_TIMELINE.json');
+assert(evaluationDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'evaluation-packet doc must mention PUBLIC_REVIEW_SCORECARD.json');
 assert(evaluationDoc.includes('PUBLIC_OWNERSHIP_MAP.json'), 'evaluation-packet doc must mention PUBLIC_OWNERSHIP_MAP.json');
 const traceabilityDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'traceability.md'), 'utf8');
 assert(traceabilityDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'traceability doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
@@ -114,6 +116,7 @@ assert(traceabilityDoc.includes('PUBLIC_ASSURANCE_CASE.json'), 'traceability doc
 assert(traceabilityDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'traceability doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(traceabilityDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'traceability doc must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(traceabilityDoc.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'traceability doc must mention PUBLIC_EVIDENCE_TIMELINE.json');
+assert(traceabilityDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'traceability doc must mention PUBLIC_REVIEW_SCORECARD.json');
 assert(schemasReadme.includes('public-traceability-matrix.schema.json'), 'schemas README must mention public-traceability schema');
 
 assert(catalogPaths.has('docs/traceability.md'), 'contract catalog must include docs/traceability.md');
@@ -124,7 +127,9 @@ assert(catalogPaths.has('PUBLIC_ASSURANCE_CASE.json'), 'contract catalog must in
 assert(catalogPaths.has('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'contract catalog must include PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(catalogPaths.has('PUBLIC_LIMITATIONS_REGISTER.json'), 'contract catalog must include PUBLIC_LIMITATIONS_REGISTER.json');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_TIMELINE.json'), 'contract catalog must include PUBLIC_EVIDENCE_TIMELINE.json');
+assert(catalogPaths.has('PUBLIC_REVIEW_SCORECARD.json'), 'contract catalog must include PUBLIC_REVIEW_SCORECARD.json');
 assert(catalogPaths.has('docs/evidence-timeline.md'), 'contract catalog must include docs/evidence-timeline.md');
+assert(catalogPaths.has('docs/review-scorecard.md'), 'contract catalog must include docs/review-scorecard.md');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

@@ -40,6 +40,8 @@ The bounded limitations summary lives in [`../PUBLIC_LIMITATIONS_REGISTER.json`]
 
 The bounded maintenance-evolution summary lives in [`../PUBLIC_EVIDENCE_TIMELINE.json`](../PUBLIC_EVIDENCE_TIMELINE.json).
 
+The bounded reviewer-criteria summary lives in [`../PUBLIC_REVIEW_SCORECARD.json`](../PUBLIC_REVIEW_SCORECARD.json).
+
 ## Important boundary
 
 The traceability matrix is a curated public summary. It does not claim to capture every private runtime dependency or every internal change path from the upstream N1Hub repository.

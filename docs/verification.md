@@ -46,6 +46,8 @@ This executes all repository-local checks in the expected order.
   Verifies `PUBLIC_LIMITATIONS_REGISTER.json`, deferred-scope and non-promise docs, and reviewer-facing limitation references.
 - `npm run check:evidence-timeline`
   Verifies `PUBLIC_EVIDENCE_TIMELINE.json`, milestone commit references, active-maintenance docs, and reviewer-facing history references.
+- `npm run check:review-scorecard`
+  Verifies `PUBLIC_REVIEW_SCORECARD.json`, bounded reviewer criteria, and the surrounding reviewer / release references.
 - `npm run check:docs`
   Verifies Markdown links across the public documentation surface.
 - `npm run check:catalog`
@@ -97,6 +99,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_UPDATE_COHERENCE_MAP.json` stays aligned with maintenance docs, change-control docs, release evidence, reviewer docs, and the co-moving surface groups it summarizes
 - `PUBLIC_LIMITATIONS_REGISTER.json` stays aligned with boundary docs, scope docs, assurance, release review, and the deferred / non-promised posture it summarizes
 - `PUBLIC_EVIDENCE_TIMELINE.json` stays aligned with the real hardening milestones, release evidence, reviewer docs, and the active-maintenance history it summarizes
+- `PUBLIC_REVIEW_SCORECARD.json` stays aligned with the real reviewer criteria, strongest evidence, release evidence, and bounded limits it summarizes
 - `PUBLIC_TRACEABILITY_MATRIX.json` stays aligned with the real docs, schemas, examples, and verification commands it claims to connect
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`

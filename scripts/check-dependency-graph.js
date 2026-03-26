@@ -62,13 +62,22 @@ for (const pathDef of graph.reading_paths) {
 }
 
 assert(ids.has('maintenance-evolution'), 'dependency graph must include maintenance-evolution node');
+assert(ids.has('review-scorecard'), 'dependency graph must include review-scorecard node');
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('maintenance-evolution')),
   'reviewer-fast-path must include maintenance-evolution'
 );
 assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('review-scorecard')),
+  'reviewer-fast-path must include review-scorecard'
+);
+assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('maintenance-evolution')),
   'contributor-governance-path must include maintenance-evolution'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('review-scorecard')),
+  'contributor-governance-path must include review-scorecard'
 );
 
 for (const command of graph.review_commands) {

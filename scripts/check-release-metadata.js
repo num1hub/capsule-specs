@@ -150,6 +150,10 @@ assert(
   'release metadata must include the evidence-timeline verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:review-scorecard'),
+  'release metadata must include the review-scorecard verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -228,6 +232,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_EVIDENCE_TIMELINE.json')),
   'release metadata residual risks must mention PUBLIC_EVIDENCE_TIMELINE.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_REVIEW_SCORECARD.json')),
+  'release metadata residual risks must mention PUBLIC_REVIEW_SCORECARD.json'
 );
 
 if (process.exitCode) {

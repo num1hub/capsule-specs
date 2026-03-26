@@ -101,7 +101,8 @@
         "PUBLIC_RELEASE_REVIEW.md",
         "PUBLIC_BOUNDARY_MAP.json",
         "PUBLIC_LIMITATIONS_REGISTER.json",
-        "PUBLIC_EVIDENCE_TIMELINE.json"
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_REVIEW_SCORECARD.json"
       ],
       "source_capsules": [
         "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json",
