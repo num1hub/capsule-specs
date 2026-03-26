@@ -81,6 +81,7 @@ const requiredIds = [
   'governance.portability-profile',
   'governance.evaluation-packet',
   'governance.failure-model',
+  'governance.traceability-matrix',
   'governance.projection-doctrine',
   'governance.domain-boundaries',
   'governance.generator-readiness',
@@ -88,10 +89,12 @@ const requiredIds = [
   'governance.archive-bundles-doc',
   'governance.evaluation-packet-doc',
   'governance.failure-model-doc',
+  'governance.traceability-doc',
   'schema.archive-bundle',
   'schema.portability-profile',
   'schema.evaluation-packet',
   'schema.failure-model',
+  'schema.traceability-matrix',
   'examples.note',
   'examples.archive-bundle',
   'examples.api-unauthorized',
@@ -102,7 +105,8 @@ const requiredIds = [
   'governance.boundary-map-check',
   'governance.portability-check',
   'governance.evaluation-packet-check',
-  'governance.failure-model-check'
+  'governance.failure-model-check',
+  'governance.traceability-check'
 ];
 
 for (const requiredId of requiredIds) {

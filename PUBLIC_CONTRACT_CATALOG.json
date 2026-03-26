@@ -1269,6 +1269,66 @@
         "npm run check:catalog",
         "npm run check:surface"
       ]
+    },
+    {
+      "id": "governance.traceability-doc",
+      "path": "docs/traceability.md",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:traceability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.traceability-matrix",
+      "path": "PUBLIC_TRACEABILITY_MATRIX.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:traceability",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.traceability-matrix",
+      "path": "schemas/public-traceability-matrix.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:traceability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.traceability-check",
+      "path": "scripts/check-traceability-matrix.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:traceability",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

@@ -1,0 +1,197 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "traces": [
+    {
+      "id": "law-and-schema-contract",
+      "claim": "Capsule law is published as both human-readable doctrine and raw machine-readable artifacts.",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/5-element-law.md",
+        "docs/16-gates.md",
+        "docs/relation-types.md",
+        "schemas/capsule-schema.json",
+        "capsules/capsule.foundation.capsuleos-schema.v1.json"
+      ],
+      "supporting_surfaces": [
+        "docs/schema-reference.md",
+        "docs/overview.md",
+        "PUBLIC_CONTRACT_CATALOG.json"
+      ],
+      "verify_commands": [
+        "npm run check:catalog",
+        "npm run check:traceability"
+      ]
+    },
+    {
+      "id": "validator-api-and-client-contract",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, and client recipes.",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "strongest_surfaces": [
+        "docs/validator.md",
+        "openapi/validate.openapi.json",
+        "docs/api-envelopes.md",
+        "schemas/validator-api-envelopes.schema.json",
+        "examples/client/node-validate-single.mjs"
+      ],
+      "supporting_surfaces": [
+        "docs/route-reference.md",
+        "docs/integration-guide.md",
+        "examples/api/validate-request.single.json",
+        "examples/api/validate-response.pass.json"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:client-recipes",
+        "npm run check:traceability"
+      ]
+    },
+    {
+      "id": "negative-evidence-and-fail-closed",
+      "claim": "The public surface documents bounded negative paths instead of exposing only happy-path examples.",
+      "audiences": [
+        "reviewers",
+        "integrators"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_FAILURE_MODEL.json",
+        "docs/failure-model.md",
+        "examples/example-validator-invalid-g16.capsule.json",
+        "examples/api/unauthorized-response.sample.json",
+        "examples/api/conflict-response.sample.json"
+      ],
+      "supporting_surfaces": [
+        "examples/api/validate-response.fail.json",
+        "docs/openapi.md",
+        "docs/portability.md",
+        "schemas/public-failure-model.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:failure-model",
+        "npm run check:api-examples",
+        "npm run check:traceability"
+      ]
+    },
+    {
+      "id": "projection-boundaries-and-provenance",
+      "claim": "Published-vs-deferred boundaries and public projection provenance are explicit and reviewable.",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/projection-doctrine.md",
+        "docs/domain-boundaries.md",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "SOURCE_MANIFEST.json"
+      ],
+      "supporting_surfaces": [
+        "docs/source-materials.md",
+        "docs/repository-scope.md",
+        "OPEN_CORE_PLAN.md",
+        "schemas/public-boundary-map.schema.json"
+      ],
+      "verify_commands": [
+        "npm run audit:public-surface",
+        "npm run check:boundary-map",
+        "npm run check:surface",
+        "npm run check:traceability"
+      ]
+    },
+    {
+      "id": "reviewer-and-release-evidence",
+      "claim": "External reviewers can follow a bounded path from project identity to release evidence without scraping the whole repository tree.",
+      "audiences": [
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/reviewer-guide.md",
+        "docs/evaluation-packet.md",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_RELEASE_REVIEW.md",
+        "docs/release-evidence.md",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "schemas/public-project-profile.schema.json",
+        "schemas/public-evaluation-packet.schema.json",
+        "schemas/public-release-metadata.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:evaluation-packet",
+        "npm run check:project-profile",
+        "npm run check:release",
+        "npm run check:traceability"
+      ]
+    },
+    {
+      "id": "portability-and-archive-contracts",
+      "claim": "Public portability and archive trust posture are documented as bounded contracts rather than vague product promises.",
+      "audiences": [
+        "reviewers",
+        "integrators"
+      ],
+      "strongest_surfaces": [
+        "docs/portability.md",
+        "docs/archive-bundles.md",
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "schemas/archive-bundle.schema.json",
+        "examples/archive/archive-bundle.sample.json"
+      ],
+      "supporting_surfaces": [
+        "docs/trust-model.md",
+        "docs/compatibility.md",
+        "schemas/public-portability-profile.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:surface",
+        "npm run check:traceability"
+      ]
+    },
+    {
+      "id": "maintainer-intake-and-practical-usability",
+      "claim": "Contributor intake, public usability, and maintainer-facing expectations are explicit rather than implied.",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/community-health.md",
+        "CONTRIBUTING.md",
+        "SUPPORT.md",
+        "SECURITY.md",
+        "PUBLIC_CAPABILITY_MATRIX.json"
+      ],
+      "supporting_surfaces": [
+        ".github/ISSUE_TEMPLATE/integration_question.md",
+        ".github/ISSUE_TEMPLATE/contract_change.md",
+        "CODEOWNERS",
+        "GOVERNANCE.md",
+        "docs/capability-matrix.md"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:capability-matrix",
+        "npm run check:traceability"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This matrix does not enumerate every private runtime dependency behind the upstream N1Hub repository.",
+    "This matrix does not replace the stronger docs, schemas, examples, and release evidence it references."
+  ],
+  "review_commands": [
+    "npm run check:traceability",
+    "npm run verify:repo"
+  ]
+}

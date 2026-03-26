@@ -38,6 +38,7 @@ This repository is that home.
 - [`docs/reviewer-guide.md`](docs/reviewer-guide.md) for the fastest evaluator/reviewer path through the repository
 - [`docs/evaluation-packet.md`](docs/evaluation-packet.md) for the condensed external review path
 - [`docs/failure-model.md`](docs/failure-model.md) for the fail-closed public trust posture
+- [`docs/traceability.md`](docs/traceability.md) for the end-to-end claim-to-evidence map
 - [`docs/capability-matrix.md`](docs/capability-matrix.md) for the concrete “what can I do with this repo?” view
 - [`docs/verification.md`](docs/verification.md) for the repo verification stack
 - [`docs/community-health.md`](docs/community-health.md) for contributor intake and maintainer-facing community boundaries
@@ -78,6 +79,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable reviewer/program profile in [`PUBLIC_PROJECT_PROFILE.json`](PUBLIC_PROJECT_PROFILE.json)
 - machine-readable evaluation packet in [`PUBLIC_EVALUATION_PACKET.json`](PUBLIC_EVALUATION_PACKET.json)
 - machine-readable failure model in [`PUBLIC_FAILURE_MODEL.json`](PUBLIC_FAILURE_MODEL.json)
+- machine-readable traceability matrix in [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json)
 - machine-readable capability matrix in [`PUBLIC_CAPABILITY_MATRIX.json`](PUBLIC_CAPABILITY_MATRIX.json)
 - machine-readable boundary map in [`PUBLIC_BOUNDARY_MAP.json`](PUBLIC_BOUNDARY_MAP.json)
 - machine-readable portability profile in [`PUBLIC_PORTABILITY_PROFILE.json`](PUBLIC_PORTABILITY_PROFILE.json)
@@ -113,9 +115,10 @@ Maintainer and review policy:
 4. Read [`docs/portability.md`](docs/portability.md) if you need the public portability / archive trust posture.
 5. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
 6. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
-7. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-8. Review the raw capsule sources in [`capsules/`](capsules/).
-9. Run `npm run verify:repo` for the repository-local integrity checks.
+7. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
+8. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+9. Review the raw capsule sources in [`capsules/`](capsules/).
+10. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

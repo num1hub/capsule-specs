@@ -102,6 +102,10 @@ assert(
   'release metadata must include the failure-model verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:traceability'),
+  'release metadata must include the traceability verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:portability'),
   'release metadata must include the portability verification check'
 );
@@ -144,6 +148,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_FAILURE_MODEL.json')),
   'release metadata residual risks must mention PUBLIC_FAILURE_MODEL.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_TRACEABILITY_MATRIX.json')),
+  'release metadata residual risks must mention PUBLIC_TRACEABILITY_MATRIX.json'
 );
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_PORTABILITY_PROFILE.json')),

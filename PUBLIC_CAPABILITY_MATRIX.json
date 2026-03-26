@@ -170,6 +170,32 @@
       ]
     },
     {
+      "id": "trace-public-claims-end-to-end",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Trace key public claims through their strongest docs, schemas, examples, and verification commands without guessing which evidence is primary.",
+      "strongest_surfaces": [
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "docs/traceability.md",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_FAILURE_MODEL.json",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "docs/source-materials.md"
+      ],
+      "verify_commands": [
+        "npm run check:traceability",
+        "npm run audit:public-surface",
+        "npm run check:surface",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "understand-projection-and-domain-boundaries",
       "audience": "reviewers",
       "readiness": "ready",

@@ -22,6 +22,7 @@
 - added portability docs, archive-bundle schema/sample, and a machine-readable portability profile
 - added reviewer/program evaluation packet, schema, and verification for faster bounded external review
 - added fail-closed public failure model, extra negative API examples, and verifier coverage for negative evidence
+- added public traceability docs, a machine-readable traceability matrix, and verifier coverage for claim-to-evidence mapping
 
 ## 0.1.0 - 2026-03-26
 
