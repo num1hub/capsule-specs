@@ -32,6 +32,7 @@ This repository includes a compact evaluation packet for external reviewers, pro
 - [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json)
 - [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json)
 - [`../PUBLIC_ECOSYSTEM_VALUE_MAP.json`](../PUBLIC_ECOSYSTEM_VALUE_MAP.json)
+- [`../PUBLIC_DECISION_LOG.json`](../PUBLIC_DECISION_LOG.json)
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
@@ -62,3 +63,5 @@ The adoption-readiness layer strengthens that path further by making ready vs de
 The freshness layer strengthens that path further by making stale-summary triggers explicit instead of forcing reviewers to guess whether a convenience layer still reflects the current release evidence.
 
 The ecosystem-value layer strengthens that path further by making external utility explicit instead of forcing reviewers or programs to infer why the public surface matters from counts, filenames, or vague aspiration.
+
+The decision-log layer strengthens that path further by making the major public design choices explicit instead of forcing reviewers to reverse-engineer intent from the repo shape alone.

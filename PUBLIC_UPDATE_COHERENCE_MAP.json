@@ -106,7 +106,8 @@
         "changed audience-specific entry-path posture",
         "changed stronger-source hierarchy or authority posture",
         "changed bounded adoption readiness posture",
-        "changed freshness posture or stale-summary triggers"
+        "changed freshness posture or stale-summary triggers",
+        "changed public decision rationale or projection intent"
       ],
       "required_surfaces": [
         "PUBLIC_MAINTENANCE_MODEL.json",
@@ -122,7 +123,8 @@
         "PUBLIC_AUDIENCE_PATHS.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_ADOPTION_READINESS.json",
-        "PUBLIC_FRESHNESS_MODEL.json"
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_DECISION_LOG.json"
       ],
       "verify_commands": [
         "npm run check:maintenance-model",
@@ -135,7 +137,8 @@
         "npm run check:capability-matrix",
         "npm run check:update-coherence",
         "npm run check:adoption-readiness",
-        "npm run check:freshness"
+        "npm run check:freshness",
+        "npm run check:decision-log"
       ]
     },
     {

@@ -24,7 +24,8 @@
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_RELEASE_METADATA.json",
         "PUBLIC_FRESHNESS_MODEL.json",
-        "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "PUBLIC_DECISION_LOG.json"
       ],
       "bounded_non_goals": [
         "does not expose the private N1Hub runtime",
@@ -84,7 +85,8 @@
         "PUBLIC_MAINTENANCE_MODEL.json",
         "PUBLIC_CHANGE_CONTROL_MODEL.json",
         "PUBLIC_UPDATE_COHERENCE_MAP.json",
-        "PUBLIC_ADOPTION_READINESS.json"
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_DECISION_LOG.json"
       ],
       "bounded_non_goals": [
         "does not grant access to private upstream runtime surfaces",

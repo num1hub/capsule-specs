@@ -699,6 +699,30 @@
         "npm run check:capability-matrix",
         "npm run check:release"
       ]
+    },
+    {
+      "id": "inspect-bounded-public-design-decisions",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Inspect the major public design decisions and the rationale behind projection boundaries, trust posture, synthetic examples, and release discipline.",
+      "strongest_surfaces": [
+        "PUBLIC_DECISION_LOG.json",
+        "docs/decision-log.md",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_ASSURANCE_CASE.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "docs/reviewer-guide.md",
+        "docs/release-evidence.md"
+      ],
+      "verify_commands": [
+        "npm run check:decision-log",
+        "npm run check:capability-matrix",
+        "npm run check:release"
+      ]
     }
   ]
 }

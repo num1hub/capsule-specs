@@ -22,7 +22,9 @@
         "PUBLIC_DEPENDENCY_GRAPH.json",
         "PUBLIC_LIMITATIONS_REGISTER.json",
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
-        "docs/ecosystem-value.md"
+        "docs/ecosystem-value.md",
+        "PUBLIC_DECISION_LOG.json",
+        "docs/decision-log.md"
       ],
       "bounded_by": [
         "docs/source-materials.md",

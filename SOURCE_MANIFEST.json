@@ -70,10 +70,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "QUICKSTART.md": {
     "source_paths": [
@@ -133,10 +137,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "derived",
-    "notes": "Root-level fast entry path for public contributors.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Root-level fast entry path for public contributors.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "ONBOARDING.md": {
     "source_paths": [
@@ -228,10 +236,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "VERSIONING.md": {
     "source_paths": [
@@ -399,10 +411,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository metadata and lightweight verification scripts for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Repository metadata and lightweight verification scripts for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   ".github/ISSUE_TEMPLATE/bug_report.md": {
     "source_paths": [],
@@ -669,10 +685,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Short answers to scope and validation questions for the public repository.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Short answers to scope and validation questions for the public repository.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "docs/public-contract-index.md": {
     "source_paths": [
@@ -751,10 +771,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "docs/release-evidence.md": {
     "source_paths": [
@@ -820,10 +844,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "docs/verification.md": {
     "source_paths": [
@@ -899,10 +927,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "docs/source-materials.md": {
     "source_paths": [
@@ -1014,10 +1046,14 @@
       "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
       "/home/n1/codex-workspace/docs/freshness.md",
       "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
-      "/home/n1/codex-workspace/scripts/check-freshness.js"
+      "/home/n1/codex-workspace/scripts/check-freshness.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Directory guide for schema artifacts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
+    "notes": "Directory guide for schema artifacts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with decision-log surfaces"
   },
   "examples/example-note.capsule.json": {
     "source_paths": [
@@ -1299,10 +1335,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "PUBLIC_RELEASE_METADATA.json": {
     "source_paths": [
@@ -1370,10 +1410,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "PUBLIC_RELEASE_REVIEW.md": {
     "source_paths": [
@@ -1439,10 +1483,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Release review updated for verification matrix layer; manifest currently covers 183 files; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Release review updated for verification matrix layer; manifest currently covers 183 files; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "docs/contract-catalog.md": {
     "source_paths": [
@@ -1775,10 +1823,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-project-profile.schema.json": {
     "source_paths": [
@@ -1852,10 +1904,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Fast evaluator path through the strongest public surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Fast evaluator path through the strongest public surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "scripts/check-project-profile.js": {
     "source_paths": [
@@ -1966,10 +2022,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-capability-matrix.schema.json": {
     "source_paths": [
@@ -2037,10 +2097,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide to the capability matrix and supported public outcomes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Human-readable guide to the capability matrix and supported public outcomes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "scripts/check-capability-matrix.js": {
     "source_paths": [
@@ -2275,10 +2339,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable evaluation packet for external reviewers and programs.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Human-readable evaluation packet for external reviewers and programs.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "PUBLIC_EVALUATION_PACKET.json": {
     "source_paths": [
@@ -2339,10 +2407,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-evaluation-packet.schema.json": {
     "source_paths": [],
@@ -2484,10 +2556,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide for the public traceability layer.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Human-readable guide for the public traceability layer.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "PUBLIC_TRACEABILITY_MATRIX.json": {
     "source_paths": [
@@ -2548,10 +2624,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-traceability-matrix.schema.json": {
     "source_paths": [],
@@ -2735,10 +2815,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of public maintainer workflow and release posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable summary of public maintainer workflow and release posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-maintenance-model.schema.json": {
     "source_paths": [],
@@ -2815,10 +2899,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-change-control-model.schema.json": {
     "source_paths": [
@@ -2936,10 +3024,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of public dependency structure and reading paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable summary of public dependency structure and reading paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-dependency-graph.schema.json": {
     "source_paths": [
@@ -3042,10 +3134,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded assurance layer for public review.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable bounded assurance layer for public review.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-assurance-case.schema.json": {
     "source_paths": [
@@ -3132,10 +3228,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable co-movement map for reviewer, release, contract, and teaching surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable co-movement map for reviewer, release, contract, and teaching surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-update-coherence-map.schema.json": {
     "source_paths": [
@@ -3317,10 +3417,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded external review checklist for the public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable bounded external review checklist for the public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-review-scorecard.schema.json": {
     "source_paths": [
@@ -3396,10 +3500,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-verification-matrix.schema.json": {
     "source_paths": [
@@ -3476,10 +3584,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded audience entry paths for the public surface; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable bounded audience entry paths for the public surface; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-audience-paths.schema.json": {
     "source_paths": [
@@ -3599,10 +3711,14 @@
       "/home/n1/codex-workspace/PUBLIC_ECOSYSTEM_VALUE_MAP.json",
       "/home/n1/codex-workspace/docs/ecosystem-value.md",
       "/home/n1/codex-workspace/schemas/public-ecosystem-value-map.schema.json",
-      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js"
+      "/home/n1/codex-workspace/scripts/check-ecosystem-value.js",
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
+      "/home/n1/codex-workspace/scripts/check-decision-log.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded adoption-readiness posture across public audiences.; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces"
+    "notes": "Machine-readable bounded adoption-readiness posture across public audiences.; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces"
   },
   "schemas/public-adoption-readiness.schema.json": {
     "source_paths": [
@@ -3725,5 +3841,56 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for ecosystem-value cross-surface coherence."
+  },
+  "docs/decision-log.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Bounded decision-rationale guidance derived from boundary, assurance, traceability, evidence-timeline, and release surfaces."
+  },
+  "PUBLIC_DECISION_LOG.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/decision-log.md",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable decision-rationale layer derived from boundary, trust, evidence, and release-facing public surfaces."
+  },
+  "schemas/public-decision-log.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema for the public decision log."
+  },
+  "scripts/check-decision-log.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
+      "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_AUDIENCE_PATHS.json",
+      "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for decision-log cross-surface coherence."
   }
 }

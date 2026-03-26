@@ -38,7 +38,8 @@
     "PUBLIC_LIMITATIONS_REGISTER.json",
     "PUBLIC_EVIDENCE_TIMELINE.json",
     "PUBLIC_FRESHNESS_MODEL.json",
-    "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
+    "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+    "PUBLIC_DECISION_LOG.json"
   ],
   "strongest_evidence": {
     "contract_surface": [
@@ -76,7 +77,8 @@
       "docs/evidence-strength.md",
       "docs/adoption-readiness.md",
       "docs/freshness.md",
-      "docs/ecosystem-value.md"
+      "docs/ecosystem-value.md",
+      "docs/decision-log.md"
     ],
     "machine_readable_evidence": [
       "PUBLIC_CONTRACT_CATALOG.json",
@@ -100,7 +102,8 @@
       "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_ADOPTION_READINESS.json",
       "PUBLIC_FRESHNESS_MODEL.json",
-      "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
+      "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+      "PUBLIC_DECISION_LOG.json"
     ]
   },
   "review_commands": [
@@ -126,7 +129,8 @@
     "The repo makes stronger-source hierarchy explicit instead of forcing reviewers or integrators to guess which public summaries remain subordinate to schemas, OpenAPI, provenance, and release evidence.",
     "The repo makes public adoption readiness explicit instead of leaving outside readers to infer readiness from examples, audience paths, and scattered caveats.",
     "The repo makes freshness expectations and stale-summary triggers explicit instead of leaving reviewers and programs to guess when public summary layers require refresh.",
-    "The repo makes ecosystem value explicit through bounded contracts, reviewer-facing summaries, adoption posture, and release-backed utility instead of relying on vague aspiration."
+    "The repo makes ecosystem value explicit through bounded contracts, reviewer-facing summaries, adoption posture, and release-backed utility instead of relying on vague aspiration.",
+    "The repo makes major public design decisions explicit through a bounded decision log instead of forcing reviewers to reverse-engineer intent from tree shape alone."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",
@@ -137,6 +141,7 @@
     "PUBLIC_RELEASE_REVIEW.md",
     "PUBLIC_RELEASE_METADATA.json",
     "PUBLIC_FRESHNESS_MODEL.json",
-    "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
+    "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+    "PUBLIC_DECISION_LOG.json"
   ]
 }

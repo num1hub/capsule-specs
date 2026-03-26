@@ -276,6 +276,22 @@
       ]
     },
     {
+      "id": "governance.decision-log-doc",
+      "path": "docs/decision-log.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "integrators",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:decision-log",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.dependency-graph-doc",
       "path": "docs/dependency-graph.md",
       "kind": "governance",
@@ -1143,6 +1159,23 @@
       ]
     },
     {
+      "id": "governance.decision-log",
+      "path": "PUBLIC_DECISION_LOG.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "integrators",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:decision-log",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.dependency-graph",
       "path": "PUBLIC_DEPENDENCY_GRAPH.json",
       "kind": "provenance",
@@ -1600,6 +1633,22 @@
       ]
     },
     {
+      "id": "governance.decision-log-schema",
+      "path": "schemas/public-decision-log.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:decision-log",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "schema.dependency-graph",
       "path": "schemas/public-dependency-graph.schema.json",
       "kind": "schema",
@@ -2004,6 +2053,21 @@
         "npm run check:community-health",
         "npm run check:catalog",
         "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.decision-log-check",
+      "path": "scripts/check-decision-log.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:decision-log",
+        "npm run check:catalog"
       ]
     },
     {

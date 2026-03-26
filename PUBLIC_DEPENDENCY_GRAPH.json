@@ -280,6 +280,21 @@
         "npm run check:ecosystem-value",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "public-decision-rationale",
+      "path": "PUBLIC_DECISION_LOG.json",
+      "role": "decision-rationale-summary",
+      "depends_on": [
+        "provenance-and-boundaries",
+        "reviewer-summaries",
+        "assurance-and-limits",
+        "maintenance-evolution"
+      ],
+      "verify_commands": [
+        "npm run check:decision-log",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -300,7 +315,8 @@
         "audience-entry-paths",
         "update-coherence-and-sync",
         "freshness-and-staleness",
-        "ecosystem-value-and-program-fit"
+        "ecosystem-value-and-program-fit",
+        "public-decision-rationale"
       ]
     },
     {
@@ -336,7 +352,8 @@
         "review-scorecard",
         "verification-coverage",
         "freshness-and-staleness",
-        "ecosystem-value-and-program-fit"
+        "ecosystem-value-and-program-fit",
+        "public-decision-rationale"
       ]
     }
   ],

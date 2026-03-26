@@ -274,6 +274,22 @@
         "npm run check:ecosystem-value",
         "npm run check:review-scorecard"
       ]
+    },
+    {
+      "id": "decision-rationale-explicit",
+      "question": "Are the major public design decisions and their rationale explicit instead of being left to omission, maintainer folklore, or tree archaeology?",
+      "status": "pass",
+      "summary": "The repo publishes a bounded decision-log layer that makes projection rationale, trust-sensitive design choices, and public intent explicit.",
+      "strongest_surfaces": [
+        "docs/decision-log.md",
+        "PUBLIC_DECISION_LOG.json",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_ASSURANCE_CASE.json"
+      ],
+      "review_commands": [
+        "npm run check:decision-log",
+        "npm run check:review-scorecard"
+      ]
     }
   ],
   "important_limits": [

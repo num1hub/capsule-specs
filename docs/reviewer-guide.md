@@ -50,13 +50,15 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
    Confirm which public summary layers go stale under which triggers and how freshness stays tied to release evidence.
 23. Read [`../PUBLIC_ECOSYSTEM_VALUE_MAP.json`](../PUBLIC_ECOSYSTEM_VALUE_MAP.json)
    Confirm why this public surface is concretely useful to reviewers, integrators, tool-builders, contributors, and OSS-support programs without relying on vague aspiration.
-24. Read [`release-evidence.md`](release-evidence.md)
+24. Read [`../PUBLIC_DECISION_LOG.json`](../PUBLIC_DECISION_LOG.json)
+   Confirm the major public design decisions and why this repository is a bounded projection surface with explicit rationale.
+25. Read [`release-evidence.md`](release-evidence.md)
    See how provenance, release review, and verification evidence fit together.
-25. Read [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
+26. Read [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
    Confirm that the public surface documents bounded negative paths instead of only happy-path behavior.
-26. Read [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
+27. Read [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
    Confirm that portability and archive trust are described as governed public contracts rather than as vague product claims.
-27. Read [`community-health.md`](community-health.md)
+28. Read [`community-health.md`](community-health.md)
    Confirm that contributor intake and maintainer expectations are explicit.
 
 ## Strongest signals
@@ -83,6 +85,7 @@ If you only have a few minutes, inspect these surfaces first:
 - [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json)
 - [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json)
 - [`../PUBLIC_ECOSYSTEM_VALUE_MAP.json`](../PUBLIC_ECOSYSTEM_VALUE_MAP.json)
+- [`../PUBLIC_DECISION_LOG.json`](../PUBLIC_DECISION_LOG.json)
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)

@@ -135,7 +135,8 @@
         "npm run check:capability-matrix",
         "npm run check:adoption-readiness",
         "npm run check:freshness",
-        "npm run check:ecosystem-value"
+        "npm run check:ecosystem-value",
+        "npm run check:decision-log"
       ],
       "protects": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -146,7 +147,8 @@
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_ADOPTION_READINESS.json",
         "PUBLIC_FRESHNESS_MODEL.json",
-        "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "PUBLIC_DECISION_LOG.json"
       ],
       "strongest_surfaces": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -157,7 +159,8 @@
         "PUBLIC_CAPABILITY_MATRIX.json",
         "PUBLIC_ADOPTION_READINESS.json",
         "PUBLIC_FRESHNESS_MODEL.json",
-        "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "PUBLIC_DECISION_LOG.json"
       ],
       "failure_modes_prevented": [
         "stale reviewer shortcuts",
@@ -168,7 +171,8 @@
         "implicit adoption readiness claims",
         "stale freshness posture",
         "hidden stale-summary triggers",
-        "opaque ecosystem value claims"
+        "opaque ecosystem value claims",
+        "hidden decision rationale"
       ]
     },
     {
@@ -315,6 +319,30 @@
         "ecosystem value claims disconnected from public artifacts",
         "reviewer/program utility left implicit",
         "bounded external utility drifting away from release evidence"
+      ]
+    },
+    {
+      "id": "decision-rationale-and-public-intent",
+      "summary": "Protects bounded public design rationale, projection intent, and the explicit explanation of why the public surface is shaped this way.",
+      "commands": [
+        "npm run check:decision-log",
+        "npm run check:update-coherence",
+        "npm run check:review-scorecard"
+      ],
+      "protects": [
+        "PUBLIC_DECISION_LOG.json",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_ASSURANCE_CASE.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_DECISION_LOG.json",
+        "docs/decision-log.md",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "failure_modes_prevented": [
+        "implicit projection intent",
+        "hidden design rationale",
+        "decision summaries drifting away from release evidence"
       ]
     }
   ],
