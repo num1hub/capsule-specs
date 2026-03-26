@@ -23,6 +23,8 @@ The update-coherence layer summarizes which public surfaces must move together i
 
 The limitations layer summarizes what this timeline does not claim in [`../PUBLIC_LIMITATIONS_REGISTER.json`](../PUBLIC_LIMITATIONS_REGISTER.json).
 
+The freshness layer summarizes which reviewer and release summaries become stale under which triggers in [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json).
+
 ## Important boundary
 
 This timeline is a curated public summary of the hardening path for this public specs repository. It does not claim to capture every upstream private-repo change, every internal experiment, or every possible historical detail from the sovereign N1Hub working tree.

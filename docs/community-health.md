@@ -25,6 +25,7 @@ These templates keep issues scoped to the public projection surface instead of d
 
 The bounded public maintainer posture for intake, review, and release work is summarized in [`../PUBLIC_MAINTENANCE_MODEL.json`](../PUBLIC_MAINTENANCE_MODEL.json).
 The bounded contributor and maintainer adoption posture is summarized in [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json).
+The bounded freshness posture for contributor-facing and maintainer-facing summary layers is summarized in [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json).
 The bounded public change, deprecation, and breaking-change posture is summarized in [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json).
 
 ## Maintainer expectations

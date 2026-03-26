@@ -651,6 +651,30 @@
         "npm run check:audience-paths",
         "npm run check:capability-matrix"
       ]
+    },
+    {
+      "id": "inspect-freshness-and-staleness-posture",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Inspect which public summary layers go stale under which triggers and which stronger surfaces should be refreshed with them.",
+      "strongest_surfaces": [
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "docs/freshness.md",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "docs/release-evidence.md",
+        "docs/verification.md"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:capability-matrix",
+        "npm run check:release"
+      ]
     }
   ]
 }

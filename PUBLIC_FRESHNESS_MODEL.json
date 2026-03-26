@@ -1,0 +1,161 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Publish a bounded machine-readable map of which public surfaces become stale under which triggers so reviewers and maintainers can assess summary freshness without inferring it from raw git history alone.",
+  "surfaces": [
+    {
+      "id": "repo-shape-and-release-counts",
+      "summary": "Repo-shape summaries and release counts should refresh whenever files, catalog membership, or verification coverage change.",
+      "refresh_when": [
+        "public file added or removed",
+        "catalog entry added or removed",
+        "verification script set changes"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_RELEASE_METADATA.json",
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "README.md"
+      ],
+      "stale_signals": [
+        "manifest coverage no longer matches repo files",
+        "repo-local check count no longer matches package scripts",
+        "reviewer-facing counts lag behind current release evidence"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:release",
+        "npm run audit:public-surface"
+      ]
+    },
+    {
+      "id": "reviewer-and-summary-layers",
+      "summary": "Reviewer shortcut layers should refresh whenever fast-review paths, strongest evidence, or stronger-source hierarchy change.",
+      "refresh_when": [
+        "new reviewer-facing machine-readable surface added",
+        "strongest evidence reclassified",
+        "fast-review path reordered"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
+      ],
+      "stale_signals": [
+        "reviewer docs mention fewer summary layers than the catalog publishes",
+        "evaluation packet omits newer summary surfaces",
+        "summary layers outlive the release evidence they summarize"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:evaluation-packet",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "contracts-examples-and-api",
+      "summary": "API, schema, and example freshness should follow contract and route changes, not only prose updates.",
+      "refresh_when": [
+        "schema fields change",
+        "OpenAPI payloads or routes change",
+        "public examples gain or lose coverage"
+      ],
+      "strongest_surfaces": [
+        "openapi/validate.openapi.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "stale_signals": [
+        "examples still teach deprecated or changed payload shapes",
+        "example-coverage summaries no longer match public fixtures",
+        "API docs imply behavior no longer backed by current schemas"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "id": "governance-and-change-posture",
+      "summary": "Governance summaries should refresh when change posture, sync groups, or stronger-source authority moves.",
+      "refresh_when": [
+        "change-control posture changes",
+        "sync groups gain or lose required surfaces",
+        "artifact authority or stronger-source hierarchy changes"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_OWNERSHIP_MAP.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
+      ],
+      "stale_signals": [
+        "release sync expectations no longer mention current governance summaries",
+        "ownership or freshness summaries disagree about which surfaces outrank others",
+        "maintainer docs describe refresh discipline not reflected in machine-readable governance layers"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:change-control",
+        "npm run check:update-coherence"
+      ]
+    },
+    {
+      "id": "audience-and-adoption-posture",
+      "summary": "Audience paths and adoption-readiness summaries should refresh when ready vs deferred expectations change.",
+      "refresh_when": [
+        "role-specific entry paths change",
+        "integrator or contributor prerequisites change",
+        "hosted-runtime expectations are reclassified"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
+      ],
+      "stale_signals": [
+        "audience paths imply a readiness level not reflected in adoption posture",
+        "deferred hosted-runtime expectations disappear from reviewer-facing materials",
+        "limitations and adoption summaries disagree about what is intentionally out of scope"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:audience-paths",
+        "npm run check:adoption-readiness"
+      ]
+    },
+    {
+      "id": "maintenance-history-and-freshness-evidence",
+      "summary": "Freshness summaries should remain tied to evidence timeline and release evidence instead of drifting into static folklore.",
+      "refresh_when": [
+        "new hardening milestone added",
+        "release evidence refreshed",
+        "summary-layer freshness expectations change"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "docs/freshness.md",
+        "PUBLIC_FRESHNESS_MODEL.json"
+      ],
+      "stale_signals": [
+        "timeline shows ongoing hardening but freshness expectations remain static",
+        "release metadata carries new risks without corresponding freshness updates",
+        "freshness docs fail to explain how summary layers age relative to release evidence"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:evidence-timeline",
+        "npm run check:release"
+      ]
+    }
+  ],
+  "review_commands": [
+    "npm run check:freshness",
+    "npm run verify:repo"
+  ]
+}

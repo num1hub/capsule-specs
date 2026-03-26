@@ -510,6 +510,33 @@
         "npm run check:adoption-readiness",
         "npm run check:traceability"
       ]
+    },
+    {
+      "id": "freshness-and-stale-signals",
+      "claim": "The public surface makes freshness triggers and stale-summary signals explicit instead of letting reviewer and release summaries drift silently.",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "integrators"
+      ],
+      "strongest_surfaces": [
+        "docs/freshness.md",
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json"
+      ],
+      "supporting_surfaces": [
+        "docs/release-evidence.md",
+        "docs/verification.md",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "docs/faq.md"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

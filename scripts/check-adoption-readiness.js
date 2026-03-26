@@ -123,8 +123,11 @@ assert(publicIndex.includes('../schemas/public-adoption-readiness.schema.json'),
 assert(integrationGuide.includes('PUBLIC_ADOPTION_READINESS.json'), 'integration guide must mention PUBLIC_ADOPTION_READINESS.json');
 assert(communityHealth.includes('PUBLIC_ADOPTION_READINESS.json'), 'community-health doc must mention PUBLIC_ADOPTION_READINESS.json');
 assert(maintainerOps.includes('PUBLIC_ADOPTION_READINESS.json'), 'maintainer-operations doc must mention PUBLIC_ADOPTION_READINESS.json');
+assert(maintainerOps.includes('PUBLIC_FRESHNESS_MODEL.json'), 'maintainer-operations doc must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(faq.includes('PUBLIC_ADOPTION_READINESS.json'), 'FAQ must mention PUBLIC_ADOPTION_READINESS.json');
+assert(faq.includes('PUBLIC_FRESHNESS_MODEL.json'), 'FAQ must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(capabilityDoc.includes('PUBLIC_ADOPTION_READINESS.json'), 'capability-matrix doc must mention PUBLIC_ADOPTION_READINESS.json');
+assert(capabilityDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'capability-matrix doc must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(schemasReadme.includes('public-adoption-readiness.schema.json'), 'schemas README must mention public-adoption-readiness schema');
 
 assert(profile.purpose?.publishes?.includes('machine-readable adoption-readiness summaries'), 'project profile must publish machine-readable adoption-readiness summaries');
@@ -191,11 +194,24 @@ assert(
   audiencePaths.audiences.some((item) => item.id === 'maintainers' && item.strongest_surfaces.includes('PUBLIC_ADOPTION_READINESS.json')),
   'audience paths maintainers entry must include PUBLIC_ADOPTION_READINESS.json'
 );
+assert(
+  audiencePaths.audiences.some((item) => item.id === 'reviewers' && item.strongest_surfaces.includes('PUBLIC_FRESHNESS_MODEL.json')),
+  'audience paths reviewers entry must include PUBLIC_FRESHNESS_MODEL.json'
+);
+assert(
+  audiencePaths.audiences.some((item) => item.id === 'maintainers' && item.strongest_surfaces.includes('PUBLIC_FRESHNESS_MODEL.json')),
+  'audience paths maintainers entry must include PUBLIC_FRESHNESS_MODEL.json'
+);
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:adoption-readiness'), 'release metadata must include adoption-readiness verification');
+assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:freshness'), 'release metadata must include freshness verification');
 assert(
   releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_ADOPTION_READINESS.json')),
   'release metadata residual risks must mention PUBLIC_ADOPTION_READINESS.json'
+);
+assert(
+  releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_FRESHNESS_MODEL.json')),
+  'release metadata residual risks must mention PUBLIC_FRESHNESS_MODEL.json'
 );
 
 assert(catalogPaths.has('docs/adoption-readiness.md'), 'contract catalog must include docs/adoption-readiness.md');

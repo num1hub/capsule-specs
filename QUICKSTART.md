@@ -40,6 +40,7 @@ Use this guide when you want the shortest safe entry into the repository.
 - Inspect [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) if you want the bounded role-specific entry paths through the public surface.
 - Inspect [`PUBLIC_EVIDENCE_STRENGTH_MAP.json`](PUBLIC_EVIDENCE_STRENGTH_MAP.json) if you want the bounded hierarchy of strongest, secondary, and illustrative public surfaces.
 - Inspect [`PUBLIC_ADOPTION_READINESS.json`](PUBLIC_ADOPTION_READINESS.json) if you want the bounded map of what each public audience can adopt today, under which prerequisites, and where hosted-runtime expectations remain deferred.
+- Inspect [`PUBLIC_FRESHNESS_MODEL.json`](PUBLIC_FRESHNESS_MODEL.json) if you want the bounded map of which public surfaces go stale under which triggers and which release-facing evidence should refresh them.
 - Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the claim-to-evidence and claim-to-verification map.
 - Inspect [`PUBLIC_PORTABILITY_PROFILE.json`](PUBLIC_PORTABILITY_PROFILE.json) if you want the public portability and archive-trust summary.
 - Read [`docs/client-recipes.md`](docs/client-recipes.md) if you want to call the validator quickly from curl or Node.

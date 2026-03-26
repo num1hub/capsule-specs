@@ -97,6 +97,8 @@ assert(profile.health_signals?.machine_readable_review_scorecard_present === tru
 assert(profile.health_signals?.machine_readable_verification_matrix_present === true, 'project profile must mark machine_readable_verification_matrix_present true');
 assert(profile.health_signals?.machine_readable_audience_paths_present === true, 'project profile must mark machine_readable_audience_paths_present true');
 assert(profile.health_signals?.machine_readable_evidence_strength_map_present === true, 'project profile must mark machine_readable_evidence_strength_map_present true');
+assert(profile.health_signals?.machine_readable_adoption_readiness_present === true, 'project profile must mark machine_readable_adoption_readiness_present true');
+assert(profile.health_signals?.machine_readable_freshness_model_present === true, 'project profile must mark machine_readable_freshness_model_present true');
 assert(profile.health_signals?.reviewer_guide_present === true, 'project profile must mark reviewer_guide_present true');
 assert(profile.health_signals?.single_repo_verify_entrypoint_present === true, 'project profile must mark single_repo_verify_entrypoint_present true');
 
@@ -123,6 +125,8 @@ assert(profile.reviewer_shortcuts?.review_scorecard === 'PUBLIC_REVIEW_SCORECARD
 assert(profile.reviewer_shortcuts?.verification_matrix === 'PUBLIC_VERIFICATION_MATRIX.json', 'project profile verification_matrix shortcut must point to PUBLIC_VERIFICATION_MATRIX.json');
 assert(profile.reviewer_shortcuts?.audience_paths === 'PUBLIC_AUDIENCE_PATHS.json', 'project profile audience_paths shortcut must point to PUBLIC_AUDIENCE_PATHS.json');
 assert(profile.reviewer_shortcuts?.evidence_strength_map === 'PUBLIC_EVIDENCE_STRENGTH_MAP.json', 'project profile evidence_strength_map shortcut must point to PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(profile.reviewer_shortcuts?.adoption_readiness === 'PUBLIC_ADOPTION_READINESS.json', 'project profile adoption_readiness shortcut must point to PUBLIC_ADOPTION_READINESS.json');
+assert(profile.reviewer_shortcuts?.freshness_model === 'PUBLIC_FRESHNESS_MODEL.json', 'project profile freshness_model shortcut must point to PUBLIC_FRESHNESS_MODEL.json');
 assert(profile.reviewer_shortcuts?.capability_matrix === 'PUBLIC_CAPABILITY_MATRIX.json', 'project profile capability_matrix shortcut must point to PUBLIC_CAPABILITY_MATRIX.json');
 assert(profile.reviewer_shortcuts?.project_profile === 'PUBLIC_PROJECT_PROFILE.json', 'project profile project_profile shortcut must point to itself');
 assert(profile.program_readiness?.active_maintenance_timeline_explicit === true, 'project profile must mark active_maintenance_timeline_explicit true');
@@ -130,6 +134,9 @@ assert(profile.program_readiness?.review_scorecard_explicit === true, 'project p
 assert(profile.program_readiness?.verification_coverage_explicit === true, 'project profile must mark verification_coverage_explicit true');
 assert(profile.program_readiness?.audience_paths_explicit === true, 'project profile must mark audience_paths_explicit true');
 assert(profile.program_readiness?.evidence_strength_hierarchy_explicit === true, 'project profile must mark evidence_strength_hierarchy_explicit true');
+assert(profile.program_readiness?.public_adoption_readiness_explicit === true, 'project profile must mark public_adoption_readiness_explicit true');
+assert(profile.program_readiness?.freshness_posture_explicit === true, 'project profile must mark freshness_posture_explicit true');
+assert(profile.purpose?.publishes?.includes('machine-readable freshness summaries'), 'project profile publishes must include machine-readable freshness summaries');
 
 const readme = readText('README.md');
 const reviewerGuide = readText('docs/reviewer-guide.md');
@@ -153,6 +160,8 @@ assert(readme.includes('PUBLIC_REVIEW_SCORECARD.json'), 'README.md must mention 
 assert(readme.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'README.md must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(readme.includes('PUBLIC_AUDIENCE_PATHS.json'), 'README.md must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(readme.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'README.md must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(readme.includes('PUBLIC_ADOPTION_READINESS.json'), 'README.md must mention PUBLIC_ADOPTION_READINESS.json');
+assert(readme.includes('PUBLIC_FRESHNESS_MODEL.json'), 'README.md must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(reviewerGuide.includes('PUBLIC_PROJECT_PROFILE.json'), 'reviewer guide must mention PUBLIC_PROJECT_PROFILE.json');
 assert(reviewerGuide.includes('PUBLIC_BOUNDARY_MAP.json'), 'reviewer guide must mention PUBLIC_BOUNDARY_MAP.json');
@@ -174,6 +183,8 @@ assert(reviewerGuide.includes('PUBLIC_REVIEW_SCORECARD.json'), 'reviewer guide m
 assert(reviewerGuide.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'reviewer guide must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(reviewerGuide.includes('PUBLIC_AUDIENCE_PATHS.json'), 'reviewer guide must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(reviewerGuide.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'reviewer guide must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(reviewerGuide.includes('PUBLIC_ADOPTION_READINESS.json'), 'reviewer guide must mention PUBLIC_ADOPTION_READINESS.json');
+assert(reviewerGuide.includes('PUBLIC_FRESHNESS_MODEL.json'), 'reviewer guide must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(reviewerGuide.includes('PUBLIC_CONTRACT_CATALOG.json'), 'reviewer guide must mention PUBLIC_CONTRACT_CATALOG.json');
 assert(reviewerGuide.includes('PUBLIC_RELEASE_METADATA.json'), 'reviewer guide must mention PUBLIC_RELEASE_METADATA.json');
 

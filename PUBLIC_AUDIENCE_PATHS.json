@@ -18,7 +18,8 @@
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_VERIFICATION_MATRIX.json",
         "PUBLIC_RELEASE_METADATA.json",
-        "PUBLIC_ADOPTION_READINESS.json"
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
@@ -146,7 +147,8 @@
         "PUBLIC_RELEASE_METADATA.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_AUDIENCE_PATHS.json",
-        "PUBLIC_ADOPTION_READINESS.json"
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",

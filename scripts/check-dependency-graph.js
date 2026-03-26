@@ -66,6 +66,8 @@ assert(ids.has('review-scorecard'), 'dependency graph must include review-scorec
 assert(ids.has('verification-coverage'), 'dependency graph must include verification-coverage node');
 assert(ids.has('audience-entry-paths'), 'dependency graph must include audience-entry-paths node');
 assert(ids.has('evidence-strength'), 'dependency graph must include evidence-strength node');
+assert(ids.has('adoption-readiness'), 'dependency graph must include adoption-readiness node');
+assert(ids.has('freshness-and-staleness'), 'dependency graph must include freshness-and-staleness node');
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('maintenance-evolution')),
   'reviewer-fast-path must include maintenance-evolution'
@@ -85,6 +87,14 @@ assert(
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('evidence-strength')),
   'reviewer-fast-path must include evidence-strength'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('adoption-readiness')),
+  'reviewer-fast-path must include adoption-readiness'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('freshness-and-staleness')),
+  'reviewer-fast-path must include freshness-and-staleness'
 );
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('maintenance-evolution')),
@@ -107,12 +117,28 @@ assert(
   'contributor-governance-path must include evidence-strength'
 );
 assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('adoption-readiness')),
+  'contributor-governance-path must include adoption-readiness'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('freshness-and-staleness')),
+  'contributor-governance-path must include freshness-and-staleness'
+);
+assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'integrator-contract-path' && pathDef.steps.includes('audience-entry-paths')),
   'integrator-contract-path must include audience-entry-paths'
 );
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'integrator-contract-path' && pathDef.steps.includes('evidence-strength')),
   'integrator-contract-path must include evidence-strength'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'integrator-contract-path' && pathDef.steps.includes('adoption-readiness')),
+  'integrator-contract-path must include adoption-readiness'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'integrator-contract-path' && pathDef.steps.includes('freshness-and-staleness')),
+  'integrator-contract-path must include freshness-and-staleness'
 );
 
 for (const command of graph.review_commands) {
@@ -138,6 +164,7 @@ assert(reviewerGuide.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'reviewer guide m
 assert(releaseEvidence.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'release-evidence doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(releaseEvidence.includes('PUBLIC_AUDIENCE_PATHS.json'), 'release-evidence doc must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(releaseEvidence.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'release-evidence doc must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(releaseEvidence.includes('PUBLIC_FRESHNESS_MODEL.json'), 'release-evidence doc must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(verification.includes('check:dependency-graph'), 'verification doc must mention check:dependency-graph');
 assert(capabilityDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'capability-matrix doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(evaluationDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'evaluation-packet doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
@@ -145,17 +172,26 @@ assert(traceabilityDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'traceability d
 assert(publicIndex.includes('dependency-graph.md'), 'public contract index must mention docs/dependency-graph.md');
 assert(publicIndex.includes('../PUBLIC_DEPENDENCY_GRAPH.json'), 'public contract index must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(publicIndex.includes('../schemas/public-dependency-graph.schema.json'), 'public contract index must mention public-dependency-graph schema');
+assert(publicIndex.includes('freshness.md'), 'public contract index must mention docs/freshness.md');
+assert(publicIndex.includes('../PUBLIC_FRESHNESS_MODEL.json'), 'public contract index must mention PUBLIC_FRESHNESS_MODEL.json');
+assert(publicIndex.includes('../schemas/public-freshness-model.schema.json'), 'public contract index must mention public-freshness-model schema');
 assert(faq.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'FAQ must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(faq.includes('PUBLIC_AUDIENCE_PATHS.json'), 'FAQ must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(faq.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'FAQ must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(faq.includes('PUBLIC_FRESHNESS_MODEL.json'), 'FAQ must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(schemasReadme.includes('public-dependency-graph.schema.json'), 'schemas README must mention public-dependency-graph schema');
+assert(schemasReadme.includes('public-freshness-model.schema.json'), 'schemas README must mention public-freshness-model schema');
 
 assert(catalogPaths.has('docs/dependency-graph.md'), 'contract catalog must include docs/dependency-graph.md');
 assert(catalogPaths.has('PUBLIC_DEPENDENCY_GRAPH.json'), 'contract catalog must include PUBLIC_DEPENDENCY_GRAPH.json');
 assert(catalogPaths.has('PUBLIC_AUDIENCE_PATHS.json'), 'contract catalog must include PUBLIC_AUDIENCE_PATHS.json');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'contract catalog must include PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(catalogPaths.has('docs/freshness.md'), 'contract catalog must include docs/freshness.md');
+assert(catalogPaths.has('PUBLIC_FRESHNESS_MODEL.json'), 'contract catalog must include PUBLIC_FRESHNESS_MODEL.json');
 assert(catalogPaths.has('schemas/public-dependency-graph.schema.json'), 'contract catalog must include public-dependency-graph schema');
+assert(catalogPaths.has('schemas/public-freshness-model.schema.json'), 'contract catalog must include public-freshness-model schema');
 assert(catalogPaths.has('scripts/check-dependency-graph.js'), 'contract catalog must include dependency-graph verifier');
+assert(catalogPaths.has('scripts/check-freshness.js'), 'contract catalog must include freshness verifier');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

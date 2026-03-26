@@ -51,6 +51,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable map of which public surfaces are strongest, secondary, or illustrative.
 - [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json)
   Machine-readable map of which public audience paths are ready today, which prerequisites apply, and which hosted-runtime expectations remain deferred.
+- [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json)
+  Machine-readable map of which public summary layers go stale under which triggers and which release-facing evidence should refresh them.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Machine-readable map from public claims to strongest surfaces and verification commands.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
@@ -108,6 +110,8 @@ The evidence-strength layer strengthens release discipline by making stronger-so
 
 The adoption-readiness layer strengthens release discipline by making ready vs deferred public audience posture explicit instead of leaving adoption claims implicit across reviewer, contributor, and integration docs.
 
+The freshness layer strengthens release discipline by making stale-summary triggers explicit instead of leaving reviewers to infer freshness from timestamps, counts, or git history alone.
+
 The traceability matrix strengthens reviewability by making claim-to-evidence and claim-to-verification links explicit instead of leaving them implicit across multiple files.
 
 The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
@@ -141,6 +145,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_AUDIENCE_PATHS.json`
 - `PUBLIC_EVIDENCE_STRENGTH_MAP.json`
 - `PUBLIC_ADOPTION_READINESS.json`
+- `PUBLIC_FRESHNESS_MODEL.json`
 - `PUBLIC_TRACEABILITY_MATRIX.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`

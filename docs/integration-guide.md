@@ -60,3 +60,5 @@ This repository is a public projection surface. When edge-case semantics matter:
 If you want the bounded integrator-specific reading order instead of the general repo path, inspect [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json).
 
 If you want the bounded integrator adoption posture instead of inferring readiness from examples alone, inspect [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json).
+
+If you want to know when integrator-facing summaries have gone stale relative to current release evidence, inspect [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json).

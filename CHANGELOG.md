@@ -37,6 +37,7 @@
 - added machine-readable public audience-paths modeling and verifier coverage for role-specific entry paths through the public surface
 - added machine-readable public evidence-strength modeling and verifier coverage for stronger-source hierarchy across public surfaces
 - added machine-readable public adoption-readiness modeling and verifier coverage for ready vs deferred public audience use
+- added machine-readable public freshness modeling and verifier coverage for stale-summary triggers and release-aligned freshness posture
 
 ## 0.1.0 - 2026-03-26
 

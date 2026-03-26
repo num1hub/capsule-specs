@@ -18,9 +18,11 @@ const requiredIds = [
   'boundary-portability-and-limits',
   'community-and-maintainer-governance',
   'reviewer-and-summary-layers',
+  'adoption-readiness-and-bounded-use',
   'traceability-dependency-and-assurance',
   'docs-and-cross-surface-coherence',
-  'release-state-and-maintenance-history'
+  'release-state-and-maintenance-history',
+  'freshness-and-summary-currency'
 ];
 
 const packageScripts = new Set(Object.keys(pkg.scripts || {}).map((name) => `npm run ${name}`));
@@ -78,6 +80,15 @@ assert(reviewerLayer.strongest_surfaces.includes('PUBLIC_AUDIENCE_PATHS.json'), 
 assert(reviewerLayer.commands.includes('npm run check:evidence-strength'), 'reviewer-and-summary-layers row must include npm run check:evidence-strength');
 assert(reviewerLayer.protects.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'reviewer-and-summary-layers row must protect PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 assert(reviewerLayer.strongest_surfaces.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'reviewer-and-summary-layers row must reference PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(reviewerLayer.commands.includes('npm run check:freshness'), 'reviewer-and-summary-layers row must include npm run check:freshness');
+assert(reviewerLayer.protects.includes('PUBLIC_FRESHNESS_MODEL.json'), 'reviewer-and-summary-layers row must protect PUBLIC_FRESHNESS_MODEL.json');
+assert(reviewerLayer.strongest_surfaces.includes('PUBLIC_FRESHNESS_MODEL.json'), 'reviewer-and-summary-layers row must reference PUBLIC_FRESHNESS_MODEL.json');
+assert(reviewerLayer.failure_modes_prevented.some((item) => item.includes('freshness')), 'reviewer-and-summary-layers row must mention freshness failure prevention');
+const freshnessLayer = matrix.checks.find((item) => item.id === 'freshness-and-summary-currency');
+assert(freshnessLayer, 'verification matrix must define freshness-and-summary-currency row');
+assert(freshnessLayer.commands.includes('npm run check:freshness'), 'freshness-and-summary-currency row must include npm run check:freshness');
+assert(freshnessLayer.protects.includes('PUBLIC_FRESHNESS_MODEL.json'), 'freshness-and-summary-currency row must protect PUBLIC_FRESHNESS_MODEL.json');
+assert(freshnessLayer.strongest_surfaces.includes('PUBLIC_FRESHNESS_MODEL.json'), 'freshness-and-summary-currency row must reference PUBLIC_FRESHNESS_MODEL.json');
 
 const readme = fs.readFileSync(path.join(repoRoot, 'README.md'), 'utf8');
 const quickstart = fs.readFileSync(path.join(repoRoot, 'QUICKSTART.md'), 'utf8');
@@ -112,6 +123,9 @@ assert(capabilityDoc.includes('PUBLIC_AUDIENCE_PATHS.json'), 'capability-matrix 
 assert(reviewerGuide.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'reviewer guide must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 assert(evaluationDoc.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'evaluation packet doc must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 assert(capabilityDoc.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'capability-matrix doc must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(reviewerGuide.includes('PUBLIC_FRESHNESS_MODEL.json'), 'reviewer guide must mention PUBLIC_FRESHNESS_MODEL.json');
+assert(evaluationDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'evaluation packet doc must mention PUBLIC_FRESHNESS_MODEL.json');
+assert(capabilityDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'capability-matrix doc must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(schemasReadme.includes('public-verification-matrix.schema.json'), 'schemas README must mention public-verification-matrix schema');
 
 assert(profile.health_signals?.machine_readable_verification_matrix_present === true, 'project profile must mark machine_readable_verification_matrix_present true');
@@ -121,11 +135,17 @@ assert(catalogPaths.has('docs/verification-matrix.md'), 'contract catalog must i
 assert(catalogPaths.has('PUBLIC_VERIFICATION_MATRIX.json'), 'contract catalog must include PUBLIC_VERIFICATION_MATRIX.json');
 assert(catalogPaths.has('PUBLIC_AUDIENCE_PATHS.json'), 'contract catalog must include PUBLIC_AUDIENCE_PATHS.json');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'contract catalog must include PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(catalogPaths.has('PUBLIC_FRESHNESS_MODEL.json'), 'contract catalog must include PUBLIC_FRESHNESS_MODEL.json');
+assert(catalogPaths.has('docs/freshness.md'), 'contract catalog must include docs/freshness.md');
+assert(catalogPaths.has('schemas/public-freshness-model.schema.json'), 'contract catalog must include public-freshness-model schema');
+assert(catalogPaths.has('scripts/check-freshness.js'), 'contract catalog must include freshness verifier');
 assert(catalogPaths.has('schemas/public-verification-matrix.schema.json'), 'contract catalog must include public-verification-matrix schema');
 assert(catalogPaths.has('scripts/check-verification-matrix.js'), 'contract catalog must include verification-matrix verifier');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:verification-matrix'), 'release metadata must include verification-matrix verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_VERIFICATION_MATRIX.json')), 'release metadata residual risks must mention PUBLIC_VERIFICATION_MATRIX.json');
+assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:freshness'), 'release metadata must include freshness verification');
+assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_FRESHNESS_MODEL.json')), 'release metadata residual risks must mention PUBLIC_FRESHNESS_MODEL.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

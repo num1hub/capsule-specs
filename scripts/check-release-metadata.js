@@ -166,6 +166,14 @@ assert(
   'release metadata must include the evidence-strength verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:adoption-readiness'),
+  'release metadata must include the adoption-readiness verification check'
+);
+assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:freshness'),
+  'release metadata must include the freshness verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -260,6 +268,14 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json')),
   'release metadata residual risks must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_ADOPTION_READINESS.json')),
+  'release metadata residual risks must mention PUBLIC_ADOPTION_READINESS.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_FRESHNESS_MODEL.json')),
+  'release metadata residual risks must mention PUBLIC_FRESHNESS_MODEL.json'
 );
 
 if (process.exitCode) {

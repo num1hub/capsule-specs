@@ -133,7 +133,8 @@
         "npm run check:audience-paths",
         "npm run check:evidence-strength",
         "npm run check:capability-matrix",
-        "npm run check:adoption-readiness"
+        "npm run check:adoption-readiness",
+        "npm run check:freshness"
       ],
       "protects": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -142,7 +143,8 @@
         "PUBLIC_CAPABILITY_MATRIX.json",
         "PUBLIC_AUDIENCE_PATHS.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
-        "PUBLIC_ADOPTION_READINESS.json"
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
       ],
       "strongest_surfaces": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -151,7 +153,8 @@
         "PUBLIC_AUDIENCE_PATHS.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_CAPABILITY_MATRIX.json",
-        "PUBLIC_ADOPTION_READINESS.json"
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
       ],
       "failure_modes_prevented": [
         "stale reviewer shortcuts",
@@ -159,7 +162,9 @@
         "unclear supported outcomes",
         "role-inappropriate entry paths",
         "over-trusted summary layers",
-        "implicit adoption readiness claims"
+        "implicit adoption readiness claims",
+        "stale freshness posture",
+        "hidden stale-summary triggers"
       ]
     },
     {
@@ -258,6 +263,30 @@
         "invisible maintenance history",
         "stale release evidence",
         "symbolic top-level verification"
+      ]
+    },
+    {
+      "id": "freshness-and-summary-currency",
+      "summary": "Protects freshness expectations, stale-summary triggers, and the currency of reviewer-facing summary layers.",
+      "commands": [
+        "npm run check:freshness",
+        "npm run check:release",
+        "npm run check:evidence-timeline"
+      ],
+      "protects": [
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_EVIDENCE_TIMELINE.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "docs/freshness.md",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "failure_modes_prevented": [
+        "stale reviewer summaries",
+        "stale readiness claims",
+        "hidden freshness expectations"
       ]
     }
   ],

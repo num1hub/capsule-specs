@@ -30,6 +30,8 @@ const requiredIds = [
   'inspect-verification-coverage-across-check-families',
   'follow-role-specific-audience-paths',
   'inspect-evidence-strength-hierarchy',
+  'assess-public-adoption-readiness',
+  'inspect-freshness-and-staleness-posture',
   'trace-public-claims-end-to-end',
   'understand-projection-and-domain-boundaries',
   'evaluate-portability-and-import-trust',
@@ -106,6 +108,8 @@ assert(catalogPaths.has('PUBLIC_REVIEW_SCORECARD.json'), 'contract catalog must 
 assert(catalogPaths.has('PUBLIC_VERIFICATION_MATRIX.json'), 'contract catalog must include PUBLIC_VERIFICATION_MATRIX.json');
 assert(catalogPaths.has('PUBLIC_AUDIENCE_PATHS.json'), 'contract catalog must include PUBLIC_AUDIENCE_PATHS.json');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'contract catalog must include PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(catalogPaths.has('PUBLIC_ADOPTION_READINESS.json'), 'contract catalog must include PUBLIC_ADOPTION_READINESS.json');
+assert(catalogPaths.has('PUBLIC_FRESHNESS_MODEL.json'), 'contract catalog must include PUBLIC_FRESHNESS_MODEL.json');
 assert(catalogPaths.has('docs/capability-matrix.md'), 'contract catalog must include docs/capability-matrix.md');
 assert(catalogPaths.has('docs/example-coverage.md'), 'contract catalog must include docs/example-coverage.md');
 assert(catalogPaths.has('docs/maintainer-operations.md'), 'contract catalog must include docs/maintainer-operations.md');
@@ -121,6 +125,8 @@ assert(catalogPaths.has('docs/review-scorecard.md'), 'contract catalog must incl
 assert(catalogPaths.has('docs/verification-matrix.md'), 'contract catalog must include docs/verification-matrix.md');
 assert(catalogPaths.has('docs/audience-paths.md'), 'contract catalog must include docs/audience-paths.md');
 assert(catalogPaths.has('docs/evidence-strength.md'), 'contract catalog must include docs/evidence-strength.md');
+assert(catalogPaths.has('docs/adoption-readiness.md'), 'contract catalog must include docs/adoption-readiness.md');
+assert(catalogPaths.has('docs/freshness.md'), 'contract catalog must include docs/freshness.md');
 assert(catalogPaths.has('schemas/public-capability-matrix.schema.json'), 'contract catalog must include schemas/public-capability-matrix.schema.json');
 assert(catalogPaths.has('schemas/public-example-coverage.schema.json'), 'contract catalog must include schemas/public-example-coverage.schema.json');
 assert(catalogPaths.has('schemas/public-maintenance-model.schema.json'), 'contract catalog must include schemas/public-maintenance-model.schema.json');
@@ -136,7 +142,10 @@ assert(catalogPaths.has('schemas/public-review-scorecard.schema.json'), 'contrac
 assert(catalogPaths.has('schemas/public-verification-matrix.schema.json'), 'contract catalog must include schemas/public-verification-matrix.schema.json');
 assert(catalogPaths.has('schemas/public-audience-paths.schema.json'), 'contract catalog must include schemas/public-audience-paths.schema.json');
 assert(catalogPaths.has('schemas/public-evidence-strength-map.schema.json'), 'contract catalog must include schemas/public-evidence-strength-map.schema.json');
+assert(catalogPaths.has('schemas/public-adoption-readiness.schema.json'), 'contract catalog must include schemas/public-adoption-readiness.schema.json');
+assert(catalogPaths.has('schemas/public-freshness-model.schema.json'), 'contract catalog must include schemas/public-freshness-model.schema.json');
 assert(catalogPaths.has('scripts/check-capability-matrix.js'), 'contract catalog must include scripts/check-capability-matrix.js');
+assert(catalogPaths.has('scripts/check-freshness.js'), 'contract catalog must include scripts/check-freshness.js');
 
 const readme = fs.readFileSync(path.join(repoRoot, 'README.md'), 'utf8');
 const reviewerGuide = fs.readFileSync(path.join(repoRoot, 'docs', 'reviewer-guide.md'), 'utf8');
@@ -161,6 +170,8 @@ assert(readme.includes('PUBLIC_REVIEW_SCORECARD.json'), 'README.md must mention 
 assert(readme.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'README.md must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(readme.includes('PUBLIC_AUDIENCE_PATHS.json'), 'README.md must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(readme.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'README.md must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(readme.includes('PUBLIC_ADOPTION_READINESS.json'), 'README.md must mention PUBLIC_ADOPTION_READINESS.json');
+assert(readme.includes('PUBLIC_FRESHNESS_MODEL.json'), 'README.md must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(reviewerGuide.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'reviewer guide must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'capability matrix doc must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_BOUNDARY_MAP.json'), 'capability matrix doc must mention PUBLIC_BOUNDARY_MAP.json');
@@ -181,6 +192,8 @@ assert(capabilityDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'capability matri
 assert(capabilityDoc.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'capability matrix doc must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_AUDIENCE_PATHS.json'), 'capability matrix doc must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(capabilityDoc.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'capability matrix doc must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(capabilityDoc.includes('PUBLIC_ADOPTION_READINESS.json'), 'capability matrix doc must mention PUBLIC_ADOPTION_READINESS.json');
+assert(capabilityDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'capability matrix doc must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(capabilityDoc.includes('PUBLIC_PROJECT_PROFILE.json'), 'capability matrix doc must mention PUBLIC_PROJECT_PROFILE.json');
 assert(capabilityDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'capability matrix doc must mention PUBLIC_RELEASE_METADATA.json');
 

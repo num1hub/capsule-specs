@@ -61,7 +61,9 @@
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "docs/evidence-strength.md",
         "PUBLIC_ADOPTION_READINESS.json",
-        "docs/adoption-readiness.md"
+        "docs/adoption-readiness.md",
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "docs/freshness.md"
       ],
       "bounded_by": [
         "docs/release-evidence.md",
@@ -132,7 +134,9 @@
         "PUBLIC_VERIFICATION_MATRIX.json",
         "PUBLIC_AUDIENCE_PATHS.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
-        "PUBLIC_ADOPTION_READINESS.json"
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "docs/freshness.md"
       ],
       "bounded_by": [
         "docs/release-evidence.md",

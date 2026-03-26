@@ -21,6 +21,8 @@ The machine-readable form lives in [`../PUBLIC_ADOPTION_READINESS.json`](../PUBL
   These show what is intentionally not being promised.
 - [`evidence-strength.md`](evidence-strength.md) and [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json)
   These show which public surfaces remain strongest when adoption claims and shortcuts disagree.
+- [`freshness.md`](freshness.md) and [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json)
+  These show when readiness summaries go stale and which release-facing evidence should refresh them.
 - [`release-evidence.md`](release-evidence.md) and [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
   These show whether the public readiness posture is still aligned with the current verified release state.
 

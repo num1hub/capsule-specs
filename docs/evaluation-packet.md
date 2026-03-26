@@ -30,6 +30,7 @@ This repository includes a compact evaluation packet for external reviewers, pro
 - [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json)
 - [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json)
 - [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json)
+- [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json)
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
@@ -56,3 +57,5 @@ The audience-paths layer strengthens that path further by making role-specific e
 The evidence-strength layer strengthens that path further by making stronger-source hierarchy explicit instead of forcing external readers to guess which public summaries remain subordinate to schemas, OpenAPI, provenance, and release evidence.
 
 The adoption-readiness layer strengthens that path further by making ready vs deferred public audience posture explicit instead of forcing reviewers to infer it from scattered caveats, examples, and role-specific docs.
+
+The freshness layer strengthens that path further by making stale-summary triggers explicit instead of forcing reviewers to guess whether a convenience layer still reflects the current release evidence.

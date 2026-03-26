@@ -386,6 +386,22 @@
       ]
     },
     {
+      "id": "governance.freshness-doc",
+      "path": "docs/freshness.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.generator-readiness",
       "path": "docs/generator-readiness.md",
       "kind": "governance",
@@ -1204,6 +1220,23 @@
       ]
     },
     {
+      "id": "governance.freshness-model",
+      "path": "PUBLIC_FRESHNESS_MODEL.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.limitations-register",
       "path": "PUBLIC_LIMITATIONS_REGISTER.json",
       "kind": "provenance",
@@ -1619,6 +1652,22 @@
       ]
     },
     {
+      "id": "governance.freshness-model-schema",
+      "path": "schemas/public-freshness-model.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "schema.limitations-register",
       "path": "schemas/public-limitations-register.schema.json",
       "kind": "schema",
@@ -1994,6 +2043,21 @@
         "npm run check:failure-model",
         "npm run check:catalog",
         "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.freshness-check",
+      "path": "scripts/check-freshness.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:catalog"
       ]
     },
     {

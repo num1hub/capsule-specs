@@ -242,6 +242,22 @@
         "npm run check:adoption-readiness",
         "npm run check:review-scorecard"
       ]
+    },
+    {
+      "id": "freshness-posture-explicit",
+      "question": "Are freshness expectations and stale-summary triggers explicit instead of leaving public summary layers to drift silently?",
+      "status": "pass",
+      "summary": "The repo publishes a bounded freshness layer that makes refresh triggers, stale signals, and stronger refresh surfaces explicit for reviewers and maintainers.",
+      "strongest_surfaces": [
+        "docs/freshness.md",
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_EVIDENCE_TIMELINE.json"
+      ],
+      "review_commands": [
+        "npm run check:freshness",
+        "npm run check:review-scorecard"
+      ]
     }
   ],
   "important_limits": [

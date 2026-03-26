@@ -82,8 +82,10 @@ assert(evaluationDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'evaluation-packe
 assert(evaluationDoc.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'evaluation-packet doc must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(evaluationDoc.includes('PUBLIC_AUDIENCE_PATHS.json'), 'evaluation-packet doc must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(evaluationDoc.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'evaluation-packet doc must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(evaluationDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'evaluation-packet doc must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(faqDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'FAQ must mention PUBLIC_EVALUATION_PACKET.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'release-evidence doc must mention PUBLIC_EVALUATION_PACKET.json');
+assert(releaseEvidenceDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'release-evidence doc must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(capabilityDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'capability-matrix doc must mention PUBLIC_EVALUATION_PACKET.json');
 assert(quickstart.includes('PUBLIC_EVALUATION_PACKET.json'), 'QUICKSTART.md must mention PUBLIC_EVALUATION_PACKET.json');
 
@@ -96,14 +98,18 @@ assert(catalogPaths.has('PUBLIC_REVIEW_SCORECARD.json'), 'contract catalog must 
 assert(catalogPaths.has('PUBLIC_VERIFICATION_MATRIX.json'), 'contract catalog must include PUBLIC_VERIFICATION_MATRIX.json');
 assert(catalogPaths.has('PUBLIC_AUDIENCE_PATHS.json'), 'contract catalog must include PUBLIC_AUDIENCE_PATHS.json');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'contract catalog must include PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(catalogPaths.has('PUBLIC_FRESHNESS_MODEL.json'), 'contract catalog must include PUBLIC_FRESHNESS_MODEL.json');
 assert(catalogPaths.has('docs/evaluation-packet.md'), 'contract catalog must include docs/evaluation-packet.md');
 assert(catalogPaths.has('docs/evidence-timeline.md'), 'contract catalog must include docs/evidence-timeline.md');
 assert(catalogPaths.has('docs/review-scorecard.md'), 'contract catalog must include docs/review-scorecard.md');
 assert(catalogPaths.has('docs/verification-matrix.md'), 'contract catalog must include docs/verification-matrix.md');
 assert(catalogPaths.has('docs/audience-paths.md'), 'contract catalog must include docs/audience-paths.md');
 assert(catalogPaths.has('docs/evidence-strength.md'), 'contract catalog must include docs/evidence-strength.md');
+assert(catalogPaths.has('docs/freshness.md'), 'contract catalog must include docs/freshness.md');
 assert(catalogPaths.has('schemas/public-evaluation-packet.schema.json'), 'contract catalog must include public-evaluation-packet schema');
+assert(catalogPaths.has('schemas/public-freshness-model.schema.json'), 'contract catalog must include public-freshness-model schema');
 assert(catalogPaths.has('scripts/check-evaluation-packet.js'), 'contract catalog must include evaluation-packet verifier');
+assert(catalogPaths.has('scripts/check-freshness.js'), 'contract catalog must include freshness verifier');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:evaluation-packet'), 'release metadata must include evaluation-packet verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_EVALUATION_PACKET.json')), 'release metadata residual risks must mention PUBLIC_EVALUATION_PACKET.json');
@@ -112,21 +118,25 @@ assert(evaluationPacket.fast_review_path.includes('PUBLIC_REVIEW_SCORECARD.json'
 assert(evaluationPacket.fast_review_path.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'evaluation packet fast_review_path must include PUBLIC_VERIFICATION_MATRIX.json');
 assert(evaluationPacket.fast_review_path.includes('PUBLIC_AUDIENCE_PATHS.json'), 'evaluation packet fast_review_path must include PUBLIC_AUDIENCE_PATHS.json');
 assert(evaluationPacket.fast_review_path.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'evaluation packet fast_review_path must include PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(evaluationPacket.fast_review_path.includes('PUBLIC_FRESHNESS_MODEL.json'), 'evaluation packet fast_review_path must include PUBLIC_FRESHNESS_MODEL.json');
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_EVIDENCE_TIMELINE.json');
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_REVIEW_SCORECARD.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_REVIEW_SCORECARD.json');
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_VERIFICATION_MATRIX.json');
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_AUDIENCE_PATHS.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_AUDIENCE_PATHS.json');
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_FRESHNESS_MODEL.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_FRESHNESS_MODEL.json');
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/evidence-timeline.md'), 'evaluation packet governance_and_review must include docs/evidence-timeline.md');
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/review-scorecard.md'), 'evaluation packet governance_and_review must include docs/review-scorecard.md');
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/verification-matrix.md'), 'evaluation packet governance_and_review must include docs/verification-matrix.md');
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/audience-paths.md'), 'evaluation packet governance_and_review must include docs/audience-paths.md');
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/evidence-strength.md'), 'evaluation packet governance_and_review must include docs/evidence-strength.md');
+assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/freshness.md'), 'evaluation packet governance_and_review must include docs/freshness.md');
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('active maintenance')), 'evaluation packet public_value_claims must mention active maintenance');
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('review scorecard')), 'evaluation packet public_value_claims must mention review scorecard');
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('verification coverage')), 'evaluation packet public_value_claims must mention verification coverage');
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('audience-specific')), 'evaluation packet public_value_claims must mention audience-specific paths');
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('stronger-source hierarchy')), 'evaluation packet public_value_claims must mention stronger-source hierarchy');
+assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('freshness')), 'evaluation packet public_value_claims must mention freshness');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

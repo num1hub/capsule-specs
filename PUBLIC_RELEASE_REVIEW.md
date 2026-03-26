@@ -31,6 +31,7 @@
 - machine-readable audience paths in `PUBLIC_AUDIENCE_PATHS.json` plus a bounded role-specific entry-path guide
 - machine-readable evidence-strength map in `PUBLIC_EVIDENCE_STRENGTH_MAP.json` plus a bounded stronger-source hierarchy guide
 - machine-readable adoption-readiness map in `PUBLIC_ADOPTION_READINESS.json` plus a bounded ready-vs-deferred audience posture guide
+- machine-readable freshness model in `PUBLIC_FRESHNESS_MODEL.json` plus a bounded freshness and stale-summary guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
@@ -85,6 +86,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-audience-paths.js`: pass
 - `node scripts/check-evidence-strength.js`: pass
 - `node scripts/check-adoption-readiness.js`: pass
+- `node scripts/check-freshness.js`: pass
 - `node scripts/check-project-profile.js`: pass
 - `node scripts/check-capability-matrix.js`: pass
 - `node scripts/check-evaluation-packet.js`: pass
@@ -95,7 +97,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `194` files / `194` manifest entries
+- manifest coverage: `198` files / `198` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -132,3 +134,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_VERIFICATION_MATRIX.json` is a bounded verification-coverage summary and must stay subordinate to the stronger check scripts, release evidence, and live validator behavior it references
 - `PUBLIC_AUDIENCE_PATHS.json` is a bounded role-specific navigation summary and must stay subordinate to the stronger onboarding, reviewer, maintainer, integration, and release surfaces it references
 - `PUBLIC_ADOPTION_READINESS.json` is a bounded audience-readiness summary and must stay subordinate to the stronger audience-path, limitations, evidence-strength, and release-evidence surfaces it references
+- `PUBLIC_FRESHNESS_MODEL.json` is a bounded freshness summary and must stay subordinate to stronger release evidence, audience paths, reviewer docs, and maintenance-history surfaces it references

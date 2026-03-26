@@ -48,6 +48,8 @@ The bounded role-specific navigation summary lives in [`../PUBLIC_AUDIENCE_PATHS
 
 The bounded stronger-source hierarchy summary lives in [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json).
 
+The bounded freshness and stale-summary summary lives in [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json).
+
 ## Important boundary
 
 The traceability matrix is a curated public summary. It does not claim to capture every private runtime dependency or every internal change path from the upstream N1Hub repository.

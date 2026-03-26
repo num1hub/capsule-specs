@@ -250,6 +250,21 @@
         "npm run check:adoption-readiness",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "freshness-and-staleness",
+      "path": "PUBLIC_FRESHNESS_MODEL.json",
+      "role": "freshness-summary",
+      "depends_on": [
+        "release-evidence",
+        "maintenance-evolution",
+        "evidence-strength",
+        "adoption-readiness"
+      ],
+      "verify_commands": [
+        "npm run check:freshness",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -268,7 +283,8 @@
         "review-scorecard",
         "verification-coverage",
         "audience-entry-paths",
-        "update-coherence-and-sync"
+        "update-coherence-and-sync",
+        "freshness-and-staleness"
       ]
     },
     {
@@ -282,7 +298,8 @@
         "law-and-schema",
         "validator-http-contract",
         "examples-and-fixtures",
-        "release-evidence"
+        "release-evidence",
+        "freshness-and-staleness"
       ]
     },
     {
@@ -300,7 +317,8 @@
         "release-evidence",
         "maintenance-evolution",
         "review-scorecard",
-        "verification-coverage"
+        "verification-coverage",
+        "freshness-and-staleness"
       ]
     }
   ],

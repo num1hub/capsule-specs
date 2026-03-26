@@ -104,7 +104,8 @@
     "updated PUBLIC_VERIFICATION_MATRIX.json when repo-local check coverage or protected public surfaces changed",
     "updated PUBLIC_AUDIENCE_PATHS.json when role-specific entry paths or public audience expectations changed",
     "updated PUBLIC_EVIDENCE_STRENGTH_MAP.json when stronger-source hierarchy changed across public surfaces",
-    "updated PUBLIC_ADOPTION_READINESS.json when audience readiness, prerequisites, or deferred adoption posture changed"
+    "updated PUBLIC_ADOPTION_READINESS.json when audience readiness, prerequisites, or deferred adoption posture changed",
+    "updated PUBLIC_FRESHNESS_MODEL.json when freshness triggers or stale signals changed"
   ],
   "operating_rules": [
     "Keep the public boundary intentional and do not widen scope by accident.",
@@ -119,7 +120,8 @@
     "Keep PUBLIC_VERIFICATION_MATRIX.json aligned with the real check stack, release evidence, and reviewer-facing verification docs.",
     "Keep PUBLIC_AUDIENCE_PATHS.json aligned with onboarding, reviewer, contributor, integration, and maintainer-facing docs.",
     "Keep PUBLIC_EVIDENCE_STRENGTH_MAP.json aligned with trust-model, compatibility, reviewer, and release-evidence surfaces.",
-    "Keep PUBLIC_ADOPTION_READINESS.json aligned with audience paths, limitations, release evidence, and maintainer-facing docs when bounded public readiness changes."
+    "Keep PUBLIC_ADOPTION_READINESS.json aligned with audience paths, limitations, release evidence, and maintainer-facing docs when bounded public readiness changes.",
+    "Keep PUBLIC_FRESHNESS_MODEL.json aligned with release evidence, reviewer shortcuts, audience paths, and adoption summaries when freshness posture changes."
   ],
   "non_claims": [
     "This file does not promise a guaranteed response-time SLA for public issues or pull requests.",

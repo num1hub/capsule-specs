@@ -14,14 +14,16 @@
       ],
       "prerequisites": [
         "start from README.md and docs/reviewer-guide.md",
-        "treat PUBLIC_EVIDENCE_STRENGTH_MAP.json and PUBLIC_RELEASE_METADATA.json as stronger than convenience summaries"
+        "treat PUBLIC_EVIDENCE_STRENGTH_MAP.json and PUBLIC_RELEASE_METADATA.json as stronger than convenience summaries",
+        "treat PUBLIC_FRESHNESS_MODEL.json as the bounded stale-summary and refresh-trigger guide for reviewer-facing summaries"
       ],
       "strongest_surfaces": [
         "PUBLIC_EVALUATION_PACKET.json",
         "PUBLIC_REVIEW_SCORECARD.json",
         "PUBLIC_VERIFICATION_MATRIX.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
-        "PUBLIC_RELEASE_METADATA.json"
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
       ],
       "bounded_non_goals": [
         "does not expose the private N1Hub runtime",
@@ -134,14 +136,16 @@
       ],
       "prerequisites": [
         "read docs/maintainer-operations.md and RELEASING.md",
-        "refresh PUBLIC_ADOPTION_READINESS.json whenever audience readiness, prerequisites, or deferred scope changes"
+        "refresh PUBLIC_ADOPTION_READINESS.json whenever audience readiness, prerequisites, or deferred scope changes",
+        "refresh PUBLIC_FRESHNESS_MODEL.json whenever reviewer shortcuts, release evidence, or stale-summary triggers change"
       ],
       "strongest_surfaces": [
         "PUBLIC_MAINTENANCE_MODEL.json",
         "PUBLIC_UPDATE_COHERENCE_MAP.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_RELEASE_METADATA.json",
-        "PUBLIC_ADOPTION_READINESS.json"
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
       ],
       "bounded_non_goals": [
         "does not expose private maintainer playbooks",

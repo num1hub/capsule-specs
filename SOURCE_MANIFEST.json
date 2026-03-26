@@ -62,10 +62,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "QUICKSTART.md": {
     "source_paths": [
@@ -117,10 +121,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "derived",
-    "notes": "Root-level fast entry path for public contributors.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Root-level fast entry path for public contributors.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "ONBOARDING.md": {
     "source_paths": [
@@ -204,10 +212,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "VERSIONING.md": {
     "source_paths": [
@@ -367,10 +379,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository metadata and lightweight verification scripts for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Repository metadata and lightweight verification scripts for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   ".github/ISSUE_TEMPLATE/bug_report.md": {
     "source_paths": [],
@@ -521,10 +537,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Recommended integration path across schema, examples, graph validation, and HTTP envelopes.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Recommended integration path across schema, examples, graph validation, and HTTP envelopes.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "docs/client-recipes.md": {
     "source_paths": [
@@ -625,10 +645,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Short answers to scope and validation questions for the public repository.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Short answers to scope and validation questions for the public repository.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "docs/public-contract-index.md": {
     "source_paths": [
@@ -699,10 +723,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "docs/release-evidence.md": {
     "source_paths": [
@@ -760,10 +788,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "docs/verification.md": {
     "source_paths": [
@@ -831,10 +863,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "docs/source-materials.md": {
     "source_paths": [
@@ -942,10 +978,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Directory guide for schema artifacts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Directory guide for schema artifacts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "examples/example-note.capsule.json": {
     "source_paths": [
@@ -1151,10 +1191,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Provenance index for every public file in the repository.; synchronized with adoption-readiness surfaces"
+    "notes": "Provenance index for every public file in the repository.; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "PUBLIC_CONTRACT_CATALOG.json": {
     "source_paths": [
@@ -1215,10 +1259,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "PUBLIC_RELEASE_METADATA.json": {
     "source_paths": [
@@ -1278,10 +1326,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "PUBLIC_RELEASE_REVIEW.md": {
     "source_paths": [
@@ -1339,10 +1391,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Release review updated for verification matrix layer; manifest currently covers 183 files; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Release review updated for verification matrix layer; manifest currently covers 183 files; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "docs/contract-catalog.md": {
     "source_paths": [
@@ -1423,10 +1479,14 @@
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
-      "scripts/check-verification-matrix.js"
+      "scripts/check-verification-matrix.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces"
   },
   "scripts/check-release-metadata.js": {
     "source_paths": [
@@ -1460,10 +1520,14 @@
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
-      "scripts/check-verification-matrix.js"
+      "scripts/check-verification-matrix.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces"
   },
   "openapi/validate.openapi.json": {
     "source_paths": [
@@ -1562,10 +1626,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Public contributor-intake and community-health guide for the specs repository.; synchronized with adoption-readiness surfaces"
+    "notes": "Public contributor-intake and community-health guide for the specs repository.; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   ".github/ISSUE_TEMPLATE/integration_question.md": {
     "source_paths": [
@@ -1655,10 +1723,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-project-profile.schema.json": {
     "source_paths": [
@@ -1724,10 +1796,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Fast evaluator path through the strongest public surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Fast evaluator path through the strongest public surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "scripts/check-project-profile.js": {
     "source_paths": [
@@ -1760,10 +1836,14 @@
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
-      "scripts/check-verification-matrix.js"
+      "scripts/check-verification-matrix.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repo-local consistency check for the public project profile and reviewer-facing shortcuts.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Repo-local consistency check for the public project profile and reviewer-facing shortcuts.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces"
   },
   "PUBLIC_CAPABILITY_MATRIX.json": {
     "source_paths": [
@@ -1826,10 +1906,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-capability-matrix.schema.json": {
     "source_paths": [
@@ -1889,10 +1973,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide to the capability matrix and supported public outcomes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Human-readable guide to the capability matrix and supported public outcomes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "scripts/check-capability-matrix.js": {
     "source_paths": [
@@ -1926,10 +2014,14 @@
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
-      "scripts/check-verification-matrix.js"
+      "scripts/check-verification-matrix.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repo-local consistency check for the machine-readable capability matrix.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Repo-local consistency check for the machine-readable capability matrix.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces"
   },
   "docs/projection-doctrine.md": {
     "source_paths": [
@@ -2115,10 +2207,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable evaluation packet for external reviewers and programs.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Human-readable evaluation packet for external reviewers and programs.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "PUBLIC_EVALUATION_PACKET.json": {
     "source_paths": [
@@ -2171,10 +2267,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-evaluation-packet.schema.json": {
     "source_paths": [],
@@ -2210,10 +2310,14 @@
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
-      "scripts/check-verification-matrix.js"
+      "scripts/check-verification-matrix.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the public evaluation packet and its reviewer-path references.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Verifier for the public evaluation packet and its reviewer-path references.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces"
   },
   "docs/failure-model.md": {
     "source_paths": [
@@ -2304,10 +2408,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide for the public traceability layer.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Human-readable guide for the public traceability layer.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces"
   },
   "PUBLIC_TRACEABILITY_MATRIX.json": {
     "source_paths": [
@@ -2360,10 +2468,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-traceability-matrix.schema.json": {
     "source_paths": [],
@@ -2407,10 +2519,14 @@
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
-      "scripts/check-verification-matrix.js"
+      "scripts/check-verification-matrix.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the public traceability matrix and its surrounding review surfaces.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Verifier for the public traceability matrix and its surrounding review surfaces.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces"
   },
   "docs/example-coverage.md": {
     "source_paths": [
@@ -2488,10 +2604,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide to the bounded public maintainer workflow.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Human-readable guide to the bounded public maintainer workflow.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "PUBLIC_MAINTENANCE_MODEL.json": {
     "source_paths": [
@@ -2531,10 +2651,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of public maintainer workflow and release posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable summary of public maintainer workflow and release posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-maintenance-model.schema.json": {
     "source_paths": [],
@@ -2603,10 +2727,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-change-control-model.schema.json": {
     "source_paths": [
@@ -2716,10 +2844,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of public dependency structure and reading paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable summary of public dependency structure and reading paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-dependency-graph.schema.json": {
     "source_paths": [
@@ -2758,10 +2890,14 @@
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
-      "scripts/check-verification-matrix.js"
+      "scripts/check-verification-matrix.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local verifier for dependency graph and reading-order coherence.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Repository-local verifier for dependency graph and reading-order coherence.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces"
   },
   "docs/assurance-case.md": {
     "source_paths": [
@@ -2810,10 +2946,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded assurance layer for public review.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable bounded assurance layer for public review.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-assurance-case.schema.json": {
     "source_paths": [
@@ -2892,10 +3032,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable co-movement map for reviewer, release, contract, and teaching surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable co-movement map for reviewer, release, contract, and teaching surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-update-coherence-map.schema.json": {
     "source_paths": [
@@ -2985,10 +3129,14 @@
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
       "/home/n1/codex-workspace/CHANGELOG.md",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
-      "/home/n1/codex-workspace/docs/release-evidence.md"
+      "/home/n1/codex-workspace/docs/release-evidence.md",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable active-maintenance and hardening timeline for the public specs surface."
+    "notes": "Human-readable active-maintenance and hardening timeline for the public specs surface.; synchronized with freshness surfaces"
   },
   "PUBLIC_EVIDENCE_TIMELINE.json": {
     "source_paths": [
@@ -3065,10 +3213,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded external review checklist for the public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable bounded external review checklist for the public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-review-scorecard.schema.json": {
     "source_paths": [
@@ -3099,10 +3251,14 @@
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
-      "scripts/check-verification-matrix.js"
+      "scripts/check-verification-matrix.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the machine-readable public review scorecard and bounded reviewer criteria.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Verifier for the machine-readable public review scorecard and bounded reviewer criteria.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces"
   },
   "docs/verification-matrix.md": {
     "source_paths": [
@@ -3132,10 +3288,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-verification-matrix.schema.json": {
     "source_paths": [
@@ -3158,10 +3318,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the machine-readable public verification matrix and check-family coverage.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Verifier for the machine-readable public verification matrix and check-family coverage.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces"
   },
   "docs/audience-paths.md": {
     "source_paths": [
@@ -3200,10 +3364,14 @@
       "PUBLIC_ADOPTION_READINESS.json",
       "docs/adoption-readiness.md",
       "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js"
+      "scripts/check-adoption-readiness.js",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded audience entry paths for the public surface; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
+    "notes": "Machine-readable bounded audience entry paths for the public surface; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
   },
   "schemas/public-audience-paths.schema.json": {
     "source_paths": [
@@ -3300,10 +3468,14 @@
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json",
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_STRENGTH_MAP.json",
-      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Bounded adoption-readiness guide for public audience profiles."
+    "notes": "Bounded adoption-readiness guide for public audience profiles.; synchronized with freshness surfaces"
   },
   "PUBLIC_ADOPTION_READINESS.json": {
     "source_paths": [
@@ -3311,10 +3483,14 @@
       "/home/n1/codex-workspace/PUBLIC_AUDIENCE_PATHS.json",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json",
-      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded adoption-readiness posture across public audiences."
+    "notes": "Machine-readable bounded adoption-readiness posture across public audiences.; synchronized with freshness surfaces"
   },
   "schemas/public-adoption-readiness.schema.json": {
     "source_paths": [
@@ -3327,9 +3503,64 @@
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json",
       "/home/n1/codex-workspace/docs/adoption-readiness.md",
-      "/home/n1/codex-workspace/package.json"
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
+      "/home/n1/codex-workspace/scripts/check-freshness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for adoption-readiness posture and its cross-surface synchronization."
+    "notes": "Verifier for adoption-readiness posture and its cross-surface synchronization.; synchronized with freshness surfaces"
+  },
+  "docs/freshness.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Bounded freshness and stale-summary guidance derived from release, timeline, coherence, evidence-strength, and adoption surfaces."
+  },
+  "PUBLIC_FRESHNESS_MODEL.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/freshness.md",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable freshness and stale-signal layer derived from public reviewer, release, and adoption surfaces."
+  },
+  "schemas/public-freshness-model.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema for the public freshness model."
+  },
+  "scripts/check-freshness.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
+      "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_AUDIENCE_PATHS.json",
+      "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for freshness-layer cross-surface coherence."
   }
 }

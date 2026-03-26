@@ -24,7 +24,9 @@ const requiredIds = [
   'single-verification-entrypoint-present',
   'verification-coverage-explicit',
   'audience-entry-paths-explicit',
-  'strength-of-evidence-explicit'
+  'strength-of-evidence-explicit',
+  'adoption-readiness-explicit',
+  'freshness-posture-explicit'
 ];
 
 const allowedStatuses = new Set(['pass', 'bounded']);
@@ -116,6 +118,8 @@ assert(catalogPaths.has('scripts/check-review-scorecard.js'), 'contract catalog 
 assert(catalogPaths.has('PUBLIC_VERIFICATION_MATRIX.json'), 'contract catalog must include PUBLIC_VERIFICATION_MATRIX.json');
 assert(catalogPaths.has('PUBLIC_AUDIENCE_PATHS.json'), 'contract catalog must include PUBLIC_AUDIENCE_PATHS.json');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'contract catalog must include PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(catalogPaths.has('PUBLIC_ADOPTION_READINESS.json'), 'contract catalog must include PUBLIC_ADOPTION_READINESS.json');
+assert(catalogPaths.has('PUBLIC_FRESHNESS_MODEL.json'), 'contract catalog must include PUBLIC_FRESHNESS_MODEL.json');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:review-scorecard'), 'release metadata must include review-scorecard verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_REVIEW_SCORECARD.json')), 'release metadata residual risks must mention PUBLIC_REVIEW_SCORECARD.json');
@@ -129,6 +133,12 @@ assert(audienceCriterion.strongest_surfaces.includes('PUBLIC_AUDIENCE_PATHS.json
 const strengthCriterion = scorecard.criteria.find((criterion) => criterion.id === 'strength-of-evidence-explicit');
 assert(strengthCriterion, 'review scorecard must define strength-of-evidence-explicit criterion');
 assert(strengthCriterion.strongest_surfaces.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'strength-of-evidence-explicit must reference PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+const adoptionCriterion = scorecard.criteria.find((criterion) => criterion.id === 'adoption-readiness-explicit');
+assert(adoptionCriterion, 'review scorecard must define adoption-readiness-explicit criterion');
+assert(adoptionCriterion.strongest_surfaces.includes('PUBLIC_ADOPTION_READINESS.json'), 'adoption-readiness-explicit must reference PUBLIC_ADOPTION_READINESS.json');
+const freshnessCriterion = scorecard.criteria.find((criterion) => criterion.id === 'freshness-posture-explicit');
+assert(freshnessCriterion, 'review scorecard must define freshness-posture-explicit criterion');
+assert(freshnessCriterion.strongest_surfaces.includes('PUBLIC_FRESHNESS_MODEL.json'), 'freshness-posture-explicit must reference PUBLIC_FRESHNESS_MODEL.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);
