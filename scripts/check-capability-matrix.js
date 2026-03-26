@@ -20,6 +20,7 @@ const requiredIds = [
   'assess-example-coverage',
   'inspect-maintainer-operations',
   'understand-change-control-and-deprecation',
+  'understand-artifact-ownership-and-authority',
   'trace-public-claims-end-to-end',
   'understand-projection-and-domain-boundaries',
   'evaluate-portability-and-import-trust',
@@ -85,16 +86,19 @@ assert(catalogPaths.has('PUBLIC_FAILURE_MODEL.json'), 'contract catalog must inc
 assert(catalogPaths.has('PUBLIC_EXAMPLE_COVERAGE.json'), 'contract catalog must include PUBLIC_EXAMPLE_COVERAGE.json');
 assert(catalogPaths.has('PUBLIC_MAINTENANCE_MODEL.json'), 'contract catalog must include PUBLIC_MAINTENANCE_MODEL.json');
 assert(catalogPaths.has('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'contract catalog must include PUBLIC_CHANGE_CONTROL_MODEL.json');
+assert(catalogPaths.has('PUBLIC_OWNERSHIP_MAP.json'), 'contract catalog must include PUBLIC_OWNERSHIP_MAP.json');
 assert(catalogPaths.has('PUBLIC_TRACEABILITY_MATRIX.json'), 'contract catalog must include PUBLIC_TRACEABILITY_MATRIX.json');
 assert(catalogPaths.has('docs/capability-matrix.md'), 'contract catalog must include docs/capability-matrix.md');
 assert(catalogPaths.has('docs/example-coverage.md'), 'contract catalog must include docs/example-coverage.md');
 assert(catalogPaths.has('docs/maintainer-operations.md'), 'contract catalog must include docs/maintainer-operations.md');
 assert(catalogPaths.has('docs/change-control.md'), 'contract catalog must include docs/change-control.md');
+assert(catalogPaths.has('docs/artifact-ownership.md'), 'contract catalog must include docs/artifact-ownership.md');
 assert(catalogPaths.has('docs/traceability.md'), 'contract catalog must include docs/traceability.md');
 assert(catalogPaths.has('schemas/public-capability-matrix.schema.json'), 'contract catalog must include schemas/public-capability-matrix.schema.json');
 assert(catalogPaths.has('schemas/public-example-coverage.schema.json'), 'contract catalog must include schemas/public-example-coverage.schema.json');
 assert(catalogPaths.has('schemas/public-maintenance-model.schema.json'), 'contract catalog must include schemas/public-maintenance-model.schema.json');
 assert(catalogPaths.has('schemas/public-change-control-model.schema.json'), 'contract catalog must include schemas/public-change-control-model.schema.json');
+assert(catalogPaths.has('schemas/public-ownership-map.schema.json'), 'contract catalog must include schemas/public-ownership-map.schema.json');
 assert(catalogPaths.has('schemas/public-traceability-matrix.schema.json'), 'contract catalog must include schemas/public-traceability-matrix.schema.json');
 assert(catalogPaths.has('scripts/check-capability-matrix.js'), 'contract catalog must include scripts/check-capability-matrix.js');
 
@@ -110,6 +114,7 @@ assert(readme.includes('PUBLIC_FAILURE_MODEL.json'), 'README.md must mention PUB
 assert(readme.includes('PUBLIC_EXAMPLE_COVERAGE.json'), 'README.md must mention PUBLIC_EXAMPLE_COVERAGE.json');
 assert(readme.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'README.md must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(readme.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'README.md must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
+assert(readme.includes('PUBLIC_OWNERSHIP_MAP.json'), 'README.md must mention PUBLIC_OWNERSHIP_MAP.json');
 assert(readme.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'README.md must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(reviewerGuide.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'reviewer guide must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'capability matrix doc must mention PUBLIC_CAPABILITY_MATRIX.json');
@@ -120,6 +125,7 @@ assert(capabilityDoc.includes('PUBLIC_FAILURE_MODEL.json'), 'capability matrix d
 assert(capabilityDoc.includes('PUBLIC_EXAMPLE_COVERAGE.json'), 'capability matrix doc must mention PUBLIC_EXAMPLE_COVERAGE.json');
 assert(capabilityDoc.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'capability matrix doc must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(capabilityDoc.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'capability matrix doc must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
+assert(capabilityDoc.includes('PUBLIC_OWNERSHIP_MAP.json'), 'capability matrix doc must mention PUBLIC_OWNERSHIP_MAP.json');
 assert(capabilityDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'capability matrix doc must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_PROJECT_PROFILE.json'), 'capability matrix doc must mention PUBLIC_PROJECT_PROFILE.json');
 assert(capabilityDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'capability matrix doc must mention PUBLIC_RELEASE_METADATA.json');

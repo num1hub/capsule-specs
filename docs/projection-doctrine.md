@@ -29,6 +29,7 @@ This repository follows a simple rule: upstream capsule law and validator artifa
 - keep discovery explicit in [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
 - keep published and deferred boundary choices explicit in [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - keep machine-readable summaries subordinate to stronger docs, schemas, OpenAPI, and raw capsule sources
+- keep ownership and stronger-source hierarchy explicit in [`../PUBLIC_OWNERSHIP_MAP.json`](../PUBLIC_OWNERSHIP_MAP.json)
 - verify the projected surface with `npm run verify:repo`
 
 ## Why this matters

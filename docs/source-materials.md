@@ -33,6 +33,7 @@ This repository is assembled from public-safe source surfaces rather than from a
 - machine-readable published-vs-deferred boundaries are tracked in [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - machine-readable API envelope coverage is tracked in [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
 - machine-readable portability posture is tracked in [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
+- machine-readable artifact ownership and authority hierarchy is tracked in [`../PUBLIC_OWNERSHIP_MAP.json`](../PUBLIC_OWNERSHIP_MAP.json)
 - consumer snippets derive from the public API example payloads rather than from private runtime secrets or internal deploy tooling
 
 ## Why this matters

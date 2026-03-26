@@ -28,6 +28,8 @@ These should stay aligned to the stronger contract surfaces, but they are still 
 
 These are useful for learning, testing, and reviews, but they should not be mistaken for deployed service telemetry.
 
+The bounded machine-readable summary of these ownership and authority splits lives in [`../PUBLIC_OWNERSHIP_MAP.json`](../PUBLIC_OWNERSHIP_MAP.json).
+
 ## Practical rule
 
 If you are:

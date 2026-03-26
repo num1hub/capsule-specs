@@ -84,6 +84,7 @@ const requiredIds = [
   'governance.example-coverage',
   'governance.maintenance-model',
   'governance.change-control-model',
+  'governance.ownership-map',
   'governance.traceability-matrix',
   'governance.projection-doctrine',
   'governance.domain-boundaries',
@@ -95,6 +96,7 @@ const requiredIds = [
   'governance.example-coverage-doc',
   'governance.maintainer-operations-doc',
   'governance.change-control-doc',
+  'governance.artifact-ownership-doc',
   'governance.traceability-doc',
   'schema.archive-bundle',
   'schema.portability-profile',
@@ -103,6 +105,7 @@ const requiredIds = [
   'schema.example-coverage',
   'schema.maintenance-model',
   'schema.change-control-model',
+  'schema.ownership-map',
   'schema.traceability-matrix',
   'examples.note',
   'examples.archive-bundle',
@@ -118,6 +121,7 @@ const requiredIds = [
   'governance.example-coverage-check',
   'governance.maintenance-model-check',
   'governance.change-control-check',
+  'governance.ownership-map-check',
   'governance.traceability-check'
 ];
 

@@ -1504,6 +1504,64 @@
         "npm run check:change-control",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "governance.artifact-ownership-doc",
+      "path": "docs/artifact-ownership.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:ownership-map",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.ownership-map",
+      "path": "PUBLIC_OWNERSHIP_MAP.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:ownership-map",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.ownership-map",
+      "path": "schemas/public-ownership-map.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:ownership-map",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.ownership-map-check",
+      "path": "scripts/check-ownership-map.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:ownership-map",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

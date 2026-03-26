@@ -25,7 +25,8 @@
     "PUBLIC_TRACEABILITY_MATRIX.json",
     "PUBLIC_EXAMPLE_COVERAGE.json",
     "PUBLIC_MAINTENANCE_MODEL.json",
-    "PUBLIC_CHANGE_CONTROL_MODEL.json"
+    "PUBLIC_CHANGE_CONTROL_MODEL.json",
+    "PUBLIC_OWNERSHIP_MAP.json"
   ],
   "strongest_evidence": {
     "contract_surface": [
@@ -50,7 +51,8 @@
       "docs/domain-boundaries.md",
       "docs/portability.md",
       "docs/maintainer-operations.md",
-      "docs/change-control.md"
+      "docs/change-control.md",
+      "docs/artifact-ownership.md"
     ],
     "machine_readable_evidence": [
       "PUBLIC_CONTRACT_CATALOG.json",
@@ -61,7 +63,8 @@
       "PUBLIC_RELEASE_METADATA.json",
       "PUBLIC_TRACEABILITY_MATRIX.json",
       "PUBLIC_MAINTENANCE_MODEL.json",
-      "PUBLIC_CHANGE_CONTROL_MODEL.json"
+      "PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "PUBLIC_OWNERSHIP_MAP.json"
     ]
   },
   "review_commands": [
@@ -74,7 +77,8 @@
     "The repo makes claim-to-evidence traceability explicit instead of leaving reviewers to infer it from scattered files.",
     "The repo makes public example coverage explicit instead of leaving reviewers to guess which fixtures exercise which contracts.",
     "The repo makes public maintainer workflow and release posture explicit instead of relying on implied maintenance behavior.",
-    "The repo makes additive, deprecated, and breaking public-change posture explicit instead of leaving change discipline implied across scattered docs."
+    "The repo makes additive, deprecated, and breaking public-change posture explicit instead of leaving change discipline implied across scattered docs.",
+    "The repo makes artifact-family ownership and stronger-source hierarchy explicit instead of leaving authority splits implicit across scattered docs."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",

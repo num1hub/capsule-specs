@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 150,
-    "manifest_entries": 150
+    "files": 154,
+    "manifest_entries": 154
   },
   "surface_summary": {
-    "catalog_entries": 101,
+    "catalog_entries": 105,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 63
+    "markdown_files": 64
   },
   "repo_local_checks": [
     {
@@ -54,6 +54,10 @@
     },
     {
       "command": "npm run check:change-control",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:ownership-map",
       "status": "pass"
     },
     {
@@ -138,6 +142,7 @@
     "PUBLIC_TRACEABILITY_MATRIX.json is a curated cross-surface map and can drift if maintainers stop updating it together with docs, schemas, examples, and verification artifacts",
     "PUBLIC_EXAMPLE_COVERAGE.json is a curated coverage summary and can drift if maintainers add or remove examples without updating the coverage layer",
     "PUBLIC_MAINTENANCE_MODEL.json is a bounded workflow summary and can drift if maintainers change public intake or release posture without updating the maintenance layer",
-    "PUBLIC_CHANGE_CONTROL_MODEL.json is a bounded change-control summary and must stay subordinate to the stronger versioning, compatibility, changelog, and release-evidence surfaces it references"
+    "PUBLIC_CHANGE_CONTROL_MODEL.json is a bounded change-control summary and must stay subordinate to the stronger versioning, compatibility, changelog, and release-evidence surfaces it references",
+    "PUBLIC_OWNERSHIP_MAP.json is a bounded ownership-and-authority summary and must stay subordinate to the stronger docs, schemas, provenance, and contract surfaces it references"
   ]
 }

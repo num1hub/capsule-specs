@@ -45,6 +45,7 @@ const expectedPublicIndexLinks = [
   '../PUBLIC_EXAMPLE_COVERAGE.json',
   '../PUBLIC_MAINTENANCE_MODEL.json',
   '../PUBLIC_CHANGE_CONTROL_MODEL.json',
+  '../PUBLIC_OWNERSHIP_MAP.json',
   '../PUBLIC_TRACEABILITY_MATRIX.json',
   'reviewer-guide.md',
   'evaluation-packet.md',
@@ -52,6 +53,7 @@ const expectedPublicIndexLinks = [
   'example-coverage.md',
   'maintainer-operations.md',
   'change-control.md',
+  'artifact-ownership.md',
   'traceability.md',
   '../PUBLIC_PROJECT_PROFILE.json',
   'capability-matrix.md',
@@ -74,6 +76,7 @@ const expectedPublicIndexLinks = [
   '../schemas/public-example-coverage.schema.json',
   '../schemas/public-maintenance-model.schema.json',
   '../schemas/public-change-control-model.schema.json',
+  '../schemas/public-ownership-map.schema.json',
   '../schemas/public-traceability-matrix.schema.json',
   'community-health.md',
   'client-recipes.md',
@@ -95,6 +98,7 @@ assert(readme.includes('PUBLIC_FAILURE_MODEL.json'), 'README.md must mention PUB
 assert(readme.includes('PUBLIC_EXAMPLE_COVERAGE.json'), 'README.md must mention PUBLIC_EXAMPLE_COVERAGE.json');
 assert(readme.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'README.md must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(readme.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'README.md must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
+assert(readme.includes('PUBLIC_OWNERSHIP_MAP.json'), 'README.md must mention PUBLIC_OWNERSHIP_MAP.json');
 assert(readme.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'README.md must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(readme.includes('schemas/validator-api-envelopes.schema.json'), 'README.md must mention schemas/validator-api-envelopes.schema.json');
 assert(readme.includes('docs/portability.md'), 'README.md must mention docs/portability.md');
@@ -104,6 +108,7 @@ assert(readme.includes('docs/failure-model.md'), 'README.md must mention docs/fa
 assert(readme.includes('docs/example-coverage.md'), 'README.md must mention docs/example-coverage.md');
 assert(readme.includes('docs/maintainer-operations.md'), 'README.md must mention docs/maintainer-operations.md');
 assert(readme.includes('docs/change-control.md'), 'README.md must mention docs/change-control.md');
+assert(readme.includes('docs/artifact-ownership.md'), 'README.md must mention docs/artifact-ownership.md');
 assert(readme.includes('docs/traceability.md'), 'README.md must mention docs/traceability.md');
 assert(readme.includes('docs/community-health.md'), 'README.md must mention docs/community-health.md');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
@@ -123,6 +128,7 @@ assert(releaseReview.includes('check-client-recipes.js'), 'PUBLIC_RELEASE_REVIEW
 assert(releaseReview.includes('check-community-health.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-community-health.js');
 assert(releaseReview.includes('check-maintenance-model.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-maintenance-model.js');
 assert(releaseReview.includes('check-change-control.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-change-control.js');
+assert(releaseReview.includes('check-ownership-map.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-ownership-map.js');
 assert(releaseReview.includes('check-project-profile.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-project-profile.js');
 assert(releaseReview.includes('check-capability-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-capability-matrix.js');
 assert(releaseReview.includes('check-traceability-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-traceability-matrix.js');
@@ -139,6 +145,7 @@ assert(verificationDoc.includes('check:client-recipes'), 'docs/verification.md m
 assert(verificationDoc.includes('check:community-health'), 'docs/verification.md must explain check:community-health');
 assert(verificationDoc.includes('check:maintenance-model'), 'docs/verification.md must explain check:maintenance-model');
 assert(verificationDoc.includes('check:change-control'), 'docs/verification.md must explain check:change-control');
+assert(verificationDoc.includes('check:ownership-map'), 'docs/verification.md must explain check:ownership-map');
 assert(verificationDoc.includes('check:project-profile'), 'docs/verification.md must explain check:project-profile');
 assert(verificationDoc.includes('check:capability-matrix'), 'docs/verification.md must explain check:capability-matrix');
 assert(releaseEvidenceDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'docs/release-evidence.md must mention PUBLIC_RELEASE_METADATA.json');
@@ -153,6 +160,7 @@ assert(releaseEvidenceDoc.includes('PUBLIC_FAILURE_MODEL.json'), 'docs/release-e
 assert(releaseEvidenceDoc.includes('PUBLIC_EXAMPLE_COVERAGE.json'), 'docs/release-evidence.md must mention PUBLIC_EXAMPLE_COVERAGE.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'docs/release-evidence.md must mention PUBLIC_MAINTENANCE_MODEL.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'docs/release-evidence.md must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
+assert(releaseEvidenceDoc.includes('PUBLIC_OWNERSHIP_MAP.json'), 'docs/release-evidence.md must mention PUBLIC_OWNERSHIP_MAP.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'docs/release-evidence.md must mention PUBLIC_TRACEABILITY_MATRIX.json');
 
 if (process.exitCode) {

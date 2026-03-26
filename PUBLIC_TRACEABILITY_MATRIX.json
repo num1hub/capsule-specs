@@ -219,6 +219,32 @@
         "npm run check:release",
         "npm run check:traceability"
       ]
+    },
+    {
+      "id": "artifact-ownership-and-authority",
+      "claim": "Public artifact families have explicit ownership and stronger-source hierarchy instead of leaving authority splits implicit across reviewer docs.",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/artifact-ownership.md",
+        "PUBLIC_OWNERSHIP_MAP.json",
+        "docs/trust-model.md",
+        "docs/source-materials.md",
+        "docs/projection-doctrine.md"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "SOURCE_MANIFEST.json",
+        "schemas/public-ownership-map.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:ownership-map",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

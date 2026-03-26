@@ -340,6 +340,30 @@
       ]
     },
     {
+      "id": "understand-artifact-ownership-and-authority",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Understand which public artifact families are actually maintained here and which stronger surfaces outrank reviewer-facing summaries or illustrative examples.",
+      "strongest_surfaces": [
+        "PUBLIC_OWNERSHIP_MAP.json",
+        "docs/artifact-ownership.md",
+        "docs/trust-model.md",
+        "docs/source-materials.md",
+        "docs/projection-doctrine.md"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "SOURCE_MANIFEST.json",
+        "schemas/public-ownership-map.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:ownership-map",
+        "npm run check:traceability",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "trace-provenance-and-release-state",
       "audience": "contributors",
       "readiness": "ready",

@@ -26,6 +26,7 @@
 - added machine-readable example coverage, an example-coverage guide, and verifier coverage for capsule/API fixture mapping
 - added machine-readable maintainer workflow modeling and verifier coverage for public intake/release posture
 - added machine-readable public change-control modeling and verifier coverage for additive, deprecated, and breaking contract posture
+- added machine-readable public artifact-ownership modeling and verifier coverage for stronger-source hierarchy across public families
 
 ## 0.1.0 - 2026-03-26
 

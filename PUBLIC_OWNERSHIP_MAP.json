@@ -1,0 +1,153 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "ownership_groups": [
+    {
+      "id": "capsule-law-family",
+      "summary": "Human-readable law docs and curated raw law capsules are maintained here, but upstream CapsuleOS law remains stronger when projection drift appears.",
+      "public_owner": "public CapsuleOS law surface",
+      "stronger_sources": [
+        "capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
+        "capsules/capsule.foundation.capsuleos.16-gates.v1.json",
+        "capsules/capsule.foundation.capsuleos.relation-types.v1.json"
+      ],
+      "owned_artifacts": [
+        "docs/5-element-law.md",
+        "docs/16-gates.md",
+        "docs/relation-types.md"
+      ],
+      "stability": "contract",
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:ownership-map"
+      ]
+    },
+    {
+      "id": "validator-contract-family",
+      "summary": "Validator-facing API docs, OpenAPI, and envelope schemas are public here, but live validator behavior remains the stronger source for runtime-only semantics.",
+      "public_owner": "public validator contract surface",
+      "stronger_sources": [
+        "openapi/validate.openapi.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "docs/validator.md"
+      ],
+      "owned_artifacts": [
+        "docs/api-envelopes.md",
+        "docs/route-reference.md",
+        "docs/client-recipes.md",
+        "examples/api/validate-request.single.json"
+      ],
+      "stability": "contract",
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:ownership-map"
+      ]
+    },
+    {
+      "id": "example-and-teaching-family",
+      "summary": "Public-safe examples, negative-path samples, and teaching docs are maintained here as illustrative surfaces subordinate to stronger contracts.",
+      "public_owner": "public examples and teaching surface",
+      "stronger_sources": [
+        "schemas/capsule-schema.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "docs/examples.md"
+      ],
+      "owned_artifacts": [
+        "examples/example-note.capsule.json",
+        "examples/example-project-hub.capsule.json",
+        "examples/api/validate-response.fail.json",
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "PUBLIC_FAILURE_MODEL.json"
+      ],
+      "stability": "illustrative",
+      "verify_commands": [
+        "npm run check:examples",
+        "npm run check:example-coverage",
+        "npm run check:failure-model",
+        "npm run check:ownership-map"
+      ]
+    },
+    {
+      "id": "reviewer-and-release-family",
+      "summary": "Reviewer-facing summaries and release evidence are maintained here but remain subordinate to stronger docs, schemas, examples, and catalogs.",
+      "public_owner": "public review and release surface",
+      "stronger_sources": [
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "owned_artifacts": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "docs/reviewer-guide.md"
+      ],
+      "stability": "maintained",
+      "verify_commands": [
+        "npm run check:evaluation-packet",
+        "npm run check:project-profile",
+        "npm run check:traceability",
+        "npm run check:release",
+        "npm run check:ownership-map"
+      ]
+    },
+    {
+      "id": "governance-and-change-family",
+      "summary": "Public governance, maintainer posture, and change-control docs are maintained here as the bounded workflow layer for the public surface.",
+      "public_owner": "public governance surface",
+      "stronger_sources": [
+        "VERSIONING.md",
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json"
+      ],
+      "owned_artifacts": [
+        "docs/community-health.md",
+        "docs/maintainer-operations.md",
+        "docs/change-control.md",
+        "CONTRIBUTING.md",
+        "MAINTAINERS.md"
+      ],
+      "stability": "maintained",
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:maintenance-model",
+        "npm run check:change-control",
+        "npm run check:ownership-map"
+      ]
+    },
+    {
+      "id": "projection-and-portability-family",
+      "summary": "Projection doctrine, boundary posture, provenance, and portability docs are maintained here as the trust layer for what this repo is and is not.",
+      "public_owner": "public projection and portability surface",
+      "stronger_sources": [
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_PORTABILITY_PROFILE.json"
+      ],
+      "owned_artifacts": [
+        "docs/projection-doctrine.md",
+        "docs/domain-boundaries.md",
+        "docs/source-materials.md",
+        "docs/portability.md",
+        "docs/archive-bundles.md"
+      ],
+      "stability": "maintained",
+      "verify_commands": [
+        "npm run audit:public-surface",
+        "npm run check:boundary-map",
+        "npm run check:portability",
+        "npm run check:ownership-map"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This file does not expose private internal ownership splits inside the upstream N1Hub runtime.",
+    "This file does not replace the stronger contract, validator, provenance, or release-evidence surfaces it references."
+  ],
+  "review_commands": [
+    "npm run check:ownership-map",
+    "npm run verify:repo"
+  ]
+}

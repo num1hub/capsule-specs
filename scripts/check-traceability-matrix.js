@@ -17,7 +17,8 @@ const requiredIds = [
   'reviewer-and-release-evidence',
   'portability-and-archive-contracts',
   'maintainer-intake-and-practical-usability',
-  'change-control-and-release-discipline'
+  'change-control-and-release-discipline',
+  'artifact-ownership-and-authority'
 ];
 
 const allowedAudiences = new Set(['contributors', 'integrators', 'tool-builders', 'reviewers']);
@@ -96,6 +97,7 @@ assert(verification.includes('check:traceability'), 'verification doc must menti
 assert(capabilityDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'capability-matrix doc must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(faq.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'FAQ must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(evaluationDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'evaluation-packet doc must mention PUBLIC_TRACEABILITY_MATRIX.json');
+assert(evaluationDoc.includes('PUBLIC_OWNERSHIP_MAP.json'), 'evaluation-packet doc must mention PUBLIC_OWNERSHIP_MAP.json');
 assert(schemasReadme.includes('public-traceability-matrix.schema.json'), 'schemas README must mention public-traceability schema');
 
 assert(catalogPaths.has('docs/traceability.md'), 'contract catalog must include docs/traceability.md');
