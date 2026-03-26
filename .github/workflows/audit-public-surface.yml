@@ -16,5 +16,5 @@ jobs:
         with:
           node-version: 22
 
-      - name: Audit public surface
-        run: node scripts/audit-public-surface.js
+      - name: Verify public surface
+        run: npm run verify:repo

@@ -1,0 +1,32 @@
+{
+  "name": "@n1hub/specs",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Public specification and reference surface for N1Hub and CapsuleOS.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n1hub/specs.git"
+  },
+  "homepage": "https://github.com/n1hub/specs",
+  "bugs": {
+    "url": "https://github.com/n1hub/specs/issues"
+  },
+  "keywords": [
+    "n1hub",
+    "capsuleos",
+    "schema",
+    "validator",
+    "open-core",
+    "knowledge-graph",
+    "specs"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "audit:public-surface": "node scripts/audit-public-surface.js",
+    "check:examples": "node scripts/check-example-contracts.js",
+    "verify:repo": "npm run audit:public-surface && npm run check:examples"
+  }
+}

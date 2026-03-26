@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.example.project-hub.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "project",
+    "subtype": "hub",
+    "author": "egor-n1",
+    "created_at": "2026-03-26T12:00:00Z",
+    "updated_at": "2026-03-26T12:00:00Z",
+    "name": "Example Project Hub Capsule",
+    "semantic_hash": "example-projecthub-public-specs-linked-graph-reference-shape",
+    "source": {
+      "uri": "https://github.com/n1hub/specs/examples/example-project-hub.capsule.json",
+      "type": "generated_public_example"
+    }
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Example Project Hub\n\nThis example hub groups the public note, task, and validator smoke capsules into one minimal project-shaped reference object."
+  },
+  "neuro_concentrate": {
+    "summary": "This example capsule demonstrates a small project hub on the public specification surface. Unlike the standalone note and task examples, the hub carries outbound links so readers can see how a capsule graph starts to form even in a tiny public example set. The hub is marked active because it represents a live organizing node rather than an isolated draft. Its role is educational: it shows how multiple example capsules can coexist as one small reference graph while remaining simple enough for tooling, documentation, and validator exercises that want a compact but linked public example.",
+    "keywords": [
+      "example",
+      "project-hub",
+      "capsule",
+      "graph",
+      "links",
+      "reference",
+      "public-specs"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 0.97,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "example-projecthub-public-specs-linked-graph-reference-shape"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.example.note.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.example.task.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.example.validator-valid.v1",
+        "relation_type": "references"
+      }
+    ],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "2c4bd8bb48cf761a175d0b3d6cc9d434bfcc2fa075b51d73e6182c87ec51884aeb8a5fd1bfc55b47017aa3e65d4e7dd40bd819137cae8412893cf68b2d9d7ee1"
+}

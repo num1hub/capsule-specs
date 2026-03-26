@@ -24,6 +24,8 @@ This repository is that home.
 - [`ONBOARDING.md`](ONBOARDING.md) for the full contributor path
 - [`docs/overview.md`](docs/overview.md) for the public boundary
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
+- [`docs/source-materials.md`](docs/source-materials.md) for provenance and projection inputs
+- [`docs/faq.md`](docs/faq.md) for the shortest answers to scope questions
 - [`ROADMAP.md`](ROADMAP.md) for the current evolution path
 
 ## Repository layout
@@ -47,8 +49,10 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - issue and pull-request templates
 - machine-readable provenance in [`SOURCE_MANIFEST.json`](SOURCE_MANIFEST.json)
 - a public-release review in [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md)
+- repo-local verification via `npm run verify:repo`
 - local validator-backed example checks
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
+- a release checklist in [`RELEASING.md`](RELEASING.md)
 
 ## Scope
 
@@ -70,6 +74,7 @@ Maintainer and review policy:
 3. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
 4. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
 5. Review the raw capsule sources in [`capsules/`](capsules/).
+6. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

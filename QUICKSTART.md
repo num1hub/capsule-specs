@@ -28,4 +28,4 @@ Use this guide when you want the shortest safe entry into the repository.
 
 - Read [`CONTRIBUTING.md`](CONTRIBUTING.md).
 - Read [`SECURITY.md`](SECURITY.md) before reporting trust-sensitive problems.
-- Run `node scripts/audit-public-surface.js` before publishing a serious change to the public surface.
+- Run `npm run verify:repo` before publishing a serious change to the public surface.

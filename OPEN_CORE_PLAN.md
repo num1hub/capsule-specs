@@ -35,7 +35,9 @@ Create a small, public-safe repository that explains the capsule model, publishe
 - root onboarding, governance, maintainer, roadmap, and changelog files
 - public docs derived from capsules and validator docs
 - JSON Schema artifacts
-- synthetic examples for validation and education
+- synthetic examples for validation and education, including one linked multi-capsule graph example
+- source-material, FAQ, and release-process docs so the public surface stays auditable and operable
+- repo-local package metadata and verification scripts for reviewable maintainer workflows
 - provenance and release-review artifacts
 
 ## Explicit exclusions

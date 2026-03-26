@@ -1,0 +1,25 @@
+# FAQ
+
+## Is this the full N1Hub application?
+
+No. This repository is the public specification and reference surface only.
+
+## What is a capsule?
+
+A capsule is a five-element knowledge artifact with identity, payload, semantic summary, graph links, and a cryptographic seal.
+
+## Where is the runtime?
+
+The runtime lives outside this repository. This repository publishes the public-facing model, schema, examples, and validator boundary.
+
+## Why are there raw capsules here?
+
+The `capsules/` directory gives readers a small, inspectable source set that backs the human-readable docs.
+
+## Why is there an intentionally invalid example?
+
+To show the difference between structural correctness and trust. A capsule can look correct but still fail the final integrity-seal gate.
+
+## How do I validate linked examples?
+
+Use the known-ID catalog in `examples/example-known-ids.json` when your validator supports link-resolution inputs. The project-hub example is designed to demonstrate graph semantics, not just single-file shape.

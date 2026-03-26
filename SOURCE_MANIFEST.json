@@ -40,6 +40,11 @@
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection."
   },
+  "RELEASING.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Release checklist for keeping docs, examples, and provenance aligned."
+  },
   "MAINTAINERS.md": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -83,10 +88,20 @@
     "transformation_type": "generated",
     "notes": "Repo-specific support guidance."
   },
+  ".editorconfig": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository formatting defaults for Markdown, JSON, YAML, and JavaScript."
+  },
   ".gitignore": {
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Repository hygiene rules, including exclusion of local Codex state."
+  },
+  "package.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository metadata and lightweight verification scripts for the public surface."
   },
   ".github/ISSUE_TEMPLATE/bug_report.md": {
     "source_paths": [],
@@ -199,6 +214,20 @@
     "transformation_type": "derived",
     "notes": "Guide to the example set and expected validation behavior."
   },
+  "docs/faq.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Short answers to scope and validation questions for the public repository."
+  },
+  "docs/source-materials.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json",
+      "/home/n1/n1hub.com/docs/validator.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Projection and provenance summary for the public-safe source classes."
+  },
   "schemas/capsule-schema.json": {
     "source_paths": [
       "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json",
@@ -248,6 +277,20 @@
     "transformation_type": "generated",
     "notes": "Synthetic negative example with intentionally incorrect G16 seal."
   },
+  "examples/example-project-hub.capsule.json": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.note-fixture.v1.json",
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.task-fixture.v1.json",
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.validator-valid-fixture.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Synthetic linked graph example referencing the public note, task, and validator-smoke capsules."
+  },
+  "examples/example-known-ids.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Known-ID catalog used for link-aware validation of graph examples."
+  },
   "examples/README.md": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -272,6 +315,11 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Repository-local audit script for manifest coverage and JSON integrity."
+  },
+  "scripts/check-example-contracts.js": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository-local example and known-ID consistency checks."
   },
   "openapi/validate.openapi.json": {
     "source_paths": [

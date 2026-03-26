@@ -4,9 +4,10 @@
 
 - community health files: `README`, `LICENSE`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `SUPPORT`
 - root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
-- public docs for the capsule law, validator, relation types, schema, examples, anchor governance, and repository boundary
+- repo ergonomics files: `.editorconfig`, `package.json`, `RELEASING`
+- public docs for the capsule law, validator, relation types, schema, examples, anchor governance, repository boundary, FAQ, and source materials
 - machine-readable schemas
-- synthetic example capsules
+- synthetic example capsules, a linked graph example, and a known-ID catalog
 - raw public law capsules
 - live validator OpenAPI reference
 
@@ -36,7 +37,16 @@ Validated with the live validator from `/home/n1/n1hub.com` on 2026-03-26:
 Repository-local audit on 2026-03-26:
 
 - `node scripts/audit-public-surface.js`: pass
-- manifest coverage: `48` files / `48` manifest entries
+- `node scripts/check-example-contracts.js`: pass
+- manifest coverage: `56` files / `56` manifest entries
+
+Upstream validator checks on 2026-03-26:
+
+- `examples/example-note.capsule.json`: pass
+- `examples/example-task.capsule.json`: pass
+- `examples/example-validator-valid.capsule.json`: pass
+- `examples/example-validator-invalid-g16.capsule.json`: expected fail on `G16`
+- `examples/example-project-hub.capsule.json`: pass when validated with `--ids-file examples/example-known-ids.json`
 
 ## Residual risks
 
