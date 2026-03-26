@@ -19,7 +19,8 @@
       "supporting_surfaces": [
         "docs/repository-scope.md",
         "PUBLIC_PROJECT_PROFILE.json",
-        "PUBLIC_DEPENDENCY_GRAPH.json"
+        "PUBLIC_DEPENDENCY_GRAPH.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
       ],
       "bounded_by": [
         "docs/source-materials.md",
@@ -48,7 +49,8 @@
         "docs/evaluation-packet.md",
         "PUBLIC_CONTRACT_CATALOG.json",
         "PUBLIC_DEPENDENCY_GRAPH.json",
-        "docs/public-contract-index.md"
+        "docs/public-contract-index.md",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
       ],
       "bounded_by": [
         "docs/release-evidence.md",

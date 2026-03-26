@@ -96,8 +96,10 @@ for (const requiredId of requiredDeferredIds) {
 }
 
 assert(catalogPaths.has('PUBLIC_BOUNDARY_MAP.json'), 'contract catalog must include PUBLIC_BOUNDARY_MAP.json');
+assert(catalogPaths.has('PUBLIC_LIMITATIONS_REGISTER.json'), 'contract catalog must include PUBLIC_LIMITATIONS_REGISTER.json');
 assert(catalogPaths.has('docs/projection-doctrine.md'), 'contract catalog must include docs/projection-doctrine.md');
 assert(catalogPaths.has('docs/domain-boundaries.md'), 'contract catalog must include docs/domain-boundaries.md');
+assert(catalogPaths.has('docs/limitations-register.md'), 'contract catalog must include docs/limitations-register.md');
 assert(catalogPaths.has('docs/generator-readiness.md'), 'contract catalog must include docs/generator-readiness.md');
 assert(catalogPaths.has('schemas/public-boundary-map.schema.json'), 'contract catalog must include schemas/public-boundary-map.schema.json');
 assert(catalogPaths.has('scripts/check-boundary-map.js'), 'contract catalog must include scripts/check-boundary-map.js');
@@ -108,8 +110,10 @@ const reviewerGuide = fs.readFileSync(path.join(repoRoot, 'docs', 'reviewer-guid
 const sourceMaterials = fs.readFileSync(path.join(repoRoot, 'docs', 'source-materials.md'), 'utf8');
 const boundaryDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'domain-boundaries.md'), 'utf8');
 const generatorDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'generator-readiness.md'), 'utf8');
+const scopeDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'repository-scope.md'), 'utf8');
 
 assert(readme.includes('PUBLIC_BOUNDARY_MAP.json'), 'README.md must mention PUBLIC_BOUNDARY_MAP.json');
+assert(readme.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'README.md must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(readme.includes('docs/projection-doctrine.md'), 'README.md must mention docs/projection-doctrine.md');
 assert(readme.includes('docs/domain-boundaries.md'), 'README.md must mention docs/domain-boundaries.md');
 assert(readme.includes('docs/generator-readiness.md'), 'README.md must mention docs/generator-readiness.md');
@@ -122,6 +126,8 @@ assert(reviewerGuide.includes('PUBLIC_BOUNDARY_MAP.json'), 'reviewer guide must 
 assert(sourceMaterials.includes('capsules-as-projections'), 'source-materials doc must mention capsules-as-projections');
 assert(sourceMaterials.includes('generator-readiness'), 'source-materials doc must mention generator-readiness');
 assert(boundaryDoc.includes('PUBLIC_BOUNDARY_MAP.json'), 'domain-boundaries doc must mention PUBLIC_BOUNDARY_MAP.json');
+assert(boundaryDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'domain-boundaries doc must mention PUBLIC_LIMITATIONS_REGISTER.json');
+assert(scopeDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'repository-scope doc must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(generatorDoc.includes('capsule.contract.generator-projection-index.v1'), 'generator-readiness doc must mention generator projection index');
 
 if (process.exitCode) {

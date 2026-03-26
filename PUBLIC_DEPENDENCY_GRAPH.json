@@ -155,6 +155,20 @@
         "npm run check:update-coherence",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "limitations-and-deferred-scope",
+      "path": "PUBLIC_LIMITATIONS_REGISTER.json",
+      "role": "limitations-summary",
+      "depends_on": [
+        "provenance-and-boundaries",
+        "assurance-and-limits",
+        "update-coherence-and-sync"
+      ],
+      "verify_commands": [
+        "npm run check:limitations-register",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -164,8 +178,8 @@
       "steps": [
         "repo-readme",
         "reviewer-summaries",
-        "traceability-and-capabilities",
         "assurance-and-limits",
+        "limitations-and-deferred-scope",
         "release-evidence",
         "update-coherence-and-sync"
       ]

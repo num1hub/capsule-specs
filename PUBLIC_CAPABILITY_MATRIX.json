@@ -438,6 +438,30 @@
       ]
     },
     {
+      "id": "inspect-explicit-public-limitations",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Inspect deferred scope, non-promises, and bounded public limitations without inferring them from scattered caveats.",
+      "strongest_surfaces": [
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "docs/limitations-register.md",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "docs/repository-scope.md",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_ASSURANCE_CASE.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "docs/domain-boundaries.md",
+        "schemas/public-limitations-register.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:limitations-register",
+        "npm run check:boundary-map",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "trace-provenance-and-release-state",
       "audience": "contributors",
       "readiness": "ready",

@@ -89,6 +89,7 @@ const requiredIds = [
   'governance.dependency-graph',
   'governance.assurance-case',
   'governance.update-coherence',
+  'governance.limitations-register',
   'governance.projection-doctrine',
   'governance.domain-boundaries',
   'governance.generator-readiness',
@@ -104,6 +105,7 @@ const requiredIds = [
   'governance.dependency-graph-doc',
   'governance.assurance-case-doc',
   'governance.update-coherence-doc',
+  'governance.limitations-register-doc',
   'schema.archive-bundle',
   'schema.portability-profile',
   'schema.evaluation-packet',
@@ -116,6 +118,7 @@ const requiredIds = [
   'schema.dependency-graph',
   'schema.assurance-case',
   'schema.update-coherence',
+  'schema.limitations-register',
   'examples.note',
   'examples.archive-bundle',
   'examples.api-unauthorized',
@@ -134,7 +137,8 @@ const requiredIds = [
   'governance.traceability-check',
   'governance.dependency-graph-check',
   'governance.assurance-case-check',
-  'governance.update-coherence-check'
+  'governance.update-coherence-check',
+  'governance.limitations-register-check'
 ];
 
 for (const requiredId of requiredIds) {

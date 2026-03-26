@@ -325,6 +325,33 @@
         "npm run check:release",
         "npm run check:traceability"
       ]
+    },
+    {
+      "id": "explicit-limitations-and-deferred-scope",
+      "claim": "Deferred scope and public non-promises are explicit instead of being left to scattered caveats across reviewer docs and release review.",
+      "audiences": [
+        "reviewers",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "docs/limitations-register.md",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "docs/repository-scope.md",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_ASSURANCE_CASE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "docs/domain-boundaries.md",
+        "schemas/public-limitations-register.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:limitations-register",
+        "npm run check:boundary-map",
+        "npm run check:traceability",
+        "npm run check:release"
+      ]
     }
   ],
   "non_claims": [

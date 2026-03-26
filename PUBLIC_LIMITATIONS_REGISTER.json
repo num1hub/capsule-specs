@@ -1,0 +1,82 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "limitations": [
+    {
+      "id": "deferred-runtime-domains",
+      "class": "deferred-scope",
+      "summary": "Important upstream runtime domains such as A2C, graph traversal, branching/diff, orchestration, agents, plugins, and hosted infra are intentionally not published here.",
+      "impact": "Reviewers and integrators should treat this repo as a narrow contract and reviewer surface, not as the full N1Hub runtime.",
+      "strongest_surfaces": [
+        "PUBLIC_BOUNDARY_MAP.json",
+        "docs/domain-boundaries.md",
+        "docs/repository-scope.md",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "verify_commands": [
+        "npm run check:boundary-map",
+        "npm run check:limitations-register"
+      ]
+    },
+    {
+      "id": "bounded-reviewer-summaries",
+      "class": "summary-limit",
+      "summary": "Machine-readable reviewer summaries remain subordinate to stronger docs, schemas, examples, provenance, and release evidence.",
+      "impact": "Outside readers should not treat reviewer JSON layers as stronger than the contract surfaces they summarize.",
+      "strongest_surfaces": [
+        "PUBLIC_ASSURANCE_CASE.json",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "verify_commands": [
+        "npm run check:assurance-case",
+        "npm run check:project-profile",
+        "npm run check:limitations-register"
+      ]
+    },
+    {
+      "id": "no-hosted-service-guarantee",
+      "class": "service-limit",
+      "summary": "The repo documents validator-facing contracts and portability posture but does not promise a hosted service endpoint, export/import runtime, or operational SLA.",
+      "impact": "Integrators must treat API examples and client recipes as contract illustrations, not proof of a permanent hosted deployment.",
+      "strongest_surfaces": [
+        "docs/portability.md",
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "PUBLIC_FAILURE_MODEL.json",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:failure-model",
+        "npm run check:limitations-register"
+      ]
+    },
+    {
+      "id": "public-sync-depends-on-maintainer-discipline",
+      "class": "process-limit",
+      "summary": "Coherence across reviewer, release, contract, and teaching surfaces depends on maintainers updating them together; the repo publishes rules and checks but cannot eliminate human drift risk entirely.",
+      "impact": "Reviewer-facing trust still depends on maintainers continuing to update release evidence, sync groups, and summary layers together.",
+      "strongest_surfaces": [
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "verify_commands": [
+        "npm run check:update-coherence",
+        "npm run check:maintenance-model",
+        "npm run check:change-control",
+        "npm run check:limitations-register"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This file does not enumerate every private upstream limitation or every deferred roadmap item in the broader N1Hub runtime.",
+    "This file does not replace the stronger boundary, assurance, release, portability, and maintainer surfaces it references."
+  ],
+  "review_commands": [
+    "npm run check:limitations-register",
+    "npm run verify:repo"
+  ]
+}

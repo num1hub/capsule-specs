@@ -40,6 +40,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable bounded public assurance case.
 - `public-update-coherence-map.schema.json`
   JSON Schema for the machine-readable public co-movement and sync-group map.
+- `public-limitations-register.schema.json`
+  JSON Schema for the machine-readable public limitations and deferred-scope register.
 - `public-traceability-matrix.schema.json`
   JSON Schema for the machine-readable claim-to-evidence traceability matrix.
 

@@ -23,4 +23,4 @@ This repository is the public specification surface for N1Hub and CapsuleOS.
 
 Narrow scope keeps the repository reviewable and useful. The goal is to provide a clean OSS surface that outsiders can understand quickly and that maintainers can evolve without leaking private operational material.
 
-See [`domain-boundaries.md`](domain-boundaries.md) and [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json) for the explicit published-vs-deferred boundary map.
+See [`domain-boundaries.md`](domain-boundaries.md) and [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json) for the explicit published-vs-deferred boundary map, and [`limitations-register.md`](limitations-register.md) plus [`../PUBLIC_LIMITATIONS_REGISTER.json`](../PUBLIC_LIMITATIONS_REGISTER.json) for the bounded public limitations summary.

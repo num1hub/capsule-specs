@@ -911,6 +911,50 @@
       ]
     },
     {
+      "id": "governance.limitations-register",
+      "path": "PUBLIC_LIMITATIONS_REGISTER.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:limitations-register",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.limitations-register-check",
+      "path": "scripts/check-limitations-register.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:limitations-register",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.limitations-register-doc",
+      "path": "docs/limitations-register.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:limitations-register",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.maintainer-operations-doc",
       "path": "docs/maintainer-operations.md",
       "kind": "governance",
@@ -1500,6 +1544,20 @@
       ],
       "verify_commands": [
         "npm run check:failure-model",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "schema.limitations-register",
+      "path": "schemas/public-limitations-register.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:limitations-register",
         "npm run check:catalog"
       ]
     },

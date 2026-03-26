@@ -36,6 +36,8 @@ The bounded public assurance summary lives in [`../PUBLIC_ASSURANCE_CASE.json`](
 
 The bounded co-movement summary lives in [`../PUBLIC_UPDATE_COHERENCE_MAP.json`](../PUBLIC_UPDATE_COHERENCE_MAP.json).
 
+The bounded limitations summary lives in [`../PUBLIC_LIMITATIONS_REGISTER.json`](../PUBLIC_LIMITATIONS_REGISTER.json).
+
 ## Important boundary
 
 The traceability matrix is a curated public summary. It does not claim to capture every private runtime dependency or every internal change path from the upstream N1Hub repository.

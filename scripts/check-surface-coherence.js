@@ -50,6 +50,7 @@ const expectedPublicIndexLinks = [
   '../PUBLIC_DEPENDENCY_GRAPH.json',
   '../PUBLIC_ASSURANCE_CASE.json',
   '../PUBLIC_UPDATE_COHERENCE_MAP.json',
+  '../PUBLIC_LIMITATIONS_REGISTER.json',
   'reviewer-guide.md',
   'evaluation-packet.md',
   'failure-model.md',
@@ -61,6 +62,7 @@ const expectedPublicIndexLinks = [
   'dependency-graph.md',
   'assurance-case.md',
   'update-coherence.md',
+  'limitations-register.md',
   '../PUBLIC_PROJECT_PROFILE.json',
   'capability-matrix.md',
   '../PUBLIC_CAPABILITY_MATRIX.json',
@@ -87,6 +89,7 @@ const expectedPublicIndexLinks = [
   '../schemas/public-dependency-graph.schema.json',
   '../schemas/public-assurance-case.schema.json',
   '../schemas/public-update-coherence-map.schema.json',
+  '../schemas/public-limitations-register.schema.json',
   'community-health.md',
   'client-recipes.md',
   'trust-model.md'
@@ -112,6 +115,7 @@ assert(readme.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'README.md must menti
 assert(readme.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'README.md must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(readme.includes('PUBLIC_ASSURANCE_CASE.json'), 'README.md must mention PUBLIC_ASSURANCE_CASE.json');
 assert(readme.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'README.md must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
+assert(readme.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'README.md must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(readme.includes('schemas/validator-api-envelopes.schema.json'), 'README.md must mention schemas/validator-api-envelopes.schema.json');
 assert(readme.includes('docs/portability.md'), 'README.md must mention docs/portability.md');
 assert(readme.includes('docs/archive-bundles.md'), 'README.md must mention docs/archive-bundles.md');
@@ -125,6 +129,7 @@ assert(readme.includes('docs/traceability.md'), 'README.md must mention docs/tra
 assert(readme.includes('docs/dependency-graph.md'), 'README.md must mention docs/dependency-graph.md');
 assert(readme.includes('docs/assurance-case.md'), 'README.md must mention docs/assurance-case.md');
 assert(readme.includes('docs/update-coherence.md'), 'README.md must mention docs/update-coherence.md');
+assert(readme.includes('docs/limitations-register.md'), 'README.md must mention docs/limitations-register.md');
 assert(readme.includes('docs/community-health.md'), 'README.md must mention docs/community-health.md');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(readme.includes('docs/capability-matrix.md'), 'README.md must mention docs/capability-matrix.md');
@@ -147,6 +152,7 @@ assert(releaseReview.includes('check-ownership-map.js'), 'PUBLIC_RELEASE_REVIEW.
 assert(releaseReview.includes('check-dependency-graph.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-dependency-graph.js');
 assert(releaseReview.includes('check-assurance-case.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-assurance-case.js');
 assert(releaseReview.includes('check-update-coherence.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-update-coherence.js');
+assert(releaseReview.includes('check-limitations-register.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-limitations-register.js');
 assert(releaseReview.includes('check-project-profile.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-project-profile.js');
 assert(releaseReview.includes('check-capability-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-capability-matrix.js');
 assert(releaseReview.includes('check-traceability-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-traceability-matrix.js');
@@ -167,6 +173,7 @@ assert(verificationDoc.includes('check:ownership-map'), 'docs/verification.md mu
 assert(verificationDoc.includes('check:dependency-graph'), 'docs/verification.md must explain check:dependency-graph');
 assert(verificationDoc.includes('check:assurance-case'), 'docs/verification.md must explain check:assurance-case');
 assert(verificationDoc.includes('check:update-coherence'), 'docs/verification.md must explain check:update-coherence');
+assert(verificationDoc.includes('check:limitations-register'), 'docs/verification.md must explain check:limitations-register');
 assert(verificationDoc.includes('check:project-profile'), 'docs/verification.md must explain check:project-profile');
 assert(verificationDoc.includes('check:capability-matrix'), 'docs/verification.md must explain check:capability-matrix');
 assert(releaseEvidenceDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'docs/release-evidence.md must mention PUBLIC_RELEASE_METADATA.json');
@@ -186,6 +193,7 @@ assert(releaseEvidenceDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'docs/rel
 assert(releaseEvidenceDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'docs/release-evidence.md must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_ASSURANCE_CASE.json'), 'docs/release-evidence.md must mention PUBLIC_ASSURANCE_CASE.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'docs/release-evidence.md must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
+assert(releaseEvidenceDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'docs/release-evidence.md must mention PUBLIC_LIMITATIONS_REGISTER.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

@@ -44,4 +44,4 @@ These domains exist upstream, but they are intentionally not published as runtim
 - published files should be enough for review and early integration, but not misrepresented as the complete product runtime
 - when a deferred domain becomes public, it should arrive as an explicit boundary with docs, contracts, examples, and verification rather than as a partial leak
 
-For the machine-readable form of this boundary statement, see [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json).
+For the machine-readable form of this boundary statement, see [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json). For the bounded reviewer-facing summary of deferred scope and non-promises, see [`limitations-register.md`](limitations-register.md) and [`../PUBLIC_LIMITATIONS_REGISTER.json`](../PUBLIC_LIMITATIONS_REGISTER.json).

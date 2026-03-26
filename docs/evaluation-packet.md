@@ -23,6 +23,7 @@ This repository includes a compact evaluation packet for external reviewers, pro
 - [`../PUBLIC_DEPENDENCY_GRAPH.json`](../PUBLIC_DEPENDENCY_GRAPH.json)
 - [`../PUBLIC_ASSURANCE_CASE.json`](../PUBLIC_ASSURANCE_CASE.json)
 - [`../PUBLIC_UPDATE_COHERENCE_MAP.json`](../PUBLIC_UPDATE_COHERENCE_MAP.json)
+- [`../PUBLIC_LIMITATIONS_REGISTER.json`](../PUBLIC_LIMITATIONS_REGISTER.json)
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
@@ -35,3 +36,5 @@ Reviewers often need one bounded path through a repository. The evaluation packe
 The assurance case strengthens that path further by making the bounded public claims, explicit non-claims, and stronger evidence limits legible in one reviewer-facing layer.
 
 The update-coherence map strengthens that path further by making co-moving review, release, and contract surfaces explicit instead of leaving release sync as maintainer folklore.
+
+The limitations register strengthens that path by making deferred scope, non-promises, and bounded reviewer expectations explicit instead of leaving them scattered across caveat prose.

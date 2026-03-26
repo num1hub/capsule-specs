@@ -29,6 +29,7 @@ Each capability captures:
 - follow the public dependency graph
 - review the bounded public assurance case
 - inspect required public update-coherence groups
+- inspect explicit deferred scope and public limitations
 - trace public claims end-to-end
 - understand projection and domain boundaries
 - review portability and archive trust posture
@@ -65,6 +66,8 @@ Good OSS repositories are not only readable; they are usable. The capability mat
   Answers: which bounded public claims are being made, which stronger evidence supports them, and which limits keep them honest.
 - [`../PUBLIC_UPDATE_COHERENCE_MAP.json`](../PUBLIC_UPDATE_COHERENCE_MAP.json)
   Answers: which public surfaces must co-move when reviewer, release, contract, or teaching layers change.
+- [`../PUBLIC_LIMITATIONS_REGISTER.json`](../PUBLIC_LIMITATIONS_REGISTER.json)
+  Answers: which important domains remain deferred, which guarantees are not being made, and where the public specs surface intentionally stops.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Answers: how the strongest public claims connect to docs, schemas, examples, and verification commands.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)

@@ -142,6 +142,10 @@ assert(
   'release metadata must include the update-coherence verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:limitations-register'),
+  'release metadata must include the limitations-register verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -212,6 +216,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_UPDATE_COHERENCE_MAP.json')),
   'release metadata residual risks must mention PUBLIC_UPDATE_COHERENCE_MAP.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_LIMITATIONS_REGISTER.json')),
+  'release metadata residual risks must mention PUBLIC_LIMITATIONS_REGISTER.json'
 );
 
 if (process.exitCode) {

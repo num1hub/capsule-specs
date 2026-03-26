@@ -98,7 +98,8 @@
         "docs/reviewer-guide.md",
         "PUBLIC_PROJECT_PROFILE.json",
         "PUBLIC_RELEASE_METADATA.json",
-        "PUBLIC_UPDATE_COHERENCE_MAP.json"
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
       ],
       "verify_commands": [
         "npm run check:project-profile",
@@ -115,7 +116,8 @@
     "PUBLIC_CONTRACT_CATALOG.json",
     "PUBLIC_RELEASE_REVIEW.md",
     "PUBLIC_RELEASE_METADATA.json",
-    "PUBLIC_UPDATE_COHERENCE_MAP.json"
+    "PUBLIC_UPDATE_COHERENCE_MAP.json",
+    "PUBLIC_LIMITATIONS_REGISTER.json"
   ],
   "non_claims": [
     "This file does not promise indefinite backward compatibility for all public artifacts while the repository remains in 0.x.",

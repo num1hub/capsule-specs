@@ -80,6 +80,7 @@ const schemasReadme = fs.readFileSync(path.join(repoRoot, 'schemas', 'README.md'
 
 assert(readme.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'README.md must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(readme.includes('docs/update-coherence.md'), 'README.md must mention docs/update-coherence.md');
+assert(readme.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'README.md must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(quickstart.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'QUICKSTART.md must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(reviewerGuide.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'reviewer guide must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(publicIndex.includes('update-coherence.md'), 'public contract index must mention docs/update-coherence.md');
@@ -89,6 +90,7 @@ assert(releaseEvidence.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'release-ev
 assert(verification.includes('check:update-coherence'), 'verification doc must mention check:update-coherence');
 assert(capabilityDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'capability-matrix doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(evaluationDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'evaluation packet doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
+assert(evaluationDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'evaluation packet doc must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(faq.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'FAQ must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(maintainerOps.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'maintainer-operations doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(changeControl.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'change-control doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
@@ -101,6 +103,7 @@ assert(catalogPaths.has('docs/update-coherence.md'), 'contract catalog must incl
 assert(catalogPaths.has('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'contract catalog must include PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(catalogPaths.has('schemas/public-update-coherence-map.schema.json'), 'contract catalog must include public-update-coherence schema');
 assert(catalogPaths.has('scripts/check-update-coherence.js'), 'contract catalog must include update-coherence verifier');
+assert(catalogPaths.has('PUBLIC_LIMITATIONS_REGISTER.json'), 'contract catalog must include PUBLIC_LIMITATIONS_REGISTER.json');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:update-coherence'), 'release metadata must include update-coherence verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_UPDATE_COHERENCE_MAP.json')), 'release metadata residual risks must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
