@@ -24,6 +24,8 @@ This executes all repository-local checks in the expected order.
   Validates the published API example payloads against `schemas/validator-api-envelopes.schema.json`.
 - `npm run check:client-recipes`
   Verifies curl and Node consumer snippets, route targeting, env-var assumptions, and Node syntax.
+- `npm run check:community-health`
+  Verifies contributor-facing docs, issue templates, support/security alignment, and intake-surface references.
 - `npm run check:docs`
   Verifies Markdown links across the public documentation surface.
 - `npm run check:catalog`
@@ -49,4 +51,5 @@ Serious public changes should not be considered complete until:
 - changed examples or contracts are rechecked against the live validator where applicable
 - `CHANGELOG.md`, `PUBLIC_RELEASE_REVIEW.md`, `PUBLIC_RELEASE_METADATA.json`, and `PUBLIC_CONTRACT_CATALOG.json` stay aligned
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
+- contributor-facing intake surfaces stay aligned with `docs/community-health.md`
 - client recipes stay aligned with the API examples and route docs

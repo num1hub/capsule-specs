@@ -30,6 +30,8 @@ The client recipes and trust-model docs do not replace release evidence, but the
 
 The API envelope schema and its dedicated verification script strengthen that claim by keeping the public HTTP example layer machine-checkable.
 
+The community-health doc and its dedicated verification script strengthen the repository's OSS maintainership surface by keeping contributor intake explicit and reviewable.
+
 ## Release discipline
 
 When the public surface changes, these files should move together:

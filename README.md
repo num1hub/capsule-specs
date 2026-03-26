@@ -31,6 +31,7 @@ This repository is that home.
 - [`docs/public-contract-index.md`](docs/public-contract-index.md) for a complete public surface map
 - [`docs/contract-catalog.md`](docs/contract-catalog.md) for the machine-readable contract map
 - [`docs/verification.md`](docs/verification.md) for the repo verification stack
+- [`docs/community-health.md`](docs/community-health.md) for contributor intake and maintainer-facing community boundaries
 - [`docs/release-evidence.md`](docs/release-evidence.md) for human and machine-readable release evidence
 - [`docs/source-materials.md`](docs/source-materials.md) for provenance and projection inputs
 - [`docs/faq.md`](docs/faq.md) for the shortest answers to scope questions
@@ -61,6 +62,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 
 - community files for contributions, conduct, support, and security
 - issue and pull-request templates
+- explicit community-health guidance and intake verification
 - machine-readable provenance in [`SOURCE_MANIFEST.json`](SOURCE_MANIFEST.json)
 - machine-readable contract discovery in [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json)
 - machine-readable release evidence in [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json)

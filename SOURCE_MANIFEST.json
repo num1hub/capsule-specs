@@ -3,7 +3,9 @@
     "source_paths": [
       "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
@@ -20,7 +22,9 @@
     "source_paths": [
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.onboarding.v1.json",
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js"
     ],
     "transformation_type": "derived",
     "notes": "Root-level onboarding guide adapted to the narrower public repository."
@@ -39,7 +43,9 @@
     "notes": "Public roadmap for the open-core specification surface."
   },
   "CHANGELOG.md": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/community-health.md"
+    ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection."
   },
@@ -81,7 +87,9 @@
   },
   "CONTRIBUTING.md": {
     "source_paths": [
-      "/home/n1/n1hub-repo-vault/governance/capsule.governance.contributing.v1.json"
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.contributing.v1.json",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js"
     ],
     "transformation_type": "derived",
     "notes": "Adapted for the narrower public specs surface."
@@ -101,7 +109,10 @@
     "notes": "Condensed for the public specs repository."
   },
   "SUPPORT.md": {
-    "source_paths": [],
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js"
+    ],
     "transformation_type": "generated",
     "notes": "Repo-specific support guidance."
   },
@@ -117,7 +128,9 @@
   },
   "package.json": {
     "source_paths": [
-      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js"
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface."
@@ -300,7 +313,8 @@
   },
   "docs/public-contract-index.md": {
     "source_paths": [
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/community-health.md"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
@@ -310,7 +324,8 @@
       "/home/n1/codex-workspace/PUBLIC_RELEASE_REVIEW.md",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/VERSIONING.md",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/community-health.md"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
@@ -325,7 +340,9 @@
       "/home/n1/codex-workspace/scripts/check-contract-catalog.js",
       "/home/n1/codex-workspace/scripts/check-release-metadata.js",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects."
@@ -574,7 +591,13 @@
   "PUBLIC_CONTRACT_CATALOG.json": {
     "source_paths": [
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js",
+      "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/integration_question.md",
+      "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/contract_change.md",
+      "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/config.yml",
+      "/home/n1/codex-workspace/.github/PULL_REQUEST_TEMPLATE.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths."
@@ -582,7 +605,9 @@
   "PUBLIC_RELEASE_METADATA.json": {
     "source_paths": [
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
@@ -590,7 +615,9 @@
   "PUBLIC_RELEASE_REVIEW.md": {
     "source_paths": [
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js"
     ],
     "transformation_type": "generated",
     "notes": "Public-release review and validation summary."
@@ -631,21 +658,26 @@
   },
   "scripts/check-contract-catalog.js": {
     "source_paths": [
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/community-health.md"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local validation for the machine-readable public contract catalog."
   },
   "scripts/check-surface-coherence.js": {
     "source_paths": [
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts."
   },
   "scripts/check-release-metadata.js": {
     "source_paths": [
-      "/home/n1/codex-workspace/scripts/check-api-schemas.js"
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/scripts/check-community-health.js"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence."
@@ -728,5 +760,52 @@
     ],
     "transformation_type": "generated",
     "notes": "Repo-local schema coverage check for public validator API example payloads."
+  },
+  "docs/community-health.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/CONTRIBUTING.md",
+      "/home/n1/codex-workspace/SUPPORT.md",
+      "/home/n1/codex-workspace/SECURITY.md",
+      "/home/n1/codex-workspace/MAINTAINERS.md",
+      "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/bug_report.md",
+      "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/feature_request.md",
+      "/home/n1/codex-workspace/.github/PULL_REQUEST_TEMPLATE.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Public contributor-intake and community-health guide for the specs repository."
+  },
+  ".github/ISSUE_TEMPLATE/integration_question.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/integration-guide.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Issue template for public integration and contract-consumption questions."
+  },
+  ".github/ISSUE_TEMPLATE/contract_change.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/GOVERNANCE.md",
+      "/home/n1/codex-workspace/VERSIONING.md",
+      "/home/n1/codex-workspace/CONTRIBUTING.md",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_REVIEW.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Issue template for deliberate public contract changes."
+  },
+  "scripts/check-community-health.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/README.md",
+      "/home/n1/codex-workspace/ONBOARDING.md",
+      "/home/n1/codex-workspace/CONTRIBUTING.md",
+      "/home/n1/codex-workspace/SUPPORT.md",
+      "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/config.yml",
+      "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/integration_question.md",
+      "/home/n1/codex-workspace/.github/ISSUE_TEMPLATE/contract_change.md",
+      "/home/n1/codex-workspace/.github/PULL_REQUEST_TEMPLATE.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local check for community health and contributor-intake surfaces."
   }
 }

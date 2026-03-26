@@ -5,6 +5,7 @@
 - Use GitHub issues for bugs, documentation gaps, and feature requests tied to this public repository.
 - Use pull requests for concrete fixes to docs, schemas, and examples.
 - Use private maintainer contact only for security-sensitive reports.
+- Read [`docs/community-health.md`](docs/community-health.md) if you need the intended public intake paths before opening an issue.
 
 ## Scope of support
 

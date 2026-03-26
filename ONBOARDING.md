@@ -12,6 +12,7 @@ Welcome to the public N1Hub specification surface.
 
 - Read [`CONTRIBUTING.md`](CONTRIBUTING.md), [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md), and [`SECURITY.md`](SECURITY.md).
 - Read [`GOVERNANCE.md`](GOVERNANCE.md) to understand source-of-truth and review expectations.
+- Read [`docs/community-health.md`](docs/community-health.md) to understand the intended issue and PR intake paths.
 
 ## Step 3: Understand the public technical surface
 

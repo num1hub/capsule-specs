@@ -3,6 +3,7 @@
 ## Included materials
 
 - community health files: `README`, `LICENSE`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `SUPPORT`
+- community intake surfaces: `docs/community-health.md`, issue templates, and the pull-request template
 - root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
 - repo ergonomics and legal files: `.editorconfig`, `package.json`, `RELEASING`, `NOTICE`
 - public docs for the capsule law, validator, relation types, schema, API envelopes, integration guidance, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
@@ -47,11 +48,12 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-api-examples.js`: pass
 - `node scripts/check-api-schemas.js`: pass
 - `node scripts/check-client-recipes.js`: pass
+- `node scripts/check-community-health.js`: pass
 - `node scripts/check-doc-links.js`: pass
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `98` files / `98` manifest entries
+- manifest coverage: `102` files / `102` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

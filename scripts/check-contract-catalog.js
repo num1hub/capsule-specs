@@ -74,6 +74,7 @@ const requiredIds = [
   'validator.client-recipes',
   'schema.capsule',
   'schema.validator-api-envelopes',
+  'governance.community-health',
   'examples.note',
   'governance.manifest',
   'governance.contract-index',

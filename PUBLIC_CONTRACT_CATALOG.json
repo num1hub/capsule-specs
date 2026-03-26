@@ -608,6 +608,108 @@
       ]
     },
     {
+      "id": "governance.community-health",
+      "path": "docs/community-health.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "integrators"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:community-health",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "community.issue-config",
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "community.issue-template.bug-report",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "community.issue-template.feature-request",
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "community.issue-template.integration-question",
+      "path": ".github/ISSUE_TEMPLATE/integration_question.md",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "community.issue-template.contract-change",
+      "path": ".github/ISSUE_TEMPLATE/contract_change.md",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "community.pr-template",
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.verification",
       "path": "docs/verification.md",
       "kind": "verification-doc",
@@ -663,6 +765,21 @@
       ],
       "verify_commands": [
         "npm run check:api-schemas",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.community-health-check",
+      "path": "scripts/check-community-health.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
         "npm run check:catalog",
         "npm run check:surface"
       ]

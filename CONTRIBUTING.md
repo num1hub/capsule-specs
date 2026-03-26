@@ -10,6 +10,8 @@ Use a normal GitHub pull request when you are changing public documentation, sch
 
 When a change affects architectural truth, validation law, or the underlying capsule model, open an issue first and describe the affected boundary and source material. This repository is intentionally projection-oriented, so changes to public files should remain aligned with the upstream source surfaces.
 
+Use the repository issue templates where possible. They keep bug reports, integration questions, and contract-change proposals scoped to the public surface.
+
 ## Required discipline
 
 - explain the boundary you are changing

@@ -15,6 +15,7 @@
 - added machine-readable release metadata, release schemas, and Apache-2 notice hygiene
 - added consumer-facing client recipes, trust-model docs, and recipe verification
 - added machine-readable validator API envelope schema coverage plus repo-local schema validation for public API examples
+- added community-health docs, intake templates, and automated verification for contributor-facing surfaces
 
 ## 0.1.0 - 2026-03-26
 

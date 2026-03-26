@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 98,
-    "manifest_entries": 98
+    "files": 102,
+    "manifest_entries": 102
   },
   "surface_summary": {
-    "catalog_entries": 46,
+    "catalog_entries": 54,
     "example_capsules": 5,
     "api_example_files": 11,
-    "markdown_files": 46
+    "markdown_files": 49
   },
   "repo_local_checks": [
     {
@@ -34,6 +34,10 @@
     },
     {
       "command": "npm run check:client-recipes",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:community-health",
       "status": "pass"
     },
     {
@@ -83,6 +87,7 @@
     "API response examples are illustrative contract samples, not recorded live HTTP captures from a deployed public service",
     "validator API envelope schemas are public projections aligned to OpenAPI and curated examples, but the live validator remains the stronger source of truth for runtime-only behavior",
     "client recipes assume a compatible deployed validator base URL and bearer-token auth model rather than representing a guaranteed hosted endpoint",
-    "local hidden Codex state is excluded via .gitignore and must remain outside any public commit"
+    "local hidden Codex state is excluded via .gitignore and must remain outside any public commit",
+    "community intake is public and explicit, but maintainer responsiveness and future issue volume still depend on actual GitHub operation after publication"
   ]
 }
