@@ -308,6 +308,21 @@
       ]
     },
     {
+      "id": "governance.evidence-strength-doc",
+      "path": "docs/evidence-strength.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-strength",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.evidence-timeline-doc",
       "path": "docs/evidence-timeline.md",
       "kind": "governance",
@@ -1094,6 +1109,21 @@
       ]
     },
     {
+      "id": "governance.evidence-strength-map",
+      "path": "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-strength",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.evidence-timeline",
       "path": "PUBLIC_EVIDENCE_TIMELINE.json",
       "kind": "provenance",
@@ -1483,6 +1513,21 @@
       ]
     },
     {
+      "id": "schema.evidence-strength-map",
+      "path": "schemas/public-evidence-strength-map.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-strength",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "schema.evidence-timeline",
       "path": "schemas/public-evidence-timeline.schema.json",
       "kind": "schema",
@@ -1827,6 +1872,20 @@
         "npm run check:evaluation-packet",
         "npm run check:catalog",
         "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.evidence-strength-check",
+      "path": "scripts/check-evidence-strength.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-strength",
+        "npm run check:catalog"
       ]
     },
     {

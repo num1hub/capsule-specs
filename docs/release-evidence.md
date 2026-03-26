@@ -47,6 +47,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable map of which verification families protect which public surfaces and failure classes.
 - [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json)
   Machine-readable map of the bounded role-specific entry paths through the public surface.
+- [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json)
+  Machine-readable map of which public surfaces are strongest, secondary, or illustrative.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Machine-readable map from public claims to strongest surfaces and verification commands.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
@@ -100,6 +102,8 @@ The verification matrix strengthens release discipline by making check coverage 
 
 The audience-paths layer strengthens release discipline by making role-specific navigation explicit instead of leaving reviewer, contributor, integrator, and maintainer entry order to folklore.
 
+The evidence-strength layer strengthens release discipline by making stronger-source hierarchy explicit instead of letting reviewers or integrators over-trust summary layers.
+
 The traceability matrix strengthens reviewability by making claim-to-evidence and claim-to-verification links explicit instead of leaving them implicit across multiple files.
 
 The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
@@ -131,6 +135,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_REVIEW_SCORECARD.json`
 - `PUBLIC_VERIFICATION_MATRIX.json`
 - `PUBLIC_AUDIENCE_PATHS.json`
+- `PUBLIC_EVIDENCE_STRENGTH_MAP.json`
 - `PUBLIC_TRACEABILITY_MATRIX.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`

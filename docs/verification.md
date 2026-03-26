@@ -52,6 +52,8 @@ This executes all repository-local checks in the expected order.
   Verifies `PUBLIC_VERIFICATION_MATRIX.json`, command-family coverage, protected public surfaces, and reviewer-facing verification references.
 - `npm run check:audience-paths`
   Verifies `PUBLIC_AUDIENCE_PATHS.json`, role-specific entry paths, and the surrounding onboarding / reviewer / integration references.
+- `npm run check:evidence-strength`
+  Verifies `PUBLIC_EVIDENCE_STRENGTH_MAP.json`, stronger-source hierarchy, and the surrounding trust / reviewer / compatibility references.
 - `npm run check:docs`
   Verifies Markdown links across the public documentation surface.
 - `npm run check:catalog`
@@ -106,6 +108,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_REVIEW_SCORECARD.json` stays aligned with the real reviewer criteria, strongest evidence, release evidence, and bounded limits it summarizes
 - `PUBLIC_VERIFICATION_MATRIX.json` stays aligned with the real check stack, protected artifacts, failure classes, and release evidence it summarizes
 - `PUBLIC_AUDIENCE_PATHS.json` stays aligned with the real onboarding, reviewer, contributor, integrator, tool-builder, and maintainer entry paths it summarizes
+- `PUBLIC_EVIDENCE_STRENGTH_MAP.json` stays aligned with the real stronger-source hierarchy across schemas, OpenAPI, examples, summaries, and release evidence
 - `PUBLIC_TRACEABILITY_MATRIX.json` stays aligned with the real docs, schemas, examples, and verification commands it claims to connect
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`

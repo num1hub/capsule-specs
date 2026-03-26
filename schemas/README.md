@@ -50,6 +50,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable public verification coverage matrix.
 - `public-audience-paths.schema.json`
   JSON Schema for the machine-readable bounded role-specific audience paths.
+- `public-evidence-strength-map.schema.json`
+  JSON Schema for the machine-readable bounded stronger-source and evidence-strength hierarchy.
 - `public-traceability-matrix.schema.json`
   JSON Schema for the machine-readable claim-to-evidence traceability matrix.
 

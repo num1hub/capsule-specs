@@ -222,6 +222,19 @@
         "npm run check:audience-paths",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "evidence-strength",
+      "path": "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+      "role": "authority-summary",
+      "depends_on": [
+        "reviewer-summaries",
+        "audience-entry-paths"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-strength",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -233,6 +246,7 @@
         "reviewer-summaries",
         "assurance-and-limits",
         "limitations-and-deferred-scope",
+        "evidence-strength",
         "release-evidence",
         "maintenance-evolution",
         "review-scorecard",
@@ -247,6 +261,7 @@
       "steps": [
         "repo-readme",
         "audience-entry-paths",
+        "evidence-strength",
         "law-and-schema",
         "validator-http-contract",
         "examples-and-fixtures",
@@ -263,6 +278,7 @@
         "ownership-and-authority",
         "update-coherence-and-sync",
         "audience-entry-paths",
+        "evidence-strength",
         "release-evidence",
         "maintenance-evolution",
         "review-scorecard",

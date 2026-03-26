@@ -30,6 +30,8 @@ These are useful for learning, testing, and reviews, but they should not be mist
 
 The bounded machine-readable summary of these ownership and authority splits lives in [`../PUBLIC_OWNERSHIP_MAP.json`](../PUBLIC_OWNERSHIP_MAP.json).
 
+The bounded machine-readable summary of the stronger-source hierarchy itself lives in [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json).
+
 ## Practical rule
 
 If you are:

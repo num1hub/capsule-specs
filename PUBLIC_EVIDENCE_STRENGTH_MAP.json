@@ -1,0 +1,222 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Publish a bounded machine-readable hierarchy of which public surfaces are strongest, which are secondary, and which are illustrative so external readers do not confuse summaries with stronger contracts.",
+  "families": [
+    {
+      "id": "capsule-law-and-shape",
+      "summary": "Capsule law docs, raw law capsules, and schema surfaces together define the public shape, with schema and raw capsules outranking prose when drift appears.",
+      "strongest_surfaces": [
+        "schemas/capsule-schema.json",
+        "capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
+        "capsules/capsule.foundation.capsuleos.16-gates.v1.json",
+        "capsules/capsule.foundation.capsuleos.relation-types.v1.json"
+      ],
+      "secondary_surfaces": [
+        "docs/5-element-law.md",
+        "docs/16-gates.md",
+        "docs/relation-types.md",
+        "docs/schema-reference.md"
+      ],
+      "illustrative_surfaces": [
+        "docs/overview.md",
+        "examples/example-note.capsule.json",
+        "examples/example-task.capsule.json"
+      ],
+      "preferred_for": [
+        "understanding capsule outer shape",
+        "checking public law terminology",
+        "reviewing reference semantics"
+      ],
+      "not_authoritative_for": [
+        "live runtime-only validator behavior",
+        "hosted service guarantees"
+      ],
+      "verify_commands": [
+        "npm run check:catalog",
+        "npm run check:evidence-strength"
+      ]
+    },
+    {
+      "id": "validator-http-and-envelopes",
+      "summary": "OpenAPI, envelope schemas, and validator docs are strongest for the public HTTP contract, while examples and recipes remain subordinate.",
+      "strongest_surfaces": [
+        "openapi/validate.openapi.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "docs/validator.md"
+      ],
+      "secondary_surfaces": [
+        "docs/api-envelopes.md",
+        "docs/route-reference.md",
+        "docs/integration-guide.md"
+      ],
+      "illustrative_surfaces": [
+        "examples/api/validate-request.single.json",
+        "examples/api/validate-response.pass.json",
+        "examples/client/node-validate-single.mjs"
+      ],
+      "preferred_for": [
+        "building validator-facing clients",
+        "understanding public request and response contracts",
+        "checking route and envelope expectations"
+      ],
+      "not_authoritative_for": [
+        "deployed endpoint telemetry",
+        "runtime-only edge semantics beyond the published contract"
+      ],
+      "verify_commands": [
+        "npm run check:api-schemas",
+        "npm run check:api-examples",
+        "npm run check:evidence-strength"
+      ]
+    },
+    {
+      "id": "examples-and-negative-evidence",
+      "summary": "Examples and bounded failure artifacts are intentionally illustrative and must remain subordinate to stronger schemas, OpenAPI, and validator behavior.",
+      "strongest_surfaces": [
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "PUBLIC_FAILURE_MODEL.json",
+        "examples/example-validator-invalid-g16.capsule.json",
+        "examples/example-project-hub.capsule.json"
+      ],
+      "secondary_surfaces": [
+        "docs/examples.md",
+        "docs/example-coverage.md",
+        "docs/failure-model.md"
+      ],
+      "illustrative_surfaces": [
+        "examples/api/validate-response.fail.json",
+        "examples/api/unauthorized-response.sample.json",
+        "examples/api/conflict-response.sample.json"
+      ],
+      "preferred_for": [
+        "learning edge cases safely",
+        "reviewing bounded negative evidence",
+        "understanding which examples cover which public surfaces"
+      ],
+      "not_authoritative_for": [
+        "full validator semantics on their own",
+        "production service behavior snapshots"
+      ],
+      "verify_commands": [
+        "npm run check:example-coverage",
+        "npm run check:failure-model",
+        "npm run check:evidence-strength"
+      ]
+    },
+    {
+      "id": "reviewer-and-release-summaries",
+      "summary": "Reviewer and release summaries are useful for navigation and evaluation, but remain subordinate to stronger contracts, examples, provenance, and release evidence.",
+      "strongest_surfaces": [
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_RELEASE_REVIEW.md",
+        "SOURCE_MANIFEST.json"
+      ],
+      "secondary_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_AUDIENCE_PATHS.json"
+      ],
+      "illustrative_surfaces": [
+        "docs/reviewer-guide.md",
+        "docs/evaluation-packet.md",
+        "docs/release-evidence.md"
+      ],
+      "preferred_for": [
+        "bounded external evaluation",
+        "finding strongest evidence quickly",
+        "checking current public release state"
+      ],
+      "not_authoritative_for": [
+        "replacing stronger schemas or OpenAPI",
+        "claiming publication of the private runtime"
+      ],
+      "verify_commands": [
+        "npm run check:release",
+        "npm run check:evaluation-packet",
+        "npm run check:evidence-strength"
+      ]
+    },
+    {
+      "id": "governance-and-maintenance",
+      "summary": "Governance, maintenance, change-control, ownership, and audience-path layers are strongest for public workflow posture, but they remain bounded public summaries rather than private maintainer playbooks.",
+      "strongest_surfaces": [
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_OWNERSHIP_MAP.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_AUDIENCE_PATHS.json"
+      ],
+      "secondary_surfaces": [
+        "docs/maintainer-operations.md",
+        "docs/change-control.md",
+        "docs/artifact-ownership.md",
+        "docs/audience-paths.md",
+        "CONTRIBUTING.md"
+      ],
+      "illustrative_surfaces": [
+        "docs/community-health.md",
+        "MAINTAINERS.md",
+        "GOVERNANCE.md"
+      ],
+      "preferred_for": [
+        "reviewing public maintainer posture",
+        "understanding how public changes should move",
+        "understanding which role-specific path to follow"
+      ],
+      "not_authoritative_for": [
+        "private operator workflow details",
+        "internal upstream escalation paths"
+      ],
+      "verify_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:change-control",
+        "npm run check:audience-paths",
+        "npm run check:evidence-strength"
+      ]
+    },
+    {
+      "id": "projection-and-portability",
+      "summary": "Projection, boundary, provenance, portability, and archive-contract layers are strongest for understanding what this repo is, what it excludes, and how portability is bounded publicly.",
+      "strongest_surfaces": [
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "schemas/archive-bundle.schema.json"
+      ],
+      "secondary_surfaces": [
+        "docs/projection-doctrine.md",
+        "docs/domain-boundaries.md",
+        "docs/source-materials.md",
+        "docs/portability.md",
+        "docs/archive-bundles.md"
+      ],
+      "illustrative_surfaces": [
+        "examples/archive/archive-bundle.sample.json",
+        "docs/trust-model.md",
+        "docs/compatibility.md"
+      ],
+      "preferred_for": [
+        "understanding published versus deferred scope",
+        "understanding public portability posture",
+        "reviewing archive and import trust boundaries"
+      ],
+      "not_authoritative_for": [
+        "proof of a public hosted import or export service",
+        "private upstream projection tooling internals"
+      ],
+      "verify_commands": [
+        "npm run check:boundary-map",
+        "npm run check:portability",
+        "npm run check:evidence-strength"
+      ]
+    }
+  ],
+  "review_commands": [
+    "npm run check:evidence-strength",
+    "npm run verify:repo"
+  ]
+}

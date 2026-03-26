@@ -46,6 +46,8 @@ The bounded verification-coverage summary lives in [`../PUBLIC_VERIFICATION_MATR
 
 The bounded role-specific navigation summary lives in [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json).
 
+The bounded stronger-source hierarchy summary lives in [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json).
+
 ## Important boundary
 
 The traceability matrix is a curated public summary. It does not claim to capture every private runtime dependency or every internal change path from the upstream N1Hub repository.

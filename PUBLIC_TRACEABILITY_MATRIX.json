@@ -457,6 +457,32 @@
         "npm run check:audience-paths",
         "npm run check:traceability"
       ]
+    },
+    {
+      "id": "evidence-strength-and-stronger-sources",
+      "claim": "The public surface makes stronger-source hierarchy explicit instead of forcing readers to infer authority from filenames or summary prose.",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/evidence-strength.md",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "docs/trust-model.md",
+        "docs/compatibility.md",
+        "PUBLIC_OWNERSHIP_MAP.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-strength",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

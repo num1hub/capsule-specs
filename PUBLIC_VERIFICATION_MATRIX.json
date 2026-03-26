@@ -131,6 +131,7 @@
         "npm run check:evaluation-packet",
         "npm run check:review-scorecard",
         "npm run check:audience-paths",
+        "npm run check:evidence-strength",
         "npm run check:capability-matrix"
       ],
       "protects": [
@@ -138,20 +139,23 @@
         "PUBLIC_EVALUATION_PACKET.json",
         "PUBLIC_REVIEW_SCORECARD.json",
         "PUBLIC_CAPABILITY_MATRIX.json",
-        "PUBLIC_AUDIENCE_PATHS.json"
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json"
       ],
       "strongest_surfaces": [
         "PUBLIC_PROJECT_PROFILE.json",
         "PUBLIC_EVALUATION_PACKET.json",
         "PUBLIC_REVIEW_SCORECARD.json",
         "PUBLIC_AUDIENCE_PATHS.json",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_CAPABILITY_MATRIX.json"
       ],
       "failure_modes_prevented": [
         "stale reviewer shortcuts",
         "hand-wavy maturity claims",
         "unclear supported outcomes",
-        "role-inappropriate entry paths"
+        "role-inappropriate entry paths",
+        "over-trusted summary layers"
       ]
     },
     {

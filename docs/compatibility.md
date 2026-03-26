@@ -35,3 +35,5 @@ When a breaking public contract change is necessary, update all of these togethe
 - [`PUBLIC_RELEASE_REVIEW.md`](../PUBLIC_RELEASE_REVIEW.md)
 
 The bounded machine-readable summary of this posture lives in [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json).
+
+The bounded machine-readable summary of which public surfaces are strongest versus secondary or illustrative lives in [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json).

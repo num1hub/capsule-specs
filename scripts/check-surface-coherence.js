@@ -55,6 +55,7 @@ const expectedPublicIndexLinks = [
   '../PUBLIC_REVIEW_SCORECARD.json',
   '../PUBLIC_VERIFICATION_MATRIX.json',
   '../PUBLIC_AUDIENCE_PATHS.json',
+  '../PUBLIC_EVIDENCE_STRENGTH_MAP.json',
   'reviewer-guide.md',
   'evaluation-packet.md',
   'failure-model.md',
@@ -71,6 +72,7 @@ const expectedPublicIndexLinks = [
   'review-scorecard.md',
   'verification-matrix.md',
   'audience-paths.md',
+  'evidence-strength.md',
   '../PUBLIC_PROJECT_PROFILE.json',
   'capability-matrix.md',
   '../PUBLIC_CAPABILITY_MATRIX.json',
@@ -102,6 +104,7 @@ const expectedPublicIndexLinks = [
   '../schemas/public-review-scorecard.schema.json',
   '../schemas/public-verification-matrix.schema.json',
   '../schemas/public-audience-paths.schema.json',
+  '../schemas/public-evidence-strength-map.schema.json',
   'community-health.md',
   'client-recipes.md',
   'trust-model.md'
@@ -132,6 +135,7 @@ assert(readme.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'README.md must mention
 assert(readme.includes('PUBLIC_REVIEW_SCORECARD.json'), 'README.md must mention PUBLIC_REVIEW_SCORECARD.json');
 assert(readme.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'README.md must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(readme.includes('PUBLIC_AUDIENCE_PATHS.json'), 'README.md must mention PUBLIC_AUDIENCE_PATHS.json');
+assert(readme.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'README.md must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 assert(readme.includes('schemas/validator-api-envelopes.schema.json'), 'README.md must mention schemas/validator-api-envelopes.schema.json');
 assert(readme.includes('docs/portability.md'), 'README.md must mention docs/portability.md');
 assert(readme.includes('docs/archive-bundles.md'), 'README.md must mention docs/archive-bundles.md');
@@ -150,6 +154,7 @@ assert(readme.includes('docs/evidence-timeline.md'), 'README.md must mention doc
 assert(readme.includes('docs/review-scorecard.md'), 'README.md must mention docs/review-scorecard.md');
 assert(readme.includes('docs/verification-matrix.md'), 'README.md must mention docs/verification-matrix.md');
 assert(readme.includes('docs/audience-paths.md'), 'README.md must mention docs/audience-paths.md');
+assert(readme.includes('docs/evidence-strength.md'), 'README.md must mention docs/evidence-strength.md');
 assert(readme.includes('docs/community-health.md'), 'README.md must mention docs/community-health.md');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(readme.includes('docs/capability-matrix.md'), 'README.md must mention docs/capability-matrix.md');
@@ -177,6 +182,7 @@ assert(releaseReview.includes('check-evidence-timeline.js'), 'PUBLIC_RELEASE_REV
 assert(releaseReview.includes('check-review-scorecard.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-review-scorecard.js');
 assert(releaseReview.includes('check-verification-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-verification-matrix.js');
 assert(releaseReview.includes('check-audience-paths.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-audience-paths.js');
+assert(releaseReview.includes('check-evidence-strength.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-evidence-strength.js');
 assert(releaseReview.includes('check-project-profile.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-project-profile.js');
 assert(releaseReview.includes('check-capability-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-capability-matrix.js');
 assert(releaseReview.includes('check-traceability-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-traceability-matrix.js');
@@ -202,6 +208,7 @@ assert(verificationDoc.includes('check:evidence-timeline'), 'docs/verification.m
 assert(verificationDoc.includes('check:review-scorecard'), 'docs/verification.md must explain check:review-scorecard');
 assert(verificationDoc.includes('check:verification-matrix'), 'docs/verification.md must explain check:verification-matrix');
 assert(verificationDoc.includes('check:audience-paths'), 'docs/verification.md must explain check:audience-paths');
+assert(verificationDoc.includes('check:evidence-strength'), 'docs/verification.md must explain check:evidence-strength');
 assert(verificationDoc.includes('check:project-profile'), 'docs/verification.md must explain check:project-profile');
 assert(verificationDoc.includes('check:capability-matrix'), 'docs/verification.md must explain check:capability-matrix');
 assert(releaseEvidenceDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'docs/release-evidence.md must mention PUBLIC_RELEASE_METADATA.json');
@@ -226,6 +233,7 @@ assert(releaseEvidenceDoc.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'docs/relea
 assert(releaseEvidenceDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'docs/release-evidence.md must mention PUBLIC_REVIEW_SCORECARD.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'docs/release-evidence.md must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_AUDIENCE_PATHS.json'), 'docs/release-evidence.md must mention PUBLIC_AUDIENCE_PATHS.json');
+assert(releaseEvidenceDoc.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'docs/release-evidence.md must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

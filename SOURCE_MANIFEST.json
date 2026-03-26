@@ -52,12 +52,16 @@
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json",
       "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces"
+    "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "QUICKSTART.md": {
     "source_paths": [
@@ -99,12 +103,16 @@
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "derived",
-    "notes": "Root-level fast entry path for public contributors.; synchronized with audience paths surfaces"
+    "notes": "Root-level fast entry path for public contributors.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "ONBOARDING.md": {
     "source_paths": [
@@ -178,12 +186,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces"
+    "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "VERSIONING.md": {
     "source_paths": [
@@ -333,12 +345,16 @@
       "/home/n1/codex-workspace/scripts/check-traceability-matrix.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository metadata and lightweight verification scripts for the public surface.; synchronized with audience paths surfaces"
+    "notes": "Repository metadata and lightweight verification scripts for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   ".github/ISSUE_TEMPLATE/bug_report.md": {
     "source_paths": [],
@@ -501,16 +517,20 @@
   },
   "docs/trust-model.md": {
     "source_paths": [
-      "/home/n1/n1hub.com/docs/validator.md",
-      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/PUBLIC_OWNERSHIP_MAP.json",
       "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
-      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
       "/home/n1/codex-workspace/docs/artifact-ownership.md",
-      "/home/n1/codex-workspace/PUBLIC_OWNERSHIP_MAP.json"
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/n1hub.com/docs/validator.md",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+      "docs/evidence-strength.md",
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Source-of-truth hierarchy across validator behavior, schemas, prose docs, and illustrative examples."
+    "notes": "Source-of-truth hierarchy across validator behavior, schemas, prose docs, and illustrative examples.; synchronized with evidence strength surfaces"
   },
   "docs/examples.md": {
     "source_paths": [
@@ -527,13 +547,17 @@
   },
   "docs/compatibility.md": {
     "source_paths": [
-      "/home/n1/n1hub.com/docs/validator.md",
-      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
       "/home/n1/codex-workspace/docs/change-control.md",
-      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/n1hub.com/docs/validator.md",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+      "docs/evidence-strength.md",
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Stability and change-discipline guidance for integrators."
+    "notes": "Stability and change-discipline guidance for integrators.; synchronized with evidence strength surfaces"
   },
   "docs/faq.md": {
     "source_paths": [
@@ -571,12 +595,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Short answers to scope and validation questions for the public repository.; synchronized with audience paths surfaces"
+    "notes": "Short answers to scope and validation questions for the public repository.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/public-contract-index.md": {
     "source_paths": [
@@ -637,12 +665,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces"
+    "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/release-evidence.md": {
     "source_paths": [
@@ -690,12 +722,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces"
+    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/verification.md": {
     "source_paths": [
@@ -753,34 +789,42 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces"
+    "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/source-materials.md": {
     "source_paths": [
-      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
-      "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json",
-      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_OWNERSHIP_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
+      "/home/n1/codex-workspace/docs/artifact-ownership.md",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.capsules-as-projections.v1.json",
       "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.domain-ownership-map.v1.json",
-      "/home/n1/n1hub-repo-vault/governance/capsule.governance.generator-readiness.v1.json",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
       "/home/n1/n1hub-repo-vault/contracts/capsule.contract.archive-bundle.v1.json",
-      "/home/n1/n1hub-repo-vault/governance/capsule.governance.import-trust-policy.v1.json",
-      "/home/n1/n1hub-repo-vault/governance/capsule.governance.retention-policy.v1.json",
-      "/home/n1/n1hub-repo-vault/testing/capsule.testing.archive-portability-integration.v1.json",
       "/home/n1/n1hub-repo-vault/examples/capsule.example.archive-bundle-fixture.v1.json",
-      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
-      "/home/n1/codex-workspace/docs/artifact-ownership.md",
-      "/home/n1/codex-workspace/PUBLIC_OWNERSHIP_MAP.json"
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.generator-readiness.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.import-trust-policy.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.retention-policy.v1.json",
+      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
+      "/home/n1/n1hub-repo-vault/testing/capsule.testing.archive-portability-integration.v1.json",
+      "/home/n1/n1hub.com/docs/validator.md",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+      "docs/evidence-strength.md",
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Projection and provenance summary for the public-safe source classes."
+    "notes": "Projection and provenance summary for the public-safe source classes.; synchronized with evidence strength surfaces"
   },
   "schemas/capsule-schema.json": {
     "source_paths": [
@@ -852,12 +896,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Directory guide for schema artifacts.; synchronized with audience paths surfaces"
+    "notes": "Directory guide for schema artifacts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "examples/example-note.capsule.json": {
     "source_paths": [
@@ -1113,12 +1161,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "PUBLIC_RELEASE_METADATA.json": {
     "source_paths": [
@@ -1168,12 +1220,16 @@
       "/home/n1/codex-workspace/scripts/check-traceability-matrix.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "PUBLIC_RELEASE_REVIEW.md": {
     "source_paths": [
@@ -1217,16 +1273,20 @@
       "/home/n1/codex-workspace/scripts/check-traceability-matrix.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
       "schemas/public-audience-paths.schema.json",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Release review updated for verification matrix layer; manifest currently covers 183 files; synchronized with audience paths surfaces"
+    "notes": "Release review updated for verification matrix layer; manifest currently covers 183 files; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/contract-catalog.md": {
     "source_paths": [
@@ -1297,16 +1357,20 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
       "schemas/public-audience-paths.schema.json",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces"
+    "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "scripts/check-release-metadata.js": {
     "source_paths": [
@@ -1330,16 +1394,20 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
       "schemas/public-audience-paths.schema.json",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces"
+    "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "openapi/validate.openapi.json": {
     "source_paths": [
@@ -1517,12 +1585,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-project-profile.schema.json": {
     "source_paths": [
@@ -1578,12 +1650,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Fast evaluator path through the strongest public surfaces.; synchronized with audience paths surfaces"
+    "notes": "Fast evaluator path through the strongest public surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "scripts/check-project-profile.js": {
     "source_paths": [
@@ -1606,16 +1682,20 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
       "schemas/public-audience-paths.schema.json",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repo-local consistency check for the public project profile and reviewer-facing shortcuts.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces"
+    "notes": "Repo-local consistency check for the public project profile and reviewer-facing shortcuts.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "PUBLIC_CAPABILITY_MATRIX.json": {
     "source_paths": [
@@ -1668,12 +1748,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-capability-matrix.schema.json": {
     "source_paths": [
@@ -1723,12 +1807,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide to the capability matrix and supported public outcomes.; synchronized with audience paths surfaces"
+    "notes": "Human-readable guide to the capability matrix and supported public outcomes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "scripts/check-capability-matrix.js": {
     "source_paths": [
@@ -1752,16 +1840,20 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
       "schemas/public-audience-paths.schema.json",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repo-local consistency check for the machine-readable capability matrix.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces"
+    "notes": "Repo-local consistency check for the machine-readable capability matrix.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/projection-doctrine.md": {
     "source_paths": [
@@ -1937,12 +2029,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable evaluation packet for external reviewers and programs.; synchronized with audience paths surfaces"
+    "notes": "Human-readable evaluation packet for external reviewers and programs.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "PUBLIC_EVALUATION_PACKET.json": {
     "source_paths": [
@@ -1985,12 +2081,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-evaluation-packet.schema.json": {
     "source_paths": [],
@@ -2016,16 +2116,20 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
       "schemas/public-audience-paths.schema.json",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the public evaluation packet and its reviewer-path references.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces"
+    "notes": "Verifier for the public evaluation packet and its reviewer-path references.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/failure-model.md": {
     "source_paths": [
@@ -2110,12 +2214,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide for the public traceability layer.; synchronized with audience paths surfaces"
+    "notes": "Human-readable guide for the public traceability layer.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "PUBLIC_TRACEABILITY_MATRIX.json": {
     "source_paths": [
@@ -2158,12 +2266,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-traceability-matrix.schema.json": {
     "source_paths": [],
@@ -2197,16 +2309,20 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
       "schemas/public-audience-paths.schema.json",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the public traceability matrix and its surrounding review surfaces.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces"
+    "notes": "Verifier for the public traceability matrix and its surrounding review surfaces.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/example-coverage.md": {
     "source_paths": [
@@ -2313,12 +2429,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of public maintainer workflow and release posture.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable summary of public maintainer workflow and release posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-maintenance-model.schema.json": {
     "source_paths": [],
@@ -2377,12 +2497,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-change-control-model.schema.json": {
     "source_paths": [
@@ -2482,12 +2606,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of public dependency structure and reading paths.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable summary of public dependency structure and reading paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-dependency-graph.schema.json": {
     "source_paths": [
@@ -2516,16 +2644,20 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
       "schemas/public-audience-paths.schema.json",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local verifier for dependency graph and reading-order coherence.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces"
+    "notes": "Repository-local verifier for dependency graph and reading-order coherence.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/assurance-case.md": {
     "source_paths": [
@@ -2564,12 +2696,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded assurance layer for public review.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable bounded assurance layer for public review.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-assurance-case.schema.json": {
     "source_paths": [
@@ -2593,13 +2729,17 @@
       "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the public assurance-case layer.; synchronized with verification matrix surfaces"
+    "notes": "Verifier for the public assurance-case layer.; synchronized with verification matrix surfaces; synchronized with evidence strength surfaces"
   },
   "docs/update-coherence.md": {
     "source_paths": [
@@ -2634,12 +2774,16 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable co-movement map for reviewer, release, contract, and teaching surfaces.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable co-movement map for reviewer, release, contract, and teaching surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-update-coherence-map.schema.json": {
     "source_paths": [
@@ -2668,16 +2812,20 @@
       "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
       "schemas/public-audience-paths.schema.json",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for co-moving public surface groups.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces"
+    "notes": "Verifier for co-moving public surface groups.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/limitations-register.md": {
     "source_paths": [
@@ -2771,12 +2919,16 @@
       "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable bounded review checklist for external repo-maturity assessment.; synchronized with audience paths surfaces"
+    "notes": "Human-readable bounded review checklist for external repo-maturity assessment.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "PUBLIC_REVIEW_SCORECARD.json": {
     "source_paths": [
@@ -2791,12 +2943,16 @@
       "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded external review checklist for the public repository surface.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable bounded external review checklist for the public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-review-scorecard.schema.json": {
     "source_paths": [
@@ -2817,16 +2973,20 @@
       "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
       "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "docs/verification-matrix.md",
       "schemas/public-audience-paths.schema.json",
+      "schemas/public-evidence-strength-map.schema.json",
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js",
       "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the machine-readable public review scorecard and bounded reviewer criteria.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces"
+    "notes": "Verifier for the machine-readable public review scorecard and bounded reviewer criteria.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/verification-matrix.md": {
     "source_paths": [
@@ -2846,12 +3006,16 @@
       "/home/n1/codex-workspace/docs/verification-matrix.md",
       "/home/n1/codex-workspace/package.json",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces"
+    "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "schemas/public-verification-matrix.schema.json": {
     "source_paths": [
@@ -2868,12 +3032,16 @@
       "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
       "/home/n1/codex-workspace/docs/verification-matrix.md",
       "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "docs/audience-paths.md",
+      "docs/evidence-strength.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-audience-paths.js",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the machine-readable public verification matrix and check-family coverage.; synchronized with audience paths surfaces"
+    "notes": "Verifier for the machine-readable public verification matrix and check-family coverage.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
   },
   "docs/audience-paths.md": {
     "source_paths": [
@@ -2898,16 +3066,20 @@
       "GOVERNANCE.md",
       "MAINTAINERS.md",
       "ONBOARDING.md",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "QUICKSTART.md",
       "README.md",
       "docs/evaluation-packet.md",
+      "docs/evidence-strength.md",
       "docs/integration-guide.md",
       "docs/maintainer-operations.md",
       "docs/reviewer-guide.md",
-      "docs/verification.md"
+      "docs/verification.md",
+      "schemas/public-evidence-strength-map.schema.json",
+      "scripts/check-evidence-strength.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded audience entry paths for the public surface"
+    "notes": "Machine-readable bounded audience entry paths for the public surface; synchronized with evidence strength surfaces"
   },
   "schemas/public-audience-paths.schema.json": {
     "source_paths": [
@@ -2940,5 +3112,62 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for bounded audience entry paths and their surrounding public surfaces"
+  },
+  "docs/evidence-strength.md": {
+    "source_paths": [
+      "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_OWNERSHIP_MAP.json",
+      "PUBLIC_RELEASE_METADATA.json",
+      "PUBLIC_TRACEABILITY_MATRIX.json",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/compatibility.md",
+      "docs/trust-model.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Public-facing guide for stronger-source hierarchy and evidence strength across public surfaces"
+  },
+  "PUBLIC_EVIDENCE_STRENGTH_MAP.json": {
+    "source_paths": [
+      "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_OWNERSHIP_MAP.json",
+      "PUBLIC_RELEASE_METADATA.json",
+      "PUBLIC_TRACEABILITY_MATRIX.json",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/compatibility.md",
+      "docs/trust-model.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable stronger-source hierarchy for public evidence families"
+  },
+  "schemas/public-evidence-strength-map.schema.json": {
+    "source_paths": [
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema for machine-readable evidence-strength summaries"
+  },
+  "scripts/check-evidence-strength.js": {
+    "source_paths": [
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+      "PUBLIC_PROJECT_PROFILE.json",
+      "PUBLIC_RELEASE_METADATA.json",
+      "QUICKSTART.md",
+      "README.md",
+      "docs/capability-matrix.md",
+      "docs/compatibility.md",
+      "docs/evaluation-packet.md",
+      "docs/evidence-strength.md",
+      "docs/faq.md",
+      "docs/public-contract-index.md",
+      "docs/release-evidence.md",
+      "docs/review-scorecard.md",
+      "docs/reviewer-guide.md",
+      "docs/traceability.md",
+      "docs/trust-model.md",
+      "docs/verification.md",
+      "schemas/public-evidence-strength-map.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for stronger-source hierarchy and evidence-strength references"
   }
 }

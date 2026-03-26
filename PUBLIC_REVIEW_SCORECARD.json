@@ -210,6 +210,22 @@
         "npm run check:audience-paths",
         "npm run check:review-scorecard"
       ]
+    },
+    {
+      "id": "strength-of-evidence-explicit",
+      "question": "Is stronger-source hierarchy explicit instead of leaving reviewers to infer authority from filenames or summary prose?",
+      "status": "pass",
+      "summary": "The repo publishes a bounded evidence-strength map that separates strongest, secondary, and illustrative public surfaces.",
+      "strongest_surfaces": [
+        "docs/evidence-strength.md",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "docs/trust-model.md",
+        "docs/compatibility.md"
+      ],
+      "review_commands": [
+        "npm run check:evidence-strength",
+        "npm run check:review-scorecard"
+      ]
     }
   ],
   "important_limits": [

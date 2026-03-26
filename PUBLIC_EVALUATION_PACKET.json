@@ -25,6 +25,7 @@
     "PUBLIC_PORTABILITY_PROFILE.json",
     "PUBLIC_RELEASE_METADATA.json",
     "PUBLIC_RELEASE_REVIEW.md",
+    "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
     "PUBLIC_TRACEABILITY_MATRIX.json",
     "PUBLIC_EXAMPLE_COVERAGE.json",
     "PUBLIC_MAINTENANCE_MODEL.json",
@@ -68,7 +69,8 @@
       "docs/evidence-timeline.md",
       "docs/review-scorecard.md",
       "docs/verification-matrix.md",
-      "docs/audience-paths.md"
+      "docs/audience-paths.md",
+      "docs/evidence-strength.md"
     ],
     "machine_readable_evidence": [
       "PUBLIC_CONTRACT_CATALOG.json",
@@ -88,7 +90,8 @@
       "PUBLIC_EVIDENCE_TIMELINE.json",
       "PUBLIC_REVIEW_SCORECARD.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
-      "PUBLIC_AUDIENCE_PATHS.json"
+      "PUBLIC_AUDIENCE_PATHS.json",
+      "PUBLIC_EVIDENCE_STRENGTH_MAP.json"
     ]
   },
   "review_commands": [
@@ -110,7 +113,8 @@
     "The repo makes active maintenance and public-surface hardening visible through a bounded machine-readable timeline instead of requiring reviewers to infer evolution from raw git history.",
     "The repo makes bounded external review criteria explicit through a machine-readable review scorecard instead of leaving maturity assessment to raw counts or intuition.",
     "The repo makes verification coverage explicit through a machine-readable matrix instead of hiding trust in one opaque verify command.",
-    "The repo makes audience-specific entry paths explicit instead of assuming one generic repo walkthrough fits reviewers, contributors, integrators, tool-builders, and maintainers equally."
+    "The repo makes audience-specific entry paths explicit instead of assuming one generic repo walkthrough fits reviewers, contributors, integrators, tool-builders, and maintainers equally.",
+    "The repo makes stronger-source hierarchy explicit instead of forcing reviewers or integrators to guess which public summaries remain subordinate to schemas, OpenAPI, provenance, and release evidence."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",

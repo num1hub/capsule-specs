@@ -27,6 +27,8 @@ The verification coverage behind the scorecard lives in [`../PUBLIC_VERIFICATION
 
 The bounded role-specific reviewer, contributor, integrator, tool-builder, and maintainer entry paths live in [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json).
 
+The bounded stronger-source hierarchy behind those reviewer criteria lives in [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json).
+
 ## Important boundary
 
 The scorecard is a bounded public reviewer aid. It does not replace the stronger docs, schemas, examples, release evidence, or raw git history it references.

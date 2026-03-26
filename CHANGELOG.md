@@ -35,6 +35,7 @@
 - added machine-readable public review-scorecard modeling and verifier coverage for bounded external repo-evaluation criteria
 - added machine-readable public verification-matrix modeling and verifier coverage for explicit check-family coverage across public surfaces
 - added machine-readable public audience-paths modeling and verifier coverage for role-specific entry paths through the public surface
+- added machine-readable public evidence-strength modeling and verifier coverage for stronger-source hierarchy across public surfaces
 
 ## 0.1.0 - 2026-03-26
 

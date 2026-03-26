@@ -604,6 +604,29 @@
         "npm run check:evaluation-packet",
         "npm run check:capability-matrix"
       ]
+    },
+    {
+      "id": "inspect-evidence-strength-hierarchy",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "See which public surfaces are strongest, which are secondary, and which are illustrative before treating a summary as authoritative.",
+      "strongest_surfaces": [
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "docs/evidence-strength.md",
+        "docs/trust-model.md",
+        "docs/compatibility.md",
+        "PUBLIC_OWNERSHIP_MAP.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-strength",
+        "npm run check:capability-matrix"
+      ]
     }
   ]
 }

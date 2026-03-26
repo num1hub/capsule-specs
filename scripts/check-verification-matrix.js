@@ -75,6 +75,9 @@ assert(reviewerLayer, 'verification matrix must define reviewer-and-summary-laye
 assert(reviewerLayer.commands.includes('npm run check:audience-paths'), 'reviewer-and-summary-layers row must include npm run check:audience-paths');
 assert(reviewerLayer.protects.includes('PUBLIC_AUDIENCE_PATHS.json'), 'reviewer-and-summary-layers row must protect PUBLIC_AUDIENCE_PATHS.json');
 assert(reviewerLayer.strongest_surfaces.includes('PUBLIC_AUDIENCE_PATHS.json'), 'reviewer-and-summary-layers row must reference PUBLIC_AUDIENCE_PATHS.json');
+assert(reviewerLayer.commands.includes('npm run check:evidence-strength'), 'reviewer-and-summary-layers row must include npm run check:evidence-strength');
+assert(reviewerLayer.protects.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'reviewer-and-summary-layers row must protect PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(reviewerLayer.strongest_surfaces.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'reviewer-and-summary-layers row must reference PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 
 const readme = fs.readFileSync(path.join(repoRoot, 'README.md'), 'utf8');
 const quickstart = fs.readFileSync(path.join(repoRoot, 'QUICKSTART.md'), 'utf8');
@@ -106,6 +109,9 @@ assert(reviewScorecardDoc.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'review-s
 assert(reviewerGuide.includes('PUBLIC_AUDIENCE_PATHS.json'), 'reviewer guide must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(evaluationDoc.includes('PUBLIC_AUDIENCE_PATHS.json'), 'evaluation packet doc must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(capabilityDoc.includes('PUBLIC_AUDIENCE_PATHS.json'), 'capability-matrix doc must mention PUBLIC_AUDIENCE_PATHS.json');
+assert(reviewerGuide.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'reviewer guide must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(evaluationDoc.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'evaluation packet doc must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
+assert(capabilityDoc.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'capability-matrix doc must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 assert(schemasReadme.includes('public-verification-matrix.schema.json'), 'schemas README must mention public-verification-matrix schema');
 
 assert(profile.health_signals?.machine_readable_verification_matrix_present === true, 'project profile must mark machine_readable_verification_matrix_present true');
@@ -114,6 +120,7 @@ assert(profile.reviewer_shortcuts?.verification_matrix === 'PUBLIC_VERIFICATION_
 assert(catalogPaths.has('docs/verification-matrix.md'), 'contract catalog must include docs/verification-matrix.md');
 assert(catalogPaths.has('PUBLIC_VERIFICATION_MATRIX.json'), 'contract catalog must include PUBLIC_VERIFICATION_MATRIX.json');
 assert(catalogPaths.has('PUBLIC_AUDIENCE_PATHS.json'), 'contract catalog must include PUBLIC_AUDIENCE_PATHS.json');
+assert(catalogPaths.has('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'contract catalog must include PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 assert(catalogPaths.has('schemas/public-verification-matrix.schema.json'), 'contract catalog must include public-verification-matrix schema');
 assert(catalogPaths.has('scripts/check-verification-matrix.js'), 'contract catalog must include verification-matrix verifier');
 
