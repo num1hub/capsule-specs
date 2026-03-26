@@ -88,6 +88,7 @@ assert(profile.health_signals?.machine_readable_maintenance_model_present === tr
 assert(profile.health_signals?.machine_readable_change_control_model_present === true, 'project profile must mark machine_readable_change_control_model_present true');
 assert(profile.health_signals?.machine_readable_ownership_map_present === true, 'project profile must mark machine_readable_ownership_map_present true');
 assert(profile.health_signals?.machine_readable_traceability_matrix_present === true, 'project profile must mark machine_readable_traceability_matrix_present true');
+assert(profile.health_signals?.machine_readable_dependency_graph_present === true, 'project profile must mark machine_readable_dependency_graph_present true');
 assert(profile.health_signals?.reviewer_guide_present === true, 'project profile must mark reviewer_guide_present true');
 assert(profile.health_signals?.single_repo_verify_entrypoint_present === true, 'project profile must mark single_repo_verify_entrypoint_present true');
 
@@ -105,6 +106,7 @@ assert(profile.reviewer_shortcuts?.maintenance_model === 'PUBLIC_MAINTENANCE_MOD
 assert(profile.reviewer_shortcuts?.change_control === 'PUBLIC_CHANGE_CONTROL_MODEL.json', 'project profile change_control shortcut must point to PUBLIC_CHANGE_CONTROL_MODEL.json');
 assert(profile.reviewer_shortcuts?.ownership_map === 'PUBLIC_OWNERSHIP_MAP.json', 'project profile ownership_map shortcut must point to PUBLIC_OWNERSHIP_MAP.json');
 assert(profile.reviewer_shortcuts?.traceability_matrix === 'PUBLIC_TRACEABILITY_MATRIX.json', 'project profile traceability_matrix shortcut must point to PUBLIC_TRACEABILITY_MATRIX.json');
+assert(profile.reviewer_shortcuts?.dependency_graph === 'PUBLIC_DEPENDENCY_GRAPH.json', 'project profile dependency_graph shortcut must point to PUBLIC_DEPENDENCY_GRAPH.json');
 assert(profile.reviewer_shortcuts?.capability_matrix === 'PUBLIC_CAPABILITY_MATRIX.json', 'project profile capability_matrix shortcut must point to PUBLIC_CAPABILITY_MATRIX.json');
 assert(profile.reviewer_shortcuts?.project_profile === 'PUBLIC_PROJECT_PROFILE.json', 'project profile project_profile shortcut must point to itself');
 
@@ -121,6 +123,7 @@ assert(readme.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'README.md must mention
 assert(readme.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'README.md must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
 assert(readme.includes('PUBLIC_OWNERSHIP_MAP.json'), 'README.md must mention PUBLIC_OWNERSHIP_MAP.json');
 assert(readme.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'README.md must mention PUBLIC_TRACEABILITY_MATRIX.json');
+assert(readme.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'README.md must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(reviewerGuide.includes('PUBLIC_PROJECT_PROFILE.json'), 'reviewer guide must mention PUBLIC_PROJECT_PROFILE.json');
 assert(reviewerGuide.includes('PUBLIC_BOUNDARY_MAP.json'), 'reviewer guide must mention PUBLIC_BOUNDARY_MAP.json');
@@ -133,6 +136,7 @@ assert(reviewerGuide.includes('PUBLIC_MAINTENANCE_MODEL.json'), 'reviewer guide 
 assert(reviewerGuide.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'reviewer guide must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
 assert(reviewerGuide.includes('PUBLIC_OWNERSHIP_MAP.json'), 'reviewer guide must mention PUBLIC_OWNERSHIP_MAP.json');
 assert(reviewerGuide.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'reviewer guide must mention PUBLIC_TRACEABILITY_MATRIX.json');
+assert(reviewerGuide.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'reviewer guide must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(reviewerGuide.includes('PUBLIC_CONTRACT_CATALOG.json'), 'reviewer guide must mention PUBLIC_CONTRACT_CATALOG.json');
 assert(reviewerGuide.includes('PUBLIC_RELEASE_METADATA.json'), 'reviewer guide must mention PUBLIC_RELEASE_METADATA.json');
 

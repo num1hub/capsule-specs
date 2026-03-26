@@ -26,6 +26,7 @@ Each capability captures:
 - inspect maintainer operations
 - understand change control and deprecation
 - understand artifact ownership and authority
+- follow the public dependency graph
 - trace public claims end-to-end
 - understand projection and domain boundaries
 - review portability and archive trust posture
@@ -56,6 +57,8 @@ Good OSS repositories are not only readable; they are usable. The capability mat
   Answers: how additive, deprecated, and breaking public changes should be classified and synchronized.
 - [`../PUBLIC_OWNERSHIP_MAP.json`](../PUBLIC_OWNERSHIP_MAP.json)
   Answers: which public artifact families are maintained here and which stronger surfaces outrank them.
+- [`../PUBLIC_DEPENDENCY_GRAPH.json`](../PUBLIC_DEPENDENCY_GRAPH.json)
+  Answers: which public artifacts depend on which stronger surfaces and the shortest reading paths through the repo.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Answers: how the strongest public claims connect to docs, schemas, examples, and verification commands.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)

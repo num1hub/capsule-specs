@@ -36,6 +36,7 @@
     "check:maintenance-model": "node scripts/check-maintenance-model.js",
     "check:change-control": "node scripts/check-change-control.js",
     "check:ownership-map": "node scripts/check-ownership-map.js",
+    "check:dependency-graph": "node scripts/check-dependency-graph.js",
     "check:capability-matrix": "node scripts/check-capability-matrix.js",
     "check:docs": "node scripts/check-doc-links.js",
     "check:catalog": "node scripts/check-contract-catalog.js",
@@ -46,6 +47,6 @@
     "check:project-profile": "node scripts/check-project-profile.js",
     "check:surface": "node scripts/check-surface-coherence.js",
     "check:release": "node scripts/check-release-metadata.js",
-    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:api-schemas && npm run check:example-coverage && npm run check:boundary-map && npm run check:client-recipes && npm run check:community-health && npm run check:maintenance-model && npm run check:change-control && npm run check:ownership-map && npm run check:docs && npm run check:catalog && npm run check:evaluation-packet && npm run check:failure-model && npm run check:traceability && npm run check:portability && npm run check:project-profile && npm run check:capability-matrix && npm run check:surface && npm run check:release"
+    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:api-schemas && npm run check:example-coverage && npm run check:boundary-map && npm run check:client-recipes && npm run check:community-health && npm run check:maintenance-model && npm run check:change-control && npm run check:ownership-map && npm run check:dependency-graph && npm run check:docs && npm run check:catalog && npm run check:evaluation-packet && npm run check:failure-model && npm run check:traceability && npm run check:portability && npm run check:project-profile && npm run check:capability-matrix && npm run check:surface && npm run check:release"
   }
 }

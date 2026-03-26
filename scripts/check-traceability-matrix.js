@@ -18,7 +18,8 @@ const requiredIds = [
   'portability-and-archive-contracts',
   'maintainer-intake-and-practical-usability',
   'change-control-and-release-discipline',
-  'artifact-ownership-and-authority'
+  'artifact-ownership-and-authority',
+  'dependency-order-and-reading-path'
 ];
 
 const allowedAudiences = new Set(['contributors', 'integrators', 'tool-builders', 'reviewers']);
@@ -97,7 +98,10 @@ assert(verification.includes('check:traceability'), 'verification doc must menti
 assert(capabilityDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'capability-matrix doc must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(faq.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'FAQ must mention PUBLIC_TRACEABILITY_MATRIX.json');
 assert(evaluationDoc.includes('PUBLIC_TRACEABILITY_MATRIX.json'), 'evaluation-packet doc must mention PUBLIC_TRACEABILITY_MATRIX.json');
+assert(evaluationDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'evaluation-packet doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(evaluationDoc.includes('PUBLIC_OWNERSHIP_MAP.json'), 'evaluation-packet doc must mention PUBLIC_OWNERSHIP_MAP.json');
+const traceabilityDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'traceability.md'), 'utf8');
+assert(traceabilityDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'traceability doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(schemasReadme.includes('public-traceability-matrix.schema.json'), 'schemas README must mention public-traceability schema');
 
 assert(catalogPaths.has('docs/traceability.md'), 'contract catalog must include docs/traceability.md');

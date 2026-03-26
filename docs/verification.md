@@ -36,6 +36,8 @@ This executes all repository-local checks in the expected order.
   Verifies `PUBLIC_CHANGE_CONTROL_MODEL.json`, change-control docs, and release/stability posture references.
 - `npm run check:ownership-map`
   Verifies `PUBLIC_OWNERSHIP_MAP.json`, ownership/authority docs, and stronger-source hierarchy references.
+- `npm run check:dependency-graph`
+  Verifies `PUBLIC_DEPENDENCY_GRAPH.json`, dependency/reading-order docs, and reviewer-navigation references.
 - `npm run check:docs`
   Verifies Markdown links across the public documentation surface.
 - `npm run check:catalog`
@@ -82,6 +84,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_MAINTENANCE_MODEL.json` stays aligned with maintainer docs, community intake surfaces, release posture, and expected verification evidence
 - `PUBLIC_CHANGE_CONTROL_MODEL.json` stays aligned with versioning, compatibility, release docs, reviewer docs, and public deprecation / breaking-change posture
 - `PUBLIC_OWNERSHIP_MAP.json` stays aligned with trust-model docs, source-material docs, projection doctrine, reviewer docs, and the artifact families it classifies
+- `PUBLIC_DEPENDENCY_GRAPH.json` stays aligned with reviewer docs, capability docs, traceability, release evidence, and the public artifact relationships it summarizes
 - `PUBLIC_TRACEABILITY_MATRIX.json` stays aligned with the real docs, schemas, examples, and verification commands it claims to connect
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`

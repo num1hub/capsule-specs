@@ -245,6 +245,32 @@
         "npm run check:ownership-map",
         "npm run check:traceability"
       ]
+    },
+    {
+      "id": "dependency-order-and-reading-path",
+      "claim": "The public stack publishes an explicit dependency and reading-order map instead of forcing reviewers to infer artifact order from folder layout alone.",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/dependency-graph.md",
+        "PUBLIC_DEPENDENCY_GRAPH.json",
+        "docs/reviewer-guide.md",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_OWNERSHIP_MAP.json",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "schemas/public-dependency-graph.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:dependency-graph",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

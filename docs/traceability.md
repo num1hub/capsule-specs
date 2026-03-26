@@ -30,6 +30,8 @@ Without an explicit traceability layer, a reviewer has to infer whether a claim 
 
 This repository avoids that by linking docs, schemas, examples, machine-readable summaries, and verification commands in one bounded public map.
 
+The bounded dependency and reading-order summary lives in [`../PUBLIC_DEPENDENCY_GRAPH.json`](../PUBLIC_DEPENDENCY_GRAPH.json).
+
 ## Important boundary
 
 The traceability matrix is a curated public summary. It does not claim to capture every private runtime dependency or every internal change path from the upstream N1Hub repository.

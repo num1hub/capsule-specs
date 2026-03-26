@@ -364,6 +364,30 @@
       ]
     },
     {
+      "id": "follow-public-dependency-graph",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Follow the shortest safe reading path through foundational contracts, derived summaries, and release evidence without inferring artifact order from filenames alone.",
+      "strongest_surfaces": [
+        "PUBLIC_DEPENDENCY_GRAPH.json",
+        "docs/dependency-graph.md",
+        "docs/reviewer-guide.md",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_OWNERSHIP_MAP.json",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "schemas/public-dependency-graph.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:dependency-graph",
+        "npm run check:traceability",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "trace-provenance-and-release-state",
       "audience": "contributors",
       "readiness": "ready",

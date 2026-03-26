@@ -130,6 +130,10 @@ assert(
   'release metadata must include the ownership-map verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:dependency-graph'),
+  'release metadata must include the dependency-graph verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -188,6 +192,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_PORTABILITY_PROFILE.json')),
   'release metadata residual risks must mention PUBLIC_PORTABILITY_PROFILE.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_DEPENDENCY_GRAPH.json')),
+  'release metadata residual risks must mention PUBLIC_DEPENDENCY_GRAPH.json'
 );
 
 if (process.exitCode) {

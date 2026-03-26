@@ -1,0 +1,175 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "nodes": [
+    {
+      "id": "repo-readme",
+      "path": "README.md",
+      "role": "entrypoint",
+      "depends_on": [],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:dependency-graph"
+      ]
+    },
+    {
+      "id": "law-and-schema",
+      "path": "schemas/capsule-schema.json",
+      "role": "foundational-contract",
+      "depends_on": [],
+      "verify_commands": [
+        "npm run audit:public-surface",
+        "npm run check:dependency-graph"
+      ]
+    },
+    {
+      "id": "validator-http-contract",
+      "path": "openapi/validate.openapi.json",
+      "role": "foundational-contract",
+      "depends_on": [],
+      "verify_commands": [
+        "npm run check:api-schemas",
+        "npm run check:dependency-graph"
+      ]
+    },
+    {
+      "id": "examples-and-fixtures",
+      "path": "PUBLIC_EXAMPLE_COVERAGE.json",
+      "role": "derived-example-layer",
+      "depends_on": [
+        "law-and-schema",
+        "validator-http-contract"
+      ],
+      "verify_commands": [
+        "npm run check:example-coverage",
+        "npm run check:dependency-graph"
+      ]
+    },
+    {
+      "id": "provenance-and-boundaries",
+      "path": "SOURCE_MANIFEST.json",
+      "role": "foundational-governance",
+      "depends_on": [
+        "repo-readme"
+      ],
+      "verify_commands": [
+        "npm run audit:public-surface",
+        "npm run check:dependency-graph"
+      ]
+    },
+    {
+      "id": "reviewer-summaries",
+      "path": "PUBLIC_PROJECT_PROFILE.json",
+      "role": "reviewer-summary",
+      "depends_on": [
+        "repo-readme",
+        "provenance-and-boundaries"
+      ],
+      "verify_commands": [
+        "npm run check:project-profile",
+        "npm run check:dependency-graph"
+      ]
+    },
+    {
+      "id": "maintenance-and-change",
+      "path": "PUBLIC_MAINTENANCE_MODEL.json",
+      "role": "governance-summary",
+      "depends_on": [
+        "repo-readme",
+        "provenance-and-boundaries"
+      ],
+      "verify_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:change-control",
+        "npm run check:dependency-graph"
+      ]
+    },
+    {
+      "id": "ownership-and-authority",
+      "path": "PUBLIC_OWNERSHIP_MAP.json",
+      "role": "authority-summary",
+      "depends_on": [
+        "provenance-and-boundaries",
+        "maintenance-and-change"
+      ],
+      "verify_commands": [
+        "npm run check:ownership-map",
+        "npm run check:dependency-graph"
+      ]
+    },
+    {
+      "id": "traceability-and-capabilities",
+      "path": "PUBLIC_TRACEABILITY_MATRIX.json",
+      "role": "reviewer-map",
+      "depends_on": [
+        "examples-and-fixtures",
+        "reviewer-summaries",
+        "ownership-and-authority"
+      ],
+      "verify_commands": [
+        "npm run check:traceability",
+        "npm run check:capability-matrix",
+        "npm run check:dependency-graph"
+      ]
+    },
+    {
+      "id": "release-evidence",
+      "path": "PUBLIC_RELEASE_METADATA.json",
+      "role": "release-summary",
+      "depends_on": [
+        "examples-and-fixtures",
+        "provenance-and-boundaries",
+        "maintenance-and-change",
+        "ownership-and-authority",
+        "traceability-and-capabilities"
+      ],
+      "verify_commands": [
+        "npm run check:release",
+        "npm run check:dependency-graph"
+      ]
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "reviewer-fast-path",
+      "audience": "reviewers",
+      "steps": [
+        "repo-readme",
+        "reviewer-summaries",
+        "ownership-and-authority",
+        "traceability-and-capabilities",
+        "release-evidence"
+      ]
+    },
+    {
+      "id": "integrator-contract-path",
+      "audience": "integrators",
+      "steps": [
+        "repo-readme",
+        "law-and-schema",
+        "validator-http-contract",
+        "examples-and-fixtures",
+        "release-evidence"
+      ]
+    },
+    {
+      "id": "contributor-governance-path",
+      "audience": "contributors",
+      "steps": [
+        "repo-readme",
+        "provenance-and-boundaries",
+        "maintenance-and-change",
+        "ownership-and-authority",
+        "release-evidence"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This graph does not describe every private runtime dependency behind the upstream N1Hub repository.",
+    "This graph does not replace the stronger docs, schemas, OpenAPI, provenance, or release-evidence surfaces it references."
+  ],
+  "review_commands": [
+    "npm run check:dependency-graph",
+    "npm run verify:repo"
+  ]
+}

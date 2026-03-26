@@ -73,6 +73,7 @@ assert(reviewerGuide.includes('PUBLIC_EVALUATION_PACKET.json'), 'reviewer guide 
 assert(evaluationDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'evaluation-packet doc must mention PUBLIC_EVALUATION_PACKET.json');
 assert(evaluationDoc.includes('PUBLIC_CHANGE_CONTROL_MODEL.json'), 'evaluation-packet doc must mention PUBLIC_CHANGE_CONTROL_MODEL.json');
 assert(evaluationDoc.includes('PUBLIC_OWNERSHIP_MAP.json'), 'evaluation-packet doc must mention PUBLIC_OWNERSHIP_MAP.json');
+assert(evaluationDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'evaluation-packet doc must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(faqDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'FAQ must mention PUBLIC_EVALUATION_PACKET.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'release-evidence doc must mention PUBLIC_EVALUATION_PACKET.json');
 assert(capabilityDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'capability-matrix doc must mention PUBLIC_EVALUATION_PACKET.json');

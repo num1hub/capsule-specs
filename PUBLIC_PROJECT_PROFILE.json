@@ -29,7 +29,8 @@
       "machine-readable provenance and release evidence",
       "machine-readable reviewer, capability, boundary, traceability, example-coverage, and maintenance summaries",
       "machine-readable change-control summaries",
-      "machine-readable ownership and authority summaries"
+      "machine-readable ownership and authority summaries",
+      "machine-readable dependency and reading-order summaries"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -39,9 +40,9 @@
     ]
   },
   "surface_summary": {
-    "total_files": 154,
-    "markdown_files": 64,
-    "schema_files": 17,
+    "total_files": 158,
+    "markdown_files": 65,
+    "schema_files": 18,
     "raw_capsule_files": 4,
     "example_capsules": 5,
     "api_example_files": 13,
@@ -70,11 +71,12 @@
     "machine_readable_example_coverage_present": true,
     "machine_readable_maintenance_model_present": true,
     "machine_readable_change_control_model_present": true,
-    "machine_readable_ownership_map_present": true
+    "machine_readable_ownership_map_present": true,
+    "machine_readable_dependency_graph_present": true
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 21,
+    "repo_local_check_count": 22,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -95,7 +97,8 @@
     "example_coverage": "PUBLIC_EXAMPLE_COVERAGE.json",
     "maintenance_model": "PUBLIC_MAINTENANCE_MODEL.json",
     "change_control": "PUBLIC_CHANGE_CONTROL_MODEL.json",
-    "ownership_map": "PUBLIC_OWNERSHIP_MAP.json"
+    "ownership_map": "PUBLIC_OWNERSHIP_MAP.json",
+    "dependency_graph": "PUBLIC_DEPENDENCY_GRAPH.json"
   },
   "program_readiness": {
     "maintainer_owned": true,
@@ -106,7 +109,7 @@
     "projection_doctrine_explicit": true,
     "boundary_map_present": true,
     "community_intake_explicit": true,
-    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, boundary doctrine, portability posture, evaluation packet references, failure-model evidence, example-coverage evidence, maintenance-model evidence, change-control evidence, ownership-hierarchy evidence, traceability evidence, or live validator behavior.",
+    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, boundary doctrine, portability posture, evaluation packet references, failure-model evidence, example-coverage evidence, maintenance-model evidence, change-control evidence, ownership-hierarchy evidence, dependency-graph evidence, traceability evidence, or live validator behavior.",
     "portability_posture_explicit": true,
     "evaluation_packet_present": true,
     "failure_model_explicit": true,
@@ -114,6 +117,7 @@
     "example_coverage_explicit": true,
     "maintenance_model_explicit": true,
     "change_control_explicit": true,
-    "ownership_hierarchy_explicit": true
+    "ownership_hierarchy_explicit": true,
+    "dependency_graph_explicit": true
   }
 }

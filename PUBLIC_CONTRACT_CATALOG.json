@@ -1562,6 +1562,64 @@
         "npm run check:ownership-map",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "governance.dependency-graph-doc",
+      "path": "docs/dependency-graph.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:dependency-graph",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.dependency-graph",
+      "path": "PUBLIC_DEPENDENCY_GRAPH.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:dependency-graph",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.dependency-graph",
+      "path": "schemas/public-dependency-graph.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:dependency-graph",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.dependency-graph-check",
+      "path": "scripts/check-dependency-graph.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:dependency-graph",
+        "npm run check:catalog"
+      ]
     }
   ]
 }
