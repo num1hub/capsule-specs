@@ -135,7 +135,8 @@
     "PUBLIC_ADOPTION_READINESS.json",
     "PUBLIC_FRESHNESS_MODEL.json",
     "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
-    "PUBLIC_DECISION_LOG.json"
+    "PUBLIC_DECISION_LOG.json",
+    "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
   ],
   "non_claims": [
     "This file does not promise indefinite backward compatibility for all public artifacts while the repository remains in 0.x.",

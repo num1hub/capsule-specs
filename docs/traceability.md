@@ -53,7 +53,7 @@ The bounded freshness and stale-summary summary lives in [`../PUBLIC_FRESHNESS_M
 The bounded ecosystem-value summary lives in [`../PUBLIC_ECOSYSTEM_VALUE_MAP.json`](../PUBLIC_ECOSYSTEM_VALUE_MAP.json).
 
 The bounded decision-rationale summary lives in [`../PUBLIC_DECISION_LOG.json`](../PUBLIC_DECISION_LOG.json).
-
+The bounded public evidence-gaps summary lives in [`../PUBLIC_EVIDENCE_GAPS_REGISTER.json`](../PUBLIC_EVIDENCE_GAPS_REGISTER.json).
 ## Important boundary
 
 The traceability matrix is a curated public summary. It does not claim to capture every private runtime dependency or every internal change path from the upstream N1Hub repository.

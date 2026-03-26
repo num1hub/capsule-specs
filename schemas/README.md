@@ -58,6 +58,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable public freshness and stale-summary posture.
 - `public-ecosystem-value-map.schema.json`
   JSON Schema for the machine-readable public ecosystem-value and external-utility posture.
+- `public-evidence-gaps-register.schema.json`
+  JSON Schema for the machine-readable public evidence-gap and bounded-maturity posture.
 - `public-traceability-matrix.schema.json`
   JSON Schema for the machine-readable claim-to-evidence traceability matrix.
 

@@ -69,6 +69,7 @@ assert(ids.has('evidence-strength'), 'dependency graph must include evidence-str
 assert(ids.has('adoption-readiness'), 'dependency graph must include adoption-readiness node');
 assert(ids.has('freshness-and-staleness'), 'dependency graph must include freshness-and-staleness node');
 assert(ids.has('ecosystem-value-and-program-fit'), 'dependency graph must include ecosystem-value-and-program-fit node');
+assert(ids.has('public-evidence-gaps'), 'dependency graph must include public-evidence-gaps node');
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('maintenance-evolution')),
   'reviewer-fast-path must include maintenance-evolution'
@@ -102,6 +103,10 @@ assert(
   'reviewer-fast-path must include ecosystem-value-and-program-fit'
 );
 assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('public-evidence-gaps')),
+  'reviewer-fast-path must include public-evidence-gaps'
+);
+assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('maintenance-evolution')),
   'contributor-governance-path must include maintenance-evolution'
 );
@@ -132,6 +137,10 @@ assert(
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('ecosystem-value-and-program-fit')),
   'contributor-governance-path must include ecosystem-value-and-program-fit'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('public-evidence-gaps')),
+  'contributor-governance-path must include public-evidence-gaps'
 );
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'integrator-contract-path' && pathDef.steps.includes('audience-entry-paths')),
@@ -192,14 +201,19 @@ assert(publicIndex.includes('../schemas/public-freshness-model.schema.json'), 'p
 assert(publicIndex.includes('ecosystem-value.md'), 'public contract index must mention docs/ecosystem-value.md');
 assert(publicIndex.includes('../PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'public contract index must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(publicIndex.includes('../schemas/public-ecosystem-value-map.schema.json'), 'public contract index must mention public-ecosystem-value schema');
+assert(publicIndex.includes('evidence-gaps.md'), 'public contract index must mention docs/evidence-gaps.md');
+assert(publicIndex.includes('../PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'public contract index must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
+assert(publicIndex.includes('../schemas/public-evidence-gaps-register.schema.json'), 'public contract index must mention public-evidence-gaps schema');
 assert(faq.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'FAQ must mention PUBLIC_DEPENDENCY_GRAPH.json');
 assert(faq.includes('PUBLIC_AUDIENCE_PATHS.json'), 'FAQ must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(faq.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'FAQ must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 assert(faq.includes('PUBLIC_FRESHNESS_MODEL.json'), 'FAQ must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(faq.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'FAQ must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
+assert(faq.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'FAQ must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(schemasReadme.includes('public-dependency-graph.schema.json'), 'schemas README must mention public-dependency-graph schema');
 assert(schemasReadme.includes('public-freshness-model.schema.json'), 'schemas README must mention public-freshness-model schema');
 assert(schemasReadme.includes('public-ecosystem-value-map.schema.json'), 'schemas README must mention public-ecosystem-value schema');
+assert(schemasReadme.includes('public-evidence-gaps-register.schema.json'), 'schemas README must mention public-evidence-gaps schema');
 
 assert(catalogPaths.has('docs/dependency-graph.md'), 'contract catalog must include docs/dependency-graph.md');
 assert(catalogPaths.has('PUBLIC_DEPENDENCY_GRAPH.json'), 'contract catalog must include PUBLIC_DEPENDENCY_GRAPH.json');
@@ -215,6 +229,10 @@ assert(catalogPaths.has('docs/ecosystem-value.md'), 'contract catalog must inclu
 assert(catalogPaths.has('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'contract catalog must include PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(catalogPaths.has('schemas/public-ecosystem-value-map.schema.json'), 'contract catalog must include public-ecosystem-value schema');
 assert(catalogPaths.has('scripts/check-ecosystem-value.js'), 'contract catalog must include ecosystem-value verifier');
+assert(catalogPaths.has('docs/evidence-gaps.md'), 'contract catalog must include docs/evidence-gaps.md');
+assert(catalogPaths.has('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'contract catalog must include PUBLIC_EVIDENCE_GAPS_REGISTER.json');
+assert(catalogPaths.has('schemas/public-evidence-gaps-register.schema.json'), 'contract catalog must include public-evidence-gaps schema');
+assert(catalogPaths.has('scripts/check-evidence-gaps.js'), 'contract catalog must include evidence-gaps verifier');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

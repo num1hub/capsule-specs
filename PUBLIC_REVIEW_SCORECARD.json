@@ -290,6 +290,22 @@
         "npm run check:decision-log",
         "npm run check:review-scorecard"
       ]
+    },
+    {
+      "id": "evidence-gaps-explicit",
+      "question": "Does the repo make still-open evidence gaps explicit instead of implying a stronger maturity posture than the public surface can currently prove?",
+      "status": "pass",
+      "summary": "The repo publishes a bounded evidence-gaps register that makes still-open proof gaps, manual-review boundaries, and bounded maturity posture explicit.",
+      "strongest_surfaces": [
+        "docs/evidence-gaps.md",
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
+      ],
+      "review_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:review-scorecard"
+      ]
     }
   ],
   "important_limits": [

@@ -592,6 +592,33 @@
         "npm run check:decision-log",
         "npm run check:traceability"
       ]
+    },
+    {
+      "id": "explicit-public-evidence-gaps",
+      "claim": "The public surface makes still-open evidence gaps explicit so reviewers and programs can see where maturity is already well supported and where it remains intentionally bounded.",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "strongest_surfaces": [
+        "docs/evidence-gaps.md",
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "docs/reviewer-guide.md",
+        "docs/faq.md"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

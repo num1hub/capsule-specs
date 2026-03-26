@@ -43,7 +43,8 @@
       "machine-readable adoption-readiness summaries",
       "machine-readable freshness summaries",
       "machine-readable ecosystem-value summaries",
-      "machine-readable public-decision summaries"
+      "machine-readable public-decision summaries",
+      "machine-readable public-evidence-gap summaries"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -53,9 +54,9 @@
     ]
   },
   "surface_summary": {
-    "total_files": 206,
-    "markdown_files": 77,
-    "schema_files": 30,
+    "total_files": 210,
+    "markdown_files": 78,
+    "schema_files": 31,
     "raw_capsule_files": 4,
     "example_capsules": 5,
     "api_example_files": 13,
@@ -97,11 +98,12 @@
     "machine_readable_adoption_readiness_present": true,
     "machine_readable_freshness_model_present": true,
     "machine_readable_ecosystem_value_present": true,
-    "machine_readable_decision_log_present": true
+    "machine_readable_decision_log_present": true,
+    "machine_readable_evidence_gaps_present": true
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 34,
+    "repo_local_check_count": 35,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -135,7 +137,8 @@
     "adoption_readiness": "PUBLIC_ADOPTION_READINESS.json",
     "freshness_model": "PUBLIC_FRESHNESS_MODEL.json",
     "ecosystem_value_map": "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
-    "decision_log": "PUBLIC_DECISION_LOG.json"
+    "decision_log": "PUBLIC_DECISION_LOG.json",
+    "evidence_gaps": "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
   },
   "program_readiness": {
     "maintainer_owned": true,
@@ -167,6 +170,7 @@
     "public_adoption_readiness_explicit": true,
     "freshness_posture_explicit": true,
     "ecosystem_value_explicit": true,
-    "decision_rationale_explicit": true
+    "decision_rationale_explicit": true,
+    "evidence_gaps_explicit": true
   }
 }

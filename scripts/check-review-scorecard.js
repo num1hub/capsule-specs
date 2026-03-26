@@ -27,7 +27,8 @@ const requiredIds = [
   'strength-of-evidence-explicit',
   'adoption-readiness-explicit',
   'freshness-posture-explicit',
-  'ecosystem-value-explicit'
+  'ecosystem-value-explicit',
+  'evidence-gaps-explicit'
 ];
 
 const allowedStatuses = new Set(['pass', 'bounded']);
@@ -122,9 +123,11 @@ assert(catalogPaths.has('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'contract catalog 
 assert(catalogPaths.has('PUBLIC_ADOPTION_READINESS.json'), 'contract catalog must include PUBLIC_ADOPTION_READINESS.json');
 assert(catalogPaths.has('PUBLIC_FRESHNESS_MODEL.json'), 'contract catalog must include PUBLIC_FRESHNESS_MODEL.json');
 assert(catalogPaths.has('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'contract catalog must include PUBLIC_ECOSYSTEM_VALUE_MAP.json');
+assert(catalogPaths.has('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'contract catalog must include PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:review-scorecard'), 'release metadata must include review-scorecard verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_REVIEW_SCORECARD.json')), 'release metadata residual risks must mention PUBLIC_REVIEW_SCORECARD.json');
+assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json')), 'release metadata residual risks must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 
 const verificationCriterion = scorecard.criteria.find((criterion) => criterion.id === 'verification-coverage-explicit');
 assert(verificationCriterion, 'review scorecard must define verification-coverage-explicit criterion');
@@ -144,6 +147,9 @@ assert(freshnessCriterion.strongest_surfaces.includes('PUBLIC_FRESHNESS_MODEL.js
 const ecosystemCriterion = scorecard.criteria.find((criterion) => criterion.id === 'ecosystem-value-explicit');
 assert(ecosystemCriterion, 'review scorecard must define ecosystem-value-explicit criterion');
 assert(ecosystemCriterion.strongest_surfaces.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'ecosystem-value-explicit must reference PUBLIC_ECOSYSTEM_VALUE_MAP.json');
+const evidenceGapsCriterion = scorecard.criteria.find((criterion) => criterion.id === 'evidence-gaps-explicit');
+assert(evidenceGapsCriterion, 'review scorecard must define evidence-gaps-explicit criterion');
+assert(evidenceGapsCriterion.strongest_surfaces.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'evidence-gaps-explicit must reference PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

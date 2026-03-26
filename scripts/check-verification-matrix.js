@@ -23,7 +23,8 @@ const requiredIds = [
   'docs-and-cross-surface-coherence',
   'release-state-and-maintenance-history',
   'freshness-and-summary-currency',
-  'ecosystem-value-and-program-utility'
+  'ecosystem-value-and-program-utility',
+  'evidence-gaps-and-bounded-maturity'
 ];
 
 const packageScripts = new Set(Object.keys(pkg.scripts || {}).map((name) => `npm run ${name}`));
@@ -89,6 +90,10 @@ assert(reviewerLayer.commands.includes('npm run check:ecosystem-value'), 'review
 assert(reviewerLayer.protects.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'reviewer-and-summary-layers row must protect PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(reviewerLayer.strongest_surfaces.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'reviewer-and-summary-layers row must reference PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(reviewerLayer.failure_modes_prevented.some((item) => item.includes('ecosystem value')), 'reviewer-and-summary-layers row must mention ecosystem value failure prevention');
+assert(reviewerLayer.commands.includes('npm run check:evidence-gaps'), 'reviewer-and-summary-layers row must include npm run check:evidence-gaps');
+assert(reviewerLayer.protects.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'reviewer-and-summary-layers row must protect PUBLIC_EVIDENCE_GAPS_REGISTER.json');
+assert(reviewerLayer.strongest_surfaces.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'reviewer-and-summary-layers row must reference PUBLIC_EVIDENCE_GAPS_REGISTER.json');
+assert(reviewerLayer.failure_modes_prevented.some((item) => item.includes('evidence gaps')), 'reviewer-and-summary-layers row must mention evidence gaps failure prevention');
 const freshnessLayer = matrix.checks.find((item) => item.id === 'freshness-and-summary-currency');
 assert(freshnessLayer, 'verification matrix must define freshness-and-summary-currency row');
 assert(freshnessLayer.commands.includes('npm run check:freshness'), 'freshness-and-summary-currency row must include npm run check:freshness');
@@ -135,10 +140,13 @@ assert(evaluationDoc.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'evaluation 
 assert(capabilityDoc.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'capability-matrix doc must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 assert(reviewerGuide.includes('PUBLIC_FRESHNESS_MODEL.json'), 'reviewer guide must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(reviewerGuide.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'reviewer guide must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
+assert(reviewerGuide.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'reviewer guide must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(evaluationDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'evaluation packet doc must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(evaluationDoc.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'evaluation packet doc must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
+assert(evaluationDoc.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'evaluation packet doc must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(capabilityDoc.includes('PUBLIC_FRESHNESS_MODEL.json'), 'capability-matrix doc must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(capabilityDoc.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'capability-matrix doc must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
+assert(capabilityDoc.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'capability-matrix doc must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(schemasReadme.includes('public-verification-matrix.schema.json'), 'schemas README must mention public-verification-matrix schema');
 
 assert(profile.health_signals?.machine_readable_verification_matrix_present === true, 'project profile must mark machine_readable_verification_matrix_present true');
@@ -156,6 +164,10 @@ assert(catalogPaths.has('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'contract catalog mu
 assert(catalogPaths.has('docs/ecosystem-value.md'), 'contract catalog must include docs/ecosystem-value.md');
 assert(catalogPaths.has('schemas/public-ecosystem-value-map.schema.json'), 'contract catalog must include public-ecosystem-value schema');
 assert(catalogPaths.has('scripts/check-ecosystem-value.js'), 'contract catalog must include ecosystem-value verifier');
+assert(catalogPaths.has('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'contract catalog must include PUBLIC_EVIDENCE_GAPS_REGISTER.json');
+assert(catalogPaths.has('docs/evidence-gaps.md'), 'contract catalog must include docs/evidence-gaps.md');
+assert(catalogPaths.has('schemas/public-evidence-gaps-register.schema.json'), 'contract catalog must include public-evidence-gaps schema');
+assert(catalogPaths.has('scripts/check-evidence-gaps.js'), 'contract catalog must include evidence-gaps verifier');
 assert(catalogPaths.has('schemas/public-verification-matrix.schema.json'), 'contract catalog must include public-verification-matrix schema');
 assert(catalogPaths.has('scripts/check-verification-matrix.js'), 'contract catalog must include verification-matrix verifier');
 
@@ -165,6 +177,8 @@ assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm 
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_FRESHNESS_MODEL.json')), 'release metadata residual risks must mention PUBLIC_FRESHNESS_MODEL.json');
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:ecosystem-value'), 'release metadata must include ecosystem-value verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json')), 'release metadata residual risks must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json');
+assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:evidence-gaps'), 'release metadata must include evidence-gaps verification');
+assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json')), 'release metadata residual risks must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

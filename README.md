@@ -47,6 +47,7 @@ This repository is that home.
 - [`docs/freshness.md`](docs/freshness.md) for the bounded map of which public surfaces go stale under which triggers and how summary drift becomes visible
 - [`docs/ecosystem-value.md`](docs/ecosystem-value.md) for the bounded map of why this public surface matters to reviewers, integrators, tool-builders, contributors, and OSS-support programs
 - [`docs/decision-log.md`](docs/decision-log.md) for the bounded map of the major public design decisions and why this specs surface is shaped the way it is
+- [`docs/evidence-gaps.md`](docs/evidence-gaps.md) for the bounded map of which important public evidence is still intentionally missing and which review gaps remain open
 - [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) for machine-readable validator envelope contracts
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
 - [`docs/route-reference.md`](docs/route-reference.md) for per-route sample mapping
@@ -113,6 +114,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable freshness model in [`PUBLIC_FRESHNESS_MODEL.json`](PUBLIC_FRESHNESS_MODEL.json)
 - machine-readable ecosystem-value map in [`PUBLIC_ECOSYSTEM_VALUE_MAP.json`](PUBLIC_ECOSYSTEM_VALUE_MAP.json)
 - machine-readable decision log in [`PUBLIC_DECISION_LOG.json`](PUBLIC_DECISION_LOG.json)
+- machine-readable evidence-gaps register in [`PUBLIC_EVIDENCE_GAPS_REGISTER.json`](PUBLIC_EVIDENCE_GAPS_REGISTER.json)
 - machine-readable traceability matrix in [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json)
 - machine-readable capability matrix in [`PUBLIC_CAPABILITY_MATRIX.json`](PUBLIC_CAPABILITY_MATRIX.json)
 - machine-readable boundary map in [`PUBLIC_BOUNDARY_MAP.json`](PUBLIC_BOUNDARY_MAP.json)
@@ -167,9 +169,10 @@ Maintainer and review policy:
 22. Inspect [`PUBLIC_FRESHNESS_MODEL.json`](PUBLIC_FRESHNESS_MODEL.json) if you want the bounded map of which public summary layers go stale under which triggers and how freshness is kept tied to release evidence.
 23. Inspect [`PUBLIC_ECOSYSTEM_VALUE_MAP.json`](PUBLIC_ECOSYSTEM_VALUE_MAP.json) if you want the bounded map of why this public surface is concretely useful to reviewers, integrators, tool-builders, contributors, and external OSS-support programs.
 24. Inspect [`PUBLIC_DECISION_LOG.json`](PUBLIC_DECISION_LOG.json) if you want the bounded map of the major public decisions and the rationale behind this repository's projection, trust posture, and release discipline.
-25. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-26. Review the raw capsule sources in [`capsules/`](capsules/).
-27. Run `npm run verify:repo` for the repository-local integrity checks.
+25. Inspect [`PUBLIC_EVIDENCE_GAPS_REGISTER.json`](PUBLIC_EVIDENCE_GAPS_REGISTER.json) if you want the bounded map of which high-signal public evidence still remains intentionally incomplete and where review confidence must stay bounded.
+26. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+27. Review the raw capsule sources in [`capsules/`](capsules/).
+28. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

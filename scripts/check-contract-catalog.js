@@ -142,7 +142,11 @@ const requiredIds = [
   'governance.ecosystem-value-doc',
   'governance.ecosystem-value-map',
   'governance.ecosystem-value-map-schema',
-  'governance.ecosystem-value-check'
+  'governance.ecosystem-value-check',
+  'governance.evidence-gaps-doc',
+  'governance.evidence-gaps-register',
+  'governance.evidence-gaps-schema',
+  'governance.evidence-gaps-check'
 ];
 
 for (const requiredId of requiredIds) {

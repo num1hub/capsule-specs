@@ -2345,6 +2345,68 @@
         "npm run check:docs",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "governance.evidence-gaps-doc",
+      "path": "docs/evidence-gaps.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.evidence-gaps-register",
+      "path": "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.evidence-gaps-schema",
+      "path": "schemas/public-evidence-gaps-register.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.evidence-gaps-check",
+      "path": "scripts/check-evidence-gaps.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

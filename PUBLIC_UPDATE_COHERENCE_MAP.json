@@ -12,7 +12,8 @@
         "changed role-specific audience path",
         "changed stronger-source hierarchy summary",
         "changed public adoption readiness posture",
-        "changed freshness posture or stale-summary expectations"
+        "changed freshness posture or stale-summary expectations",
+        "changed public evidence-gap posture or reviewer/program proof boundaries"
       ],
       "required_surfaces": [
         "README.md",
@@ -27,7 +28,8 @@
         "PUBLIC_AUDIENCE_PATHS.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_ADOPTION_READINESS.json",
-        "PUBLIC_FRESHNESS_MODEL.json"
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
       ],
       "verify_commands": [
         "npm run check:project-profile",
@@ -36,7 +38,8 @@
         "npm run check:evidence-strength",
         "npm run check:update-coherence",
         "npm run check:adoption-readiness",
-        "npm run check:freshness"
+        "npm run check:freshness",
+        "npm run check:evidence-gaps"
       ]
     },
     {
@@ -72,7 +75,8 @@
         "catalog membership changed",
         "verification stack changed",
         "release evidence refreshed",
-        "freshness triggers or stale-summary signals changed"
+        "freshness triggers or stale-summary signals changed",
+        "public evidence gaps or bounded-maturity posture changed"
       ],
       "required_surfaces": [
         "SOURCE_MANIFEST.json",
@@ -85,7 +89,8 @@
         "PUBLIC_REVIEW_SCORECARD.json",
         "PUBLIC_VERIFICATION_MATRIX.json",
         "PUBLIC_ADOPTION_READINESS.json",
-        "PUBLIC_FRESHNESS_MODEL.json"
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
       ],
       "verify_commands": [
         "npm run audit:public-surface",
@@ -93,7 +98,8 @@
         "npm run check:release",
         "npm run check:update-coherence",
         "npm run check:adoption-readiness",
-        "npm run check:freshness"
+        "npm run check:freshness",
+        "npm run check:evidence-gaps"
       ]
     },
     {
@@ -107,7 +113,8 @@
         "changed stronger-source hierarchy or authority posture",
         "changed bounded adoption readiness posture",
         "changed freshness posture or stale-summary triggers",
-        "changed public decision rationale or projection intent"
+        "changed public decision rationale or projection intent",
+        "changed public evidence gaps or bounded reviewer/program proof posture"
       ],
       "required_surfaces": [
         "PUBLIC_MAINTENANCE_MODEL.json",
@@ -124,7 +131,8 @@
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_ADOPTION_READINESS.json",
         "PUBLIC_FRESHNESS_MODEL.json",
-        "PUBLIC_DECISION_LOG.json"
+        "PUBLIC_DECISION_LOG.json",
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
       ],
       "verify_commands": [
         "npm run check:maintenance-model",
@@ -138,7 +146,8 @@
         "npm run check:update-coherence",
         "npm run check:adoption-readiness",
         "npm run check:freshness",
-        "npm run check:decision-log"
+        "npm run check:decision-log",
+        "npm run check:evidence-gaps"
       ]
     },
     {
@@ -146,6 +155,7 @@
       "summary": "External-utility summaries, reviewer shortcuts, and program-facing readiness surfaces should move together when public value posture changes.",
       "required_surfaces": [
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
         "docs/ecosystem-value.md",
         "PUBLIC_PROJECT_PROFILE.json",
         "PUBLIC_EVALUATION_PACKET.json",
@@ -156,12 +166,14 @@
       ],
       "verify_commands": [
         "npm run check:ecosystem-value",
+        "npm run check:evidence-gaps",
         "npm run check:evaluation-packet",
         "npm run check:adoption-readiness",
         "npm run check:update-coherence"
       ],
       "change_triggers": [
         "changed external value posture or beneficiary-facing utility",
+        "changed explicit evidence-gap posture for reviewers or programs",
         "changed reviewer/program-facing summary layers",
         "changed adoption posture, capability posture, or freshness expectations for public utility claims"
       ]

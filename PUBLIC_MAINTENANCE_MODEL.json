@@ -107,7 +107,8 @@
     "updated PUBLIC_ADOPTION_READINESS.json when audience readiness, prerequisites, or deferred adoption posture changed",
     "updated PUBLIC_FRESHNESS_MODEL.json when freshness triggers or stale signals changed",
     "updated PUBLIC_ECOSYSTEM_VALUE_MAP.json when external value posture or beneficiary-facing utility changed",
-    "updated PUBLIC_DECISION_LOG.json when public design rationale, projection intent, or trust-sensitive public decisions changed"
+    "updated PUBLIC_DECISION_LOG.json when public design rationale, projection intent, or trust-sensitive public decisions changed",
+    "updated PUBLIC_EVIDENCE_GAPS_REGISTER.json when a public evidence gap, manual-review boundary, or maturity caveat changed materially"
   ],
   "operating_rules": [
     "Keep the public boundary intentional and do not widen scope by accident.",
@@ -125,7 +126,8 @@
     "Keep PUBLIC_ADOPTION_READINESS.json aligned with audience paths, limitations, release evidence, and maintainer-facing docs when bounded public readiness changes.",
     "Keep PUBLIC_FRESHNESS_MODEL.json aligned with release evidence, reviewer shortcuts, audience paths, and adoption summaries when freshness posture changes.",
     "Keep PUBLIC_ECOSYSTEM_VALUE_MAP.json aligned with reviewer docs, capability summaries, adoption posture, and release evidence when external utility claims change.",
-    "Keep PUBLIC_DECISION_LOG.json aligned with boundary posture, trust-model docs, assurance posture, and release evidence when public design rationale changes."
+    "Keep PUBLIC_DECISION_LOG.json aligned with boundary posture, trust-model docs, assurance posture, and release evidence when public design rationale changes.",
+    "Keep PUBLIC_EVIDENCE_GAPS_REGISTER.json aligned with release evidence, adoption posture, freshness, ecosystem-value posture, and limitations when public proof gaps or manual-review boundaries change."
   ],
   "non_claims": [
     "This file does not promise a guaranteed response-time SLA for public issues or pull requests.",

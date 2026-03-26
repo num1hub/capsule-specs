@@ -295,6 +295,21 @@
         "npm run check:decision-log",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "public-evidence-gaps",
+      "path": "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+      "role": "evidence-gap-summary",
+      "depends_on": [
+        "limitations-and-deferred-scope",
+        "adoption-readiness",
+        "freshness-and-staleness",
+        "ecosystem-value-and-program-fit"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -316,7 +331,8 @@
         "update-coherence-and-sync",
         "freshness-and-staleness",
         "ecosystem-value-and-program-fit",
-        "public-decision-rationale"
+        "public-decision-rationale",
+        "public-evidence-gaps"
       ]
     },
     {
@@ -353,7 +369,8 @@
         "verification-coverage",
         "freshness-and-staleness",
         "ecosystem-value-and-program-fit",
-        "public-decision-rationale"
+        "public-decision-rationale",
+        "public-evidence-gaps"
       ]
     }
   ],

@@ -1,0 +1,187 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Make the major public evidence gaps explicit so reviewers, contributors, and programs can see which bounded claims are already supported and which higher-confidence signals still remain open.",
+  "gap_families": [
+    {
+      "id": "no-live-public-service-evidence-yet",
+      "summary": "The repo publishes public contracts and examples, but it does not yet publish evidence from a live public validator service.",
+      "why_gap_exists": "This repository is intentionally a public specs surface rather than a hosted service status page or public operations surface.",
+      "strongest_current_surfaces": [
+        "openapi/validate.openapi.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "examples/api/validate-request.single.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
+      ],
+      "missing_or_manual_evidence": [
+        "real public deployment URL with stable access conditions",
+        "recorded public HTTP responses from a deployed service",
+        "hosted-service uptime or operations evidence"
+      ],
+      "next_public_hardening_steps": [
+        "publish a bounded hosted validator endpoint when it exists",
+        "add public deployment assumptions to release evidence only after they become real"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:limitations-register"
+      ],
+      "bounded_non_claims": [
+        "does not claim a live hosted validator endpoint exists today",
+        "does not claim deployed-service behavior beyond the published contracts and examples"
+      ]
+    },
+    {
+      "id": "no-external-adoption-metrics-yet",
+      "summary": "The repo publishes bounded utility and readiness surfaces, but it does not yet publish external adoption metrics such as stars, forks, downstream usage, or issue volume.",
+      "why_gap_exists": "This public surface is newly hardened and reviewer-facing; external adoption signals require time and real public use after publication.",
+      "strongest_current_surfaces": [
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "missing_or_manual_evidence": [
+        "public stars, forks, or watcher counts with signal value",
+        "named downstream consumers or public tool integrations",
+        "public issue and discussion history over time"
+      ],
+      "next_public_hardening_steps": [
+        "publish real adoption signals only after they exist",
+        "keep ecosystem-value claims bounded to current public utility rather than projected popularity"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:ecosystem-value"
+      ],
+      "bounded_non_claims": [
+        "does not claim current public traction or ecosystem adoption",
+        "does not treat projected usefulness as proof of current usage"
+      ]
+    },
+    {
+      "id": "no-independent-contributor-history-yet",
+      "summary": "The repo publishes contributor intake and maintainer workflow, but it does not yet publish evidence of sustained outside contribution history.",
+      "why_gap_exists": "Community health and contribution law can be made explicit immediately, while real outside contribution history only emerges after public operation.",
+      "strongest_current_surfaces": [
+        "CONTRIBUTING.md",
+        "docs/community-health.md",
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_AUDIENCE_PATHS.json"
+      ],
+      "missing_or_manual_evidence": [
+        "merged external pull requests",
+        "public review history with non-maintainer participants",
+        "sustained public contributor activity over multiple releases"
+      ],
+      "next_public_hardening_steps": [
+        "preserve clean contributor intake after publication",
+        "promote contributor-history evidence only when it becomes real and reviewable"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:community-health",
+        "npm run check:maintenance-model"
+      ],
+      "bounded_non_claims": [
+        "does not claim existing independent contributor history",
+        "does not equate contributor instructions with proven community activity"
+      ]
+    },
+    {
+      "id": "no-cross-version-stability-history-yet",
+      "summary": "The repo publishes versioning, compatibility, and change-control posture, but it does not yet publish long multi-release history proving those policies in practice.",
+      "why_gap_exists": "The policy surfaces are explicit now, but multi-release history requires time and future releases to accumulate.",
+      "strongest_current_surfaces": [
+        "VERSIONING.md",
+        "docs/compatibility.md",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_EVIDENCE_TIMELINE.json"
+      ],
+      "missing_or_manual_evidence": [
+        "multiple public tagged releases demonstrating stable change discipline",
+        "public deprecation history over multiple versions",
+        "documented downstream compatibility observations"
+      ],
+      "next_public_hardening_steps": [
+        "tag public releases once the GitHub repo is published",
+        "extend the evidence timeline and changelog with real version-to-version history"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:change-control",
+        "npm run check:evidence-timeline"
+      ],
+      "bounded_non_claims": [
+        "does not claim long-horizon stability history today",
+        "does not treat written versioning policy as proof of historical compatibility"
+      ]
+    },
+    {
+      "id": "no-third-party-client-interoperability-evidence-yet",
+      "summary": "The repo publishes client recipes and API contracts, but it does not yet publish evidence from independent third-party clients running against a public service.",
+      "why_gap_exists": "Client recipes can be published and verified locally before a broader public integration ecosystem exists.",
+      "strongest_current_surfaces": [
+        "examples/client/node-validate-single.mjs",
+        "examples/client/curl-validate-single.sh",
+        "docs/client-recipes.md",
+        "schemas/validator-api-envelopes.schema.json"
+      ],
+      "missing_or_manual_evidence": [
+        "public third-party SDKs or integrations",
+        "public client compatibility matrix built from outside implementations",
+        "independent interoperability reports"
+      ],
+      "next_public_hardening_steps": [
+        "publish external integration evidence only when real third-party clients exist",
+        "keep recipes copyable and contract-aligned so third-party evidence can attach cleanly later"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:client-recipes",
+        "npm run check:api-schemas"
+      ],
+      "bounded_non_claims": [
+        "does not claim external client ecosystem maturity today",
+        "does not treat copyable recipes as proof of third-party interoperability"
+      ]
+    },
+    {
+      "id": "no-long-horizon-freshness-history-yet",
+      "summary": "The repo publishes freshness posture and stale-summary triggers, but it does not yet publish long-horizon evidence showing that those refresh rules have been exercised repeatedly over time.",
+      "why_gap_exists": "Freshness law can be explicit immediately, while repeated successful refresh cycles require time and future public maintenance activity.",
+      "strongest_current_surfaces": [
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json"
+      ],
+      "missing_or_manual_evidence": [
+        "multiple public refresh cycles across several releases",
+        "public examples of stale-summary detection and correction",
+        "longer-running release cadence evidence"
+      ],
+      "next_public_hardening_steps": [
+        "keep freshness checks green over future releases",
+        "extend the evidence timeline with real refresh-cycle milestones rather than hypothetical ones"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:freshness",
+        "npm run check:evidence-timeline"
+      ],
+      "bounded_non_claims": [
+        "does not claim long-term freshness history today",
+        "does not treat current freshness rules as proof of repeated operational execution"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This file does not claim that every future public evidence gap is already known.",
+    "This file does not replace stronger contracts, provenance, release evidence, adoption posture, or live validator behavior."
+  ],
+  "review_commands": [
+    "npm run check:evidence-gaps",
+    "npm run verify:repo"
+  ]
+}

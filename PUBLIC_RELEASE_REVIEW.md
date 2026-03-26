@@ -34,6 +34,7 @@
 - machine-readable freshness model in `PUBLIC_FRESHNESS_MODEL.json` plus a bounded freshness and stale-summary guide
 - machine-readable ecosystem-value map in `PUBLIC_ECOSYSTEM_VALUE_MAP.json` plus a bounded external-utility and program-fit guide
 - machine-readable decision log in `PUBLIC_DECISION_LOG.json` plus a bounded public-rationale and design-intent guide
+- machine-readable evidence-gaps register in `PUBLIC_EVIDENCE_GAPS_REGISTER.json` plus a bounded still-open-proof and review-needs guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
@@ -91,6 +92,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-freshness.js`: pass
 - `node scripts/check-ecosystem-value.js`: pass
 - `node scripts/check-decision-log.js`: pass
+- `node scripts/check-evidence-gaps.js`: pass
 - `node scripts/check-project-profile.js`: pass
 - `node scripts/check-capability-matrix.js`: pass
 - `node scripts/check-evaluation-packet.js`: pass
@@ -101,7 +103,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `206` files / `206` manifest entries
+- manifest coverage: `210` files / `210` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -141,3 +143,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_FRESHNESS_MODEL.json` is a bounded freshness summary and must stay subordinate to stronger release evidence, audience paths, reviewer docs, and maintenance-history surfaces it references
 - `PUBLIC_ECOSYSTEM_VALUE_MAP.json` is a bounded external-utility summary and must stay subordinate to stronger contracts, capability evidence, reviewer docs, adoption posture, and release evidence surfaces it references
 - `PUBLIC_DECISION_LOG.json` is a bounded rationale summary and must stay subordinate to stronger boundary, assurance, provenance, release-evidence, and trust-model surfaces it references
+- `PUBLIC_EVIDENCE_GAPS_REGISTER.json` is a bounded maturity-gap summary and must stay subordinate to stronger release evidence, limitations, freshness, adoption, and ecosystem-value surfaces it references

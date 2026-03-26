@@ -57,6 +57,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable map of why this public surface matters to external reviewers, integrators, tool-builders, contributors, and OSS-support programs.
 - [`../PUBLIC_DECISION_LOG.json`](../PUBLIC_DECISION_LOG.json)
   Machine-readable map of the major public design decisions and the rationale behind this repository's bounded shape.
+- [`../PUBLIC_EVIDENCE_GAPS_REGISTER.json`](../PUBLIC_EVIDENCE_GAPS_REGISTER.json)
+  Machine-readable map of which important public-facing evidence is still intentionally incomplete and where review confidence should remain bounded.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Machine-readable map from public claims to strongest surfaces and verification commands.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
@@ -119,7 +121,7 @@ The freshness layer strengthens release discipline by making stale-summary trigg
 The ecosystem-value layer strengthens release discipline by making external utility explicit instead of leaving reviewers or programs to infer why the public surface matters from raw counts, filenames, or maintainer intent alone.
 
 The decision-log layer strengthens release discipline by making public design intent explicit instead of leaving projection rationale, trust choices, and scope posture to implicit maintainer folklore.
-
+The evidence-gaps layer strengthens release discipline by making still-open proof gaps explicit instead of letting a polished public surface imply maturity it cannot yet prove.
 The traceability matrix strengthens reviewability by making claim-to-evidence and claim-to-verification links explicit instead of leaving them implicit across multiple files.
 
 The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
@@ -156,6 +158,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_FRESHNESS_MODEL.json`
 - `PUBLIC_ECOSYSTEM_VALUE_MAP.json`
 - `PUBLIC_DECISION_LOG.json`
+- `PUBLIC_EVIDENCE_GAPS_REGISTER.json`
 - `PUBLIC_TRACEABILITY_MATRIX.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`

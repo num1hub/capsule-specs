@@ -136,7 +136,8 @@
         "npm run check:adoption-readiness",
         "npm run check:freshness",
         "npm run check:ecosystem-value",
-        "npm run check:decision-log"
+        "npm run check:decision-log",
+        "npm run check:evidence-gaps"
       ],
       "protects": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -148,7 +149,8 @@
         "PUBLIC_ADOPTION_READINESS.json",
         "PUBLIC_FRESHNESS_MODEL.json",
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
-        "PUBLIC_DECISION_LOG.json"
+        "PUBLIC_DECISION_LOG.json",
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
       ],
       "strongest_surfaces": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -160,7 +162,8 @@
         "PUBLIC_ADOPTION_READINESS.json",
         "PUBLIC_FRESHNESS_MODEL.json",
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
-        "PUBLIC_DECISION_LOG.json"
+        "PUBLIC_DECISION_LOG.json",
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json"
       ],
       "failure_modes_prevented": [
         "stale reviewer shortcuts",
@@ -172,7 +175,8 @@
         "stale freshness posture",
         "hidden stale-summary triggers",
         "opaque ecosystem value claims",
-        "hidden decision rationale"
+        "hidden decision rationale",
+        "implicit evidence gaps and overstated maturity claims"
       ]
     },
     {
@@ -343,6 +347,30 @@
         "implicit projection intent",
         "hidden design rationale",
         "decision summaries drifting away from release evidence"
+      ]
+    },
+    {
+      "id": "evidence-gaps-and-bounded-maturity",
+      "summary": "Protects explicit public proof gaps, bounded maturity posture, and manual-review boundaries so the public surface does not imply evidence it does not yet have.",
+      "commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:release",
+        "npm run check:adoption-readiness"
+      ],
+      "protects": [
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_ADOPTION_READINESS.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+        "docs/evidence-gaps.md",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "failure_modes_prevented": [
+        "unstated public proof gaps",
+        "bounded maturity claims drifting away from release evidence",
+        "reviewer/program expectations outrunning the real public surface"
       ]
     }
   ],
