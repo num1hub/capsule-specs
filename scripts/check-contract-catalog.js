@@ -77,10 +77,15 @@ const requiredIds = [
   'governance.community-health',
   'governance.project-profile',
   'governance.capability-matrix',
+  'governance.boundary-map',
+  'governance.projection-doctrine',
+  'governance.domain-boundaries',
+  'governance.generator-readiness',
   'examples.note',
   'governance.manifest',
   'governance.contract-index',
-  'governance.release-metadata'
+  'governance.release-metadata',
+  'governance.boundary-map-check'
 ];
 
 for (const requiredId of requiredIds) {

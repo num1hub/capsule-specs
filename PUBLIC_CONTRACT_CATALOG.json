@@ -909,6 +909,102 @@
         "npm run check:catalog",
         "npm run check:surface"
       ]
+    },
+    {
+      "id": "governance.boundary-map",
+      "path": "PUBLIC_BOUNDARY_MAP.json",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:boundary-map",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.projection-doctrine",
+      "path": "docs/projection-doctrine.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:boundary-map",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.domain-boundaries",
+      "path": "docs/domain-boundaries.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:boundary-map",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.generator-readiness",
+      "path": "docs/generator-readiness.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:boundary-map",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "schema.boundary-map",
+      "path": "schemas/public-boundary-map.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:boundary-map",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.boundary-map-check",
+      "path": "scripts/check-boundary-map.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:boundary-map",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
     }
   ]
 }

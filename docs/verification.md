@@ -22,6 +22,8 @@ This executes all repository-local checks in the expected order.
   Verifies validator request and response sample payloads and keeps them aligned with the capsule examples.
 - `npm run check:api-schemas`
   Validates the published API example payloads against `schemas/validator-api-envelopes.schema.json`.
+- `npm run check:boundary-map`
+  Verifies `PUBLIC_BOUNDARY_MAP.json`, the new projection/boundary docs, and their contract-catalog coverage.
 - `npm run check:client-recipes`
   Verifies curl and Node consumer snippets, route targeting, env-var assumptions, and Node syntax.
 - `npm run check:community-health`
@@ -56,6 +58,7 @@ Serious public changes should not be considered complete until:
 - `CHANGELOG.md`, `PUBLIC_RELEASE_REVIEW.md`, `PUBLIC_RELEASE_METADATA.json`, and `PUBLIC_CONTRACT_CATALOG.json` stay aligned
 - `PUBLIC_PROJECT_PROFILE.json` stays aligned with the real repository shape and reviewer-facing docs
 - `PUBLIC_CAPABILITY_MATRIX.json` stays aligned with the real public artifacts and supported user outcomes
+- `PUBLIC_BOUNDARY_MAP.json` stays aligned with the published-vs-deferred boundary posture and its doctrine docs
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`
 - client recipes stay aligned with the API examples and route docs

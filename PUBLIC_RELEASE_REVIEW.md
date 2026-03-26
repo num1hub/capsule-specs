@@ -7,6 +7,7 @@
 - root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
 - repo ergonomics and legal files: `.editorconfig`, `package.json`, `RELEASING`, `NOTICE`
 - public docs for the capsule law, validator, relation types, schema, API envelopes, integration guidance, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
+- projection doctrine, domain boundaries, generator-readiness guidance, and a machine-readable boundary map
 - route reference and verification docs for navigating and auditing the public surface
 - explicit versioning policy in `VERSIONING.md`
 - machine-readable public contract catalog in `PUBLIC_CONTRACT_CATALOG.json` plus the companion guide in `docs/contract-catalog.md`
@@ -49,6 +50,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-example-contracts.js`: pass
 - `node scripts/check-api-examples.js`: pass
 - `node scripts/check-api-schemas.js`: pass
+- `node scripts/check-boundary-map.js`: pass
 - `node scripts/check-client-recipes.js`: pass
 - `node scripts/check-community-health.js`: pass
 - `node scripts/check-project-profile.js`: pass
@@ -57,7 +59,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `110` files / `110` manifest entries
+- manifest coverage: `116` files / `116` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -76,3 +78,4 @@ Upstream validator checks on 2026-03-26:
 - client recipes assume a compatible deployed validator base URL and bearer-token auth model rather than representing a guaranteed hosted endpoint
 - `/home/n1/codex-workspace` still contains local hidden Codex state (`.codex/`, `.codexignore`), which is excluded via `.gitignore` and should remain out of any public commit
 - `PUBLIC_PROJECT_PROFILE.json` and `PUBLIC_CAPABILITY_MATRIX.json` are intentionally concise summaries and must stay subordinate to the stronger source docs, schemas, OpenAPI, and release evidence
+- `PUBLIC_BOUNDARY_MAP.json` is a curated summary of published vs deferred domains and must stay subordinate to the stronger scope, doctrine, and source-material surfaces

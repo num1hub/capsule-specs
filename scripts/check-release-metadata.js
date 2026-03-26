@@ -90,6 +90,10 @@ assert(
   'release metadata must include the API schema verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:boundary-map'),
+  'release metadata must include the boundary-map verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:community-health'),
   'release metadata must include the community-health verification check'
 );
@@ -117,6 +121,10 @@ assert(
 );
 
 assert(Array.isArray(metadata.residual_risks) && metadata.residual_risks.length >= 1, 'release metadata must include residual risks');
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_BOUNDARY_MAP.json')),
+  'release metadata residual risks must mention PUBLIC_BOUNDARY_MAP.json'
+);
 
 if (process.exitCode) {
   process.exit(process.exitCode);

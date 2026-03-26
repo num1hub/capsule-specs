@@ -10,6 +10,8 @@ This repository is assembled from public-safe source surfaces rather than from a
 ## Main source classes in this repository
 
 - public governance capsules that explain README, quickstart, contribution, security, and onboarding posture
+- public architecture capsules for capsules-as-projections and domain ownership
+- public generator-readiness doctrine and projection-index semantics
 - live law capsules for the five-element contract, relation types, and 16 gates
 - live validator docs and OpenAPI material
 - synthetic public examples derived from safe example fixtures rather than copied from private vault state
@@ -19,12 +21,14 @@ This repository is assembled from public-safe source surfaces rather than from a
 ## Projection strategy
 
 - docs are derived into a narrower public style
+- projection doctrine and boundary posture are derived from upstream architecture and governance capsules
 - raw law capsules are copied as reference artifacts
 - examples are synthetic and public-safe
 - provenance is tracked in [`../SOURCE_MANIFEST.json`](../SOURCE_MANIFEST.json)
 - public contract discovery is tracked in [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
 - repo-local verification meaning is tracked in [`verification.md`](verification.md)
 - machine-readable release evidence is tracked in [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
+- machine-readable published-vs-deferred boundaries are tracked in [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - machine-readable API envelope coverage is tracked in [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
 - consumer snippets derive from the public API example payloads rather than from private runtime secrets or internal deploy tooling
 

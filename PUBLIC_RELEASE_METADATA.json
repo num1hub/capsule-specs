@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 110,
-    "manifest_entries": 110
+    "files": 116,
+    "manifest_entries": 116
   },
   "surface_summary": {
-    "catalog_entries": 62,
+    "catalog_entries": 68,
     "example_capsules": 5,
     "api_example_files": 11,
-    "markdown_files": 51
+    "markdown_files": 54
   },
   "repo_local_checks": [
     {
@@ -30,6 +30,10 @@
     },
     {
       "command": "npm run check:api-schemas",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:boundary-map",
       "status": "pass"
     },
     {
@@ -98,6 +102,7 @@
     "local hidden Codex state is excluded via .gitignore and must remain outside any public commit",
     "community intake is public and explicit, but maintainer responsiveness and future issue volume still depend on actual GitHub operation after publication",
     "PUBLIC_PROJECT_PROFILE.json is a concise reviewer/program summary and can lag behind the stronger source surfaces if maintainers stop updating it together with release evidence",
-    "PUBLIC_CAPABILITY_MATRIX.json is a high-level usability summary and can drift if maintainers add or remove strong public surfaces without updating the matrix"
+    "PUBLIC_CAPABILITY_MATRIX.json is a high-level usability summary and can drift if maintainers add or remove strong public surfaces without updating the matrix",
+    "PUBLIC_BOUNDARY_MAP.json is a curated summary of published vs deferred boundaries and can drift if scope docs change without updating the boundary map"
   ]
 }

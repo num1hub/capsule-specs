@@ -8,13 +8,15 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
    Understand what the repository publishes and what it intentionally excludes.
 2. Read [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
    Get a machine-readable snapshot of maintainer ownership, public-surface counts, and health signals.
-3. Read [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
+3. Read [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
+   See which boundaries are published here and which ones remain intentionally deferred.
+4. Read [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
    See what an outside reader can concretely do with the public surface right now.
-4. Read [`public-contract-index.md`](public-contract-index.md)
+5. Read [`public-contract-index.md`](public-contract-index.md)
    Jump to the highest-signal public artifacts without browsing the whole tree.
-5. Read [`release-evidence.md`](release-evidence.md)
+6. Read [`release-evidence.md`](release-evidence.md)
    See how provenance, release review, and verification evidence fit together.
-6. Read [`community-health.md`](community-health.md)
+7. Read [`community-health.md`](community-health.md)
    Confirm that contributor intake and maintainer expectations are explicit.
 
 ## Strongest signals
@@ -22,6 +24,7 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
 If you only have a few minutes, inspect these surfaces first:
 
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
+- [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
@@ -33,6 +36,7 @@ If you only have a few minutes, inspect these surfaces first:
 ## What to verify
 
 - the repository has a clear public boundary
+- the repository explains both published and deferred boundaries explicitly
 - the maintainer identity is explicit
 - docs, schemas, examples, and release evidence are all present
 - repo-local verification is not symbolic; it is wired to actual files
@@ -46,6 +50,7 @@ This repository should read as a deliberately maintained public contract surface
 - machine-readable provenance
 - machine-readable contract discovery
 - release metadata and review evidence
+- explicit projection doctrine and domain-boundary posture
 - explicit capability coverage for consumers and reviewers
 - contributor intake templates
 - client-facing examples and schema-backed API envelopes

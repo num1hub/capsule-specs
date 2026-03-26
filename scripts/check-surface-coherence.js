@@ -38,6 +38,7 @@ const releaseEvidenceDoc = readText('docs/release-evidence.md');
 const expectedPublicIndexLinks = [
   'contract-catalog.md',
   '../PUBLIC_CONTRACT_CATALOG.json',
+  '../PUBLIC_BOUNDARY_MAP.json',
   'reviewer-guide.md',
   '../PUBLIC_PROJECT_PROFILE.json',
   'capability-matrix.md',
@@ -46,7 +47,11 @@ const expectedPublicIndexLinks = [
   '../PUBLIC_RELEASE_METADATA.json',
   'route-reference.md',
   'integration-guide.md',
+  'projection-doctrine.md',
+  'domain-boundaries.md',
+  'generator-readiness.md',
   '../schemas/validator-api-envelopes.schema.json',
+  '../schemas/public-boundary-map.schema.json',
   'community-health.md',
   'client-recipes.md',
   'trust-model.md'
@@ -60,16 +65,21 @@ assert(readme.includes('PUBLIC_CONTRACT_CATALOG.json'), 'README.md must mention 
 assert(readme.includes('PUBLIC_RELEASE_METADATA.json'), 'README.md must mention PUBLIC_RELEASE_METADATA.json');
 assert(readme.includes('PUBLIC_PROJECT_PROFILE.json'), 'README.md must mention PUBLIC_PROJECT_PROFILE.json');
 assert(readme.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'README.md must mention PUBLIC_CAPABILITY_MATRIX.json');
+assert(readme.includes('PUBLIC_BOUNDARY_MAP.json'), 'README.md must mention PUBLIC_BOUNDARY_MAP.json');
 assert(readme.includes('schemas/validator-api-envelopes.schema.json'), 'README.md must mention schemas/validator-api-envelopes.schema.json');
 assert(readme.includes('docs/community-health.md'), 'README.md must mention docs/community-health.md');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(readme.includes('docs/capability-matrix.md'), 'README.md must mention docs/capability-matrix.md');
+assert(readme.includes('docs/projection-doctrine.md'), 'README.md must mention docs/projection-doctrine.md');
+assert(readme.includes('docs/domain-boundaries.md'), 'README.md must mention docs/domain-boundaries.md');
+assert(readme.includes('docs/generator-readiness.md'), 'README.md must mention docs/generator-readiness.md');
 assert(readme.includes('NOTICE'), 'README.md must mention NOTICE');
 assert(readme.includes('examples/client/'), 'README.md must mention examples/client/');
 assert(readme.includes('npm run verify:repo'), 'README.md must mention npm run verify:repo');
 assert(releaseReview.includes('check-contract-catalog.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-contract-catalog.js');
 assert(releaseReview.includes('check-release-metadata.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-release-metadata.js');
 assert(releaseReview.includes('check-api-schemas.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-api-schemas.js');
+assert(releaseReview.includes('check-boundary-map.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-boundary-map.js');
 assert(releaseReview.includes('check-client-recipes.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-client-recipes.js');
 assert(releaseReview.includes('check-community-health.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-community-health.js');
 assert(releaseReview.includes('check-project-profile.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-project-profile.js');
@@ -77,6 +87,7 @@ assert(releaseReview.includes('check-capability-matrix.js'), 'PUBLIC_RELEASE_REV
 assert(verificationDoc.includes('check:surface'), 'docs/verification.md must explain check:surface');
 assert(verificationDoc.includes('check:release'), 'docs/verification.md must explain check:release');
 assert(verificationDoc.includes('check:api-schemas'), 'docs/verification.md must explain check:api-schemas');
+assert(verificationDoc.includes('check:boundary-map'), 'docs/verification.md must explain check:boundary-map');
 assert(verificationDoc.includes('check:client-recipes'), 'docs/verification.md must explain check:client-recipes');
 assert(verificationDoc.includes('check:community-health'), 'docs/verification.md must explain check:community-health');
 assert(verificationDoc.includes('check:project-profile'), 'docs/verification.md must explain check:project-profile');
@@ -86,6 +97,7 @@ assert(releaseEvidenceDoc.includes('validator-api-envelopes.schema.json'), 'docs
 assert(releaseEvidenceDoc.includes('community-health'), 'docs/release-evidence.md must mention community-health');
 assert(releaseEvidenceDoc.includes('PUBLIC_PROJECT_PROFILE.json'), 'docs/release-evidence.md must mention PUBLIC_PROJECT_PROFILE.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'docs/release-evidence.md must mention PUBLIC_CAPABILITY_MATRIX.json');
+assert(releaseEvidenceDoc.includes('PUBLIC_BOUNDARY_MAP.json'), 'docs/release-evidence.md must mention PUBLIC_BOUNDARY_MAP.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

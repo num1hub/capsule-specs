@@ -9,7 +9,11 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/docs/reviewer-guide.md",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/docs/capability-matrix.md"
+      "/home/n1/codex-workspace/docs/capability-matrix.md",
+      "/home/n1/codex-workspace/docs/projection-doctrine.md",
+      "/home/n1/codex-workspace/docs/domain-boundaries.md",
+      "/home/n1/codex-workspace/docs/generator-readiness.md",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
@@ -140,7 +144,9 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/scripts/check-project-profile.js",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/scripts/check-capability-matrix.js"
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
+      "/home/n1/codex-workspace/scripts/check-boundary-map.js",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface."
@@ -187,7 +193,10 @@
   },
   "docs/repository-scope.md": {
     "source_paths": [
-      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json"
+      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
+      "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.domain-ownership-map.v1.json",
+      "/home/n1/codex-workspace/docs/domain-boundaries.md",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
     ],
     "transformation_type": "derived",
     "notes": "Public boundary statement."
@@ -330,7 +339,12 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/docs/reviewer-guide.md",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/docs/capability-matrix.md"
+      "/home/n1/codex-workspace/docs/capability-matrix.md",
+      "/home/n1/codex-workspace/docs/projection-doctrine.md",
+      "/home/n1/codex-workspace/docs/domain-boundaries.md",
+      "/home/n1/codex-workspace/docs/generator-readiness.md",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/schemas/public-boundary-map.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
@@ -345,7 +359,8 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/docs/reviewer-guide.md",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/docs/capability-matrix.md"
+      "/home/n1/codex-workspace/docs/capability-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
@@ -366,7 +381,9 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/scripts/check-project-profile.js",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/scripts/check-capability-matrix.js"
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
+      "/home/n1/codex-workspace/scripts/check-boundary-map.js",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects."
@@ -376,7 +393,11 @@
       "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json",
       "/home/n1/n1hub.com/docs/validator.md",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.capsules-as-projections.v1.json",
+      "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.domain-ownership-map.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.generator-readiness.v1.json",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Projection and provenance summary for the public-safe source classes."
@@ -647,7 +668,8 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/scripts/check-project-profile.js",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/scripts/check-capability-matrix.js"
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
@@ -661,7 +683,9 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/scripts/check-project-profile.js",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/scripts/check-capability-matrix.js"
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/scripts/check-boundary-map.js"
     ],
     "transformation_type": "generated",
     "notes": "Public-release review and validation summary."
@@ -870,7 +894,8 @@
       "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
       "/home/n1/codex-workspace/docs/reviewer-guide.md",
       "/home/n1/codex-workspace/docs/community-health.md",
-      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json"
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals."
@@ -892,7 +917,8 @@
       "/home/n1/codex-workspace/docs/public-contract-index.md",
       "/home/n1/codex-workspace/docs/release-evidence.md",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/docs/capability-matrix.md"
+      "/home/n1/codex-workspace/docs/capability-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Fast evaluator path through the strongest public surfaces."
@@ -916,7 +942,11 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/docs/capability-matrix.md",
-      "/home/n1/codex-workspace/docs/reviewer-guide.md"
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/docs/projection-doctrine.md",
+      "/home/n1/codex-workspace/docs/domain-boundaries.md",
+      "/home/n1/codex-workspace/docs/generator-readiness.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface."
@@ -933,7 +963,8 @@
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
-      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json"
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the capability matrix and supported public outcomes."
@@ -950,5 +981,57 @@
     ],
     "transformation_type": "generated",
     "notes": "Repo-local consistency check for the machine-readable capability matrix."
+  },
+  "docs/projection-doctrine.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.capsules-as-projections.v1.json",
+      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public projection doctrine derived from files-as-projections architecture capsules."
+  },
+  "docs/domain-boundaries.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.domain-ownership-map.v1.json",
+      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Published-vs-deferred boundary doctrine adapted from the upstream domain ownership map."
+  },
+  "docs/generator-readiness.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.generator-readiness.v1.json",
+      "/home/n1/n1hub-repo-vault/contracts/capsule.contract.generator-projection-index.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public summary of generator-readiness doctrine and projection-index semantics."
+  },
+  "PUBLIC_BOUNDARY_MAP.json": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.capsules-as-projections.v1.json",
+      "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.domain-ownership-map.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.generator-readiness.v1.json",
+      "/home/n1/codex-workspace/docs/projection-doctrine.md",
+      "/home/n1/codex-workspace/docs/domain-boundaries.md",
+      "/home/n1/codex-workspace/docs/generator-readiness.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable summary of published and deferred boundaries for the public repo."
+  },
+  "schemas/public-boundary-map.schema.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Schema for the machine-readable public boundary map."
+  },
+  "scripts/check-boundary-map.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/schemas/public-boundary-map.schema.json",
+      "/home/n1/codex-workspace/docs/projection-doctrine.md",
+      "/home/n1/codex-workspace/docs/domain-boundaries.md",
+      "/home/n1/codex-workspace/docs/generator-readiness.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for the public boundary map and related doctrine surfaces."
   }
 }

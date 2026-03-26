@@ -1,0 +1,177 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "global_rules": [
+    "Repository files are public projections; upstream capsules and live validator artifacts remain stronger sources of truth.",
+    "Callers should integrate through published contracts, schemas, route families, and examples rather than through private storage shapes.",
+    "This public repository publishes only the minimum safe boundary needed for docs, schemas, examples, and reviewer evidence."
+  ],
+  "published_boundaries": [
+    {
+      "id": "capsule-law",
+      "summary": "Public law and schema surface for capsules, validation gates, relation semantics, and example capsules.",
+      "strongest_surfaces": [
+        "docs/5-element-law.md",
+        "docs/16-gates.md",
+        "docs/relation-types.md",
+        "schemas/capsule-schema.json",
+        "examples/example-note.capsule.json"
+      ],
+      "source_capsules": [
+        "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
+        "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.16-gates.v1.json",
+        "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.relation-types.v1.json",
+        "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json"
+      ],
+      "verify_commands": [
+        "npm run check:examples",
+        "npm run check:docs",
+        "npm run check:boundary-map"
+      ]
+    },
+    {
+      "id": "validator-api",
+      "summary": "Public validator route family with OpenAPI, request and response envelopes, API examples, and consumer recipes.",
+      "strongest_surfaces": [
+        "docs/validator.md",
+        "openapi/validate.openapi.json",
+        "docs/api-envelopes.md",
+        "schemas/validator-api-envelopes.schema.json",
+        "examples/api/validate-request.single.json"
+      ],
+      "source_capsules": [
+        "/home/n1/n1hub.com/docs/validator.md",
+        "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+        "/home/n1/n1hub-repo-vault/governance/capsule.governance.validator-doc.v1.json"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:client-recipes",
+        "npm run check:boundary-map"
+      ]
+    },
+    {
+      "id": "projection-governance",
+      "summary": "Public doctrine for scope, projections, provenance, release evidence, and contributor-facing governance.",
+      "strongest_surfaces": [
+        "docs/projection-doctrine.md",
+        "docs/repository-scope.md",
+        "docs/source-materials.md",
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "source_capsules": [
+        "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
+        "/home/n1/n1hub-repo-vault/architecture/capsule.architecture.capsules-as-projections.v1.json",
+        "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json"
+      ],
+      "verify_commands": [
+        "npm run audit:public-surface",
+        "npm run check:release",
+        "npm run check:boundary-map"
+      ]
+    },
+    {
+      "id": "generator-readiness",
+      "summary": "Public explanation of how the upstream vault dispatches generator output classes and how this repo relates to that projection model.",
+      "strongest_surfaces": [
+        "docs/generator-readiness.md",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "docs/contract-catalog.md"
+      ],
+      "source_capsules": [
+        "/home/n1/n1hub-repo-vault/governance/capsule.governance.generator-readiness.v1.json",
+        "/home/n1/n1hub-repo-vault/contracts/capsule.contract.generator-projection-index.v1.json"
+      ],
+      "verify_commands": [
+        "npm run check:catalog",
+        "npm run check:surface",
+        "npm run check:boundary-map"
+      ]
+    },
+    {
+      "id": "reviewer-evidence",
+      "summary": "Fast reviewer-facing summary of maturity, capability coverage, release evidence, and explicit published-vs-deferred boundaries.",
+      "strongest_surfaces": [
+        "docs/reviewer-guide.md",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_RELEASE_REVIEW.md",
+        "PUBLIC_BOUNDARY_MAP.json"
+      ],
+      "source_capsules": [
+        "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json",
+        "/home/n1/n1hub-repo-vault/governance/capsule.governance.onboarding.v1.json"
+      ],
+      "verify_commands": [
+        "npm run check:project-profile",
+        "npm run check:capability-matrix",
+        "npm run check:boundary-map"
+      ]
+    }
+  ],
+  "deferred_domains": [
+    {
+      "id": "a2c",
+      "status": "deferred",
+      "summary": "Candidate-capsule production and refinement remain outside this public specs surface.",
+      "reason": "The current repo publishes CapsuleOS law and validator-facing contracts, not unpublished runtime pipelines."
+    },
+    {
+      "id": "graph",
+      "status": "deferred",
+      "summary": "Graph projection and traversal contracts are not yet public runtime families here.",
+      "reason": "The current repo focuses on the capsule contract and validator API rather than the full graph runtime."
+    },
+    {
+      "id": "projects",
+      "status": "deferred",
+      "summary": "Project hierarchy semantics are part of the broader system but not a first-class public runtime family in this repo.",
+      "reason": "This public surface stays narrow and does not yet expose project traversal contracts."
+    },
+    {
+      "id": "branching-diff",
+      "status": "deferred",
+      "summary": "Overlay, diff, and merge semantics stay outside the initial public specs release.",
+      "reason": "They are higher-blast-radius runtime boundaries and not required for the initial OSS reference surface."
+    },
+    {
+      "id": "symphony",
+      "status": "deferred",
+      "summary": "Workflow orchestration remains an upstream domain, not a public runtime package here.",
+      "reason": "This repo publishes reference surfaces, not orchestration runtime internals."
+    },
+    {
+      "id": "n-infinity",
+      "status": "deferred",
+      "summary": "Swarm execution coordination is not part of the current public repo.",
+      "reason": "The specs surface is narrower than the upstream runtime and governance model."
+    },
+    {
+      "id": "agents",
+      "status": "deferred",
+      "summary": "Vault-steward and agent-control internals remain private.",
+      "reason": "Publishing those surfaces would leak operator-only runtime boundaries that are out of scope for this repo."
+    },
+    {
+      "id": "plugins",
+      "status": "deferred",
+      "summary": "Extension governance exists upstream, but the plugin runtime surface is not part of this release.",
+      "reason": "The current public repo is focused on core law, validator contracts, and public review surfaces."
+    },
+    {
+      "id": "delivery-surfaces",
+      "status": "deferred",
+      "summary": "Web, desktop, and mobile delivery surfaces are not published here.",
+      "reason": "This repo is a reference surface, not an operator-facing application distribution channel."
+    },
+    {
+      "id": "hosted-infra",
+      "status": "deferred",
+      "summary": "Tenancy, rollout controls, quotas, and hosted operations remain outside this public repo.",
+      "reason": "Hosted and managed-cloud boundaries are intentionally excluded from the minimal public specs release."
+    }
+  ]
+}

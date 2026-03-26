@@ -120,6 +120,29 @@
       ]
     },
     {
+      "id": "understand-projection-and-domain-boundaries",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Understand why this repo is a narrow public projection, which boundaries are published, and which upstream domains are intentionally deferred.",
+      "strongest_surfaces": [
+        "docs/projection-doctrine.md",
+        "docs/domain-boundaries.md",
+        "docs/generator-readiness.md",
+        "PUBLIC_BOUNDARY_MAP.json"
+      ],
+      "supporting_surfaces": [
+        "docs/repository-scope.md",
+        "docs/source-materials.md",
+        "schemas/public-boundary-map.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:boundary-map",
+        "npm run check:catalog",
+        "npm run check:surface",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "contribute-safely-to-public-surface",
       "audience": "contributors",
       "readiness": "ready",
@@ -174,7 +197,8 @@
         "docs/public-contract-index.md",
         "PUBLIC_CONTRACT_CATALOG.json",
         "PUBLIC_PROJECT_PROFILE.json",
-        "PUBLIC_CAPABILITY_MATRIX.json"
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_BOUNDARY_MAP.json"
       ],
       "supporting_surfaces": [
         "QUICKSTART.md",
