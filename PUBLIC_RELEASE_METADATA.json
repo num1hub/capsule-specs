@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 178,
-    "manifest_entries": 178
+    "files": 182,
+    "manifest_entries": 182
   },
   "surface_summary": {
-    "catalog_entries": 129,
+    "catalog_entries": 133,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 70
+    "markdown_files": 71
   },
   "repo_local_checks": [
     {
@@ -123,6 +123,10 @@
     {
       "command": "npm run check:review-scorecard",
       "status": "pass"
+    },
+    {
+      "command": "npm run check:verification-matrix",
+      "status": "pass"
     }
   ],
   "upstream_validator_checks": [
@@ -173,6 +177,7 @@
     "PUBLIC_UPDATE_COHERENCE_MAP.json is a bounded sync-group summary and must stay subordinate to the stronger release, provenance, contract, maintainer, and reviewer surfaces it references",
     "PUBLIC_LIMITATIONS_REGISTER.json is a bounded deferred-scope and non-promise summary and must stay subordinate to the stronger boundary, assurance, scope, and release surfaces it references",
     "PUBLIC_EVIDENCE_TIMELINE.json is a bounded maintenance-history summary and must stay subordinate to the stronger changelog, release-evidence, reviewer, and git-history surfaces it references",
-    "PUBLIC_REVIEW_SCORECARD.json is a bounded reviewer checklist and must stay subordinate to the stronger docs, schemas, examples, release evidence, and git-backed maintenance history it references"
+    "PUBLIC_REVIEW_SCORECARD.json is a bounded reviewer checklist and must stay subordinate to the stronger docs, schemas, examples, release evidence, and git-backed maintenance history it references",
+    "PUBLIC_VERIFICATION_MATRIX.json is a bounded verification-coverage summary and must stay subordinate to the stronger check scripts, release evidence, and live validator behavior it references"
   ]
 }

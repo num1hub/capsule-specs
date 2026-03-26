@@ -1,0 +1,232 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Provide a bounded machine-readable map from verification command families to the public surfaces and failure classes they protect.",
+  "checks": [
+    {
+      "id": "public-surface-coverage",
+      "summary": "Protects manifest coverage, catalog integrity, and the existence of declared public artifacts.",
+      "commands": [
+        "npm run audit:public-surface",
+        "npm run check:catalog"
+      ],
+      "protects": [
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "strongest_surfaces": [
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "scripts/audit-public-surface.js"
+      ],
+      "failure_modes_prevented": [
+        "untracked public files",
+        "missing catalog entries",
+        "stale manifest coverage"
+      ]
+    },
+    {
+      "id": "capsule-and-api-example-integrity",
+      "summary": "Protects public-safe capsules, API payload examples, and schema-backed example correctness.",
+      "commands": [
+        "npm run check:examples",
+        "npm run check:api-examples",
+        "npm run check:api-schemas"
+      ],
+      "protects": [
+        "examples/",
+        "examples/api/",
+        "schemas/validator-api-envelopes.schema.json"
+      ],
+      "strongest_surfaces": [
+        "examples/example-project-hub.capsule.json",
+        "examples/api/validate-request.single.json",
+        "schemas/validator-api-envelopes.schema.json"
+      ],
+      "failure_modes_prevented": [
+        "broken example semantics",
+        "API/sample drift",
+        "schema/example mismatch"
+      ]
+    },
+    {
+      "id": "coverage-and-negative-paths",
+      "summary": "Protects bounded example coverage and explicit negative-path behavior on the public surface.",
+      "commands": [
+        "npm run check:example-coverage",
+        "npm run check:failure-model"
+      ],
+      "protects": [
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "PUBLIC_FAILURE_MODEL.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "PUBLIC_FAILURE_MODEL.json",
+        "examples/example-validator-invalid-g16.capsule.json"
+      ],
+      "failure_modes_prevented": [
+        "fake example coverage claims",
+        "missing negative-path evidence",
+        "happy-path-only review posture"
+      ]
+    },
+    {
+      "id": "boundary-portability-and-limits",
+      "summary": "Protects published-vs-deferred boundaries, portability posture, and explicit non-promises.",
+      "commands": [
+        "npm run check:boundary-map",
+        "npm run check:portability",
+        "npm run check:limitations-register"
+      ],
+      "protects": [
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
+      ],
+      "failure_modes_prevented": [
+        "scope drift",
+        "fake portability claims",
+        "hidden non-promises"
+      ]
+    },
+    {
+      "id": "community-and-maintainer-governance",
+      "summary": "Protects public maintainer posture, contributor intake, change control, and ownership authority.",
+      "commands": [
+        "npm run check:community-health",
+        "npm run check:maintenance-model",
+        "npm run check:change-control",
+        "npm run check:ownership-map"
+      ],
+      "protects": [
+        "docs/community-health.md",
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_OWNERSHIP_MAP.json"
+      ],
+      "strongest_surfaces": [
+        "docs/community-health.md",
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_OWNERSHIP_MAP.json"
+      ],
+      "failure_modes_prevented": [
+        "unclear contributor intake",
+        "implicit change policy",
+        "ambiguous artifact authority"
+      ]
+    },
+    {
+      "id": "reviewer-and-summary-layers",
+      "summary": "Protects fast external evaluation surfaces and bounded reviewer shortcuts.",
+      "commands": [
+        "npm run check:project-profile",
+        "npm run check:evaluation-packet",
+        "npm run check:review-scorecard",
+        "npm run check:capability-matrix"
+      ],
+      "protects": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_CAPABILITY_MATRIX.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_CAPABILITY_MATRIX.json"
+      ],
+      "failure_modes_prevented": [
+        "stale reviewer shortcuts",
+        "hand-wavy maturity claims",
+        "unclear supported outcomes"
+      ]
+    },
+    {
+      "id": "traceability-dependency-and-assurance",
+      "summary": "Protects reading order, claim-to-evidence links, assurance posture, and co-moving summary layers.",
+      "commands": [
+        "npm run check:dependency-graph",
+        "npm run check:assurance-case",
+        "npm run check:update-coherence",
+        "npm run check:traceability"
+      ],
+      "protects": [
+        "PUBLIC_DEPENDENCY_GRAPH.json",
+        "PUBLIC_ASSURANCE_CASE.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_TRACEABILITY_MATRIX.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_DEPENDENCY_GRAPH.json",
+        "PUBLIC_ASSURANCE_CASE.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_TRACEABILITY_MATRIX.json"
+      ],
+      "failure_modes_prevented": [
+        "broken reviewer navigation",
+        "orphaned claims",
+        "drifting summary layers"
+      ]
+    },
+    {
+      "id": "docs-and-cross-surface-coherence",
+      "summary": "Protects Markdown link integrity and cross-surface coherence across docs, release review, and package scripts.",
+      "commands": [
+        "npm run check:docs",
+        "npm run check:surface"
+      ],
+      "protects": [
+        "docs/",
+        "PUBLIC_RELEASE_REVIEW.md",
+        "package.json"
+      ],
+      "strongest_surfaces": [
+        "docs/public-contract-index.md",
+        "docs/verification.md",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "failure_modes_prevented": [
+        "broken docs navigation",
+        "missing cross-links",
+        "stale reviewer/release references"
+      ]
+    },
+    {
+      "id": "release-state-and-maintenance-history",
+      "summary": "Protects current release evidence and bounded visibility into active maintenance over time.",
+      "commands": [
+        "npm run check:evidence-timeline",
+        "npm run check:release",
+        "npm run verify:repo"
+      ],
+      "protects": [
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "CHANGELOG.md"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "CHANGELOG.md"
+      ],
+      "failure_modes_prevented": [
+        "invisible maintenance history",
+        "stale release evidence",
+        "symbolic top-level verification"
+      ]
+    }
+  ],
+  "review_commands": [
+    "npm run verify:repo",
+    "npm run check:verification-matrix"
+  ]
+}

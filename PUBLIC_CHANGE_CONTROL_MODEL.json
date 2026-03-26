@@ -57,7 +57,8 @@
         "PUBLIC_MAINTENANCE_MODEL.json",
         "PUBLIC_UPDATE_COHERENCE_MAP.json",
         "PUBLIC_EVIDENCE_TIMELINE.json",
-        "PUBLIC_REVIEW_SCORECARD.json"
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_VERIFICATION_MATRIX.json"
       ],
       "verify_commands": [
         "npm run check:maintenance-model",
@@ -121,7 +122,8 @@
     "PUBLIC_UPDATE_COHERENCE_MAP.json",
     "PUBLIC_LIMITATIONS_REGISTER.json",
     "PUBLIC_EVIDENCE_TIMELINE.json",
-    "PUBLIC_REVIEW_SCORECARD.json"
+    "PUBLIC_REVIEW_SCORECARD.json",
+    "PUBLIC_VERIFICATION_MATRIX.json"
   ],
   "non_claims": [
     "This file does not promise indefinite backward compatibility for all public artifacts while the repository remains in 0.x.",

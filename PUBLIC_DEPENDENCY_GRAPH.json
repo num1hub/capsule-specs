@@ -196,6 +196,19 @@
         "npm run check:review-scorecard",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "verification-coverage",
+      "path": "PUBLIC_VERIFICATION_MATRIX.json",
+      "role": "verification-summary",
+      "depends_on": [
+        "release-evidence",
+        "review-scorecard"
+      ],
+      "verify_commands": [
+        "npm run check:verification-matrix",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -210,6 +223,7 @@
         "release-evidence",
         "maintenance-evolution",
         "review-scorecard",
+        "verification-coverage",
         "update-coherence-and-sync"
       ]
     },
@@ -235,7 +249,8 @@
         "update-coherence-and-sync",
         "release-evidence",
         "maintenance-evolution",
-        "review-scorecard"
+        "review-scorecard",
+        "verification-coverage"
       ]
     }
   ],

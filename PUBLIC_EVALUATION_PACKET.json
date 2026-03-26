@@ -18,6 +18,7 @@
     "docs/reviewer-guide.md",
     "PUBLIC_PROJECT_PROFILE.json",
     "PUBLIC_REVIEW_SCORECARD.json",
+    "PUBLIC_VERIFICATION_MATRIX.json",
     "PUBLIC_CAPABILITY_MATRIX.json",
     "PUBLIC_BOUNDARY_MAP.json",
     "PUBLIC_PORTABILITY_PROFILE.json",
@@ -64,7 +65,8 @@
       "docs/update-coherence.md",
       "docs/limitations-register.md",
       "docs/evidence-timeline.md",
-      "docs/review-scorecard.md"
+      "docs/review-scorecard.md",
+      "docs/verification-matrix.md"
     ],
     "machine_readable_evidence": [
       "PUBLIC_CONTRACT_CATALOG.json",
@@ -82,7 +84,8 @@
       "PUBLIC_UPDATE_COHERENCE_MAP.json",
       "PUBLIC_LIMITATIONS_REGISTER.json",
       "PUBLIC_EVIDENCE_TIMELINE.json",
-      "PUBLIC_REVIEW_SCORECARD.json"
+      "PUBLIC_REVIEW_SCORECARD.json",
+      "PUBLIC_VERIFICATION_MATRIX.json"
     ]
   },
   "review_commands": [
@@ -102,7 +105,8 @@
     "The repo makes required co-movement between reviewer, release, contract, and teaching surfaces explicit instead of leaving release sync as maintainer folklore.",
     "The repo makes deferred scope and non-promised behavior explicit instead of leaving reviewers to infer limits from scattered caveat prose.",
     "The repo makes active maintenance and public-surface hardening visible through a bounded machine-readable timeline instead of requiring reviewers to infer evolution from raw git history.",
-    "The repo makes bounded external review criteria explicit through a machine-readable review scorecard instead of leaving maturity assessment to raw counts or intuition."
+    "The repo makes bounded external review criteria explicit through a machine-readable review scorecard instead of leaving maturity assessment to raw counts or intuition.",
+    "The repo makes verification coverage explicit through a machine-readable matrix instead of hiding trust in one opaque verify command."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",

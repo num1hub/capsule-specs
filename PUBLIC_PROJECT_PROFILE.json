@@ -35,7 +35,8 @@
       "machine-readable update-coherence summaries",
       "machine-readable limitations and deferred-scope summaries",
       "machine-readable evidence-timeline summaries",
-      "machine-readable review-scorecard summaries"
+      "machine-readable review-scorecard summaries",
+      "machine-readable verification-matrix summaries"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -45,9 +46,9 @@
     ]
   },
   "surface_summary": {
-    "total_files": 178,
-    "markdown_files": 70,
-    "schema_files": 23,
+    "total_files": 182,
+    "markdown_files": 71,
+    "schema_files": 24,
     "raw_capsule_files": 4,
     "example_capsules": 5,
     "api_example_files": 13,
@@ -82,11 +83,12 @@
     "machine_readable_update_coherence_present": true,
     "machine_readable_limitations_register_present": true,
     "machine_readable_evidence_timeline_present": true,
-    "machine_readable_review_scorecard_present": true
+    "machine_readable_review_scorecard_present": true,
+    "machine_readable_verification_matrix_present": true
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 27,
+    "repo_local_check_count": 28,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -113,7 +115,8 @@
     "update_coherence": "PUBLIC_UPDATE_COHERENCE_MAP.json",
     "limitations_register": "PUBLIC_LIMITATIONS_REGISTER.json",
     "evidence_timeline": "PUBLIC_EVIDENCE_TIMELINE.json",
-    "review_scorecard": "PUBLIC_REVIEW_SCORECARD.json"
+    "review_scorecard": "PUBLIC_REVIEW_SCORECARD.json",
+    "verification_matrix": "PUBLIC_VERIFICATION_MATRIX.json"
   },
   "program_readiness": {
     "maintainer_owned": true,
@@ -124,7 +127,7 @@
     "projection_doctrine_explicit": true,
     "boundary_map_present": true,
     "community_intake_explicit": true,
-    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, boundary doctrine, portability posture, evaluation packet references, failure-model evidence, example-coverage evidence, maintenance-model evidence, change-control evidence, ownership-hierarchy evidence, dependency-graph evidence, assurance-case evidence, update-coherence evidence, limitations-register evidence, traceability evidence, evidence-timeline evidence, review-scorecard evidence, or live validator behavior.",
+    "notes": "This profile is a public-facing summary for reviewers and programs evaluating repository maturity. It summarizes the published surface but does not replace the stronger underlying docs, schemas, OpenAPI artifacts, boundary doctrine, portability posture, evaluation packet references, failure-model evidence, example-coverage evidence, maintenance-model evidence, change-control evidence, ownership-hierarchy evidence, dependency-graph evidence, assurance-case evidence, update-coherence evidence, limitations-register evidence, traceability evidence, evidence-timeline evidence, review-scorecard evidence, verification-matrix evidence, or live validator behavior.",
     "portability_posture_explicit": true,
     "evaluation_packet_present": true,
     "failure_model_explicit": true,
@@ -138,6 +141,7 @@
     "update_coherence_explicit": true,
     "limitations_register_explicit": true,
     "active_maintenance_timeline_explicit": true,
-    "review_scorecard_explicit": true
+    "review_scorecard_explicit": true,
+    "verification_coverage_explicit": true
   }
 }

@@ -583,6 +583,21 @@
       ]
     },
     {
+      "id": "governance.verification-matrix-doc",
+      "path": "docs/verification-matrix.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:verification-matrix",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.verification",
       "path": "docs/verification.md",
       "kind": "verification-doc",
@@ -1248,6 +1263,21 @@
       ]
     },
     {
+      "id": "governance.verification-matrix",
+      "path": "PUBLIC_VERIFICATION_MATRIX.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:verification-matrix",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "repo.readme",
       "path": "README.md",
       "kind": "orientation",
@@ -1574,6 +1604,20 @@
       ]
     },
     {
+      "id": "schema.verification-matrix",
+      "path": "schemas/public-verification-matrix.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:verification-matrix",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "schema.validator-api-envelopes",
       "path": "schemas/validator-api-envelopes.schema.json",
       "kind": "schema",
@@ -1879,6 +1923,20 @@
       ],
       "verify_commands": [
         "npm run check:update-coherence",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.verification-matrix-check",
+      "path": "scripts/check-verification-matrix.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:verification-matrix",
         "npm run check:catalog"
       ]
     },

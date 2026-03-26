@@ -93,6 +93,7 @@ assert(publicIndex.includes('../schemas/public-assurance-case.schema.json'), 'pu
 assert(evaluationDoc.includes('PUBLIC_ASSURANCE_CASE.json'), 'evaluation packet doc must mention PUBLIC_ASSURANCE_CASE.json');
 assert(evaluationDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'evaluation packet doc must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(evaluationDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'evaluation packet doc must mention PUBLIC_REVIEW_SCORECARD.json');
+assert(evaluationDoc.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'evaluation packet doc must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(releaseEvidence.includes('PUBLIC_ASSURANCE_CASE.json'), 'release-evidence doc must mention PUBLIC_ASSURANCE_CASE.json');
 assert(verification.includes('check:assurance-case'), 'verification doc must mention check:assurance-case');
 assert(capabilityDoc.includes('PUBLIC_ASSURANCE_CASE.json'), 'capability-matrix doc must mention PUBLIC_ASSURANCE_CASE.json');
@@ -107,6 +108,7 @@ assert(catalogPaths.has('schemas/public-assurance-case.schema.json'), 'contract 
 assert(catalogPaths.has('scripts/check-assurance-case.js'), 'contract catalog must include assurance-case verifier');
 assert(catalogPaths.has('PUBLIC_LIMITATIONS_REGISTER.json'), 'contract catalog must include PUBLIC_LIMITATIONS_REGISTER.json');
 assert(catalogPaths.has('PUBLIC_REVIEW_SCORECARD.json'), 'contract catalog must include PUBLIC_REVIEW_SCORECARD.json');
+assert(catalogPaths.has('PUBLIC_VERIFICATION_MATRIX.json'), 'contract catalog must include PUBLIC_VERIFICATION_MATRIX.json');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:assurance-case'), 'release metadata must include assurance-case verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_ASSURANCE_CASE.json')), 'release metadata residual risks must mention PUBLIC_ASSURANCE_CASE.json');

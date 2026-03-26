@@ -43,6 +43,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable summary of the active-maintenance and public-hardening timeline for this public specs repository.
 - [`../PUBLIC_REVIEW_SCORECARD.json`](../PUBLIC_REVIEW_SCORECARD.json)
   Machine-readable bounded review checklist for external repo-maturity assessment.
+- [`../PUBLIC_VERIFICATION_MATRIX.json`](../PUBLIC_VERIFICATION_MATRIX.json)
+  Machine-readable map of which verification families protect which public surfaces and failure classes.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Machine-readable map from public claims to strongest surfaces and verification commands.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
@@ -92,6 +94,8 @@ The evidence timeline strengthens maintenance review by making the public harden
 
 The review scorecard strengthens reviewer discipline by making repo-maturity criteria explicit instead of leaving external evaluation to scattered impressions.
 
+The verification matrix strengthens release discipline by making check coverage explicit instead of leaving verification depth implicit behind one top-level command.
+
 The traceability matrix strengthens reviewability by making claim-to-evidence and claim-to-verification links explicit instead of leaving them implicit across multiple files.
 
 The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
@@ -121,6 +125,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_LIMITATIONS_REGISTER.json`
 - `PUBLIC_EVIDENCE_TIMELINE.json`
 - `PUBLIC_REVIEW_SCORECARD.json`
+- `PUBLIC_VERIFICATION_MATRIX.json`
 - `PUBLIC_TRACEABILITY_MATRIX.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`

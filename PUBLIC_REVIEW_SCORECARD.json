@@ -165,15 +165,32 @@
       "id": "single-verification-entrypoint-present",
       "question": "Is there one serious repo-local verification entrypoint for the public surface?",
       "status": "pass",
-      "summary": "The repo exposes one bounded verification command and records its expected sub-checks in release metadata.",
+      "summary": "The repo exposes one bounded verification entrypoint and a machine-readable map of which check families protect which public surfaces.",
       "strongest_surfaces": [
         "package.json",
         "docs/verification.md",
         "PUBLIC_RELEASE_METADATA.json",
-        "PUBLIC_CONTRACT_CATALOG.json"
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_VERIFICATION_MATRIX.json"
       ],
       "review_commands": [
         "npm run verify:repo",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "verification-coverage-explicit",
+      "question": "Is verification coverage explicit instead of hidden behind one top-level command?",
+      "status": "pass",
+      "summary": "The repo publishes a bounded verification matrix that maps check families to protected public artifacts and expected failure classes.",
+      "strongest_surfaces": [
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "docs/verification-matrix.md",
+        "docs/verification.md",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "review_commands": [
+        "npm run check:verification-matrix",
         "npm run check:review-scorecard"
       ]
     }

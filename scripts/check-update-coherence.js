@@ -83,6 +83,7 @@ assert(readme.includes('docs/update-coherence.md'), 'README.md must mention docs
 assert(readme.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'README.md must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(readme.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'README.md must mention PUBLIC_EVIDENCE_TIMELINE.json');
 assert(readme.includes('PUBLIC_REVIEW_SCORECARD.json'), 'README.md must mention PUBLIC_REVIEW_SCORECARD.json');
+assert(readme.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'README.md must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(quickstart.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'QUICKSTART.md must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(reviewerGuide.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'reviewer guide must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(publicIndex.includes('update-coherence.md'), 'public contract index must mention docs/update-coherence.md');
@@ -95,6 +96,7 @@ assert(evaluationDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'evaluation p
 assert(evaluationDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'evaluation packet doc must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(evaluationDoc.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'evaluation packet doc must mention PUBLIC_EVIDENCE_TIMELINE.json');
 assert(evaluationDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'evaluation packet doc must mention PUBLIC_REVIEW_SCORECARD.json');
+assert(evaluationDoc.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'evaluation packet doc must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(faq.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'FAQ must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(maintainerOps.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'maintainer-operations doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(changeControl.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'change-control doc must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
@@ -110,6 +112,7 @@ assert(catalogPaths.has('scripts/check-update-coherence.js'), 'contract catalog 
 assert(catalogPaths.has('PUBLIC_LIMITATIONS_REGISTER.json'), 'contract catalog must include PUBLIC_LIMITATIONS_REGISTER.json');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_TIMELINE.json'), 'contract catalog must include PUBLIC_EVIDENCE_TIMELINE.json');
 assert(catalogPaths.has('PUBLIC_REVIEW_SCORECARD.json'), 'contract catalog must include PUBLIC_REVIEW_SCORECARD.json');
+assert(catalogPaths.has('PUBLIC_VERIFICATION_MATRIX.json'), 'contract catalog must include PUBLIC_VERIFICATION_MATRIX.json');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:update-coherence'), 'release metadata must include update-coherence verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_UPDATE_COHERENCE_MAP.json')), 'release metadata residual risks must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
@@ -120,6 +123,10 @@ assert(
 assert(
   coherence.sync_groups.some((group) => group.required_surfaces.includes('PUBLIC_REVIEW_SCORECARD.json')),
   'update-coherence map must include PUBLIC_REVIEW_SCORECARD.json in at least one sync group'
+);
+assert(
+  coherence.sync_groups.some((group) => group.required_surfaces.includes('PUBLIC_VERIFICATION_MATRIX.json')),
+  'update-coherence map must include PUBLIC_VERIFICATION_MATRIX.json in at least one sync group'
 );
 
 if (process.exitCode) {

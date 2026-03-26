@@ -63,6 +63,7 @@ for (const pathDef of graph.reading_paths) {
 
 assert(ids.has('maintenance-evolution'), 'dependency graph must include maintenance-evolution node');
 assert(ids.has('review-scorecard'), 'dependency graph must include review-scorecard node');
+assert(ids.has('verification-coverage'), 'dependency graph must include verification-coverage node');
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('maintenance-evolution')),
   'reviewer-fast-path must include maintenance-evolution'
@@ -72,12 +73,20 @@ assert(
   'reviewer-fast-path must include review-scorecard'
 );
 assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'reviewer-fast-path' && pathDef.steps.includes('verification-coverage')),
+  'reviewer-fast-path must include verification-coverage'
+);
+assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('maintenance-evolution')),
   'contributor-governance-path must include maintenance-evolution'
 );
 assert(
   graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('review-scorecard')),
   'contributor-governance-path must include review-scorecard'
+);
+assert(
+  graph.reading_paths.some((pathDef) => pathDef.id === 'contributor-governance-path' && pathDef.steps.includes('verification-coverage')),
+  'contributor-governance-path must include verification-coverage'
 );
 
 for (const command of graph.review_commands) {

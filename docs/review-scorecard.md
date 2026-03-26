@@ -23,6 +23,8 @@ The maintenance timeline behind the current review posture lives in [`../PUBLIC_
 
 The explicit limits on the scorecard live in [`../PUBLIC_LIMITATIONS_REGISTER.json`](../PUBLIC_LIMITATIONS_REGISTER.json).
 
+The verification coverage behind the scorecard lives in [`../PUBLIC_VERIFICATION_MATRIX.json`](../PUBLIC_VERIFICATION_MATRIX.json).
+
 ## Important boundary
 
 The scorecard is a bounded public reviewer aid. It does not replace the stronger docs, schemas, examples, release evidence, or raw git history it references.

@@ -404,6 +404,32 @@
         "npm run check:traceability",
         "npm run check:release"
       ]
+    },
+    {
+      "id": "verification-coverage-and-check-discipline",
+      "claim": "Verification coverage is explicit and reviewable through bounded check families instead of being hidden behind one opaque verify command.",
+      "audiences": [
+        "reviewers",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "docs/verification-matrix.md",
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "docs/verification.md",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_REVIEW_SCORECARD.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "schemas/public-verification-matrix.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:verification-matrix",
+        "npm run check:traceability",
+        "npm run check:release"
+      ]
     }
   ],
   "non_claims": [

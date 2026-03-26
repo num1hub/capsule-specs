@@ -557,6 +557,29 @@
         "npm run check:project-profile",
         "npm run check:capability-matrix"
       ]
+    },
+    {
+      "id": "inspect-verification-coverage-across-check-families",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Inspect which verification families protect which public artifacts and what kinds of failures they are intended to catch.",
+      "strongest_surfaces": [
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "docs/verification-matrix.md",
+        "docs/verification.md",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_REVIEW_SCORECARD.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "schemas/public-verification-matrix.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:verification-matrix",
+        "npm run check:capability-matrix",
+        "npm run check:release"
+      ]
     }
   ]
 }

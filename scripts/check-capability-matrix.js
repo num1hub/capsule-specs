@@ -27,6 +27,7 @@ const requiredIds = [
   'inspect-explicit-public-limitations',
   'inspect-active-maintenance-evolution',
   'apply-bounded-review-scorecard',
+  'inspect-verification-coverage-across-check-families',
   'trace-public-claims-end-to-end',
   'understand-projection-and-domain-boundaries',
   'evaluate-portability-and-import-trust',
@@ -100,6 +101,7 @@ assert(catalogPaths.has('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'contract catalog m
 assert(catalogPaths.has('PUBLIC_LIMITATIONS_REGISTER.json'), 'contract catalog must include PUBLIC_LIMITATIONS_REGISTER.json');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_TIMELINE.json'), 'contract catalog must include PUBLIC_EVIDENCE_TIMELINE.json');
 assert(catalogPaths.has('PUBLIC_REVIEW_SCORECARD.json'), 'contract catalog must include PUBLIC_REVIEW_SCORECARD.json');
+assert(catalogPaths.has('PUBLIC_VERIFICATION_MATRIX.json'), 'contract catalog must include PUBLIC_VERIFICATION_MATRIX.json');
 assert(catalogPaths.has('docs/capability-matrix.md'), 'contract catalog must include docs/capability-matrix.md');
 assert(catalogPaths.has('docs/example-coverage.md'), 'contract catalog must include docs/example-coverage.md');
 assert(catalogPaths.has('docs/maintainer-operations.md'), 'contract catalog must include docs/maintainer-operations.md');
@@ -112,6 +114,7 @@ assert(catalogPaths.has('docs/update-coherence.md'), 'contract catalog must incl
 assert(catalogPaths.has('docs/limitations-register.md'), 'contract catalog must include docs/limitations-register.md');
 assert(catalogPaths.has('docs/evidence-timeline.md'), 'contract catalog must include docs/evidence-timeline.md');
 assert(catalogPaths.has('docs/review-scorecard.md'), 'contract catalog must include docs/review-scorecard.md');
+assert(catalogPaths.has('docs/verification-matrix.md'), 'contract catalog must include docs/verification-matrix.md');
 assert(catalogPaths.has('schemas/public-capability-matrix.schema.json'), 'contract catalog must include schemas/public-capability-matrix.schema.json');
 assert(catalogPaths.has('schemas/public-example-coverage.schema.json'), 'contract catalog must include schemas/public-example-coverage.schema.json');
 assert(catalogPaths.has('schemas/public-maintenance-model.schema.json'), 'contract catalog must include schemas/public-maintenance-model.schema.json');
@@ -124,6 +127,7 @@ assert(catalogPaths.has('schemas/public-update-coherence-map.schema.json'), 'con
 assert(catalogPaths.has('schemas/public-limitations-register.schema.json'), 'contract catalog must include schemas/public-limitations-register.schema.json');
 assert(catalogPaths.has('schemas/public-evidence-timeline.schema.json'), 'contract catalog must include schemas/public-evidence-timeline.schema.json');
 assert(catalogPaths.has('schemas/public-review-scorecard.schema.json'), 'contract catalog must include schemas/public-review-scorecard.schema.json');
+assert(catalogPaths.has('schemas/public-verification-matrix.schema.json'), 'contract catalog must include schemas/public-verification-matrix.schema.json');
 assert(catalogPaths.has('scripts/check-capability-matrix.js'), 'contract catalog must include scripts/check-capability-matrix.js');
 
 const readme = fs.readFileSync(path.join(repoRoot, 'README.md'), 'utf8');
@@ -146,6 +150,7 @@ assert(readme.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'README.md must ment
 assert(readme.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'README.md must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(readme.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'README.md must mention PUBLIC_EVIDENCE_TIMELINE.json');
 assert(readme.includes('PUBLIC_REVIEW_SCORECARD.json'), 'README.md must mention PUBLIC_REVIEW_SCORECARD.json');
+assert(readme.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'README.md must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(reviewerGuide.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'reviewer guide must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'capability matrix doc must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_BOUNDARY_MAP.json'), 'capability matrix doc must mention PUBLIC_BOUNDARY_MAP.json');
@@ -163,6 +168,7 @@ assert(capabilityDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'capability m
 assert(capabilityDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'capability matrix doc must mention PUBLIC_LIMITATIONS_REGISTER.json');
 assert(capabilityDoc.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'capability matrix doc must mention PUBLIC_EVIDENCE_TIMELINE.json');
 assert(capabilityDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'capability matrix doc must mention PUBLIC_REVIEW_SCORECARD.json');
+assert(capabilityDoc.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'capability matrix doc must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(capabilityDoc.includes('PUBLIC_PROJECT_PROFILE.json'), 'capability matrix doc must mention PUBLIC_PROJECT_PROFILE.json');
 assert(capabilityDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'capability matrix doc must mention PUBLIC_RELEASE_METADATA.json');
 

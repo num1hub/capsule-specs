@@ -154,6 +154,10 @@ assert(
   'release metadata must include the review-scorecard verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:verification-matrix'),
+  'release metadata must include the verification-matrix verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -236,6 +240,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_REVIEW_SCORECARD.json')),
   'release metadata residual risks must mention PUBLIC_REVIEW_SCORECARD.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_VERIFICATION_MATRIX.json')),
+  'release metadata residual risks must mention PUBLIC_VERIFICATION_MATRIX.json'
 );
 
 if (process.exitCode) {

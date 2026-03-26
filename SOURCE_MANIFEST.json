@@ -46,7 +46,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts."
@@ -85,7 +89,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "derived",
     "notes": "Root-level fast entry path for public contributors."
@@ -152,7 +160,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection."
@@ -295,7 +307,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface."
@@ -521,7 +537,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Short answers to scope and validation questions for the public repository."
@@ -579,7 +599,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
@@ -624,7 +648,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces."
@@ -679,7 +707,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects."
@@ -770,7 +802,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for schema artifacts."
@@ -1023,7 +1059,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths."
@@ -1070,51 +1110,63 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks."
   },
   "PUBLIC_RELEASE_REVIEW.md": {
     "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
+      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
+      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/docs/evidence-timeline.md",
+      "/home/n1/codex-workspace/docs/example-coverage.md",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/docs/traceability.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
+      "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/codex-workspace/scripts/check-api-schemas.js",
-      "/home/n1/codex-workspace/docs/community-health.md",
-      "/home/n1/codex-workspace/scripts/check-community-health.js",
-      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/scripts/check-project-profile.js",
-      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
-      "/home/n1/codex-workspace/PUBLIC_BOUNDARY_MAP.json",
       "/home/n1/codex-workspace/scripts/check-boundary-map.js",
-      "/home/n1/codex-workspace/PUBLIC_PORTABILITY_PROFILE.json",
-      "/home/n1/codex-workspace/scripts/check-portability-profile.js",
-      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
+      "/home/n1/codex-workspace/scripts/check-community-health.js",
       "/home/n1/codex-workspace/scripts/check-evaluation-packet.js",
-      "/home/n1/codex-workspace/PUBLIC_FAILURE_MODEL.json",
-      "/home/n1/codex-workspace/scripts/check-failure-model.js",
-      "/home/n1/codex-workspace/docs/traceability.md",
-      "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/scripts/check-traceability-matrix.js",
-      "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
-      "/home/n1/codex-workspace/scripts/check-example-coverage.js",
-      "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
-      "/home/n1/codex-workspace/scripts/check-maintenance-model.js",
-      "/home/n1/codex-workspace/docs/change-control.md",
-      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
-      "/home/n1/codex-workspace/docs/evidence-timeline.md",
-      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
       "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
-      "/home/n1/codex-workspace/docs/review-scorecard.md",
-      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
-      "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-example-coverage.js",
+      "/home/n1/codex-workspace/scripts/check-failure-model.js",
+      "/home/n1/codex-workspace/scripts/check-maintenance-model.js",
+      "/home/n1/codex-workspace/scripts/check-portability-profile.js",
+      "/home/n1/codex-workspace/scripts/check-project-profile.js",
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/scripts/check-traceability-matrix.js",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Public-release review and validation summary."
+    "notes": "Release review updated for verification matrix layer; manifest currently covers 183 files"
   },
   "docs/contract-catalog.md": {
     "source_paths": [
@@ -1165,45 +1217,61 @@
   },
   "scripts/check-surface-coherence.js": {
     "source_paths": [
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/docs/community-health.md",
-      "/home/n1/codex-workspace/scripts/check-community-health.js",
-      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/scripts/check-project-profile.js",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
-      "/home/n1/codex-workspace/docs/evidence-timeline.md",
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
-      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/docs/evidence-timeline.md",
+      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
+      "/home/n1/codex-workspace/scripts/check-community-health.js",
+      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
+      "/home/n1/codex-workspace/scripts/check-project-profile.js",
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts."
+    "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts.; synchronized with verification matrix surfaces"
   },
   "scripts/check-release-metadata.js": {
     "source_paths": [
-      "/home/n1/codex-workspace/scripts/check-api-schemas.js",
-      "/home/n1/codex-workspace/docs/community-health.md",
-      "/home/n1/codex-workspace/scripts/check-community-health.js",
-      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/scripts/check-project-profile.js",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
-      "/home/n1/codex-workspace/docs/evidence-timeline.md",
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
-      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/docs/evidence-timeline.md",
+      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-api-schemas.js",
+      "/home/n1/codex-workspace/scripts/check-capability-matrix.js",
+      "/home/n1/codex-workspace/scripts/check-community-health.js",
+      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
+      "/home/n1/codex-workspace/scripts/check-project-profile.js",
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence."
+    "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence.; synchronized with verification matrix surfaces"
   },
   "openapi/validate.openapi.json": {
     "source_paths": [
@@ -1375,7 +1443,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals."
@@ -1428,30 +1500,42 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Fast evaluator path through the strongest public surfaces."
   },
   "scripts/check-project-profile.js": {
     "source_paths": [
-      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
-      "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
-      "/home/n1/codex-workspace/README.md",
-      "/home/n1/codex-workspace/docs/reviewer-guide.md",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/docs/evidence-timeline.md",
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
-      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/README.md",
+      "/home/n1/codex-workspace/docs/evidence-timeline.md",
+      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repo-local consistency check for the public project profile and reviewer-facing shortcuts."
+    "notes": "Repo-local consistency check for the public project profile and reviewer-facing shortcuts.; synchronized with verification matrix surfaces"
   },
   "PUBLIC_CAPABILITY_MATRIX.json": {
     "source_paths": [
@@ -1498,7 +1582,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface."
@@ -1545,7 +1633,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the capability matrix and supported public outcomes."
@@ -1553,23 +1645,31 @@
   "scripts/check-capability-matrix.js": {
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/schemas/public-capability-matrix.schema.json",
-      "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
       "/home/n1/codex-workspace/README.md",
-      "/home/n1/codex-workspace/docs/reviewer-guide.md",
       "/home/n1/codex-workspace/docs/capability-matrix.md",
       "/home/n1/codex-workspace/docs/evidence-timeline.md",
-      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
       "/home/n1/codex-workspace/docs/review-scorecard.md",
-      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/public-capability-matrix.schema.json",
+      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repo-local consistency check for the machine-readable capability matrix."
+    "notes": "Repo-local consistency check for the machine-readable capability matrix.; synchronized with verification matrix surfaces"
   },
   "docs/projection-doctrine.md": {
     "source_paths": [
@@ -1616,7 +1716,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable summary of published and deferred boundaries for the public repo."
@@ -1735,7 +1839,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable evaluation packet for external reviewers and programs."
@@ -1775,7 +1883,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling."
@@ -1788,20 +1900,28 @@
   "scripts/check-evaluation-packet.js": {
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
-      "/home/n1/codex-workspace/schemas/public-evaluation-packet.schema.json",
-      "/home/n1/codex-workspace/docs/evaluation-packet.md",
-      "/home/n1/codex-workspace/docs/reviewer-guide.md",
-      "/home/n1/codex-workspace/docs/evidence-timeline.md",
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
-      "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/docs/evaluation-packet.md",
+      "/home/n1/codex-workspace/docs/evidence-timeline.md",
+      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/schemas/public-evaluation-packet.schema.json",
+      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the public evaluation packet and its reviewer-path references."
+    "notes": "Verifier for the public evaluation packet and its reviewer-path references.; synchronized with verification matrix surfaces"
   },
   "docs/failure-model.md": {
     "source_paths": [
@@ -1880,7 +2000,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide for the public traceability layer."
@@ -1920,7 +2044,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface."
@@ -1932,29 +2060,37 @@
   },
   "scripts/check-traceability-matrix.js": {
     "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/schemas/public-traceability-matrix.schema.json",
-      "/home/n1/codex-workspace/docs/traceability.md",
-      "/home/n1/codex-workspace/README.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
       "/home/n1/codex-workspace/QUICKSTART.md",
-      "/home/n1/codex-workspace/docs/public-contract-index.md",
-      "/home/n1/codex-workspace/docs/reviewer-guide.md",
-      "/home/n1/codex-workspace/docs/release-evidence.md",
-      "/home/n1/codex-workspace/docs/verification.md",
+      "/home/n1/codex-workspace/README.md",
       "/home/n1/codex-workspace/docs/capability-matrix.md",
-      "/home/n1/codex-workspace/docs/faq.md",
       "/home/n1/codex-workspace/docs/evaluation-packet.md",
       "/home/n1/codex-workspace/docs/evidence-timeline.md",
-      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
+      "/home/n1/codex-workspace/docs/faq.md",
+      "/home/n1/codex-workspace/docs/public-contract-index.md",
+      "/home/n1/codex-workspace/docs/release-evidence.md",
       "/home/n1/codex-workspace/docs/review-scorecard.md",
-      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/docs/traceability.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/docs/verification.md",
+      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/schemas/public-traceability-matrix.schema.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the public traceability matrix and its surrounding review surfaces."
+    "notes": "Verifier for the public traceability matrix and its surrounding review surfaces.; synchronized with verification matrix surfaces"
   },
   "docs/example-coverage.md": {
     "source_paths": [
@@ -2051,7 +2187,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable summary of public maintainer workflow and release posture."
@@ -2107,7 +2247,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture."
@@ -2204,7 +2348,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable summary of public dependency structure and reading paths."
@@ -2218,22 +2366,30 @@
   },
   "scripts/check-dependency-graph.js": {
     "source_paths": [
-      "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
-      "/home/n1/codex-workspace/docs/dependency-graph.md",
-      "/home/n1/codex-workspace/docs/reviewer-guide.md",
-      "/home/n1/codex-workspace/docs/release-evidence.md",
       "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
-      "/home/n1/codex-workspace/docs/evidence-timeline.md",
+      "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
-      "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/docs/dependency-graph.md",
+      "/home/n1/codex-workspace/docs/evidence-timeline.md",
+      "/home/n1/codex-workspace/docs/release-evidence.md",
+      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/docs/reviewer-guide.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local verifier for dependency graph and reading-order coherence."
+    "notes": "Repository-local verifier for dependency graph and reading-order coherence.; synchronized with verification matrix surfaces"
   },
   "docs/assurance-case.md": {
     "source_paths": [
@@ -2266,7 +2422,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded assurance layer for public review."
@@ -2281,17 +2441,25 @@
   "scripts/check-assurance-case.js": {
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
-      "/home/n1/codex-workspace/docs/assurance-case.md",
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
-      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
-      "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/docs/assurance-case.md",
+      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the public assurance-case layer."
+    "notes": "Verifier for the public assurance-case layer.; synchronized with verification matrix surfaces"
   },
   "docs/update-coherence.md": {
     "source_paths": [
@@ -2320,7 +2488,11 @@
       "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable co-movement map for reviewer, release, contract, and teaching surfaces."
@@ -2334,22 +2506,30 @@
   },
   "scripts/check-update-coherence.js": {
     "source_paths": [
-      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json",
-      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
-      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
-      "/home/n1/codex-workspace/docs/evidence-timeline.md",
-      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
-      "/home/n1/codex-workspace/docs/review-scorecard.md",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/docs/evidence-timeline.md",
+      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/docs/update-coherence.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
       "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js"
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
+      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for co-moving public surface groups."
+    "notes": "Verifier for co-moving public surface groups.; synchronized with verification matrix surfaces"
   },
   "docs/limitations-register.md": {
     "source_paths": [
@@ -2437,7 +2617,11 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json"
+      "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable bounded review checklist for external repo-maturity assessment."
@@ -2449,7 +2633,11 @@
       "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
       "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json",
-      "/home/n1/codex-workspace/docs/review-scorecard.md"
+      "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded external review checklist for the public repository surface."
@@ -2463,13 +2651,60 @@
   },
   "scripts/check-review-scorecard.js": {
     "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
       "/home/n1/codex-workspace/docs/review-scorecard.md",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
+      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
+      "PUBLIC_VERIFICATION_MATRIX.json",
+      "docs/verification-matrix.md",
+      "schemas/public-verification-matrix.schema.json",
+      "scripts/check-verification-matrix.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for the machine-readable public review scorecard and bounded reviewer criteria.; synchronized with verification matrix surfaces"
+  },
+  "docs/verification-matrix.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/docs/verification.md",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Human-readable bounded map of verification families, protected surfaces, and failure classes."
+  },
+  "PUBLIC_VERIFICATION_MATRIX.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
+      "/home/n1/codex-workspace/docs/verification-matrix.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes."
+  },
+  "schemas/public-verification-matrix.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "JSON Schema for the public verification matrix surface."
+  },
+  "scripts/check-verification-matrix.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/docs/verification-matrix.md",
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
       "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for the machine-readable public review scorecard and bounded reviewer criteria."
+    "notes": "Verifier for the machine-readable public verification matrix and check-family coverage."
   }
 }
