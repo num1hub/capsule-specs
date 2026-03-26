@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/neuro-concentrate.schema.json",
+  "title": "CapsuleOS Neuro Concentrate",
+  "description": "Public JSON Schema for the semantic summary layer of a capsule.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "summary",
+    "confidence_vector",
+    "keywords",
+    "semantic_hash"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string",
+      "description": "Validator policy expects 70 to 160 words."
+    },
+    "keywords": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 15,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "confidence_vector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "extraction",
+        "synthesis",
+        "linking",
+        "provenance_coverage",
+        "validation_score",
+        "contradiction_pressure"
+      ],
+      "properties": {
+        "extraction": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "synthesis": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "linking": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "provenance_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "validation_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "contradiction_pressure": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "semantic_hash": {
+      "type": "string",
+      "pattern": "^(?:[a-z0-9]+-){7}[a-z0-9]+$"
+    }
+  }
+}

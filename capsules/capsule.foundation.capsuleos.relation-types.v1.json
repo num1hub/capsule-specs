@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.relation-types.v1",
+    "version": "1.2.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "relation-types-canonical-graph-topology-edges-blueprint-gold",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "CapsuleOS Relation Types",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Canonical Relation Types: The Edges of the Cognitive Graph\n\n## 1. Introduction\nIn CapsuleOS, capsules are interconnected via the `recursive_layer`. The nature of these connections is strictly typed. Using a canonical set of `relation_type` enumerations ensures that the resulting knowledge graph is computable, allowing N-Infinity agents to traverse, reason about, and arbitrate the ecosystem with mathematical precision.\n\n## 2. The Canonical Enumerations\n\n### `supports`\n- **Definition**: The source capsule provides evidence, argumentation, or data that strengthens the validity of the target capsule.\n- **Example**: A capsule containing a data metric *supports* a capsule proposing a business hypothesis.\n\n### `contradicts`\n- **Definition**: The source capsule contains information that directly opposes or invalidates the target capsule. Increases `contradiction_pressure`.\n- **Example**: A new architectural constraint *contradicts* an older, less secure operational protocol.\n- *Note: At ingestion, the alias `refutes` is automatically normalized to `contradicts` to maintain strict schema adherence.*\n\n### `extends`\n- **Definition**: The source capsule builds upon the foundation of the target, adding depth, detail, or broader scope without altering the original meaning.\n- **Example**: A detailed API specification *extends* a general feature-concept capsule.\n\n### `derived_from`\n- **Definition**: The source capsule is a direct descendant or byproduct of the target capsule. Crucial for tracing provenance and royalty distribution.\n- **Example**: A specific marketing plan is *derived_from* a Master Template capsule.\n\n### `depends_on`\n- **Definition**: A strict operational or logical dependency. The source capsule cannot exist, function, or be executed until the target is resolved.\n- **Example**: Task B *depends_on* Task A.\n\n### `references`\n- **Definition**: A neutral, informational link. The source mentions or points to the target without asserting a strong logical dependency or epistemic stance.\n- **Example**: A meeting notes capsule *references* a specific project hub.\n\n### `duplicates`\n- **Definition**: Indicates that the source and target contain functionally identical payloads. Used by the Apoptosis Sweeper to trigger automated merging or pruning.\n- **Example**: Two identical tasks created by different users in the same hub.\n\n### `implements`\n- **Definition**: The source capsule is the practical execution or realization of the theory, blueprint, or interface defined in the target.\n- **Example**: The A2C pipeline engine *implements* the \"To Dig Deep\" philosophy capsule.\n\n### `part_of`\n- **Definition**: A strict compositional hierarchy. The source is an inseparable component of the target hub or parent capsule.\n- **Example**: An electrical socket capsule is *part_of* a wall capsule in TileSims."
+  },
+  "neuro_concentrate": {
+    "summary": "This sovereign capsule defines the canonical set of relation types allowed within the recursive_layer of any CapsuleOS artifact. By restricting topological edges to strict enumerations—supports, contradicts, extends, derived_from, depends_on, references, duplicates, implements, and part_of—the schema ensures that the N1Hub knowledge graph remains semantically computable. These typed links enable N-Infinity agents to autonomously navigate the graph, trace absolute provenance, calculate epistemic tension (notably normalizing 'refutes' to 'contradicts'), and execute complex reasoning operations, transforming isolated nodes into a cohesive, intelligent ecosystem.",
+    "keywords": [
+      "relation-types",
+      "canonical-edges",
+      "recursive-layer",
+      "graph-topology",
+      "capsuleos",
+      "n1hub",
+      "supports",
+      "contradicts",
+      "semantic-computing",
+      "n-infinity-navigation"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "relation-types-canonical-graph-topology-edges-blueprint-gold"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.versioning-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.weaver.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "fb37f5ea1ba01abbf1acfb88869938553203c658e35817baf83d315b87f339f05e4cec563bf69e7a8410aebcf10699155cfaa1a5c5cc9fb111c2a744afaa4862"
+}

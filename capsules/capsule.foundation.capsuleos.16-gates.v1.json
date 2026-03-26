@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.16-gates.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "sixteen-gates-validation-syntactic-semantic-crypto-gold-master",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "CapsuleOS Validation Gates",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# The 16 Validation Gates (G01–G16): Systemic Quality Control\n\n## 1. Introduction\nThe 16 Validation Gates constitute the impenetrable firewall of CapsuleOS. Before any capsule can exit the A2C pipeline and enter the active Cognitive Plane, it must survive this rigorous sequence of syntactic, semantic, and cryptographic checks. This ensures absolute negentropy, preventing malformed data, hallucinations, or tampered assets from polluting the N1Hub ecosystem.\n\n## 2. The 16 Gates\n\n### Syntactic & Structural (G01–G06)\n- **G01**: The capsule must contain exactly five root keys, adhering strictly to the 5-Element Law.\n- **G02**: All required subfields within the root keys must be present.\n- **G03**: All data types and enums must precisely match the canonical schema definitions.\n- **G04**: The `provenance_coverage` must be ≥ 0.85, ensuring the majority of the payload is traced to verifiable origins.\n- **G05**: The `content_type` must be a recognized and supported format (e.g., markdown, json).\n- **G06**: The payload must feature proper JSON escaping and include a `truncation_note` if data was structurally truncated.\n\n### Semantic & Neuro-Concentrate (G07–G11)\n- **G07**: The neuro-concentrate `summary` must strictly contain between 70 and 160 words.\n- **G08**: The `keywords` array must contain precisely 5 to 15 items.\n- **G09**: The `semantic_hash` must follow the exact format of 8 lowercase alphanumeric tokens separated by hyphens.\n- **G10**: Absolute semantic parity must exist; `metadata.semantic_hash` must identically match `neuro_concentrate.semantic_hash`.\n- **G11**: All topological links within the `recursive_layer` must use recognized, canonical `relation_type` enumerations.\n\n### Topological & Logical (G12–G15)\n- **G12**: All `target_id` values within the recursive layer must successfully resolve to existing capsules (batch exceptions apply for genesis boots).\n- **G13**: Any capsule possessing a status other than `draft` must contain at least one outbound link.\n- **G14 (Cosmetic Coherence Trap)**: Capsules exceeding 1000 tokens with a `contradiction_pressure` of `0.0` trigger a failure, as perfect harmony in massive texts implies AI smoothing (exempting sovereign foundation axioms).\n- **G15**: The `confidence_vector` must contain exactly six dimensions, with each float strictly bounded between [0.0, 1.0].\n\n### Cryptographic (G16)\n- **G16**: The `integrity_sha3_512` seal must flawlessly match the system's own recomputed SHA3-512 hash derived from the RFC 8785 JCS canonicalization of the capsule.\n\n## 3. Failure Routing\nCapsules failing gates G01 through G15 are immediately routed to the **Quarantine Buffer**, where they await salvage by human operators or N-Infinity agents. A failure at **G16** is fatal; the capsule is permanently rejected as a compromised or forged artifact."
+  },
+  "neuro_concentrate": {
+    "summary": "The 16 Validation Gates (G01–G16) are the definitive quality control mechanism of the CapsuleOS architecture within N1Hub. Designed to enforce strict negentropy, these gates subject every capsule to a relentless gauntlet of syntactic, semantic, topological, and cryptographic checks before admission into the active knowledge graph. The gates verify everything from the exact adherence to the 5-Element Law and canonical enums to complex metrics like the Cosmetic Coherence Trap (G14) and absolute cryptographic integrity (G16). Failures in structural or semantic logic divert the capsule to a quarantine buffer for refinement, whereas a failure at the G16 cryptographic seal triggers an inescapable, fatal rejection.",
+    "keywords": [
+      "16-gates",
+      "validation",
+      "capsuleos",
+      "quality-control",
+      "negentropy",
+      "syntactic-check",
+      "semantic-parity",
+      "cryptographic-seal",
+      "quarantine-buffer",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "sixteen-gates-validation-syntactic-semantic-crypto-gold-master"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.confidence-vector.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g01.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g02.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g03.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g04.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g05.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g06.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g07.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g08.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g09.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g10.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g11.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g12.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g13.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g14.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g15.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.g16.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "1ae34631ca35cb219ba23666bf70ebd89c779575d03156a243838bd1780150ec542acc920b21e2fdeec1a4536b673dc3c933be717b88c89a0b79ba4e65dc75be"
+}

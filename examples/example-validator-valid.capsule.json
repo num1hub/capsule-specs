@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.example.validator-valid.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "egor-n1",
+    "created_at": "2026-03-26T12:00:00Z",
+    "updated_at": "2026-03-26T12:00:00Z",
+    "name": "Example Validator Valid Capsule",
+    "semantic_hash": "example-validator-valid-public-specs-capsule-reference-shape",
+    "source": {
+      "uri": "https://github.com/n1hub/specs/examples/example-validator-valid.capsule.json",
+      "type": "generated_public_example"
+    }
+  },
+  "core_payload": {
+    "content_type": "json",
+    "content": "{\n  \"purpose\": \"validator-smoke-example\",\n  \"expectation\": \"passes validator checks when validated as a standalone draft capsule\",\n  \"notes\": [\n    \"five-element structure present\",\n    \"semantic hash parity preserved\",\n    \"cryptographic seal recomputed\"\n  ]\n}"
+  },
+  "neuro_concentrate": {
+    "summary": "This example capsule exists as a compact validator smoke target for the public specifications repository. It keeps the payload intentionally simple while still exercising the full outer contract that readers and tools need to see: metadata, payload, neuro concentrate, recursive layer, and integrity seal. Because the capsule is marked as draft and carries no outbound links, it can be validated in isolation without depending on a larger ID graph. That makes it a practical fixture for tutorials, schema consumers, and CI experiments that want one clean example of a validator-compliant capsule on the public surface.",
+    "keywords": [
+      "example",
+      "validator",
+      "valid",
+      "capsule",
+      "smoke-test",
+      "reference",
+      "public-specs"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 0.93,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "example-validator-valid-public-specs-capsule-reference-shape"
+  },
+  "recursive_layer": {
+    "links": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "a77676333dc60e2ada7b318c58cb4e1a602053dcf89dc1e8e65ff023e0bd89007c70993206d3ed025ba0fb2747f3568fc41fafae6e632ec0b53f06724984ac47"
+}

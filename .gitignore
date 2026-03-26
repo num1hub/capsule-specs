@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.log
+.codex/
+.codexignore
+node_modules/
+dist/
+coverage/

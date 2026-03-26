@@ -1,0 +1,217 @@
+{
+  "README.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Public-facing repo front door written from source concepts."
+  },
+  "LICENSE": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.license.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Apache-2.0 text projected from public governance capsule."
+  },
+  "CONTRIBUTING.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.contributing.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Adapted for the narrower public specs surface."
+  },
+  "CODE_OF_CONDUCT.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.code-of-conduct.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Projected community behavior policy."
+  },
+  "SECURITY.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.security.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Condensed for the public specs repository."
+  },
+  "SUPPORT.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repo-specific support guidance."
+  },
+  ".gitignore": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository hygiene rules, including exclusion of local Codex state."
+  },
+  ".github/ISSUE_TEMPLATE/bug_report.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Bug-report issue template for the public specs surface."
+  },
+  ".github/ISSUE_TEMPLATE/feature_request.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Feature-request issue template for the public specs surface."
+  },
+  ".github/PULL_REQUEST_TEMPLATE.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "PR template for public-surface changes."
+  },
+  "docs/overview.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.readme.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public repository boundary and intent."
+  },
+  "docs/quickstart.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Shortened for public users."
+  },
+  "docs/repository-scope.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/root/capsule.foundation.n1hub-monorepo.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public boundary statement."
+  },
+  "docs/5-element-law.md": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.5-element-law.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Human-readable summary."
+  },
+  "docs/16-gates.md": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.16-gates.v1.json",
+      "/home/n1/n1hub.com/docs/validator.md"
+    ],
+    "transformation_type": "derived",
+    "notes": "Human-readable gate list aligned with live validator docs."
+  },
+  "docs/relation-types.md": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.relation-types.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Canonical relation semantics."
+  },
+  "docs/validator.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.validator-doc.v1.json",
+      "/home/n1/n1hub.com/docs/validator.md"
+    ],
+    "transformation_type": "derived",
+    "notes": "Condensed validator reference."
+  },
+  "docs/anchor-governance.md": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.anchors-spec.v1.json",
+      "/home/n1/n1hub-repo-vault/governance/capsule.governance.terminology.v1.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public summary of anchor governance."
+  },
+  "schemas/capsule-schema.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json",
+      "/home/n1/n1hub.com/lib/validator/schemas.ts"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public JSON Schema aligned to the five-element validator contract."
+  },
+  "schemas/neuro-concentrate.schema.json": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/contracts/capsule.contract.neuro-concentrate-schema.v1.json",
+      "/home/n1/n1hub.com/lib/validator/schemas.ts"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public JSON Schema for the neuro-concentrate layer."
+  },
+  "examples/example-note.capsule.json": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.note-fixture.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Synthetic note example created for public docs."
+  },
+  "examples/example-task.capsule.json": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.task-fixture.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Synthetic task example created for public docs."
+  },
+  "examples/example-validator-valid.capsule.json": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.validator-valid-fixture.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Synthetic validator smoke example."
+  },
+  "examples/example-validator-invalid-g16.capsule.json": {
+    "source_paths": [
+      "/home/n1/n1hub-repo-vault/examples/capsule.example.validator-invalid-g16-fixture.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Synthetic negative example with intentionally incorrect G16 seal."
+  },
+  "OPEN_CORE_PLAN.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Local build plan for the public repository."
+  },
+  "SOURCE_MANIFEST.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Provenance index for every public file in the repository."
+  },
+  "PUBLIC_RELEASE_REVIEW.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Public-release review and validation summary."
+  },
+  "openapi/validate.openapi.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "copied",
+    "notes": "Live OpenAPI document from the validator surface."
+  },
+  "capsules/capsule.foundation.capsuleos.5-element-law.v1.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.5-element-law.v1.json"
+    ],
+    "transformation_type": "copied",
+    "notes": "Raw public law capsule."
+  },
+  "capsules/capsule.foundation.capsuleos.16-gates.v1.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.16-gates.v1.json"
+    ],
+    "transformation_type": "copied",
+    "notes": "Raw public gates capsule."
+  },
+  "capsules/capsule.foundation.capsuleos.relation-types.v1.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.relation-types.v1.json"
+    ],
+    "transformation_type": "copied",
+    "notes": "Raw public relation-types capsule."
+  },
+  "capsules/capsule.foundation.capsuleos-schema.v1.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json"
+    ],
+    "transformation_type": "copied",
+    "notes": "Raw public schema capsule."
+  }
+}

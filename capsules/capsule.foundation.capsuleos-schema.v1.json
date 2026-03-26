@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos-schema.v1",
+    "version": "1.4.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "capsuleos-schema-five-elements-enums-vectors-links-hashes",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "source": {
+      "uri": "internal://capsule.foundation.capsuleos-spec.v1",
+      "type": "normative_contract"
+    },
+    "name": "CapsuleOS Schema",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# CapsuleOS Schema: The Master Blueprint\n\n## 1. Introduction\nThis capsule is the absolute sovereign reference for the structural and semantic schema of all capsules within the N1Hub ecosystem.\n\nWhile `capsule.foundation.capsuleos-spec.v1` defines governance-level doctrine, this capsule is the executable machine contract used by validators and data pipelines. Every entity in CapsuleOS must strictly adhere to the definitions, enums, and vectors established herein.\n\n## 2. The 5-Element Law\nEvery valid capsule must consist of exactly five root keys:\n1. **`metadata`**: Houses identity (`capsule_id`), versioning (SemVer), status, type, subtype, authorship, temporal markers (`created_at`, `updated_at`), and the semantic hash.\n2. **`core_payload`**: Contains the primary data. Requires a `content_type` (e.g., `markdown`, `json`) and the actual `content` string.\n3. **`neuro_concentrate`**: The AI-derived essence of the payload. Includes a concise `summary` (70-160 words), an array of `keywords` (5-15 items), a 6-dimensional `confidence_vector`, and a `semantic_hash` mirroring the metadata.\n4. **`recursive_layer`**: The topological connective tissue. An array of `links` containing `target_id` and a canonical `relation_type`. May also include an `epistemic_ledger` for contradiction tracking.\n5. **`integrity_sha3_512`**: A 128-character lowercase hexadecimal string representing the SHA3-512 hash of the preceding four elements, canonicalized via RFC 8785 JCS.\n\n## 3. Allowed Enumerations\n\n### 3.1 Capsule Types\n- **`concept`**: Theoretical constructs, ideas, or hypotheses.\n- **`foundation`**: Axiomatic definitions, schemas, and core systemic rules.\n- **`operations`**: Actionable items, tasks, workflows, or logs.\n- **`physical_object`**: Digital twins of real-world entities (e.g., walls, pipes in TileSims).\n\n### 3.2 Capsule Subtypes\n- **`atomic`**: Irreducible, self-contained units of knowledge.\n- **`hub`**: Aggregating capsules that organize other capsules via the recursive layer.\n\n### 3.3 Status Lifecycle\n- **`draft`**: Incomplete, hot, mutable state.\n- **`active`**: Undergoing execution or refinement.\n- **`sovereign`**: Terminal, immutable gold master. The ultimate source of truth.\n- **`frozen`**: Temporarily locked from modification.\n- **`archived`**: Retired from active search but retained for historical integrity.\n- **`quarantined`**: Isolated due to validation failure or extreme epistemic contradiction.\n- **`legacy`**: Superseded by a newer version.\n\n### 3.4 Canonical Relation Types\n`supports`, `contradicts`, `extends`, `derived_from`, `depends_on`, `references`, `duplicates`, `implements`, `part_of`.\n\n## 4. Semantic Hash & Confidence Vector\n- **Semantic Hash**: Exactly 8 lowercase alphanumeric tokens, separated by hyphens. Acts as a human-readable, unique semantic fingerprint.\n- **Confidence Vector**: A 6-tuple of floats [0.0, 1.0] evaluating: `extraction`, `synthesis`, `linking`, `provenance_coverage`, `validation_score`, and `contradiction_pressure`. Axiomatic sovereign capsules must have a `contradiction_pressure` of `0.0`.\n\n## 5. The 16 Validation Gates\nAll capsules must clear 16 rigorous computational and semantic gates (G01-G16)—ranging from structural type checking to exact length constraints and cryptographic signature verification—before admission into the active Cognitive Plane."
+  },
+  "neuro_concentrate": {
+    "summary": "This sovereign schema capsule is the executable structural contract of CapsuleOS. It formalizes exact fields, enums, vector dimensions, and relation-type boundaries required for machine validation and cross-tool interoperability. While the specification capsule governs normative doctrine, this capsule governs precise data shape and therefore anchors ingestion, validation, storage, and indexing behavior. By codifying five-element structure, lifecycle enumerations, semantic-hash format, and confidence-vector semantics in one place, it keeps the cognitive graph deterministic, computable, and resistant to entropic drift as the ecosystem scales.",
+    "keywords": [
+      "capsuleos-schema",
+      "machine-contract",
+      "field-definitions",
+      "enums",
+      "relation-types",
+      "confidence-vector",
+      "semantic-hash",
+      "status-lifecycle",
+      "jcs-integrity",
+      "interoperability"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsuleos-schema-five-elements-enums-vectors-links-hashes"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.hub-atomic.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.type-concept.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.type-foundation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.type-operations.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.type-physical-object.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.subtype-hub.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.subtype-atomic.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-draft.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-active.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-sovereign.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-frozen.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-archived.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-quarantined.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-legacy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.semantic-hash.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.versioning-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.relation-types.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "0bb325e2c67455f448aae8a8027164c6435ff7e817b97f3e4d3a6c68effa99d19ad3321b4ca7bd8e84ed262036c6baf7b63389ddcbd6f86c79540a66b51126be"
+}

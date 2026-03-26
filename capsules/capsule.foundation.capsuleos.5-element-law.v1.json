@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.5-element-law.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "five-element-law-metadata-payload-neuro-recursive-integrity",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "CapsuleOS 5-Element Law",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# The 5-Element Law: The Constitution of CapsuleOS\n\n## 1. Introduction\nThe **5-Element Law** is the immutable structural constitution governing the N1Hub ecosystem. It mandates that every sovereign unit of knowledge—every capsule—must be constructed using exactly five root keys. No omissions are permitted; no extraneous roots are allowed. This rigid topology is the bedrock of negentropy, ensuring that all data is self-descriptive, semantically computable, and cryptographically verifiable.\n\n## 2. The Five Elements\n\n### 2.1. `metadata`\nThe absolute identity and temporal state of the capsule. It acts as the passport of the entity.\n- **Components**: `capsule_id` (unique identifier), `version` (SemVer), `status` (lifecycle state from draft to sovereign), `type` and `subtype`, `author`, `created_at`/`updated_at`, and the `semantic_hash`.\n- **Necessity**: Enables routing, version control, and access management within the broader N1Hub graph.\n\n### 2.2. `core_payload`\nThe raw material and primary value of the capsule.\n- **Components**: `content_type` (e.g., markdown, JSON) and the actual `content` string. May include a `truncation_note` if the data exceeds systemic bounds.\n- **Necessity**: Stores the actual human-readable or machine-executable data (tasks, blueprints, physical dimensions) without polluting structural logic.\n\n### 2.3. `neuro_concentrate`\nThe AI-extracted semantic essence, acting as the capsule's \"soul\" and cognitive API.\n- **Components**: A concise `summary` (70-160 words), an array of `keywords` (5-15), a `semantic_hash` mirroring the metadata, and the 6-dimensional `confidence_vector`.\n- **Necessity**: Allows A2C pipelines and N-Infinity agents to comprehend, evaluate, and arbitrate the capsule's value and truthfulness without parsing the entire payload.\n\n### 2.4. `recursive_layer`\nThe topological connective tissue that transforms isolated capsules into a living, navigable graph.\n- **Components**: An array of `links`, each containing a `target_id` and a strictly canonical `relation_type` (e.g., `extends`, `contradicts`, `supports`). May also contain an `epistemic_ledger` for contradiction tracking.\n- **Necessity**: Provides context. A capsule derives its deepest meaning from its relationships to other capsules.\n\n### 2.5. `integrity_sha3_512`\nThe ultimate cryptographic seal and guarantor of truth.\n- **Components**: A 128-character lowercase hexadecimal string. It is the SHA3-512 hash computed over the first four elements after they have been strictly canonicalized via RFC 8785 JCS.\n- **Necessity**: Secures the capsule against unauthorized tampering, ensuring absolute provenance and enabling capsules to be treated as legally and economically significant assets.\n\n## 3. Enforcement\nThe 5-Element Law is not merely theoretical; it is computationally enforced by the **16 Validation Gates (G01-G16)**. Any artifact failing to conform perfectly to these five roots is instantly diverted to quarantine, ensuring the absolute purity of the CapsuleOS Cognitive Plane."
+  },
+  "neuro_concentrate": {
+    "summary": "The 5-Element Law is the immutable structural constitution of CapsuleOS within the N1Hub ecosystem. It mandates that every capsule must strictly consist of exactly five root keys: metadata (identity and state), core_payload (actual content), neuro_concentrate (AI-extracted semantic essence and confidence vector), recursive_layer (typed topological links forming the knowledge graph), and integrity_sha3_512 (a cryptographic seal via RFC 8785 canonicalization). This rigid architecture, rigorously enforced by 16 Validation Gates, is essential for maintaining systemic negentropy. It ensures that all knowledge remains self-descriptive, semantically actionable for N-Infinity agents, and cryptographically tamper-proof, elevating data into sovereign intellectual capital.",
+    "keywords": [
+      "5-element-law",
+      "capsuleos",
+      "metadata",
+      "core-payload",
+      "neuro-concentrate",
+      "recursive-layer",
+      "integrity-hash",
+      "negentropy",
+      "16-gates",
+      "structural-constitution",
+      "sovereign-knowledge"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "five-element-law-metadata-payload-neuro-recursive-integrity"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.capsule-concept.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "8df5cb21ab55a798ef6529049dc7dfd09e1279c6c2f61e5a3fe04d6df1c9d6806f7929fd0a9904d8a6d40973e2c5b48bd2f4412094e94b0dbd9e92a4780d506e"
+}
