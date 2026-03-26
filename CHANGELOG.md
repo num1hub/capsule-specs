@@ -10,6 +10,7 @@
 - added compatibility and public-contract index docs for integrator-facing discovery
 - added explicit versioning policy, integration guide, and fix-route API samples
 - added Markdown link verification to keep the public docs surface coherent
+- added a machine-readable public contract catalog plus catalog verification
 
 ## 0.1.0 - 2026-03-26
 

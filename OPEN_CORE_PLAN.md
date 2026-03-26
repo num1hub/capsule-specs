@@ -39,6 +39,7 @@ Create a small, public-safe repository that explains the capsule model, publishe
 - validator API request and response examples for integrators consuming the OpenAPI surface
 - source-material, FAQ, and release-process docs so the public surface stays auditable and operable
 - integration and versioning docs so external consumers can reason about stability instead of inferring it
+- a machine-readable contract catalog so public surfaces can be indexed without scraping prose docs
 - repo-local package metadata and verification scripts for reviewable maintainer workflows
 - provenance and release-review artifacts
 

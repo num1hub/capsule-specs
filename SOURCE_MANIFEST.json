@@ -418,10 +418,23 @@
     "transformation_type": "generated",
     "notes": "Provenance index for every public file in the repository."
   },
+  "PUBLIC_CONTRACT_CATALOG.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths."
+  },
   "PUBLIC_RELEASE_REVIEW.md": {
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Public-release review and validation summary."
+  },
+  "docs/contract-catalog.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
+      "/home/n1/codex-workspace/VERSIONING.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Human-readable explanation of the machine-readable public contract catalog."
   },
   "scripts/audit-public-surface.js": {
     "source_paths": [],
@@ -442,6 +455,11 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Repository-local Markdown link integrity checks for the public docs surface."
+  },
+  "scripts/check-contract-catalog.js": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository-local validation for the machine-readable public contract catalog."
   },
   "openapi/validate.openapi.json": {
     "source_paths": [

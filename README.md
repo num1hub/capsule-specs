@@ -27,6 +27,7 @@ This repository is that home.
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
 - [`docs/public-contract-index.md`](docs/public-contract-index.md) for a complete public surface map
+- [`docs/contract-catalog.md`](docs/contract-catalog.md) for the machine-readable contract map
 - [`docs/source-materials.md`](docs/source-materials.md) for provenance and projection inputs
 - [`docs/faq.md`](docs/faq.md) for the shortest answers to scope questions
 - [`docs/compatibility.md`](docs/compatibility.md) for stability expectations
@@ -55,6 +56,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - community files for contributions, conduct, support, and security
 - issue and pull-request templates
 - machine-readable provenance in [`SOURCE_MANIFEST.json`](SOURCE_MANIFEST.json)
+- machine-readable contract discovery in [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json)
 - a public-release review in [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md)
 - repo-local verification via `npm run verify:repo`
 - local validator-backed example checks

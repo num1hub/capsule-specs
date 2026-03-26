@@ -21,6 +21,7 @@ This repository is assembled from public-safe source surfaces rather than from a
 - raw law capsules are copied as reference artifacts
 - examples are synthetic and public-safe
 - provenance is tracked in [`../SOURCE_MANIFEST.json`](../SOURCE_MANIFEST.json)
+- public contract discovery is tracked in [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
 
 ## Why this matters
 

@@ -20,6 +20,7 @@ Use this guide when you want the shortest safe entry into the repository.
 - Inspect [`openapi/validate.openapi.json`](openapi/validate.openapi.json).
 - Read [`docs/api-envelopes.md`](docs/api-envelopes.md) and the payloads under [`examples/api/`](examples/api/).
 - Read [`docs/integration-guide.md`](docs/integration-guide.md) before wiring a real client or parser.
+- Skim [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json) if you need a machine-readable map of stable surfaces.
 
 ## 4. Inspect examples
 

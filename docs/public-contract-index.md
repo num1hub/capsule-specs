@@ -8,6 +8,8 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../QUICKSTART.md`](../QUICKSTART.md)
 - [`../ONBOARDING.md`](../ONBOARDING.md)
 - [`../VERSIONING.md`](../VERSIONING.md)
+- [`contract-catalog.md`](contract-catalog.md)
+- [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
 - [`repository-scope.md`](repository-scope.md)
 - [`compatibility.md`](compatibility.md)
 - [`integration-guide.md`](integration-guide.md)

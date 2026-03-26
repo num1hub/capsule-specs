@@ -7,6 +7,7 @@
 - repo ergonomics files: `.editorconfig`, `package.json`, `RELEASING`
 - public docs for the capsule law, validator, relation types, schema, API envelopes, integration guidance, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
 - explicit versioning policy in `VERSIONING.md`
+- machine-readable public contract catalog in `PUBLIC_CONTRACT_CATALOG.json` plus the companion guide in `docs/contract-catalog.md`
 - machine-readable schemas
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request and response sample payloads for the validator HTTP surface
@@ -42,7 +43,8 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-example-contracts.js`: pass
 - `node scripts/check-api-examples.js`: pass
 - `node scripts/check-doc-links.js`: pass
-- manifest coverage: `72` files / `72` manifest entries
+- `node scripts/check-contract-catalog.js`: pass
+- manifest coverage: `75` files / `75` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
