@@ -20,6 +20,12 @@ This directory contains concrete JSON payloads for the validator HTTP surface.
   Illustrative fix-route response showing the corrected capsule payload.
 - `gates-response.sample.json`
   Small response example for the gate-definition route.
+- `stats-response.sample.json`
+  Small response example for validator statistics.
+- `error-response.sample.json`
+  Shared generic error envelope.
+- `rate-limit-response.sample.json`
+  Shared rate-limit envelope.
 
 ## Usage
 

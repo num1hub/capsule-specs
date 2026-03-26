@@ -15,6 +15,7 @@ const allowedKinds = new Set([
   'openapi',
   'api-doc',
   'integration-doc',
+  'verification-doc',
   'schema',
   'example',
   'support-artifact',

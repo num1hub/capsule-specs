@@ -11,7 +11,8 @@ This repository is small, but releases should still be explicit and reviewable.
 5. Update [`CHANGELOG.md`](CHANGELOG.md).
 6. Review [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json) when a public surface was added, removed, or reclassified.
 7. Review [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md).
-8. Create a release tag and short release notes.
+8. Review [`docs/verification.md`](docs/verification.md) if a repo-local check changed or a new check was added.
+9. Create a release tag and short release notes.
 
 ## Release posture
 

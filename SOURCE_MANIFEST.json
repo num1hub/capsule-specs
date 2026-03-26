@@ -219,6 +219,16 @@
     "transformation_type": "generated",
     "notes": "Public integrator guide to validator HTTP envelopes and sample payloads."
   },
+  "docs/route-reference.md": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Route-by-route map from published validator routes to the strongest public sample artifacts."
+  },
   "docs/integration-guide.md": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/example-note.capsule.json",
@@ -257,6 +267,17 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces."
+  },
+  "docs/verification.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/scripts/check-example-contracts.js",
+      "/home/n1/codex-workspace/scripts/check-api-examples.js",
+      "/home/n1/codex-workspace/scripts/check-doc-links.js",
+      "/home/n1/codex-workspace/scripts/check-contract-catalog.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to the repository-local verification stack and what each check protects."
   },
   "docs/source-materials.md": {
     "source_paths": [
@@ -399,6 +420,27 @@
     "transformation_type": "generated",
     "notes": "Illustrative fix-route response sample with a corrected capsule seal."
   },
+  "examples/api/stats-response.sample.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Illustrative validator stats response sample."
+  },
+  "examples/api/error-response.sample.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Generic error envelope sample for validator HTTP routes."
+  },
+  "examples/api/rate-limit-response.sample.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Rate-limit error envelope sample for validator HTTP routes."
+  },
   "examples/api/gates-response.sample.json": {
     "source_paths": [
       "/home/n1/n1hub.com/docs/validator.md",
@@ -460,6 +502,11 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Repository-local validation for the machine-readable public contract catalog."
+  },
+  "scripts/check-surface-coherence.js": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts."
   },
   "openapi/validate.openapi.json": {
     "source_paths": [

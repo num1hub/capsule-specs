@@ -20,6 +20,12 @@ This repository publishes the validator OpenAPI document and a small set of conc
   Illustrative fix-route response showing the corrected capsule payload.
 - [`../examples/api/gates-response.sample.json`](../examples/api/gates-response.sample.json)
   Small sample response shape for `GET /api/validate/gates`.
+- [`../examples/api/stats-response.sample.json`](../examples/api/stats-response.sample.json)
+  Small sample response shape for `GET /api/validate/stats`.
+- [`../examples/api/error-response.sample.json`](../examples/api/error-response.sample.json)
+  Shared generic error envelope example.
+- [`../examples/api/rate-limit-response.sample.json`](../examples/api/rate-limit-response.sample.json)
+  Shared rate-limit envelope example.
 
 ## Envelope rules
 

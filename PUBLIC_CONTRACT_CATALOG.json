@@ -67,6 +67,14 @@
       "verify_commands": ["npm run check:docs", "npm run check:api-examples", "npm run check:catalog"]
     },
     {
+      "id": "validator.route-reference",
+      "path": "docs/route-reference.md",
+      "kind": "api-doc",
+      "stability": "maintained",
+      "audiences": ["integrators", "tool-builders", "reviewers"],
+      "verify_commands": ["npm run check:docs", "npm run check:api-examples", "npm run check:catalog", "npm run check:surface"]
+    },
+    {
       "id": "validator.integration-guide",
       "path": "docs/integration-guide.md",
       "kind": "integration-doc",
@@ -179,6 +187,30 @@
       "verify_commands": ["npm run check:api-examples", "npm run check:catalog"]
     },
     {
+      "id": "examples.api.stats-response",
+      "path": "examples/api/stats-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": ["integrators", "reviewers"],
+      "verify_commands": ["npm run check:api-examples", "npm run check:catalog"]
+    },
+    {
+      "id": "examples.api.error-response",
+      "path": "examples/api/error-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": ["integrators", "reviewers"],
+      "verify_commands": ["npm run check:api-examples", "npm run check:catalog"]
+    },
+    {
+      "id": "examples.api.rate-limit-response",
+      "path": "examples/api/rate-limit-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": ["integrators", "reviewers"],
+      "verify_commands": ["npm run check:api-examples", "npm run check:catalog"]
+    },
+    {
       "id": "governance.manifest",
       "path": "SOURCE_MANIFEST.json",
       "kind": "provenance",
@@ -201,6 +233,14 @@
       "stability": "maintained",
       "audiences": ["contributors", "integrators", "reviewers"],
       "verify_commands": ["npm run check:docs", "npm run check:catalog"]
+    },
+    {
+      "id": "governance.verification",
+      "path": "docs/verification.md",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": ["contributors", "reviewers"],
+      "verify_commands": ["npm run check:docs", "npm run check:surface", "npm run check:catalog"]
     }
   ]
 }

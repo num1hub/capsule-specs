@@ -15,7 +15,10 @@ const files = {
   failResponse: 'validate-response.fail.json',
   batchResponse: 'validate-response.batch.json',
   fixResponse: 'validate-response.fix.sample.json',
-  gatesResponse: 'gates-response.sample.json'
+  gatesResponse: 'gates-response.sample.json',
+  statsResponse: 'stats-response.sample.json',
+  errorResponse: 'error-response.sample.json',
+  rateLimitResponse: 'rate-limit-response.sample.json'
 };
 
 function readJson(fileName) {
@@ -45,6 +48,9 @@ const failResponse = readJson(files.failResponse);
 const batchResponse = readJson(files.batchResponse);
 const fixResponse = readJson(files.fixResponse);
 const gatesResponse = readJson(files.gatesResponse);
+const statsResponse = readJson(files.statsResponse);
+const errorResponse = readJson(files.errorResponse);
+const rateLimitResponse = readJson(files.rateLimitResponse);
 const noteExample = readExample('example-note.capsule.json');
 const invalidG16Example = readExample('example-validator-invalid-g16.capsule.json');
 
@@ -116,6 +122,14 @@ assert(
   new Set(gatesResponse.gates.map((gate) => gate.id)).size === gatesResponse.gates.length,
   'gates response sample must not duplicate gate IDs'
 );
+
+assert(typeof statsResponse.total === 'number' && statsResponse.total >= 1, 'stats response sample must include a numeric total');
+assert(Array.isArray(statsResponse.recent), 'stats response sample must include recent entries');
+assert(Array.isArray(statsResponse.trend), 'stats response sample must include trend entries');
+assert(Array.isArray(statsResponse.gates) && statsResponse.gates.some((gate) => gate.gate === 'G16'), 'stats response sample must include gate aggregates');
+
+assert(typeof errorResponse.error === 'string' && errorResponse.error.length > 0, 'error response sample must include an error string');
+assert(typeof rateLimitResponse.error === 'string' && rateLimitResponse.error.length > 0, 'rate-limit response sample must include an error string');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

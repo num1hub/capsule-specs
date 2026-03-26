@@ -30,6 +30,7 @@
     "check:api-examples": "node scripts/check-api-examples.js",
     "check:docs": "node scripts/check-doc-links.js",
     "check:catalog": "node scripts/check-contract-catalog.js",
-    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:docs && npm run check:catalog"
+    "check:surface": "node scripts/check-surface-coherence.js",
+    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:docs && npm run check:catalog && npm run check:surface"
   }
 }

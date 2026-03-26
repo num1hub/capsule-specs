@@ -25,6 +25,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`validator.md`](validator.md)
 - [`openapi.md`](openapi.md)
 - [`api-envelopes.md`](api-envelopes.md)
+- [`route-reference.md`](route-reference.md)
 - [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
 
 ## Schemas
@@ -42,6 +43,7 @@ This index maps the highest-signal public surfaces in the repository.
 ## Provenance and governance
 
 - [`source-materials.md`](source-materials.md)
+- [`verification.md`](verification.md)
 - [`anchor-governance.md`](anchor-governance.md)
 - [`../SOURCE_MANIFEST.json`](../SOURCE_MANIFEST.json)
 - [`../PUBLIC_RELEASE_REVIEW.md`](../PUBLIC_RELEASE_REVIEW.md)

@@ -26,8 +26,10 @@ This repository is that home.
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
+- [`docs/route-reference.md`](docs/route-reference.md) for per-route sample mapping
 - [`docs/public-contract-index.md`](docs/public-contract-index.md) for a complete public surface map
 - [`docs/contract-catalog.md`](docs/contract-catalog.md) for the machine-readable contract map
+- [`docs/verification.md`](docs/verification.md) for the repo verification stack
 - [`docs/source-materials.md`](docs/source-materials.md) for provenance and projection inputs
 - [`docs/faq.md`](docs/faq.md) for the shortest answers to scope questions
 - [`docs/compatibility.md`](docs/compatibility.md) for stability expectations
@@ -62,6 +64,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - local validator-backed example checks
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
 - API payload examples under [`examples/api/`](examples/api/)
+- route-level reference docs under [`docs/route-reference.md`](docs/route-reference.md)
 - a release checklist in [`RELEASING.md`](RELEASING.md)
 
 ## Scope

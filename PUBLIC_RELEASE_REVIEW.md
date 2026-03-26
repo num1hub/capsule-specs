@@ -6,11 +6,12 @@
 - root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
 - repo ergonomics files: `.editorconfig`, `package.json`, `RELEASING`
 - public docs for the capsule law, validator, relation types, schema, API envelopes, integration guidance, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
+- route reference and verification docs for navigating and auditing the public surface
 - explicit versioning policy in `VERSIONING.md`
 - machine-readable public contract catalog in `PUBLIC_CONTRACT_CATALOG.json` plus the companion guide in `docs/contract-catalog.md`
 - machine-readable schemas
 - synthetic example capsules, a linked graph example, and a known-ID catalog
-- API request and response sample payloads for the validator HTTP surface
+- API request, response, error, and stats sample payloads for the validator HTTP surface
 - raw public law capsules
 - live validator OpenAPI reference
 
@@ -44,7 +45,8 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-api-examples.js`: pass
 - `node scripts/check-doc-links.js`: pass
 - `node scripts/check-contract-catalog.js`: pass
-- manifest coverage: `75` files / `75` manifest entries
+- `node scripts/check-surface-coherence.js`: pass
+- manifest coverage: `81` files / `81` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

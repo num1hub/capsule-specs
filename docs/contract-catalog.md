@@ -26,6 +26,7 @@ The Markdown docs are optimized for people. The catalog is optimized for machine
 - grant and program reviewers can inspect the public surface quickly
 - maintainers can track which artifacts need synchronized updates
 - future tooling can read the catalog without scraping prose docs
+- reviewers can correlate route docs, examples, and verification commands from one machine-readable source
 
 ## Important boundary
 

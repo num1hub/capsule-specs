@@ -21,6 +21,7 @@ Use this guide when you want the shortest safe entry into the repository.
 - Read [`docs/api-envelopes.md`](docs/api-envelopes.md) and the payloads under [`examples/api/`](examples/api/).
 - Read [`docs/integration-guide.md`](docs/integration-guide.md) before wiring a real client or parser.
 - Skim [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json) if you need a machine-readable map of stable surfaces.
+- Read [`docs/route-reference.md`](docs/route-reference.md) if you want a route-by-route validator view.
 
 ## 4. Inspect examples
 
@@ -32,3 +33,4 @@ Use this guide when you want the shortest safe entry into the repository.
 - Read [`CONTRIBUTING.md`](CONTRIBUTING.md).
 - Read [`SECURITY.md`](SECURITY.md) before reporting trust-sensitive problems.
 - Run `npm run verify:repo` before publishing a serious change to the public surface.
+- Read [`docs/verification.md`](docs/verification.md) if you need to understand what each repo-local check protects.

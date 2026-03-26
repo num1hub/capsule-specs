@@ -11,6 +11,7 @@
 - added explicit versioning policy, integration guide, and fix-route API samples
 - added Markdown link verification to keep the public docs surface coherent
 - added a machine-readable public contract catalog plus catalog verification
+- added route-by-route validator reference, verification guide, and stronger surface-coherence checks
 
 ## 0.1.0 - 2026-03-26
 

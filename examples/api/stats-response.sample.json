@@ -1,0 +1,32 @@
+{
+  "total": 128,
+  "passed": 120,
+  "failed": 8,
+  "warned": 3,
+  "passRate": 0.9375,
+  "recent": [
+    {
+      "capsuleId": "capsule.example.note.v1",
+      "valid": true,
+      "timestamp": "2026-03-26T12:00:00Z"
+    },
+    {
+      "capsuleId": "capsule.example.validator-invalid-g16.v1",
+      "valid": false,
+      "timestamp": "2026-03-26T12:01:00Z"
+    }
+  ],
+  "trend": [
+    {
+      "bucket": "2026-03-26T12:00:00Z",
+      "passed": 12,
+      "failed": 1
+    }
+  ],
+  "gates": [
+    {
+      "gate": "G16",
+      "count": 8
+    }
+  ]
+}
