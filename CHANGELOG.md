@@ -6,6 +6,8 @@
 - added release and provenance docs for source materials, FAQ, and release cadence
 - added a graph-linked project-hub example plus a known-ID catalog for link-aware checks
 - added example-contract checks and wired CI to run repository verification instead of a single audit step
+- added validator API envelope docs and concrete request/response sample payloads
+- added compatibility and public-contract index docs for integrator-facing discovery
 
 ## 0.1.0 - 2026-03-26
 

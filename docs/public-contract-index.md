@@ -1,0 +1,43 @@
+# Public Contract Index
+
+This index maps the highest-signal public surfaces in the repository.
+
+## Orientation
+
+- [`../README.md`](../README.md)
+- [`../QUICKSTART.md`](../QUICKSTART.md)
+- [`../ONBOARDING.md`](../ONBOARDING.md)
+- [`repository-scope.md`](repository-scope.md)
+- [`compatibility.md`](compatibility.md)
+
+## Core law
+
+- [`5-element-law.md`](5-element-law.md)
+- [`16-gates.md`](16-gates.md)
+- [`relation-types.md`](relation-types.md)
+
+## Validator and API
+
+- [`validator.md`](validator.md)
+- [`openapi.md`](openapi.md)
+- [`api-envelopes.md`](api-envelopes.md)
+- [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
+
+## Schemas
+
+- [`schema-reference.md`](schema-reference.md)
+- [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
+- [`../schemas/neuro-concentrate.schema.json`](../schemas/neuro-concentrate.schema.json)
+
+## Examples
+
+- [`examples.md`](examples.md)
+- [`../examples/README.md`](../examples/README.md)
+- [`../examples/api/README.md`](../examples/api/README.md)
+
+## Provenance and governance
+
+- [`source-materials.md`](source-materials.md)
+- [`anchor-governance.md`](anchor-governance.md)
+- [`../SOURCE_MANIFEST.json`](../SOURCE_MANIFEST.json)
+- [`../PUBLIC_RELEASE_REVIEW.md`](../PUBLIC_RELEASE_REVIEW.md)

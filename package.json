@@ -27,6 +27,7 @@
   "scripts": {
     "audit:public-surface": "node scripts/audit-public-surface.js",
     "check:examples": "node scripts/check-example-contracts.js",
-    "verify:repo": "npm run audit:public-surface && npm run check:examples"
+    "check:api-examples": "node scripts/check-api-examples.js",
+    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples"
   }
 }

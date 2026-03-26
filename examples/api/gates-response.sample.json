@@ -1,0 +1,32 @@
+{
+  "gates": [
+    {
+      "id": "G01",
+      "name": "Exactly 5 root keys",
+      "description": "The capsule must contain exactly five root keys, adhering to the 5-Element Law.",
+      "severity": "error",
+      "autoFixable": false
+    },
+    {
+      "id": "G09",
+      "name": "Semantic hash format",
+      "description": "The semantic_hash must contain 8 lowercase alphanumeric hyphen-separated tokens.",
+      "severity": "error",
+      "autoFixable": false
+    },
+    {
+      "id": "G12",
+      "name": "Target ID resolution",
+      "description": "Each recursive_layer.links target_id must resolve when known-ID validation is active.",
+      "severity": "error",
+      "autoFixable": false
+    },
+    {
+      "id": "G16",
+      "name": "Integrity seal",
+      "description": "integrity_sha3_512 must match the recomputed SHA3-512 hash of the canonicalized first four roots.",
+      "severity": "error",
+      "autoFixable": true
+    }
+  ]
+}

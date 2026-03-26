@@ -5,9 +5,10 @@
 - community health files: `README`, `LICENSE`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `SUPPORT`
 - root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
 - repo ergonomics files: `.editorconfig`, `package.json`, `RELEASING`
-- public docs for the capsule law, validator, relation types, schema, examples, anchor governance, repository boundary, FAQ, and source materials
+- public docs for the capsule law, validator, relation types, schema, API envelopes, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
 - machine-readable schemas
 - synthetic example capsules, a linked graph example, and a known-ID catalog
+- API request and response sample payloads for the validator HTTP surface
 - raw public law capsules
 - live validator OpenAPI reference
 
@@ -38,7 +39,8 @@ Repository-local audit on 2026-03-26:
 
 - `node scripts/audit-public-surface.js`: pass
 - `node scripts/check-example-contracts.js`: pass
-- manifest coverage: `56` files / `56` manifest entries
+- `node scripts/check-api-examples.js`: pass
+- manifest coverage: `67` files / `67` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -52,4 +54,5 @@ Upstream validator checks on 2026-03-26:
 
 - some source materials come from a public-oriented vault snapshot rather than from a standalone published repository
 - JSON Schema files are public projections aligned to live validator behavior, but the validator remains the stronger source of truth for edge-case semantics
+- API response examples are illustrative contract samples, not recorded live HTTP captures from a deployed public service
 - `/home/n1/codex-workspace` still contains local hidden Codex state (`.codex/`, `.codexignore`), which is excluded via `.gitignore` and should remain out of any public commit

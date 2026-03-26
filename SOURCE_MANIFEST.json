@@ -204,6 +204,16 @@
     "transformation_type": "derived",
     "notes": "Human-readable note about the published OpenAPI surface."
   },
+  "docs/api-envelopes.md": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Public integrator guide to validator HTTP envelopes and sample payloads."
+  },
   "docs/examples.md": {
     "source_paths": [
       "/home/n1/n1hub-repo-vault/examples/capsule.example.note-fixture.v1.json",
@@ -214,10 +224,23 @@
     "transformation_type": "derived",
     "notes": "Guide to the example set and expected validation behavior."
   },
+  "docs/compatibility.md": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Stability and change-discipline guidance for integrators."
+  },
   "docs/faq.md": {
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Short answers to scope and validation questions for the public repository."
+  },
+  "docs/public-contract-index.md": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Human-readable index of the major public contract surfaces."
   },
   "docs/source-materials.md": {
     "source_paths": [
@@ -296,6 +319,63 @@
     "transformation_type": "generated",
     "notes": "Directory guide for example artifacts."
   },
+  "examples/api/README.md": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for validator HTTP request and response examples."
+  },
+  "examples/api/validate-request.single.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Single-capsule validator request envelope using the public note example."
+  },
+  "examples/api/validate-request.batch.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Batch validator request envelope with one valid and one intentionally invalid example capsule."
+  },
+  "examples/api/validate-response.pass.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Positive validator response sample aligned to the public note example."
+  },
+  "examples/api/validate-response.fail.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Negative validator response sample isolating a G16 integrity failure."
+  },
+  "examples/api/validate-response.batch.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Mixed batch validator response sample for integrator-facing HTTP clients."
+  },
+  "examples/api/gates-response.sample.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.16-gates.v1.json",
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Small gate-definition response sample for the validator gates route."
+  },
   "OPEN_CORE_PLAN.md": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -320,6 +400,11 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Repository-local example and known-ID consistency checks."
+  },
+  "scripts/check-api-examples.js": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repository-local checks for validator HTTP request and response examples."
   },
   "openapi/validate.openapi.json": {
     "source_paths": [

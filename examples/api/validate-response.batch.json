@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "total": 2,
+    "valid": 1,
+    "invalid": 1,
+    "withWarnings": 0,
+    "totalErrors": 1,
+    "totalWarnings": 0
+  },
+  "results": [
+    {
+      "capsuleId": "capsule.example.note.v1",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "computedHash": "fa282f90d323024889dec453ea5b470abfeec6f6a4a2b37dbdffd3761b6f335a87b0132f3dd3c9ef2773f273e40a429bbe05eb0decc0143c0e655bfc31d60ce7"
+    },
+    {
+      "capsuleId": "capsule.example.validator-invalid-g16.v1",
+      "valid": false,
+      "errors": [
+        {
+          "gate": "G16",
+          "path": "$.integrity_sha3_512",
+          "message": "integrity_sha3_512 does not match computed SHA3-512 digest for canonical payload."
+        }
+      ],
+      "warnings": [],
+      "computedHash": "2824c1ef160cd34e0cb08d558f8f786abfb691643ee37ead5f63b7d094524bf1ae6cf56855d0da9b898aea111be45fbc34b52236ad9810a4fe68e48637eab365"
+    }
+  ]
+}

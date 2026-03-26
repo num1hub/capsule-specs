@@ -8,6 +8,7 @@ Use them to:
 - test parsers and renderers
 - compare valid and invalid sealing outcomes
 - inspect a tiny linked capsule graph
+- inspect validator HTTP request and response envelopes
 - build tutorials or integration demos without touching private vault data
 
 ## Files
@@ -24,3 +25,5 @@ Use them to:
   Graph-linked example that references the note, task, and validator examples.
 - `example-known-ids.json`
   JSON-array known-ID catalog for link-aware validation.
+- `api/`
+  Validator HTTP payload examples for integrators and client builders.

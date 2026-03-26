@@ -14,8 +14,9 @@ This roadmap describes the next useful waves for the public N1Hub specification 
 
 - add clearer field-by-field schema commentary
 - add more example capsules for project and hub patterns
-- add compatibility notes for downstream tool builders
-- tighten docs around validator request and response envelopes
+- expand compatibility notes for downstream tool builders
+- deepen docs around validator request and response envelopes
+- add more API sample payloads as public routes stabilize
 
 ## Wave 3: Projection-friendly references
 

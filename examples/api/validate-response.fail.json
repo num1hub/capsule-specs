@@ -1,0 +1,12 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "gate": "G16",
+      "path": "$.integrity_sha3_512",
+      "message": "integrity_sha3_512 does not match computed SHA3-512 digest for canonical payload."
+    }
+  ],
+  "warnings": [],
+  "computedHash": "2824c1ef160cd34e0cb08d558f8f786abfb691643ee37ead5f63b7d094524bf1ae6cf56855d0da9b898aea111be45fbc34b52236ad9810a4fe68e48637eab365"
+}

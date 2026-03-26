@@ -13,6 +13,7 @@ This repository is assembled from public-safe source surfaces rather than from a
 - live law capsules for the five-element contract, relation types, and 16 gates
 - live validator docs and OpenAPI material
 - synthetic public examples derived from safe example fixtures rather than copied from private vault state
+- API request and response examples derived from the published OpenAPI contract plus live validator outputs on the public example set
 
 ## Projection strategy
 

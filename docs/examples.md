@@ -26,3 +26,7 @@ Public specs are stronger when they show both a passing case and a controlled fa
 The three positive examples were validated with the live validator from the upstream N1Hub repository. The negative example is expected to fail because the integrity seal is intentionally wrong.
 
 The project-hub example is also intended to pass, but only when validation is given a known-ID catalog so the link targets can resolve. In the upstream validator that means passing `--ids-file examples/example-known-ids.json`.
+
+## API payload examples
+
+The sibling directory [`../examples/api/`](../examples/api/) contains public-safe validator request and response payloads. Those examples complement the capsule examples here by showing how the same artifacts appear at the HTTP boundary.

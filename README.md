@@ -24,8 +24,11 @@ This repository is that home.
 - [`ONBOARDING.md`](ONBOARDING.md) for the full contributor path
 - [`docs/overview.md`](docs/overview.md) for the public boundary
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
+- [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
+- [`docs/public-contract-index.md`](docs/public-contract-index.md) for a complete public surface map
 - [`docs/source-materials.md`](docs/source-materials.md) for provenance and projection inputs
 - [`docs/faq.md`](docs/faq.md) for the shortest answers to scope questions
+- [`docs/compatibility.md`](docs/compatibility.md) for stability expectations
 - [`ROADMAP.md`](ROADMAP.md) for the current evolution path
 
 ## Repository layout
@@ -36,6 +39,8 @@ This repository is that home.
   Machine-readable JSON Schema artifacts for capsules.
 - `examples/`
   Minimal example capsules for documentation and validation.
+- `examples/api/`
+  Concrete validator request and response payload examples.
 - `openapi/`
   OpenAPI reference for validator-facing HTTP surfaces.
 - `capsules/`
@@ -52,6 +57,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - repo-local verification via `npm run verify:repo`
 - local validator-backed example checks
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
+- API payload examples under [`examples/api/`](examples/api/)
 - a release checklist in [`RELEASING.md`](RELEASING.md)
 
 ## Scope
