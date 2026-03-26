@@ -509,6 +509,30 @@
         "npm run check:capability-matrix",
         "npm run check:surface"
       ]
+    },
+    {
+      "id": "inspect-active-maintenance-evolution",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Inspect how the public surface hardened over time and verify that active maintenance is visible through bounded reviewer-facing evidence.",
+      "strongest_surfaces": [
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "docs/evidence-timeline.md",
+        "CHANGELOG.md",
+        "PUBLIC_RELEASE_METADATA.json",
+        "docs/release-evidence.md"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "schemas/public-evidence-timeline.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-timeline",
+        "npm run check:release",
+        "npm run check:capability-matrix"
+      ]
     }
   ]
 }

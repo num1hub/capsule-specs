@@ -51,6 +51,7 @@ const expectedPublicIndexLinks = [
   '../PUBLIC_ASSURANCE_CASE.json',
   '../PUBLIC_UPDATE_COHERENCE_MAP.json',
   '../PUBLIC_LIMITATIONS_REGISTER.json',
+  '../PUBLIC_EVIDENCE_TIMELINE.json',
   'reviewer-guide.md',
   'evaluation-packet.md',
   'failure-model.md',
@@ -63,6 +64,7 @@ const expectedPublicIndexLinks = [
   'assurance-case.md',
   'update-coherence.md',
   'limitations-register.md',
+  'evidence-timeline.md',
   '../PUBLIC_PROJECT_PROFILE.json',
   'capability-matrix.md',
   '../PUBLIC_CAPABILITY_MATRIX.json',
@@ -90,6 +92,7 @@ const expectedPublicIndexLinks = [
   '../schemas/public-assurance-case.schema.json',
   '../schemas/public-update-coherence-map.schema.json',
   '../schemas/public-limitations-register.schema.json',
+  '../schemas/public-evidence-timeline.schema.json',
   'community-health.md',
   'client-recipes.md',
   'trust-model.md'
@@ -116,6 +119,7 @@ assert(readme.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'README.md must mention 
 assert(readme.includes('PUBLIC_ASSURANCE_CASE.json'), 'README.md must mention PUBLIC_ASSURANCE_CASE.json');
 assert(readme.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'README.md must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(readme.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'README.md must mention PUBLIC_LIMITATIONS_REGISTER.json');
+assert(readme.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'README.md must mention PUBLIC_EVIDENCE_TIMELINE.json');
 assert(readme.includes('schemas/validator-api-envelopes.schema.json'), 'README.md must mention schemas/validator-api-envelopes.schema.json');
 assert(readme.includes('docs/portability.md'), 'README.md must mention docs/portability.md');
 assert(readme.includes('docs/archive-bundles.md'), 'README.md must mention docs/archive-bundles.md');
@@ -130,6 +134,7 @@ assert(readme.includes('docs/dependency-graph.md'), 'README.md must mention docs
 assert(readme.includes('docs/assurance-case.md'), 'README.md must mention docs/assurance-case.md');
 assert(readme.includes('docs/update-coherence.md'), 'README.md must mention docs/update-coherence.md');
 assert(readme.includes('docs/limitations-register.md'), 'README.md must mention docs/limitations-register.md');
+assert(readme.includes('docs/evidence-timeline.md'), 'README.md must mention docs/evidence-timeline.md');
 assert(readme.includes('docs/community-health.md'), 'README.md must mention docs/community-health.md');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(readme.includes('docs/capability-matrix.md'), 'README.md must mention docs/capability-matrix.md');
@@ -153,6 +158,7 @@ assert(releaseReview.includes('check-dependency-graph.js'), 'PUBLIC_RELEASE_REVI
 assert(releaseReview.includes('check-assurance-case.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-assurance-case.js');
 assert(releaseReview.includes('check-update-coherence.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-update-coherence.js');
 assert(releaseReview.includes('check-limitations-register.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-limitations-register.js');
+assert(releaseReview.includes('check-evidence-timeline.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-evidence-timeline.js');
 assert(releaseReview.includes('check-project-profile.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-project-profile.js');
 assert(releaseReview.includes('check-capability-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-capability-matrix.js');
 assert(releaseReview.includes('check-traceability-matrix.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-traceability-matrix.js');
@@ -174,6 +180,7 @@ assert(verificationDoc.includes('check:dependency-graph'), 'docs/verification.md
 assert(verificationDoc.includes('check:assurance-case'), 'docs/verification.md must explain check:assurance-case');
 assert(verificationDoc.includes('check:update-coherence'), 'docs/verification.md must explain check:update-coherence');
 assert(verificationDoc.includes('check:limitations-register'), 'docs/verification.md must explain check:limitations-register');
+assert(verificationDoc.includes('check:evidence-timeline'), 'docs/verification.md must explain check:evidence-timeline');
 assert(verificationDoc.includes('check:project-profile'), 'docs/verification.md must explain check:project-profile');
 assert(verificationDoc.includes('check:capability-matrix'), 'docs/verification.md must explain check:capability-matrix');
 assert(releaseEvidenceDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'docs/release-evidence.md must mention PUBLIC_RELEASE_METADATA.json');
@@ -194,6 +201,7 @@ assert(releaseEvidenceDoc.includes('PUBLIC_DEPENDENCY_GRAPH.json'), 'docs/releas
 assert(releaseEvidenceDoc.includes('PUBLIC_ASSURANCE_CASE.json'), 'docs/release-evidence.md must mention PUBLIC_ASSURANCE_CASE.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_UPDATE_COHERENCE_MAP.json'), 'docs/release-evidence.md must mention PUBLIC_UPDATE_COHERENCE_MAP.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'docs/release-evidence.md must mention PUBLIC_LIMITATIONS_REGISTER.json');
+assert(releaseEvidenceDoc.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'docs/release-evidence.md must mention PUBLIC_EVIDENCE_TIMELINE.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

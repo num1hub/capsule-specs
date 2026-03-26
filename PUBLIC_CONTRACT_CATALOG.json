@@ -3,8 +3,8 @@
   "generated_at": "2026-03-26",
   "entries": [
     {
-      "id": "community.issue-config",
-      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "id": "community.issue-template.bug-report",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
       "kind": "support-artifact",
       "stability": "maintained",
       "audiences": [
@@ -17,8 +17,8 @@
       ]
     },
     {
-      "id": "community.issue-template.bug-report",
-      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "id": "community.issue-config",
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
       "kind": "support-artifact",
       "stability": "maintained",
       "audiences": [
@@ -88,6 +88,501 @@
       ]
     },
     {
+      "id": "law.16-gates",
+      "path": "docs/16-gates.md",
+      "kind": "law-doc",
+      "stability": "contract",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "law.5-element",
+      "path": "docs/5-element-law.md",
+      "kind": "law-doc",
+      "stability": "contract",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "validator.api-envelopes",
+      "path": "docs/api-envelopes.md",
+      "kind": "api-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:api-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.archive-bundles-doc",
+      "path": "docs/archive-bundles.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:portability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.artifact-ownership-doc",
+      "path": "docs/artifact-ownership.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:ownership-map",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.assurance-case-doc",
+      "path": "docs/assurance-case.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:assurance-case",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.capability-matrix-doc",
+      "path": "docs/capability-matrix.md",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:capability-matrix",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.change-control-doc",
+      "path": "docs/change-control.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:change-control",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "validator.client-recipes",
+      "path": "docs/client-recipes.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.community-health",
+      "path": "docs/community-health.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "integrators"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:community-health",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.dependency-graph-doc",
+      "path": "docs/dependency-graph.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:dependency-graph",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.domain-boundaries",
+      "path": "docs/domain-boundaries.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:boundary-map",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.evaluation-packet-doc",
+      "path": "docs/evaluation-packet.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:evaluation-packet",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.evidence-timeline-doc",
+      "path": "docs/evidence-timeline.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:evidence-timeline",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.example-coverage-doc",
+      "path": "docs/example-coverage.md",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:example-coverage",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.failure-model-doc",
+      "path": "docs/failure-model.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "integrators",
+        "contributors"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:failure-model",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.generator-readiness",
+      "path": "docs/generator-readiness.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:boundary-map",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "validator.integration-guide",
+      "path": "docs/integration-guide.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.limitations-register-doc",
+      "path": "docs/limitations-register.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:limitations-register",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.maintainer-operations-doc",
+      "path": "docs/maintainer-operations.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:maintenance-model",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.portability-doc",
+      "path": "docs/portability.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:portability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.projection-doctrine",
+      "path": "docs/projection-doctrine.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:boundary-map",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.contract-index",
+      "path": "docs/public-contract-index.md",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "law.relation-types",
+      "path": "docs/relation-types.md",
+      "kind": "law-doc",
+      "stability": "contract",
+      "audiences": [
+        "contributors",
+        "integrators"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.release-evidence-doc",
+      "path": "docs/release-evidence.md",
+      "kind": "release-review",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:release",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.reviewer-guide",
+      "path": "docs/reviewer-guide.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:project-profile",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "validator.route-reference",
+      "path": "docs/route-reference.md",
+      "kind": "api-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:api-examples",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.traceability-doc",
+      "path": "docs/traceability.md",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:traceability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "validator.trust-model",
+      "path": "docs/trust-model.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "contributors"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.update-coherence-doc",
+      "path": "docs/update-coherence.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:update-coherence",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "validator.reference",
+      "path": "docs/validator.md",
+      "kind": "validator-doc",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.verification",
+      "path": "docs/verification.md",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.api-conflict",
       "path": "examples/api/conflict-response.sample.json",
       "kind": "api-example",
@@ -100,6 +595,48 @@
         "npm run check:api-examples",
         "npm run check:api-schemas",
         "npm run check:failure-model"
+      ]
+    },
+    {
+      "id": "examples.api.error-response",
+      "path": "examples/api/error-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.api.rate-limit-response",
+      "path": "examples/api/rate-limit-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.api.stats-response",
+      "path": "examples/api/stats-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:catalog"
       ]
     },
     {
@@ -132,6 +669,34 @@
       ]
     },
     {
+      "id": "examples.api.fix-request",
+      "path": "examples/api/validate-request.fix.json",
+      "kind": "api-example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.api.single-request",
+      "path": "examples/api/validate-request.single.json",
+      "kind": "api-example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.api.batch-response",
       "path": "examples/api/validate-response.batch.json",
       "kind": "api-example",
@@ -146,36 +711,8 @@
       ]
     },
     {
-      "id": "examples.api.error-response",
-      "path": "examples/api/error-response.sample.json",
-      "kind": "api-example",
-      "stability": "illustrative",
-      "audiences": [
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:api-examples",
-        "npm run check:catalog"
-      ]
-    },
-    {
       "id": "examples.api.fail-response",
       "path": "examples/api/validate-response.fail.json",
-      "kind": "api-example",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:api-examples",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "examples.api.fix-request",
-      "path": "examples/api/validate-request.fix.json",
       "kind": "api-example",
       "stability": "maintained",
       "audiences": [
@@ -209,48 +746,6 @@
       "audiences": [
         "integrators",
         "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:api-examples",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "examples.api.rate-limit-response",
-      "path": "examples/api/rate-limit-response.sample.json",
-      "kind": "api-example",
-      "stability": "illustrative",
-      "audiences": [
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:api-examples",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "examples.api.single-request",
-      "path": "examples/api/validate-request.single.json",
-      "kind": "api-example",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:api-examples",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "examples.api.stats-response",
-      "path": "examples/api/stats-response.sample.json",
-      "kind": "api-example",
-      "stability": "illustrative",
-      "audiences": [
-        "integrators",
-        "reviewers"
       ],
       "verify_commands": [
         "npm run check:api-examples",
@@ -414,40 +909,8 @@
       ]
     },
     {
-      "id": "governance.api-schemas-check",
-      "path": "scripts/check-api-schemas.js",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:api-schemas",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.archive-bundles-doc",
-      "path": "docs/archive-bundles.md",
-      "kind": "integration-doc",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "reviewers",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:portability",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.artifact-ownership-doc",
-      "path": "docs/artifact-ownership.md",
+      "id": "repo.notice",
+      "path": "NOTICE",
       "kind": "governance",
       "stability": "maintained",
       "audiences": [
@@ -455,8 +918,21 @@
         "reviewers"
       ],
       "verify_commands": [
-        "npm run check:docs",
-        "npm run check:ownership-map",
+        "npm run check:release",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "validator.openapi",
+      "path": "openapi/validate.openapi.json",
+      "kind": "openapi",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run audit:public-surface",
         "npm run check:catalog"
       ]
     },
@@ -476,35 +952,6 @@
       ]
     },
     {
-      "id": "governance.assurance-case-check",
-      "path": "scripts/check-assurance-case.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:assurance-case",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.assurance-case-doc",
-      "path": "docs/assurance-case.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:assurance-case",
-        "npm run check:catalog"
-      ]
-    },
-    {
       "id": "governance.boundary-map",
       "path": "PUBLIC_BOUNDARY_MAP.json",
       "kind": "index",
@@ -512,22 +959,6 @@
       "audiences": [
         "contributors",
         "integrators",
-        "reviewers",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:boundary-map",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.boundary-map-check",
-      "path": "scripts/check-boundary-map.js",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
         "reviewers",
         "tool-builders"
       ],
@@ -555,67 +986,6 @@
       ]
     },
     {
-      "id": "governance.capability-matrix-check",
-      "path": "scripts/check-capability-matrix.js",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:capability-matrix",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.capability-matrix-doc",
-      "path": "docs/capability-matrix.md",
-      "kind": "index",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:capability-matrix",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.change-control-check",
-      "path": "scripts/check-change-control.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:change-control",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.change-control-doc",
-      "path": "docs/change-control.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:change-control",
-        "npm run check:catalog"
-      ]
-    },
-    {
       "id": "governance.change-control-model",
       "path": "PUBLIC_CHANGE_CONTROL_MODEL.json",
       "kind": "provenance",
@@ -631,67 +1001,6 @@
       ]
     },
     {
-      "id": "governance.client-recipes-check",
-      "path": "scripts/check-client-recipes.js",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:client-recipes",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.community-health",
-      "path": "docs/community-health.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "integrators"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:community-health",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.community-health-check",
-      "path": "scripts/check-community-health.js",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:community-health",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.contract-index",
-      "path": "docs/public-contract-index.md",
-      "kind": "index",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
       "id": "governance.dependency-graph",
       "path": "PUBLIC_DEPENDENCY_GRAPH.json",
       "kind": "provenance",
@@ -702,52 +1011,6 @@
       ],
       "verify_commands": [
         "npm run check:dependency-graph",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.dependency-graph-check",
-      "path": "scripts/check-dependency-graph.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:dependency-graph",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.dependency-graph-doc",
-      "path": "docs/dependency-graph.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:dependency-graph",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.domain-boundaries",
-      "path": "docs/domain-boundaries.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:boundary-map",
         "npm run check:catalog",
         "npm run check:surface"
       ]
@@ -769,35 +1032,18 @@
       ]
     },
     {
-      "id": "governance.evaluation-packet-check",
-      "path": "scripts/check-evaluation-packet.js",
-      "kind": "verification-doc",
+      "id": "governance.evidence-timeline",
+      "path": "PUBLIC_EVIDENCE_TIMELINE.json",
+      "kind": "provenance",
       "stability": "maintained",
       "audiences": [
-        "reviewers",
         "contributors",
-        "tool-builders"
+        "reviewers"
       ],
       "verify_commands": [
-        "npm run check:evaluation-packet",
+        "npm run check:evidence-timeline",
         "npm run check:catalog",
         "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.evaluation-packet-doc",
-      "path": "docs/evaluation-packet.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "reviewers",
-        "contributors",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:evaluation-packet",
-        "npm run check:catalog"
       ]
     },
     {
@@ -813,36 +1059,6 @@
         "npm run check:example-coverage",
         "npm run check:catalog",
         "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.example-coverage-check",
-      "path": "scripts/check-example-coverage.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:example-coverage",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.example-coverage-doc",
-      "path": "docs/example-coverage.md",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:example-coverage",
-        "npm run check:catalog"
       ]
     },
     {
@@ -863,54 +1079,6 @@
       ]
     },
     {
-      "id": "governance.failure-model-check",
-      "path": "scripts/check-failure-model.js",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "reviewers",
-        "contributors",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:failure-model",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.failure-model-doc",
-      "path": "docs/failure-model.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "reviewers",
-        "integrators",
-        "contributors"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:failure-model",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.generator-readiness",
-      "path": "docs/generator-readiness.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:boundary-map",
-        "npm run check:catalog"
-      ]
-    },
-    {
       "id": "governance.limitations-register",
       "path": "PUBLIC_LIMITATIONS_REGISTER.json",
       "kind": "provenance",
@@ -923,50 +1091,6 @@
         "npm run check:limitations-register",
         "npm run check:catalog",
         "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.limitations-register-check",
-      "path": "scripts/check-limitations-register.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:limitations-register",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.limitations-register-doc",
-      "path": "docs/limitations-register.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:limitations-register",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.maintainer-operations-doc",
-      "path": "docs/maintainer-operations.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:maintenance-model",
-        "npm run check:catalog"
       ]
     },
     {
@@ -985,34 +1109,6 @@
       ]
     },
     {
-      "id": "governance.maintenance-model-check",
-      "path": "scripts/check-maintenance-model.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:maintenance-model",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.manifest",
-      "path": "SOURCE_MANIFEST.json",
-      "kind": "provenance",
-      "stability": "maintained",
-      "audiences": [
-        "reviewers",
-        "contributors"
-      ],
-      "verify_commands": [
-        "npm run audit:public-surface",
-        "npm run check:catalog"
-      ]
-    },
-    {
       "id": "governance.ownership-map",
       "path": "PUBLIC_OWNERSHIP_MAP.json",
       "kind": "provenance",
@@ -1025,52 +1121,6 @@
         "npm run check:ownership-map",
         "npm run check:catalog",
         "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.ownership-map-check",
-      "path": "scripts/check-ownership-map.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:ownership-map",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.portability-check",
-      "path": "scripts/check-portability-profile.js",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:portability",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.portability-doc",
-      "path": "docs/portability.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:portability",
-        "npm run check:catalog"
       ]
     },
     {
@@ -1107,52 +1157,6 @@
       ]
     },
     {
-      "id": "governance.project-profile-check",
-      "path": "scripts/check-project-profile.js",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:project-profile",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.projection-doctrine",
-      "path": "docs/projection-doctrine.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:boundary-map",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.release-evidence-doc",
-      "path": "docs/release-evidence.md",
-      "kind": "release-review",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:release",
-        "npm run check:catalog"
-      ]
-    },
-    {
       "id": "governance.release-metadata",
       "path": "PUBLIC_RELEASE_METADATA.json",
       "kind": "release-metadata",
@@ -1179,52 +1183,6 @@
       ],
       "verify_commands": [
         "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.reviewer-guide",
-      "path": "docs/reviewer-guide.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "reviewers",
-        "contributors"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:project-profile",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.traceability-check",
-      "path": "scripts/check-traceability-matrix.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:traceability",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.traceability-doc",
-      "path": "docs/traceability.md",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:traceability",
         "npm run check:catalog"
       ]
     },
@@ -1260,126 +1218,9 @@
       ]
     },
     {
-      "id": "governance.update-coherence-check",
-      "path": "scripts/check-update-coherence.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:update-coherence",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.update-coherence-doc",
-      "path": "docs/update-coherence.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:update-coherence",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.verification",
-      "path": "docs/verification.md",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:surface",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "law.16-gates",
-      "path": "docs/16-gates.md",
-      "kind": "law-doc",
-      "stability": "contract",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "law.5-element",
-      "path": "docs/5-element-law.md",
-      "kind": "law-doc",
-      "stability": "contract",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "law.relation-types",
-      "path": "docs/relation-types.md",
-      "kind": "law-doc",
-      "stability": "contract",
-      "audiences": [
-        "contributors",
-        "integrators"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "repo.notice",
-      "path": "NOTICE",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:release",
-        "npm run check:catalog"
-      ]
-    },
-    {
       "id": "repo.readme",
       "path": "README.md",
       "kind": "orientation",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "repo.versioning",
-      "path": "VERSIONING.md",
-      "kind": "governance",
       "stability": "maintained",
       "audiences": [
         "contributors",
@@ -1403,6 +1244,34 @@
       ],
       "verify_commands": [
         "npm run check:portability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "schema.capsule",
+      "path": "schemas/capsule-schema.json",
+      "kind": "schema",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run audit:public-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "schema.neuro-concentrate",
+      "path": "schemas/neuro-concentrate.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run audit:public-surface",
         "npm run check:catalog"
       ]
     },
@@ -1447,20 +1316,6 @@
         "npm run check:capability-matrix",
         "npm run check:catalog",
         "npm run check:surface"
-      ]
-    },
-    {
-      "id": "schema.capsule",
-      "path": "schemas/capsule-schema.json",
-      "kind": "schema",
-      "stability": "contract",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run audit:public-surface",
-        "npm run check:catalog"
       ]
     },
     {
@@ -1520,6 +1375,20 @@
       ]
     },
     {
+      "id": "schema.evidence-timeline",
+      "path": "schemas/public-evidence-timeline.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-timeline",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "schema.example-coverage",
       "path": "schemas/public-example-coverage.schema.json",
       "kind": "schema",
@@ -1572,20 +1441,6 @@
       ],
       "verify_commands": [
         "npm run check:maintenance-model",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "schema.neuro-concentrate",
-      "path": "schemas/neuro-concentrate.schema.json",
-      "kind": "schema",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run audit:public-surface",
         "npm run check:catalog"
       ]
     },
@@ -1691,58 +1546,292 @@
       ]
     },
     {
-      "id": "validator.api-envelopes",
-      "path": "docs/api-envelopes.md",
-      "kind": "api-doc",
+      "id": "governance.api-schemas-check",
+      "path": "scripts/check-api-schemas.js",
+      "kind": "verification-doc",
       "stability": "maintained",
       "audiences": [
-        "integrators",
+        "contributors",
+        "reviewers",
         "tool-builders"
       ],
       "verify_commands": [
-        "npm run check:docs",
-        "npm run check:api-examples",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "validator.client-recipes",
-      "path": "docs/client-recipes.md",
-      "kind": "integration-doc",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:client-recipes",
+        "npm run check:api-schemas",
         "npm run check:catalog",
         "npm run check:surface"
       ]
     },
     {
-      "id": "validator.integration-guide",
-      "path": "docs/integration-guide.md",
-      "kind": "integration-doc",
+      "id": "governance.assurance-case-check",
+      "path": "scripts/check-assurance-case.js",
+      "kind": "support-artifact",
       "stability": "maintained",
       "audiences": [
-        "integrators",
-        "tool-builders"
+        "contributors",
+        "reviewers"
       ],
       "verify_commands": [
-        "npm run check:docs",
+        "npm run check:assurance-case",
         "npm run check:catalog"
       ]
     },
     {
-      "id": "validator.openapi",
-      "path": "openapi/validate.openapi.json",
-      "kind": "openapi",
-      "stability": "contract",
+      "id": "governance.boundary-map-check",
+      "path": "scripts/check-boundary-map.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
       "audiences": [
-        "integrators",
+        "contributors",
+        "reviewers",
         "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:boundary-map",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.capability-matrix-check",
+      "path": "scripts/check-capability-matrix.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:capability-matrix",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.change-control-check",
+      "path": "scripts/check-change-control.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:change-control",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.client-recipes-check",
+      "path": "scripts/check-client-recipes.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.community-health-check",
+      "path": "scripts/check-community-health.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.dependency-graph-check",
+      "path": "scripts/check-dependency-graph.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:dependency-graph",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.evaluation-packet-check",
+      "path": "scripts/check-evaluation-packet.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:evaluation-packet",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.evidence-timeline-check",
+      "path": "scripts/check-evidence-timeline.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-timeline",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.example-coverage-check",
+      "path": "scripts/check-example-coverage.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:example-coverage",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.failure-model-check",
+      "path": "scripts/check-failure-model.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:failure-model",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.limitations-register-check",
+      "path": "scripts/check-limitations-register.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:limitations-register",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.maintenance-model-check",
+      "path": "scripts/check-maintenance-model.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.ownership-map-check",
+      "path": "scripts/check-ownership-map.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:ownership-map",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.portability-check",
+      "path": "scripts/check-portability-profile.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.project-profile-check",
+      "path": "scripts/check-project-profile.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:project-profile",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.traceability-check",
+      "path": "scripts/check-traceability-matrix.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:traceability",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.update-coherence-check",
+      "path": "scripts/check-update-coherence.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:update-coherence",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.manifest",
+      "path": "SOURCE_MANIFEST.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors"
       ],
       "verify_commands": [
         "npm run audit:public-surface",
@@ -1750,45 +1839,14 @@
       ]
     },
     {
-      "id": "validator.reference",
-      "path": "docs/validator.md",
-      "kind": "validator-doc",
-      "stability": "contract",
-      "audiences": [
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "validator.route-reference",
-      "path": "docs/route-reference.md",
-      "kind": "api-doc",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:api-examples",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "validator.trust-model",
-      "path": "docs/trust-model.md",
+      "id": "repo.versioning",
+      "path": "VERSIONING.md",
       "kind": "governance",
       "stability": "maintained",
       "audiences": [
+        "contributors",
         "integrators",
-        "reviewers",
-        "contributors"
+        "reviewers"
       ],
       "verify_commands": [
         "npm run check:docs",

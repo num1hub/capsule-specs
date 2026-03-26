@@ -1,0 +1,252 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Provide a bounded, machine-readable summary of how the public specs repository hardened over time so external reviewers can see active maintenance instead of inferring it from raw git history alone.",
+  "milestones": [
+    {
+      "id": "initial-open-core-projection",
+      "order": 1,
+      "date": "2026-03-26",
+      "commit": "a7413db",
+      "title": "Initial public open-core projection",
+      "focus": "Created the first clean public projection with core docs, schema, examples, provenance, and release-review scaffolding.",
+      "strongest_surfaces": [
+        "README.md",
+        "OPEN_CORE_PLAN.md",
+        "SOURCE_MANIFEST.json",
+        "docs/overview.md",
+        "schemas/capsule-schema.json"
+      ],
+      "review_commands": [
+        "npm run audit:public-surface",
+        "npm run check:docs"
+      ],
+      "maintenance_signal": "public-safe projection was established as a standalone reviewer-facing surface"
+    },
+    {
+      "id": "verification-and-linked-examples",
+      "order": 2,
+      "date": "2026-03-26",
+      "commit": "f19ba24",
+      "title": "Verification stack and linked examples",
+      "focus": "Strengthened example validation, linked-example checking, and repo-local verification so the public sample set became machine-checkable.",
+      "strongest_surfaces": [
+        "docs/verification.md",
+        "examples/example-project-hub.capsule.json",
+        "examples/example-known-ids.json",
+        "scripts/check-example-contracts.js",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "review_commands": [
+        "npm run check:examples",
+        "npm run check:release"
+      ],
+      "maintenance_signal": "example integrity moved from prose-only to validator-backed checks"
+    },
+    {
+      "id": "api-and-release-reference",
+      "order": 3,
+      "date": "2026-03-26",
+      "commit": "274dae4",
+      "title": "API, catalog, and release evidence",
+      "focus": "Added machine-readable contract discovery, route-oriented reference material, legal notice, and release evidence suitable for external review.",
+      "strongest_surfaces": [
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "docs/release-evidence.md",
+        "docs/route-reference.md",
+        "NOTICE"
+      ],
+      "review_commands": [
+        "npm run check:catalog",
+        "npm run check:release"
+      ],
+      "maintenance_signal": "release state became explicit, reviewable, and machine-readable"
+    },
+    {
+      "id": "community-health-and-intake",
+      "order": 4,
+      "date": "2026-03-26",
+      "commit": "e8405e2",
+      "title": "Community health and intake verification",
+      "focus": "Added contributor intake surfaces, issue templates, and explicit community-health verification for public maintainer operations.",
+      "strongest_surfaces": [
+        "docs/community-health.md",
+        "CONTRIBUTING.md",
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ".github/ISSUE_TEMPLATE/contract_change.md",
+        "scripts/check-community-health.js"
+      ],
+      "review_commands": [
+        "npm run check:community-health",
+        "npm run check:docs"
+      ],
+      "maintenance_signal": "outside contribution posture became bounded and reviewable"
+    },
+    {
+      "id": "reviewer-profile-and-capabilities",
+      "order": 5,
+      "date": "2026-03-26",
+      "commit": "969400c",
+      "title": "Reviewer profile and capability mapping",
+      "focus": "Added machine-readable reviewer shortcuts and practical capability coverage so outside evaluators can assess the repo quickly.",
+      "strongest_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "docs/reviewer-guide.md",
+        "docs/capability-matrix.md",
+        "docs/evaluation-packet.md"
+      ],
+      "review_commands": [
+        "npm run check:project-profile",
+        "npm run check:capability-matrix"
+      ],
+      "maintenance_signal": "external review path became explicit instead of filename-driven"
+    },
+    {
+      "id": "projection-boundaries-and-readiness",
+      "order": 6,
+      "date": "2026-03-26",
+      "commit": "2919c37",
+      "title": "Projection doctrine and boundary mapping",
+      "focus": "Made source-of-truth hierarchy, published boundaries, deferred domains, and generator readiness explicit for the public surface.",
+      "strongest_surfaces": [
+        "docs/projection-doctrine.md",
+        "docs/domain-boundaries.md",
+        "docs/generator-readiness.md",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "docs/source-materials.md"
+      ],
+      "review_commands": [
+        "npm run check:boundary-map",
+        "npm run audit:public-surface"
+      ],
+      "maintenance_signal": "published-vs-deferred scope became explicit and machine-readable"
+    },
+    {
+      "id": "portability-and-archive-contracts",
+      "order": 7,
+      "date": "2026-03-26",
+      "commit": "ba9cd46",
+      "title": "Portability and archive contract surface",
+      "focus": "Added public no-lock-in posture, archive bundle contract, and portability profile without pretending the full hosted runtime is public.",
+      "strongest_surfaces": [
+        "docs/portability.md",
+        "docs/archive-bundles.md",
+        "schemas/archive-bundle.schema.json",
+        "examples/archive/archive-bundle.sample.json",
+        "PUBLIC_PORTABILITY_PROFILE.json"
+      ],
+      "review_commands": [
+        "npm run check:portability",
+        "npm run check:docs"
+      ],
+      "maintenance_signal": "trust posture expanded from format docs to explicit portability contracts"
+    },
+    {
+      "id": "failure-model-and-negative-evidence",
+      "order": 8,
+      "date": "2026-03-26",
+      "commit": "541b18b",
+      "title": "Failure model and negative evidence",
+      "focus": "Made fail-closed semantics and high-signal negative paths explicit instead of relying on happy-path examples alone.",
+      "strongest_surfaces": [
+        "PUBLIC_FAILURE_MODEL.json",
+        "docs/failure-model.md",
+        "examples/api/validate-response.fail.json",
+        "examples/api/unauthorized-response.sample.json",
+        "examples/api/conflict-response.sample.json"
+      ],
+      "review_commands": [
+        "npm run check:failure-model",
+        "npm run check:api-examples"
+      ],
+      "maintenance_signal": "negative-path behavior became part of the public trust contract"
+    },
+    {
+      "id": "traceability-and-example-coverage",
+      "order": 9,
+      "date": "2026-03-26",
+      "commit": "2074750",
+      "title": "Traceability and example coverage",
+      "focus": "Connected public claims to strongest evidence and made the bounded coverage of capsule/API examples explicit.",
+      "strongest_surfaces": [
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "docs/traceability.md",
+        "docs/example-coverage.md",
+        "docs/examples.md"
+      ],
+      "review_commands": [
+        "npm run check:traceability",
+        "npm run check:example-coverage"
+      ],
+      "maintenance_signal": "claim-to-evidence review and example coverage became machine-readable"
+    },
+    {
+      "id": "maintenance-change-and-ownership",
+      "order": 10,
+      "date": "2026-03-26",
+      "commit": "0b6638b",
+      "title": "Maintenance, change control, and ownership",
+      "focus": "Made public maintainer workflow, change classes, and artifact-family authority explicit for bounded outside collaboration.",
+      "strongest_surfaces": [
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_OWNERSHIP_MAP.json",
+        "docs/maintainer-operations.md",
+        "docs/change-control.md"
+      ],
+      "review_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:change-control",
+        "npm run check:ownership-map"
+      ],
+      "maintenance_signal": "public governance moved from implied conventions to machine-readable contracts"
+    },
+    {
+      "id": "dependency-graph-and-assurance",
+      "order": 11,
+      "date": "2026-03-26",
+      "commit": "5fce6d2",
+      "title": "Dependency graph and assurance review",
+      "focus": "Added bounded reading-order navigation, explicit public claims, and the strongest-evidence layer for reviewer-oriented trust assessment.",
+      "strongest_surfaces": [
+        "PUBLIC_DEPENDENCY_GRAPH.json",
+        "PUBLIC_ASSURANCE_CASE.json",
+        "docs/dependency-graph.md",
+        "docs/assurance-case.md",
+        "docs/public-contract-index.md"
+      ],
+      "review_commands": [
+        "npm run check:dependency-graph",
+        "npm run check:assurance-case"
+      ],
+      "maintenance_signal": "reviewer navigation and bounded public claims became explicit and machine-checkable"
+    },
+    {
+      "id": "update-coherence-and-limitations",
+      "order": 12,
+      "date": "2026-03-26",
+      "commit": "72fd975",
+      "title": "Update coherence and limitations register",
+      "focus": "Closed the release-discipline loop by publishing sync groups, deferred scope, non-promises, and explicit limitations for the public surface.",
+      "strongest_surfaces": [
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "docs/update-coherence.md",
+        "docs/limitations-register.md",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "review_commands": [
+        "npm run check:update-coherence",
+        "npm run check:limitations-register"
+      ],
+      "maintenance_signal": "co-moving release surfaces and public non-promises became explicit reviewer-facing constraints"
+    }
+  ],
+  "review_commands": [
+    "npm run verify:repo",
+    "npm run check:evidence-timeline"
+  ]
+}

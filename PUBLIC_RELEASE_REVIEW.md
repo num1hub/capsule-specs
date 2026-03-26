@@ -25,6 +25,7 @@
 - machine-readable assurance case in `PUBLIC_ASSURANCE_CASE.json` plus a bounded public-claims and explicit-limits guide
 - machine-readable update-coherence map in `PUBLIC_UPDATE_COHERENCE_MAP.json` plus a bounded sync-group and co-movement guide
 - machine-readable limitations register in `PUBLIC_LIMITATIONS_REGISTER.json` plus a bounded deferred-scope and non-promise guide
+- machine-readable evidence timeline in `PUBLIC_EVIDENCE_TIMELINE.json` plus a bounded active-maintenance and hardening guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
@@ -73,6 +74,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-assurance-case.js`: pass
 - `node scripts/check-update-coherence.js`: pass
 - `node scripts/check-limitations-register.js`: pass
+- `node scripts/check-evidence-timeline.js`: pass
 - `node scripts/check-project-profile.js`: pass
 - `node scripts/check-capability-matrix.js`: pass
 - `node scripts/check-evaluation-packet.js`: pass
@@ -83,7 +85,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `170` files / `170` manifest entries
+- manifest coverage: `174` files / `174` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -115,3 +117,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_ASSURANCE_CASE.json` is a bounded reviewer-facing assurance summary and must stay subordinate to the stronger docs, schemas, examples, provenance, failure-model, and release-evidence surfaces it references
 - `PUBLIC_UPDATE_COHERENCE_MAP.json` is a bounded sync-group summary and must stay subordinate to the stronger release, provenance, contract, maintainer, and reviewer surfaces it references
 - `PUBLIC_LIMITATIONS_REGISTER.json` is a bounded deferred-scope and non-promise summary and must stay subordinate to the stronger boundary, assurance, scope, and release surfaces it references
+- `PUBLIC_EVIDENCE_TIMELINE.json` is a bounded maintenance-history summary and must stay subordinate to the stronger changelog, release-evidence, reviewer, and git-history surfaces it references

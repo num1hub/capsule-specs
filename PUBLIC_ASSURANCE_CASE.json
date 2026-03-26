@@ -50,7 +50,8 @@
         "PUBLIC_CONTRACT_CATALOG.json",
         "PUBLIC_DEPENDENCY_GRAPH.json",
         "docs/public-contract-index.md",
-        "PUBLIC_LIMITATIONS_REGISTER.json"
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_EVIDENCE_TIMELINE.json"
       ],
       "bounded_by": [
         "docs/release-evidence.md",
@@ -114,7 +115,9 @@
         "PUBLIC_OWNERSHIP_MAP.json",
         "docs/compatibility.md",
         "PUBLIC_DEPENDENCY_GRAPH.json",
-        "PUBLIC_UPDATE_COHERENCE_MAP.json"
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "docs/evidence-timeline.md"
       ],
       "bounded_by": [
         "docs/release-evidence.md",

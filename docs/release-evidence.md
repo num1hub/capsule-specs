@@ -39,6 +39,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable summary of which public surfaces must move together when release, reviewer, or contract layers change.
 - [`../PUBLIC_LIMITATIONS_REGISTER.json`](../PUBLIC_LIMITATIONS_REGISTER.json)
   Machine-readable summary of deferred scope, non-promises, and bounded public limitations.
+- [`../PUBLIC_EVIDENCE_TIMELINE.json`](../PUBLIC_EVIDENCE_TIMELINE.json)
+  Machine-readable summary of the active-maintenance and public-hardening timeline for this public specs repository.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Machine-readable map from public claims to strongest surfaces and verification commands.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
@@ -84,6 +86,8 @@ The update-coherence map strengthens release discipline by making the expected c
 
 The limitations register strengthens trust review by making deferred scope and non-promised behavior explicit instead of forcing reviewers to infer the repo's limits from scattered caveats.
 
+The evidence timeline strengthens maintenance review by making the public hardening path explicit instead of forcing reviewers to infer activity and sequencing from raw git output alone.
+
 The traceability matrix strengthens reviewability by making claim-to-evidence and claim-to-verification links explicit instead of leaving them implicit across multiple files.
 
 The capability matrix strengthens practical evaluation by showing what an outside reader can actually do with the current published surface.
@@ -111,6 +115,7 @@ When the public surface changes, these files should move together:
 - `PUBLIC_ASSURANCE_CASE.json`
 - `PUBLIC_UPDATE_COHERENCE_MAP.json`
 - `PUBLIC_LIMITATIONS_REGISTER.json`
+- `PUBLIC_EVIDENCE_TIMELINE.json`
 - `PUBLIC_TRACEABILITY_MATRIX.json`
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`

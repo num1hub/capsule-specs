@@ -38,6 +38,7 @@ This repository is that home.
 - [`docs/assurance-case.md`](docs/assurance-case.md) for the bounded public claims, strongest evidence, and explicit limits
 - [`docs/update-coherence.md`](docs/update-coherence.md) for the bounded sync groups that must move together when public artifacts change
 - [`docs/limitations-register.md`](docs/limitations-register.md) for the bounded map of deferred scope, non-promises, and public limitations
+- [`docs/evidence-timeline.md`](docs/evidence-timeline.md) for the bounded active-maintenance and public-hardening timeline
 - [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) for machine-readable validator envelope contracts
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
 - [`docs/route-reference.md`](docs/route-reference.md) for per-route sample mapping
@@ -95,6 +96,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable assurance case in [`PUBLIC_ASSURANCE_CASE.json`](PUBLIC_ASSURANCE_CASE.json)
 - machine-readable update-coherence map in [`PUBLIC_UPDATE_COHERENCE_MAP.json`](PUBLIC_UPDATE_COHERENCE_MAP.json)
 - machine-readable limitations register in [`PUBLIC_LIMITATIONS_REGISTER.json`](PUBLIC_LIMITATIONS_REGISTER.json)
+- machine-readable evidence timeline in [`PUBLIC_EVIDENCE_TIMELINE.json`](PUBLIC_EVIDENCE_TIMELINE.json)
 - machine-readable traceability matrix in [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json)
 - machine-readable capability matrix in [`PUBLIC_CAPABILITY_MATRIX.json`](PUBLIC_CAPABILITY_MATRIX.json)
 - machine-readable boundary map in [`PUBLIC_BOUNDARY_MAP.json`](PUBLIC_BOUNDARY_MAP.json)
@@ -140,9 +142,10 @@ Maintainer and review policy:
 13. Inspect [`PUBLIC_ASSURANCE_CASE.json`](PUBLIC_ASSURANCE_CASE.json) if you want the bounded public claims, strongest evidence, and explicit non-claims in one reviewer-facing surface.
 14. Inspect [`PUBLIC_UPDATE_COHERENCE_MAP.json`](PUBLIC_UPDATE_COHERENCE_MAP.json) if you want the bounded sync groups that must move together when release, reviewer, or contract surfaces change.
 15. Inspect [`PUBLIC_LIMITATIONS_REGISTER.json`](PUBLIC_LIMITATIONS_REGISTER.json) if you want the bounded map of deferred domains, non-promises, and public review limits.
-16. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-17. Review the raw capsule sources in [`capsules/`](capsules/).
-18. Run `npm run verify:repo` for the repository-local integrity checks.
+16. Inspect [`PUBLIC_EVIDENCE_TIMELINE.json`](PUBLIC_EVIDENCE_TIMELINE.json) if you want the bounded map of how this public surface hardened over time.
+17. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+18. Review the raw capsule sources in [`capsules/`](capsules/).
+19. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

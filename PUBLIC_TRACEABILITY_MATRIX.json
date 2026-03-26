@@ -352,6 +352,32 @@
         "npm run check:traceability",
         "npm run check:release"
       ]
+    },
+    {
+      "id": "active-maintenance-and-public-hardening-history",
+      "claim": "Active maintenance and public-surface hardening are reviewable through a bounded timeline instead of requiring reviewers to infer maturity from raw git history.",
+      "audiences": [
+        "reviewers",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "docs/evidence-timeline.md",
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "CHANGELOG.md",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_PROJECT_PROFILE.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "docs/reviewer-guide.md",
+        "schemas/public-evidence-timeline.schema.json"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-timeline",
+        "npm run check:traceability",
+        "npm run check:release"
+      ]
     }
   ],
   "non_claims": [

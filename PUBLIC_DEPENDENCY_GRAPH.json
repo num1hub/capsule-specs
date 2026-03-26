@@ -169,6 +169,19 @@
         "npm run check:limitations-register",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "maintenance-evolution",
+      "path": "PUBLIC_EVIDENCE_TIMELINE.json",
+      "role": "maintenance-evidence",
+      "depends_on": [
+        "reviewer-summaries",
+        "release-evidence"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-timeline",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -181,6 +194,7 @@
         "assurance-and-limits",
         "limitations-and-deferred-scope",
         "release-evidence",
+        "maintenance-evolution",
         "update-coherence-and-sync"
       ]
     },
@@ -204,7 +218,8 @@
         "maintenance-and-change",
         "ownership-and-authority",
         "update-coherence-and-sync",
-        "release-evidence"
+        "release-evidence",
+        "maintenance-evolution"
       ]
     }
   ],

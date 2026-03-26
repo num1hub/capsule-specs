@@ -24,6 +24,7 @@ This repository includes a compact evaluation packet for external reviewers, pro
 - [`../PUBLIC_ASSURANCE_CASE.json`](../PUBLIC_ASSURANCE_CASE.json)
 - [`../PUBLIC_UPDATE_COHERENCE_MAP.json`](../PUBLIC_UPDATE_COHERENCE_MAP.json)
 - [`../PUBLIC_LIMITATIONS_REGISTER.json`](../PUBLIC_LIMITATIONS_REGISTER.json)
+- [`../PUBLIC_EVIDENCE_TIMELINE.json`](../PUBLIC_EVIDENCE_TIMELINE.json)
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
@@ -38,3 +39,5 @@ The assurance case strengthens that path further by making the bounded public cl
 The update-coherence map strengthens that path further by making co-moving review, release, and contract surfaces explicit instead of leaving release sync as maintainer folklore.
 
 The limitations register strengthens that path by making deferred scope, non-promises, and bounded reviewer expectations explicit instead of leaving them scattered across caveat prose.
+
+The evidence timeline strengthens that path further by making active maintenance and public-surface hardening visible as a bounded reviewer-facing history instead of requiring raw git archaeology.
