@@ -7,6 +7,7 @@ The bounded additive/deprecation/breaking-change posture lives in [`change-contr
 The bounded co-movement expectations live in [`update-coherence.md`](update-coherence.md) and [`../PUBLIC_UPDATE_COHERENCE_MAP.json`](../PUBLIC_UPDATE_COHERENCE_MAP.json).
 The bounded role-specific public navigation layer lives in [`audience-paths.md`](audience-paths.md) and [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json).
 The bounded stronger-source hierarchy lives in [`evidence-strength.md`](evidence-strength.md) and [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json).
+The bounded ready vs deferred public audience posture lives in [`adoption-readiness.md`](adoption-readiness.md) and [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json).
 
 ## What this covers
 
@@ -21,6 +22,7 @@ The bounded stronger-source hierarchy lives in [`evidence-strength.md`](evidence
 - keep the public boundary narrow and explicit
 - keep `SOURCE_MANIFEST.json` and `PUBLIC_CONTRACT_CATALOG.json` synchronized with public-surface changes
 - keep `PUBLIC_EVIDENCE_STRENGTH_MAP.json` aligned with trust, compatibility, reviewer, and release-evidence surfaces when stronger-source hierarchy changes
+- keep `PUBLIC_ADOPTION_READINESS.json` aligned with audience paths, limitations, release evidence, and maintainer posture when adoption readiness or deferred expectations change
 - prefer small, reviewable releases over large dumps
 - require verification evidence for schema, example, API, and release-surface changes
 - route trust-sensitive reports through the security path instead of public issue intake

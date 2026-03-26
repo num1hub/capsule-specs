@@ -483,6 +483,33 @@
         "npm run check:evidence-strength",
         "npm run check:traceability"
       ]
+    },
+    {
+      "id": "adoption-readiness-and-prerequisites",
+      "claim": "Public audience readiness, prerequisites, and deferred hosted-runtime expectations are explicit instead of being inferred from examples, caveats, and role-specific docs.",
+      "audiences": [
+        "reviewers",
+        "integrators",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "docs/adoption-readiness.md",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "docs/integration-guide.md",
+        "docs/community-health.md",
+        "docs/maintainer-operations.md",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "docs/faq.md"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

@@ -118,6 +118,22 @@
       ]
     },
     {
+      "id": "governance.adoption-readiness-doc",
+      "path": "docs/adoption-readiness.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "validator.api-envelopes",
       "path": "docs/api-envelopes.md",
       "kind": "api-doc",
@@ -998,6 +1014,23 @@
       ]
     },
     {
+      "id": "governance.adoption-readiness",
+      "path": "PUBLIC_ADOPTION_READINESS.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.assurance-case",
       "path": "PUBLIC_ASSURANCE_CASE.json",
       "kind": "provenance",
@@ -1398,6 +1431,22 @@
       ]
     },
     {
+      "id": "schema.adoption-readiness",
+      "path": "schemas/public-adoption-readiness.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "schema.assurance-case",
       "path": "schemas/public-assurance-case.schema.json",
       "kind": "schema",
@@ -1724,6 +1773,21 @@
         "npm run check:api-schemas",
         "npm run check:catalog",
         "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.adoption-readiness-check",
+      "path": "scripts/check-adoption-readiness.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:catalog"
       ]
     },
     {

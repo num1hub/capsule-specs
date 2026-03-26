@@ -24,6 +24,7 @@ The repository keeps explicit intake paths so outside contributors do not need t
 These templates keep issues scoped to the public projection surface instead of drifting into private runtime or product-doctrine requests.
 
 The bounded public maintainer posture for intake, review, and release work is summarized in [`../PUBLIC_MAINTENANCE_MODEL.json`](../PUBLIC_MAINTENANCE_MODEL.json).
+The bounded contributor and maintainer adoption posture is summarized in [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json).
 The bounded public change, deprecation, and breaking-change posture is summarized in [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json).
 
 ## Maintainer expectations

@@ -17,7 +17,8 @@
         "PUBLIC_REVIEW_SCORECARD.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_VERIFICATION_MATRIX.json",
-        "PUBLIC_RELEASE_METADATA.json"
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_ADOPTION_READINESS.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
@@ -49,7 +50,8 @@
         "examples/api/README.md",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "docs/client-recipes.md",
-        "PUBLIC_EXAMPLE_COVERAGE.json"
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "PUBLIC_ADOPTION_READINESS.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
@@ -143,7 +145,8 @@
         "PUBLIC_UPDATE_COHERENCE_MAP.json",
         "PUBLIC_RELEASE_METADATA.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
-        "PUBLIC_AUDIENCE_PATHS.json"
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "PUBLIC_ADOPTION_READINESS.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",

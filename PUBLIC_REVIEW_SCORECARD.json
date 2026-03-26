@@ -226,6 +226,22 @@
         "npm run check:evidence-strength",
         "npm run check:review-scorecard"
       ]
+    },
+    {
+      "id": "adoption-readiness-explicit",
+      "question": "Is public adoption readiness explicit instead of leaving outside readers to infer it from examples, caveats, and role-specific docs?",
+      "status": "pass",
+      "summary": "The repo publishes a bounded adoption-readiness layer that makes ready vs deferred audience posture explicit and reviewable.",
+      "strongest_surfaces": [
+        "docs/adoption-readiness.md",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
+      ],
+      "review_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:review-scorecard"
+      ]
     }
   ],
   "important_limits": [

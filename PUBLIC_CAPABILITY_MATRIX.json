@@ -627,6 +627,30 @@
         "npm run check:evidence-strength",
         "npm run check:capability-matrix"
       ]
+    },
+    {
+      "id": "assess-public-adoption-readiness",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "See which public audiences can adopt which parts of the repository today, under which prerequisites, and where hosted-runtime expectations remain intentionally deferred.",
+      "strongest_surfaces": [
+        "PUBLIC_ADOPTION_READINESS.json",
+        "docs/adoption-readiness.md",
+        "PUBLIC_AUDIENCE_PATHS.json",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_RELEASE_METADATA.json",
+        "docs/integration-guide.md",
+        "docs/community-health.md",
+        "docs/maintainer-operations.md"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:audience-paths",
+        "npm run check:capability-matrix"
+      ]
     }
   ]
 }

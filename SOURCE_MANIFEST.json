@@ -58,10 +58,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "QUICKSTART.md": {
     "source_paths": [
@@ -109,10 +113,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "derived",
-    "notes": "Root-level fast entry path for public contributors.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Root-level fast entry path for public contributors.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "ONBOARDING.md": {
     "source_paths": [
@@ -192,10 +200,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "VERSIONING.md": {
     "source_paths": [
@@ -351,10 +363,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Repository metadata and lightweight verification scripts for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Repository metadata and lightweight verification scripts for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   ".github/ISSUE_TEMPLATE/bug_report.md": {
     "source_paths": [],
@@ -501,10 +517,14 @@
       "PUBLIC_AUDIENCE_PATHS.json",
       "docs/audience-paths.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "scripts/check-audience-paths.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Recommended integration path across schema, examples, graph validation, and HTTP envelopes.; synchronized with audience paths surfaces"
+    "notes": "Recommended integration path across schema, examples, graph validation, and HTTP envelopes.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces"
   },
   "docs/client-recipes.md": {
     "source_paths": [
@@ -601,10 +621,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Short answers to scope and validation questions for the public repository.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Short answers to scope and validation questions for the public repository.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "docs/public-contract-index.md": {
     "source_paths": [
@@ -671,10 +695,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "docs/release-evidence.md": {
     "source_paths": [
@@ -728,10 +756,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "docs/verification.md": {
     "source_paths": [
@@ -795,10 +827,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "docs/source-materials.md": {
     "source_paths": [
@@ -902,10 +938,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Directory guide for schema artifacts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Directory guide for schema artifacts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "examples/example-note.capsule.json": {
     "source_paths": [
@@ -1107,10 +1147,14 @@
   "SOURCE_MANIFEST.json": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/reviewer-guide.md",
-      "/home/n1/codex-workspace/docs/capability-matrix.md"
+      "/home/n1/codex-workspace/docs/capability-matrix.md",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Provenance index for every public file in the repository."
+    "notes": "Provenance index for every public file in the repository.; synchronized with adoption-readiness surfaces"
   },
   "PUBLIC_CONTRACT_CATALOG.json": {
     "source_paths": [
@@ -1167,10 +1211,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "PUBLIC_RELEASE_METADATA.json": {
     "source_paths": [
@@ -1226,10 +1274,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "PUBLIC_RELEASE_REVIEW.md": {
     "source_paths": [
@@ -1283,10 +1335,14 @@
       "schemas/public-verification-matrix.schema.json",
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
-      "scripts/check-verification-matrix.js"
+      "scripts/check-verification-matrix.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Release review updated for verification matrix layer; manifest currently covers 183 files; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Release review updated for verification matrix layer; manifest currently covers 183 files; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "docs/contract-catalog.md": {
     "source_paths": [
@@ -1502,10 +1558,14 @@
       "/home/n1/codex-workspace/docs/maintainer-operations.md",
       "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
       "/home/n1/codex-workspace/docs/change-control.md",
-      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Public contributor-intake and community-health guide for the specs repository."
+    "notes": "Public contributor-intake and community-health guide for the specs repository.; synchronized with adoption-readiness surfaces"
   },
   ".github/ISSUE_TEMPLATE/integration_question.md": {
     "source_paths": [
@@ -1591,10 +1651,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-project-profile.schema.json": {
     "source_paths": [
@@ -1656,10 +1720,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Fast evaluator path through the strongest public surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Fast evaluator path through the strongest public surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "scripts/check-project-profile.js": {
     "source_paths": [
@@ -1754,10 +1822,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-capability-matrix.schema.json": {
     "source_paths": [
@@ -1813,10 +1885,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide to the capability matrix and supported public outcomes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Human-readable guide to the capability matrix and supported public outcomes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "scripts/check-capability-matrix.js": {
     "source_paths": [
@@ -2035,10 +2111,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable evaluation packet for external reviewers and programs.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Human-readable evaluation packet for external reviewers and programs.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "PUBLIC_EVALUATION_PACKET.json": {
     "source_paths": [
@@ -2087,10 +2167,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable bounded evaluation packet for reviewers, programs, and tooling.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-evaluation-packet.schema.json": {
     "source_paths": [],
@@ -2272,10 +2356,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-traceability-matrix.schema.json": {
     "source_paths": [],
@@ -2396,10 +2484,14 @@
       "PUBLIC_AUDIENCE_PATHS.json",
       "docs/audience-paths.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "scripts/check-audience-paths.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide to the bounded public maintainer workflow.; synchronized with audience paths surfaces"
+    "notes": "Human-readable guide to the bounded public maintainer workflow.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces"
   },
   "PUBLIC_MAINTENANCE_MODEL.json": {
     "source_paths": [
@@ -2435,10 +2527,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of public maintainer workflow and release posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable summary of public maintainer workflow and release posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-maintenance-model.schema.json": {
     "source_paths": [],
@@ -2503,10 +2599,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable summary of additive, deprecated, and breaking public change posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-change-control-model.schema.json": {
     "source_paths": [
@@ -2612,10 +2712,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable summary of public dependency structure and reading paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable summary of public dependency structure and reading paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-dependency-graph.schema.json": {
     "source_paths": [
@@ -2702,10 +2806,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded assurance layer for public review.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable bounded assurance layer for public review.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-assurance-case.schema.json": {
     "source_paths": [
@@ -2780,10 +2888,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable co-movement map for reviewer, release, contract, and teaching surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable co-movement map for reviewer, release, contract, and teaching surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-update-coherence-map.schema.json": {
     "source_paths": [
@@ -2949,10 +3061,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded external review checklist for the public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable bounded external review checklist for the public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-review-scorecard.schema.json": {
     "source_paths": [
@@ -3012,10 +3128,14 @@
       "schemas/public-audience-paths.schema.json",
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-verification-matrix.schema.json": {
     "source_paths": [
@@ -3076,10 +3196,14 @@
       "docs/reviewer-guide.md",
       "docs/verification.md",
       "schemas/public-evidence-strength-map.schema.json",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "PUBLIC_ADOPTION_READINESS.json",
+      "docs/adoption-readiness.md",
+      "schemas/public-adoption-readiness.schema.json",
+      "scripts/check-adoption-readiness.js"
     ],
     "transformation_type": "generated",
-    "notes": "Machine-readable bounded audience entry paths for the public surface; synchronized with evidence strength surfaces"
+    "notes": "Machine-readable bounded audience entry paths for the public surface; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces"
   },
   "schemas/public-audience-paths.schema.json": {
     "source_paths": [
@@ -3169,5 +3293,43 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for stronger-source hierarchy and evidence-strength references"
+  },
+  "docs/adoption-readiness.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_AUDIENCE_PATHS.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json",
+      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Bounded adoption-readiness guide for public audience profiles."
+  },
+  "PUBLIC_ADOPTION_READINESS.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/adoption-readiness.md",
+      "/home/n1/codex-workspace/PUBLIC_AUDIENCE_PATHS.json",
+      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
+      "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable bounded adoption-readiness posture across public audiences."
+  },
+  "schemas/public-adoption-readiness.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "JSON Schema for the machine-readable public adoption-readiness map."
+  },
+  "scripts/check-adoption-readiness.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json",
+      "/home/n1/codex-workspace/docs/adoption-readiness.md",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for adoption-readiness posture and its cross-surface synchronization."
   }
 }

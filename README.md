@@ -43,6 +43,7 @@ This repository is that home.
 - [`docs/verification-matrix.md`](docs/verification-matrix.md) for the bounded map of which check families protect which public surfaces
 - [`docs/audience-paths.md`](docs/audience-paths.md) for the bounded role-specific entry paths through the public surface
 - [`docs/evidence-strength.md`](docs/evidence-strength.md) for the bounded map of which public surfaces are strongest and which are only secondary or illustrative
+- [`docs/adoption-readiness.md`](docs/adoption-readiness.md) for the bounded map of what each public audience can adopt today and what remains deferred
 - [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) for machine-readable validator envelope contracts
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
 - [`docs/route-reference.md`](docs/route-reference.md) for per-route sample mapping
@@ -105,6 +106,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable verification matrix in [`PUBLIC_VERIFICATION_MATRIX.json`](PUBLIC_VERIFICATION_MATRIX.json)
 - machine-readable audience paths in [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json)
 - machine-readable evidence-strength map in [`PUBLIC_EVIDENCE_STRENGTH_MAP.json`](PUBLIC_EVIDENCE_STRENGTH_MAP.json)
+- machine-readable adoption-readiness map in [`PUBLIC_ADOPTION_READINESS.json`](PUBLIC_ADOPTION_READINESS.json)
 - machine-readable traceability matrix in [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json)
 - machine-readable capability matrix in [`PUBLIC_CAPABILITY_MATRIX.json`](PUBLIC_CAPABILITY_MATRIX.json)
 - machine-readable boundary map in [`PUBLIC_BOUNDARY_MAP.json`](PUBLIC_BOUNDARY_MAP.json)
@@ -155,9 +157,10 @@ Maintainer and review policy:
 18. Inspect [`PUBLIC_VERIFICATION_MATRIX.json`](PUBLIC_VERIFICATION_MATRIX.json) if you want the bounded map of which verification families protect which public surfaces.
 19. Inspect [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) if you want the bounded role-specific entry paths for reviewers, integrators, contributors, tool-builders, and maintainers.
 20. Inspect [`PUBLIC_EVIDENCE_STRENGTH_MAP.json`](PUBLIC_EVIDENCE_STRENGTH_MAP.json) if you want the bounded map of which public artifacts are strongest, secondary, or illustrative.
-21. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-22. Review the raw capsule sources in [`capsules/`](capsules/).
-23. Run `npm run verify:repo` for the repository-local integrity checks.
+21. Inspect [`PUBLIC_ADOPTION_READINESS.json`](PUBLIC_ADOPTION_READINESS.json) if you want the bounded map of which audience paths are ready today, which prerequisites apply, and which hosted-runtime expectations stay deferred.
+22. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+23. Review the raw capsule sources in [`capsules/`](capsules/).
+24. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

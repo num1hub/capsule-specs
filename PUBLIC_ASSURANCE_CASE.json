@@ -59,7 +59,9 @@
         "PUBLIC_AUDIENCE_PATHS.json",
         "docs/audience-paths.md",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
-        "docs/evidence-strength.md"
+        "docs/evidence-strength.md",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "docs/adoption-readiness.md"
       ],
       "bounded_by": [
         "docs/release-evidence.md",
@@ -129,7 +131,8 @@
         "PUBLIC_REVIEW_SCORECARD.json",
         "PUBLIC_VERIFICATION_MATRIX.json",
         "PUBLIC_AUDIENCE_PATHS.json",
-        "PUBLIC_EVIDENCE_STRENGTH_MAP.json"
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "PUBLIC_ADOPTION_READINESS.json"
       ],
       "bounded_by": [
         "docs/release-evidence.md",

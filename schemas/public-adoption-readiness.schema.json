@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n1hub/specs/schemas/public-adoption-readiness.schema.json",
+  "title": "Public Adoption Readiness",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "reviewed_at",
+    "purpose",
+    "profiles",
+    "review_commands"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "reviewed_at": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "profiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "readiness",
+          "summary",
+          "can_do_now",
+          "prerequisites",
+          "strongest_surfaces",
+          "bounded_non_goals",
+          "verify_commands"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "readiness": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "partial",
+              "deferred"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "can_do_now": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "prerequisites": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "strongest_surfaces": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "bounded_non_goals": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "verify_commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "review_commands": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -44,13 +44,15 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
    Confirm that different public audiences can follow bounded role-specific entry paths instead of guessing from folder layout or maintainer folklore.
 20. Read [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json)
    Confirm which public surfaces are strongest, which are secondary, and which are illustrative before treating any reviewer summary as authoritative.
-21. Read [`release-evidence.md`](release-evidence.md)
+21. Read [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json)
+   Confirm which public audience paths are ready today, which prerequisites apply, and where hosted-runtime expectations remain explicitly deferred.
+22. Read [`release-evidence.md`](release-evidence.md)
    See how provenance, release review, and verification evidence fit together.
-22. Read [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
+23. Read [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
    Confirm that the public surface documents bounded negative paths instead of only happy-path behavior.
-23. Read [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
+24. Read [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
    Confirm that portability and archive trust are described as governed public contracts rather than as vague product claims.
-24. Read [`community-health.md`](community-health.md)
+25. Read [`community-health.md`](community-health.md)
    Confirm that contributor intake and maintainer expectations are explicit.
 
 ## Strongest signals
@@ -74,6 +76,7 @@ If you only have a few minutes, inspect these surfaces first:
 - [`../PUBLIC_VERIFICATION_MATRIX.json`](../PUBLIC_VERIFICATION_MATRIX.json)
 - [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_AUDIENCE_PATHS.json)
 - [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json)
+- [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json)
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)
 - [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)

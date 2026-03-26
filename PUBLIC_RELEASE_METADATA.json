@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 190,
-    "manifest_entries": 190
+    "files": 194,
+    "manifest_entries": 194
   },
   "surface_summary": {
-    "catalog_entries": 141,
+    "catalog_entries": 145,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 73
+    "markdown_files": 74
   },
   "repo_local_checks": [
     {
@@ -94,6 +94,10 @@
     },
     {
       "command": "npm run check:evidence-strength",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:adoption-readiness",
       "status": "pass"
     },
     {
@@ -188,6 +192,7 @@
     "PUBLIC_REVIEW_SCORECARD.json is a bounded reviewer checklist and must stay subordinate to the stronger docs, schemas, examples, release evidence, and git-backed maintenance history it references",
     "PUBLIC_VERIFICATION_MATRIX.json is a bounded verification-coverage summary and must stay subordinate to the stronger check scripts, release evidence, and live validator behavior it references",
     "PUBLIC_AUDIENCE_PATHS.json is a bounded role-specific navigation summary and must stay subordinate to the stronger onboarding, reviewer, maintainer, integration, and release surfaces it references",
-    "PUBLIC_EVIDENCE_STRENGTH_MAP.json is a bounded stronger-source summary and must stay subordinate to the stronger schemas, OpenAPI, provenance, release evidence, and live validator behavior it references"
+    "PUBLIC_EVIDENCE_STRENGTH_MAP.json is a bounded stronger-source summary and must stay subordinate to the stronger schemas, OpenAPI, provenance, release evidence, and live validator behavior it references",
+    "PUBLIC_ADOPTION_READINESS.json is a bounded adoption summary and must stay subordinate to the stronger audience-path, limitations, evidence-strength, and release-evidence surfaces it references"
   ]
 }

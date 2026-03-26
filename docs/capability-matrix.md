@@ -35,6 +35,7 @@ Each capability captures:
 - inspect verification coverage across public check families
 - follow role-specific audience entry paths across reviewer, contributor, integrator, tool-builder, and maintainer surfaces
 - inspect the stronger-source hierarchy across public contracts, summaries, and illustrative artifacts
+- inspect bounded public adoption readiness across reviewer, contributor, integrator, tool-builder, maintainer, and deferred hosted-runtime expectations
 - trace public claims end-to-end
 - understand projection and domain boundaries
 - review portability and archive trust posture
@@ -83,6 +84,8 @@ Good OSS repositories are not only readable; they are usable. The capability mat
   Answers: which bounded entry path is correct for each public audience instead of assuming one generic repo walkthrough fits everyone.
 - [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json)
   Answers: which public surfaces are strongest, which are secondary, and which are illustrative before a reader treats a summary as authoritative.
+- [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json)
+  Answers: which public audiences can adopt which parts of the public surface today, under which prerequisites, and where adoption remains intentionally deferred.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Answers: how the strongest public claims connect to docs, schemas, examples, and verification commands.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)

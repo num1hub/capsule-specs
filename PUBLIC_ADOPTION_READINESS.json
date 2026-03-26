@@ -1,0 +1,190 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Publish bounded readiness states for the main public audience profiles so outside readers can see what this repository is ready for today, which prerequisites apply, and which adoption paths remain intentionally deferred.",
+  "profiles": [
+    {
+      "id": "reviewers",
+      "readiness": "ready",
+      "summary": "External reviewers can evaluate maturity, scope, strongest evidence, and bounded limits without reading the private runtime repository.",
+      "can_do_now": [
+        "follow a bounded review path",
+        "inspect stronger-source hierarchy",
+        "verify repo-local evidence and release posture"
+      ],
+      "prerequisites": [
+        "start from README.md and docs/reviewer-guide.md",
+        "treat PUBLIC_EVIDENCE_STRENGTH_MAP.json and PUBLIC_RELEASE_METADATA.json as stronger than convenience summaries"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "bounded_non_goals": [
+        "does not expose the private N1Hub runtime",
+        "does not claim a hosted public service"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:evaluation-packet",
+        "npm run check:review-scorecard"
+      ]
+    },
+    {
+      "id": "integrators",
+      "readiness": "ready",
+      "summary": "Integrators can build against the published validator-facing HTTP, schema, and example surfaces today.",
+      "can_do_now": [
+        "generate or handcraft validator requests from public contracts",
+        "use API examples and client recipes",
+        "understand bounded negative-path behavior"
+      ],
+      "prerequisites": [
+        "use the published OpenAPI and envelope schemas",
+        "treat live validator behavior as stronger for edge-case runtime semantics"
+      ],
+      "strongest_surfaces": [
+        "openapi/validate.openapi.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "examples/api/README.md",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
+      ],
+      "bounded_non_goals": [
+        "does not promise a public hosted endpoint",
+        "does not replace live validator behavior for edge cases"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:api-schemas",
+        "npm run check:api-examples"
+      ]
+    },
+    {
+      "id": "contributors",
+      "readiness": "ready",
+      "summary": "Contributors can propose bounded public-surface changes today when they stay inside the published docs, schemas, examples, and reviewer/release layers.",
+      "can_do_now": [
+        "open issues for docs, examples, contract questions, and bounded change proposals",
+        "prepare pull requests against the public projection surface",
+        "follow explicit reviewer and release sync rules"
+      ],
+      "prerequisites": [
+        "read CONTRIBUTING.md and docs/community-health.md",
+        "keep release-facing and reviewer-facing summary layers synchronized"
+      ],
+      "strongest_surfaces": [
+        "CONTRIBUTING.md",
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_ADOPTION_READINESS.json"
+      ],
+      "bounded_non_goals": [
+        "does not grant access to private upstream runtime surfaces",
+        "does not permit widening the public boundary by accident"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:community-health",
+        "npm run check:maintenance-model"
+      ]
+    },
+    {
+      "id": "tool-builders",
+      "readiness": "ready",
+      "summary": "Tool-builders can consume the public schemas, OpenAPI, and cataloged machine-readable artifacts today.",
+      "can_do_now": [
+        "discover machine-readable artifacts quickly",
+        "generate tooling from public schemas and OpenAPI",
+        "map examples to contract surfaces without guessing"
+      ],
+      "prerequisites": [
+        "use PUBLIC_CONTRACT_CATALOG.json and PUBLIC_EVIDENCE_STRENGTH_MAP.json to choose stronger generation targets",
+        "treat summary JSON layers as subordinate to schemas, OpenAPI, and release evidence"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "schemas/capsule-schema.json",
+        "openapi/validate.openapi.json",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "PUBLIC_ADOPTION_READINESS.json"
+      ],
+      "bounded_non_goals": [
+        "does not guarantee a complete SDK",
+        "does not expose private generator internals"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:catalog",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
+      "id": "maintainers",
+      "readiness": "ready",
+      "summary": "Maintainers can keep reviewer, release, governance, and adoption summary layers synchronized as the public repo evolves.",
+      "can_do_now": [
+        "update public release evidence and review layers coherently",
+        "keep audience-specific readiness posture explicit",
+        "reclassify summary layers when stronger-source hierarchy changes"
+      ],
+      "prerequisites": [
+        "read docs/maintainer-operations.md and RELEASING.md",
+        "refresh PUBLIC_ADOPTION_READINESS.json whenever audience readiness, prerequisites, or deferred scope changes"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "PUBLIC_RELEASE_METADATA.json",
+        "PUBLIC_ADOPTION_READINESS.json"
+      ],
+      "bounded_non_goals": [
+        "does not expose private maintainer playbooks",
+        "does not replace stronger provenance and release evidence"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:update-coherence",
+        "npm run check:release"
+      ]
+    },
+    {
+      "id": "hosted-service-consumers",
+      "readiness": "deferred",
+      "summary": "This public specs repository is not itself a hosted service surface and should not be adopted as if it exposed a public production validator endpoint.",
+      "can_do_now": [
+        "review the bounded limits and no-lock-in posture",
+        "understand which hosted-runtime assumptions are intentionally out of scope here"
+      ],
+      "prerequisites": [
+        "read PUBLIC_LIMITATIONS_REGISTER.json and docs/portability.md",
+        "do not treat examples or client recipes as evidence of a guaranteed hosted endpoint"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "PUBLIC_BOUNDARY_MAP.json",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_RELEASE_REVIEW.md"
+      ],
+      "bounded_non_goals": [
+        "does not publish a production hosted validator",
+        "does not promise service uptime, auth provisioning, or runtime tenancy features"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:limitations-register",
+        "npm run check:portability"
+      ]
+    }
+  ],
+  "review_commands": [
+    "npm run check:adoption-readiness",
+    "npm run verify:repo"
+  ]
+}

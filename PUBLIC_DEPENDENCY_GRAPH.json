@@ -235,6 +235,21 @@
         "npm run check:evidence-strength",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "adoption-readiness",
+      "path": "PUBLIC_ADOPTION_READINESS.json",
+      "role": "readiness-summary",
+      "depends_on": [
+        "audience-entry-paths",
+        "evidence-strength",
+        "limitations-and-deferred-scope",
+        "release-evidence"
+      ],
+      "verify_commands": [
+        "npm run check:adoption-readiness",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -247,6 +262,7 @@
         "assurance-and-limits",
         "limitations-and-deferred-scope",
         "evidence-strength",
+        "adoption-readiness",
         "release-evidence",
         "maintenance-evolution",
         "review-scorecard",
@@ -262,6 +278,7 @@
         "repo-readme",
         "audience-entry-paths",
         "evidence-strength",
+        "adoption-readiness",
         "law-and-schema",
         "validator-http-contract",
         "examples-and-fixtures",
@@ -279,6 +296,7 @@
         "update-coherence-and-sync",
         "audience-entry-paths",
         "evidence-strength",
+        "adoption-readiness",
         "release-evidence",
         "maintenance-evolution",
         "review-scorecard",
