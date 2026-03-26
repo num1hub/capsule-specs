@@ -265,6 +265,21 @@
         "npm run check:freshness",
         "npm run check:dependency-graph"
       ]
+    },
+    {
+      "id": "ecosystem-value-and-program-fit",
+      "path": "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+      "role": "ecosystem-value-summary",
+      "depends_on": [
+        "reviewer-summaries",
+        "evidence-strength",
+        "adoption-readiness",
+        "freshness-and-staleness"
+      ],
+      "verify_commands": [
+        "npm run check:ecosystem-value",
+        "npm run check:dependency-graph"
+      ]
     }
   ],
   "reading_paths": [
@@ -284,7 +299,8 @@
         "verification-coverage",
         "audience-entry-paths",
         "update-coherence-and-sync",
-        "freshness-and-staleness"
+        "freshness-and-staleness",
+        "ecosystem-value-and-program-fit"
       ]
     },
     {
@@ -299,7 +315,8 @@
         "validator-http-contract",
         "examples-and-fixtures",
         "release-evidence",
-        "freshness-and-staleness"
+        "freshness-and-staleness",
+        "ecosystem-value-and-program-fit"
       ]
     },
     {
@@ -318,7 +335,8 @@
         "maintenance-evolution",
         "review-scorecard",
         "verification-coverage",
-        "freshness-and-staleness"
+        "freshness-and-staleness",
+        "ecosystem-value-and-program-fit"
       ]
     }
   ],

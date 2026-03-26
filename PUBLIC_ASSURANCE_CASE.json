@@ -20,7 +20,9 @@
         "docs/repository-scope.md",
         "PUBLIC_PROJECT_PROFILE.json",
         "PUBLIC_DEPENDENCY_GRAPH.json",
-        "PUBLIC_LIMITATIONS_REGISTER.json"
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "docs/ecosystem-value.md"
       ],
       "bounded_by": [
         "docs/source-materials.md",

@@ -258,6 +258,22 @@
         "npm run check:freshness",
         "npm run check:review-scorecard"
       ]
+    },
+    {
+      "id": "ecosystem-value-explicit",
+      "question": "Is the external value of the public surface explicit instead of being left to vague aspiration, raw counts, or filename archaeology?",
+      "status": "pass",
+      "summary": "The repo publishes a bounded ecosystem-value layer that makes external utility explicit for reviewers, integrators, tool-builders, contributors, and OSS-support programs.",
+      "strongest_surfaces": [
+        "docs/ecosystem-value.md",
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_ADOPTION_READINESS.json"
+      ],
+      "review_commands": [
+        "npm run check:ecosystem-value",
+        "npm run check:review-scorecard"
+      ]
     }
   ],
   "important_limits": [

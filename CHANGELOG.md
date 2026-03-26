@@ -38,6 +38,7 @@
 - added machine-readable public evidence-strength modeling and verifier coverage for stronger-source hierarchy across public surfaces
 - added machine-readable public adoption-readiness modeling and verifier coverage for ready vs deferred public audience use
 - added machine-readable public freshness modeling and verifier coverage for stale-summary triggers and release-aligned freshness posture
+- added machine-readable public ecosystem-value modeling and verifier coverage for external utility, reviewer/program fit, and bounded OSS-support relevance
 
 ## 0.1.0 - 2026-03-26
 

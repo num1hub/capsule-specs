@@ -675,6 +675,30 @@
         "npm run check:capability-matrix",
         "npm run check:release"
       ]
+    },
+    {
+      "id": "inspect-ecosystem-value-and-external-utility",
+      "audience": "reviewers",
+      "readiness": "ready",
+      "outcome": "Inspect why this public surface matters to reviewers, integrators, tool-builders, contributors, and OSS-support programs without relying on vague aspiration or raw counts alone.",
+      "strongest_surfaces": [
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "docs/ecosystem-value.md",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "docs/reviewer-guide.md",
+        "docs/release-evidence.md"
+      ],
+      "verify_commands": [
+        "npm run check:ecosystem-value",
+        "npm run check:capability-matrix",
+        "npm run check:release"
+      ]
     }
   ]
 }

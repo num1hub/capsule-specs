@@ -1,0 +1,198 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "purpose": "Make the external utility of the public specs repository explicit so reviewers, integrators, tool-builders, contributors, and programs can see why this public surface matters.",
+  "value_families": [
+    {
+      "id": "contract-foundation-for-tool-builders",
+      "summary": "The repo publishes machine-readable schemas, OpenAPI, and contract catalogs that can be consumed directly by external tooling.",
+      "beneficiaries": [
+        "tool-builders",
+        "integrators",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "schemas/capsule-schema.json",
+        "openapi/validate.openapi.json",
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json"
+      ],
+      "supporting_surfaces": [
+        "docs/schema-reference.md",
+        "docs/public-contract-index.md",
+        "PUBLIC_CAPABILITY_MATRIX.json"
+      ],
+      "verify_commands": [
+        "npm run check:catalog",
+        "npm run check:evidence-strength",
+        "npm run check:ecosystem-value"
+      ],
+      "bounded_non_goals": [
+        "does not claim to publish a complete SDK",
+        "does not expose private generator internals"
+      ]
+    },
+    {
+      "id": "reviewer-grade-machine-readable-evidence",
+      "summary": "The repo gives outside reviewers a bounded machine-readable path for maturity, scope, evidence, and limits instead of forcing raw-tree archaeology.",
+      "beneficiaries": [
+        "reviewers",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_REVIEW_SCORECARD.json",
+        "PUBLIC_VERIFICATION_MATRIX.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "docs/reviewer-guide.md",
+        "docs/evaluation-packet.md",
+        "PUBLIC_TRACEABILITY_MATRIX.json",
+        "PUBLIC_ASSURANCE_CASE.json"
+      ],
+      "verify_commands": [
+        "npm run check:project-profile",
+        "npm run check:evaluation-packet",
+        "npm run check:review-scorecard",
+        "npm run check:ecosystem-value"
+      ],
+      "bounded_non_goals": [
+        "does not claim a full private runtime dump",
+        "does not replace stronger contracts or release evidence"
+      ]
+    },
+    {
+      "id": "validator-integration-utility",
+      "summary": "The repo gives integrators a real validator-facing contract stack with examples, negative paths, and client recipes.",
+      "beneficiaries": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/integration-guide.md",
+        "schemas/validator-api-envelopes.schema.json",
+        "examples/api/README.md",
+        "docs/client-recipes.md",
+        "PUBLIC_EXAMPLE_COVERAGE.json"
+      ],
+      "supporting_surfaces": [
+        "docs/api-envelopes.md",
+        "PUBLIC_FAILURE_MODEL.json",
+        "PUBLIC_ADOPTION_READINESS.json"
+      ],
+      "verify_commands": [
+        "npm run check:api-schemas",
+        "npm run check:api-examples",
+        "npm run check:client-recipes",
+        "npm run check:ecosystem-value"
+      ],
+      "bounded_non_goals": [
+        "does not promise a hosted endpoint",
+        "does not replace live validator edge-case behavior"
+      ]
+    },
+    {
+      "id": "portability-and-no-lock-in-posture",
+      "summary": "The repo makes portability and no-lock-in legible through public contracts instead of product-copy promises.",
+      "beneficiaries": [
+        "reviewers",
+        "integrators",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "docs/portability.md",
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "schemas/archive-bundle.schema.json",
+        "examples/archive/archive-bundle.sample.json"
+      ],
+      "supporting_surfaces": [
+        "docs/archive-bundles.md",
+        "docs/trust-model.md",
+        "PUBLIC_LIMITATIONS_REGISTER.json"
+      ],
+      "verify_commands": [
+        "npm run check:portability",
+        "npm run check:limitations-register",
+        "npm run check:ecosystem-value"
+      ],
+      "bounded_non_goals": [
+        "does not claim a deployed export/import service",
+        "does not claim hosted-runtime operations"
+      ]
+    },
+    {
+      "id": "maintained-open-core-projection-discipline",
+      "summary": "The repo demonstrates that a narrow open-core surface can still be maintained with explicit provenance, change control, and verification discipline.",
+      "beneficiaries": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "strongest_surfaces": [
+        "SOURCE_MANIFEST.json",
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_CHANGE_CONTROL_MODEL.json",
+        "PUBLIC_UPDATE_COHERENCE_MAP.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_EVIDENCE_TIMELINE.json",
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "docs/maintainer-operations.md",
+        "docs/release-evidence.md"
+      ],
+      "verify_commands": [
+        "npm run audit:public-surface",
+        "npm run check:maintenance-model",
+        "npm run check:change-control",
+        "npm run check:ecosystem-value"
+      ],
+      "bounded_non_goals": [
+        "does not expose private maintainer playbooks",
+        "does not claim zero drift without ongoing maintenance"
+      ]
+    },
+    {
+      "id": "program-and-ecosystem-readiness",
+      "summary": "The repo makes its public value legible to external programs by exposing bounded utility, evidence, freshness, and review shortcuts in one surface.",
+      "beneficiaries": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "docs/ecosystem-value.md",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_RELEASE_REVIEW.md",
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json"
+      ],
+      "verify_commands": [
+        "npm run check:ecosystem-value",
+        "npm run check:evaluation-packet",
+        "npm run check:adoption-readiness"
+      ],
+      "bounded_non_goals": [
+        "does not claim acceptance by any specific external program",
+        "does not claim real-world usage metrics that are not published here"
+      ]
+    }
+  ],
+  "non_claims": [
+    "This file does not claim current usage numbers, stars, or community scale.",
+    "This file does not replace stronger contracts, provenance, release evidence, or live validator behavior."
+  ],
+  "review_commands": [
+    "npm run check:ecosystem-value",
+    "npm run verify:repo"
+  ]
+}

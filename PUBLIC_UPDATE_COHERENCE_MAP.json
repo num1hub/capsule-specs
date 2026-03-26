@@ -137,6 +137,31 @@
         "npm run check:adoption-readiness",
         "npm run check:freshness"
       ]
+    },
+    {
+      "id": "ecosystem-value-and-program-utility",
+      "summary": "External-utility summaries, reviewer shortcuts, and program-facing readiness surfaces should move together when public value posture changes.",
+      "required_surfaces": [
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "docs/ecosystem-value.md",
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_RELEASE_METADATA.json"
+      ],
+      "verify_commands": [
+        "npm run check:ecosystem-value",
+        "npm run check:evaluation-packet",
+        "npm run check:adoption-readiness",
+        "npm run check:update-coherence"
+      ],
+      "change_triggers": [
+        "changed external value posture or beneficiary-facing utility",
+        "changed reviewer/program-facing summary layers",
+        "changed adoption posture, capability posture, or freshness expectations for public utility claims"
+      ]
     }
   ],
   "non_claims": [

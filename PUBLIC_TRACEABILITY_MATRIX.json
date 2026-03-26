@@ -537,6 +537,34 @@
         "npm run check:freshness",
         "npm run check:traceability"
       ]
+    },
+    {
+      "id": "ecosystem-value-and-external-utility",
+      "claim": "The public surface makes its external utility explicit for reviewers, integrators, tool-builders, contributors, and OSS-support programs instead of forcing outside readers to infer value from raw counts, filenames, or vague aspiration.",
+      "audiences": [
+        "reviewers",
+        "integrators",
+        "tool-builders",
+        "contributors"
+      ],
+      "strongest_surfaces": [
+        "docs/ecosystem-value.md",
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_FRESHNESS_MODEL.json"
+      ],
+      "supporting_surfaces": [
+        "PUBLIC_PROJECT_PROFILE.json",
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "docs/reviewer-guide.md",
+        "docs/release-evidence.md",
+        "docs/faq.md"
+      ],
+      "verify_commands": [
+        "npm run check:ecosystem-value",
+        "npm run check:traceability"
+      ]
     }
   ],
   "non_claims": [

@@ -56,6 +56,8 @@ This directory contains public machine-readable schema artifacts.
   JSON Schema for the machine-readable public adoption-readiness posture across audience profiles.
 - `public-freshness-model.schema.json`
   JSON Schema for the machine-readable public freshness and stale-summary posture.
+- `public-ecosystem-value-map.schema.json`
+  JSON Schema for the machine-readable public ecosystem-value and external-utility posture.
 - `public-traceability-matrix.schema.json`
   JSON Schema for the machine-readable claim-to-evidence traceability matrix.
 

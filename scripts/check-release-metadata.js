@@ -174,6 +174,10 @@ assert(
   'release metadata must include the freshness verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:ecosystem-value'),
+  'release metadata must include the ecosystem-value verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -276,6 +280,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_FRESHNESS_MODEL.json')),
   'release metadata residual risks must mention PUBLIC_FRESHNESS_MODEL.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json')),
+  'release metadata residual risks must mention PUBLIC_ECOSYSTEM_VALUE_MAP.json'
 );
 
 if (process.exitCode) {

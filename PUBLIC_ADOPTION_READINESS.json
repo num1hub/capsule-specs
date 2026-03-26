@@ -23,7 +23,8 @@
         "PUBLIC_VERIFICATION_MATRIX.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_RELEASE_METADATA.json",
-        "PUBLIC_FRESHNESS_MODEL.json"
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
       ],
       "bounded_non_goals": [
         "does not expose the private N1Hub runtime",
@@ -113,7 +114,8 @@
         "schemas/capsule-schema.json",
         "openapi/validate.openapi.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
-        "PUBLIC_ADOPTION_READINESS.json"
+        "PUBLIC_ADOPTION_READINESS.json",
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
       ],
       "bounded_non_goals": [
         "does not guarantee a complete SDK",

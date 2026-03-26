@@ -41,7 +41,8 @@
       "machine-readable audience-path summaries",
       "machine-readable evidence-strength hierarchy summaries",
       "machine-readable adoption-readiness summaries",
-      "machine-readable freshness summaries"
+      "machine-readable freshness summaries",
+      "machine-readable ecosystem-value summaries"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -51,9 +52,9 @@
     ]
   },
   "surface_summary": {
-    "total_files": 198,
-    "markdown_files": 75,
-    "schema_files": 28,
+    "total_files": 202,
+    "markdown_files": 76,
+    "schema_files": 29,
     "raw_capsule_files": 4,
     "example_capsules": 5,
     "api_example_files": 13,
@@ -93,11 +94,12 @@
     "machine_readable_audience_paths_present": true,
     "machine_readable_evidence_strength_map_present": true,
     "machine_readable_adoption_readiness_present": true,
-    "machine_readable_freshness_model_present": true
+    "machine_readable_freshness_model_present": true,
+    "machine_readable_ecosystem_value_present": true
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 32,
+    "repo_local_check_count": 33,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -129,7 +131,8 @@
     "audience_paths": "PUBLIC_AUDIENCE_PATHS.json",
     "evidence_strength_map": "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
     "adoption_readiness": "PUBLIC_ADOPTION_READINESS.json",
-    "freshness_model": "PUBLIC_FRESHNESS_MODEL.json"
+    "freshness_model": "PUBLIC_FRESHNESS_MODEL.json",
+    "ecosystem_value_map": "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
   },
   "program_readiness": {
     "maintainer_owned": true,
@@ -159,6 +162,7 @@
     "audience_paths_explicit": true,
     "evidence_strength_hierarchy_explicit": true,
     "public_adoption_readiness_explicit": true,
-    "freshness_posture_explicit": true
+    "freshness_posture_explicit": true,
+    "ecosystem_value_explicit": true
   }
 }

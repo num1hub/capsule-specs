@@ -138,7 +138,11 @@ const requiredIds = [
   'governance.dependency-graph-check',
   'governance.assurance-case-check',
   'governance.update-coherence-check',
-  'governance.limitations-register-check'
+  'governance.limitations-register-check',
+  'governance.ecosystem-value-doc',
+  'governance.ecosystem-value-map',
+  'governance.ecosystem-value-map-schema',
+  'governance.ecosystem-value-check'
 ];
 
 for (const requiredId of requiredIds) {

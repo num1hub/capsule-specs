@@ -58,6 +58,8 @@ This executes all repository-local checks in the expected order.
   Verifies `PUBLIC_ADOPTION_READINESS.json`, audience-specific readiness posture, prerequisites, deferred hosted-runtime expectations, and the surrounding reviewer / release / governance references.
 - `npm run check:freshness`
   Verifies `PUBLIC_FRESHNESS_MODEL.json`, stale-summary triggers, freshness signals, and the surrounding reviewer / release / maintenance references.
+- `npm run check:ecosystem-value`
+  Verifies `PUBLIC_ECOSYSTEM_VALUE_MAP.json`, external-utility claims, reviewer/program references, and the surrounding adoption / capability / release surfaces.
 - `npm run check:docs`
   Verifies Markdown links across the public documentation surface.
 - `npm run check:catalog`
@@ -115,6 +117,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_EVIDENCE_STRENGTH_MAP.json` stays aligned with the real stronger-source hierarchy across schemas, OpenAPI, examples, summaries, and release evidence
 - `PUBLIC_ADOPTION_READINESS.json` stays aligned with the real ready vs deferred posture across reviewer, contributor, integrator, tool-builder, maintainer, and hosted-runtime expectations
 - `PUBLIC_FRESHNESS_MODEL.json` stays aligned with the real freshness triggers, stale signals, release evidence, and summary layers it classifies
+- `PUBLIC_ECOSYSTEM_VALUE_MAP.json` stays aligned with the real public utility, reviewer/program posture, capability surface, and release evidence it summarizes
 - `PUBLIC_TRACEABILITY_MATRIX.json` stays aligned with the real docs, schemas, examples, and verification commands it claims to connect
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`

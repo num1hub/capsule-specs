@@ -50,6 +50,8 @@ The bounded stronger-source hierarchy summary lives in [`../PUBLIC_EVIDENCE_STRE
 
 The bounded freshness and stale-summary summary lives in [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json).
 
+The bounded ecosystem-value summary lives in [`../PUBLIC_ECOSYSTEM_VALUE_MAP.json`](../PUBLIC_ECOSYSTEM_VALUE_MAP.json).
+
 ## Important boundary
 
 The traceability matrix is a curated public summary. It does not claim to capture every private runtime dependency or every internal change path from the upstream N1Hub repository.

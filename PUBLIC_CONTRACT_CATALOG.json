@@ -308,6 +308,22 @@
       ]
     },
     {
+      "id": "governance.ecosystem-value-doc",
+      "path": "docs/ecosystem-value.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:ecosystem-value",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.evaluation-packet-doc",
       "path": "docs/evaluation-packet.md",
       "kind": "governance",
@@ -1142,6 +1158,23 @@
       ]
     },
     {
+      "id": "governance.ecosystem-value-map",
+      "path": "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:ecosystem-value",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.evaluation-packet",
       "path": "PUBLIC_EVALUATION_PACKET.json",
       "kind": "index",
@@ -1581,6 +1614,22 @@
       ]
     },
     {
+      "id": "governance.ecosystem-value-map-schema",
+      "path": "schemas/public-ecosystem-value-map.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:ecosystem-value",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "schema.evaluation-packet",
       "path": "schemas/public-evaluation-packet.schema.json",
       "kind": "schema",
@@ -1968,6 +2017,21 @@
       ],
       "verify_commands": [
         "npm run check:dependency-graph",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.ecosystem-value-check",
+      "path": "scripts/check-ecosystem-value.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:ecosystem-value",
         "npm run check:catalog"
       ]
     },

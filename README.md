@@ -45,6 +45,7 @@ This repository is that home.
 - [`docs/evidence-strength.md`](docs/evidence-strength.md) for the bounded map of which public surfaces are strongest and which are only secondary or illustrative
 - [`docs/adoption-readiness.md`](docs/adoption-readiness.md) for the bounded map of what each public audience can adopt today and what remains deferred
 - [`docs/freshness.md`](docs/freshness.md) for the bounded map of which public surfaces go stale under which triggers and how summary drift becomes visible
+- [`docs/ecosystem-value.md`](docs/ecosystem-value.md) for the bounded map of why this public surface matters to reviewers, integrators, tool-builders, contributors, and OSS-support programs
 - [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) for machine-readable validator envelope contracts
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
 - [`docs/route-reference.md`](docs/route-reference.md) for per-route sample mapping
@@ -109,6 +110,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable evidence-strength map in [`PUBLIC_EVIDENCE_STRENGTH_MAP.json`](PUBLIC_EVIDENCE_STRENGTH_MAP.json)
 - machine-readable adoption-readiness map in [`PUBLIC_ADOPTION_READINESS.json`](PUBLIC_ADOPTION_READINESS.json)
 - machine-readable freshness model in [`PUBLIC_FRESHNESS_MODEL.json`](PUBLIC_FRESHNESS_MODEL.json)
+- machine-readable ecosystem-value map in [`PUBLIC_ECOSYSTEM_VALUE_MAP.json`](PUBLIC_ECOSYSTEM_VALUE_MAP.json)
 - machine-readable traceability matrix in [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json)
 - machine-readable capability matrix in [`PUBLIC_CAPABILITY_MATRIX.json`](PUBLIC_CAPABILITY_MATRIX.json)
 - machine-readable boundary map in [`PUBLIC_BOUNDARY_MAP.json`](PUBLIC_BOUNDARY_MAP.json)
@@ -161,9 +163,10 @@ Maintainer and review policy:
 20. Inspect [`PUBLIC_EVIDENCE_STRENGTH_MAP.json`](PUBLIC_EVIDENCE_STRENGTH_MAP.json) if you want the bounded map of which public artifacts are strongest, secondary, or illustrative.
 21. Inspect [`PUBLIC_ADOPTION_READINESS.json`](PUBLIC_ADOPTION_READINESS.json) if you want the bounded map of which audience paths are ready today, which prerequisites apply, and which hosted-runtime expectations stay deferred.
 22. Inspect [`PUBLIC_FRESHNESS_MODEL.json`](PUBLIC_FRESHNESS_MODEL.json) if you want the bounded map of which public summary layers go stale under which triggers and how freshness is kept tied to release evidence.
-23. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-24. Review the raw capsule sources in [`capsules/`](capsules/).
-25. Run `npm run verify:repo` for the repository-local integrity checks.
+23. Inspect [`PUBLIC_ECOSYSTEM_VALUE_MAP.json`](PUBLIC_ECOSYSTEM_VALUE_MAP.json) if you want the bounded map of why this public surface is concretely useful to reviewers, integrators, tool-builders, contributors, and external OSS-support programs.
+24. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+25. Review the raw capsule sources in [`capsules/`](capsules/).
+26. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

@@ -134,7 +134,8 @@
         "npm run check:evidence-strength",
         "npm run check:capability-matrix",
         "npm run check:adoption-readiness",
-        "npm run check:freshness"
+        "npm run check:freshness",
+        "npm run check:ecosystem-value"
       ],
       "protects": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -144,7 +145,8 @@
         "PUBLIC_AUDIENCE_PATHS.json",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_ADOPTION_READINESS.json",
-        "PUBLIC_FRESHNESS_MODEL.json"
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
       ],
       "strongest_surfaces": [
         "PUBLIC_PROJECT_PROFILE.json",
@@ -154,7 +156,8 @@
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "PUBLIC_CAPABILITY_MATRIX.json",
         "PUBLIC_ADOPTION_READINESS.json",
-        "PUBLIC_FRESHNESS_MODEL.json"
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
       ],
       "failure_modes_prevented": [
         "stale reviewer shortcuts",
@@ -164,7 +167,8 @@
         "over-trusted summary layers",
         "implicit adoption readiness claims",
         "stale freshness posture",
-        "hidden stale-summary triggers"
+        "hidden stale-summary triggers",
+        "opaque ecosystem value claims"
       ]
     },
     {
@@ -287,6 +291,30 @@
         "stale reviewer summaries",
         "stale readiness claims",
         "hidden freshness expectations"
+      ]
+    },
+    {
+      "id": "ecosystem-value-and-program-utility",
+      "summary": "Protects bounded external-utility claims, reviewer/program fit, and the public explanation of why this surface matters.",
+      "commands": [
+        "npm run check:ecosystem-value",
+        "npm run check:evaluation-packet",
+        "npm run check:adoption-readiness"
+      ],
+      "protects": [
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "PUBLIC_EVALUATION_PACKET.json",
+        "PUBLIC_ADOPTION_READINESS.json"
+      ],
+      "strongest_surfaces": [
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "docs/ecosystem-value.md",
+        "PUBLIC_EVALUATION_PACKET.json"
+      ],
+      "failure_modes_prevented": [
+        "ecosystem value claims disconnected from public artifacts",
+        "reviewer/program utility left implicit",
+        "bounded external utility drifting away from release evidence"
       ]
     }
   ],

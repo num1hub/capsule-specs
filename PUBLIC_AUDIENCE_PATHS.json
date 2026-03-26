@@ -19,7 +19,8 @@
         "PUBLIC_VERIFICATION_MATRIX.json",
         "PUBLIC_RELEASE_METADATA.json",
         "PUBLIC_ADOPTION_READINESS.json",
-        "PUBLIC_FRESHNESS_MODEL.json"
+        "PUBLIC_FRESHNESS_MODEL.json",
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
@@ -114,7 +115,8 @@
         "schemas/neuro-concentrate.schema.json",
         "openapi/validate.openapi.json",
         "PUBLIC_CONTRACT_CATALOG.json",
-        "PUBLIC_CAPABILITY_MATRIX.json"
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
