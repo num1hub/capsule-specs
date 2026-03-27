@@ -16,6 +16,7 @@ The repo-owned configuration lives in:
 - how GitHub release notes are grouped
 - how GitHub-native update hygiene is handled
 - how CI runners install the repo-owned dependency set before executing `npm run verify:repo`
+- how CI runners fetch full git history before running evidence-timeline checks that reference older hardening milestones
 
 ## Why this matters
 
@@ -26,6 +27,8 @@ If labels, milestones, or release grouping exist only in the live GitHub UI, the
 Keeping the GitHub operating layer in versioned files makes the public issue surface more portable and reviewable.
 
 That same rule applies to CI: the public verification workflow should install the repo-owned dependency set in a clean runner before typechecking Zod-backed projection files or any other dependency-aware public surface.
+
+The same workflow must also fetch full repository history. The public evidence-timeline layer intentionally references older hardening milestones, so shallow checkout would make reviewer-facing timeline verification fail for the wrong reason.
 
 ## Boundaries
 
