@@ -784,7 +784,8 @@
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
       "/home/n1/codex-workspace/projections/zod/capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md"
     ],
     "transformation_type": "generated",
     "notes": "Recommended integration path across schema, examples, graph validation, and HTTP envelopes.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; integration guide synchronized with source-level type projections; integration guide synchronized with validator API source-level projections"
@@ -831,7 +832,8 @@
     "source_paths": [
       "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
       "/home/n1/n1hub.com/docs/validator.md",
-      "/home/n1/codex-workspace/docs/failure-model.md"
+      "/home/n1/codex-workspace/docs/failure-model.md",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md"
     ],
     "transformation_type": "derived",
     "notes": "Human-readable note about the published OpenAPI surface."
@@ -967,7 +969,8 @@
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
       "/home/n1/codex-workspace/projections/zod/capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; contract index synchronized with validator API source-level projections"
@@ -1219,11 +1222,15 @@
     "source_paths": [
       "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json",
       "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/docs/type-projections.md"
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/docs/type-projections.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md"
     ],
     "transformation_type": "derived",
-    "notes": "Field-level capsule schema guide.; linked to source-level type projections"
+    "notes": "Field-level capsule and validator-envelope schema guide.; synchronized with schema family index and source-level type projections"
   },
   "docs/source-materials.md": {
     "source_paths": [
@@ -1935,7 +1942,8 @@
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js"
+      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded audience entry paths for the public surface; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2043,7 +2051,8 @@
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js"
+      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2179,7 +2188,9 @@
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js"
+      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/schemas/README.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2260,7 +2271,8 @@
       "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json",
-      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json"
+      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable ecosystem-value layer derived from reviewer, capability, adoption, and release-facing public surfaces."
@@ -2357,7 +2369,8 @@
       "PUBLIC_TRACEABILITY_MATRIX.json",
       "PUBLIC_VERIFICATION_MATRIX.json",
       "docs/compatibility.md",
-      "docs/trust-model.md"
+      "docs/trust-model.md",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable stronger-source hierarchy for public evidence families"
@@ -2603,7 +2616,9 @@
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js"
+      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/schemas/README.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2695,7 +2710,8 @@
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js"
+      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2779,7 +2795,9 @@
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
-      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/schemas/README.md"
     ],
     "transformation_type": "generated",
     "notes": "Release review updated for verification matrix layer; manifest coverage tracked in PUBLIC_RELEASE_METADATA.json; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release review synchronized with public type-projection surfaces; release review synchronized with validator API projection surfaces"
@@ -2906,7 +2924,8 @@
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js"
+      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -3157,7 +3176,8 @@
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
       "/home/n1/codex-workspace/projections/zod/capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; front door synchronized with public validator API projection surfaces"
@@ -3406,72 +3426,16 @@
   },
   "schemas/README.md": {
     "source_paths": [
-      "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
-      "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
-      "/home/n1/codex-workspace/PUBLIC_DEPENDENCY_GRAPH.json",
-      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_TIMELINE.json",
-      "/home/n1/codex-workspace/PUBLIC_EXAMPLE_COVERAGE.json",
-      "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
-      "/home/n1/codex-workspace/PUBLIC_OWNERSHIP_MAP.json",
-      "/home/n1/codex-workspace/PUBLIC_REVIEW_SCORECARD.json",
-      "/home/n1/codex-workspace/PUBLIC_TRACEABILITY_MATRIX.json",
-      "/home/n1/codex-workspace/PUBLIC_UPDATE_COHERENCE_MAP.json",
-      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
-      "/home/n1/codex-workspace/docs/artifact-ownership.md",
-      "/home/n1/codex-workspace/docs/assurance-case.md",
-      "/home/n1/codex-workspace/docs/change-control.md",
-      "/home/n1/codex-workspace/docs/dependency-graph.md",
-      "/home/n1/codex-workspace/docs/evidence-timeline.md",
-      "/home/n1/codex-workspace/docs/example-coverage.md",
-      "/home/n1/codex-workspace/docs/limitations-register.md",
-      "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/docs/review-scorecard.md",
-      "/home/n1/codex-workspace/docs/traceability.md",
-      "/home/n1/codex-workspace/docs/update-coherence.md",
-      "/home/n1/codex-workspace/docs/verification-matrix.md",
-      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
-      "/home/n1/codex-workspace/schemas/public-evidence-timeline.schema.json",
-      "/home/n1/codex-workspace/schemas/public-example-coverage.schema.json",
-      "/home/n1/codex-workspace/schemas/public-maintenance-model.schema.json",
-      "/home/n1/codex-workspace/schemas/public-portability-profile.schema.json",
-      "/home/n1/codex-workspace/schemas/public-review-scorecard.schema.json",
-      "/home/n1/codex-workspace/schemas/public-traceability-matrix.schema.json",
-      "/home/n1/codex-workspace/schemas/public-verification-matrix.schema.json",
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/docs/schema-reference.md",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-timeline.js",
-      "/home/n1/codex-workspace/scripts/check-review-scorecard.js",
-      "/home/n1/codex-workspace/scripts/check-verification-matrix.js",
-      "PUBLIC_AUDIENCE_PATHS.json",
-      "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
-      "docs/audience-paths.md",
-      "docs/evidence-strength.md",
-      "schemas/public-audience-paths.schema.json",
-      "schemas/public-evidence-strength-map.schema.json",
-      "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js",
-      "PUBLIC_ADOPTION_READINESS.json",
-      "docs/adoption-readiness.md",
-      "schemas/public-adoption-readiness.schema.json",
-      "scripts/check-adoption-readiness.js",
-      "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
-      "/home/n1/codex-workspace/docs/freshness.md",
-      "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
-      "/home/n1/codex-workspace/scripts/check-freshness.js",
-      "/home/n1/codex-workspace/PUBLIC_DECISION_LOG.json",
-      "/home/n1/codex-workspace/docs/decision-log.md",
-      "/home/n1/codex-workspace/schemas/public-decision-log.schema.json",
-      "/home/n1/codex-workspace/scripts/check-decision-log.js",
-      "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-      "/home/n1/codex-workspace/docs/evidence-gaps.md",
-      "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
-      "/home/n1/codex-workspace/docs/type-projections.md",
-      "/home/n1/codex-workspace/projections/README.md"
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/docs/type-projections.md"
     ],
     "transformation_type": "generated",
-    "notes": "Directory guide for schema artifacts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; schema guide linked to source-level type projections"
+    "notes": "Directory guide for public schema artifacts grouped by family."
   },
   "schemas/validator-api-envelopes.schema.json": {
     "source_paths": [
@@ -4519,5 +4483,19 @@
     ],
     "transformation_type": "generated",
     "notes": "Minimal Zod consumer recipe for parsing a validator response envelope."
+  },
+  "docs/schema-family-reference.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/schemas/README.md",
+      "/home/n1/codex-workspace/docs/schema-reference.md",
+      "/home/n1/codex-workspace/docs/type-projections.md",
+      "/home/n1/codex-workspace/docs/integration-guide.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Human-readable index for choosing the right public schema family and abstraction level."
   }
 }

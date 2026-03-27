@@ -4,12 +4,13 @@ This guide shows the safest path for building against the public N1Hub specifica
 
 ## 1. Start with the contract, not with guesses
 
+- read [`schema-family-reference.md`](schema-family-reference.md)
 - read [`schema-reference.md`](schema-reference.md)
 - inspect [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
 - inspect [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
 - inspect [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
 
-The schemas and OpenAPI artifacts should shape your parser, validator client, and payload expectations.
+The schema family guide helps you choose the right level first. The schemas and OpenAPI artifacts should then shape your parser, validator client, and payload expectations.
 
 ## 2. Add source-level projections where helpful
 

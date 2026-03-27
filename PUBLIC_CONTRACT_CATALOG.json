@@ -1746,6 +1746,55 @@
       ]
     },
     {
+      "id": "schema.reference-doc",
+      "path": "docs/schema-reference.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.family-reference-doc",
+      "path": "docs/schema-family-reference.md",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.directory-guide",
+      "path": "schemas/README.md",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "schema.adoption-readiness",
       "path": "schemas/public-adoption-readiness.schema.json",
       "kind": "schema",

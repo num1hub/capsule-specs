@@ -8,7 +8,7 @@
 - root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
 - repo ergonomics and legal files: `.editorconfig`, `package.json`, `RELEASING`, `NOTICE`, `CITATION.cff`
 - GitHub-native maintenance files: `.github/dependabot.yml` and `.github/release.yml`
-- public docs for the capsule law, validator, relation types, schema, API envelopes, integration guidance, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
+- public docs for the capsule law, validator, relation types, schema-family selection, field-level schema reference, API envelopes, integration guidance, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
 - projection doctrine, domain boundaries, generator-readiness guidance, and a machine-readable boundary map
 - portability docs, archive-bundle schema and sample, and a machine-readable portability profile
 - route reference and verification docs for navigating and auditing the public surface
@@ -113,7 +113,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `241` files / `241` manifest entries
+- manifest coverage: `242` files / `242` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

@@ -96,7 +96,9 @@ This index maps the highest-signal public surfaces in the repository.
 
 ## Schemas
 
+- [`schema-family-reference.md`](schema-family-reference.md)
 - [`schema-reference.md`](schema-reference.md)
+- [`../schemas/README.md`](../schemas/README.md)
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
 - [`../schemas/neuro-concentrate.schema.json`](../schemas/neuro-concentrate.schema.json)
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)

@@ -51,7 +51,8 @@
       "public-safe TypeScript and Zod projections",
       "source-level consumer recipe examples",
       "public-safe TypeScript and Zod validator API projections",
-      "source-level validator API consumer recipe examples"
+      "source-level validator API consumer recipe examples",
+      "schema-family and field-level reference docs"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -61,8 +62,8 @@
     ]
   },
   "surface_summary": {
-    "total_files": 241,
-    "markdown_files": 84,
+    "total_files": 242,
+    "markdown_files": 85,
     "schema_files": 34,
     "raw_capsule_files": 4,
     "example_capsules": 5,
@@ -152,7 +153,10 @@
     "program_fit_map": "PUBLIC_PROGRAM_FIT_MAP.json",
     "publication_readiness": "PUBLIC_PUBLICATION_READINESS.json",
     "repository_identity": "PUBLIC_REPOSITORY_IDENTITY.json",
-    "type_projections": "docs/type-projections.md"
+    "type_projections": "docs/type-projections.md",
+    "schema_reference": "docs/schema-reference.md",
+    "schema_family_reference": "docs/schema-family-reference.md",
+    "schema_directory_guide": "schemas/README.md"
   },
   "program_readiness": {
     "maintainer_owned": true,

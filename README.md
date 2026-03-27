@@ -35,6 +35,7 @@ This repository is that home.
 - [`docs/generator-readiness.md`](docs/generator-readiness.md) for the generator/projection model
 - [`docs/portability.md`](docs/portability.md) for public portability and no-lock-in posture
 - [`docs/archive-bundles.md`](docs/archive-bundles.md) for the archive export / replay contract
+- [`docs/schema-family-reference.md`](docs/schema-family-reference.md) for choosing the right schema family first
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/type-projections.md`](docs/type-projections.md) for the public-safe TypeScript and Zod projection layer
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
@@ -173,33 +174,34 @@ Maintainer and review policy:
 2. Read [`docs/projection-doctrine.md`](docs/projection-doctrine.md) and [`docs/domain-boundaries.md`](docs/domain-boundaries.md).
 3. Read [`docs/5-element-law.md`](docs/5-element-law.md) and [`docs/16-gates.md`](docs/16-gates.md).
 4. Read [`docs/portability.md`](docs/portability.md) if you need the public portability / archive trust posture.
-5. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
-6. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
-7. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
-8. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
-9. Inspect [`PUBLIC_EXAMPLE_COVERAGE.json`](PUBLIC_EXAMPLE_COVERAGE.json) if you want the bounded map from examples to covered routes, law surfaces, and negative paths.
-10. Inspect [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) if you want the bounded model for issue intake, review rules, and release posture.
-11. Inspect [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) if you want the bounded model for additive, deprecated, and breaking public changes.
-12. Inspect [`PUBLIC_OWNERSHIP_MAP.json`](PUBLIC_OWNERSHIP_MAP.json) if you want the bounded map of which artifact families are maintained here and which stronger surfaces outrank them.
-13. Inspect [`PUBLIC_DEPENDENCY_GRAPH.json`](PUBLIC_DEPENDENCY_GRAPH.json) if you want the bounded map of which public artifacts depend on which stronger surfaces and in what order they are easiest to read.
-14. Inspect [`PUBLIC_ASSURANCE_CASE.json`](PUBLIC_ASSURANCE_CASE.json) if you want the bounded public claims, strongest evidence, and explicit non-claims in one reviewer-facing surface.
-15. Inspect [`PUBLIC_UPDATE_COHERENCE_MAP.json`](PUBLIC_UPDATE_COHERENCE_MAP.json) if you want the bounded sync groups that must move together when release, reviewer, or contract surfaces change.
-16. Inspect [`PUBLIC_LIMITATIONS_REGISTER.json`](PUBLIC_LIMITATIONS_REGISTER.json) if you want the bounded map of deferred domains, non-promises, and public review limits.
-17. Inspect [`PUBLIC_EVIDENCE_TIMELINE.json`](PUBLIC_EVIDENCE_TIMELINE.json) if you want the bounded map of how this public surface hardened over time.
-18. Inspect [`PUBLIC_REVIEW_SCORECARD.json`](PUBLIC_REVIEW_SCORECARD.json) if you want the bounded reviewer-grade checklist for public repository maturity.
-19. Inspect [`PUBLIC_VERIFICATION_MATRIX.json`](PUBLIC_VERIFICATION_MATRIX.json) if you want the bounded map of which verification families protect which public surfaces.
-20. Inspect [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) if you want the bounded role-specific entry paths for reviewers, integrators, contributors, tool-builders, and maintainers.
-21. Inspect [`PUBLIC_EVIDENCE_STRENGTH_MAP.json`](PUBLIC_EVIDENCE_STRENGTH_MAP.json) if you want the bounded map of which public artifacts are strongest, secondary, or illustrative.
-22. Inspect [`PUBLIC_ADOPTION_READINESS.json`](PUBLIC_ADOPTION_READINESS.json) if you want the bounded map of which audience paths are ready today, which prerequisites apply, and which hosted-runtime expectations stay deferred.
-23. Inspect [`PUBLIC_FRESHNESS_MODEL.json`](PUBLIC_FRESHNESS_MODEL.json) if you want the bounded map of which public summary layers go stale under which triggers and how freshness is kept tied to release evidence.
-24. Inspect [`PUBLIC_ECOSYSTEM_VALUE_MAP.json`](PUBLIC_ECOSYSTEM_VALUE_MAP.json) if you want the bounded map of why this public surface is concretely useful to reviewers, integrators, tool-builders, contributors, and external OSS-support programs.
-25. Inspect [`PUBLIC_DECISION_LOG.json`](PUBLIC_DECISION_LOG.json) if you want the bounded map of the major public decisions and the rationale behind this repository's projection, trust posture, and release discipline.
-26. Inspect [`PUBLIC_EVIDENCE_GAPS_REGISTER.json`](PUBLIC_EVIDENCE_GAPS_REGISTER.json) if you want the bounded map of which high-signal public evidence still remains intentionally incomplete and where review confidence must stay bounded.
-27. Inspect [`PUBLIC_PROGRAM_FIT_MAP.json`](PUBLIC_PROGRAM_FIT_MAP.json) if you want the bounded map of why this public surface is already reviewer/program-credible and where that fit is still intentionally bounded.
-28. Inspect [`PUBLIC_PUBLICATION_READINESS.json`](PUBLIC_PUBLICATION_READINESS.json) if you want the bounded map of why this repo remains coherent as a published GitHub surface and which post-publication signals remain intentionally deferred.
-29. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-30. Review the raw capsule sources in [`capsules/`](capsules/).
-31. Run `npm run verify:repo` for the repository-local integrity checks.
+5. Inspect [`docs/schema-family-reference.md`](docs/schema-family-reference.md) to choose the right schema family and abstraction level.
+6. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
+7. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
+8. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
+9. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
+10. Inspect [`PUBLIC_EXAMPLE_COVERAGE.json`](PUBLIC_EXAMPLE_COVERAGE.json) if you want the bounded map from examples to covered routes, law surfaces, and negative paths.
+11. Inspect [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) if you want the bounded model for issue intake, review rules, and release posture.
+12. Inspect [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) if you want the bounded model for additive, deprecated, and breaking public changes.
+13. Inspect [`PUBLIC_OWNERSHIP_MAP.json`](PUBLIC_OWNERSHIP_MAP.json) if you want the bounded map of which artifact families are maintained here and which stronger surfaces outrank them.
+14. Inspect [`PUBLIC_DEPENDENCY_GRAPH.json`](PUBLIC_DEPENDENCY_GRAPH.json) if you want the bounded map of which public artifacts depend on which stronger surfaces and in what order they are easiest to read.
+15. Inspect [`PUBLIC_ASSURANCE_CASE.json`](PUBLIC_ASSURANCE_CASE.json) if you want the bounded public claims, strongest evidence, and explicit non-claims in one reviewer-facing surface.
+16. Inspect [`PUBLIC_UPDATE_COHERENCE_MAP.json`](PUBLIC_UPDATE_COHERENCE_MAP.json) if you want the bounded sync groups that must move together when release, reviewer, or contract surfaces change.
+17. Inspect [`PUBLIC_LIMITATIONS_REGISTER.json`](PUBLIC_LIMITATIONS_REGISTER.json) if you want the bounded map of deferred domains, non-promises, and public review limits.
+18. Inspect [`PUBLIC_EVIDENCE_TIMELINE.json`](PUBLIC_EVIDENCE_TIMELINE.json) if you want the bounded map of how this public surface hardened over time.
+19. Inspect [`PUBLIC_REVIEW_SCORECARD.json`](PUBLIC_REVIEW_SCORECARD.json) if you want the bounded reviewer-grade checklist for public repository maturity.
+20. Inspect [`PUBLIC_VERIFICATION_MATRIX.json`](PUBLIC_VERIFICATION_MATRIX.json) if you want the bounded map of which verification families protect which public surfaces.
+21. Inspect [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) if you want the bounded role-specific entry paths for reviewers, integrators, contributors, tool-builders, and maintainers.
+22. Inspect [`PUBLIC_EVIDENCE_STRENGTH_MAP.json`](PUBLIC_EVIDENCE_STRENGTH_MAP.json) if you want the bounded map of which public artifacts are strongest, secondary, or illustrative.
+23. Inspect [`PUBLIC_ADOPTION_READINESS.json`](PUBLIC_ADOPTION_READINESS.json) if you want the bounded map of which audience paths are ready today, which prerequisites apply, and which hosted-runtime expectations stay deferred.
+24. Inspect [`PUBLIC_FRESHNESS_MODEL.json`](PUBLIC_FRESHNESS_MODEL.json) if you want the bounded map of which public summary layers go stale under which triggers and how freshness is kept tied to release evidence.
+25. Inspect [`PUBLIC_ECOSYSTEM_VALUE_MAP.json`](PUBLIC_ECOSYSTEM_VALUE_MAP.json) if you want the bounded map of why this public surface is concretely useful to reviewers, integrators, tool-builders, contributors, and external OSS-support programs.
+26. Inspect [`PUBLIC_DECISION_LOG.json`](PUBLIC_DECISION_LOG.json) if you want the bounded map of the major public decisions and the rationale behind this repository's projection, trust posture, and release discipline.
+27. Inspect [`PUBLIC_EVIDENCE_GAPS_REGISTER.json`](PUBLIC_EVIDENCE_GAPS_REGISTER.json) if you want the bounded map of which high-signal public evidence still remains intentionally incomplete and where review confidence must stay bounded.
+28. Inspect [`PUBLIC_PROGRAM_FIT_MAP.json`](PUBLIC_PROGRAM_FIT_MAP.json) if you want the bounded map of why this public surface is already reviewer/program-credible and where that fit is still intentionally bounded.
+29. Inspect [`PUBLIC_PUBLICATION_READINESS.json`](PUBLIC_PUBLICATION_READINESS.json) if you want the bounded map of why this repo remains coherent as a published GitHub surface and which post-publication signals remain intentionally deferred.
+30. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+31. Review the raw capsule sources in [`capsules/`](capsules/).
+32. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

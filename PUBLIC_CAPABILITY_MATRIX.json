@@ -17,7 +17,9 @@
       "supporting_surfaces": [
         "docs/overview.md",
         "docs/schema-reference.md",
-        "schemas/capsule-schema.json"
+        "schemas/capsule-schema.json",
+        "docs/schema-family-reference.md",
+        "schemas/README.md"
       ],
       "verify_commands": [
         "npm run check:docs",
@@ -90,7 +92,8 @@
         "examples/client/ts-build-validate-request.ts",
         "examples/client/zod-parse-validate-response.ts",
         "examples/api/validate-request.single.json",
-        "examples/api/validate-response.pass.json"
+        "examples/api/validate-response.pass.json",
+        "docs/schema-family-reference.md"
       ],
       "verify_commands": [
         "npm run check:api-examples",
@@ -117,7 +120,8 @@
         "examples/client/ts-build-validate-request.ts",
         "examples/client/zod-parse-validate-response.ts",
         "docs/schema-reference.md",
-        "docs/client-recipes.md"
+        "docs/client-recipes.md",
+        "docs/schema-family-reference.md"
       ],
       "verify_commands": [
         "npm run check:type-projections",

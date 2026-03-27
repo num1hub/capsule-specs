@@ -48,7 +48,8 @@
       "starting_points": [
         "QUICKSTART.md",
         "docs/integration-guide.md",
-        "docs/api-envelopes.md"
+        "docs/api-envelopes.md",
+        "docs/schema-family-reference.md"
       ],
       "strongest_surfaces": [
         "schemas/validator-api-envelopes.schema.json",
@@ -113,6 +114,7 @@
       "summary": "Use this path when generating tooling from public schemas, OpenAPI, and machine-readable contract summaries.",
       "starting_points": [
         "QUICKSTART.md",
+        "docs/schema-family-reference.md",
         "docs/schema-reference.md",
         "docs/integration-guide.md"
       ],
@@ -122,7 +124,8 @@
         "openapi/validate.openapi.json",
         "PUBLIC_CONTRACT_CATALOG.json",
         "PUBLIC_CAPABILITY_MATRIX.json",
-        "PUBLIC_ECOSYSTEM_VALUE_MAP.json"
+        "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
+        "schemas/README.md"
       ],
       "verify_commands": [
         "npm run check:audience-paths",

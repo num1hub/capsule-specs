@@ -19,7 +19,9 @@
       "supporting_surfaces": [
         "docs/schema-reference.md",
         "docs/overview.md",
-        "PUBLIC_CONTRACT_CATALOG.json"
+        "PUBLIC_CONTRACT_CATALOG.json",
+        "docs/schema-family-reference.md",
+        "schemas/README.md"
       ],
       "verify_commands": [
         "npm run check:catalog",
@@ -45,7 +47,8 @@
         "docs/integration-guide.md",
         "examples/api/validate-request.single.json",
         "examples/api/validate-response.pass.json",
-        "PUBLIC_EXAMPLE_COVERAGE.json"
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "docs/schema-family-reference.md"
       ],
       "verify_commands": [
         "npm run check:api-examples",

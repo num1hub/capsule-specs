@@ -16,7 +16,9 @@
         "docs/5-element-law.md",
         "docs/16-gates.md",
         "docs/relation-types.md",
-        "docs/schema-reference.md"
+        "docs/schema-reference.md",
+        "docs/schema-family-reference.md",
+        "schemas/README.md"
       ],
       "illustrative_surfaces": [
         "docs/overview.md",
@@ -48,7 +50,8 @@
       "secondary_surfaces": [
         "docs/api-envelopes.md",
         "docs/route-reference.md",
-        "docs/integration-guide.md"
+        "docs/integration-guide.md",
+        "docs/schema-family-reference.md"
       ],
       "illustrative_surfaces": [
         "examples/api/validate-request.single.json",

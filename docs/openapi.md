@@ -31,7 +31,8 @@ The OpenAPI document is a projection artifact from the live validator surface. T
 
 ## Recommended reading order for integrators
 
-1. [`schema-reference.md`](schema-reference.md)
-2. [`api-envelopes.md`](api-envelopes.md)
-3. [`integration-guide.md`](integration-guide.md)
-4. [`compatibility.md`](compatibility.md)
+1. [`schema-family-reference.md`](schema-family-reference.md)
+2. [`schema-reference.md`](schema-reference.md)
+3. [`api-envelopes.md`](api-envelopes.md)
+4. [`integration-guide.md`](integration-guide.md)
+5. [`compatibility.md`](compatibility.md)

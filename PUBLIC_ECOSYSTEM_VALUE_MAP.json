@@ -20,7 +20,9 @@
       "supporting_surfaces": [
         "docs/schema-reference.md",
         "docs/public-contract-index.md",
-        "PUBLIC_CAPABILITY_MATRIX.json"
+        "PUBLIC_CAPABILITY_MATRIX.json",
+        "docs/schema-family-reference.md",
+        "schemas/README.md"
       ],
       "verify_commands": [
         "npm run check:catalog",
@@ -81,7 +83,8 @@
       "supporting_surfaces": [
         "docs/api-envelopes.md",
         "PUBLIC_FAILURE_MODEL.json",
-        "PUBLIC_ADOPTION_READINESS.json"
+        "PUBLIC_ADOPTION_READINESS.json",
+        "docs/schema-family-reference.md"
       ],
       "verify_commands": [
         "npm run check:api-schemas",
