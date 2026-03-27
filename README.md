@@ -2,6 +2,9 @@
 
 [![Verify Public Surface](https://github.com/num1hub/capsule-specs/actions/workflows/audit-public-surface.yml/badge.svg)](https://github.com/num1hub/capsule-specs/actions/workflows/audit-public-surface.yml)
 [Release v0.1.0](https://github.com/num1hub/capsule-specs/releases/tag/v0.1.0)
+[License Apache-2.0](LICENSE)
+[Open Issues](https://github.com/num1hub/capsule-specs/issues)
+[CITATION.cff](CITATION.cff)
 
 `N1Hub Capsule Specs` is the public reference surface for the capsule-first foundations behind N1Hub and CapsuleOS.
 
@@ -96,9 +99,12 @@ This repository is that home.
 The repository is structured to look like a serious OSS-maintained surface rather than a one-off export:
 
 - community files for contributions, conduct, support, and security
+- citation metadata in [`CITATION.cff`](CITATION.cff) for external reuse and referencing
 - issue and pull-request templates
 - custom GitHub label taxonomy aligned to contract, schema, validator, docs, governance, and integration/release work
 - milestone-backed roadmap waves for active public work in [`ROADMAP.md`](ROADMAP.md)
+- GitHub-native update hygiene in [`.github/dependabot.yml`](.github/dependabot.yml)
+- GitHub release-note categorization in [`.github/release.yml`](.github/release.yml)
 - explicit community-health guidance and intake verification
 - machine-readable provenance in [`SOURCE_MANIFEST.json`](SOURCE_MANIFEST.json)
 - machine-readable contract discovery in [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json)

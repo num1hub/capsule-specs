@@ -32,6 +32,7 @@ The GitHub issue surface uses a small bounded taxonomy rather than free-form lab
 - `kind:*` labels for integration-facing or release-facing work
 
 Active roadmap work is currently grouped into the `v0.2.0 Better Integrator Surfaces` and `v0.3.0 Projection-Friendly References` milestones so contributors can see which public wave is open now.
+The repository also keeps GitHub-native hygiene explicit through `CITATION.cff`, `.github/dependabot.yml`, and `.github/release.yml` rather than leaving reuse, update posture, and release-note grouping implicit.
 
 The bounded public maintainer posture for intake, review, and release work is summarized in [`../PUBLIC_MAINTENANCE_MODEL.json`](../PUBLIC_MAINTENANCE_MODEL.json).
 The bounded contributor and maintainer adoption posture is summarized in [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json).

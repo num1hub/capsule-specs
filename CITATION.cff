@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use N1Hub Capsule Specs as a reference surface, please cite it using this metadata."
+title: "N1Hub Capsule Specs"
+type: software
+authors:
+  - given-names: "Egor"
+    family-names: "N1"
+    alias: "egor-n1"
+repository-code: "https://github.com/num1hub/capsule-specs"
+url: "https://github.com/num1hub/capsule-specs"
+license: "Apache-2.0"
+version: "0.1.0"
+date-released: "2026-03-27"
+abstract: "Public specs, schemas, examples, and validator-facing contracts for N1Hub and CapsuleOS."
+keywords:
+  - n1hub
+  - capsuleos
+  - capsule-specs
+  - schema
+  - validator
+  - openapi

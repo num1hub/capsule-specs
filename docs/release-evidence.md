@@ -10,6 +10,12 @@ This repository keeps release evidence in both human-readable and machine-readab
   Human-readable inclusion, exclusion, validation, and residual-risk summary.
 - [`../VERSIONING.md`](../VERSIONING.md)
   Stability and change-class policy.
+- [`../CITATION.cff`](../CITATION.cff)
+  Reuse and citation metadata for external reference.
+- [`../.github/release.yml`](../.github/release.yml)
+  GitHub-native release-note categorization aligned to the repository label taxonomy.
+- [`../.github/dependabot.yml`](../.github/dependabot.yml)
+  GitHub-native automated update posture for Actions and package metadata.
 
 ## Machine-readable surfaces
 
@@ -81,6 +87,8 @@ This repository keeps release evidence in both human-readable and machine-readab
 ## Why this split exists
 
 The Markdown review surfaces are optimized for people. The JSON surfaces are optimized for consistency checks, future generators, and external programs that want structured evidence instead of scraped prose.
+
+The citation file, release-note config, and Dependabot config do not replace release evidence, but they make the public GitHub surface more usable as a maintained long-lived repository instead of a one-time export.
 
 The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable.
 

@@ -3,6 +3,20 @@
   "generated_at": "2026-03-26",
   "entries": [
     {
+      "id": "community.dependabot-config",
+      "path": ".github/dependabot.yml",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "maintainers",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:community-health",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "community.issue-template.bug-report",
       "path": ".github/ISSUE_TEMPLATE/bug_report.md",
       "kind": "support-artifact",
@@ -84,6 +98,37 @@
       ],
       "verify_commands": [
         "npm run check:community-health",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "community.release-config",
+      "path": ".github/release.yml",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "maintainers",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:release",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "community.citation",
+      "path": "CITATION.cff",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
         "npm run check:catalog"
       ]
     },
@@ -356,6 +401,21 @@
       ]
     },
     {
+      "id": "governance.evidence-gaps-doc",
+      "path": "docs/evidence-gaps.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.evidence-strength-doc",
       "path": "docs/evidence-strength.md",
       "kind": "governance",
@@ -510,6 +570,21 @@
       ]
     },
     {
+      "id": "governance.program-fit-doc",
+      "path": "docs/program-fit.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:program-fit",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.projection-doctrine",
       "path": "docs/projection-doctrine.md",
       "kind": "governance",
@@ -541,6 +616,21 @@
       ]
     },
     {
+      "id": "governance.publication-readiness-doc",
+      "path": "docs/publication-readiness.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:publication-readiness",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "law.relation-types",
       "path": "docs/relation-types.md",
       "kind": "law-doc",
@@ -566,6 +656,21 @@
       "verify_commands": [
         "npm run check:docs",
         "npm run check:release",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.repository-identity-doc",
+      "path": "docs/repository-identity.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:repository-identity",
         "npm run check:catalog"
       ]
     },
@@ -1224,6 +1329,22 @@
       ]
     },
     {
+      "id": "governance.evidence-gaps-register",
+      "path": "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.evidence-strength-map",
       "path": "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
       "kind": "provenance",
@@ -1365,6 +1486,22 @@
       ]
     },
     {
+      "id": "governance.program-fit-map",
+      "path": "PUBLIC_PROGRAM_FIT_MAP.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:program-fit",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.project-profile",
       "path": "PUBLIC_PROJECT_PROFILE.json",
       "kind": "release-metadata",
@@ -1376,6 +1513,22 @@
       ],
       "verify_commands": [
         "npm run check:project-profile",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.publication-readiness-map",
+      "path": "PUBLIC_PUBLICATION_READINESS.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "reviewers",
+        "contributors",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:publication-readiness",
         "npm run check:catalog",
         "npm run check:surface"
       ]
@@ -1408,6 +1561,23 @@
       "verify_commands": [
         "npm run check:docs",
         "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.repository-identity-map",
+      "path": "PUBLIC_REPOSITORY_IDENTITY.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:repository-identity",
+        "npm run check:catalog",
+        "npm run check:surface"
       ]
     },
     {
@@ -1693,6 +1863,22 @@
       ]
     },
     {
+      "id": "governance.evidence-gaps-schema",
+      "path": "schemas/public-evidence-gaps-register.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "schema.evidence-strength-map",
       "path": "schemas/public-evidence-strength-map.schema.json",
       "kind": "schema",
@@ -1822,6 +2008,22 @@
       ]
     },
     {
+      "id": "governance.program-fit-schema",
+      "path": "schemas/public-program-fit-map.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:program-fit",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "schema.project-profile",
       "path": "schemas/public-project-profile.schema.json",
       "kind": "schema",
@@ -1837,6 +2039,22 @@
       ]
     },
     {
+      "id": "governance.publication-readiness-schema",
+      "path": "schemas/public-publication-readiness.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:publication-readiness",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "schema.release-metadata",
       "path": "schemas/public-release-metadata.schema.json",
       "kind": "schema",
@@ -1847,6 +2065,21 @@
       ],
       "verify_commands": [
         "npm run check:release",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.repository-identity-schema",
+      "path": "schemas/public-repository-identity.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:repository-identity",
         "npm run check:catalog"
       ]
     },
@@ -2116,6 +2349,21 @@
       ]
     },
     {
+      "id": "governance.evidence-gaps-check",
+      "path": "scripts/check-evidence-gaps.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:evidence-gaps",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.evidence-strength-check",
       "path": "scripts/check-evidence-strength.js",
       "kind": "support-artifact",
@@ -2247,6 +2495,21 @@
       ]
     },
     {
+      "id": "governance.program-fit-check",
+      "path": "scripts/check-program-fit.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:program-fit",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.project-profile-check",
       "path": "scripts/check-project-profile.js",
       "kind": "verification-doc",
@@ -2259,6 +2522,36 @@
         "npm run check:project-profile",
         "npm run check:catalog",
         "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.publication-readiness-check",
+      "path": "scripts/check-publication-readiness.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:publication-readiness",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.repository-identity-check",
+      "path": "scripts/check-repository-identity.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:repository-identity",
+        "npm run check:catalog"
       ]
     },
     {
@@ -2343,254 +2636,6 @@
       ],
       "verify_commands": [
         "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.evidence-gaps-doc",
-      "path": "docs/evidence-gaps.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:evidence-gaps",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.evidence-gaps-register",
-      "path": "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
-      "kind": "provenance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:evidence-gaps",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.evidence-gaps-schema",
-      "path": "schemas/public-evidence-gaps-register.schema.json",
-      "kind": "schema",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:evidence-gaps",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.evidence-gaps-check",
-      "path": "scripts/check-evidence-gaps.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:evidence-gaps",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.program-fit-doc",
-      "path": "docs/program-fit.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "reviewers",
-        "contributors",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:program-fit",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.program-fit-map",
-      "path": "PUBLIC_PROGRAM_FIT_MAP.json",
-      "kind": "provenance",
-      "stability": "maintained",
-      "audiences": [
-        "reviewers",
-        "contributors",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:program-fit",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.program-fit-schema",
-      "path": "schemas/public-program-fit-map.schema.json",
-      "kind": "schema",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:program-fit",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.program-fit-check",
-      "path": "scripts/check-program-fit.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:program-fit",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.publication-readiness-doc",
-      "path": "docs/publication-readiness.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "reviewers",
-        "contributors",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:publication-readiness",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.publication-readiness-map",
-      "path": "PUBLIC_PUBLICATION_READINESS.json",
-      "kind": "provenance",
-      "stability": "maintained",
-      "audiences": [
-        "reviewers",
-        "contributors",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:publication-readiness",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.publication-readiness-schema",
-      "path": "schemas/public-publication-readiness.schema.json",
-      "kind": "schema",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:publication-readiness",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.publication-readiness-check",
-      "path": "scripts/check-publication-readiness.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:publication-readiness",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.repository-identity-doc",
-      "path": "docs/repository-identity.md",
-      "kind": "governance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:repository-identity",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.repository-identity-map",
-      "path": "PUBLIC_REPOSITORY_IDENTITY.json",
-      "kind": "provenance",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "maintainers",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:repository-identity",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "governance.repository-identity-schema",
-      "path": "schemas/public-repository-identity.schema.json",
-      "kind": "schema",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:repository-identity",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "governance.repository-identity-check",
-      "path": "scripts/check-repository-identity.js",
-      "kind": "support-artifact",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "reviewers",
-        "maintainers"
-      ],
-      "verify_commands": [
-        "npm run check:repository-identity",
         "npm run check:catalog"
       ]
     }

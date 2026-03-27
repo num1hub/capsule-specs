@@ -1,0 +1,33 @@
+changelog:
+  categories:
+    - title: "Schemas and Contracts"
+      labels:
+        - "contract"
+        - "area:schemas"
+    - title: "Validator and API Surface"
+      labels:
+        - "area:validator"
+        - "kind:integration"
+    - title: "Examples and Recipes"
+      labels:
+        - "area:examples"
+    - title: "Documentation and Guides"
+      labels:
+        - "documentation"
+        - "area:docs"
+    - title: "Governance and Review Surface"
+      labels:
+        - "area:governance"
+    - title: "GitHub Surface and Tooling"
+      labels:
+        - "area:github"
+    - title: "Release Posture"
+      labels:
+        - "kind:release"
+  exclude:
+    labels:
+      - "duplicate"
+      - "invalid"
+      - "question"
+      - "wontfix"
+  change-template: "- $TITLE (#$NUMBER)"

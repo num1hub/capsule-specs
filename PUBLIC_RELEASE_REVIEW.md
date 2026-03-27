@@ -5,7 +5,8 @@
 - community health files: `README`, `LICENSE`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `SUPPORT`
 - community intake surfaces: `docs/community-health.md`, issue templates, and the pull-request template
 - root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
-- repo ergonomics and legal files: `.editorconfig`, `package.json`, `RELEASING`, `NOTICE`
+- repo ergonomics and legal files: `.editorconfig`, `package.json`, `RELEASING`, `NOTICE`, `CITATION.cff`
+- GitHub-native maintenance files: `.github/dependabot.yml` and `.github/release.yml`
 - public docs for the capsule law, validator, relation types, schema, API envelopes, integration guidance, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
 - projection doctrine, domain boundaries, generator-readiness guidance, and a machine-readable boundary map
 - portability docs, archive-bundle schema and sample, and a machine-readable portability profile
@@ -107,7 +108,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `218` files / `218` manifest entries
+- manifest coverage: `225` files / `225` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

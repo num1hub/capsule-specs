@@ -18,8 +18,11 @@ This repository is small, but releases should still be explicit and reviewable.
 12. Recheck [`examples/client/`](examples/client/) and [`docs/client-recipes.md`](docs/client-recipes.md) when route or auth assumptions changed.
 13. Review [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) when public maintainer workflow, change classes, or expected evidence changed.
 14. Review [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) when additive, deprecated, or breaking public change posture changed.
-15. Create a release tag and short release notes.
+15. Review [`CITATION.cff`](CITATION.cff) when the canonical public title, version, or reuse posture changed.
+16. Review [`.github/release.yml`](.github/release.yml) when label taxonomy or release-note grouping changed.
+17. Create a release tag and short release notes.
 
 ## Release posture
 
 Prefer small releases that keep docs, schemas, examples, and provenance synchronized rather than occasional oversized dumps.
+Prefer GitHub release notes that follow the repository label taxonomy instead of ad hoc changelog fragments.
