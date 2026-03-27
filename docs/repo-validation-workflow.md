@@ -12,6 +12,7 @@ This is the right workflow for:
 - schema commentary and schema-family docs
 - example and API-payload refinements
 - public-safe TypeScript or Zod projection updates
+- package-export, build, or pack-surface updates for the published projection layer
 - community-health and GitHub-surface maintenance
 - release metadata, manifest, and contract-catalog updates
 
@@ -50,13 +51,17 @@ Examples:
 - `schemas/*.json`
 - `openapi/validate.openapi.json`
 - `projections/`
+- `tsconfig.build.json`
+- `package.json`
 - `docs/api-envelopes.md`
+- `docs/npm-consumption.md`
 
 Start with:
 
 ```bash
 npm run check:api-schemas
 npm run check:type-projections
+npm run check:package-surface
 npm run check:catalog
 npm run check:surface
 ```
@@ -127,6 +132,8 @@ Common co-movement rules:
   review `CONTRIBUTING.md`, `docs/community-health.md`, `docs/verification.md`, and `PUBLIC_MAINTENANCE_MODEL.json`
 - changed discovery path:
   review `README.md`, `ONBOARDING.md`, `docs/public-contract-index.md`, and any audience-path or capability summaries that point to the changed surface
+- changed package-export or pack-consumer path:
+  review `docs/type-projections.md`, `docs/npm-consumption.md`, `examples/client/README.md`, `PUBLIC_CAPABILITY_MATRIX.json`, and `PUBLIC_TRACEABILITY_MATRIX.json`
 
 ## Step 3: Re-run the narrow checks
 

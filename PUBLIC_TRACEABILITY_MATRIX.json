@@ -30,7 +30,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, and client recipes.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, client recipes, and a bounded package-consumer export path.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -48,13 +48,18 @@
         "examples/api/validate-request.single.json",
         "examples/api/validate-response.pass.json",
         "PUBLIC_EXAMPLE_COVERAGE.json",
-        "docs/schema-family-reference.md"
+        "docs/schema-family-reference.md",
+        "docs/npm-consumption.md",
+        "projections/index.ts",
+        "examples/client/cjs-package-capsule-summary.cjs",
+        "examples/client/cjs-package-validate-response.cjs"
       ],
       "verify_commands": [
         "npm run check:api-examples",
         "npm run check:api-schemas",
         "npm run check:client-recipes",
-        "npm run check:traceability"
+        "npm run check:traceability",
+        "npm run check:package-surface"
       ]
     },
     {

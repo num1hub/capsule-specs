@@ -169,15 +169,23 @@ const requiredIds = [
   'community.github-operations-doc',
   'community.github-operations-check',
   'docs.type-projections',
+  'docs.npm-consumption',
   'projection.readme',
+  'projection.root-index',
+  'projection.typescript-index',
   'projection.typescript-capsule',
   'projection.typescript-validator-api',
+  'projection.zod-index',
   'projection.zod-capsule',
   'projection.zod-validator-api',
+  'projection.build-config',
+  'projection.package-surface-check',
   'examples.client.ts-capsule-summary',
   'examples.client.zod-parse-capsule',
   'examples.client.ts-build-validate-request',
-  'examples.client.zod-parse-validate-response'
+  'examples.client.zod-parse-validate-response',
+  'examples.client.cjs-package-capsule-summary',
+  'examples.client.cjs-package-validate-response'
 ];
 
 for (const requiredId of requiredIds) {

@@ -8,10 +8,16 @@ This directory publishes public-safe projection artifacts for downstream TypeScr
   Narrow TypeScript interfaces and literal unions for the capsule outer shape.
 - `typescript/validator-api.ts`
   Public-safe TypeScript interfaces for validator request and response envelopes.
+- `typescript/index.ts`
+  Bundle entrypoint that re-exports the public-safe TypeScript projection surface.
 - `zod/capsule.ts`
   Narrow Zod projections for the same outer capsule contract.
 - `zod/validator-api.ts`
   Public-safe Zod projections for validator request and response envelopes.
+- `zod/index.ts`
+  Bundle entrypoint that re-exports the public-safe Zod projection surface.
+- `index.ts`
+  Root namespace export that groups the TypeScript and Zod bundles behind one package entrypoint.
 - `../examples/client/ts-capsule-summary.ts`
   Minimal source-level consumer recipe using the published TypeScript projection.
 - `../examples/client/zod-parse-capsule.ts`
@@ -30,3 +36,4 @@ This directory publishes public-safe projection artifacts for downstream TypeScr
 ## Verification
 
 Run `npm run check:type-projections` to typecheck the projection layer.
+Run `npm run check:package-surface` to build the projection layer, validate package exports, and dry-run the pack surface.

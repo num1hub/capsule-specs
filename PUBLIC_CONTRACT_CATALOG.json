@@ -351,23 +351,6 @@
       ]
     },
     {
-      "id": "governance.repo-validation-workflow-doc",
-      "path": "docs/repo-validation-workflow.md",
-      "kind": "verification-doc",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "maintainers",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:community-health",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
       "id": "governance.decision-log-doc",
       "path": "docs/decision-log.md",
       "kind": "governance",
@@ -617,6 +600,22 @@
       ]
     },
     {
+      "id": "docs.npm-consumption",
+      "path": "docs/npm-consumption.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:package-surface",
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.portability-doc",
       "path": "docs/portability.md",
       "kind": "governance",
@@ -723,6 +722,23 @@
       ]
     },
     {
+      "id": "governance.repo-validation-workflow-doc",
+      "path": "docs/repo-validation-workflow.md",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "maintainers",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:community-health",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.repository-identity-doc",
       "path": "docs/repository-identity.md",
       "kind": "governance",
@@ -786,6 +802,39 @@
       ]
     },
     {
+      "id": "schema.family-reference-doc",
+      "path": "docs/schema-family-reference.md",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.reference-doc",
+      "path": "docs/schema-reference.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.traceability-doc",
       "path": "docs/traceability.md",
       "kind": "verification-doc",
@@ -814,6 +863,23 @@
       "verify_commands": [
         "npm run check:docs",
         "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "docs.type-projections",
+      "path": "docs/type-projections.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:docs",
+        "npm run check:catalog",
+        "npm run check:package-surface"
       ]
     },
     {
@@ -1061,6 +1127,36 @@
       ]
     },
     {
+      "id": "examples.client.cjs-package-capsule-summary",
+      "path": "examples/client/cjs-package-capsule-summary.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:package-surface",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.cjs-package-validate-response",
+      "path": "examples/client/cjs-package-validate-response.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:package-surface",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.curl-batch",
       "path": "examples/client/curl-validate-batch.sh",
       "kind": "client-recipe",
@@ -1146,6 +1242,70 @@
       ]
     },
     {
+      "id": "examples.client.ts-build-validate-request",
+      "path": "examples/client/ts-build-validate-request.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "examples.client.ts-capsule-summary",
+      "path": "examples/client/ts-capsule-summary.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "examples.client.zod-parse-capsule",
+      "path": "examples/client/zod-parse-capsule.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "examples.client.zod-parse-validate-response",
+      "path": "examples/client/zod-parse-validate-response.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
       "id": "examples.known-ids",
       "path": "examples/example-known-ids.json",
       "kind": "support-artifact",
@@ -1227,6 +1387,127 @@
       "verify_commands": [
         "npm run audit:public-surface",
         "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "projection.root-index",
+      "path": "projections/index.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "projection.readme",
+      "path": "projections/README.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:docs",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "projection.typescript-capsule",
+      "path": "projections/typescript/capsule.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "projection.typescript-index",
+      "path": "projections/typescript/index.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "projection.typescript-validator-api",
+      "path": "projections/typescript/validator-api.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "projection.zod-capsule",
+      "path": "projections/zod/capsule.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "projection.zod-index",
+      "path": "projections/zod/index.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "projection.zod-validator-api",
+      "path": "projections/zod/validator-api.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog",
+        "npm run check:package-surface"
       ]
     },
     {
@@ -1763,55 +2044,6 @@
       ]
     },
     {
-      "id": "schema.reference-doc",
-      "path": "docs/schema-reference.md",
-      "kind": "integration-doc",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "schema.family-reference-doc",
-      "path": "docs/schema-family-reference.md",
-      "kind": "index",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "tool-builders",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:catalog",
-        "npm run check:surface"
-      ]
-    },
-    {
-      "id": "schema.directory-guide",
-      "path": "schemas/README.md",
-      "kind": "index",
-      "stability": "maintained",
-      "audiences": [
-        "contributors",
-        "integrators",
-        "tool-builders",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
       "id": "schema.adoption-readiness",
       "path": "schemas/public-adoption-readiness.schema.json",
       "kind": "schema",
@@ -2252,6 +2484,22 @@
       ]
     },
     {
+      "id": "schema.directory-guide",
+      "path": "schemas/README.md",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "schema.validator-api-envelopes",
       "path": "schemas/validator-api-envelopes.schema.json",
       "kind": "schema",
@@ -2605,6 +2853,20 @@
       ]
     },
     {
+      "id": "projection.package-surface-check",
+      "path": "scripts/check-package-surface.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "maintainers",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.portability-check",
       "path": "scripts/check-portability-profile.js",
       "kind": "verification-doc",
@@ -2751,6 +3013,20 @@
       ]
     },
     {
+      "id": "projection.build-config",
+      "path": "tsconfig.build.json",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "maintainers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "repo.versioning",
       "path": "VERSIONING.md",
       "kind": "governance",
@@ -2762,153 +3038,6 @@
       ],
       "verify_commands": [
         "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "docs.type-projections",
-      "path": "docs/type-projections.md",
-      "kind": "integration-doc",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:type-projections",
-        "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "projection.readme",
-      "path": "projections/README.md",
-      "kind": "integration-doc",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:type-projections",
-        "npm run check:docs",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "projection.typescript-capsule",
-      "path": "projections/typescript/capsule.ts",
-      "kind": "projection",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:type-projections",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "projection.zod-capsule",
-      "path": "projections/zod/capsule.ts",
-      "kind": "projection",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:type-projections",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "examples.client.ts-capsule-summary",
-      "path": "examples/client/ts-capsule-summary.ts",
-      "kind": "client-recipe",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:type-projections",
-        "npm run check:client-recipes",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "examples.client.zod-parse-capsule",
-      "path": "examples/client/zod-parse-capsule.ts",
-      "kind": "client-recipe",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:type-projections",
-        "npm run check:client-recipes",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "projection.typescript-validator-api",
-      "path": "projections/typescript/validator-api.ts",
-      "kind": "projection",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:type-projections",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "projection.zod-validator-api",
-      "path": "projections/zod/validator-api.ts",
-      "kind": "projection",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:type-projections",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "examples.client.ts-build-validate-request",
-      "path": "examples/client/ts-build-validate-request.ts",
-      "kind": "client-recipe",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:type-projections",
-        "npm run check:client-recipes",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "examples.client.zod-parse-validate-response",
-      "path": "examples/client/zod-parse-validate-response.ts",
-      "kind": "client-recipe",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:type-projections",
-        "npm run check:client-recipes",
         "npm run check:catalog"
       ]
     }

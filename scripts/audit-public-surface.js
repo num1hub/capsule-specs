@@ -9,7 +9,7 @@ const manifestPath = path.join(repoRoot, 'SOURCE_MANIFEST.json');
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 const manifestEntries = new Set(Object.keys(manifest));
 
-const ignoredPrefixes = ['.git/', 'node_modules/'];
+const ignoredPrefixes = ['.git/', 'node_modules/', 'dist/'];
 const ignoredFiles = new Set(['.codexignore']);
 
 function shouldIgnore(relativePath) {

@@ -89,18 +89,34 @@ This repository keeps release evidence in both human-readable and machine-readab
   JSON Schema bundle for the public validator request and response envelope layer.
 - [`type-projections.md`](type-projections.md)
   Human-readable guide to the public-safe TypeScript and Zod projection layer.
+- [`npm-consumption.md`](npm-consumption.md)
+  Human-readable guide to the package-export and pack-ready consumer layer.
 - [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
   Public-safe TypeScript projection for the capsule outer contract.
 - [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
   Public-safe TypeScript projection for validator request and response envelopes.
+- [`../projections/typescript/index.ts`](../projections/typescript/index.ts)
+  Bundle entrypoint for the built TypeScript export surface.
 - [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
   Public-safe Zod projection for the same public outer contract.
 - [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
   Public-safe Zod projection for validator request and response envelopes.
+- [`../projections/zod/index.ts`](../projections/zod/index.ts)
+  Bundle entrypoint for the built Zod export surface.
+- [`../projections/index.ts`](../projections/index.ts)
+  Root namespace entrypoint for the built package-consumer layer.
+- [`../tsconfig.build.json`](../tsconfig.build.json)
+  Repo-owned build configuration for the consumable projection layer.
+- [`../scripts/check-package-surface.js`](../scripts/check-package-surface.js)
+  Repo-local verification of build output, package exports, and pack surface.
 - [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator request envelope.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
   Minimal source-level Zod recipe for parsing a validator response envelope.
+- [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
+  Minimal package-consumer recipe for the built capsule projection exports.
+- [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
+  Minimal package-consumer recipe for the built validator API exports.
 
 ## Why this split exists
 
@@ -115,6 +131,8 @@ The API envelope schema and its dedicated verification script strengthen that cl
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
 The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer that stays subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
+
+The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, and dry-run packable instead of leaving it only as raw source files inside the repository tree.
 
 The community-health doc and its dedicated verification script strengthen the repository's OSS maintainership surface by keeping contributor intake explicit and reviewable.
 
@@ -200,10 +218,18 @@ When the public surface changes, these files should move together:
 - `PUBLIC_BOUNDARY_MAP.json`
 - `PUBLIC_PORTABILITY_PROFILE.json`
 - `docs/type-projections.md`
+- `docs/npm-consumption.md`
+- `tsconfig.build.json`
+- `scripts/check-package-surface.js`
+- `projections/index.ts`
+- `projections/typescript/index.ts`
 - `projections/typescript/capsule.ts`
 - `projections/typescript/validator-api.ts`
+- `projections/zod/index.ts`
 - `projections/zod/capsule.ts`
 - `projections/zod/validator-api.ts`
+- `examples/client/cjs-package-capsule-summary.cjs`
+- `examples/client/cjs-package-validate-response.cjs`
 - `examples/client/ts-build-validate-request.ts`
 - `examples/client/zod-parse-validate-response.ts`
 

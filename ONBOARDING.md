@@ -25,6 +25,7 @@ Welcome to the public N1Hub specification surface.
 - Read [`docs/integration-guide.md`](docs/integration-guide.md) and [`VERSIONING.md`](VERSIONING.md) before treating the repo as an integration dependency.
 - Read [`docs/route-reference.md`](docs/route-reference.md) for the route-by-route validator map.
 - Read [`docs/client-recipes.md`](docs/client-recipes.md) and inspect [`examples/client/`](examples/client/) for copyable consumer snippets.
+- Read [`docs/npm-consumption.md`](docs/npm-consumption.md) if you want the buildable package-export path rather than only file-relative source imports.
 - Read [`docs/trust-model.md`](docs/trust-model.md) before treating prose examples as stronger than schemas or the live validator.
 - Read [`docs/contract-catalog.md`](docs/contract-catalog.md) and inspect [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json) if you need a machine-readable public surface map.
 - Read [`docs/release-evidence.md`](docs/release-evidence.md) and inspect [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) if you need structured release evidence.
@@ -47,3 +48,4 @@ Welcome to the public N1Hub specification surface.
 - Read [`docs/verification.md`](docs/verification.md) if you need to interpret a failing repo-local check.
 - Keep [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) and [`NOTICE`](NOTICE) aligned with release-facing changes.
 - Keep client recipes aligned with API example payloads and route docs when HTTP surfaces change.
+- Keep `docs/npm-consumption.md`, `package.json`, and `tsconfig.build.json` aligned with the maintained projection layer when the package-export surface changes.

@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const repoRoot = path.resolve(__dirname, '..');
-const ignoredPrefixes = ['.git/', 'node_modules/'];
+const ignoredPrefixes = ['.git/', 'node_modules/', 'dist/'];
 const ignoredFiles = new Set(['.codexignore']);
 
 function shouldIgnore(relativePath) {
@@ -56,7 +56,7 @@ const apiExampleFiles = fs.readdirSync(path.join(repoRoot, 'examples', 'api')).f
 const clientRecipeFiles = fs.readdirSync(path.join(repoRoot, 'examples', 'client')).filter((name) => !name.endsWith('.md')).length;
 const workflowFiles = fs.readdirSync(path.join(repoRoot, '.github', 'workflows')).filter((name) => name.endsWith('.yml')).length;
 const issueTemplates = fs.readdirSync(path.join(repoRoot, '.github', 'ISSUE_TEMPLATE')).filter((name) => name.endsWith('.md')).length;
-const repoLocalCheckCount = Object.keys(pkg.scripts || {}).filter((name) => name !== 'verify:repo').length;
+const repoLocalCheckCount = Object.keys(pkg.scripts || {}).filter((name) => name.startsWith('audit:') || name.startsWith('check:')).length;
 const upstreamValidatorCheckCount = (releaseMetadata.upstream_validator_checks || []).length;
 
 assert(profile.profile_version === pkg.version, 'PUBLIC_PROJECT_PROFILE.json profile_version must match package.json version');

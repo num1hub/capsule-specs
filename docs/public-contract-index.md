@@ -78,6 +78,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`compatibility.md`](compatibility.md)
 - [`integration-guide.md`](integration-guide.md)
 - [`client-recipes.md`](client-recipes.md)
+- [`npm-consumption.md`](npm-consumption.md)
 - [`trust-model.md`](trust-model.md)
 - [`type-projections.md`](type-projections.md)
 
@@ -132,8 +133,11 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../schemas/public-capability-matrix.schema.json`](../schemas/public-capability-matrix.schema.json)
 - [`../schemas/public-portability-profile.schema.json`](../schemas/public-portability-profile.schema.json)
 - [`../projections/README.md`](../projections/README.md)
+- [`../projections/index.ts`](../projections/index.ts)
+- [`../projections/typescript/index.ts`](../projections/typescript/index.ts)
 - [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
 - [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
+- [`../projections/zod/index.ts`](../projections/zod/index.ts)
 - [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
 - [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
 
@@ -143,6 +147,8 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../examples/README.md`](../examples/README.md)
 - [`../examples/api/README.md`](../examples/api/README.md)
 - [`../examples/client/README.md`](../examples/client/README.md)
+- [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
+- [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
 - [`../examples/archive/README.md`](../examples/archive/README.md)
 
 ## Provenance and governance

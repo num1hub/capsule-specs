@@ -41,6 +41,16 @@ Source-level consumer examples also live under [`../examples/client/`](../exampl
 
 These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema.
 
+## Package recipes
+
+If you want package-style consumption instead of file-relative source imports, also inspect:
+
+- [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
+- [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
+- [`npm-consumption.md`](npm-consumption.md)
+
+These recipes demonstrate the repo-owned package-export layer after `npm run build:projections`.
+
 ## Route mapping
 
 - `curl-validate-single.sh` and `node-validate-single.mjs`

@@ -5,7 +5,7 @@
   "value_families": [
     {
       "id": "contract-foundation-for-tool-builders",
-      "summary": "The repo publishes machine-readable schemas, OpenAPI, and contract catalogs that can be consumed directly by external tooling.",
+      "summary": "The repo publishes machine-readable schemas, OpenAPI, contract catalogs, and package-consumer projection exports that can be consumed directly by external tooling.",
       "beneficiaries": [
         "tool-builders",
         "integrators",
@@ -22,12 +22,16 @@
         "docs/public-contract-index.md",
         "PUBLIC_CAPABILITY_MATRIX.json",
         "docs/schema-family-reference.md",
-        "schemas/README.md"
+        "schemas/README.md",
+        "docs/type-projections.md",
+        "docs/npm-consumption.md",
+        "projections/index.ts"
       ],
       "verify_commands": [
         "npm run check:catalog",
         "npm run check:evidence-strength",
-        "npm run check:ecosystem-value"
+        "npm run check:ecosystem-value",
+        "npm run check:package-surface"
       ],
       "bounded_non_goals": [
         "does not claim to publish a complete SDK",

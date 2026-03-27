@@ -6,9 +6,9 @@
 - community intake surfaces: `docs/community-health.md`, `docs/repo-validation-workflow.md`, issue templates, and the pull-request template
 - repo-owned GitHub operations surfaces: `.github/labels.json`, `.github/milestones.json`, `docs/github-operations.md`, `.github/release.yml`, and `.github/dependabot.yml`
 - root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
-- repo ergonomics and legal files: `.editorconfig`, `package.json`, `RELEASING`, `NOTICE`, `CITATION.cff`
+- repo ergonomics and legal files: `.editorconfig`, `package.json`, `tsconfig.build.json`, `RELEASING`, `NOTICE`, `CITATION.cff`
 - GitHub-native maintenance files: `.github/dependabot.yml` and `.github/release.yml`
-- public docs for the capsule law, validator, relation types, schema-family selection, field-level schema reference, API envelopes, integration guidance, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
+- public docs for the capsule law, validator, relation types, schema-family selection, field-level schema reference, API envelopes, integration guidance, package consumption, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
 - projection doctrine, domain boundaries, generator-readiness guidance, and a machine-readable boundary map
 - portability docs, archive-bundle schema and sample, and a machine-readable portability profile
 - route reference and verification docs for navigating and auditing the public surface
@@ -41,7 +41,7 @@
 - machine-readable publication-readiness map in `PUBLIC_PUBLICATION_READINESS.json` plus a bounded publication-state and public-release safety guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
-- public-safe TypeScript and Zod projection files for capsule and validator API contracts plus source-level consumer recipe examples
+- public-safe TypeScript and Zod projection files for capsule and validator API contracts, bundle entrypoints, package-surface build config, package-surface verification, and both source-level and package-level consumer recipe examples
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
 - client recipes and trust-model docs for external consumers
@@ -78,6 +78,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-api-examples.js`: pass
 - `node scripts/check-api-schemas.js`: pass
 - `tsc --noEmit --pretty false`: pass
+- `node scripts/check-package-surface.js`: pass
 - `node scripts/check-example-coverage.js`: pass
 - `node scripts/check-boundary-map.js`: pass
 - `node scripts/check-client-recipes.js`: pass
@@ -113,7 +114,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `243` files / `243` manifest entries
+- manifest coverage: `251` files / `251` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -157,3 +158,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_PROGRAM_FIT_MAP.json` is a bounded reviewer/program-fit summary and must stay subordinate to stronger project-profile, evaluation, verification, ecosystem-value, evidence-gap, and release-evidence surfaces it references
 - `PUBLIC_PUBLICATION_READINESS.json` is a bounded publication-state and public-release-safety summary and must stay subordinate to stronger front-door, boundary, verification, evidence-gap, and release-evidence surfaces it references
 - `projections/typescript/capsule.ts`, `projections/typescript/validator-api.ts`, `projections/zod/capsule.ts`, `projections/zod/validator-api.ts`, and the source-level client recipe examples are public-safe convenience projections and must stay subordinate to the stronger JSON Schema, OpenAPI, curated API examples, and live validator behavior they align to
+- `docs/npm-consumption.md`, `package.json`, `tsconfig.build.json`, the built projection bundles, and the package-based client recipes are a convenience distribution layer and must stay subordinate to the stronger source projections, JSON Schemas, OpenAPI, curated examples, and live validator behavior they package

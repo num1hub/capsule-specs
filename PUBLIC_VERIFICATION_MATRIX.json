@@ -193,22 +193,26 @@
       "commands": [
         "npm run check:adoption-readiness",
         "npm run check:audience-paths",
-        "npm run check:limitations-register"
+        "npm run check:limitations-register",
+        "npm run check:package-surface"
       ],
       "protects": [
         "PUBLIC_ADOPTION_READINESS.json",
         "PUBLIC_AUDIENCE_PATHS.json",
-        "PUBLIC_LIMITATIONS_REGISTER.json"
+        "PUBLIC_LIMITATIONS_REGISTER.json",
+        "docs/npm-consumption.md"
       ],
       "strongest_surfaces": [
         "PUBLIC_ADOPTION_READINESS.json",
         "docs/adoption-readiness.md",
-        "PUBLIC_EVIDENCE_STRENGTH_MAP.json"
+        "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
+        "docs/npm-consumption.md"
       ],
       "failure_modes_prevented": [
         "implicit adoption readiness claims",
         "hidden deferred hosted-runtime expectations",
-        "role/readiness drift across reviewer and integration surfaces"
+        "role/readiness drift across reviewer and integration surfaces",
+        "unstated package-consumer prerequisites"
       ]
     },
     {
@@ -243,22 +247,26 @@
       "summary": "Protects Markdown link integrity and cross-surface coherence across docs, release review, and package scripts.",
       "commands": [
         "npm run check:docs",
-        "npm run check:surface"
+        "npm run check:surface",
+        "npm run check:package-surface"
       ],
       "protects": [
         "docs/",
         "PUBLIC_RELEASE_REVIEW.md",
-        "package.json"
+        "package.json",
+        "docs/npm-consumption.md"
       ],
       "strongest_surfaces": [
         "docs/public-contract-index.md",
         "docs/verification.md",
-        "PUBLIC_RELEASE_REVIEW.md"
+        "PUBLIC_RELEASE_REVIEW.md",
+        "docs/npm-consumption.md"
       ],
       "failure_modes_prevented": [
         "broken docs navigation",
         "missing cross-links",
-        "stale reviewer/release references"
+        "stale reviewer/release references",
+        "broken package-export consumer path"
       ]
     },
     {

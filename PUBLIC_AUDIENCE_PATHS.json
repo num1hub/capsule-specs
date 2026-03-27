@@ -49,7 +49,8 @@
         "QUICKSTART.md",
         "docs/integration-guide.md",
         "docs/api-envelopes.md",
-        "docs/schema-family-reference.md"
+        "docs/schema-family-reference.md",
+        "docs/npm-consumption.md"
       ],
       "strongest_surfaces": [
         "schemas/validator-api-envelopes.schema.json",
@@ -58,18 +59,22 @@
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "docs/client-recipes.md",
         "PUBLIC_EXAMPLE_COVERAGE.json",
-        "PUBLIC_ADOPTION_READINESS.json"
+        "PUBLIC_ADOPTION_READINESS.json",
+        "docs/type-projections.md",
+        "docs/npm-consumption.md"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
         "npm run check:api-schemas",
         "npm run check:api-examples",
-        "npm run check:client-recipes"
+        "npm run check:client-recipes",
+        "npm run check:package-surface"
       ],
       "completion_signals": [
         "can build requests and interpret bounded response envelopes",
         "can identify the negative-path and graph-aware examples",
-        "can explain where the live validator remains stronger than public prose"
+        "can explain where the live validator remains stronger than public prose",
+        "can consume the projection layer through package exports without relying on repo-relative imports"
       ],
       "bounded_non_goals": [
         "does not promise a public hosted endpoint",
@@ -118,7 +123,8 @@
         "QUICKSTART.md",
         "docs/schema-family-reference.md",
         "docs/schema-reference.md",
-        "docs/integration-guide.md"
+        "docs/integration-guide.md",
+        "docs/npm-consumption.md"
       ],
       "strongest_surfaces": [
         "schemas/capsule-schema.json",
@@ -127,18 +133,22 @@
         "PUBLIC_CONTRACT_CATALOG.json",
         "PUBLIC_CAPABILITY_MATRIX.json",
         "PUBLIC_ECOSYSTEM_VALUE_MAP.json",
-        "schemas/README.md"
+        "schemas/README.md",
+        "docs/type-projections.md",
+        "docs/npm-consumption.md"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
         "npm run check:catalog",
         "npm run check:api-schemas",
-        "npm run check:capability-matrix"
+        "npm run check:capability-matrix",
+        "npm run check:package-surface"
       ],
       "completion_signals": [
         "can locate stable machine-readable artifacts quickly",
         "can map examples to contract surfaces without guessing",
-        "can explain the stronger-source hierarchy for public generation targets"
+        "can explain the stronger-source hierarchy for public generation targets",
+        "can consume the projection layer through package exports without relying on repo-relative imports"
       ],
       "bounded_non_goals": [
         "does not guarantee a feature-complete SDK",

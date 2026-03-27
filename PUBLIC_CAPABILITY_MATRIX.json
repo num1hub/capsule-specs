@@ -106,9 +106,12 @@
       "id": "consume-source-level-type-projections",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces and Zod parsing artifacts instead of reverse-engineering shape from prose alone.",
+      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, Zod parsing artifacts, and package exports instead of reverse-engineering shape from prose alone.",
       "strongest_surfaces": [
         "docs/type-projections.md",
+        "docs/npm-consumption.md",
+        "projections/typescript/index.ts",
+        "projections/zod/index.ts",
         "projections/typescript/capsule.ts",
         "projections/typescript/validator-api.ts",
         "projections/zod/capsule.ts",
@@ -121,12 +124,17 @@
         "examples/client/zod-parse-validate-response.ts",
         "docs/schema-reference.md",
         "docs/client-recipes.md",
-        "docs/schema-family-reference.md"
+        "docs/schema-family-reference.md",
+        "projections/index.ts",
+        "examples/client/cjs-package-capsule-summary.cjs",
+        "examples/client/cjs-package-validate-response.cjs",
+        "examples/client/README.md"
       ],
       "verify_commands": [
         "npm run check:type-projections",
         "npm run check:client-recipes",
-        "npm run check:capability-matrix"
+        "npm run check:capability-matrix",
+        "npm run check:package-surface"
       ]
     },
     {

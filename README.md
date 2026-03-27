@@ -38,6 +38,7 @@ This repository is that home.
 - [`docs/schema-family-reference.md`](docs/schema-family-reference.md) for choosing the right schema family first
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/type-projections.md`](docs/type-projections.md) for the public-safe TypeScript and Zod projection layer
+- [`docs/npm-consumption.md`](docs/npm-consumption.md) for the built package-export surface and subpath entrypoints
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
 - [`docs/example-coverage.md`](docs/example-coverage.md) for the bounded map of what the public examples actually cover
 - [`docs/maintainer-operations.md`](docs/maintainer-operations.md) for the bounded maintainer workflow and release posture
@@ -89,6 +90,8 @@ This repository is that home.
   Machine-readable JSON Schema artifacts for capsules and validator API envelopes.
 - `projections/`
   Public-safe TypeScript and Zod projection artifacts for source-level consumers.
+- `dist/`
+  Gitignored build output for the consumable package-export projection layer.
 - `examples/`
   Minimal example capsules for documentation and validation.
 - `examples/api/`
@@ -149,6 +152,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable validator API envelope schemas backed by repo-local validation
 - public-safe TypeScript and Zod projections for source-level consumers under [`projections/`](projections/)
 - public-safe TypeScript and Zod validator API envelope projections for source-level validator clients under [`projections/`](projections/)
+- a buildable and packable package-export layer for the maintained projection surface
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
 - API payload examples under [`examples/api/`](examples/api/)
 - consumer recipes under [`examples/client/`](examples/client/)
@@ -177,7 +181,7 @@ Maintainer and review policy:
 4. Read [`docs/portability.md`](docs/portability.md) if you need the public portability / archive trust posture.
 5. Inspect [`docs/schema-family-reference.md`](docs/schema-family-reference.md) to choose the right schema family and abstraction level.
 6. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
-7. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
+7. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`docs/npm-consumption.md`](docs/npm-consumption.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level or package-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
 8. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
 9. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
 10. Inspect [`PUBLIC_EXAMPLE_COVERAGE.json`](PUBLIC_EXAMPLE_COVERAGE.json) if you want the bounded map from examples to covered routes, law surfaces, and negative paths.
@@ -204,6 +208,7 @@ Maintainer and review policy:
 31. Review the raw capsule sources in [`capsules/`](capsules/).
 32. Read [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) if you are preparing a bounded repo-only contribution.
 33. Run `npm run verify:repo` for the repository-local integrity checks.
+34. Run `npm run check:package-surface` if you want to confirm the packable projection-export layer as a consumer artifact.
 
 ## Source of truth
 

@@ -9,7 +9,7 @@ const metadataPath = path.join(repoRoot, 'PUBLIC_RELEASE_METADATA.json');
 const packagePath = path.join(repoRoot, 'package.json');
 const catalogPath = path.join(repoRoot, 'PUBLIC_CONTRACT_CATALOG.json');
 
-const ignoredPrefixes = ['.git/', 'node_modules/'];
+const ignoredPrefixes = ['.git/', 'node_modules/', 'dist/'];
 const ignoredFiles = new Set(['.codexignore']);
 
 function shouldIgnore(relativePath) {
@@ -92,6 +92,10 @@ assert(
 assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:type-projections'),
   'release metadata must include the type-projection verification check'
+);
+assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:package-surface'),
+  'release metadata must include the package-surface verification check'
 );
 assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:example-coverage'),

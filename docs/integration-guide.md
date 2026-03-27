@@ -17,12 +17,16 @@ The schema family guide helps you choose the right level first. The schemas and 
 If your toolchain uses TypeScript or Zod directly, also inspect:
 
 - [`type-projections.md`](type-projections.md)
+- [`npm-consumption.md`](npm-consumption.md)
 - [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
 - [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
 - [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
 - [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
+- [`../projections/typescript/index.ts`](../projections/typescript/index.ts)
+- [`../projections/zod/index.ts`](../projections/zod/index.ts)
 
 These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
+If you want package-style consumption from a checkout or packed artifact, build the projection layer first with `npm run build:projections` and then use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
 
 ## 3. Learn the minimal capsule shape
 

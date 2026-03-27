@@ -26,7 +26,7 @@ The currently active GitHub milestones mirror Wave 2 and Wave 3 so external cont
 ## Wave 3: Projection-friendly references
 
 - publish and expand TypeScript and Zod projections where public-safe
-  Delivered in [`projections/`](projections/) and [`docs/type-projections.md`](docs/type-projections.md).
+  Delivered in [`projections/`](projections/), [`docs/type-projections.md`](docs/type-projections.md), and the buildable package-export path documented in [`docs/npm-consumption.md`](docs/npm-consumption.md).
 - add generated reference indexes for route families and schema families
   Delivered in [`docs/route-reference.md`](docs/route-reference.md) and [`docs/schema-family-reference.md`](docs/schema-family-reference.md).
 - add contributor-facing validation workflows for this repo alone
