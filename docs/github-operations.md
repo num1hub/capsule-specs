@@ -15,6 +15,7 @@ The repo-owned configuration lives in:
 - which milestones correspond to the active public roadmap waves
 - how GitHub release notes are grouped
 - how GitHub-native update hygiene is handled
+- how CI runners install the repo-owned dependency set before executing `npm run verify:repo`
 
 ## Why this matters
 
@@ -23,6 +24,8 @@ The GitHub issue surface should not depend entirely on mutable platform state.
 If labels, milestones, or release grouping exist only in the live GitHub UI, then the public maintainer workflow becomes harder to review, harder to recreate, and easier to drift away from the repo's documented boundary.
 
 Keeping the GitHub operating layer in versioned files makes the public issue surface more portable and reviewable.
+
+That same rule applies to CI: the public verification workflow should install the repo-owned dependency set in a clean runner before typechecking Zod-backed projection files or any other dependency-aware public surface.
 
 ## Boundaries
 
