@@ -30,7 +30,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, client recipes, and a bounded package-consumer export path that is smoke-tested from a packed artifact.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, client recipes, and a bounded package-consumer export path that is smoke-tested from a packed artifact for CommonJS, ESM, and TypeScript consumers.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -55,6 +55,7 @@
         "examples/client/cjs-package-validate-response.cjs",
         "examples/client/esm-package-capsule-summary.mjs",
         "examples/client/esm-package-validate-response.mjs",
+        "examples/client/ts-package-validate-request.ts",
         "scripts/check-package-install.js"
       ],
       "verify_commands": [

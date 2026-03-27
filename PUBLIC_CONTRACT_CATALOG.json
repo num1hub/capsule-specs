@@ -1192,6 +1192,22 @@
       ]
     },
     {
+      "id": "examples.client.ts-package-validate-request",
+      "path": "examples/client/ts-package-validate-request.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:package-install",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.curl-batch",
       "path": "examples/client/curl-validate-batch.sh",
       "kind": "client-recipe",

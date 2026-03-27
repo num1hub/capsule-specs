@@ -32,6 +32,8 @@ const packageRecipeFiles = [
   'esm-package-validate-response.mjs'
 ];
 
+const packageTypeRecipeFiles = ['ts-package-validate-request.ts'];
+
 function assert(condition, message) {
   if (!condition) {
     console.error(`FAIL: ${message}`);
@@ -39,7 +41,7 @@ function assert(condition, message) {
   }
 }
 
-for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles, ...packageRecipeFiles]) {
+for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles, ...packageRecipeFiles, ...packageTypeRecipeFiles]) {
   const filePath = path.join(clientDir, fileName);
   assert(fs.existsSync(filePath), `missing client recipe ${fileName}`);
 }
@@ -110,6 +112,13 @@ const expectedPackageImports = {
   ]
 };
 
+const expectedPackageTypeImports = {
+  'ts-package-validate-request.ts': [
+    '@num1hub/capsule-specs/typescript/capsule',
+    '@num1hub/capsule-specs/typescript/validator-api'
+  ]
+};
+
 for (const [fileName, imports] of Object.entries(expectedPackageImports)) {
   const filePath = path.join(clientDir, fileName);
   const content = fs.readFileSync(filePath, 'utf8');
@@ -120,8 +129,15 @@ for (const [fileName, imports] of Object.entries(expectedPackageImports)) {
   assert(result.status === 0, `${fileName} must be syntactically valid: ${result.stderr || result.stdout}`);
 }
 
+for (const [fileName, imports] of Object.entries(expectedPackageTypeImports)) {
+  const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
+  for (const importPath of imports) {
+    assert(content.includes(importPath), `${fileName} must import ${importPath}`);
+  }
+}
+
 if (process.exitCode) {
   process.exit(process.exitCode);
 }
 
-console.log(`OK: checked ${shellFiles.length + nodeFiles.length + typeRecipeFiles.length + packageRecipeFiles.length} client recipe files`);
+console.log(`OK: checked ${shellFiles.length + nodeFiles.length + typeRecipeFiles.length + packageRecipeFiles.length + packageTypeRecipeFiles.length} client recipe files`);

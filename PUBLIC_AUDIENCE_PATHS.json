@@ -75,7 +75,7 @@
         "can build requests and interpret bounded response envelopes",
         "can identify the negative-path and graph-aware examples",
         "can explain where the live validator remains stronger than public prose",
-        "can consume the projection layer through package exports from a fresh install without relying on repo-relative imports"
+        "can consume the projection layer through package exports from a fresh install, including TypeScript type resolution, without relying on repo-relative imports"
       ],
       "bounded_non_goals": [
         "does not promise a public hosted endpoint",
@@ -150,7 +150,7 @@
         "can locate stable machine-readable artifacts quickly",
         "can map examples to contract surfaces without guessing",
         "can explain the stronger-source hierarchy for public generation targets",
-        "can consume the projection layer through package exports from a fresh install without relying on repo-relative imports"
+        "can consume the projection layer through package exports from a fresh install, including TypeScript type resolution, without relying on repo-relative imports"
       ],
       "bounded_non_goals": [
         "does not guarantee a feature-complete SDK",

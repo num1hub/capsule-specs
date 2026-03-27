@@ -34,6 +34,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal ESM recipe that consumes the built capsule package exports.
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
   Minimal ESM recipe that consumes the built validator API package exports.
+- [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
+  Minimal TypeScript package-consumer recipe that exercises the published capsule and validator API package subpaths.
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
   The stronger machine-readable contract surface these projections are aligned to.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
@@ -54,9 +56,10 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - They intentionally cover the public outer capsule shape and documented validator envelope layer, not every private runtime rule.
 - The live validator and the published JSON Schemas remain the stronger source of truth for edge-case semantics.
 - The built package-consumer layer is convenience packaging around the same maintained source projections.
+- The package-style TypeScript recipe is typechecked repo-locally and its install path is checked from a fresh TypeScript consumer so package-level type resolution is not left as an untested assumption.
 
 ## Verification
 
 Run `npm run check:type-projections`.
 Run `npm run check:package-surface` to build and validate the package-export layer.
-Run `npm run check:package-install` to verify that the packed artifact installs and runs in fresh CommonJS and ESM consumer projects.
+Run `npm run check:package-install` to verify that the packed artifact installs and runs in fresh CommonJS, ESM, and TypeScript consumer projects.

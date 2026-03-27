@@ -25,11 +25,11 @@ This executes all repository-local checks in the expected order.
 - `npm run check:api-schemas`
   Validates the published API example payloads against `schemas/validator-api-envelopes.schema.json`.
 - `npm run check:type-projections`
-  Typechecks the published TypeScript and Zod projection layer plus the source-level consumer recipe examples that depend on it.
+  Typechecks the published TypeScript and Zod projection layer plus the source-level and package-style TypeScript consumer recipe examples that depend on it.
 - `npm run check:package-surface`
   Builds the projection layer, validates package exports, and dry-runs the pack surface.
 - `npm run check:package-install`
-  Packs the repository and verifies clean installs in fresh CommonJS and ESM consumer projects.
+  Packs the repository and verifies clean installs in fresh CommonJS, ESM, and TypeScript consumer projects.
 - `npm run check:example-coverage`
   Verifies `PUBLIC_EXAMPLE_COVERAGE.json`, capsule/API example coverage links, and surrounding example docs.
 - `npm run check:boundary-map`

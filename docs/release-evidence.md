@@ -110,7 +110,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../scripts/check-package-surface.js`](../scripts/check-package-surface.js)
   Repo-local verification of build output, package exports, and pack surface.
 - [`../scripts/check-package-install.js`](../scripts/check-package-install.js)
-  Repo-local verification that a packed artifact installs and runs in fresh CommonJS and ESM consumer projects.
+  Repo-local verification that a packed artifact installs and runs in fresh CommonJS, ESM, and TypeScript consumer projects.
 - [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator request envelope.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
@@ -123,6 +123,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal ESM package-consumer recipe for the built capsule projection exports.
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
   Minimal ESM package-consumer recipe for the built validator API exports.
+- [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
+  Minimal TypeScript package-consumer recipe for the built capsule and validator API exports.
 
 ## Why this split exists
 
@@ -138,7 +140,7 @@ The type-projection layer strengthens consumer ergonomics by giving TypeScript a
 
 The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer that stays subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
-The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh consumer projects instead of leaving it only as raw source files inside the repository tree.
+The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree.
 
 The community-health doc and its dedicated verification script strengthen the repository's OSS maintainership surface by keeping contributor intake explicit and reviewable.
 
@@ -239,6 +241,7 @@ When the public surface changes, these files should move together:
 - `examples/client/cjs-package-validate-response.cjs`
 - `examples/client/esm-package-capsule-summary.mjs`
 - `examples/client/esm-package-validate-response.mjs`
+- `examples/client/ts-package-validate-request.ts`
 - `examples/client/ts-build-validate-request.ts`
 - `examples/client/zod-parse-validate-response.ts`
 

@@ -438,6 +438,7 @@
       "/home/n1/codex-workspace/examples/api/validate-request.single.json",
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
@@ -795,6 +796,7 @@
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/example-known-ids.json",
       "/home/n1/codex-workspace/examples/example-note.capsule.json",
       "/home/n1/codex-workspace/examples/example-project-hub.capsule.json",
@@ -1070,6 +1072,7 @@
       "/home/n1/codex-workspace/docs/verification-matrix.md",
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
       "/home/n1/codex-workspace/projections/index.ts",
@@ -1680,6 +1683,7 @@
       "/home/n1/codex-workspace/docs/npm-consumption.md",
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
@@ -2694,6 +2698,7 @@
       "/home/n1/codex-workspace/docs/verification-matrix.md",
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/MAINTAINERS.md",
       "/home/n1/codex-workspace/projections/index.ts",
       "/home/n1/codex-workspace/projections/typescript/index.ts",
@@ -2792,6 +2797,7 @@
       "/home/n1/codex-workspace/docs/verification-matrix.md",
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/projections/index.ts",
       "/home/n1/codex-workspace/projections/typescript/index.ts",
       "/home/n1/codex-workspace/projections/zod/index.ts",
@@ -3830,6 +3836,7 @@
       "/home/n1/codex-workspace/docs/npm-consumption.md",
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
@@ -4604,6 +4611,7 @@
       "/home/n1/codex-workspace/docs/npm-consumption.md",
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
@@ -4678,13 +4686,19 @@
   },
   "tsconfig.json": {
     "source_paths": [
+      "/home/n1/codex-workspace/projections/index.ts",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/index.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/index.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/projections/zod/capsule.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local TypeScript config for typechecking the public projection layer."
+    "notes": "Repository-local TypeScript config for typechecking the public projection layer, including self-package path mapping for package-style TypeScript recipes."
   },
   "package-lock.json": {
     "source_paths": [
@@ -4769,6 +4783,7 @@
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-capsule-summary.mjs",
       "/home/n1/codex-workspace/examples/client/esm-package-validate-response.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/projections/index.ts",
       "/home/n1/codex-workspace/scripts/check-package-install.js",
@@ -4777,7 +4792,17 @@
       "/home/n1/codex-workspace/tsconfig.build.json"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the buildable package-export surface for the maintained projection layer, including local tarball install posture."
+    "notes": "Guide to the buildable package-export surface for the maintained projection layer, including local tarball install posture and TypeScript package-consumer resolution."
+  },
+  "examples/client/ts-package-validate-request.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/tsconfig.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal TypeScript package-consumer recipe for a typed validator request against the built package exports."
   },
   "projections/index.ts": {
     "source_paths": [
@@ -4872,12 +4897,14 @@
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
       "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/projections/index.ts",
+      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
       "/home/n1/codex-workspace/projections/zod/index.ts",
       "/home/n1/codex-workspace/projections/zod/validator-api.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for fresh CommonJS and ESM installs of the packed package-export surface."
+    "notes": "Verifier for fresh CommonJS, ESM, and TypeScript installs of the packed package-export surface."
   }
 }

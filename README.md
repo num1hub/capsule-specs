@@ -153,7 +153,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - public-safe TypeScript and Zod projections for source-level consumers under [`projections/`](projections/)
 - public-safe TypeScript and Zod validator API envelope projections for source-level validator clients under [`projections/`](projections/)
 - a buildable and packable package-export layer for the maintained projection surface
-- a fresh-project tarball-install verification path for the package-consumer layer
+- a fresh-project tarball-install verification path for CommonJS, ESM, and TypeScript package consumers
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
 - API payload examples under [`examples/api/`](examples/api/)
 - consumer recipes under [`examples/client/`](examples/client/)
@@ -210,7 +210,7 @@ Maintainer and review policy:
 32. Read [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) if you are preparing a bounded repo-only contribution.
 33. Run `npm run verify:repo` for the repository-local integrity checks.
 34. Run `npm run check:package-surface` if you want to confirm the packable projection-export layer as a consumer artifact.
-35. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS and ESM consumer projects.
+35. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS, ESM, and TypeScript consumer projects.
 
 ## Source of truth
 

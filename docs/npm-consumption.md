@@ -9,7 +9,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for the root projection namespaces
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - pack-time inclusion of the built projection layer
-- fresh-project install checks for both CommonJS and ESM consumers
+- fresh-project install checks for CommonJS, ESM, and TypeScript consumers
 
 ## Registry note
 
@@ -43,7 +43,7 @@ If you are working from a repository checkout rather than an already packed arti
 3. consume the built exports through the package subpaths above
 
 For a dry-run pack check, use `npm run check:package-surface`.
-For a real install smoke test in fresh CommonJS and ESM projects, use `npm run check:package-install`.
+For a real install smoke test in fresh CommonJS, ESM, and TypeScript projects, use `npm run check:package-install`.
 
 ## Minimal CommonJS example
 
@@ -66,12 +66,51 @@ const parsed = capsuleSchema.parse(note);
 console.log(parsed.metadata.capsule_id);
 ```
 
+## Minimal TypeScript type-resolution example
+
+A copyable version of this example also lives at [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts).
+
+```ts
+import { CAPSULE_TYPES, type Capsule } from "@num1hub/capsule-specs/typescript/capsule";
+import type { ValidateSingleRequest } from "@num1hub/capsule-specs/typescript/validator-api";
+
+const capsule: Capsule = {
+  metadata: {
+    capsule_id: "capsule.example.fresh-typescript-consumer.v1",
+    type: CAPSULE_TYPES[1],
+    subtype: "atomic",
+    status: "active",
+    version: "1.0.0",
+    semantic_hash: "fresh-typescript-consumer-capsule-contract-layer"
+  },
+  core_payload: { content_type: "markdown", content: "Type-safe package consumer." },
+  neuro_concentrate: {
+    summary: "TypeScript package consumer example.",
+    keywords: ["typescript", "package", "consumer", "capsule", "validator"],
+    confidence_vector: {
+      extraction: 1,
+      synthesis: 0.99,
+      linking: 0.95,
+      provenance_coverage: 0.95,
+      validation_score: 0.95,
+      contradiction_pressure: 0.01
+    },
+    semantic_hash: "fresh-typescript-consumer-capsule-contract-layer"
+  },
+  recursive_layer: { links: [] },
+  integrity_sha3_512: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+};
+
+const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, autoFix: false };
+```
+
 ## Important boundaries
 
 - This package-consumer layer is a convenience surface over the stronger public schemas and OpenAPI artifacts.
 - The build output is derived from the maintained source projections in `projections/`.
+- The TypeScript package recipe is typechecked through the repo-local self-package path map and rechecked from a fresh installed tarball.
 - The package surface does not turn this repository into a complete SDK.
-- The package surface is verified through local tarball install and subpath consumption, not through an implied npm registry promise.
+- The package surface is verified through local tarball install, subpath consumption, and TypeScript type-resolution checks, not through an implied npm registry promise.
 - The live validator and the published JSON Schema/OpenAPI surfaces remain stronger sources for edge-case semantics.
 
 ## Verification

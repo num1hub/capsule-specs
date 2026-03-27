@@ -24,10 +24,12 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 - [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
 - [`../projections/typescript/index.ts`](../projections/typescript/index.ts)
 - [`../projections/zod/index.ts`](../projections/zod/index.ts)
+- [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
 
 These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
 If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
+That check confirms CommonJS runtime usage, ESM runtime usage, and TypeScript type resolution from an installed tarball.
 
 ## 3. Learn the minimal capsule shape
 

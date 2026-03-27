@@ -32,6 +32,7 @@ function safeRemove(targetPath) {
 const workspaceRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'capsule-specs-install-'));
 const packedFilePath = path.join(workspaceRoot, 'tarball.json');
 let tarballPath = null;
+const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 
 try {
   const packOutput = run('npm', ['pack', '--json', '--pack-destination', workspaceRoot], repoRoot);
@@ -104,7 +105,30 @@ try {
   );
   run(process.execPath, ['consumer.mjs'], esmProject);
 
-  console.log('OK: installed packed artifact into fresh CommonJS and ESM consumer projects');
+  const typescriptProject = path.join(workspaceRoot, 'consumer-typescript');
+  fs.mkdirSync(typescriptProject, { recursive: true });
+  writeJson(path.join(typescriptProject, 'package.json'), {
+    name: 'capsule-specs-consumer-typescript',
+    private: true,
+    type: 'module'
+  });
+  writeJson(path.join(typescriptProject, 'tsconfig.json'), {
+    compilerOptions: {
+      target: 'ES2022',
+      module: 'NodeNext',
+      moduleResolution: 'NodeNext',
+      strict: true,
+      noEmit: true,
+      skipLibCheck: true
+    },
+    include: ['consumer.ts']
+  });
+  run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath], typescriptProject);
+  fs.writeFileSync(path.join(typescriptProject, 'consumer.ts'), fs.readFileSync(typescriptConsumerRecipePath, 'utf8'), 'utf8');
+  const repoTsc = path.join(repoRoot, 'node_modules', 'typescript', 'bin', 'tsc');
+  run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
+
+  console.log('OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects');
 } catch (error) {
   console.error(`FAIL: ${error.message}`);
   process.exitCode = 1;

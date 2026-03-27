@@ -6,11 +6,11 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 254,
-    "manifest_entries": 254
+    "files": 255,
+    "manifest_entries": 255
   },
   "surface_summary": {
-    "catalog_entries": 205,
+    "catalog_entries": 206,
     "example_capsules": 5,
     "api_example_files": 13,
     "markdown_files": 87
@@ -247,6 +247,6 @@
     "PUBLIC_REPOSITORY_IDENTITY.json is a bounded canonical-identity summary and must stay subordinate to stronger package metadata, schema $id values, example URIs, git remotes, and published release references it aligns.",
     "projections/typescript/capsule.ts, projections/typescript/validator-api.ts, projections/zod/capsule.ts, projections/zod/validator-api.ts, and the source-level client recipe examples are public-safe convenience projections and must stay subordinate to the stronger JSON Schema, OpenAPI, and live validator behavior they align to.",
     "The package-export layer in docs/npm-consumption.md, package.json, scripts/check-package-install.js, and the built projection bundles is a convenience distribution surface and must stay subordinate to the stronger source projections, JSON Schemas, OpenAPI, curated examples, and live validator behavior it packages.",
-    "The package-install checks prove fresh-project tarball consumption for CommonJS and ESM flows, but they do not by themselves imply a published npm registry release."
+    "The package-install checks prove fresh-project tarball consumption for CommonJS, ESM, and TypeScript type-resolution flows, but they do not by themselves imply a published npm registry release."
   ]
 }

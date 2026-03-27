@@ -214,7 +214,7 @@
         "hidden deferred hosted-runtime expectations",
         "role/readiness drift across reviewer and integration surfaces",
         "unstated package-consumer prerequisites",
-        "package install claims that only worked through repo-local self-reference"
+        "package install or TypeScript type-resolution claims that only worked through repo-local self-reference"
       ]
     },
     {

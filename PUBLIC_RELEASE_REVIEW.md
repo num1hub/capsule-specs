@@ -41,7 +41,7 @@
 - machine-readable publication-readiness map in `PUBLIC_PUBLICATION_READINESS.json` plus a bounded publication-state and public-release safety guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
-- public-safe TypeScript and Zod projection files for capsule and validator API contracts, bundle entrypoints, package-surface build config, package-surface verification, fresh-install verification, and both source-level and package-level consumer recipe examples
+- public-safe TypeScript and Zod projection files for capsule and validator API contracts, bundle entrypoints, package-surface build config, package-surface verification, fresh-install verification, and both source-level and package-level CommonJS, ESM, and TypeScript consumer recipe examples
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
 - client recipes and trust-model docs for external consumers
@@ -115,7 +115,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `254` files / `254` manifest entries
+- manifest coverage: `255` files / `255` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
