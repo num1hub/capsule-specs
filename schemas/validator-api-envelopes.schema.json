@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/n1hub/specs/schemas/validator-api-envelopes.schema.json",
+  "$id": "https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json",
   "title": "N1Hub Validator API Envelopes",
   "description": "Public JSON Schema bundle for validator-facing request and response envelopes published in the N1Hub specs repository.",
   "$defs": {

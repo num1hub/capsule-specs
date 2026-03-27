@@ -33,7 +33,7 @@ function exists(relativePath) {
 }
 
 assert(coherence.version === pkg.version, 'update-coherence map version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-update-coherence-map.schema.json', 'update-coherence schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-update-coherence-map.schema.json', 'update-coherence schema must declare expected public $id');
 assert(Array.isArray(coherence.sync_groups) && coherence.sync_groups.length >= requiredIds.length, 'update-coherence map must define expected sync groups');
 assert(Array.isArray(coherence.non_claims) && coherence.non_claims.length >= 2, 'update-coherence map must define non-claims');
 assert(Array.isArray(coherence.review_commands) && coherence.review_commands.length >= 1, 'update-coherence map must define review commands');

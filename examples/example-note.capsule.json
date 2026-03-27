@@ -11,7 +11,7 @@
     "name": "Example Note Capsule",
     "semantic_hash": "example-note-capsule-public-specs-valid-reference-shape",
     "source": {
-      "uri": "https://github.com/n1hub/specs/examples/example-note.capsule.json",
+      "uri": "https://github.com/num1hub/capsule-specs/examples/example-note.capsule.json",
       "type": "generated_public_example"
     }
   },

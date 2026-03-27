@@ -1,6 +1,6 @@
-# N1Hub Specs
+# N1Hub Capsule Specs
 
-`N1Hub Specs` is the public reference surface for the capsule-first foundations behind N1Hub and CapsuleOS.
+`N1Hub Capsule Specs` is the public reference surface for the capsule-first foundations behind N1Hub and CapsuleOS.
 
 This repository is intentionally narrow. It does not try to expose the full private application or every internal workflow. Instead, it publishes the highest-signal public artifacts needed to understand the model:
 
@@ -23,6 +23,7 @@ This repository is that home.
 - [`QUICKSTART.md`](QUICKSTART.md) for the fastest safe orientation
 - [`ONBOARDING.md`](ONBOARDING.md) for the full contributor path
 - [`docs/overview.md`](docs/overview.md) for the public boundary
+- [`docs/repository-identity.md`](docs/repository-identity.md) for the canonical public repo identity and URL alignment rules
 - [`docs/projection-doctrine.md`](docs/projection-doctrine.md) for the files-as-projections rule
 - [`docs/domain-boundaries.md`](docs/domain-boundaries.md) for published vs deferred domains
 - [`docs/generator-readiness.md`](docs/generator-readiness.md) for the generator/projection model
@@ -50,6 +51,7 @@ This repository is that home.
 - [`docs/evidence-gaps.md`](docs/evidence-gaps.md) for the bounded map of which important public evidence is still intentionally missing and which review gaps remain open
 - [`docs/program-fit.md`](docs/program-fit.md) for the bounded map of why this public surface is a credible OSS-support-program and reviewer-facing candidate without overclaiming maturity
 - [`docs/publication-readiness.md`](docs/publication-readiness.md) for the bounded map of why this public surface is already safe and legible to publish on GitHub without pretending that publication equals adoption or approval
+- [`PUBLIC_REPOSITORY_IDENTITY.json`](PUBLIC_REPOSITORY_IDENTITY.json) for the machine-readable canonical repo identity, release URL, and package/schema alignment layer
 - [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) for machine-readable validator envelope contracts
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
 - [`docs/route-reference.md`](docs/route-reference.md) for per-route sample mapping

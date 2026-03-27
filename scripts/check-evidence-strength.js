@@ -35,7 +35,7 @@ function exists(relativePath) {
 }
 
 assert(strengthMap.version === pkg.version, 'evidence-strength map version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-evidence-strength-map.schema.json', 'evidence-strength schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-evidence-strength-map.schema.json', 'evidence-strength schema must declare expected public $id');
 assert(typeof strengthMap.purpose === 'string' && strengthMap.purpose.length > 0, 'evidence-strength map must define purpose');
 assert(Array.isArray(strengthMap.families) && strengthMap.families.length >= requiredIds.length, 'evidence-strength map must define expected families');
 assert(Array.isArray(strengthMap.review_commands) && strengthMap.review_commands.length >= 1, 'evidence-strength map must define review commands');

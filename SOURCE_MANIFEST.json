@@ -4203,5 +4203,43 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for publication-readiness cross-surface coherence."
+  },
+  "PUBLIC_REPOSITORY_IDENTITY.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_RELEASE_METADATA.json",
+      "/home/n1/codex-workspace/PUBLIC_PUBLICATION_READINESS.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable canonical public repository identity, release URL, and package/schema alignment layer."
+  },
+  "docs/repository-identity.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_REPOSITORY_IDENTITY.json",
+      "/home/n1/codex-workspace/README.md",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Human-readable repository identity and URL-alignment doctrine derived from the public identity layer."
+  },
+  "schemas/public-repository-identity.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_REPOSITORY_IDENTITY.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "JSON Schema for the public repository identity layer."
+  },
+  "scripts/check-repository-identity.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/PUBLIC_REPOSITORY_IDENTITY.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/PUBLIC_PROJECT_PROFILE.json",
+      "/home/n1/codex-workspace/PUBLIC_EVALUATION_PACKET.json",
+      "/home/n1/codex-workspace/PUBLIC_PUBLICATION_READINESS.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for canonical repo identity, schema IDs, example URIs, and published GitHub URL consistency."
   }
 }

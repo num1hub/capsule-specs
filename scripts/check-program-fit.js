@@ -46,7 +46,7 @@ function readText(relativePath) {
 }
 
 assert(programFit.version === pkg.version, 'program-fit version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-program-fit-map.schema.json', 'program-fit schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-program-fit-map.schema.json', 'program-fit schema must declare expected public $id');
 assert(typeof programFit.purpose === 'string' && programFit.purpose.length > 0, 'program-fit map must define purpose');
 assert(Array.isArray(programFit.fit_families) && programFit.fit_families.length >= requiredIds.length, 'program-fit map must define expected fit families');
 assert(Array.isArray(programFit.non_claims) && programFit.non_claims.length >= 2, 'program-fit map must define non-claims');

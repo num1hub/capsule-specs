@@ -49,7 +49,7 @@ function commitExists(ref) {
 }
 
 assert(timeline.version === pkg.version, 'evidence timeline version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-evidence-timeline.schema.json', 'evidence-timeline schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-evidence-timeline.schema.json', 'evidence-timeline schema must declare expected public $id');
 assert(typeof timeline.purpose === 'string' && timeline.purpose.length > 0, 'evidence timeline must define purpose');
 assert(Array.isArray(timeline.milestones) && timeline.milestones.length >= requiredIds.length, 'evidence timeline must define expected milestone set');
 assert(Array.isArray(timeline.review_commands) && timeline.review_commands.length >= 1, 'evidence timeline must define review commands');

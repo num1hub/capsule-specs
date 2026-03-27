@@ -11,7 +11,7 @@
     "name": "Example Task Capsule",
     "semantic_hash": "example-task-capsule-public-specs-valid-reference-shape",
     "source": {
-      "uri": "https://github.com/n1hub/specs/examples/example-task.capsule.json",
+      "uri": "https://github.com/num1hub/capsule-specs/examples/example-task.capsule.json",
       "type": "generated_public_example"
     }
   },

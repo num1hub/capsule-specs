@@ -1,4 +1,4 @@
-# Contributing to N1Hub Specs
+# Contributing to N1Hub Capsule Specs
 
 N1Hub accepts contributions through two coordinated tracks.
 

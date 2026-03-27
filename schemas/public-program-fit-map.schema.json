@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/n1hub/specs/schemas/public-program-fit-map.schema.json",
+  "$id": "https://github.com/num1hub/capsule-specs/schemas/public-program-fit-map.schema.json",
   "title": "Public Program Fit Map",
   "type": "object",
   "additionalProperties": false,

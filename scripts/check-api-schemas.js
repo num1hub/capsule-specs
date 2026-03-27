@@ -186,7 +186,7 @@ const rootSchema = loadSchema(schemaPath);
 
 assert(rootSchema.$schema === 'https://json-schema.org/draft/2020-12/schema', 'validator API schema must declare draft 2020-12');
 assert(
-  rootSchema.$id === 'https://github.com/n1hub/specs/schemas/validator-api-envelopes.schema.json',
+  rootSchema.$id === 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json',
   'validator API schema must declare the expected public $id'
 );
 assert(rootSchema.$defs && typeof rootSchema.$defs === 'object', 'validator API schema must declare $defs');

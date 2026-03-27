@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/n1hub/specs/schemas/public-review-scorecard.schema.json",
+  "$id": "https://github.com/num1hub/capsule-specs/schemas/public-review-scorecard.schema.json",
   "title": "Public Review Scorecard",
   "type": "object",
   "additionalProperties": false,

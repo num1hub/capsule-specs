@@ -51,7 +51,7 @@ function readText(relativePath) {
 
 assert(adoption.version === pkg.version, 'adoption-readiness version must match package.json version');
 assert(
-  schema.$id === 'https://github.com/n1hub/specs/schemas/public-adoption-readiness.schema.json',
+  schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-adoption-readiness.schema.json',
   'adoption-readiness schema must declare expected public $id'
 );
 assert(typeof adoption.purpose === 'string' && adoption.purpose.length > 0, 'adoption-readiness must define purpose');

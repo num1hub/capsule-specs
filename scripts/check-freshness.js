@@ -51,7 +51,7 @@ function readText(relativePath) {
 
 assert(freshness.version === pkg.version, 'freshness model version must match package.json version');
 assert(
-  schema.$id === 'https://github.com/n1hub/specs/schemas/public-freshness-model.schema.json',
+  schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-freshness-model.schema.json',
   'freshness schema must declare expected public $id'
 );
 assert(typeof freshness.purpose === 'string' && freshness.purpose.length > 0, 'freshness model must define purpose');

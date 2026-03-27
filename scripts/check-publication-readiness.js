@@ -17,6 +17,7 @@ const audiencePaths = JSON.parse(fs.readFileSync(path.join(repoRoot, 'PUBLIC_AUD
 const adoptionReadiness = JSON.parse(fs.readFileSync(path.join(repoRoot, 'PUBLIC_ADOPTION_READINESS.json'), 'utf8'));
 const releaseMetadata = JSON.parse(fs.readFileSync(path.join(repoRoot, 'PUBLIC_RELEASE_METADATA.json'), 'utf8'));
 const publicationReadiness = JSON.parse(fs.readFileSync(path.join(repoRoot, 'PUBLIC_PUBLICATION_READINESS.json'), 'utf8'));
+const repositoryIdentity = JSON.parse(fs.readFileSync(path.join(repoRoot, 'PUBLIC_REPOSITORY_IDENTITY.json'), 'utf8'));
 const schema = JSON.parse(fs.readFileSync(path.join(repoRoot, 'schemas', 'public-publication-readiness.schema.json'), 'utf8'));
 
 const packageScripts = new Set(Object.keys(pkg.scripts || {}).map((name) => `npm run ${name}`));
@@ -26,7 +27,7 @@ const requiredIds = [
   'legal-boundary-and-scope-safety-ready',
   'contract-example-and-schema-surface-ready',
   'reviewer-and-release-summaries-ready',
-  'verification-and-pre-publish-safety-ready',
+  'verification-and-public-surface-safety-ready',
   'post-publication-signals-still-deferred'
 ];
 
@@ -46,7 +47,7 @@ function readText(relativePath) {
 }
 
 assert(publicationReadiness.version === pkg.version, 'publication-readiness version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-publication-readiness.schema.json', 'publication-readiness schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-publication-readiness.schema.json', 'publication-readiness schema must declare expected public $id');
 assert(typeof publicationReadiness.purpose === 'string' && publicationReadiness.purpose.length > 0, 'publication-readiness map must define purpose');
 assert(Array.isArray(publicationReadiness.readiness_families) && publicationReadiness.readiness_families.length >= requiredIds.length, 'publication-readiness map must define expected readiness families');
 assert(Array.isArray(publicationReadiness.non_claims) && publicationReadiness.non_claims.length >= 2, 'publication-readiness map must define non-claims');
@@ -96,11 +97,15 @@ assert(reviewerGuide.includes('PUBLIC_PUBLICATION_READINESS.json'), 'reviewer gu
 assert(evaluationDoc.includes('PUBLIC_PUBLICATION_READINESS.json'), 'evaluation-packet doc must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(releaseEvidence.includes('PUBLIC_PUBLICATION_READINESS.json'), 'release-evidence doc must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(verificationDoc.includes('check:publication-readiness'), 'verification doc must mention check:publication-readiness');
+assert(verificationDoc.includes('check:repository-identity'), 'verification doc must mention check:repository-identity');
 assert(publicIndex.includes('publication-readiness.md'), 'public contract index must mention docs/publication-readiness.md');
 assert(publicIndex.includes('../PUBLIC_PUBLICATION_READINESS.json'), 'public contract index must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(publicIndex.includes('../schemas/public-publication-readiness.schema.json'), 'public contract index must mention public-publication-readiness schema');
 assert(faq.includes('PUBLIC_PUBLICATION_READINESS.json'), 'FAQ must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(capabilityDoc.includes('PUBLIC_PUBLICATION_READINESS.json'), 'capability-matrix doc must mention PUBLIC_PUBLICATION_READINESS.json');
+assert(publicationReadiness.readiness_families.some((family) => family.strongest_current_surfaces.includes('PUBLIC_REPOSITORY_IDENTITY.json')), 'publication-readiness map must reference PUBLIC_REPOSITORY_IDENTITY.json');
+assert(publicationReadiness.non_claims.every((claim) => !claim.includes('repo has already been published')), 'publication-readiness non-claims must not describe the repo as unpublished');
+assert(repositoryIdentity.repository?.slug === 'num1hub/capsule-specs', 'repository identity slug must match the canonical public repo');
 
 assert(projectProfile.purpose?.publishes?.includes('machine-readable publication-readiness summaries'), 'project profile publishes must include machine-readable publication-readiness summaries');
 assert(projectProfile.health_signals?.machine_readable_publication_readiness_present === true, 'project profile must mark machine_readable_publication_readiness_present true');
@@ -113,14 +118,14 @@ assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes(
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('publication readiness')), 'evaluation packet public_value_claims must mention publication readiness');
 assert(Array.isArray(evaluationPacket.residual_risk_surfaces) && evaluationPacket.residual_risk_surfaces.includes('PUBLIC_PUBLICATION_READINESS.json'), 'evaluation packet residual_risk_surfaces must include PUBLIC_PUBLICATION_READINESS.json');
 
-assert(capabilityMatrix.capabilities.some((item) => item.id === 'assess-pre-publish-publication-readiness'), 'capability matrix must include assess-pre-publish-publication-readiness');
+assert(capabilityMatrix.capabilities.some((item) => item.id === 'assess-publication-state-and-safety'), 'capability matrix must include assess-publication-state-and-safety');
 assert(dependencyGraph.nodes.some((item) => item.id === 'publication-readiness'), 'dependency graph must include publication-readiness node');
 assert(dependencyGraph.reading_paths.some((item) => item.id === 'reviewer-fast-path' && item.steps.includes('publication-readiness')), 'reviewer-fast-path must include publication-readiness');
 assert(dependencyGraph.reading_paths.some((item) => item.id === 'contributor-governance-path' && item.steps.includes('publication-readiness')), 'contributor-governance-path must include publication-readiness');
 
-assert(traceability.traces.some((item) => item.id === 'bounded-publication-readiness-and-pre-publish-safety'), 'traceability matrix must include bounded-publication-readiness-and-pre-publish-safety');
+assert(traceability.traces.some((item) => item.id === 'bounded-publication-state-and-safety'), 'traceability matrix must include bounded-publication-state-and-safety');
 assert(reviewScorecard.criteria.some((item) => item.id === 'publication-readiness-explicit'), 'review scorecard must include publication-readiness-explicit');
-assert(verificationMatrix.checks.some((item) => item.id === 'publication-readiness-and-pre-publish-safety'), 'verification matrix must include publication-readiness-and-pre-publish-safety');
+assert(verificationMatrix.checks.some((item) => item.id === 'publication-state-and-safety'), 'verification matrix must include publication-state-and-safety');
 
 assert(audiencePaths.audiences.some((item) => item.id === 'reviewers' && item.strongest_surfaces.includes('PUBLIC_PUBLICATION_READINESS.json')), 'audience paths reviewers entry must include PUBLIC_PUBLICATION_READINESS.json');
 assert(audiencePaths.audiences.some((item) => item.id === 'maintainers' && item.strongest_surfaces.includes('PUBLIC_PUBLICATION_READINESS.json')), 'audience paths maintainers entry must include PUBLIC_PUBLICATION_READINESS.json');
@@ -128,7 +133,9 @@ assert(adoptionReadiness.profiles.some((item) => item.id === 'reviewers' && item
 assert(adoptionReadiness.profiles.some((item) => item.id === 'maintainers' && item.strongest_surfaces.includes('PUBLIC_PUBLICATION_READINESS.json')), 'adoption readiness maintainers profile must include PUBLIC_PUBLICATION_READINESS.json');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:publication-readiness'), 'release metadata must include publication-readiness verification');
+assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:repository-identity'), 'release metadata must include repository-identity verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_PUBLICATION_READINESS.json')), 'release metadata residual risks must mention PUBLIC_PUBLICATION_READINESS.json');
+assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_REPOSITORY_IDENTITY.json')), 'release metadata residual risks must mention PUBLIC_REPOSITORY_IDENTITY.json');
 
 assert(catalogPaths.has('docs/publication-readiness.md'), 'contract catalog must include docs/publication-readiness.md');
 assert(catalogPaths.has('PUBLIC_PUBLICATION_READINESS.json'), 'contract catalog must include PUBLIC_PUBLICATION_READINESS.json');

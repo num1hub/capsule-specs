@@ -24,7 +24,7 @@ function exists(relativePath) {
 }
 
 assert(graph.version === pkg.version, 'dependency graph version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-dependency-graph.schema.json', 'dependency-graph schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-dependency-graph.schema.json', 'dependency-graph schema must declare expected public $id');
 assert(Array.isArray(graph.nodes) && graph.nodes.length >= 8, 'dependency graph must define nodes');
 assert(Array.isArray(graph.reading_paths) && graph.reading_paths.length >= 3, 'dependency graph must define reading paths');
 assert(Array.isArray(graph.non_claims) && graph.non_claims.length >= 2, 'dependency graph must define non-claims');

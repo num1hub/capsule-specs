@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "repository": {
+    "owner": "num1hub",
+    "name": "capsule-specs",
+    "slug": "num1hub/capsule-specs",
+    "canonical_repo_url": "https://github.com/num1hub/capsule-specs",
+    "canonical_git_https": "https://github.com/num1hub/capsule-specs.git",
+    "project_homepage": "https://n1hub.com",
+    "default_branch": "main",
+    "visibility": "public"
+  },
+  "package": {
+    "name": "@num1hub/capsule-specs",
+    "version": "0.1.0",
+    "license": "Apache-2.0"
+  },
+  "release": {
+    "latest_tag": "v0.1.0",
+    "latest_release_url": "https://github.com/num1hub/capsule-specs/releases/tag/v0.1.0"
+  },
+  "identity_claims": [
+    "The canonical public repository identity for this project is num1hub/capsule-specs.",
+    "Package metadata, schema $id values, example URIs, release references, and reviewer-facing summaries are expected to align to that canonical identity.",
+    "The repository is already published publicly on GitHub and should be reviewed as a live public contract surface rather than as a pre-publication draft."
+  ],
+  "bounded_non_claims": [
+    "This file does not claim npm publication or registry distribution.",
+    "This file does not claim that repository publication alone proves adoption, traction, or support-program acceptance."
+  ],
+  "review_commands": [
+    "npm run check:repository-identity",
+    "npm run verify:repo"
+  ]
+}

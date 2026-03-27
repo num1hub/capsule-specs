@@ -26,10 +26,10 @@ function exists(relativePath) {
 }
 
 assert(evaluationPacket.version === pkg.version, 'evaluation packet version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-evaluation-packet.schema.json', 'evaluation packet schema must declare expected public $id');
-assert(evaluationPacket.repository_identity?.owner === 'n1hub', 'evaluation packet owner must be n1hub');
-assert(evaluationPacket.repository_identity?.name === 'specs', 'evaluation packet name must be specs');
-assert(evaluationPacket.repository_identity?.homepage === 'https://github.com/n1hub/specs', 'evaluation packet homepage must match the intended public repo URL');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-evaluation-packet.schema.json', 'evaluation packet schema must declare expected public $id');
+assert(evaluationPacket.repository_identity?.owner === 'num1hub', 'evaluation packet owner must be num1hub');
+assert(evaluationPacket.repository_identity?.name === 'capsule-specs', 'evaluation packet name must be capsule-specs');
+assert(evaluationPacket.repository_identity?.homepage === 'https://github.com/num1hub/capsule-specs', 'evaluation packet homepage must match the canonical public repo URL');
 assert(evaluationPacket.repository_identity?.license === pkg.license, 'evaluation packet license must match package.json');
 assert(evaluationPacket.repository_identity?.primary_maintainer === profile.repository_identity?.primary_maintainer, 'evaluation packet maintainer must match project profile');
 
@@ -96,6 +96,11 @@ assert(releaseEvidenceDoc.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'release-evid
 assert(releaseEvidenceDoc.includes('PUBLIC_PUBLICATION_READINESS.json'), 'release-evidence doc must mention PUBLIC_PUBLICATION_READINESS.json');
 assert(capabilityDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'capability-matrix doc must mention PUBLIC_EVALUATION_PACKET.json');
 assert(quickstart.includes('PUBLIC_EVALUATION_PACKET.json'), 'QUICKSTART.md must mention PUBLIC_EVALUATION_PACKET.json');
+assert(readme.includes('PUBLIC_REPOSITORY_IDENTITY.json'), 'README.md must mention PUBLIC_REPOSITORY_IDENTITY.json');
+assert(reviewerGuide.includes('PUBLIC_REPOSITORY_IDENTITY.json'), 'reviewer guide must mention PUBLIC_REPOSITORY_IDENTITY.json');
+assert(evaluationDoc.includes('docs/repository-identity.md'), 'evaluation-packet doc must mention docs/repository-identity.md');
+assert(releaseEvidenceDoc.includes('PUBLIC_REPOSITORY_IDENTITY.json'), 'release-evidence doc must mention PUBLIC_REPOSITORY_IDENTITY.json');
+assert(quickstart.includes('PUBLIC_REPOSITORY_IDENTITY.json'), 'QUICKSTART.md must mention PUBLIC_REPOSITORY_IDENTITY.json');
 
 assert(catalogPaths.has('PUBLIC_EVALUATION_PACKET.json'), 'contract catalog must include PUBLIC_EVALUATION_PACKET.json');
 assert(catalogPaths.has('PUBLIC_ASSURANCE_CASE.json'), 'contract catalog must include PUBLIC_ASSURANCE_CASE.json');
@@ -111,6 +116,7 @@ assert(catalogPaths.has('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'contract catalog mu
 assert(catalogPaths.has('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'contract catalog must include PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(catalogPaths.has('PUBLIC_PROGRAM_FIT_MAP.json'), 'contract catalog must include PUBLIC_PROGRAM_FIT_MAP.json');
 assert(catalogPaths.has('PUBLIC_PUBLICATION_READINESS.json'), 'contract catalog must include PUBLIC_PUBLICATION_READINESS.json');
+assert(catalogPaths.has('PUBLIC_REPOSITORY_IDENTITY.json'), 'contract catalog must include PUBLIC_REPOSITORY_IDENTITY.json');
 assert(catalogPaths.has('docs/evaluation-packet.md'), 'contract catalog must include docs/evaluation-packet.md');
 assert(catalogPaths.has('docs/evidence-timeline.md'), 'contract catalog must include docs/evidence-timeline.md');
 assert(catalogPaths.has('docs/review-scorecard.md'), 'contract catalog must include docs/review-scorecard.md');
@@ -122,18 +128,21 @@ assert(catalogPaths.has('docs/ecosystem-value.md'), 'contract catalog must inclu
 assert(catalogPaths.has('docs/evidence-gaps.md'), 'contract catalog must include docs/evidence-gaps.md');
 assert(catalogPaths.has('docs/program-fit.md'), 'contract catalog must include docs/program-fit.md');
 assert(catalogPaths.has('docs/publication-readiness.md'), 'contract catalog must include docs/publication-readiness.md');
+assert(catalogPaths.has('docs/repository-identity.md'), 'contract catalog must include docs/repository-identity.md');
 assert(catalogPaths.has('schemas/public-evaluation-packet.schema.json'), 'contract catalog must include public-evaluation-packet schema');
 assert(catalogPaths.has('schemas/public-freshness-model.schema.json'), 'contract catalog must include public-freshness-model schema');
 assert(catalogPaths.has('schemas/public-ecosystem-value-map.schema.json'), 'contract catalog must include public-ecosystem-value schema');
 assert(catalogPaths.has('schemas/public-evidence-gaps-register.schema.json'), 'contract catalog must include public-evidence-gaps schema');
 assert(catalogPaths.has('schemas/public-program-fit-map.schema.json'), 'contract catalog must include public-program-fit schema');
 assert(catalogPaths.has('schemas/public-publication-readiness.schema.json'), 'contract catalog must include public-publication-readiness schema');
+assert(catalogPaths.has('schemas/public-repository-identity.schema.json'), 'contract catalog must include public-repository-identity schema');
 assert(catalogPaths.has('scripts/check-evaluation-packet.js'), 'contract catalog must include evaluation-packet verifier');
 assert(catalogPaths.has('scripts/check-freshness.js'), 'contract catalog must include freshness verifier');
 assert(catalogPaths.has('scripts/check-ecosystem-value.js'), 'contract catalog must include ecosystem-value verifier');
 assert(catalogPaths.has('scripts/check-evidence-gaps.js'), 'contract catalog must include evidence-gaps verifier');
 assert(catalogPaths.has('scripts/check-program-fit.js'), 'contract catalog must include program-fit verifier');
 assert(catalogPaths.has('scripts/check-publication-readiness.js'), 'contract catalog must include publication-readiness verifier');
+assert(catalogPaths.has('scripts/check-repository-identity.js'), 'contract catalog must include repository-identity verifier');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:evaluation-packet'), 'release metadata must include evaluation-packet verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_EVALUATION_PACKET.json')), 'release metadata residual risks must mention PUBLIC_EVALUATION_PACKET.json');
@@ -147,6 +156,7 @@ assert(evaluationPacket.fast_review_path.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.js
 assert(evaluationPacket.fast_review_path.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'evaluation packet fast_review_path must include PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(evaluationPacket.fast_review_path.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'evaluation packet fast_review_path must include PUBLIC_PROGRAM_FIT_MAP.json');
 assert(evaluationPacket.fast_review_path.includes('PUBLIC_PUBLICATION_READINESS.json'), 'evaluation packet fast_review_path must include PUBLIC_PUBLICATION_READINESS.json');
+assert(evaluationPacket.fast_review_path.includes('PUBLIC_REPOSITORY_IDENTITY.json'), 'evaluation packet fast_review_path must include PUBLIC_REPOSITORY_IDENTITY.json');
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_EVIDENCE_TIMELINE.json');
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_REVIEW_SCORECARD.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_REVIEW_SCORECARD.json');
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_VERIFICATION_MATRIX.json');
@@ -157,6 +167,7 @@ assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes(
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_PROGRAM_FIT_MAP.json');
 assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_PUBLICATION_READINESS.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_PUBLICATION_READINESS.json');
+assert(evaluationPacket.strongest_evidence?.machine_readable_evidence?.includes('PUBLIC_REPOSITORY_IDENTITY.json'), 'evaluation packet machine_readable_evidence must include PUBLIC_REPOSITORY_IDENTITY.json');
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/evidence-timeline.md'), 'evaluation packet governance_and_review must include docs/evidence-timeline.md');
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/review-scorecard.md'), 'evaluation packet governance_and_review must include docs/review-scorecard.md');
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/verification-matrix.md'), 'evaluation packet governance_and_review must include docs/verification-matrix.md');
@@ -167,6 +178,7 @@ assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('doc
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/evidence-gaps.md'), 'evaluation packet governance_and_review must include docs/evidence-gaps.md');
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/program-fit.md'), 'evaluation packet governance_and_review must include docs/program-fit.md');
 assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/publication-readiness.md'), 'evaluation packet governance_and_review must include docs/publication-readiness.md');
+assert(evaluationPacket.strongest_evidence?.governance_and_review?.includes('docs/repository-identity.md'), 'evaluation packet governance_and_review must include docs/repository-identity.md');
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('active maintenance')), 'evaluation packet public_value_claims must mention active maintenance');
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('review scorecard')), 'evaluation packet public_value_claims must mention review scorecard');
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('verification coverage')), 'evaluation packet public_value_claims must mention verification coverage');
@@ -177,6 +189,7 @@ assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'st
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('evidence gaps')), 'evaluation packet public_value_claims must mention evidence gaps');
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('program-fit')), 'evaluation packet public_value_claims must mention program-fit');
 assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('publication readiness')), 'evaluation packet public_value_claims must mention publication readiness');
+assert(evaluationPacket.public_value_claims.some((claim) => typeof claim === 'string' && claim.toLowerCase().includes('canonical public-repo identity')), 'evaluation packet public_value_claims must mention canonical public-repo identity');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

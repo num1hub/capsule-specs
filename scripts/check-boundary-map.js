@@ -48,7 +48,7 @@ function repoExists(relativePath) {
 
 assert(boundaryMap.version === pkg.version, 'boundary map version must match package.json version');
 assert(
-  schema.$id === 'https://github.com/n1hub/specs/schemas/public-boundary-map.schema.json',
+  schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-boundary-map.schema.json',
   'boundary-map schema must declare the expected public $id'
 );
 assert(Array.isArray(boundaryMap.global_rules) && boundaryMap.global_rules.length >= 3, 'boundary map must define global rules');

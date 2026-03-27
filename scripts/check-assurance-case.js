@@ -33,7 +33,7 @@ function exists(relativePath) {
 }
 
 assert(assurance.version === pkg.version, 'assurance case version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-assurance-case.schema.json', 'assurance-case schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-assurance-case.schema.json', 'assurance-case schema must declare expected public $id');
 assert(typeof assurance.objective === 'string' && assurance.objective.length > 0, 'assurance case must define objective');
 assert(Array.isArray(assurance.claims) && assurance.claims.length >= requiredIds.length, 'assurance case must define the expected claim set');
 assert(Array.isArray(assurance.non_claims) && assurance.non_claims.length >= 2, 'assurance case must define non-claims');

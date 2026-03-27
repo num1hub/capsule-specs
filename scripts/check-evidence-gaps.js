@@ -50,7 +50,7 @@ function readText(relativePath) {
 }
 
 assert(evidenceGaps.version === pkg.version, 'evidence-gaps version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-evidence-gaps-register.schema.json', 'evidence-gaps schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-evidence-gaps-register.schema.json', 'evidence-gaps schema must declare expected public $id');
 assert(typeof evidenceGaps.purpose === 'string' && evidenceGaps.purpose.length > 0, 'evidence gaps register must define purpose');
 assert(Array.isArray(evidenceGaps.gap_families) && evidenceGaps.gap_families.length >= requiredIds.length, 'evidence gaps register must define expected gap families');
 assert(Array.isArray(evidenceGaps.non_claims) && evidenceGaps.non_claims.length >= 2, 'evidence gaps register must define non-claims');

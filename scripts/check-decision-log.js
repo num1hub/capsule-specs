@@ -50,7 +50,7 @@ function readText(relativePath) {
 }
 
 assert(decisionLog.version === pkg.version, 'decision-log version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-decision-log.schema.json', 'decision-log schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-decision-log.schema.json', 'decision-log schema must declare expected public $id');
 assert(typeof decisionLog.purpose === 'string' && decisionLog.purpose.length > 0, 'decision log must define purpose');
 assert(Array.isArray(decisionLog.decisions) && decisionLog.decisions.length >= requiredIds.length, 'decision log must define expected decisions');
 assert(Array.isArray(decisionLog.non_claims) && decisionLog.non_claims.length >= 2, 'decision log must define non-claims');

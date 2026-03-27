@@ -34,7 +34,7 @@ function exists(relativePath) {
 }
 
 assert(limitations.version === pkg.version, 'limitations register version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-limitations-register.schema.json', 'limitations-register schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-limitations-register.schema.json', 'limitations-register schema must declare expected public $id');
 assert(Array.isArray(limitations.limitations) && limitations.limitations.length >= requiredIds.length, 'limitations register must define expected limitation set');
 assert(Array.isArray(limitations.non_claims) && limitations.non_claims.length >= 2, 'limitations register must define non-claims');
 assert(Array.isArray(limitations.review_commands) && limitations.review_commands.length >= 1, 'limitations register must define review commands');

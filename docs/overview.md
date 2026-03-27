@@ -1,6 +1,6 @@
 # Overview
 
-`N1Hub Specs` is a public reference repository for a capsule-first, validator-backed knowledge system.
+`N1Hub Capsule Specs` is a public reference repository for a capsule-first, validator-backed knowledge system.
 
 ## What is CapsuleOS?
 

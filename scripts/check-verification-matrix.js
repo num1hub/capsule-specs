@@ -26,7 +26,7 @@ const requiredIds = [
   'ecosystem-value-and-program-utility',
   'evidence-gaps-and-bounded-maturity',
   'program-fit-and-reviewer-program-criteria',
-  'publication-readiness-and-pre-publish-safety'
+  'publication-state-and-safety'
 ];
 
 const packageScripts = new Set(Object.keys(pkg.scripts || {}).map((name) => `npm run ${name}`));
@@ -44,7 +44,7 @@ function exists(relativePath) {
 }
 
 assert(matrix.version === pkg.version, 'verification matrix version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-verification-matrix.schema.json', 'verification-matrix schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-verification-matrix.schema.json', 'verification-matrix schema must declare expected public $id');
 assert(typeof matrix.purpose === 'string' && matrix.purpose.length > 0, 'verification matrix must define purpose');
 assert(Array.isArray(matrix.checks) && matrix.checks.length >= requiredIds.length, 'verification matrix must define expected check families');
 assert(Array.isArray(matrix.review_commands) && matrix.review_commands.length >= 1, 'verification matrix must define review commands');

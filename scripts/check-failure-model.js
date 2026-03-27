@@ -24,7 +24,7 @@ function exists(relativePath) {
 }
 
 assert(failureModel.version === pkg.version, 'failure-model version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-failure-model.schema.json', 'failure-model schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-failure-model.schema.json', 'failure-model schema must declare expected public $id');
 assert(Array.isArray(failureModel.principles) && failureModel.principles.length >= 3, 'failure model must define principles');
 assert(Array.isArray(failureModel.failure_classes) && failureModel.failure_classes.length >= 4, 'failure model must define failure classes');
 assert(Array.isArray(failureModel.non_claims) && failureModel.non_claims.length >= 2, 'failure model must define non-claims');

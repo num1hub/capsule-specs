@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "reviewed_at": "2026-03-26",
-  "purpose": "Publish bounded pre-GitHub-publication readiness criteria so maintainers and reviewers can see why this public specs surface is safe and legible to publish now while keeping traction, adoption, and hosted-runtime claims explicitly deferred.",
+  "purpose": "Publish bounded publication-state and publication-safety criteria so maintainers and reviewers can see why this public specs surface remains coherent as a live GitHub repository while keeping traction, adoption, and hosted-runtime claims explicitly deferred.",
   "readiness_families": [
     {
       "id": "front-door-and-community-surface-ready",
@@ -16,7 +16,8 @@
         "SECURITY.md",
         "SUPPORT.md",
         "MAINTAINERS.md",
-        "docs/community-health.md"
+        "docs/community-health.md",
+        "PUBLIC_REPOSITORY_IDENTITY.json"
       ],
       "publish_checks": [
         "npm run check:publication-readiness",
@@ -87,7 +88,8 @@
         "PUBLIC_TRACEABILITY_MATRIX.json",
         "PUBLIC_REVIEW_SCORECARD.json",
         "PUBLIC_VERIFICATION_MATRIX.json",
-        "PUBLIC_PROGRAM_FIT_MAP.json"
+        "PUBLIC_PROGRAM_FIT_MAP.json",
+        "PUBLIC_REPOSITORY_IDENTITY.json"
       ],
       "publish_checks": [
         "npm run check:publication-readiness",
@@ -101,21 +103,23 @@
       ]
     },
     {
-      "id": "verification-and-pre-publish-safety-ready",
+      "id": "verification-and-public-surface-safety-ready",
       "status": "ready",
-      "summary": "A single verify entrypoint, repo-local checks, and upstream validator checks make the public surface reviewable before publication.",
-      "why_it_matters": "A publish-ready repo should have a repeatable pre-publish integrity path instead of one-off manual inspection.",
+      "summary": "A repeatable verification path and explicit repository identity keep the published public surface reviewable and coherent.",
+      "why_it_matters": "A published specs repo should have a repeatable integrity path and explicit canonical identity instead of drifting across stale URLs, schema IDs, or summary layers.",
       "strongest_current_surfaces": [
         "package.json",
         "PUBLIC_RELEASE_METADATA.json",
         "PUBLIC_VERIFICATION_MATRIX.json",
         "PUBLIC_CONTRACT_CATALOG.json",
         "SOURCE_MANIFEST.json",
-        "PUBLIC_RELEASE_REVIEW.md"
+        "PUBLIC_RELEASE_REVIEW.md",
+        "PUBLIC_REPOSITORY_IDENTITY.json"
       ],
       "publish_checks": [
         "npm run check:publication-readiness",
-        "npm run verify:repo"
+        "npm run verify:repo",
+        "npm run check:repository-identity"
       ],
       "bounded_non_claims": [
         "does not claim formal external certification beyond the local verification stack",
@@ -125,7 +129,7 @@
     {
       "id": "post-publication-signals-still-deferred",
       "status": "deferred",
-      "summary": "The repo can be published now even though external adoption, stars, issues, PR traffic, and support-program outcomes are still future signals.",
+      "summary": "The repo is already published even though external adoption, stars, issues, PR traffic, and support-program outcomes are still future signals.",
       "why_it_matters": "Publication readiness should not be confused with already having a mature public operating history.",
       "strongest_current_surfaces": [
         "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
@@ -145,11 +149,12 @@
     }
   ],
   "non_claims": [
-    "This file does not claim that the repo has already been published to GitHub.",
-    "This file does not claim that publication readiness equals adoption, traction, or acceptance by any support program."
+    "This file does not claim that publication alone proves traction, adoption, or support-program acceptance.",
+    "This file does not claim that publication coherence equals hosted-runtime maturity or public-service availability."
   ],
   "review_commands": [
     "npm run check:publication-readiness",
-    "npm run verify:repo"
+    "npm run verify:repo",
+    "npm run check:repository-identity"
   ]
 }

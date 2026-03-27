@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/n1hub/specs/schemas/neuro-concentrate.schema.json",
+  "$id": "https://github.com/num1hub/capsule-specs/schemas/neuro-concentrate.schema.json",
   "title": "CapsuleOS Neuro Concentrate",
   "description": "Public JSON Schema for the semantic summary layer of a capsule.",
   "type": "object",

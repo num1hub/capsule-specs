@@ -50,7 +50,7 @@ function readText(relativePath) {
 }
 
 assert(ecosystemValue.version === pkg.version, 'ecosystem-value map version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-ecosystem-value-map.schema.json', 'ecosystem-value schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-ecosystem-value-map.schema.json', 'ecosystem-value schema must declare expected public $id');
 assert(typeof ecosystemValue.purpose === 'string' && ecosystemValue.purpose.length > 0, 'ecosystem-value map must define purpose');
 assert(Array.isArray(ecosystemValue.value_families) && ecosystemValue.value_families.length >= requiredIds.length, 'ecosystem-value map must define expected value families');
 assert(Array.isArray(ecosystemValue.non_claims) && ecosystemValue.non_claims.length >= 2, 'ecosystem-value map must define non-claims');

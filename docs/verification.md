@@ -67,7 +67,9 @@ This executes all repository-local checks in the expected order.
 - `npm run check:program-fit`
   Verifies `PUBLIC_PROGRAM_FIT_MAP.json`, the bounded reviewer/program-fit layer, and the surrounding profile / evaluation / release references.
 - `npm run check:publication-readiness`
-  Verifies `PUBLIC_PUBLICATION_READINESS.json`, the bounded pre-publish readiness layer, and the surrounding profile / evaluation / release references.
+  Verifies `PUBLIC_PUBLICATION_READINESS.json`, the bounded publication-state layer, and the surrounding profile / evaluation / release references.
+- `npm run check:repository-identity`
+  Verifies `PUBLIC_REPOSITORY_IDENTITY.json`, canonical repo/package/release identity, schema `$id` alignment, example URI alignment, and published GitHub URL consistency.
 - `npm run check:docs`
   Verifies Markdown links across the public documentation surface.
 - `npm run check:catalog`

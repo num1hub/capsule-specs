@@ -8,7 +8,9 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
    Understand what the repository publishes and what it intentionally excludes.
 2. Read [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
    Get a machine-readable snapshot of maintainer ownership, public-surface counts, and health signals.
-3. Read [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
+3. Read [`../PUBLIC_REPOSITORY_IDENTITY.json`](../PUBLIC_REPOSITORY_IDENTITY.json)
+   Confirm the canonical public slug, package identity, release URL, and schema/example URL alignment rules.
+4. Read [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
    Use the condensed external-review packet when you need the shortest bounded summary of scope, strongest evidence, and review commands.
 4. Read [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
    See which boundaries are published here and which ones remain intentionally deferred.
@@ -57,7 +59,7 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
 26. Read [`../PUBLIC_PROGRAM_FIT_MAP.json`](../PUBLIC_PROGRAM_FIT_MAP.json)
    Confirm why this public surface is already credible for OSS-support and reviewer-program evaluation without treating that as proof of acceptance.
 27. Read [`../PUBLIC_PUBLICATION_READINESS.json`](../PUBLIC_PUBLICATION_READINESS.json)
-   Confirm why this repo is already safe and legible to publish publicly while keeping adoption and support-program outcomes explicitly out of scope.
+   Confirm why this repo is already coherent as a published public surface while keeping adoption and support-program outcomes explicitly out of scope.
 28. Read [`release-evidence.md`](release-evidence.md)
    See how provenance, release review, and verification evidence fit together.
 29. Read [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
@@ -72,6 +74,7 @@ Use this guide when you need to assess the repository quickly as a reviewer, gra
 If you only have a few minutes, inspect these surfaces first:
 
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
+- [`../PUBLIC_REPOSITORY_IDENTITY.json`](../PUBLIC_REPOSITORY_IDENTITY.json)
 - [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
 - [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)

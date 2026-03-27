@@ -29,7 +29,7 @@ const actualCapsuleFiles = fs.readdirSync(exampleDir).filter((name) => name.ends
 const actualApiFiles = fs.readdirSync(apiDir).filter((name) => name.endsWith('.json'));
 
 assert(coverage.version === pkg.version, 'example coverage version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-example-coverage.schema.json', 'example coverage schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-example-coverage.schema.json', 'example coverage schema must declare expected public $id');
 assert(coverage.summary?.capsule_examples === actualCapsuleFiles.length, 'example coverage capsule count must match actual top-level capsule examples');
 assert(coverage.summary?.api_examples === actualApiFiles.length, 'example coverage API count must match actual API example files');
 assert(coverage.summary?.positive_capsules === 4, 'example coverage positive_capsules must stay at 4');

@@ -60,7 +60,10 @@ const repoLocalCheckCount = Object.keys(pkg.scripts || {}).filter((name) => name
 const upstreamValidatorCheckCount = (releaseMetadata.upstream_validator_checks || []).length;
 
 assert(profile.profile_version === pkg.version, 'PUBLIC_PROJECT_PROFILE.json profile_version must match package.json version');
+assert(profile.repository_identity?.owner === 'num1hub', 'project profile owner must be num1hub');
+assert(profile.repository_identity?.name === 'capsule-specs', 'project profile repo name must be capsule-specs');
 assert(profile.repository_identity?.package_name === pkg.name, 'project profile package_name must match package.json name');
+assert(profile.repository_identity?.homepage === 'https://github.com/num1hub/capsule-specs', 'project profile homepage must match the canonical public repo URL');
 assert(profile.repository_identity?.license === pkg.license, 'project profile license must match package.json license');
 assert(profile.repository_identity?.primary_maintainer === 'egor-n1', 'project profile primary_maintainer must be egor-n1');
 
@@ -78,6 +81,7 @@ assert(profile.health_signals?.community_files_present === true, 'project profil
 assert(profile.health_signals?.issue_templates_present === true, 'project profile must mark issue_templates_present true');
 assert(profile.health_signals?.pull_request_template_present === true, 'project profile must mark pull_request_template_present true');
 assert(profile.health_signals?.machine_readable_project_profile_present === true, 'project profile must mark machine_readable_project_profile_present true');
+assert(profile.health_signals?.machine_readable_repository_identity_present === true, 'project profile must mark machine_readable_repository_identity_present true');
 assert(profile.health_signals?.machine_readable_capability_matrix_present === true, 'project profile must mark machine_readable_capability_matrix_present true');
 assert(profile.health_signals?.machine_readable_boundary_map_present === true, 'project profile must mark machine_readable_boundary_map_present true');
 assert(profile.health_signals?.machine_readable_portability_profile_present === true, 'project profile must mark machine_readable_portability_profile_present true');
@@ -135,6 +139,7 @@ assert(profile.reviewer_shortcuts?.ecosystem_value_map === 'PUBLIC_ECOSYSTEM_VAL
 assert(profile.reviewer_shortcuts?.evidence_gaps === 'PUBLIC_EVIDENCE_GAPS_REGISTER.json', 'project profile evidence_gaps shortcut must point to PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(profile.reviewer_shortcuts?.program_fit_map === 'PUBLIC_PROGRAM_FIT_MAP.json', 'project profile program_fit_map shortcut must point to PUBLIC_PROGRAM_FIT_MAP.json');
 assert(profile.reviewer_shortcuts?.publication_readiness === 'PUBLIC_PUBLICATION_READINESS.json', 'project profile publication_readiness shortcut must point to PUBLIC_PUBLICATION_READINESS.json');
+assert(profile.reviewer_shortcuts?.repository_identity === 'PUBLIC_REPOSITORY_IDENTITY.json', 'project profile repository_identity shortcut must point to PUBLIC_REPOSITORY_IDENTITY.json');
 assert(profile.reviewer_shortcuts?.capability_matrix === 'PUBLIC_CAPABILITY_MATRIX.json', 'project profile capability_matrix shortcut must point to PUBLIC_CAPABILITY_MATRIX.json');
 assert(profile.reviewer_shortcuts?.project_profile === 'PUBLIC_PROJECT_PROFILE.json', 'project profile project_profile shortcut must point to itself');
 assert(profile.program_readiness?.active_maintenance_timeline_explicit === true, 'project profile must mark active_maintenance_timeline_explicit true');
@@ -148,6 +153,8 @@ assert(profile.program_readiness?.ecosystem_value_explicit === true, 'project pr
 assert(profile.program_readiness?.evidence_gaps_explicit === true, 'project profile must mark evidence_gaps_explicit true');
 assert(profile.program_readiness?.program_fit_explicit === true, 'project profile must mark program_fit_explicit true');
 assert(profile.program_readiness?.publication_readiness_explicit === true, 'project profile must mark publication_readiness_explicit true');
+assert(profile.program_readiness?.repository_identity_explicit === true, 'project profile must mark repository_identity_explicit true');
+assert(profile.purpose?.publishes?.includes('machine-readable repository-identity summaries'), 'project profile publishes must include machine-readable repository-identity summaries');
 assert(profile.purpose?.publishes?.includes('machine-readable freshness summaries'), 'project profile publishes must include machine-readable freshness summaries');
 assert(profile.purpose?.publishes?.includes('machine-readable ecosystem-value summaries'), 'project profile publishes must include machine-readable ecosystem-value summaries');
 assert(profile.purpose?.publishes?.includes('machine-readable public-evidence-gap summaries'), 'project profile publishes must include machine-readable public-evidence-gap summaries');
@@ -182,6 +189,7 @@ assert(readme.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'README.md must menti
 assert(readme.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'README.md must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(readme.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'README.md must mention PUBLIC_PROGRAM_FIT_MAP.json');
 assert(readme.includes('PUBLIC_PUBLICATION_READINESS.json'), 'README.md must mention PUBLIC_PUBLICATION_READINESS.json');
+assert(readme.includes('PUBLIC_REPOSITORY_IDENTITY.json'), 'README.md must mention PUBLIC_REPOSITORY_IDENTITY.json');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
 assert(reviewerGuide.includes('PUBLIC_PROJECT_PROFILE.json'), 'reviewer guide must mention PUBLIC_PROJECT_PROFILE.json');
 assert(reviewerGuide.includes('PUBLIC_BOUNDARY_MAP.json'), 'reviewer guide must mention PUBLIC_BOUNDARY_MAP.json');
@@ -209,6 +217,7 @@ assert(reviewerGuide.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'reviewer guid
 assert(reviewerGuide.includes('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'reviewer guide must mention PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(reviewerGuide.includes('PUBLIC_PROGRAM_FIT_MAP.json'), 'reviewer guide must mention PUBLIC_PROGRAM_FIT_MAP.json');
 assert(reviewerGuide.includes('PUBLIC_PUBLICATION_READINESS.json'), 'reviewer guide must mention PUBLIC_PUBLICATION_READINESS.json');
+assert(reviewerGuide.includes('PUBLIC_REPOSITORY_IDENTITY.json'), 'reviewer guide must mention PUBLIC_REPOSITORY_IDENTITY.json');
 assert(reviewerGuide.includes('PUBLIC_CONTRACT_CATALOG.json'), 'reviewer guide must mention PUBLIC_CONTRACT_CATALOG.json');
 assert(reviewerGuide.includes('PUBLIC_RELEASE_METADATA.json'), 'reviewer guide must mention PUBLIC_RELEASE_METADATA.json');
 

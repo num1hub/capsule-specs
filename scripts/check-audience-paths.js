@@ -28,7 +28,7 @@ function exists(relativePath) {
 }
 
 assert(audiencePaths.version === pkg.version, 'audience-paths version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-audience-paths.schema.json', 'audience-paths schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-audience-paths.schema.json', 'audience-paths schema must declare expected public $id');
 assert(typeof audiencePaths.purpose === 'string' && audiencePaths.purpose.length > 0, 'audience paths must define purpose');
 assert(Array.isArray(audiencePaths.audiences) && audiencePaths.audiences.length >= requiredIds.length, 'audience paths must define the expected audience set');
 assert(Array.isArray(audiencePaths.review_commands) && audiencePaths.review_commands.length >= 1, 'audience paths must define review commands');

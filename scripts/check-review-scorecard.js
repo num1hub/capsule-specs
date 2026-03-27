@@ -49,7 +49,7 @@ function exists(relativePath) {
 }
 
 assert(scorecard.version === pkg.version, 'review scorecard version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-review-scorecard.schema.json', 'review-scorecard schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-review-scorecard.schema.json', 'review-scorecard schema must declare expected public $id');
 assert(typeof scorecard.purpose === 'string' && scorecard.purpose.length > 0, 'review scorecard must define purpose');
 assert(Array.isArray(scorecard.criteria) && scorecard.criteria.length >= requiredIds.length, 'review scorecard must define expected criteria set');
 assert(Array.isArray(scorecard.important_limits) && scorecard.important_limits.length >= 2, 'review scorecard must define important limits');

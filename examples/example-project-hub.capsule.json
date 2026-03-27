@@ -11,7 +11,7 @@
     "name": "Example Project Hub Capsule",
     "semantic_hash": "example-projecthub-public-specs-linked-graph-reference-shape",
     "source": {
-      "uri": "https://github.com/n1hub/specs/examples/example-project-hub.capsule.json",
+      "uri": "https://github.com/num1hub/capsule-specs/examples/example-project-hub.capsule.json",
       "type": "generated_public_example"
     }
   },

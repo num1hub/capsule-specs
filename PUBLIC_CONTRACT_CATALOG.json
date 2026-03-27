@@ -2531,6 +2531,68 @@
         "npm run check:publication-readiness",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "governance.repository-identity-doc",
+      "path": "docs/repository-identity.md",
+      "kind": "governance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:repository-identity",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.repository-identity-map",
+      "path": "PUBLIC_REPOSITORY_IDENTITY.json",
+      "kind": "provenance",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:repository-identity",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
+      "id": "governance.repository-identity-schema",
+      "path": "schemas/public-repository-identity.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:repository-identity",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.repository-identity-check",
+      "path": "scripts/check-repository-identity.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:repository-identity",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

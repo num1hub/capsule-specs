@@ -2,9 +2,9 @@
   "version": "0.1.0",
   "reviewed_at": "2026-03-26",
   "repository_identity": {
-    "owner": "n1hub",
-    "name": "specs",
-    "homepage": "https://github.com/n1hub/specs",
+    "owner": "num1hub",
+    "name": "capsule-specs",
+    "homepage": "https://github.com/num1hub/capsule-specs",
     "license": "Apache-2.0",
     "primary_maintainer": "egor-n1"
   },
@@ -17,6 +17,7 @@
     "README.md",
     "docs/reviewer-guide.md",
     "PUBLIC_PROJECT_PROFILE.json",
+    "PUBLIC_REPOSITORY_IDENTITY.json",
     "PUBLIC_REVIEW_SCORECARD.json",
     "PUBLIC_VERIFICATION_MATRIX.json",
     "PUBLIC_AUDIENCE_PATHS.json",
@@ -63,6 +64,7 @@
     "governance_and_review": [
       "docs/reviewer-guide.md",
       "docs/public-contract-index.md",
+      "docs/repository-identity.md",
       "docs/projection-doctrine.md",
       "docs/domain-boundaries.md",
       "docs/portability.md",
@@ -88,6 +90,7 @@
     ],
     "machine_readable_evidence": [
       "PUBLIC_CONTRACT_CATALOG.json",
+      "PUBLIC_REPOSITORY_IDENTITY.json",
       "PUBLIC_PROJECT_PROFILE.json",
       "PUBLIC_CAPABILITY_MATRIX.json",
       "PUBLIC_BOUNDARY_MAP.json",
@@ -142,7 +145,8 @@
     "The repo makes major public design decisions explicit through a bounded decision log instead of forcing reviewers to reverse-engineer intent from tree shape alone.",
     "The repo makes still-open public evidence gaps explicit instead of letting a polished public surface imply maturity that is not yet publicly proven.",
     "The repo makes reviewer/program-fit explicit through a bounded machine-readable layer instead of forcing outside evaluators to infer OSS-support readiness from polish, counts, or aspiration.",
-    "The repo makes publication readiness explicit through a bounded machine-readable layer instead of forcing maintainers or reviewers to infer GitHub-publication safety from polish, tree shape, or aspiration."
+    "The repo makes publication readiness explicit through a bounded machine-readable layer instead of forcing maintainers or reviewers to infer GitHub-publication safety from polish, tree shape, or aspiration.",
+    "The repo makes canonical public-repo identity explicit through a bounded machine-readable layer instead of letting package metadata, schema IDs, example URIs, or reviewer summaries drift across renamed slugs."
   ],
   "non_claims": [
     "This packet does not claim to expose the full private N1Hub runtime.",
@@ -151,6 +155,7 @@
   ],
   "residual_risk_surfaces": [
     "PUBLIC_RELEASE_REVIEW.md",
+    "PUBLIC_REPOSITORY_IDENTITY.json",
     "PUBLIC_RELEASE_METADATA.json",
     "PUBLIC_FRESHNESS_MODEL.json",
     "PUBLIC_ECOSYSTEM_VALUE_MAP.json",

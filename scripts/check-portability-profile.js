@@ -33,8 +33,8 @@ function exists(relativePath) {
 }
 
 assert(profile.version === pkg.version, 'portability profile version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-portability-profile.schema.json', 'portability profile schema must declare expected public $id');
-assert(archiveSchema.$id === 'https://github.com/n1hub/specs/schemas/archive-bundle.schema.json', 'archive-bundle schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-portability-profile.schema.json', 'portability profile schema must declare expected public $id');
+assert(archiveSchema.$id === 'https://github.com/num1hub/capsule-specs/schemas/archive-bundle.schema.json', 'archive-bundle schema must declare expected public $id');
 
 assert(Array.isArray(profile.principles) && profile.principles.length >= 3, 'portability profile must define principles');
 assert(Array.isArray(profile.trust_requirements) && profile.trust_requirements.length >= 3, 'portability profile must define trust requirements');

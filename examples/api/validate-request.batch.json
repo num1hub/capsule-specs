@@ -13,7 +13,7 @@
         "name": "Example Note Capsule",
         "semantic_hash": "example-note-capsule-public-specs-valid-reference-shape",
         "source": {
-          "uri": "https://github.com/n1hub/specs/examples/example-note.capsule.json",
+          "uri": "https://github.com/num1hub/capsule-specs/examples/example-note.capsule.json",
           "type": "generated_public_example"
         }
       },
@@ -61,7 +61,7 @@
         "name": "Example Validator Invalid G16 Capsule",
         "semantic_hash": "example-validator-invalid-g16-public-capsule-integrity-failure",
         "source": {
-          "uri": "https://github.com/n1hub/specs/examples/example-validator-invalid-g16.capsule.json",
+          "uri": "https://github.com/num1hub/capsule-specs/examples/example-validator-invalid-g16.capsule.json",
           "type": "generated_public_example"
         }
       },

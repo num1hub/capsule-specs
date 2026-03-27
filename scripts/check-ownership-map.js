@@ -24,7 +24,7 @@ function exists(relativePath) {
 }
 
 assert(map.version === pkg.version, 'ownership map version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-ownership-map.schema.json', 'ownership schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-ownership-map.schema.json', 'ownership schema must declare expected public $id');
 assert(Array.isArray(map.ownership_groups) && map.ownership_groups.length >= 5, 'ownership map must define ownership groups');
 assert(Array.isArray(map.non_claims) && map.non_claims.length >= 2, 'ownership map must define non-claims');
 assert(Array.isArray(map.review_commands) && map.review_commands.length >= 1, 'ownership map must define review commands');

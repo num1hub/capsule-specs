@@ -16,6 +16,8 @@ This repository includes a compact evaluation packet for external reviewers, pro
 - [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
 - [`reviewer-guide.md`](reviewer-guide.md)
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
+- [`repository-identity.md`](repository-identity.md)
+- [`../PUBLIC_REPOSITORY_IDENTITY.json`](../PUBLIC_REPOSITORY_IDENTITY.json)
 - [`../PUBLIC_EXAMPLE_COVERAGE.json`](../PUBLIC_EXAMPLE_COVERAGE.json)
 - [`../PUBLIC_MAINTENANCE_MODEL.json`](../PUBLIC_MAINTENANCE_MODEL.json)
 - [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json)
@@ -71,6 +73,8 @@ The decision-log layer strengthens that path further by making the major public 
 
 The program-fit layer strengthens that path further by making reviewer/program fit explicit as a bounded, artifact-backed claim instead of forcing outside evaluators to infer it from repo polish, raw counts, or maintainer intent alone.
 
-The publication-readiness layer closes that loop by making pre-publish safety and GitHub-publication readiness explicit as a bounded, artifact-backed claim instead of forcing reviewers to infer public-release readiness from repo polish or tree shape alone.
+The repository-identity layer closes part of that loop by making the canonical public slug, package identity, release URL, and schema/example URL alignment explicit instead of leaving reviewers to infer which public surface is canonical. See [`docs/repository-identity.md`](repository-identity.md) and [`../PUBLIC_REPOSITORY_IDENTITY.json`](../PUBLIC_REPOSITORY_IDENTITY.json).
+
+The publication-readiness layer closes the rest by making publication-state safety and GitHub-publication coherence explicit as a bounded, artifact-backed claim instead of forcing reviewers to infer public-release trust from repo polish or tree shape alone.
 
 The evidence-gaps layer strengthens that path further by making still-open public proof gaps explicit instead of forcing reviewers or programs to guess where maturity is already well evidenced and where it is not yet.

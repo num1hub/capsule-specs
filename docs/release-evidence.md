@@ -19,6 +19,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Structured map of the public contract surface and its verification paths.
 - [`../PUBLIC_PROJECT_PROFILE.json`](../PUBLIC_PROJECT_PROFILE.json)
   Machine-readable reviewer/program profile for fast external evaluation.
+- [`../PUBLIC_REPOSITORY_IDENTITY.json`](../PUBLIC_REPOSITORY_IDENTITY.json)
+  Machine-readable map of the canonical GitHub slug, package identity, release URL, and schema/example URL alignment rules.
 - [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
   Machine-readable fast-review packet for bounded external evaluation.
 - [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)
@@ -62,7 +64,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../PUBLIC_PROGRAM_FIT_MAP.json`](../PUBLIC_PROGRAM_FIT_MAP.json)
   Machine-readable map of why this public surface is reviewer/program-credible today without treating that as proof of support-program acceptance.
 - [`../PUBLIC_PUBLICATION_READINESS.json`](../PUBLIC_PUBLICATION_READINESS.json)
-  Machine-readable map of why this public surface is already ready for GitHub publication without treating publication itself as proof of adoption, approval, or hosted-runtime maturity.
+  Machine-readable map of why this public surface remains coherent after publication without treating publication itself as proof of adoption, approval, or hosted-runtime maturity.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Machine-readable map from public claims to strongest surfaces and verification commands.
 - [`../PUBLIC_CAPABILITY_MATRIX.json`](../PUBLIC_CAPABILITY_MATRIX.json)

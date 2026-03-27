@@ -24,7 +24,7 @@ function exists(relativePath) {
 }
 
 assert(model.version === pkg.version, 'change-control model version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-change-control-model.schema.json', 'change-control schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-change-control-model.schema.json', 'change-control schema must declare expected public $id');
 assert(model.stability_phase === '0.x', 'change-control model stability_phase must be 0.x');
 assert(Array.isArray(model.change_classes) && model.change_classes.length >= 4, 'change-control model must define change classes');
 assert(Array.isArray(model.deprecation_rules) && model.deprecation_rules.length >= 2, 'change-control model must define deprecation rules');

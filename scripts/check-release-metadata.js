@@ -190,6 +190,10 @@ assert(
   'release metadata must include the publication-readiness verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:repository-identity'),
+  'release metadata must include the repository-identity verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:project-profile'),
   'release metadata must include the project-profile verification check'
 );
@@ -256,6 +260,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_ASSURANCE_CASE.json')),
   'release metadata residual risks must mention PUBLIC_ASSURANCE_CASE.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_REPOSITORY_IDENTITY.json')),
+  'release metadata residual risks must mention PUBLIC_REPOSITORY_IDENTITY.json'
 );
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_UPDATE_COHERENCE_MAP.json')),

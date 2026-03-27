@@ -24,7 +24,7 @@ function exists(relativePath) {
 }
 
 assert(model.version === pkg.version, 'maintenance model version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-maintenance-model.schema.json', 'maintenance-model schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-maintenance-model.schema.json', 'maintenance-model schema must declare expected public $id');
 assert(model.primary_maintainer === 'egor-n1', 'maintenance model primary_maintainer must be egor-n1');
 assert(Array.isArray(model.supported_channels) && model.supported_channels.length >= 3, 'maintenance model must define supported channels');
 assert(Array.isArray(model.change_classes) && model.change_classes.length >= 4, 'maintenance model must define change classes');

@@ -406,7 +406,7 @@
       ]
     },
     {
-      "id": "publication-readiness-and-pre-publish-safety",
+      "id": "publication-state-and-safety",
       "summary": "Protects bounded publication-readiness claims so maintainers and reviewers can see why this public surface is safe to publish without mistaking that for proof of adoption, approval, or hosted-service maturity.",
       "commands": [
         "npm run check:publication-readiness",

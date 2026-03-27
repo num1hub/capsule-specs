@@ -35,7 +35,7 @@ const requiredIds = [
   'inspect-ecosystem-value-and-external-utility',
   'inspect-public-evidence-gaps-and-review-needs',
   'assess-program-fit-for-oss-support-review',
-  'assess-pre-publish-publication-readiness',
+  'assess-publication-state-and-safety',
   'trace-public-claims-end-to-end',
   'understand-projection-and-domain-boundaries',
   'evaluate-portability-and-import-trust',
@@ -65,7 +65,7 @@ const catalogPaths = new Set(catalog.entries.map((entry) => entry.path));
 const ids = new Set();
 
 assert(matrix.matrix_version === pkg.version, 'capability matrix version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-capability-matrix.schema.json', 'capability matrix schema must declare the expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-capability-matrix.schema.json', 'capability matrix schema must declare the expected public $id');
 assert(Array.isArray(matrix.capabilities) && matrix.capabilities.length >= requiredIds.length, 'capability matrix must contain the expected capability set');
 
 for (const capability of matrix.capabilities || []) {

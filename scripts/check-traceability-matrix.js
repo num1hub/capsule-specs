@@ -33,7 +33,7 @@ const requiredIds = [
   'ecosystem-value-and-external-utility',
   'explicit-public-evidence-gaps',
   'bounded-program-fit-for-reviewers-and-programs',
-  'bounded-publication-readiness-and-pre-publish-safety'
+  'bounded-publication-state-and-safety'
 ];
 
 const allowedAudiences = new Set(['contributors', 'integrators', 'tool-builders', 'reviewers', 'maintainers']);
@@ -52,7 +52,7 @@ function exists(relativePath) {
 }
 
 assert(traceability.version === pkg.version, 'traceability matrix version must match package.json version');
-assert(schema.$id === 'https://github.com/n1hub/specs/schemas/public-traceability-matrix.schema.json', 'traceability schema must declare expected public $id');
+assert(schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-traceability-matrix.schema.json', 'traceability schema must declare expected public $id');
 assert(Array.isArray(traceability.traces) && traceability.traces.length >= requiredIds.length, 'traceability matrix must contain the expected trace set');
 assert(Array.isArray(traceability.non_claims) && traceability.non_claims.length >= 2, 'traceability matrix must define non-claims');
 assert(Array.isArray(traceability.review_commands) && traceability.review_commands.length >= 1, 'traceability matrix must define review commands');

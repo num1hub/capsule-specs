@@ -11,7 +11,7 @@
     "name": "Example Validator Valid Capsule",
     "semantic_hash": "example-validator-valid-public-specs-capsule-reference-shape",
     "source": {
-      "uri": "https://github.com/n1hub/specs/examples/example-validator-valid.capsule.json",
+      "uri": "https://github.com/num1hub/capsule-specs/examples/example-validator-valid.capsule.json",
       "type": "generated_public_example"
     }
   },

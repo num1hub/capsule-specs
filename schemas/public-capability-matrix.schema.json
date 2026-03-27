@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/n1hub/specs/schemas/public-capability-matrix.schema.json",
+  "$id": "https://github.com/num1hub/capsule-specs/schemas/public-capability-matrix.schema.json",
   "title": "N1Hub Public Capability Matrix",
   "description": "Machine-readable matrix of what an external reader, contributor, integrator, or reviewer can do with the public N1Hub specs repository.",
   "type": "object",
