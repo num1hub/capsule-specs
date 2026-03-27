@@ -41,7 +41,7 @@
 - machine-readable publication-readiness map in `PUBLIC_PUBLICATION_READINESS.json` plus a bounded publication-state and public-release safety guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
-- public-safe TypeScript and Zod projection files plus source-level consumer recipe examples
+- public-safe TypeScript and Zod projection files for capsule and validator API contracts plus source-level consumer recipe examples
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
 - client recipes and trust-model docs for external consumers
@@ -113,7 +113,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `237` files / `237` manifest entries
+- manifest coverage: `241` files / `241` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -156,4 +156,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_EVIDENCE_GAPS_REGISTER.json` is a bounded maturity-gap summary and must stay subordinate to stronger release evidence, limitations, freshness, adoption, and ecosystem-value surfaces it references
 - `PUBLIC_PROGRAM_FIT_MAP.json` is a bounded reviewer/program-fit summary and must stay subordinate to stronger project-profile, evaluation, verification, ecosystem-value, evidence-gap, and release-evidence surfaces it references
 - `PUBLIC_PUBLICATION_READINESS.json` is a bounded publication-state and public-release-safety summary and must stay subordinate to stronger front-door, boundary, verification, evidence-gap, and release-evidence surfaces it references
-- `projections/typescript/capsule.ts`, `projections/zod/capsule.ts`, and the source-level client recipe examples are public-safe convenience projections and must stay subordinate to the stronger JSON Schema, OpenAPI, and live validator behavior they align to
+- `projections/typescript/capsule.ts`, `projections/typescript/validator-api.ts`, `projections/zod/capsule.ts`, `projections/zod/validator-api.ts`, and the source-level client recipe examples are public-safe convenience projections and must stay subordinate to the stronger JSON Schema, OpenAPI, curated API examples, and live validator behavior they align to

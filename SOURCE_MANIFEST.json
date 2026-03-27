@@ -175,10 +175,14 @@
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces"
+    "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; synchronized with validator API type-projection surfaces"
   },
   "CITATION.cff": {
     "source_paths": [],
@@ -261,10 +265,13 @@
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
       "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
-      "/home/n1/codex-workspace/docs/failure-model.md"
+      "/home/n1/codex-workspace/docs/failure-model.md",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/docs/type-projections.md"
     ],
     "transformation_type": "generated",
-    "notes": "Public integrator guide to validator HTTP envelopes and sample payloads."
+    "notes": "Public integrator guide to validator HTTP envelopes and sample payloads.; API envelope guide synchronized with source-level validator projections"
   },
   "docs/archive-bundles.md": {
     "source_paths": [
@@ -384,10 +391,12 @@
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide to the capability matrix and supported public outcomes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; capability guide synchronized with source-level type projections"
+    "notes": "Human-readable guide to the capability matrix and supported public outcomes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; capability guide synchronized with source-level type projections; capability guide synchronized with validator API source-level projections"
   },
   "docs/change-control.md": {
     "source_paths": [
@@ -409,10 +418,14 @@
       "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
-      "/home/n1/codex-workspace/docs/type-projections.md"
+      "/home/n1/codex-workspace/docs/type-projections.md",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Consumer-oriented curl and Node usage guide for the validator HTTP surface.; client recipes synchronized with source-level type recipes"
+    "notes": "Consumer-oriented curl and Node usage guide for the validator HTTP surface.; client recipes synchronized with source-level type recipes; client recipes synchronized with validator API source-level recipes"
   },
   "docs/community-health.md": {
     "source_paths": [
@@ -769,10 +782,12 @@
       "/home/n1/codex-workspace/scripts/check-freshness.js",
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Recommended integration path across schema, examples, graph validation, and HTTP envelopes.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; integration guide synchronized with source-level type projections"
+    "notes": "Recommended integration path across schema, examples, graph validation, and HTTP envelopes.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; integration guide synchronized with source-level type projections; integration guide synchronized with validator API source-level projections"
   },
   "docs/limitations-register.md": {
     "source_paths": [
@@ -950,10 +965,12 @@
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/README.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces"
+    "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; contract index synchronized with validator API source-level projections"
   },
   "docs/publication-readiness.md": {
     "source_paths": [
@@ -1056,10 +1073,14 @@
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release evidence synchronized with public type-projection surfaces"
+    "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release evidence synchronized with public type-projection surfaces; release evidence synchronized with validator API projection surfaces"
   },
   "docs/repository-identity.md": {
     "source_paths": [
@@ -1420,10 +1441,14 @@
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/docs/type-projections.md",
-      "/home/n1/codex-workspace/tsconfig.json"
+      "/home/n1/codex-workspace/tsconfig.json",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; verification docs synchronized with type-projection checks"
+    "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; verification docs synchronized with type-projection checks; verification docs synchronized with validator API projection and recipe surfaces"
   },
   "examples/api/conflict-response.sample.json": {
     "source_paths": [],
@@ -1585,10 +1610,12 @@
     "source_paths": [
       "/home/n1/codex-workspace/docs/client-recipes.md",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
-      "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts"
+      "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Directory guide for curl and Node consumer recipe snippets.; client recipe guide synchronized with source-level type recipes"
+    "notes": "Directory guide for curl and Node consumer recipe snippets.; client recipe guide synchronized with source-level type recipes; client recipe guide synchronized with validator API source-level recipes"
   },
   "examples/example-known-ids.json": {
     "source_paths": [],
@@ -2748,10 +2775,14 @@
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Release review updated for verification matrix layer; manifest currently covers 183 files; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release review synchronized with public type-projection surfaces"
+    "notes": "Release review updated for verification matrix layer; manifest coverage tracked in PUBLIC_RELEASE_METADATA.json; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release review synchronized with public type-projection surfaces; release review synchronized with validator API projection surfaces"
   },
   "PUBLIC_REPOSITORY_IDENTITY.json": {
     "source_paths": [
@@ -3124,10 +3155,12 @@
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces"
+    "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; front door synchronized with public validator API projection surfaces"
   },
   "RELEASING.md": {
     "source_paths": [
@@ -3613,10 +3646,14 @@
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Repo-local consistency check for the machine-readable capability matrix.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with evidence-gaps surfaces; capability verifier synchronized with type-projection surfaces"
+    "notes": "Repo-local consistency check for the machine-readable capability matrix.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with evidence-gaps surfaces; capability verifier synchronized with type-projection surfaces; capability verifier synchronized with validator API source-level projections"
   },
   "scripts/check-change-control.js": {
     "source_paths": [
@@ -3635,10 +3672,14 @@
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local checks for curl and Node consumer recipe snippets.; client recipe verifier synchronized with type-level recipes"
+    "notes": "Repository-local checks for curl and Node consumer recipe snippets.; client recipe verifier synchronized with type-level recipes; client recipe verifier synchronized with validator API source-level recipes"
   },
   "scripts/check-community-health.js": {
     "source_paths": [
@@ -3669,10 +3710,14 @@
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
       "/home/n1/codex-workspace/projections/zod/capsule.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
-      "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts"
+      "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local validation for the machine-readable public contract catalog.; synchronized with evidence-gaps surfaces; contract catalog verifier synchronized with projection artifacts"
+    "notes": "Repository-local validation for the machine-readable public contract catalog.; synchronized with evidence-gaps surfaces; contract catalog verifier synchronized with projection artifacts; contract catalog verifier synchronized with validator API source-level projections"
   },
   "scripts/check-decision-log.js": {
     "source_paths": [
@@ -4104,10 +4149,12 @@
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with evidence-gaps surfaces; release metadata verifier synchronized with type-projection surfaces"
+    "notes": "Repository-local validation for machine-readable release metadata and legal notice coherence.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with evidence-gaps surfaces; release metadata verifier synchronized with type-projection surfaces; release metadata verifier synchronized with validator API source-level projections"
   },
   "scripts/check-repository-identity.js": {
     "source_paths": [
@@ -4199,10 +4246,12 @@
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/README.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with evidence-gaps surfaces; surface coherence synchronized with type-projection surfaces"
+    "notes": "Repository-local cross-surface coherence checks for catalog, manifest, docs, and package scripts.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with evidence-gaps surfaces; surface coherence synchronized with type-projection surfaces; surface coherence synchronized with validator API source-level projections"
   },
   "scripts/check-traceability-matrix.js": {
     "source_paths": [
@@ -4365,19 +4414,28 @@
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
       "/home/n1/codex-workspace/projections/zod/capsule.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
-      "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts"
+      "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the public-safe TypeScript and Zod projection layer and its bounded consumer recipes."
+    "notes": "Guide to the public-safe TypeScript and Zod projection layer and its bounded consumer recipes.; type-projection guide synchronized with validator API source-level surfaces"
   },
   "projections/README.md": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
     ],
     "transformation_type": "generated",
-    "notes": "Directory guide for the public-safe projection layer."
+    "notes": "Directory guide for the public-safe projection layer.; projection guide synchronized with validator API source-level surfaces"
   },
   "projections/typescript/capsule.ts": {
     "source_paths": [
@@ -4427,5 +4485,39 @@
     ],
     "transformation_type": "generated",
     "notes": "npm lockfile for the public type-projection dependency surface."
+  },
+  "projections/typescript/validator-api.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public-safe TypeScript projection for validator request and response envelopes."
+  },
+  "projections/zod/validator-api.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public-safe Zod projection for validator request and response envelopes."
+  },
+  "examples/client/ts-build-validate-request.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal TypeScript consumer recipe for a typed validator request envelope."
+  },
+  "examples/client/zod-parse-validate-response.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal Zod consumer recipe for parsing a validator response envelope."
   }
 }

@@ -6,14 +6,24 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
 
 - [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
   Public-safe TypeScript interfaces and literal unions for the capsule outer shape.
+- [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
+  Public-safe TypeScript interfaces for validator request and response envelopes.
 - [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
   Public-safe Zod projections for the same outer contract.
+- [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
+  Public-safe Zod projections for validator envelope parsing and validation.
 - [`../examples/client/ts-capsule-summary.ts`](../examples/client/ts-capsule-summary.ts)
   Minimal TypeScript consumer recipe for the published projection layer.
 - [`../examples/client/zod-parse-capsule.ts`](../examples/client/zod-parse-capsule.ts)
   Minimal Zod parsing recipe for the same public-safe projection layer.
+- [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
+  Minimal TypeScript recipe for building a validator request envelope from the published API projection.
+- [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
+  Minimal Zod recipe for parsing a validator response envelope through the public projection layer.
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
   The stronger machine-readable contract surface these projections are aligned to.
+- [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
+  The stronger machine-readable contract surface for validator request and response envelopes.
 
 ## Why this exists
 
@@ -22,11 +32,12 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - TypeScript types for editors and static tooling
 - Zod schemas for local validation and application-level parsing
 - a narrow source-level projection that stays reviewable inside the public repo
+- a public-safe source-level envelope layer for validator clients that do not want to hand-roll request and response shapes
 
 ## Important boundaries
 
 - These files are convenience projections, not the sovereign validator.
-- They intentionally cover the public outer capsule shape, not every private runtime rule.
+- They intentionally cover the public outer capsule shape and documented validator envelope layer, not every private runtime rule.
 - The live validator and the published JSON Schemas remain the stronger source of truth for edge-case semantics.
 
 ## Verification

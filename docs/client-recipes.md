@@ -36,6 +36,8 @@ Source-level consumer examples also live under [`../examples/client/`](../exampl
 
 - [`ts-capsule-summary.ts`](../examples/client/ts-capsule-summary.ts)
 - [`zod-parse-capsule.ts`](../examples/client/zod-parse-capsule.ts)
+- [`ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
+- [`zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
 
 These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema.
 

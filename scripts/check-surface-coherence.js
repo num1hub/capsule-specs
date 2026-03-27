@@ -126,7 +126,9 @@ const expectedPublicIndexLinks = [
   '../schemas/public-publication-readiness.schema.json',
   '../projections/README.md',
   '../projections/typescript/capsule.ts',
+  '../projections/typescript/validator-api.ts',
   '../projections/zod/capsule.ts',
+  '../projections/zod/validator-api.ts',
   'community-health.md',
   'client-recipes.md',
   'trust-model.md'
@@ -267,7 +269,9 @@ assert(releaseEvidenceDoc.includes('PUBLIC_BOUNDARY_MAP.json'), 'docs/release-ev
 assert(releaseEvidenceDoc.includes('PUBLIC_PORTABILITY_PROFILE.json'), 'docs/release-evidence.md must mention PUBLIC_PORTABILITY_PROFILE.json');
 assert(releaseEvidenceDoc.includes('type-projections.md'), 'docs/release-evidence.md must mention type-projections.md');
 assert(releaseEvidenceDoc.includes('projections/typescript/capsule.ts'), 'docs/release-evidence.md must mention projections/typescript/capsule.ts');
+assert(releaseEvidenceDoc.includes('projections/typescript/validator-api.ts'), 'docs/release-evidence.md must mention projections/typescript/validator-api.ts');
 assert(releaseEvidenceDoc.includes('projections/zod/capsule.ts'), 'docs/release-evidence.md must mention projections/zod/capsule.ts');
+assert(releaseEvidenceDoc.includes('projections/zod/validator-api.ts'), 'docs/release-evidence.md must mention projections/zod/validator-api.ts');
 assert(releaseEvidenceDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'docs/release-evidence.md must mention PUBLIC_EVALUATION_PACKET.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_FAILURE_MODEL.json'), 'docs/release-evidence.md must mention PUBLIC_FAILURE_MODEL.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_EXAMPLE_COVERAGE.json'), 'docs/release-evidence.md must mention PUBLIC_EXAMPLE_COVERAGE.json');

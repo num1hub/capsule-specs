@@ -146,6 +146,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - local validator-backed example checks
 - machine-readable validator API envelope schemas backed by repo-local validation
 - public-safe TypeScript and Zod projections for source-level consumers under [`projections/`](projections/)
+- public-safe TypeScript and Zod validator API envelope projections for source-level validator clients under [`projections/`](projections/)
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
 - API payload examples under [`examples/api/`](examples/api/)
 - consumer recipes under [`examples/client/`](examples/client/)
@@ -173,7 +174,7 @@ Maintainer and review policy:
 3. Read [`docs/5-element-law.md`](docs/5-element-law.md) and [`docs/16-gates.md`](docs/16-gates.md).
 4. Read [`docs/portability.md`](docs/portability.md) if you need the public portability / archive trust posture.
 5. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
-6. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), and [`projections/zod/capsule.ts`](projections/zod/capsule.ts) if you need source-level consumer artifacts in addition to raw JSON Schema.
+6. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
 7. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
 8. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
 9. Inspect [`PUBLIC_EXAMPLE_COVERAGE.json`](PUBLIC_EXAMPLE_COVERAGE.json) if you want the bounded map from examples to covered routes, law surfaces, and negative paths.

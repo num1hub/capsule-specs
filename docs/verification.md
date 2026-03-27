@@ -110,7 +110,7 @@ Serious public changes should not be considered complete until:
 - `npm run verify:repo` passes
 - changed examples or contracts are rechecked against the live validator where applicable
 - `CHANGELOG.md`, `PUBLIC_RELEASE_REVIEW.md`, `PUBLIC_RELEASE_METADATA.json`, and `PUBLIC_CONTRACT_CATALOG.json` stay aligned
-- `projections/`, `docs/type-projections.md`, and the source-level client recipe examples stay aligned with `schemas/capsule-schema.json`
+- `projections/`, `docs/type-projections.md`, and the source-level client recipe examples stay aligned with `schemas/capsule-schema.json`, `schemas/validator-api-envelopes.schema.json`, and the validator API example surfaces
 - `PUBLIC_PROJECT_PROFILE.json` stays aligned with the real repository shape and reviewer-facing docs
 - `PUBLIC_CAPABILITY_MATRIX.json` stays aligned with the real public artifacts and supported user outcomes
 - `PUBLIC_BOUNDARY_MAP.json` stays aligned with the published-vs-deferred boundary posture and its doctrine docs

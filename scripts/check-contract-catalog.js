@@ -167,9 +167,13 @@ const requiredIds = [
   'docs.type-projections',
   'projection.readme',
   'projection.typescript-capsule',
+  'projection.typescript-validator-api',
   'projection.zod-capsule',
+  'projection.zod-validator-api',
   'examples.client.ts-capsule-summary',
-  'examples.client.zod-parse-capsule'
+  'examples.client.zod-parse-capsule',
+  'examples.client.ts-build-validate-request',
+  'examples.client.zod-parse-validate-response'
 ];
 
 for (const requiredId of requiredIds) {

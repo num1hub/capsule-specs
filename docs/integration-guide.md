@@ -18,6 +18,8 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 - [`type-projections.md`](type-projections.md)
 - [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
 - [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
+- [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
+- [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
 
 These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
 

@@ -82,14 +82,15 @@
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
         "docs/api-envelopes.md",
-        "docs/client-recipes.md",
-        "examples/client/node-validate-single.mjs"
+        "projections/typescript/validator-api.ts",
+        "projections/zod/validator-api.ts"
       ],
       "supporting_surfaces": [
-        "docs/route-reference.md",
+        "docs/client-recipes.md",
+        "examples/client/ts-build-validate-request.ts",
+        "examples/client/zod-parse-validate-response.ts",
         "examples/api/validate-request.single.json",
-        "examples/api/validate-request.batch.json",
-        "examples/api/validate-request.fix.json"
+        "examples/api/validate-response.pass.json"
       ],
       "verify_commands": [
         "npm run check:api-examples",
@@ -102,16 +103,19 @@
       "id": "consume-source-level-type-projections",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume the published capsule outer contract through public-safe TypeScript interfaces and Zod parsing artifacts instead of reverse-engineering shape from prose alone.",
+      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces and Zod parsing artifacts instead of reverse-engineering shape from prose alone.",
       "strongest_surfaces": [
         "docs/type-projections.md",
         "projections/typescript/capsule.ts",
+        "projections/typescript/validator-api.ts",
         "projections/zod/capsule.ts",
-        "schemas/capsule-schema.json"
+        "projections/zod/validator-api.ts"
       ],
       "supporting_surfaces": [
         "examples/client/ts-capsule-summary.ts",
         "examples/client/zod-parse-capsule.ts",
+        "examples/client/ts-build-validate-request.ts",
+        "examples/client/zod-parse-validate-response.ts",
         "docs/schema-reference.md",
         "docs/client-recipes.md"
       ],

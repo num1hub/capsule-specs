@@ -2787,6 +2787,64 @@
         "npm run check:client-recipes",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "projection.typescript-validator-api",
+      "path": "projections/typescript/validator-api.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "projection.zod-validator-api",
+      "path": "projections/zod/validator-api.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-build-validate-request",
+      "path": "examples/client/ts-build-validate-request.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.zod-parse-validate-response",
+      "path": "examples/client/zod-parse-validate-response.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

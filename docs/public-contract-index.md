@@ -130,7 +130,9 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../schemas/public-portability-profile.schema.json`](../schemas/public-portability-profile.schema.json)
 - [`../projections/README.md`](../projections/README.md)
 - [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
+- [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
 - [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
+- [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
 
 ## Examples
 

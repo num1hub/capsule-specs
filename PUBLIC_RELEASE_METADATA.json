@@ -6,11 +6,11 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 237,
-    "manifest_entries": 237
+    "files": 241,
+    "manifest_entries": 241
   },
   "surface_summary": {
-    "catalog_entries": 186,
+    "catalog_entries": 190,
     "example_capsules": 5,
     "api_example_files": 13,
     "markdown_files": 84
@@ -113,14 +113,6 @@
       "status": "pass"
     },
     {
-      "command": "npm run check:ecosystem-value",
-      "status": "pass"
-    },
-    {
-      "command": "npm run check:decision-log",
-      "status": "pass"
-    },
-    {
       "command": "npm run check:evidence-gaps",
       "status": "pass"
     },
@@ -134,6 +126,10 @@
     },
     {
       "command": "npm run check:repository-identity",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:capability-matrix",
       "status": "pass"
     },
     {
@@ -165,15 +161,19 @@
       "status": "pass"
     },
     {
-      "command": "npm run check:capability-matrix",
-      "status": "pass"
-    },
-    {
       "command": "npm run check:surface",
       "status": "pass"
     },
     {
       "command": "npm run check:release",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:ecosystem-value",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:decision-log",
       "status": "pass"
     }
   ],
@@ -237,6 +237,6 @@
     "PUBLIC_PROGRAM_FIT_MAP.json is a bounded reviewer/program-fit summary and must stay subordinate to stronger project-profile, evaluation, verification, ecosystem-value, evidence-gap, and release-evidence surfaces it references",
     "PUBLIC_PUBLICATION_READINESS.json is a bounded publication-state and public-release-safety summary and must stay subordinate to stronger front-door, boundary, repository-identity, verification, evidence-gap, and release-evidence surfaces it references",
     "PUBLIC_REPOSITORY_IDENTITY.json is a bounded canonical-identity summary and must stay subordinate to stronger package metadata, schema $id values, example URIs, git remotes, and published release references it aligns.",
-    "projections/typescript/capsule.ts, projections/zod/capsule.ts, and the source-level client recipe examples are public-safe convenience projections and must stay subordinate to the stronger JSON Schema, OpenAPI, and live validator behavior they align to."
+    "projections/typescript/capsule.ts, projections/typescript/validator-api.ts, projections/zod/capsule.ts, projections/zod/validator-api.ts, and the source-level client recipe examples are public-safe convenience projections and must stay subordinate to the stronger JSON Schema, OpenAPI, and live validator behavior they align to."
   ]
 }

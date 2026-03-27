@@ -91,8 +91,16 @@ This repository keeps release evidence in both human-readable and machine-readab
   Human-readable guide to the public-safe TypeScript and Zod projection layer.
 - [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
   Public-safe TypeScript projection for the capsule outer contract.
+- [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
+  Public-safe TypeScript projection for validator request and response envelopes.
 - [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
   Public-safe Zod projection for the same public outer contract.
+- [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
+  Public-safe Zod projection for validator request and response envelopes.
+- [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
+  Minimal source-level TypeScript recipe for constructing a validator request envelope.
+- [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
+  Minimal source-level Zod recipe for parsing a validator response envelope.
 
 ## Why this split exists
 
@@ -105,6 +113,8 @@ The client recipes and trust-model docs do not replace release evidence, but the
 The API envelope schema and its dedicated verification script strengthen that claim by keeping the public HTTP example layer machine-checkable.
 
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
+
+The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer that stays subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
 The community-health doc and its dedicated verification script strengthen the repository's OSS maintainership surface by keeping contributor intake explicit and reviewable.
 
@@ -191,6 +201,10 @@ When the public surface changes, these files should move together:
 - `PUBLIC_PORTABILITY_PROFILE.json`
 - `docs/type-projections.md`
 - `projections/typescript/capsule.ts`
+- `projections/typescript/validator-api.ts`
 - `projections/zod/capsule.ts`
+- `projections/zod/validator-api.ts`
+- `examples/client/ts-build-validate-request.ts`
+- `examples/client/zod-parse-validate-response.ts`
 
 If they drift, the release evidence is incomplete even if the individual docs still read well.

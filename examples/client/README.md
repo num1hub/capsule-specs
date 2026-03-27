@@ -17,6 +17,8 @@ This directory contains minimal consumer-oriented examples for the published val
 
 - `ts-capsule-summary.ts`
 - `zod-parse-capsule.ts`
+- `ts-build-validate-request.ts`
+- `zod-parse-validate-response.ts`
 
 ## Notes
 

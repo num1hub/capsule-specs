@@ -45,6 +45,7 @@
 - added machine-readable public program-fit modeling and verifier coverage for bounded OSS-support and reviewer-program criteria
 - added machine-readable public publication-readiness modeling and verifier coverage for bounded pre-GitHub publication criteria
 - added a public-safe TypeScript and Zod projection layer for the capsule outer contract plus repo-local typechecking and source-level consumer recipe examples
+- expanded the public-safe TypeScript and Zod projection layer to cover validator API envelopes and added source-level request/response consumer recipes
 ## 0.1.0 - 2026-03-26
 
 Initial public open-core projection from N1Hub:

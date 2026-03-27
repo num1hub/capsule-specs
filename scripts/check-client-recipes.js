@@ -20,7 +20,9 @@ const nodeFiles = [
 
 const typeRecipeFiles = [
   'ts-capsule-summary.ts',
-  'zod-parse-capsule.ts'
+  'zod-parse-capsule.ts',
+  'ts-build-validate-request.ts',
+  'zod-parse-validate-response.ts'
 ];
 
 function assert(condition, message) {
@@ -72,7 +74,9 @@ for (const [fileName, route] of Object.entries(expectedNodeRoutes)) {
 
 const expectedTypeProjectionImports = {
   'ts-capsule-summary.ts': '../../projections/typescript/capsule.js',
-  'zod-parse-capsule.ts': '../../projections/zod/capsule.js'
+  'zod-parse-capsule.ts': '../../projections/zod/capsule.js',
+  'ts-build-validate-request.ts': '../../projections/typescript/validator-api.js',
+  'zod-parse-validate-response.ts': '../../projections/zod/validator-api.js'
 };
 
 for (const [fileName, projectionImport] of Object.entries(expectedTypeProjectionImports)) {

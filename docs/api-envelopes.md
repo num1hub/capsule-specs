@@ -4,6 +4,12 @@ This repository publishes the validator OpenAPI document and a small set of conc
 
 The request and response examples are also covered by [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json), which gives tooling a machine-readable contract bundle for the public envelope layer.
 
+If you need source-level consumer artifacts instead of raw JSON Schema alone, also inspect:
+
+- [`type-projections.md`](type-projections.md)
+- [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
+- [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
+
 ## Covered example files
 
 - [`../examples/api/validate-request.single.json`](../examples/api/validate-request.single.json)
@@ -54,3 +60,5 @@ For the higher-level fail-closed summary across validator, OpenAPI, and portabil
 OpenAPI alone tells tooling what shapes exist. Example envelopes show human readers and downstream builders how those shapes feel in real use, especially when validator options or mixed batch outcomes are involved.
 
 The dedicated API envelope schema keeps these example files machine-readable without forcing consumers to infer shape rules from prose alone.
+
+The published validator API projections strengthen that path further by giving TypeScript and Zod consumers a public-safe source-level envelope layer that stays subordinate to the stronger JSON Schema and OpenAPI surfaces.

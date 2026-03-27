@@ -161,6 +161,10 @@ assert(catalogPaths.has('schemas/public-ecosystem-value-map.schema.json'), 'cont
 assert(catalogPaths.has('schemas/public-evidence-gaps-register.schema.json'), 'contract catalog must include schemas/public-evidence-gaps-register.schema.json');
 assert(catalogPaths.has('schemas/public-program-fit-map.schema.json'), 'contract catalog must include schemas/public-program-fit-map.schema.json');
 assert(catalogPaths.has('schemas/public-publication-readiness.schema.json'), 'contract catalog must include schemas/public-publication-readiness.schema.json');
+assert(catalogPaths.has('projections/typescript/validator-api.ts'), 'contract catalog must include the validator API TypeScript projection');
+assert(catalogPaths.has('projections/zod/validator-api.ts'), 'contract catalog must include the validator API Zod projection');
+assert(catalogPaths.has('examples/client/ts-build-validate-request.ts'), 'contract catalog must include the typed validator request recipe');
+assert(catalogPaths.has('examples/client/zod-parse-validate-response.ts'), 'contract catalog must include the Zod validator response recipe');
 assert(catalogPaths.has('scripts/check-capability-matrix.js'), 'contract catalog must include scripts/check-capability-matrix.js');
 assert(catalogPaths.has('scripts/check-freshness.js'), 'contract catalog must include scripts/check-freshness.js');
 assert(catalogPaths.has('scripts/check-ecosystem-value.js'), 'contract catalog must include scripts/check-ecosystem-value.js');

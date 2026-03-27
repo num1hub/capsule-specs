@@ -262,6 +262,10 @@ assert(
   'release metadata residual risks must mention the TypeScript projection layer'
 );
 assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('projections/typescript/validator-api.ts')),
+  'release metadata residual risks must mention the validator API projection layer'
+);
+assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_DEPENDENCY_GRAPH.json')),
   'release metadata residual risks must mention PUBLIC_DEPENDENCY_GRAPH.json'
 );
