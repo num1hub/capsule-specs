@@ -87,6 +87,12 @@ This repository keeps release evidence in both human-readable and machine-readab
   JSON Schema for the release-metadata file.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
   JSON Schema bundle for the public validator request and response envelope layer.
+- [`type-projections.md`](type-projections.md)
+  Human-readable guide to the public-safe TypeScript and Zod projection layer.
+- [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
+  Public-safe TypeScript projection for the capsule outer contract.
+- [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
+  Public-safe Zod projection for the same public outer contract.
 
 ## Why this split exists
 
@@ -97,6 +103,8 @@ The citation file, release-note config, and Dependabot config do not replace rel
 The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable.
 
 The API envelope schema and its dedicated verification script strengthen that claim by keeping the public HTTP example layer machine-checkable.
+
+The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
 The community-health doc and its dedicated verification script strengthen the repository's OSS maintainership surface by keeping contributor intake explicit and reviewable.
 
@@ -181,5 +189,8 @@ When the public surface changes, these files should move together:
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`
 - `PUBLIC_PORTABILITY_PROFILE.json`
+- `docs/type-projections.md`
+- `projections/typescript/capsule.ts`
+- `projections/zod/capsule.ts`
 
 If they drift, the release evidence is incomplete even if the individual docs still read well.

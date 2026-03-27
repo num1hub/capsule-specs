@@ -22,6 +22,8 @@ This executes all repository-local checks in the expected order.
   Verifies validator request and response sample payloads and keeps them aligned with the capsule examples.
 - `npm run check:api-schemas`
   Validates the published API example payloads against `schemas/validator-api-envelopes.schema.json`.
+- `npm run check:type-projections`
+  Typechecks the published TypeScript and Zod projection layer plus the source-level consumer recipe examples that depend on it.
 - `npm run check:example-coverage`
   Verifies `PUBLIC_EXAMPLE_COVERAGE.json`, capsule/API example coverage links, and surrounding example docs.
 - `npm run check:boundary-map`
@@ -30,6 +32,8 @@ This executes all repository-local checks in the expected order.
   Verifies curl and Node consumer snippets, route targeting, env-var assumptions, and Node syntax.
 - `npm run check:community-health`
   Verifies contributor-facing docs, issue templates, support/security alignment, and intake-surface references.
+- `npm run check:github-operations`
+  Verifies the repo-owned GitHub label, milestone, and GitHub operations surfaces that back the maintained public issue and roadmap posture.
 - `npm run check:maintenance-model`
   Verifies `PUBLIC_MAINTENANCE_MODEL.json`, maintainer-facing docs, and public workflow/release posture references.
 - `npm run check:change-control`
@@ -106,6 +110,7 @@ Serious public changes should not be considered complete until:
 - `npm run verify:repo` passes
 - changed examples or contracts are rechecked against the live validator where applicable
 - `CHANGELOG.md`, `PUBLIC_RELEASE_REVIEW.md`, `PUBLIC_RELEASE_METADATA.json`, and `PUBLIC_CONTRACT_CATALOG.json` stay aligned
+- `projections/`, `docs/type-projections.md`, and the source-level client recipe examples stay aligned with `schemas/capsule-schema.json`
 - `PUBLIC_PROJECT_PROFILE.json` stays aligned with the real repository shape and reviewer-facing docs
 - `PUBLIC_CAPABILITY_MATRIX.json` stays aligned with the real public artifacts and supported user outcomes
 - `PUBLIC_BOUNDARY_MAP.json` stays aligned with the published-vs-deferred boundary posture and its doctrine docs
@@ -135,4 +140,5 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_TRACEABILITY_MATRIX.json` stays aligned with the real docs, schemas, examples, and verification commands it claims to connect
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`
+- repo-owned GitHub label and milestone surfaces stay aligned with `.github/labels.json`, `.github/milestones.json`, and `docs/github-operations.md`
 - client recipes stay aligned with the API examples and route docs

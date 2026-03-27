@@ -10,6 +10,8 @@ This document summarizes the public capsule schema at a field level.
   Public schema for the semantic summary layer.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
   Public schema bundle for validator request and response envelopes.
+- [`type-projections.md`](type-projections.md)
+  Public-safe TypeScript and Zod projections for consumers who need source-level artifacts alongside JSON Schema.
 
 ## Root shape
 

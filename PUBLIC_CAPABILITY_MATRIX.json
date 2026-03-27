@@ -99,6 +99,29 @@
       ]
     },
     {
+      "id": "consume-source-level-type-projections",
+      "audience": "tool-builders",
+      "readiness": "ready",
+      "outcome": "Consume the published capsule outer contract through public-safe TypeScript interfaces and Zod parsing artifacts instead of reverse-engineering shape from prose alone.",
+      "strongest_surfaces": [
+        "docs/type-projections.md",
+        "projections/typescript/capsule.ts",
+        "projections/zod/capsule.ts",
+        "schemas/capsule-schema.json"
+      ],
+      "supporting_surfaces": [
+        "examples/client/ts-capsule-summary.ts",
+        "examples/client/zod-parse-capsule.ts",
+        "docs/schema-reference.md",
+        "docs/client-recipes.md"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "understand-trust-boundaries",
       "audience": "reviewers",
       "readiness": "ready",

@@ -30,6 +30,15 @@ Minimal Node fetch-based examples also live under [`../examples/client/`](../exa
 
 They are intentionally small and avoid framework assumptions.
 
+## TypeScript and Zod recipes
+
+Source-level consumer examples also live under [`../examples/client/`](../examples/client/):
+
+- [`ts-capsule-summary.ts`](../examples/client/ts-capsule-summary.ts)
+- [`zod-parse-capsule.ts`](../examples/client/zod-parse-capsule.ts)
+
+These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema.
+
 ## Route mapping
 
 - `curl-validate-single.sh` and `node-validate-single.mjs`

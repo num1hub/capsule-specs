@@ -14,14 +14,15 @@ This repository is small, but releases should still be explicit and reviewable.
 8. Review [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md).
 9. Review [`docs/verification.md`](docs/verification.md) if a repo-local check changed or a new check was added.
 10. Review [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) when API example files or route envelope assumptions changed.
-11. Keep [`NOTICE`](NOTICE) accurate when attribution or legal surface changed.
-12. Recheck [`examples/client/`](examples/client/) and [`docs/client-recipes.md`](docs/client-recipes.md) when route or auth assumptions changed.
-13. Review [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) when public maintainer workflow, change classes, or expected evidence changed.
-14. Review [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) when additive, deprecated, or breaking public change posture changed.
-15. Review [`CITATION.cff`](CITATION.cff) when the canonical public title, version, or reuse posture changed.
-16. Review [`.github/release.yml`](.github/release.yml) when label taxonomy or release-note grouping changed.
-17. Review [`.github/labels.json`](.github/labels.json) and [`.github/milestones.json`](.github/milestones.json) when the maintained GitHub issue surface changed materially.
-18. Create a release tag and short release notes.
+11. Run `npm run check:type-projections` when `projections/`, `tsconfig.json`, or [`docs/type-projections.md`](docs/type-projections.md) changed materially.
+12. Keep [`NOTICE`](NOTICE) accurate when attribution or legal surface changed.
+13. Recheck [`examples/client/`](examples/client/) and [`docs/client-recipes.md`](docs/client-recipes.md) when route, auth, or source-level consumer assumptions changed.
+14. Review [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) when public maintainer workflow, change classes, or expected evidence changed.
+15. Review [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) when additive, deprecated, or breaking public change posture changed.
+16. Review [`CITATION.cff`](CITATION.cff) when the canonical public title, version, or reuse posture changed.
+17. Review [`.github/release.yml`](.github/release.yml) when label taxonomy or release-note grouping changed.
+18. Review [`.github/labels.json`](.github/labels.json) and [`.github/milestones.json`](.github/milestones.json) when the maintained GitHub issue surface changed materially.
+19. Create a release tag and short release notes.
 
 ## Release posture
 

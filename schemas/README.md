@@ -71,3 +71,4 @@ This directory contains public machine-readable schema artifacts.
 
 - These schemas are projection artifacts aligned to the live validator surface.
 - The live validator remains the stronger source of truth for edge-case semantics and admission behavior.
+- If you need source-level consumer artifacts rather than raw JSON Schema alone, start with [`../docs/type-projections.md`](../docs/type-projections.md) and the published files under [`../projections/`](../projections/).

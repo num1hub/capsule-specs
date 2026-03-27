@@ -30,6 +30,7 @@ The Markdown docs are optimized for people. The catalog is optimized for machine
 - release tooling can connect the catalog to `PUBLIC_RELEASE_METADATA.json` without scraping prose docs
 - consumer recipes and trust-layer docs can be tracked as first-class public surfaces instead of informal extras
 - schema-backed API envelope artifacts can be tracked as first-class machine-readable surfaces instead of only as examples
+- source-level TypeScript and Zod projections can be tracked as first-class public artifacts instead of existing only as side notes in prose docs
 
 ## Important boundary
 

@@ -17,6 +17,7 @@ const allowedKinds = new Set([
   'integration-doc',
   'verification-doc',
   'schema',
+  'projection',
   'example',
   'support-artifact',
   'client-recipe',
@@ -162,7 +163,13 @@ const requiredIds = [
   'community.github-labels',
   'community.github-milestones',
   'community.github-operations-doc',
-  'community.github-operations-check'
+  'community.github-operations-check',
+  'docs.type-projections',
+  'projection.readme',
+  'projection.typescript-capsule',
+  'projection.zod-capsule',
+  'examples.client.ts-capsule-summary',
+  'examples.client.zod-parse-capsule'
 ];
 
 for (const requiredId of requiredIds) {

@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const repoRoot = path.resolve(__dirname, '..');
-const ignoredPrefixes = ['.git/'];
+const ignoredPrefixes = ['.git/', 'node_modules/'];
 const ignoredFiles = new Set(['.codexignore']);
 
 function shouldIgnore(relativePath) {
@@ -155,6 +155,7 @@ assert(profile.program_readiness?.program_fit_explicit === true, 'project profil
 assert(profile.program_readiness?.publication_readiness_explicit === true, 'project profile must mark publication_readiness_explicit true');
 assert(profile.program_readiness?.repository_identity_explicit === true, 'project profile must mark repository_identity_explicit true');
 assert(profile.purpose?.publishes?.includes('machine-readable repository-identity summaries'), 'project profile publishes must include machine-readable repository-identity summaries');
+assert(profile.purpose?.publishes?.includes('public-safe TypeScript and Zod projections'), 'project profile publishes must include public-safe TypeScript and Zod projections');
 assert(profile.purpose?.publishes?.includes('machine-readable freshness summaries'), 'project profile publishes must include machine-readable freshness summaries');
 assert(profile.purpose?.publishes?.includes('machine-readable ecosystem-value summaries'), 'project profile publishes must include machine-readable ecosystem-value summaries');
 assert(profile.purpose?.publishes?.includes('machine-readable public-evidence-gap summaries'), 'project profile publishes must include machine-readable public-evidence-gap summaries');

@@ -78,6 +78,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`integration-guide.md`](integration-guide.md)
 - [`client-recipes.md`](client-recipes.md)
 - [`trust-model.md`](trust-model.md)
+- [`type-projections.md`](type-projections.md)
 
 ## Core law
 
@@ -127,6 +128,9 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../schemas/public-traceability-matrix.schema.json`](../schemas/public-traceability-matrix.schema.json)
 - [`../schemas/public-capability-matrix.schema.json`](../schemas/public-capability-matrix.schema.json)
 - [`../schemas/public-portability-profile.schema.json`](../schemas/public-portability-profile.schema.json)
+- [`../projections/README.md`](../projections/README.md)
+- [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
+- [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
 
 ## Examples
 

@@ -25,8 +25,8 @@ The currently active GitHub milestones mirror Wave 2 and Wave 3 so external cont
 
 ## Wave 3: Projection-friendly references
 
-- publish TypeScript and Zod projections where public-safe
-  Tracked in issue `#3`.
+- publish and expand TypeScript and Zod projections where public-safe
+  Initial capsule projection is live; expansion remains tracked in issue `#3`.
 - add generated reference indexes for route families and schema families
 - add contributor-facing validation workflows for this repo alone
   Tracked in issue `#4`.

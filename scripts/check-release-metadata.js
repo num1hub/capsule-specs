@@ -9,7 +9,7 @@ const metadataPath = path.join(repoRoot, 'PUBLIC_RELEASE_METADATA.json');
 const packagePath = path.join(repoRoot, 'package.json');
 const catalogPath = path.join(repoRoot, 'PUBLIC_CONTRACT_CATALOG.json');
 
-const ignoredPrefixes = ['.git/'];
+const ignoredPrefixes = ['.git/', 'node_modules/'];
 const ignoredFiles = new Set(['.codexignore']);
 
 function shouldIgnore(relativePath) {
@@ -88,6 +88,10 @@ assert(Array.isArray(metadata.repo_local_checks) && metadata.repo_local_checks.l
 assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:api-schemas'),
   'release metadata must include the API schema verification check'
+);
+assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:type-projections'),
+  'release metadata must include the type-projection verification check'
 );
 assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:example-coverage'),
@@ -252,6 +256,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_PORTABILITY_PROFILE.json')),
   'release metadata residual risks must mention PUBLIC_PORTABILITY_PROFILE.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('projections/typescript/capsule.ts')),
+  'release metadata residual risks must mention the TypeScript projection layer'
 );
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_DEPENDENCY_GRAPH.json')),

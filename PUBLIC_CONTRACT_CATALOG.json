@@ -2698,6 +2698,95 @@
         "npm run check:docs",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "docs.type-projections",
+      "path": "docs/type-projections.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "projection.readme",
+      "path": "projections/README.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "projection.typescript-capsule",
+      "path": "projections/typescript/capsule.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "projection.zod-capsule",
+      "path": "projections/zod/capsule.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-capsule-summary",
+      "path": "examples/client/ts-capsule-summary.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.zod-parse-capsule",
+      "path": "examples/client/zod-parse-capsule.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

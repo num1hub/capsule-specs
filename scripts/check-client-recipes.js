@@ -18,6 +18,11 @@ const nodeFiles = [
   'node-validate-batch.mjs'
 ];
 
+const typeRecipeFiles = [
+  'ts-capsule-summary.ts',
+  'zod-parse-capsule.ts'
+];
+
 function assert(condition, message) {
   if (!condition) {
     console.error(`FAIL: ${message}`);
@@ -25,7 +30,7 @@ function assert(condition, message) {
   }
 }
 
-for (const fileName of [...shellFiles, ...nodeFiles]) {
+for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles]) {
   const filePath = path.join(clientDir, fileName);
   assert(fs.existsSync(filePath), `missing client recipe ${fileName}`);
 }
@@ -65,8 +70,18 @@ for (const [fileName, route] of Object.entries(expectedNodeRoutes)) {
   assert(result.status === 0, `${fileName} must be syntactically valid: ${result.stderr || result.stdout}`);
 }
 
+const expectedTypeProjectionImports = {
+  'ts-capsule-summary.ts': '../../projections/typescript/capsule.js',
+  'zod-parse-capsule.ts': '../../projections/zod/capsule.js'
+};
+
+for (const [fileName, projectionImport] of Object.entries(expectedTypeProjectionImports)) {
+  const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
+  assert(content.includes(projectionImport), `${fileName} must import ${projectionImport}`);
+}
+
 if (process.exitCode) {
   process.exit(process.exitCode);
 }
 
-console.log(`OK: checked ${shellFiles.length + nodeFiles.length} client recipe files`);
+console.log(`OK: checked ${shellFiles.length + nodeFiles.length + typeRecipeFiles.length} client recipe files`);

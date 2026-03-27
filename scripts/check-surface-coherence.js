@@ -85,6 +85,7 @@ const expectedPublicIndexLinks = [
   'evidence-gaps.md',
   'program-fit.md',
   'publication-readiness.md',
+  'type-projections.md',
   '../PUBLIC_PROJECT_PROFILE.json',
   'capability-matrix.md',
   '../PUBLIC_CAPABILITY_MATRIX.json',
@@ -123,6 +124,9 @@ const expectedPublicIndexLinks = [
   '../schemas/public-evidence-gaps-register.schema.json',
   '../schemas/public-program-fit-map.schema.json',
   '../schemas/public-publication-readiness.schema.json',
+  '../projections/README.md',
+  '../projections/typescript/capsule.ts',
+  '../projections/zod/capsule.ts',
   'community-health.md',
   'client-recipes.md',
   'trust-model.md'
@@ -185,20 +189,24 @@ assert(readme.includes('docs/ecosystem-value.md'), 'README.md must mention docs/
 assert(readme.includes('docs/evidence-gaps.md'), 'README.md must mention docs/evidence-gaps.md');
 assert(readme.includes('docs/community-health.md'), 'README.md must mention docs/community-health.md');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
+assert(readme.includes('docs/type-projections.md'), 'README.md must mention docs/type-projections.md');
 assert(readme.includes('docs/capability-matrix.md'), 'README.md must mention docs/capability-matrix.md');
 assert(readme.includes('docs/projection-doctrine.md'), 'README.md must mention docs/projection-doctrine.md');
 assert(readme.includes('docs/domain-boundaries.md'), 'README.md must mention docs/domain-boundaries.md');
 assert(readme.includes('docs/generator-readiness.md'), 'README.md must mention docs/generator-readiness.md');
 assert(readme.includes('NOTICE'), 'README.md must mention NOTICE');
 assert(readme.includes('examples/client/'), 'README.md must mention examples/client/');
+assert(readme.includes('projections/'), 'README.md must mention projections/');
 assert(readme.includes('npm run verify:repo'), 'README.md must mention npm run verify:repo');
 assert(releaseReview.includes('check-contract-catalog.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-contract-catalog.js');
 assert(releaseReview.includes('check-release-metadata.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-release-metadata.js');
 assert(releaseReview.includes('check-api-schemas.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-api-schemas.js');
+assert(releaseReview.includes('tsc --noEmit --pretty false'), 'PUBLIC_RELEASE_REVIEW.md must mention the type-projection typecheck command');
 assert(releaseReview.includes('check-example-coverage.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-example-coverage.js');
 assert(releaseReview.includes('check-boundary-map.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-boundary-map.js');
 assert(releaseReview.includes('check-client-recipes.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-client-recipes.js');
 assert(releaseReview.includes('check-community-health.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-community-health.js');
+assert(releaseReview.includes('check-github-operations.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-github-operations.js');
 assert(releaseReview.includes('check-maintenance-model.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-maintenance-model.js');
 assert(releaseReview.includes('check-change-control.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-change-control.js');
 assert(releaseReview.includes('check-ownership-map.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-ownership-map.js');
@@ -220,6 +228,7 @@ assert(releaseReview.includes('check-traceability-matrix.js'), 'PUBLIC_RELEASE_R
 assert(verificationDoc.includes('check:surface'), 'docs/verification.md must explain check:surface');
 assert(verificationDoc.includes('check:release'), 'docs/verification.md must explain check:release');
 assert(verificationDoc.includes('check:api-schemas'), 'docs/verification.md must explain check:api-schemas');
+assert(verificationDoc.includes('check:type-projections'), 'docs/verification.md must explain check:type-projections');
 assert(verificationDoc.includes('check:example-coverage'), 'docs/verification.md must explain check:example-coverage');
 assert(verificationDoc.includes('check:boundary-map'), 'docs/verification.md must explain check:boundary-map');
 assert(verificationDoc.includes('check:evaluation-packet'), 'docs/verification.md must explain check:evaluation-packet');
@@ -228,6 +237,7 @@ assert(verificationDoc.includes('check:traceability'), 'docs/verification.md mus
 assert(verificationDoc.includes('check:portability'), 'docs/verification.md must explain check:portability');
 assert(verificationDoc.includes('check:client-recipes'), 'docs/verification.md must explain check:client-recipes');
 assert(verificationDoc.includes('check:community-health'), 'docs/verification.md must explain check:community-health');
+assert(verificationDoc.includes('check:github-operations'), 'docs/verification.md must explain check:github-operations');
 assert(verificationDoc.includes('check:maintenance-model'), 'docs/verification.md must explain check:maintenance-model');
 assert(verificationDoc.includes('check:change-control'), 'docs/verification.md must explain check:change-control');
 assert(verificationDoc.includes('check:ownership-map'), 'docs/verification.md must explain check:ownership-map');
@@ -255,6 +265,9 @@ assert(releaseEvidenceDoc.includes('PUBLIC_PROJECT_PROFILE.json'), 'docs/release
 assert(releaseEvidenceDoc.includes('PUBLIC_CAPABILITY_MATRIX.json'), 'docs/release-evidence.md must mention PUBLIC_CAPABILITY_MATRIX.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_BOUNDARY_MAP.json'), 'docs/release-evidence.md must mention PUBLIC_BOUNDARY_MAP.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_PORTABILITY_PROFILE.json'), 'docs/release-evidence.md must mention PUBLIC_PORTABILITY_PROFILE.json');
+assert(releaseEvidenceDoc.includes('type-projections.md'), 'docs/release-evidence.md must mention type-projections.md');
+assert(releaseEvidenceDoc.includes('projections/typescript/capsule.ts'), 'docs/release-evidence.md must mention projections/typescript/capsule.ts');
+assert(releaseEvidenceDoc.includes('projections/zod/capsule.ts'), 'docs/release-evidence.md must mention projections/zod/capsule.ts');
 assert(releaseEvidenceDoc.includes('PUBLIC_EVALUATION_PACKET.json'), 'docs/release-evidence.md must mention PUBLIC_EVALUATION_PACKET.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_FAILURE_MODEL.json'), 'docs/release-evidence.md must mention PUBLIC_FAILURE_MODEL.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_EXAMPLE_COVERAGE.json'), 'docs/release-evidence.md must mention PUBLIC_EXAMPLE_COVERAGE.json');

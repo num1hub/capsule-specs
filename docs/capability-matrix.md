@@ -19,6 +19,7 @@ Each capability captures:
 - inspect the capsule law
 - validate public examples locally
 - build a validator client from OpenAPI and schema-backed envelopes
+- consume the capsule outer contract through public-safe TypeScript and Zod projections
 - review repository maturity quickly
 - follow the shortest external evaluation path
 - inspect fail-closed public behavior

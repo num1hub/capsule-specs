@@ -47,7 +47,9 @@
       "machine-readable public-evidence-gap summaries",
       "machine-readable public-program-fit summaries",
       "machine-readable publication-readiness summaries",
-      "machine-readable repository-identity summaries"
+      "machine-readable repository-identity summaries",
+      "public-safe TypeScript and Zod projections",
+      "source-level consumer recipe examples"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -57,13 +59,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 229,
-    "markdown_files": 82,
+    "total_files": 237,
+    "markdown_files": 84,
     "schema_files": 34,
     "raw_capsule_files": 4,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 5,
+    "client_recipe_files": 7,
     "workflow_files": 1,
     "issue_templates": 4
   },
@@ -109,7 +111,7 @@
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 39,
+    "repo_local_check_count": 40,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -147,7 +149,8 @@
     "evidence_gaps": "PUBLIC_EVIDENCE_GAPS_REGISTER.json",
     "program_fit_map": "PUBLIC_PROGRAM_FIT_MAP.json",
     "publication_readiness": "PUBLIC_PUBLICATION_READINESS.json",
-    "repository_identity": "PUBLIC_REPOSITORY_IDENTITY.json"
+    "repository_identity": "PUBLIC_REPOSITORY_IDENTITY.json",
+    "type_projections": "docs/type-projections.md"
   },
   "program_readiness": {
     "maintainer_owned": true,

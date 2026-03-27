@@ -41,6 +41,7 @@
 - machine-readable publication-readiness map in `PUBLIC_PUBLICATION_READINESS.json` plus a bounded publication-state and public-release safety guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
+- public-safe TypeScript and Zod projection files plus source-level consumer recipe examples
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
 - client recipes and trust-model docs for external consumers
@@ -76,10 +77,12 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-example-contracts.js`: pass
 - `node scripts/check-api-examples.js`: pass
 - `node scripts/check-api-schemas.js`: pass
+- `tsc --noEmit --pretty false`: pass
 - `node scripts/check-example-coverage.js`: pass
 - `node scripts/check-boundary-map.js`: pass
 - `node scripts/check-client-recipes.js`: pass
 - `node scripts/check-community-health.js`: pass
+- `node scripts/check-github-operations.js`: pass
 - `node scripts/check-maintenance-model.js`: pass
 - `node scripts/check-change-control.js`: pass
 - `node scripts/check-ownership-map.js`: pass
@@ -99,6 +102,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-evidence-gaps.js`: pass
 - `node scripts/check-program-fit.js`: pass
 - `node scripts/check-publication-readiness.js`: pass
+- `node scripts/check-repository-identity.js`: pass
 - `node scripts/check-project-profile.js`: pass
 - `node scripts/check-capability-matrix.js`: pass
 - `node scripts/check-evaluation-packet.js`: pass
@@ -109,7 +113,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `229` files / `229` manifest entries
+- manifest coverage: `237` files / `237` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -152,3 +156,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_EVIDENCE_GAPS_REGISTER.json` is a bounded maturity-gap summary and must stay subordinate to stronger release evidence, limitations, freshness, adoption, and ecosystem-value surfaces it references
 - `PUBLIC_PROGRAM_FIT_MAP.json` is a bounded reviewer/program-fit summary and must stay subordinate to stronger project-profile, evaluation, verification, ecosystem-value, evidence-gap, and release-evidence surfaces it references
 - `PUBLIC_PUBLICATION_READINESS.json` is a bounded publication-state and public-release-safety summary and must stay subordinate to stronger front-door, boundary, verification, evidence-gap, and release-evidence surfaces it references
+- `projections/typescript/capsule.ts`, `projections/zod/capsule.ts`, and the source-level client recipe examples are public-safe convenience projections and must stay subordinate to the stronger JSON Schema, OpenAPI, and live validator behavior they align to

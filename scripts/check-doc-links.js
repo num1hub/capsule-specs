@@ -10,7 +10,7 @@ function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const absolutePath = path.join(dir, entry.name);
     const relativePath = path.relative(repoRoot, absolutePath).replaceAll(path.sep, '/');
-    if (relativePath.startsWith('.git/')) continue;
+    if (relativePath.startsWith('.git/') || relativePath.startsWith('node_modules/')) continue;
     if (entry.isDirectory()) {
       walk(absolutePath);
       continue;

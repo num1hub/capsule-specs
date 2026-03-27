@@ -11,7 +11,17 @@ This guide shows the safest path for building against the public N1Hub specifica
 
 The schemas and OpenAPI artifacts should shape your parser, validator client, and payload expectations.
 
-## 2. Learn the minimal capsule shape
+## 2. Add source-level projections where helpful
+
+If your toolchain uses TypeScript or Zod directly, also inspect:
+
+- [`type-projections.md`](type-projections.md)
+- [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
+- [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
+
+These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
+
+## 3. Learn the minimal capsule shape
 
 Start with:
 
@@ -20,7 +30,7 @@ Start with:
 
 These are the smallest public-safe examples that still satisfy the five-element model.
 
-## 3. Learn the failure path early
+## 4. Learn the failure path early
 
 Read:
 
@@ -29,7 +39,7 @@ Read:
 
 This helps you distinguish structural validity from trust and sealing.
 
-## 4. Learn graph-aware validation
+## 5. Learn graph-aware validation
 
 If you need linked examples, use:
 
@@ -38,7 +48,7 @@ If you need linked examples, use:
 
 The linked example passes only when known-ID resolution is active.
 
-## 5. Learn the HTTP envelopes
+## 6. Learn the HTTP envelopes
 
 Read:
 
@@ -49,7 +59,7 @@ Read:
 
 These show how the public examples appear at the validator HTTP boundary for `validate`, `batch`, and `fix` flows.
 
-## 6. Respect the stronger source of truth
+## 7. Respect the stronger source of truth
 
 This repository is a public projection surface. When edge-case semantics matter:
 

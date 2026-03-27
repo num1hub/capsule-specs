@@ -13,8 +13,14 @@ This directory contains minimal consumer-oriented examples for the published val
 - `node-validate-single.mjs`
 - `node-validate-batch.mjs`
 
+## Type-level recipes
+
+- `ts-capsule-summary.ts`
+- `zod-parse-capsule.ts`
+
 ## Notes
 
 - These examples assume `N1HUB_BASE_URL` and `N1HUB_TOKEN` are set.
 - They are intentionally small and public-safe.
 - They demonstrate route usage, not deployment-specific infrastructure.
+- The TypeScript recipes demonstrate source-level consumer usage of the published projection layer under `projections/`.
