@@ -176,7 +176,8 @@
         "SUPPORT.md",
         "SECURITY.md",
         "PUBLIC_CAPABILITY_MATRIX.json",
-        "PUBLIC_MAINTENANCE_MODEL.json"
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "docs/repo-validation-workflow.md"
       ],
       "supporting_surfaces": [
         ".github/ISSUE_TEMPLATE/integration_question.md",
@@ -186,7 +187,8 @@
         "docs/capability-matrix.md",
         "docs/example-coverage.md",
         "docs/maintainer-operations.md",
-        "docs/change-control.md"
+        "docs/change-control.md",
+        "docs/verification.md"
       ],
       "verify_commands": [
         "npm run check:community-health",

@@ -72,6 +72,7 @@ This repository is that home.
 - [`docs/capability-matrix.md`](docs/capability-matrix.md) for the concrete “what can I do with this repo?” view
 - [`docs/verification.md`](docs/verification.md) for the repo verification stack
 - [`docs/community-health.md`](docs/community-health.md) for contributor intake and maintainer-facing community boundaries
+- [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) for the contributor-facing repo-only validation path before a PR
 - [`docs/github-operations.md`](docs/github-operations.md) for the repo-owned GitHub label, milestone, release-note, and update-hygiene surface
 - [`docs/release-evidence.md`](docs/release-evidence.md) for human and machine-readable release evidence
 - [`docs/source-materials.md`](docs/source-materials.md) for provenance and projection inputs
@@ -201,7 +202,8 @@ Maintainer and review policy:
 29. Inspect [`PUBLIC_PUBLICATION_READINESS.json`](PUBLIC_PUBLICATION_READINESS.json) if you want the bounded map of why this repo remains coherent as a published GitHub surface and which post-publication signals remain intentionally deferred.
 30. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
 31. Review the raw capsule sources in [`capsules/`](capsules/).
-32. Run `npm run verify:repo` for the repository-local integrity checks.
+32. Read [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) if you are preparing a bounded repo-only contribution.
+33. Run `npm run verify:repo` for the repository-local integrity checks.
 
 ## Source of truth
 

@@ -51,6 +51,8 @@
 - fixed the GitHub verification workflow to fetch full history so evidence-timeline checks can resolve older milestone commits in clean runners
 - fixed repository-identity verification to normalize equivalent GitHub remote forms instead of requiring one exact `origin` string in CI
 - expanded the schema layer with a schema-family index, deeper field-level schema reference docs, and stronger schema discovery wiring across the public contract surfaces
+- added a contributor-facing repo-only validation workflow guide and wired it through onboarding, contributor, community, and discovery surfaces
+- updated GitHub-operations verification so `ROADMAP.md` stays aligned to active milestone waves instead of pinning closed issue numbers forever
 ## 0.1.0 - 2026-03-26
 
 Initial public open-core projection from N1Hub:

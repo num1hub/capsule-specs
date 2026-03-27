@@ -105,7 +105,12 @@ for (const templateLabel of issueTemplateLabels) {
 assert(readme.includes('.github/labels.json'), 'README.md must mention .github/labels.json');
 assert(readme.includes('.github/milestones.json'), 'README.md must mention .github/milestones.json');
 assert(readme.includes('docs/github-operations.md'), 'README.md must mention docs/github-operations.md');
-assert(roadmap.includes('#1') && roadmap.includes('#2') && roadmap.includes('#3') && roadmap.includes('#4'), 'ROADMAP.md must mention the tracked public issue numbers');
+for (const milestone of milestones.active_milestones) {
+  assert(
+    roadmap.includes(milestone.roadmap_wave),
+    `ROADMAP.md must mention the roadmap wave for active milestone ${milestone.title}`
+  );
+}
 assert(contributing.includes('v0.2.0 Better Integrator Surfaces') && contributing.includes('v0.3.0 Projection-Friendly References'), 'CONTRIBUTING.md must mention the active milestones');
 assert(communityDoc.includes('.github/labels.json') && communityDoc.includes('.github/milestones.json'), 'docs/community-health.md must mention .github label and milestone configs');
 assert(maintainerOps.includes('docs/github-operations.md') || maintainerOps.includes('.github/labels.json'), 'docs/maintainer-operations.md must mention the GitHub operations layer');

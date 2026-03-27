@@ -74,6 +74,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../PUBLIC_RELEASE_METADATA.json`](../PUBLIC_RELEASE_METADATA.json)
 - [`repository-scope.md`](repository-scope.md)
 - [`community-health.md`](community-health.md)
+- [`repo-validation-workflow.md`](repo-validation-workflow.md)
 - [`compatibility.md`](compatibility.md)
 - [`integration-guide.md`](integration-guide.md)
 - [`client-recipes.md`](client-recipes.md)

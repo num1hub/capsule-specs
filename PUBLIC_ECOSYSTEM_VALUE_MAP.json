@@ -145,7 +145,8 @@
         "PUBLIC_EVIDENCE_TIMELINE.json",
         "PUBLIC_FRESHNESS_MODEL.json",
         "docs/maintainer-operations.md",
-        "docs/release-evidence.md"
+        "docs/release-evidence.md",
+        "docs/repo-validation-workflow.md"
       ],
       "verify_commands": [
         "npm run audit:public-surface",

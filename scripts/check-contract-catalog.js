@@ -104,6 +104,7 @@ const requiredIds = [
   'governance.example-coverage-doc',
   'governance.maintainer-operations-doc',
   'governance.change-control-doc',
+  'governance.repo-validation-workflow-doc',
   'governance.artifact-ownership-doc',
   'governance.traceability-doc',
   'governance.dependency-graph-doc',

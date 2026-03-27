@@ -13,6 +13,7 @@ When a change affects architectural truth, validation law, or the underlying cap
 Use the repository issue templates where possible. They keep bug reports, integration questions, and contract-change proposals scoped to the public surface.
 Active public work is grouped under the `v0.2.0 Better Integrator Surfaces` and `v0.3.0 Projection-Friendly References` milestones, with labels such as `area:*`, `kind:*`, and `contract` used to keep issue scope reviewable.
 The repo-owned GitHub operating surface is documented in `.github/labels.json`, `.github/milestones.json`, and `docs/github-operations.md`.
+The contributor-facing repo-only verification flow is documented in [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md).
 
 For the public maintainer workflow model, review [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) and [`docs/maintainer-operations.md`](docs/maintainer-operations.md).
 For the public change-control model, review [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) and [`docs/change-control.md`](docs/change-control.md).
@@ -24,6 +25,7 @@ For the bounded contributor/reviewer/integrator entry paths, review [`PUBLIC_AUD
 - link the pull request to an issue when the change is larger than a trivial typo or wording fix
 - keep contract edits separate from broad rewrites
 - include verification evidence for changed schemas or examples
+- use the narrow command packet from [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) before the final `npm run verify:repo`
 - update linked docs and examples when a public contract changes
 - do not submit private vault material, secrets, or internal operator docs
 

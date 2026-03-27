@@ -2,6 +2,8 @@
 
 The public repo is intentionally small, but it still has a real verification stack.
 
+If you are contributing a bounded repo-only change, read [`repo-validation-workflow.md`](repo-validation-workflow.md) first. That guide tells you which narrow command packet to run before the final full-stack pass.
+
 ## Main entrypoint
 
 Run:

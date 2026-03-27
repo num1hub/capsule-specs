@@ -13,6 +13,7 @@ The repo-owned configuration lives in:
 
 - which labels are part of the maintained public taxonomy
 - which milestones correspond to the active public roadmap waves
+- how `ROADMAP.md` stays aligned with those milestone waves even after specific issues are delivered and closed
 - how GitHub release notes are grouped
 - how GitHub-native update hygiene is handled
 - how CI runners install the repo-owned dependency set before executing `npm run verify:repo`

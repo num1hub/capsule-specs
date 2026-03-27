@@ -39,6 +39,7 @@ The bounded public maintainer posture for intake, review, and release work is su
 The bounded contributor and maintainer adoption posture is summarized in [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json).
 The bounded freshness posture for contributor-facing and maintainer-facing summary layers is summarized in [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json).
 The bounded public change, deprecation, and breaking-change posture is summarized in [`../PUBLIC_CHANGE_CONTROL_MODEL.json`](../PUBLIC_CHANGE_CONTROL_MODEL.json).
+The repo-only validation flow contributors should follow before a PR is documented in [`repo-validation-workflow.md`](repo-validation-workflow.md).
 
 ## Maintainer expectations
 
@@ -46,6 +47,7 @@ Maintainers should:
 
 - keep issue templates aligned with the actual public scope
 - keep `SUPPORT.md`, `SECURITY.md`, and `CONTRIBUTING.md` coherent
+- keep `docs/repo-validation-workflow.md` coherent with the actual `npm run verify:repo` stack
 - route contract-impacting changes toward explicit verification evidence
 - avoid accepting public issues that require leaking private vault state or operator-only details
 

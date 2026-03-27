@@ -308,13 +308,15 @@
         "docs/community-health.md",
         ".github/ISSUE_TEMPLATE/bug_report.md",
         ".github/ISSUE_TEMPLATE/integration_question.md",
-        ".github/PULL_REQUEST_TEMPLATE.md"
+        ".github/PULL_REQUEST_TEMPLATE.md",
+        "docs/repo-validation-workflow.md"
       ],
       "supporting_surfaces": [
         "SUPPORT.md",
         "SECURITY.md",
         "GOVERNANCE.md",
-        "MAINTAINERS.md"
+        "MAINTAINERS.md",
+        "docs/verification.md"
       ],
       "verify_commands": [
         "npm run check:community-health",

@@ -14,6 +14,7 @@ Welcome to the public N1Hub specification surface.
 - Read [`CONTRIBUTING.md`](CONTRIBUTING.md), [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md), and [`SECURITY.md`](SECURITY.md).
 - Read [`GOVERNANCE.md`](GOVERNANCE.md) to understand source-of-truth and review expectations.
 - Read [`docs/community-health.md`](docs/community-health.md) to understand the intended issue and PR intake paths.
+- Read [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) to see the repo-only command flow before opening a PR.
 
 ## Step 3: Understand the public technical surface
 
@@ -42,6 +43,7 @@ Welcome to the public N1Hub specification surface.
 - Use small pull requests for docs, examples, schema corrections, and public-surface improvements.
 - Open an issue first when a change would alter the capsule law, validator semantics, or public repository scope.
 - Run `npm run verify:repo` and refresh [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md) before proposing a release-facing change.
+- Use [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) for the narrow command packet that matches the change class before running the full repo pass.
 - Read [`docs/verification.md`](docs/verification.md) if you need to interpret a failing repo-local check.
 - Keep [`PUBLIC_RELEASE_METADATA.json`](PUBLIC_RELEASE_METADATA.json) and [`NOTICE`](NOTICE) aligned with release-facing changes.
 - Keep client recipes aligned with API example payloads and route docs when HTTP surfaces change.

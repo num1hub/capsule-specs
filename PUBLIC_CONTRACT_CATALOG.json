@@ -351,6 +351,23 @@
       ]
     },
     {
+      "id": "governance.repo-validation-workflow-doc",
+      "path": "docs/repo-validation-workflow.md",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "maintainers",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:community-health",
+        "npm run check:catalog",
+        "npm run check:surface"
+      ]
+    },
+    {
       "id": "governance.decision-log-doc",
       "path": "docs/decision-log.md",
       "kind": "governance",

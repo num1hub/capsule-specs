@@ -179,7 +179,8 @@
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
-      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; synchronized with validator API type-projection surfaces"
@@ -213,7 +214,8 @@
       "PUBLIC_AUDIENCE_PATHS.json",
       "docs/audience-paths.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "scripts/check-audience-paths.js",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "derived",
     "notes": "Adapted for the narrower public specs surface.; synchronized with audience paths surfaces"
@@ -447,7 +449,8 @@
       "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
       "/home/n1/codex-workspace/docs/freshness.md",
       "/home/n1/codex-workspace/schemas/public-freshness-model.schema.json",
-      "/home/n1/codex-workspace/scripts/check-freshness.js"
+      "/home/n1/codex-workspace/scripts/check-freshness.js",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Public contributor-intake and community-health guide for the specs repository.; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
@@ -970,7 +973,8 @@
       "/home/n1/codex-workspace/projections/zod/capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
-      "/home/n1/codex-workspace/docs/schema-family-reference.md"
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; contract index synchronized with validator API source-level projections"
@@ -1452,7 +1456,8 @@
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
-      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; verification docs synchronized with type-projection checks; verification docs synchronized with validator API projection and recipe surfaces"
@@ -1721,7 +1726,8 @@
       "PUBLIC_AUDIENCE_PATHS.json",
       "docs/audience-paths.md",
       "schemas/public-audience-paths.schema.json",
-      "scripts/check-audience-paths.js"
+      "scripts/check-audience-paths.js",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "derived",
     "notes": "Root-level onboarding guide adapted to the narrower public repository.; synchronized with audience paths surfaces"
@@ -1943,7 +1949,8 @@
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
-      "/home/n1/codex-workspace/docs/schema-family-reference.md"
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded audience entry paths for the public surface; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2052,7 +2059,8 @@
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
-      "/home/n1/codex-workspace/docs/schema-family-reference.md"
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2190,7 +2198,8 @@
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/docs/schema-family-reference.md",
-      "/home/n1/codex-workspace/schemas/README.md"
+      "/home/n1/codex-workspace/schemas/README.md",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2272,7 +2281,8 @@
       "/home/n1/codex-workspace/PUBLIC_CAPABILITY_MATRIX.json",
       "/home/n1/codex-workspace/PUBLIC_ADOPTION_READINESS.json",
       "/home/n1/codex-workspace/PUBLIC_FRESHNESS_MODEL.json",
-      "/home/n1/codex-workspace/docs/schema-family-reference.md"
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable ecosystem-value layer derived from reviewer, capability, adoption, and release-facing public surfaces."
@@ -2502,7 +2512,8 @@
       "/home/n1/codex-workspace/PUBLIC_EVIDENCE_GAPS_REGISTER.json",
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
-      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js"
+      "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable summary of public maintainer workflow and release posture.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2618,7 +2629,8 @@
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/docs/schema-family-reference.md",
-      "/home/n1/codex-workspace/schemas/README.md"
+      "/home/n1/codex-workspace/schemas/README.md",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2711,7 +2723,8 @@
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
-      "/home/n1/codex-workspace/docs/schema-family-reference.md"
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -2797,7 +2810,8 @@
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
       "/home/n1/codex-workspace/docs/schema-family-reference.md",
-      "/home/n1/codex-workspace/schemas/README.md"
+      "/home/n1/codex-workspace/schemas/README.md",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Release review updated for verification matrix layer; manifest coverage tracked in PUBLIC_RELEASE_METADATA.json; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release review synchronized with public type-projection surfaces; release review synchronized with validator API projection surfaces"
@@ -2925,7 +2939,8 @@
       "/home/n1/codex-workspace/docs/evidence-gaps.md",
       "/home/n1/codex-workspace/schemas/public-evidence-gaps-register.schema.json",
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
-      "/home/n1/codex-workspace/docs/schema-family-reference.md"
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces"
@@ -3177,7 +3192,8 @@
       "/home/n1/codex-workspace/projections/zod/capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
-      "/home/n1/codex-workspace/docs/schema-family-reference.md"
+      "/home/n1/codex-workspace/docs/schema-family-reference.md",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; front door synchronized with public validator API projection surfaces"
@@ -3199,7 +3215,8 @@
     "source_paths": [
       "/home/n1/codex-workspace/docs/type-projections.md",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Public roadmap for the open-core specification surface.; wave 3 updated for published type projections"
@@ -3678,7 +3695,8 @@
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
-      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts"
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/docs/repo-validation-workflow.md"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local validation for the machine-readable public contract catalog.; synchronized with evidence-gaps surfaces; contract catalog verifier synchronized with projection artifacts; contract catalog verifier synchronized with validator API source-level projections"
@@ -4497,5 +4515,19 @@
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index for choosing the right public schema family and abstraction level."
+  },
+  "docs/repo-validation-workflow.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/CONTRIBUTING.md",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/docs/verification.md",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/ROADMAP.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Contributor-facing repo-only validation workflow for bounded public-surface changes."
   }
 }

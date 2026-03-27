@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 242,
-    "manifest_entries": 242
+    "files": 243,
+    "manifest_entries": 243
   },
   "surface_summary": {
-    "catalog_entries": 193,
+    "catalog_entries": 194,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 85
+    "markdown_files": 86
   },
   "repo_local_checks": [
     {

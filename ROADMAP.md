@@ -15,21 +15,22 @@ The currently active GitHub milestones mirror Wave 2 and Wave 3 so external cont
 ## Wave 2: Better integrator surfaces
 
 - add clearer field-by-field schema commentary
-  Tracked in issue `#1`.
+  Delivered in [`docs/schema-reference.md`](docs/schema-reference.md).
 - add more example capsules for project and hub patterns
 - expand compatibility notes for downstream tool builders
 - deepen docs around validator request and response envelopes
-  Tracked in issue `#2`.
+  Delivered through [`docs/api-envelopes.md`](docs/api-envelopes.md), [`docs/openapi.md`](docs/openapi.md), and the validator API example pack.
 - add more API sample payloads as public routes stabilize
 - keep docs link integrity and public contract discoverability automated
 
 ## Wave 3: Projection-friendly references
 
 - publish and expand TypeScript and Zod projections where public-safe
-  Initial capsule projection is live; expansion remains tracked in issue `#3`.
+  Delivered in [`projections/`](projections/) and [`docs/type-projections.md`](docs/type-projections.md).
 - add generated reference indexes for route families and schema families
+  Delivered in [`docs/route-reference.md`](docs/route-reference.md) and [`docs/schema-family-reference.md`](docs/schema-family-reference.md).
 - add contributor-facing validation workflows for this repo alone
-  Tracked in issue `#4`.
+  Delivered in [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md).
 
 ## Wave 4: Broader open-core references
 
