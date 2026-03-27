@@ -97,6 +97,8 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 
 - community files for contributions, conduct, support, and security
 - issue and pull-request templates
+- custom GitHub label taxonomy aligned to contract, schema, validator, docs, governance, and integration/release work
+- milestone-backed roadmap waves for active public work in [`ROADMAP.md`](ROADMAP.md)
 - explicit community-health guidance and intake verification
 - machine-readable provenance in [`SOURCE_MANIFEST.json`](SOURCE_MANIFEST.json)
 - machine-readable contract discovery in [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json)
@@ -192,3 +194,5 @@ This repository is assembled from public-safe source materials curated out of th
 ## Current status
 
 This is the initial public projection of the N1Hub open-core specification surface. The current release focuses on schema, validator-facing contracts, examples, and repository health rather than on the full runtime codebase.
+
+Active public work is currently tracked through the `v0.2.0 Better Integrator Surfaces` and `v0.3.0 Projection-Friendly References` GitHub milestones.

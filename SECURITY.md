@@ -3,6 +3,7 @@
 ## Reporting
 
 Report vulnerabilities privately to the maintainers. Do not publish exploit details until maintainers acknowledge the report and agree on disclosure timing.
+Do not use public issues, pull requests, wiki pages, or other public repo surfaces for trust-sensitive exploit detail.
 
 ## Scope
 

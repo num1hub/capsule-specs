@@ -23,6 +23,16 @@ The repository keeps explicit intake paths so outside contributors do not need t
 
 These templates keep issues scoped to the public projection surface instead of drifting into private runtime or product-doctrine requests.
 
+## Label and milestone discipline
+
+The GitHub issue surface uses a small bounded taxonomy rather than free-form labels:
+
+- `contract` for deliberate public contract changes
+- `area:*` labels for boundary families such as schemas, validator, docs, examples, governance, and GitHub-facing repo operations
+- `kind:*` labels for integration-facing or release-facing work
+
+Active roadmap work is currently grouped into the `v0.2.0 Better Integrator Surfaces` and `v0.3.0 Projection-Friendly References` milestones so contributors can see which public wave is open now.
+
 The bounded public maintainer posture for intake, review, and release work is summarized in [`../PUBLIC_MAINTENANCE_MODEL.json`](../PUBLIC_MAINTENANCE_MODEL.json).
 The bounded contributor and maintainer adoption posture is summarized in [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json).
 The bounded freshness posture for contributor-facing and maintainer-facing summary layers is summarized in [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json).
@@ -50,3 +60,4 @@ The most helpful external contributions are:
 ## Boundary reminder
 
 Healthy community intake depends on a clear boundary. This repository does not accept support requests for unpublished cloud behavior, private operator tooling, or internal vault stewardship logic.
+It also does not use GitHub Discussions or the repository wiki as maintained support surfaces.
