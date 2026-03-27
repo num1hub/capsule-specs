@@ -31,7 +31,7 @@ The GitHub issue surface uses a small bounded taxonomy rather than free-form lab
 - `area:*` labels for boundary families such as schemas, validator, docs, examples, governance, and GitHub-facing repo operations
 - `kind:*` labels for integration-facing or release-facing work
 
-Active roadmap work is currently grouped into the `v0.2.0 Better Integrator Surfaces` and `v0.3.0 Projection-Friendly References` milestones so contributors can see which public wave is open now.
+When roadmap waves are open, the maintainer mirrors them through bounded GitHub milestones so contributors can see which public work is active without guessing from prose alone.
 The repository also keeps GitHub-native hygiene explicit through `CITATION.cff`, `.github/dependabot.yml`, and `.github/release.yml` rather than leaving reuse, update posture, and release-note grouping implicit.
 The maintained GitHub issue surface is also versioned in `.github/labels.json` and `.github/milestones.json` so label taxonomy and active public roadmap waves do not live only in mutable platform state.
 

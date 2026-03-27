@@ -105,7 +105,9 @@ for (const relativePath of [
   'docs/npm-consumption.md',
   'schemas/capsule-schema.json',
   'schemas/validator-api-envelopes.schema.json',
-  'openapi/validate.openapi.json'
+  'openapi/validate.openapi.json',
+  'examples/client/esm-package-capsule-summary.mjs',
+  'examples/client/esm-package-validate-response.mjs'
 ]) {
   assert(packedFiles.has(relativePath), `npm pack surface must include ${relativePath}`);
 }

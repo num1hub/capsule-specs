@@ -27,7 +27,9 @@ const typeRecipeFiles = [
 
 const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
-  'cjs-package-validate-response.cjs'
+  'cjs-package-validate-response.cjs',
+  'esm-package-capsule-summary.mjs',
+  'esm-package-validate-response.mjs'
 ];
 
 function assert(condition, message) {
@@ -96,6 +98,15 @@ const expectedPackageImports = {
   ],
   'cjs-package-validate-response.cjs': [
     '@num1hub/capsule-specs/zod/validator-api'
+  ],
+  'esm-package-capsule-summary.mjs': [
+    '@num1hub/capsule-specs',
+    '@num1hub/capsule-specs/zod',
+    '@num1hub/capsule-specs/examples/example-note.capsule.json'
+  ],
+  'esm-package-validate-response.mjs': [
+    '@num1hub/capsule-specs/zod/validator-api',
+    '@num1hub/capsule-specs/examples/api/validate-response.pass.json'
   ]
 };
 

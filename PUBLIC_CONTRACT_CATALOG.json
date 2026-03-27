@@ -611,6 +611,7 @@
       ],
       "verify_commands": [
         "npm run check:package-surface",
+        "npm run check:package-install",
         "npm run check:docs",
         "npm run check:catalog"
       ]
@@ -1137,6 +1138,7 @@
       ],
       "verify_commands": [
         "npm run check:package-surface",
+        "npm run check:package-install",
         "npm run check:client-recipes",
         "npm run check:catalog"
       ]
@@ -1152,6 +1154,39 @@
       ],
       "verify_commands": [
         "npm run check:package-surface",
+        "npm run check:package-install",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-capsule-summary",
+      "path": "examples/client/esm-package-capsule-summary.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:package-surface",
+        "npm run check:package-install",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-validate-response",
+      "path": "examples/client/esm-package-validate-response.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:package-surface",
+        "npm run check:package-install",
         "npm run check:client-recipes",
         "npm run check:catalog"
       ]
@@ -2863,6 +2898,21 @@
       ],
       "verify_commands": [
         "npm run check:package-surface",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "projection.package-install-check",
+      "path": "scripts/check-package-install.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "maintainers",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:package-install",
         "npm run check:catalog"
       ]
     },

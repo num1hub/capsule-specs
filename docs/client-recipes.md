@@ -47,9 +47,11 @@ If you want package-style consumption instead of file-relative source imports, a
 
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
+- [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
+- [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
 - [`npm-consumption.md`](npm-consumption.md)
 
-These recipes demonstrate the repo-owned package-export layer after `npm run build:projections`.
+These recipes demonstrate the repo-owned package-export layer for both CommonJS and ESM consumers after `npm run build:projections` or from a locally packed artifact.
 
 ## Route mapping
 

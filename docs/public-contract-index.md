@@ -149,6 +149,8 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../examples/client/README.md`](../examples/client/README.md)
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
+- [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
+- [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
 - [`../examples/archive/README.md`](../examples/archive/README.md)
 
 ## Provenance and governance

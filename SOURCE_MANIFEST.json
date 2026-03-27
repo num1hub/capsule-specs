@@ -4767,14 +4767,17 @@
     "source_paths": [
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-capsule-summary.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-validate-response.mjs",
       "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/projections/index.ts",
+      "/home/n1/codex-workspace/scripts/check-package-install.js",
       "/home/n1/codex-workspace/projections/typescript/index.ts",
       "/home/n1/codex-workspace/projections/zod/index.ts",
       "/home/n1/codex-workspace/tsconfig.build.json"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the built package-export surface for the maintained projection layer."
+    "notes": "Guide to the buildable package-export surface for the maintained projection layer, including local tarball install posture."
   },
   "projections/index.ts": {
     "source_paths": [
@@ -4819,6 +4822,24 @@
     "transformation_type": "generated",
     "notes": "Minimal CommonJS recipe for consuming the built package-export validator API surface."
   },
+  "examples/client/esm-package-capsule-summary.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/zod/index.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal ESM recipe for consuming the built package-export capsule surface."
+  },
+  "examples/client/esm-package-validate-response.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal ESM recipe for consuming the built package-export validator API surface."
+  },
   "tsconfig.build.json": {
     "source_paths": [
       "/home/n1/codex-workspace/projections/index.ts",
@@ -4832,6 +4853,8 @@
   "scripts/check-package-surface.js": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/client/esm-package-capsule-summary.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-validate-response.mjs",
       "/home/n1/codex-workspace/examples/example-note.capsule.json",
       "/home/n1/codex-workspace/openapi/validate.openapi.json",
       "/home/n1/codex-workspace/package.json",
@@ -4844,5 +4867,17 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the built package-export and pack surface."
+  },
+  "scripts/check-package-install.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/index.ts",
+      "/home/n1/codex-workspace/projections/zod/index.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for fresh CommonJS and ESM installs of the packed package-export surface."
   }
 }

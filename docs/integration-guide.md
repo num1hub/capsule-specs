@@ -26,7 +26,8 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 - [`../projections/zod/index.ts`](../projections/zod/index.ts)
 
 These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
-If you want package-style consumption from a checkout or packed artifact, build the projection layer first with `npm run build:projections` and then use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
+If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
+If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
 
 ## 3. Learn the minimal capsule shape
 

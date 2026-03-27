@@ -30,6 +30,10 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal CommonJS recipe that consumes the built package exports.
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
   Minimal CommonJS recipe that consumes the built validator API package exports.
+- [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
+  Minimal ESM recipe that consumes the built capsule package exports.
+- [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
+  Minimal ESM recipe that consumes the built validator API package exports.
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
   The stronger machine-readable contract surface these projections are aligned to.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
@@ -55,3 +59,4 @@ JSON Schema is the canonical public machine-readable contract in this repository
 
 Run `npm run check:type-projections`.
 Run `npm run check:package-surface` to build and validate the package-export layer.
+Run `npm run check:package-install` to verify that the packed artifact installs and runs in fresh CommonJS and ESM consumer projects.

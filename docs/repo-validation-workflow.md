@@ -62,6 +62,7 @@ Start with:
 npm run check:api-schemas
 npm run check:type-projections
 npm run check:package-surface
+npm run check:package-install
 npm run check:catalog
 npm run check:surface
 ```
@@ -134,6 +135,7 @@ Common co-movement rules:
   review `README.md`, `ONBOARDING.md`, `docs/public-contract-index.md`, and any audience-path or capability summaries that point to the changed surface
 - changed package-export or pack-consumer path:
   review `docs/type-projections.md`, `docs/npm-consumption.md`, `examples/client/README.md`, `PUBLIC_CAPABILITY_MATRIX.json`, and `PUBLIC_TRACEABILITY_MATRIX.json`
+  and re-run `npm run check:package-install` after `npm run check:package-surface`
 
 ## Step 3: Re-run the narrow checks
 

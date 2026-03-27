@@ -194,7 +194,8 @@
         "npm run check:adoption-readiness",
         "npm run check:audience-paths",
         "npm run check:limitations-register",
-        "npm run check:package-surface"
+        "npm run check:package-surface",
+        "npm run check:package-install"
       ],
       "protects": [
         "PUBLIC_ADOPTION_READINESS.json",
@@ -212,7 +213,8 @@
         "implicit adoption readiness claims",
         "hidden deferred hosted-runtime expectations",
         "role/readiness drift across reviewer and integration surfaces",
-        "unstated package-consumer prerequisites"
+        "unstated package-consumer prerequisites",
+        "package install claims that only worked through repo-local self-reference"
       ]
     },
     {
@@ -248,7 +250,8 @@
       "commands": [
         "npm run check:docs",
         "npm run check:surface",
-        "npm run check:package-surface"
+        "npm run check:package-surface",
+        "npm run check:package-install"
       ],
       "protects": [
         "docs/",
@@ -266,7 +269,8 @@
         "broken docs navigation",
         "missing cross-links",
         "stale reviewer/release references",
-        "broken package-export consumer path"
+        "broken package-export consumer path",
+        "fresh-install regressions hidden by local workspace state"
       ]
     },
     {

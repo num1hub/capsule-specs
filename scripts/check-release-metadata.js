@@ -98,6 +98,10 @@ assert(
   'release metadata must include the package-surface verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:package-install'),
+  'release metadata must include the package-install verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:example-coverage'),
   'release metadata must include the example-coverage verification check'
 );

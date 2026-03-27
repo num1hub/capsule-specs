@@ -1,8 +1,8 @@
 # Roadmap
 
-This roadmap describes the next useful waves for the public N1Hub specification surface.
+This roadmap describes the delivered and next useful waves for the public N1Hub specification surface.
 
-The currently active GitHub milestones mirror Wave 2 and Wave 3 so external contributors can see which public work is open now.
+Wave 2 and Wave 3 are already delivered. Wave 4 is the next deliberate expansion layer.
 
 ## Wave 1: Public foundation
 
@@ -31,6 +31,8 @@ The currently active GitHub milestones mirror Wave 2 and Wave 3 so external cont
   Delivered in [`docs/route-reference.md`](docs/route-reference.md) and [`docs/schema-family-reference.md`](docs/schema-family-reference.md).
 - add contributor-facing validation workflows for this repo alone
   Delivered in [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md).
+- verify the package layer from a fresh consumer project instead of relying only on repo-local self-reference
+  Delivered in [`scripts/check-package-install.js`](scripts/check-package-install.js), [`docs/npm-consumption.md`](docs/npm-consumption.md), and the package recipes under [`examples/client/`](examples/client/).
 
 ## Wave 4: Broader open-core references
 

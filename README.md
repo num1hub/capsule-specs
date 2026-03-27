@@ -38,7 +38,7 @@ This repository is that home.
 - [`docs/schema-family-reference.md`](docs/schema-family-reference.md) for choosing the right schema family first
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/type-projections.md`](docs/type-projections.md) for the public-safe TypeScript and Zod projection layer
-- [`docs/npm-consumption.md`](docs/npm-consumption.md) for the built package-export surface and subpath entrypoints
+- [`docs/npm-consumption.md`](docs/npm-consumption.md) for the buildable package surface, local tarball install path, and subpath entrypoints
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
 - [`docs/example-coverage.md`](docs/example-coverage.md) for the bounded map of what the public examples actually cover
 - [`docs/maintainer-operations.md`](docs/maintainer-operations.md) for the bounded maintainer workflow and release posture
@@ -111,7 +111,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - citation metadata in [`CITATION.cff`](CITATION.cff) for external reuse and referencing
 - issue and pull-request templates
 - custom GitHub label taxonomy aligned to contract, schema, validator, docs, governance, and integration/release work
-- milestone-backed roadmap waves for active public work in [`ROADMAP.md`](ROADMAP.md)
+- roadmap waves for delivered and next-step public work in [`ROADMAP.md`](ROADMAP.md)
 - GitHub-native update hygiene in [`.github/dependabot.yml`](.github/dependabot.yml)
 - GitHub release-note categorization in [`.github/release.yml`](.github/release.yml)
 - repo-owned GitHub label and milestone configs in [`.github/labels.json`](.github/labels.json) and [`.github/milestones.json`](.github/milestones.json)
@@ -153,6 +153,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - public-safe TypeScript and Zod projections for source-level consumers under [`projections/`](projections/)
 - public-safe TypeScript and Zod validator API envelope projections for source-level validator clients under [`projections/`](projections/)
 - a buildable and packable package-export layer for the maintained projection surface
+- a fresh-project tarball-install verification path for the package-consumer layer
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
 - API payload examples under [`examples/api/`](examples/api/)
 - consumer recipes under [`examples/client/`](examples/client/)
@@ -209,6 +210,7 @@ Maintainer and review policy:
 32. Read [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) if you are preparing a bounded repo-only contribution.
 33. Run `npm run verify:repo` for the repository-local integrity checks.
 34. Run `npm run check:package-surface` if you want to confirm the packable projection-export layer as a consumer artifact.
+35. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS and ESM consumer projects.
 
 ## Source of truth
 
@@ -218,4 +220,4 @@ This repository is assembled from public-safe source materials curated out of th
 
 This is the initial public projection of the N1Hub open-core specification surface. The current release focuses on schema, validator-facing contracts, examples, and repository health rather than on the full runtime codebase.
 
-Active public work is currently tracked through the `v0.2.0 Better Integrator Surfaces` and `v0.3.0 Projection-Friendly References` GitHub milestones.
+Wave 2 and Wave 3 are delivered. The next public expansion work sits in Wave 4 and should widen the curated raw capsule set and other public-safe contract families without reopening the private runtime boundary.
