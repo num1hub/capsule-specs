@@ -63,7 +63,7 @@ This directory contains public machine-readable schema artifacts.
 - `public-program-fit-map.schema.json`
   JSON Schema for the machine-readable bounded reviewer/program-fit posture.
 - `public-publication-readiness.schema.json`
-  JSON Schema for the machine-readable bounded pre-publish publication-readiness posture.
+  JSON Schema for the machine-readable bounded publication-state posture of the public GitHub surface.
 - `public-traceability-matrix.schema.json`
   JSON Schema for the machine-readable claim-to-evidence traceability matrix.
 

@@ -75,6 +75,6 @@ The program-fit layer strengthens that path further by making reviewer/program f
 
 The repository-identity layer closes part of that loop by making the canonical public slug, package identity, release URL, and schema/example URL alignment explicit instead of leaving reviewers to infer which public surface is canonical. See [`docs/repository-identity.md`](repository-identity.md) and [`../PUBLIC_REPOSITORY_IDENTITY.json`](../PUBLIC_REPOSITORY_IDENTITY.json).
 
-The publication-readiness layer closes the rest by making publication-state safety and GitHub-publication coherence explicit as a bounded, artifact-backed claim instead of forcing reviewers to infer public-release trust from repo polish or tree shape alone.
+The publication-readiness layer closes the rest by making publication-state safety and published-GitHub coherence explicit as a bounded, artifact-backed claim instead of forcing reviewers to infer public-release trust from repo polish or tree shape alone.
 
 The evidence-gaps layer strengthens that path further by making still-open public proof gaps explicit instead of forcing reviewers or programs to guess where maturity is already well evidenced and where it is not yet.

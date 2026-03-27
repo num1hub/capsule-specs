@@ -648,7 +648,7 @@
     },
     {
       "id": "bounded-publication-state-and-safety",
-      "claim": "The public surface makes pre-GitHub publication readiness explicit as a bounded, artifact-backed layer instead of forcing maintainers or reviewers to infer public-release safety from polish, tree shape, or aspiration alone.",
+      "claim": "The public surface makes publication-state readiness explicit as a bounded, artifact-backed layer instead of forcing maintainers or reviewers to infer public-release safety from polish, tree shape, or aspiration alone.",
       "audiences": [
         "reviewers",
         "maintainers",

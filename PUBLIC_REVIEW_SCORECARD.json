@@ -325,7 +325,7 @@
     },
     {
       "id": "publication-readiness-explicit",
-      "question": "Does the repo make pre-GitHub publication readiness explicit as a bounded, artifact-backed claim instead of forcing maintainers or reviewers to infer public-release safety from polish, counts, or tree shape?",
+      "question": "Does the repo make publication-state readiness explicit as a bounded, artifact-backed claim instead of forcing maintainers or reviewers to infer public-release safety from polish, counts, or tree shape?",
       "status": "pass",
       "summary": "The repo publishes a bounded publication-readiness layer that makes public-release safety explicit without claiming adoption, approval, or hosted-runtime maturity that the repo does not yet prove.",
       "strongest_surfaces": [

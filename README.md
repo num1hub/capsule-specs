@@ -1,5 +1,8 @@
 # N1Hub Capsule Specs
 
+[![Verify Public Surface](https://github.com/num1hub/capsule-specs/actions/workflows/audit-public-surface.yml/badge.svg)](https://github.com/num1hub/capsule-specs/actions/workflows/audit-public-surface.yml)
+[Release v0.1.0](https://github.com/num1hub/capsule-specs/releases/tag/v0.1.0)
+
 `N1Hub Capsule Specs` is the public reference surface for the capsule-first foundations behind N1Hub and CapsuleOS.
 
 This repository is intentionally narrow. It does not try to expose the full private application or every internal workflow. Instead, it publishes the highest-signal public artifacts needed to understand the model:
@@ -50,7 +53,7 @@ This repository is that home.
 - [`docs/decision-log.md`](docs/decision-log.md) for the bounded map of the major public design decisions and why this specs surface is shaped the way it is
 - [`docs/evidence-gaps.md`](docs/evidence-gaps.md) for the bounded map of which important public evidence is still intentionally missing and which review gaps remain open
 - [`docs/program-fit.md`](docs/program-fit.md) for the bounded map of why this public surface is a credible OSS-support-program and reviewer-facing candidate without overclaiming maturity
-- [`docs/publication-readiness.md`](docs/publication-readiness.md) for the bounded map of why this public surface is already safe and legible to publish on GitHub without pretending that publication equals adoption or approval
+- [`docs/publication-readiness.md`](docs/publication-readiness.md) for the bounded map of why this public surface remains coherent as a published GitHub surface without pretending that publication equals adoption or approval
 - [`PUBLIC_REPOSITORY_IDENTITY.json`](PUBLIC_REPOSITORY_IDENTITY.json) for the machine-readable canonical repo identity, release URL, and package/schema alignment layer
 - [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) for machine-readable validator envelope contracts
 - [`docs/integration-guide.md`](docs/integration-guide.md) for the safest consumer path through schema, examples, and API envelopes
@@ -177,7 +180,7 @@ Maintainer and review policy:
 24. Inspect [`PUBLIC_DECISION_LOG.json`](PUBLIC_DECISION_LOG.json) if you want the bounded map of the major public decisions and the rationale behind this repository's projection, trust posture, and release discipline.
 25. Inspect [`PUBLIC_EVIDENCE_GAPS_REGISTER.json`](PUBLIC_EVIDENCE_GAPS_REGISTER.json) if you want the bounded map of which high-signal public evidence still remains intentionally incomplete and where review confidence must stay bounded.
 26. Inspect [`PUBLIC_PROGRAM_FIT_MAP.json`](PUBLIC_PROGRAM_FIT_MAP.json) if you want the bounded map of why this public surface is already reviewer/program-credible and where that fit is still intentionally bounded.
-27. Inspect [`PUBLIC_PUBLICATION_READINESS.json`](PUBLIC_PUBLICATION_READINESS.json) if you want the bounded map of why this repo is already publishable on GitHub and which post-publication signals remain intentionally deferred.
+27. Inspect [`PUBLIC_PUBLICATION_READINESS.json`](PUBLIC_PUBLICATION_READINESS.json) if you want the bounded map of why this repo remains coherent as a published GitHub surface and which post-publication signals remain intentionally deferred.
 28. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
 29. Review the raw capsule sources in [`capsules/`](capsules/).
 30. Run `npm run verify:repo` for the repository-local integrity checks.

@@ -102,7 +102,7 @@ Good OSS repositories are not only readable; they are usable. The capability mat
 - [`../PUBLIC_PROGRAM_FIT_MAP.json`](../PUBLIC_PROGRAM_FIT_MAP.json)
   Answers: why this public surface is already reviewer/program-credible today and which bounded criteria keep that fit honest.
 - [`../PUBLIC_PUBLICATION_READINESS.json`](../PUBLIC_PUBLICATION_READINESS.json)
-  Answers: why this public surface is already safe and legible to publish publicly and which adoption or approval signals still remain intentionally deferred.
+  Answers: why this public surface remains coherent as a published GitHub repo and which adoption or approval signals still remain intentionally deferred.
 - [`../PUBLIC_TRACEABILITY_MATRIX.json`](../PUBLIC_TRACEABILITY_MATRIX.json)
   Answers: how the strongest public claims connect to docs, schemas, examples, and verification commands.
 - [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)

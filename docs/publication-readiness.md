@@ -6,7 +6,7 @@ The machine-readable form lives in [`../PUBLIC_PUBLICATION_READINESS.json`](../P
 
 ## What this layer covers
 
-- which public surface families are already safe and legible to publish
+- which public surface families are already coherent and safe as published GitHub surfaces
 - which publication-safety checks should remain green as the public repo evolves
 - which stronger surfaces back publication-readiness claims
 - which post-publication signals are still intentionally deferred

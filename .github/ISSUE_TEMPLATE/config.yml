@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Integration guide
-    url: https://github.com/n1hub/specs/blob/main/docs/integration-guide.md
+    url: https://github.com/num1hub/capsule-specs/blob/main/docs/integration-guide.md
     about: Review the public integration guide and client recipes before opening an integration question.
   - name: Security reports
-    url: https://github.com/n1hub/specs/security/policy
+    url: https://github.com/num1hub/capsule-specs/security/policy
     about: Please use the security policy for trust-sensitive reports.

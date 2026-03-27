@@ -36,7 +36,7 @@
 - machine-readable decision log in `PUBLIC_DECISION_LOG.json` plus a bounded public-rationale and design-intent guide
 - machine-readable evidence-gaps register in `PUBLIC_EVIDENCE_GAPS_REGISTER.json` plus a bounded still-open-proof and review-needs guide
 - machine-readable program-fit map in `PUBLIC_PROGRAM_FIT_MAP.json` plus a bounded reviewer/program-credibility guide
-- machine-readable publication-readiness map in `PUBLIC_PUBLICATION_READINESS.json` plus a bounded pre-publish and public-release safety guide
+- machine-readable publication-readiness map in `PUBLIC_PUBLICATION_READINESS.json` plus a bounded publication-state and public-release safety guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - synthetic example capsules, a linked graph example, and a known-ID catalog
@@ -149,4 +149,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_DECISION_LOG.json` is a bounded rationale summary and must stay subordinate to stronger boundary, assurance, provenance, release-evidence, and trust-model surfaces it references
 - `PUBLIC_EVIDENCE_GAPS_REGISTER.json` is a bounded maturity-gap summary and must stay subordinate to stronger release evidence, limitations, freshness, adoption, and ecosystem-value surfaces it references
 - `PUBLIC_PROGRAM_FIT_MAP.json` is a bounded reviewer/program-fit summary and must stay subordinate to stronger project-profile, evaluation, verification, ecosystem-value, evidence-gap, and release-evidence surfaces it references
-- `PUBLIC_PUBLICATION_READINESS.json` is a bounded pre-publish and public-release-safety summary and must stay subordinate to stronger front-door, boundary, verification, evidence-gap, and release-evidence surfaces it references
+- `PUBLIC_PUBLICATION_READINESS.json` is a bounded publication-state and public-release-safety summary and must stay subordinate to stronger front-door, boundary, verification, evidence-gap, and release-evidence surfaces it references
