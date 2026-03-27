@@ -49,6 +49,7 @@
 - fixed the GitHub verification workflow to run `npm ci` before `npm run verify:repo`, so clean runners can resolve `zod` and `typescript` for projection-layer checks
 - fixed the boundary-map verifier so external upstream source paths are treated as provenance pointers rather than required on-disk files inside GitHub runners
 - fixed the GitHub verification workflow to fetch full history so evidence-timeline checks can resolve older milestone commits in clean runners
+- fixed repository-identity verification to normalize equivalent GitHub remote forms instead of requiring one exact `origin` string in CI
 ## 0.1.0 - 2026-03-26
 
 Initial public open-core projection from N1Hub:

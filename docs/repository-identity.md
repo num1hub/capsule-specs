@@ -21,6 +21,8 @@ If package metadata, schema IDs, example URIs, or reviewer summaries still point
 
 This layer keeps the real published identity explicit and reviewable.
 
+Equivalent GitHub remote forms still count as the same public identity during verification. For example, CI may expose an authenticated HTTPS remote or a GitHub SSH-style remote even when the canonical public reference is the plain HTTPS URL.
+
 ## Important boundary
 
 The repository-identity layer is an integrity aid. It does not claim package-registry publication, trademark exclusivity, or adoption. It only claims that the public repo identity, package metadata, schema IDs, example URIs, and release references are intentionally aligned to the live GitHub surface.

@@ -25,6 +25,30 @@ function readText(relativePath) {
   return fs.readFileSync(path.join(repoRoot, relativePath), 'utf8');
 }
 
+function normalizeRemoteUrl(remoteUrl) {
+  const trimmed = remoteUrl.trim();
+  if (trimmed.length === 0) return trimmed;
+
+  let normalized = trimmed;
+
+  if (normalized.startsWith('git@github.com:')) {
+    normalized = `https://github.com/${normalized.slice('git@github.com:'.length)}`;
+  } else if (normalized.startsWith('ssh://git@github.com/')) {
+    normalized = `https://github.com/${normalized.slice('ssh://git@github.com/'.length)}`;
+  }
+
+  try {
+    const parsed = new URL(normalized);
+    if (parsed.hostname === 'github.com') {
+      normalized = `https://github.com${parsed.pathname}`;
+    }
+  } catch {
+    return normalized.replace(/\/+$/, '').replace(/\.git$/, '');
+  }
+
+  return normalized.replace(/\/+$/, '').replace(/\.git$/, '');
+}
+
 function walkJson(dir) {
   return fs
     .readdirSync(dir, { withFileTypes: true })
@@ -49,6 +73,7 @@ function collectUriStrings(value, found = []) {
 
 const canonicalRepoUrl = 'https://github.com/num1hub/capsule-specs';
 const canonicalGitUrl = `${canonicalRepoUrl}.git`;
+const normalizedCanonicalRemote = normalizeRemoteUrl(canonicalGitUrl);
 const canonicalSchemaBase = `${canonicalRepoUrl}/schemas/`;
 const catalogPaths = new Set(catalog.entries.map((entry) => entry.path));
 
@@ -82,7 +107,10 @@ assert(pkg.homepage === canonicalRepoUrl, 'package.json homepage must match cano
 assert(pkg.bugs?.url === `${canonicalRepoUrl}/issues`, 'package.json bugs.url must match canonical issues URL');
 
 const remoteOrigin = cp.execSync('git remote get-url origin', { cwd: repoRoot, encoding: 'utf8' }).trim();
-assert(remoteOrigin === canonicalGitUrl, 'git origin URL must match canonical git URL');
+assert(
+  normalizeRemoteUrl(remoteOrigin) === normalizedCanonicalRemote,
+  'git origin URL must match the canonical repository identity after normalizing equivalent GitHub remote forms'
+);
 
 assert(profile.repository_identity?.owner === 'num1hub', 'project profile owner must be num1hub');
 assert(profile.repository_identity?.name === 'capsule-specs', 'project profile repo name must be capsule-specs');
