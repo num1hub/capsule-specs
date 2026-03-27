@@ -47,6 +47,7 @@
 - added a public-safe TypeScript and Zod projection layer for the capsule outer contract plus repo-local typechecking and source-level consumer recipe examples
 - expanded the public-safe TypeScript and Zod projection layer to cover validator API envelopes and added source-level request/response consumer recipes
 - fixed the GitHub verification workflow to run `npm ci` before `npm run verify:repo`, so clean runners can resolve `zod` and `typescript` for projection-layer checks
+- fixed the boundary-map verifier so external upstream source paths are treated as provenance pointers rather than required on-disk files inside GitHub runners
 ## 0.1.0 - 2026-03-26
 
 Initial public open-core projection from N1Hub:

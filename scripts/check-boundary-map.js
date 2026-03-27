@@ -46,6 +46,11 @@ function repoExists(relativePath) {
   return fs.existsSync(path.join(repoRoot, relativePath));
 }
 
+function isWithinRepo(absolutePath) {
+  const normalizedRepoRoot = `${repoRoot}${path.sep}`;
+  return absolutePath === repoRoot || absolutePath.startsWith(normalizedRepoRoot);
+}
+
 assert(boundaryMap.version === pkg.version, 'boundary map version must match package.json version');
 assert(
   schema.$id === 'https://github.com/num1hub/capsule-specs/schemas/public-boundary-map.schema.json',
@@ -70,7 +75,9 @@ for (const boundary of boundaryMap.published_boundaries || []) {
 
   for (const absolutePath of boundary.source_capsules) {
     assert(path.isAbsolute(absolutePath), `published boundary ${boundary.id} source path must be absolute: ${absolutePath}`);
-    assert(fs.existsSync(absolutePath), `published boundary ${boundary.id} references missing source capsule ${absolutePath}`);
+    if (isWithinRepo(absolutePath)) {
+      assert(fs.existsSync(absolutePath), `published boundary ${boundary.id} references missing repo-local source capsule ${absolutePath}`);
+    }
   }
 
   for (const command of boundary.verify_commands) {

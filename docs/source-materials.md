@@ -36,6 +36,7 @@ This repository is assembled from public-safe source surfaces rather than from a
 - machine-readable artifact ownership and authority hierarchy is tracked in [`../PUBLIC_OWNERSHIP_MAP.json`](../PUBLIC_OWNERSHIP_MAP.json)
 - machine-readable stronger-source and evidence-strength hierarchy is tracked in [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json)
 - consumer snippets derive from the public API example payloads rather than from private runtime secrets or internal deploy tooling
+- absolute upstream source paths in provenance and boundary maps are external reference pointers to stronger source surfaces; they are useful for local review, but a clean CI runner is not expected to contain those upstream repos on disk
 
 ## Why this matters
 
