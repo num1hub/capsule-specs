@@ -84,10 +84,14 @@
         "MAINTAINERS.md",
         "CONTRIBUTING.md",
         "docs/community-health.md",
+        "docs/github-operations.md",
+        ".github/labels.json",
+        ".github/milestones.json",
         "docs/maintainer-operations.md"
       ],
       "verify_commands": [
         "npm run check:community-health",
+        "npm run check:github-operations",
         "npm run check:maintenance-model"
       ]
     }
@@ -108,7 +112,8 @@
     "updated PUBLIC_FRESHNESS_MODEL.json when freshness triggers or stale signals changed",
     "updated PUBLIC_ECOSYSTEM_VALUE_MAP.json when external value posture or beneficiary-facing utility changed",
     "updated PUBLIC_DECISION_LOG.json when public design rationale, projection intent, or trust-sensitive public decisions changed",
-    "updated PUBLIC_EVIDENCE_GAPS_REGISTER.json when a public evidence gap, manual-review boundary, or maturity caveat changed materially"
+    "updated PUBLIC_EVIDENCE_GAPS_REGISTER.json when a public evidence gap, manual-review boundary, or maturity caveat changed materially",
+    "updated .github/labels.json and .github/milestones.json when the maintained GitHub issue surface changed materially"
   ],
   "operating_rules": [
     "Keep the public boundary intentional and do not widen scope by accident.",
@@ -127,7 +132,8 @@
     "Keep PUBLIC_FRESHNESS_MODEL.json aligned with release evidence, reviewer shortcuts, audience paths, and adoption summaries when freshness posture changes.",
     "Keep PUBLIC_ECOSYSTEM_VALUE_MAP.json aligned with reviewer docs, capability summaries, adoption posture, and release evidence when external utility claims change.",
     "Keep PUBLIC_DECISION_LOG.json aligned with boundary posture, trust-model docs, assurance posture, and release evidence when public design rationale changes.",
-    "Keep PUBLIC_EVIDENCE_GAPS_REGISTER.json aligned with release evidence, adoption posture, freshness, ecosystem-value posture, and limitations when public proof gaps or manual-review boundaries change."
+    "Keep PUBLIC_EVIDENCE_GAPS_REGISTER.json aligned with release evidence, adoption posture, freshness, ecosystem-value posture, and limitations when public proof gaps or manual-review boundaries change.",
+    "Keep .github/labels.json, .github/milestones.json, docs/github-operations.md, and issue-template labels aligned when the maintained GitHub issue surface changes."
   ],
   "non_claims": [
     "This file does not promise a guaranteed response-time SLA for public issues or pull requests.",

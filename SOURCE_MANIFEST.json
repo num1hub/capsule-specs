@@ -43,6 +43,16 @@
     "transformation_type": "generated",
     "notes": "Issue template for public integration and contract-consumption questions."
   },
+  ".github/labels.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repo-owned GitHub label taxonomy for the maintained public issue surface."
+  },
+  ".github/milestones.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Repo-owned active GitHub milestones for the current public roadmap waves."
+  },
   ".github/PULL_REQUEST_TEMPLATE.md": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -714,6 +724,16 @@
     ],
     "transformation_type": "derived",
     "notes": "Public summary of generator-readiness doctrine and projection-index semantics."
+  },
+  "docs/github-operations.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/.github/labels.json",
+      "/home/n1/codex-workspace/.github/milestones.json",
+      "/home/n1/codex-workspace/.github/release.yml",
+      "/home/n1/codex-workspace/.github/dependabot.yml"
+    ],
+    "transformation_type": "generated",
+    "notes": "Human-readable guide to the repo-owned GitHub label, milestone, release-note, and update-hygiene surface."
   },
   "docs/integration-guide.md": {
     "source_paths": [
@@ -3838,6 +3858,21 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for freshness-layer cross-surface coherence."
+  },
+  "scripts/check-github-operations.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/.github/labels.json",
+      "/home/n1/codex-workspace/.github/milestones.json",
+      "/home/n1/codex-workspace/.github/release.yml",
+      "/home/n1/codex-workspace/README.md",
+      "/home/n1/codex-workspace/ROADMAP.md",
+      "/home/n1/codex-workspace/CONTRIBUTING.md",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/docs/release-evidence.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for repo-owned GitHub labels, milestones, release-note grouping, and doc alignment."
   },
   "scripts/check-limitations-register.js": {
     "source_paths": [

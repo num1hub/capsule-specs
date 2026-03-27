@@ -20,7 +20,8 @@ This repository is small, but releases should still be explicit and reviewable.
 14. Review [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) when additive, deprecated, or breaking public change posture changed.
 15. Review [`CITATION.cff`](CITATION.cff) when the canonical public title, version, or reuse posture changed.
 16. Review [`.github/release.yml`](.github/release.yml) when label taxonomy or release-note grouping changed.
-17. Create a release tag and short release notes.
+17. Review [`.github/labels.json`](.github/labels.json) and [`.github/milestones.json`](.github/milestones.json) when the maintained GitHub issue surface changed materially.
+18. Create a release tag and short release notes.
 
 ## Release posture
 

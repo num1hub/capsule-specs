@@ -158,7 +158,11 @@ const requiredIds = [
   'governance.publication-readiness-doc',
   'governance.publication-readiness-map',
   'governance.publication-readiness-schema',
-  'governance.publication-readiness-check'
+  'governance.publication-readiness-check',
+  'community.github-labels',
+  'community.github-milestones',
+  'community.github-operations-doc',
+  'community.github-operations-check'
 ];
 
 for (const requiredId of requiredIds) {

@@ -88,6 +88,36 @@
       ]
     },
     {
+      "id": "community.github-labels",
+      "path": ".github/labels.json",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "maintainers",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:github-operations",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "community.github-milestones",
+      "path": ".github/milestones.json",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "maintainers",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:github-operations",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "community.pr-template",
       "path": ".github/PULL_REQUEST_TEMPLATE.md",
       "kind": "support-artifact",
@@ -506,6 +536,22 @@
       "verify_commands": [
         "npm run check:docs",
         "npm run check:boundary-map",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "community.github-operations-doc",
+      "path": "docs/github-operations.md",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "maintainers",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:github-operations",
+        "npm run check:docs",
         "npm run check:catalog"
       ]
     },
@@ -2433,6 +2479,20 @@
       ],
       "verify_commands": [
         "npm run check:freshness",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "community.github-operations-check",
+      "path": "scripts/check-github-operations.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "maintainers",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:github-operations",
         "npm run check:catalog"
       ]
     },

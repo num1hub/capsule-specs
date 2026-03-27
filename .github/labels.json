@@ -1,0 +1,92 @@
+[
+  {
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Something isn't working"
+  },
+  {
+    "name": "documentation",
+    "color": "0075ca",
+    "description": "Improvements or additions to documentation"
+  },
+  {
+    "name": "duplicate",
+    "color": "cfd3d7",
+    "description": "This issue or pull request already exists"
+  },
+  {
+    "name": "enhancement",
+    "color": "a2eeef",
+    "description": "New feature or request"
+  },
+  {
+    "name": "good first issue",
+    "color": "7057ff",
+    "description": "Good for newcomers"
+  },
+  {
+    "name": "help wanted",
+    "color": "008672",
+    "description": "Extra attention is needed"
+  },
+  {
+    "name": "invalid",
+    "color": "e4e669",
+    "description": "This doesn't seem right"
+  },
+  {
+    "name": "question",
+    "color": "d876e3",
+    "description": "Further information is requested"
+  },
+  {
+    "name": "wontfix",
+    "color": "ffffff",
+    "description": "This will not be worked on"
+  },
+  {
+    "name": "contract",
+    "color": "0e8a16",
+    "description": "Deliberate change to a public contract surface"
+  },
+  {
+    "name": "area:schemas",
+    "color": "0052cc",
+    "description": "Schema families, schema docs, and machine-readable contract artifacts"
+  },
+  {
+    "name": "area:validator",
+    "color": "5319e7",
+    "description": "Validator-facing docs, envelopes, routes, and OpenAPI surfaces"
+  },
+  {
+    "name": "area:examples",
+    "color": "1d76db",
+    "description": "Capsule examples, API examples, and consumer snippets"
+  },
+  {
+    "name": "area:docs",
+    "color": "0366d6",
+    "description": "Public docs, reviewer guides, and explanation layers"
+  },
+  {
+    "name": "area:governance",
+    "color": "b60205",
+    "description": "Governance, release posture, and trust-sensitive repo surfaces"
+  },
+  {
+    "name": "area:github",
+    "color": "c5def5",
+    "description": "GitHub-facing operating surfaces, issue intake, and repo metadata"
+  },
+  {
+    "name": "kind:integration",
+    "color": "fbca04",
+    "description": "External consumer or integration-facing work"
+  },
+  {
+    "name": "kind:release",
+    "color": "d4c5f9",
+    "description": "Release posture, versioning, and publication-state work"
+  }
+]

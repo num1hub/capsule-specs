@@ -9,6 +9,7 @@ The bounded role-specific public navigation layer lives in [`audience-paths.md`]
 The bounded stronger-source hierarchy lives in [`evidence-strength.md`](evidence-strength.md) and [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../PUBLIC_EVIDENCE_STRENGTH_MAP.json).
 The bounded ready vs deferred public audience posture lives in [`adoption-readiness.md`](adoption-readiness.md) and [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json).
 The bounded freshness and stale-summary posture lives in [`freshness.md`](freshness.md) and [`../PUBLIC_FRESHNESS_MODEL.json`](../PUBLIC_FRESHNESS_MODEL.json).
+The repo-owned GitHub operations layer lives in [`github-operations.md`](github-operations.md), [`../.github/labels.json`](../.github/labels.json), and [`../.github/milestones.json`](../.github/milestones.json).
 
 ## What this covers
 

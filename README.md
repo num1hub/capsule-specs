@@ -70,6 +70,7 @@ This repository is that home.
 - [`docs/capability-matrix.md`](docs/capability-matrix.md) for the concrete “what can I do with this repo?” view
 - [`docs/verification.md`](docs/verification.md) for the repo verification stack
 - [`docs/community-health.md`](docs/community-health.md) for contributor intake and maintainer-facing community boundaries
+- [`docs/github-operations.md`](docs/github-operations.md) for the repo-owned GitHub label, milestone, release-note, and update-hygiene surface
 - [`docs/release-evidence.md`](docs/release-evidence.md) for human and machine-readable release evidence
 - [`docs/source-materials.md`](docs/source-materials.md) for provenance and projection inputs
 - [`docs/faq.md`](docs/faq.md) for the shortest answers to scope questions
@@ -105,6 +106,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - milestone-backed roadmap waves for active public work in [`ROADMAP.md`](ROADMAP.md)
 - GitHub-native update hygiene in [`.github/dependabot.yml`](.github/dependabot.yml)
 - GitHub release-note categorization in [`.github/release.yml`](.github/release.yml)
+- repo-owned GitHub label and milestone configs in [`.github/labels.json`](.github/labels.json) and [`.github/milestones.json`](.github/milestones.json)
 - explicit community-health guidance and intake verification
 - machine-readable provenance in [`SOURCE_MANIFEST.json`](SOURCE_MANIFEST.json)
 - machine-readable contract discovery in [`PUBLIC_CONTRACT_CATALOG.json`](PUBLIC_CONTRACT_CATALOG.json)

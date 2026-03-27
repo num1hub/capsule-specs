@@ -4,6 +4,7 @@
 
 - community health files: `README`, `LICENSE`, `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `SUPPORT`
 - community intake surfaces: `docs/community-health.md`, issue templates, and the pull-request template
+- repo-owned GitHub operations surfaces: `.github/labels.json`, `.github/milestones.json`, `docs/github-operations.md`, `.github/release.yml`, and `.github/dependabot.yml`
 - root onboarding and governance files: `QUICKSTART`, `ONBOARDING`, `GOVERNANCE`, `MAINTAINERS`, `ROADMAP`, `CHANGELOG`
 - repo ergonomics and legal files: `.editorconfig`, `package.json`, `RELEASING`, `NOTICE`, `CITATION.cff`
 - GitHub-native maintenance files: `.github/dependabot.yml` and `.github/release.yml`
@@ -108,7 +109,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `225` files / `225` manifest entries
+- manifest coverage: `229` files / `229` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

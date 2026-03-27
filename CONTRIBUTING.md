@@ -12,6 +12,7 @@ When a change affects architectural truth, validation law, or the underlying cap
 
 Use the repository issue templates where possible. They keep bug reports, integration questions, and contract-change proposals scoped to the public surface.
 Active public work is grouped under the `v0.2.0 Better Integrator Surfaces` and `v0.3.0 Projection-Friendly References` milestones, with labels such as `area:*`, `kind:*`, and `contract` used to keep issue scope reviewable.
+The repo-owned GitHub operating surface is documented in `.github/labels.json`, `.github/milestones.json`, and `docs/github-operations.md`.
 
 For the public maintainer workflow model, review [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) and [`docs/maintainer-operations.md`](docs/maintainer-operations.md).
 For the public change-control model, review [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) and [`docs/change-control.md`](docs/change-control.md).

@@ -16,6 +16,10 @@ This repository keeps release evidence in both human-readable and machine-readab
   GitHub-native release-note categorization aligned to the repository label taxonomy.
 - [`../.github/dependabot.yml`](../.github/dependabot.yml)
   GitHub-native automated update posture for Actions and package metadata.
+- [`../.github/labels.json`](../.github/labels.json)
+  Repo-owned GitHub label taxonomy for the maintained public issue surface.
+- [`../.github/milestones.json`](../.github/milestones.json)
+  Repo-owned active GitHub milestones for the current public roadmap waves.
 
 ## Machine-readable surfaces
 

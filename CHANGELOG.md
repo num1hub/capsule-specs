@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- added citation metadata, Dependabot update hygiene, GitHub release-note categorization, and release-identity synchronization to the live GitHub release
+- added citation metadata, Dependabot update hygiene, repo-owned GitHub label/milestone configs, release-note categorization, and release-identity synchronization to the live GitHub release
 - added repo-local package metadata and a single `npm run verify:repo` entrypoint
 - added release and provenance docs for source materials, FAQ, and release cadence
 - added a graph-linked project-hub example plus a known-ID catalog for link-aware checks
