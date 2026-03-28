@@ -2,7 +2,7 @@
   "valid": true,
   "errors": [],
   "warnings": [],
-  "computedHash": "2824c1ef160cd34e0cb08d558f8f786abfb691643ee37ead5f63b7d094524bf1ae6cf56855d0da9b898aea111be45fbc34b52236ad9810a4fe68e48637eab365",
+  "computedHash": "7a3352892e1529f08f10afe7ff33861a433410c4072930933ab86903d46b10f33dc59676ca1bcd2694259d6448817cc4769ee91b4936446c38117880ca47c456",
   "fixedCapsule": {
     "metadata": {
       "capsule_id": "capsule.example.validator-invalid-g16.v1",
@@ -49,6 +49,6 @@
       "links": [],
       "epistemic_ledger": []
     },
-    "integrity_sha3_512": "2824c1ef160cd34e0cb08d558f8f786abfb691643ee37ead5f63b7d094524bf1ae6cf56855d0da9b898aea111be45fbc34b52236ad9810a4fe68e48637eab365"
+    "integrity_sha3_512": "7a3352892e1529f08f10afe7ff33861a433410c4072930933ab86903d46b10f33dc59676ca1bcd2694259d6448817cc4769ee91b4936446c38117880ca47c456"
   }
 }

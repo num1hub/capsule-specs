@@ -26,6 +26,12 @@ If you want a raw JSON Schema validation path instead of the projection layer or
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 
+If you need the exact public sealing rule for `integrity_sha3_512`, also inspect:
+
+- [`integrity-recipes.md`](integrity-recipes.md)
+- [`../examples/client/recompute-integrity-seal.mjs`](../examples/client/recompute-integrity-seal.mjs)
+- [`../references/contract-constants.json`](../references/contract-constants.json)
+
 ## 2. Add source-level projections where helpful
 
 If your toolchain uses TypeScript or Zod directly, also inspect:

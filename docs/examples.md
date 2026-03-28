@@ -25,6 +25,8 @@ Public specs are stronger when they show both a passing case and a controlled fa
 
 For schema-invalid fixtures that should fail before live validator semantics matter, see [`invalid-capsule-examples.md`](invalid-capsule-examples.md) and [`../examples/invalid/README.md`](../examples/invalid/README.md).
 
+For a copyable public-safe sealing and `G16` repair path, see [`integrity-recipes.md`](integrity-recipes.md).
+
 ## Validation status
 
 The three positive examples were validated with the live validator from the upstream N1Hub repository. The negative example is expected to fail because the integrity seal is intentionally wrong.

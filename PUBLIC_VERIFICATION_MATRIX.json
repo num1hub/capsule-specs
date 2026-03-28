@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "reviewed_at": "2026-03-26",
+  "reviewed_at": "2026-03-28",
   "purpose": "Provide a bounded machine-readable map from verification command families to the public surfaces and failure classes they protect.",
   "checks": [
     {
@@ -36,30 +36,40 @@
     },
     {
       "id": "capsule-and-api-example-integrity",
-      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, and schema-backed artifact correctness.",
+      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, and the reproducibility of published G16 integrity seals and computedHash values.",
       "commands": [
         "npm run check:examples",
         "npm run check:raw-capsules",
         "npm run check:api-examples",
+        "npm run check:integrity-recipes",
         "npm run check:api-schemas"
       ],
       "protects": [
         "examples/",
         "capsules/",
         "examples/api/",
-        "schemas/validator-api-envelopes.schema.json"
+        "schemas/validator-api-envelopes.schema.json",
+        "docs/integrity-recipes.md",
+        "examples/client/recompute-integrity-seal.mjs",
+        "examples/client/esm-package-recompute-integrity-seal.mjs",
+        "references/contract-constants.json"
       ],
       "strongest_surfaces": [
         "examples/example-project-hub.capsule.json",
         "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
         "examples/api/validate-request.single.json",
-        "schemas/validator-api-envelopes.schema.json"
+        "schemas/validator-api-envelopes.schema.json",
+        "scripts/check-integrity-recipes.js",
+        "examples/api/validate-response.pass.json"
       ],
       "failure_modes_prevented": [
         "broken example semantics",
         "broken raw capsule semantics",
         "API/sample drift",
-        "schema/example mismatch"
+        "schema/example mismatch",
+        "stale G16 integrity seals in published capsule examples",
+        "stale computedHash values in validator API examples",
+        "package-level integrity recipe claims that only work through repo-local helper state"
       ]
     },
     {

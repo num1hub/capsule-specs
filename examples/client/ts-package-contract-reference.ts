@@ -5,6 +5,8 @@ export const gateIds = validationGates.gates.map((gate) => gate.id);
 
 export const referenceSummary = {
   rootKeys: contractConstants.capsule_root_keys,
+  integrityPayloadRootKeys: contractConstants.validator.integrity_payload_root_keys,
+  integrityCanonicalization: contractConstants.validator.integrity_canonicalization,
   relationTypes: contractConstants.relation_types,
   confidenceDimensions: contractConstants.confidence_vector.dimensions,
   firstGate: validationGates.gates[0]?.id ?? "G01"
@@ -12,4 +14,8 @@ export const referenceSummary = {
 
 if (!gateIds.includes("G16")) {
   throw new Error("missing G16");
+}
+
+if (referenceSummary.integrityPayloadRootKeys.length !== 4) {
+  throw new Error("unexpected integrity payload root count");
 }

@@ -9,6 +9,7 @@ Use this layer when you want canonical enums, gate IDs, and validator option fla
 - [`../references/contract-constants.json`](../references/contract-constants.json)
   Compact constants for:
   - the canonical five root keys
+  - the four-root integrity payload scope and canonicalization rule used for `G16`
   - `metadata.type`, `metadata.subtype`, and `metadata.status` enums
   - `relation_type` enums
   - confidence-vector dimensions and bounds
@@ -23,6 +24,7 @@ Use the reference pack when you are building:
 - UI pickers for capsule metadata enums
 - lint rules that need canonical relation types
 - tool-builder defaults for confidence-vector dimensions
+- integrity-seal recomputation helpers that need the bounded root scope without parsing the full prose stack
 - CLI hints, dashboards, or docs generators that need the ordered gate list
 
 ## What stays stronger than this layer
@@ -48,5 +50,6 @@ See also:
 
 - [`npm-consumption.md`](npm-consumption.md)
 - [`integration-guide.md`](integration-guide.md)
+- [`integrity-recipes.md`](integrity-recipes.md)
 - [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs)
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)

@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { computeIntegrityHash } = require('./lib/integrity');
 
 const repoRoot = path.resolve(__dirname, '..');
 const apiExamplesDir = path.join(repoRoot, 'examples', 'api');
@@ -57,6 +58,8 @@ const conflictResponse = readJson(files.conflictResponse);
 const rateLimitResponse = readJson(files.rateLimitResponse);
 const noteExample = readExample('example-note.capsule.json');
 const invalidG16Example = readExample('example-validator-invalid-g16.capsule.json');
+const computedNoteHash = computeIntegrityHash(noteExample);
+const computedInvalidHash = computeIntegrityHash(invalidG16Example);
 
 assert(singleRequest.capsule?.metadata?.capsule_id === 'capsule.example.note.v1', 'single request must target the public note example');
 assert(typeof singleRequest.autoFix === 'boolean', 'single request must define autoFix');
@@ -90,15 +93,15 @@ assert(passResponse.valid === true, 'pass response must be valid');
 assert(Array.isArray(passResponse.errors) && passResponse.errors.length === 0, 'pass response errors must be empty');
 assert(Array.isArray(passResponse.appliedFixes), 'pass response must define appliedFixes');
 assert(
-  passResponse.computedHash === noteExample.integrity_sha3_512,
-  'pass response computedHash must match the integrity seal of the public note example'
+  passResponse.computedHash === computedNoteHash,
+  'pass response computedHash must match the recomputed integrity seal of the public note example'
 );
 
 assert(failResponse.valid === false, 'fail response must be invalid');
 assert(Array.isArray(failResponse.errors) && failResponse.errors.some((issue) => issue.gate === 'G16'), 'fail response must include a G16 issue');
 assert(
-  failResponse.computedHash !== invalidG16Example.integrity_sha3_512,
-  'fail response computedHash must differ from the intentionally incorrect all-zero seal'
+  failResponse.computedHash === computedInvalidHash,
+  'fail response computedHash must match the recomputed integrity seal for the intentionally broken input example'
 );
 
 assert(batchResponse.summary?.total === batchResponse.results?.length, 'batch response summary total must match results length');
@@ -107,6 +110,14 @@ assert(batchResponse.results.some((result) => result.capsuleId === 'capsule.exam
 assert(
   batchResponse.results.some((result) => result.capsuleId === 'capsule.example.validator-invalid-g16.v1'),
   'batch response must mention the G16-negative example'
+);
+assert(
+  batchResponse.results.find((result) => result.capsuleId === 'capsule.example.note.v1')?.computedHash === computedNoteHash,
+  'batch response must keep the recomputed note integrity hash'
+);
+assert(
+  batchResponse.results.find((result) => result.capsuleId === 'capsule.example.validator-invalid-g16.v1')?.computedHash === computedInvalidHash,
+  'batch response must keep the recomputed G16-negative integrity hash'
 );
 
 assert(fixResponse.valid === true, 'fix response sample must be valid');
@@ -118,6 +129,10 @@ assert(
 assert(
   fixResponse.fixedCapsule?.integrity_sha3_512 === fixResponse.computedHash,
   'fix response computedHash must match the corrected fixedCapsule seal'
+);
+assert(
+  fixResponse.computedHash === computedInvalidHash,
+  'fix response computedHash must match the recomputed integrity seal for the invalid G16 example'
 );
 
 assert(Array.isArray(gatesResponse.gates) && gatesResponse.gates.length >= 4, 'gates response sample must contain at least four gates');

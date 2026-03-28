@@ -42,6 +42,7 @@ const expectedConfidenceDimensions = neuroSchema.properties.confidence_vector.re
 const expectedValidationOptionFlags = Object.keys(validatorSchema['$defs'].validationOptions.properties);
 const expectedGateSeverityEnum = validatorSchema['$defs'].gateDescriptor.properties.severity.enum;
 const expectedIntegrityPattern = capsuleSchema.properties.integrity_sha3_512.pattern;
+const expectedIntegrityPayloadRootKeys = expectedRootKeys.slice(0, 4);
 
 const expectedFamilies = [
   {
@@ -99,6 +100,8 @@ assert(constants.confidence_vector.minimum === 0, 'contract-constants confidence
 assert(constants.confidence_vector.maximum === 1, 'contract-constants confidence_vector maximum must be 1');
 assert(sameArray(constants.validator.validation_option_flags, expectedValidationOptionFlags), 'contract-constants validation_option_flags must match validator schema');
 assert(sameArray(constants.validator.gate_severity_enum, expectedGateSeverityEnum), 'contract-constants gate_severity_enum must match validator schema');
+assert(sameArray(constants.validator.integrity_payload_root_keys, expectedIntegrityPayloadRootKeys), 'contract-constants integrity_payload_root_keys must match the first four capsule roots');
+assert(constants.validator.integrity_canonicalization === 'sorted-key-json', 'contract-constants integrity_canonicalization must stay sorted-key-json');
 assert(constants.validator.integrity_sha3_512_pattern === expectedIntegrityPattern, 'contract-constants integrity pattern must match capsule schema');
 
 assert(Array.isArray(gates.families) && sameArray(gates.families, expectedFamilies), 'validation-gates families must match the expected gate-family map');

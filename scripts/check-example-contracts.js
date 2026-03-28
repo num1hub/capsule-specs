@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { computeIntegrityHash } = require('./lib/integrity');
 
 const repoRoot = path.resolve(__dirname, '..');
 const examplesDir = path.join(repoRoot, 'examples');
@@ -10,9 +11,9 @@ const knownIdsPath = path.join(examplesDir, 'example-known-ids.json');
 const exampleFiles = [
   'example-note.capsule.json',
   'example-task.capsule.json',
+  'example-project-hub.capsule.json',
   'example-validator-valid.capsule.json',
-  'example-validator-invalid-g16.capsule.json',
-  'example-project-hub.capsule.json'
+  'example-validator-invalid-g16.capsule.json'
 ];
 
 const semanticHashPattern = /^(?:[a-z0-9]+-){7}[a-z0-9]+$/;
@@ -57,6 +58,19 @@ for (const fileName of exampleFiles) {
   assert(Array.isArray(keywords) && keywords.length >= 5 && keywords.length <= 15, `${fileName} must keep 5-15 keywords`);
   const words = wordCount(capsule.neuro_concentrate.summary || '');
   assert(words >= 70 && words <= 160, `${fileName} summary must stay within 70-160 words`);
+  const computedHash = computeIntegrityHash(capsule);
+
+  if (fileName === 'example-validator-invalid-g16.capsule.json') {
+    assert(
+      capsule.integrity_sha3_512 !== computedHash,
+      `${fileName} must remain intentionally incorrect for the G16 negative path`
+    );
+  } else {
+    assert(
+      capsule.integrity_sha3_512 === computedHash,
+      `${fileName} must keep an integrity seal that matches the public sealing rule`
+    );
+  }
 }
 
 assert(knownIds.length === exampleCapsules.length, 'known ID catalog must contain one entry per example capsule');

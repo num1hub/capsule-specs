@@ -42,4 +42,5 @@ The live validator can safely repair only a narrow subset of issues:
 See also:
 
 - [`validator.md`](validator.md)
+- [`integrity-recipes.md`](integrity-recipes.md)
 - [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)

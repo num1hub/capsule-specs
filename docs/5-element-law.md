@@ -29,5 +29,6 @@ The law makes capsules self-descriptive, computable, and verifiable. It prevents
 See also:
 
 - [`16-gates.md`](16-gates.md)
+- [`integrity-recipes.md`](integrity-recipes.md)
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
 - [`validator.md`](validator.md)

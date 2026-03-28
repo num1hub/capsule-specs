@@ -21,6 +21,8 @@ Raw-schema consumers need a different teaching layer: examples that are rejected
 - [`../examples/invalid/example-invalid-relation-type.capsule.json`](../examples/invalid/example-invalid-relation-type.capsule.json)
   Uses a non-canonical `relation_type` value inside `recursive_layer.links`.
 
+The relation-type fixture keeps a correct integrity seal so the failure remains isolated to the documented enum violation instead of drifting into an accidental `G16` mismatch.
+
 These fixtures are intentionally small and teaching-oriented. They do not claim to cover every possible schema rejection or every validator-only failure class.
 
 ## Important distinction
@@ -40,6 +42,7 @@ This distinction matters when you are deciding whether you need:
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
+- [`integrity-recipes.md`](integrity-recipes.md)
 
 ## Verification
 

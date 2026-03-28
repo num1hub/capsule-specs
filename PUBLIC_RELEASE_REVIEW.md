@@ -45,6 +45,7 @@
 - compact contract-reference JSON artifacts, their directory guide and human guide, package-consumer recipes, and repo-local verifier
 - Ajv-based raw-schema consumer recipes, their human guide, and repo-local verifier
 - intentionally schema-invalid capsule fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
+- integrity-seal recomputation docs, repo-local and package-consumer seal recipes, compact integrity constants, and a dedicated verifier for published `G16` example and API hash correctness
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
 - client recipes and trust-model docs for external consumers
@@ -74,7 +75,7 @@ Validated with the live validator from `/home/n1/n1hub.com` on 2026-03-26:
 - `examples/example-validator-valid.capsule.json`: pass
 - `examples/example-validator-invalid-g16.capsule.json`: expected fail on `G16`
 
-Repository-local audit on 2026-03-26:
+Repository-local audit on 2026-03-28:
 
 - `node scripts/audit-public-surface.js`: pass
 - `node scripts/check-example-contracts.js`: pass
@@ -87,6 +88,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-reference-pack.js`: pass
 - `node scripts/check-schema-recipes.js`: pass
 - `node scripts/check-invalid-examples.js`: pass
+- `node scripts/check-integrity-recipes.js`: pass
 - `node scripts/check-example-coverage.js`: pass
 - `node scripts/check-boundary-map.js`: pass
 - `node scripts/check-client-recipes.js`: pass
@@ -122,7 +124,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `279` files / `279` manifest entries
+- manifest coverage: `284` files / `284` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -147,6 +149,7 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_FAILURE_MODEL.json` is a bounded negative-evidence summary and must stay subordinate to the stronger examples, validator docs, OpenAPI, and portability surfaces
 - `PUBLIC_EXAMPLE_COVERAGE.json` is a curated fixture-coverage summary and must stay subordinate to the stronger example files, route docs, and validator-backed checks it references
 - `docs/invalid-capsule-examples.md`, `examples/invalid/`, and `scripts/check-invalid-examples.js` are a bounded structural-rejection teaching layer and must stay subordinate to the stronger published schemas, validator docs, and live validator behavior they complement
+- `docs/integrity-recipes.md`, the seal-recomputation recipes under `examples/client/`, `references/contract-constants.json`, and `scripts/check-integrity-recipes.js` are a bounded public proof of the published `G16` sealing rule and example/API hash correctness, not a full replacement for live validator edge-case behavior
 - `PUBLIC_MAINTENANCE_MODEL.json` is a bounded workflow summary and must stay subordinate to the stronger maintainer docs, community intake surfaces, release docs, and verification evidence it references
 - `PUBLIC_CHANGE_CONTROL_MODEL.json` is a bounded change-control summary and must stay subordinate to the stronger versioning, compatibility, changelog, and release-evidence surfaces it references
 - `PUBLIC_OWNERSHIP_MAP.json` is a bounded ownership-and-authority summary and must stay subordinate to the stronger docs, schemas, provenance, and contract surfaces it references

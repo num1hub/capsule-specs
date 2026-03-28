@@ -43,3 +43,4 @@ Wave 2 and Wave 3 are already delivered. Wave 4 is the next deliberate expansion
 - improve onboarding for external contributors and integrators
   Started through [`docs/schema-validation-recipes.md`](docs/schema-validation-recipes.md), the Ajv consumer recipes under [`examples/client/`](examples/client/), and the verifier in [`scripts/check-schema-recipes.js`](scripts/check-schema-recipes.js).
   Deepened further through [`docs/invalid-capsule-examples.md`](docs/invalid-capsule-examples.md), [`examples/invalid/`](examples/invalid/), and the verifier in [`scripts/check-invalid-examples.js`](scripts/check-invalid-examples.js).
+  Deepened further through [`docs/integrity-recipes.md`](docs/integrity-recipes.md), the sealing recipes under [`examples/client/`](examples/client/), and the verifier in [`scripts/check-integrity-recipes.js`](scripts/check-integrity-recipes.js).

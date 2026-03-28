@@ -149,6 +149,8 @@ Use [`relation-types.md`](relation-types.md) when you need human-readable meanin
 
 The public contract treats this as the digest of the canonicalized first four roots. In other words, integrity is not a decorative checksum field. It is the final sealing boundary for the published artifact.
 
+For the shortest public-safe recomputation path, see [`integrity-recipes.md`](integrity-recipes.md) and [`../references/contract-constants.json`](../references/contract-constants.json).
+
 ## Validator API envelope fields
 
 The validator HTTP contract is published separately under [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json). The main public envelope families are:

@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const Ajv2020 = require('ajv/dist/2020');
+const { computeIntegrityHash } = require('./lib/integrity');
 
 const repoRoot = path.resolve(__dirname, '..');
 const invalidDir = path.join(repoRoot, 'examples', 'invalid');
@@ -59,6 +60,13 @@ for (const fixture of invalidFixtures) {
   assert(errors.some(fixture.predicate), `${fixture.path} must fail with the documented schema error`);
   assert(invalidDoc.includes(fixture.path.replace('../', '')) || invalidDoc.includes(path.basename(fixture.path)), `docs/invalid-capsule-examples.md must mention ${fixture.path}`);
   assert(invalidReadme.includes(path.basename(fixture.path)), `examples/invalid/README.md must mention ${path.basename(fixture.path)}`);
+
+  if (fixture.path.endsWith('example-invalid-relation-type.capsule.json')) {
+    assert(
+      payload.integrity_sha3_512 === computeIntegrityHash(payload),
+      `${fixture.path} should keep a correct integrity seal so the documented failure stays isolated to relation_type`
+    );
+  }
 }
 
 assert(invalidDoc.includes('example-validator-invalid-g16.capsule.json'), 'invalid capsule examples doc must distinguish schema-invalid fixtures from the validator-only G16 example');

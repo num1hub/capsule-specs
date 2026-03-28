@@ -1,6 +1,6 @@
 {
   "profile_version": "0.1.0",
-  "reviewed_at": "2026-03-26",
+  "reviewed_at": "2026-03-28",
   "repository_identity": {
     "owner": "num1hub",
     "name": "capsule-specs",
@@ -66,7 +66,8 @@
       "repo-local verification for curated raw capsule sources",
       "repo-local verification for compact contract references",
       "repo-local verification for raw JSON Schema consumer recipes",
-      "repo-local verification for intentionally schema-invalid capsule fixtures"
+      "repo-local verification for intentionally schema-invalid capsule fixtures",
+      "public-safe integrity-seal recomputation recipes and verifier-backed example/API hash proofs"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -76,13 +77,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 279,
-    "markdown_files": 92,
+    "total_files": 284,
+    "markdown_files": 93,
     "schema_files": 34,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 21,
+    "client_recipe_files": 23,
     "workflow_files": 1,
     "issue_templates": 4
   },
@@ -128,7 +129,7 @@
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 46,
+    "repo_local_check_count": 47,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -175,7 +176,8 @@
     "schema_validation_recipes": "docs/schema-validation-recipes.md",
     "invalid_capsule_examples": "docs/invalid-capsule-examples.md",
     "repo_validation_workflow": "docs/repo-validation-workflow.md",
-    "npm_consumption": "docs/npm-consumption.md"
+    "npm_consumption": "docs/npm-consumption.md",
+    "integrity_recipes": "docs/integrity-recipes.md"
   },
   "program_readiness": {
     "maintainer_owned": true,

@@ -84,6 +84,12 @@ assert(neuroSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas
 assert(validatorSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json', 'validator schema export must expose the public schema JSON');
 assert(typeof openapi.openapi === 'string' && openapi.openapi.length > 0, 'OpenAPI export must expose a valid OpenAPI document');
 assert(Array.isArray(contractConstants.relation_types) && contractConstants.relation_types.length === 9, 'reference export must expose canonical relation types');
+assert(
+  Array.isArray(contractConstants.validator?.integrity_payload_root_keys) &&
+    contractConstants.validator.integrity_payload_root_keys.length === 4,
+  'reference export must expose integrity payload root keys'
+);
+assert(contractConstants.validator?.integrity_canonicalization === 'sorted-key-json', 'reference export must expose integrity canonicalization');
 assert(Array.isArray(validationGates.gates) && validationGates.gates.length === 16, 'reference export must expose all 16 validation gates');
 assert(
   rawConfidenceCapsule.metadata?.capsule_id === 'capsule.foundation.capsuleos.confidence-vector.v1',
@@ -123,6 +129,7 @@ for (const relativePath of [
   'docs/npm-consumption.md',
   'docs/schema-validation-recipes.md',
   'docs/invalid-capsule-examples.md',
+  'docs/integrity-recipes.md',
   'schemas/capsule-schema.json',
   'schemas/neuro-concentrate.schema.json',
   'schemas/validator-api-envelopes.schema.json',
@@ -137,6 +144,8 @@ for (const relativePath of [
   'examples/client/cjs-package-contract-reference.cjs',
   'examples/client/esm-package-ajv-validate-contracts.mjs',
   'examples/client/esm-package-ajv-reject-invalid-capsules.mjs',
+  'examples/client/recompute-integrity-seal.mjs',
+  'examples/client/esm-package-recompute-integrity-seal.mjs',
   'examples/client/esm-package-capsule-summary.mjs',
   'examples/client/esm-package-validate-response.mjs',
   'examples/client/ts-package-contract-reference.ts',

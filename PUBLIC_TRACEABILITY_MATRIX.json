@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "reviewed_at": "2026-03-26",
+  "reviewed_at": "2026-03-28",
   "traces": [
     {
       "id": "law-and-schema-contract",
@@ -764,6 +764,41 @@
       ],
       "verify_commands": [
         "npm run check:publication-readiness",
+        "npm run check:traceability"
+      ]
+    },
+    {
+      "id": "integrity-seal-rule-and-hash-proofs",
+      "claim": "The public surface makes the G16 sealing rule reproducible through compact constants, human guidance, repo-local recipes, package-consumer recipes, and verifier-backed example/API hash proofs without requiring private validator helpers.",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/integrity-recipes.md",
+        "references/contract-constants.json",
+        "examples/client/recompute-integrity-seal.mjs",
+        "examples/client/esm-package-recompute-integrity-seal.mjs",
+        "scripts/check-integrity-recipes.js"
+      ],
+      "supporting_surfaces": [
+        "docs/5-element-law.md",
+        "docs/16-gates.md",
+        "docs/reference-pack.md",
+        "examples/example-note.capsule.json",
+        "examples/example-validator-invalid-g16.capsule.json",
+        "examples/api/validate-response.pass.json",
+        "examples/api/validate-response.fail.json",
+        "examples/api/validate-response.batch.json",
+        "examples/api/validate-response.fix.sample.json",
+        "scripts/lib/integrity.js"
+      ],
+      "verify_commands": [
+        "npm run check:integrity-recipes",
+        "npm run check:examples",
+        "npm run check:api-examples",
+        "npm run check:package-install",
         "npm run check:traceability"
       ]
     }

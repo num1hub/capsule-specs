@@ -1,19 +1,19 @@
 {
   "version": "0.1.0",
   "catalog_version": "0.1.0",
-  "reviewed_at": "2026-03-26",
+  "reviewed_at": "2026-03-28",
   "license": "Apache-2.0",
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 279,
-    "manifest_entries": 279
+    "files": 284,
+    "manifest_entries": 284
   },
   "surface_summary": {
-    "catalog_entries": 235,
+    "catalog_entries": 239,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 92
+    "markdown_files": 93
   },
   "repo_local_checks": [
     {
@@ -58,6 +58,10 @@
     },
     {
       "command": "npm run check:invalid-examples",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:integrity-recipes",
       "status": "pass"
     },
     {
@@ -267,6 +271,7 @@
     "The package-install checks prove fresh-project tarball consumption for CommonJS, ESM, TypeScript type-resolution, and Ajv-based raw-schema flows, but they do not by themselves imply a published npm registry release.",
     "The compact reference pack in docs/reference-pack.md and references/ is a convenience summary layer for tool-builders and must stay subordinate to the stronger schemas, gate docs, raw capsules, and live validator behavior it summarizes.",
     "The raw-schema recipe layer in docs/schema-validation-recipes.md and examples/client/ is a convenience consumer path and must stay subordinate to the stronger published schemas, OpenAPI, curated examples, and live validator behavior it demonstrates.",
-    "The invalid-fixture layer in docs/invalid-capsule-examples.md and examples/invalid/ is a bounded teaching surface for structural rejection testing and must not be mistaken for a complete map of live validator failure classes or private runtime test coverage."
+    "The invalid-fixture layer in docs/invalid-capsule-examples.md and examples/invalid/ is a bounded teaching surface for structural rejection testing and must not be mistaken for a complete map of live validator failure classes or private runtime test coverage.",
+    "The integrity recipe layer in docs/integrity-recipes.md, examples/client/, and scripts/check-integrity-recipes.js is a public-safe recomputation proof for published G16 hashes and examples, not a full replacement for live validator edge-case behavior outside the published sealing rule."
   ]
 }

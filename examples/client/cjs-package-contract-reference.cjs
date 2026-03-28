@@ -10,6 +10,8 @@ if (!validationGates.gates.length) {
 
 console.log({
   rootKeys: contractConstants.capsule_root_keys.length,
+  integrityPayloadRootKeys: contractConstants.validator.integrity_payload_root_keys,
+  integrityCanonicalization: contractConstants.validator.integrity_canonicalization,
   firstGate: firstGate.id,
   gateFamilies: validationGates.families.map((family) => family.id),
   typeSummary

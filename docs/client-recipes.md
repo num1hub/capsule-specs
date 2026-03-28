@@ -53,6 +53,16 @@ If you want direct structural validation against the published schemas, inspect:
 
 These recipes demonstrate how to validate public examples against the raw JSON Schema layer with Ajv, and how to confirm that intentionally invalid fixtures are rejected for the documented structural reasons, without relying on the projection layer or live validator API calls.
 
+## Integrity recipes
+
+If you need the public `G16` sealing rule instead of only schema shape, inspect:
+
+- [`../examples/client/recompute-integrity-seal.mjs`](../examples/client/recompute-integrity-seal.mjs)
+- [`../examples/client/esm-package-recompute-integrity-seal.mjs`](../examples/client/esm-package-recompute-integrity-seal.mjs)
+- [`integrity-recipes.md`](integrity-recipes.md)
+
+These recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload, verify that the positive examples are sealed correctly, and repair the intentional `G16` teaching example without depending on private runtime helpers.
+
 ## Package recipes
 
 If you want package-style consumption instead of file-relative source imports, also inspect:
@@ -68,7 +78,7 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
 - [`npm-consumption.md`](npm-consumption.md)
 
-These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports, positive raw-schema Ajv consumption, and package-level rejection of intentionally invalid schema fixtures through package subpaths.
+These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports, positive raw-schema Ajv consumption, package-level rejection of intentionally invalid schema fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows.
 
 ## Route mapping
 

@@ -5144,5 +5144,66 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for intentionally schema-invalid capsule fixtures and their documented rejection expectations."
+  },
+  "docs/integrity-recipes.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/5-element-law.md",
+      "/home/n1/codex-workspace/docs/16-gates.md",
+      "/home/n1/codex-workspace/docs/reference-pack.md",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to the public G16 sealing rule, integrity payload scope, and repo/package-level recomputation recipes."
+  },
+  "examples/client/recompute-integrity-seal.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/docs/integrity-recipes.md",
+      "/home/n1/codex-workspace/scripts/lib/integrity.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local ESM recipe for recomputing published integrity seals and demonstrating intentional G16 repair boundaries."
+  },
+  "examples/client/esm-package-recompute-integrity-seal.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/docs/integrity-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer ESM recipe for recomputing installed integrity seals and demonstrating intentional G16 repair boundaries."
+  },
+  "scripts/check-integrity-recipes.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/integrity-recipes.md",
+      "/home/n1/codex-workspace/examples/client/recompute-integrity-seal.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-recompute-integrity-seal.mjs",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/scripts/lib/integrity.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for public integrity-seal recomputation recipes and example/API hash correctness under the current G16 rule."
+  },
+  "scripts/lib/integrity.js": {
+    "source_paths": [
+      "/home/n1/n1hub.com/lib/validator/utils.ts",
+      "/home/n1/n1hub-repo-vault/scripts/seal-integrity.mjs",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Repo-local helper for the public G16 sealing rule derived from validator-owned integrity semantics and compact reference constants."
   }
 }

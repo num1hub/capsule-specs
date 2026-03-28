@@ -28,6 +28,11 @@ This directory contains minimal consumer-oriented examples for the published val
 - `esm-package-ajv-validate-contracts.mjs`
 - `esm-package-ajv-reject-invalid-capsules.mjs`
 
+## Integrity recipes
+
+- `recompute-integrity-seal.mjs`
+- `esm-package-recompute-integrity-seal.mjs`
+
 ## Package recipes
 
 - `cjs-package-capsule-summary.cjs`
@@ -47,3 +52,4 @@ This directory contains minimal consumer-oriented examples for the published val
 - The package recipes demonstrate CommonJS, ESM, and TypeScript consumption after `npm run build:projections` or from a packed artifact installed into a fresh project.
 - The package recipes also cover compact JSON contract references in addition to projection exports and raw capsule assets.
 - The raw-schema recipes demonstrate direct Ajv validation against published schema files, package-exported schema assets, and intentionally invalid schema fixtures.
+- The integrity recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload and how to repair the intentional `G16` teaching example without private runtime helpers.

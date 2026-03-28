@@ -64,6 +64,13 @@
       "error",
       "warning"
     ],
+    "integrity_payload_root_keys": [
+      "metadata",
+      "core_payload",
+      "neuro_concentrate",
+      "recursive_layer"
+    ],
+    "integrity_canonicalization": "sorted-key-json",
     "integrity_sha3_512_pattern": "^[a-f0-9]{128}$"
   }
 }

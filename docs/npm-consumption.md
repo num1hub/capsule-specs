@@ -11,6 +11,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for compact contract reference JSON artifacts
 - package exports for raw JSON Schema validation with third-party validators such as Ajv
 - package exports for intentionally invalid schema fixtures used in structural rejection tests
+- package exports for integrity-rule constants and copyable seal-recomputation recipes
 - package exports for curated raw capsule source files
 - pack-time inclusion of the built projection layer
 - fresh-project install checks for CommonJS, ESM, and TypeScript consumers
@@ -40,6 +41,7 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/openapi/validate.openapi.json`
 - `@num1hub/capsule-specs/references/contract-constants.json`
 - `@num1hub/capsule-specs/references/validation-gates.json`
+- `@num1hub/capsule-specs/examples/example-validator-invalid-g16.capsule.json`
 - `@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json`
 - `@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json`
 
@@ -80,7 +82,15 @@ const validationGates = require("@num1hub/capsule-specs/references/validation-ga
 
 console.log(contractConstants.relation_types);
 console.log(validationGates.gates.map((gate) => gate.id));
+console.log(contractConstants.validator.integrity_payload_root_keys);
+console.log(contractConstants.validator.integrity_canonicalization);
 ```
+
+## Minimal package-level integrity example
+
+A copyable version of this example also lives at [`../examples/client/esm-package-recompute-integrity-seal.mjs`](../examples/client/esm-package-recompute-integrity-seal.mjs).
+
+That recipe proves the installed package exports enough public material to recompute `integrity_sha3_512`, verify the positive note example, and repair the intentional `G16` teaching example without depending on unpublished runtime helpers.
 
 ## Minimal package-level Ajv schema example
 
@@ -176,3 +186,4 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - `npm run check:reference-pack`
 - `npm run check:schema-recipes`
 - `npm run check:invalid-examples`
+- `npm run check:integrity-recipes`

@@ -45,7 +45,7 @@
       "links": [],
       "epistemic_ledger": []
     },
-    "integrity_sha3_512": "fa282f90d323024889dec453ea5b470abfeec6f6a4a2b37dbdffd3761b6f335a87b0132f3dd3c9ef2773f273e40a429bbe05eb0decc0143c0e655bfc31d60ce7"
+    "integrity_sha3_512": "eed9fad3b0adac495f2bc898adfb26e49da11672767c6d9002b1f4dfe339159323e626598d61a49c4a5dedf3366a80b391dcb395c8844427eb11682bcd9c1ba8"
   },
   "options": {
     "skipG16": false,

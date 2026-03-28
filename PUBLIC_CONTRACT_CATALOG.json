@@ -1,6 +1,6 @@
 {
   "catalog_version": "0.1.0",
-  "generated_at": "2026-03-26",
+  "generated_at": "2026-03-28",
   "entries": [
     {
       "id": "community.dependabot-config",
@@ -3561,6 +3561,68 @@
       ],
       "verify_commands": [
         "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "docs.integrity-recipes",
+      "path": "docs/integrity-recipes.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:integrity-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.recompute-integrity-seal",
+      "path": "examples/client/recompute-integrity-seal.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:integrity-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-recompute-integrity-seal",
+      "path": "examples/client/esm-package-recompute-integrity-seal.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:integrity-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.integrity.check",
+      "path": "scripts/check-integrity-recipes.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:integrity-recipes",
         "npm run check:catalog"
       ]
     }

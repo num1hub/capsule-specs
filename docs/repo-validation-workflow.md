@@ -75,12 +75,14 @@ Examples:
 - `examples/api/*.json`
 - `docs/examples.md`
 - `docs/route-reference.md`
+- `docs/integrity-recipes.md`
 
 Start with:
 
 ```bash
 npm run check:examples
 npm run check:api-examples
+npm run check:integrity-recipes
 npm run check:example-coverage
 ```
 
@@ -136,6 +138,8 @@ Common co-movement rules:
 - changed package-export or pack-consumer path:
   review `docs/type-projections.md`, `docs/npm-consumption.md`, `examples/client/README.md`, `PUBLIC_CAPABILITY_MATRIX.json`, and `PUBLIC_TRACEABILITY_MATRIX.json`
   and re-run `npm run check:package-install` after `npm run check:package-surface`
+- changed sealing, `integrity_sha3_512`, or validator response `computedHash` examples:
+  review `docs/integrity-recipes.md`, `docs/reference-pack.md`, `examples/client/`, `examples/api/`, and re-run `npm run check:integrity-recipes`
 
 ## Step 3: Re-run the narrow checks
 
@@ -196,4 +200,5 @@ This repository is intentionally projection-oriented. Review quality depends on 
 - do not treat `npm run verify:repo` as permission to invent upstream law
 - do not edit summary JSON files without also checking the stronger source docs they point at
 - do not change examples without checking coverage, failure-path, and route alignment
+- do not change example seals or `computedHash` fields without re-running the dedicated integrity recipe checks
 - do not widen scope by slipping private-runtime assumptions into public docs

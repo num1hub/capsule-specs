@@ -1,6 +1,6 @@
 {
   "matrix_version": "0.1.0",
-  "reviewed_at": "2026-03-26",
+  "reviewed_at": "2026-03-28",
   "capabilities": [
     {
       "id": "inspect-capsule-law",
@@ -910,6 +910,39 @@
         "npm run check:publication-readiness",
         "npm run check:capability-matrix",
         "npm run check:release"
+      ]
+    },
+    {
+      "id": "recompute-public-integrity-seals",
+      "audience": "tool-builders",
+      "readiness": "ready",
+      "outcome": "Recompute public integrity seals and validator computedHash values from the published G16 rule, both from a repo checkout and from an installed package, without reaching into private validator helpers.",
+      "strongest_surfaces": [
+        "docs/integrity-recipes.md",
+        "references/contract-constants.json",
+        "examples/client/recompute-integrity-seal.mjs",
+        "examples/client/esm-package-recompute-integrity-seal.mjs",
+        "scripts/check-integrity-recipes.js"
+      ],
+      "supporting_surfaces": [
+        "docs/5-element-law.md",
+        "docs/16-gates.md",
+        "docs/reference-pack.md",
+        "examples/example-note.capsule.json",
+        "examples/example-validator-invalid-g16.capsule.json",
+        "examples/api/validate-response.pass.json",
+        "examples/api/validate-response.fail.json",
+        "examples/api/validate-response.batch.json",
+        "examples/api/validate-response.fix.sample.json",
+        "scripts/lib/integrity.js"
+      ],
+      "verify_commands": [
+        "npm run check:integrity-recipes",
+        "npm run check:examples",
+        "npm run check:api-examples",
+        "npm run check:client-recipes",
+        "npm run check:package-install",
+        "npm run check:capability-matrix"
       ]
     }
   ]

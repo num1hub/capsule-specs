@@ -33,6 +33,8 @@ const schemaRecipeFiles = [
   'esm-package-ajv-reject-invalid-capsules.mjs'
 ];
 
+const integrityRecipeFiles = ['recompute-integrity-seal.mjs', 'esm-package-recompute-integrity-seal.mjs'];
+
 const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
   'cjs-package-contract-reference.cjs',
@@ -50,7 +52,7 @@ function assert(condition, message) {
   }
 }
 
-for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles, ...schemaRecipeFiles, ...packageRecipeFiles, ...packageTypeRecipeFiles]) {
+for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles, ...schemaRecipeFiles, ...integrityRecipeFiles, ...packageRecipeFiles, ...packageTypeRecipeFiles]) {
   const filePath = path.join(clientDir, fileName);
   assert(fs.existsSync(filePath), `missing client recipe ${fileName}`);
 }
@@ -142,7 +144,32 @@ const expectedSchemaRecipeImports = {
   ]
 };
 
+const expectedIntegrityRecipeImports = {
+  'recompute-integrity-seal.mjs': [
+    '../example-note.capsule.json',
+    '../example-validator-invalid-g16.capsule.json',
+    '../../references/contract-constants.json',
+    'node:crypto'
+  ],
+  'esm-package-recompute-integrity-seal.mjs': [
+    '@num1hub/capsule-specs/examples/example-note.capsule.json',
+    '@num1hub/capsule-specs/examples/example-validator-invalid-g16.capsule.json',
+    '@num1hub/capsule-specs/references/contract-constants.json',
+    'node:crypto'
+  ]
+};
+
 for (const [fileName, imports] of Object.entries(expectedSchemaRecipeImports)) {
+  const filePath = path.join(clientDir, fileName);
+  const content = fs.readFileSync(filePath, 'utf8');
+  for (const importPath of imports) {
+    assert(content.includes(importPath), `${fileName} must import ${importPath}`);
+  }
+  const result = spawnSync(process.execPath, ['--check', filePath], { encoding: 'utf8' });
+  assert(result.status === 0, `${fileName} must be syntactically valid: ${result.stderr || result.stdout}`);
+}
+
+for (const [fileName, imports] of Object.entries(expectedIntegrityRecipeImports)) {
   const filePath = path.join(clientDir, fileName);
   const content = fs.readFileSync(filePath, 'utf8');
   for (const importPath of imports) {
@@ -213,6 +240,7 @@ console.log(
     nodeFiles.length +
     typeRecipeFiles.length +
     schemaRecipeFiles.length +
+    integrityRecipeFiles.length +
     packageRecipeFiles.length +
     packageTypeRecipeFiles.length
   } client recipe files`
