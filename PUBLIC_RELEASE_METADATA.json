@@ -6,11 +6,11 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 326,
-    "manifest_entries": 326
+    "files": 329,
+    "manifest_entries": 329
   },
   "surface_summary": {
-    "catalog_entries": 279,
+    "catalog_entries": 282,
     "example_capsules": 5,
     "api_example_files": 13,
     "markdown_files": 100
@@ -290,7 +290,7 @@
     "projections/typescript/capsule.ts, projections/typescript/validator-api.ts, projections/zod/capsule.ts, projections/zod/validator-api.ts, and the source-level client recipe examples are public-safe convenience projections and must stay subordinate to the stronger JSON Schema, OpenAPI, and live validator behavior they align to.",
     "The curated raw capsule set is intentionally selective and does not claim to publish the full upstream type, status, or vault corpus.",
     "The package-export layer in docs/npm-consumption.md, package.json, scripts/check-package-install.js, the built projection bundles, and the packaged raw capsule exports is a convenience distribution surface and must stay subordinate to the stronger source projections, raw curated sources, JSON Schemas, OpenAPI, curated examples, and live validator behavior it packages.",
-    "The package-install checks prove fresh-project tarball consumption for CommonJS, ESM, TypeScript type-resolution, and Ajv-based raw-schema flows, but they do not by themselves imply a published npm registry release.",
+    "The package-install checks prove fresh-project tarball consumption for CommonJS, ESM, installed support-response parsing, TypeScript type-resolution, and Ajv-based raw-schema flows, but they do not by themselves imply a published npm registry release.",
     "The compact reference pack in docs/reference-pack.md and references/ is a convenience summary layer for tool-builders and must stay subordinate to the stronger schemas, gate docs, raw capsules, and live validator behavior it summarizes.",
     "The raw-schema recipe layer in docs/schema-validation-recipes.md and examples/client/ is a convenience consumer path and must stay subordinate to the stronger published schemas, OpenAPI, curated examples, and live validator behavior it demonstrates.",
     "The invalid-fixture layer in docs/invalid-capsule-examples.md and examples/invalid/ is a bounded teaching surface for structural rejection testing and must not be mistaken for a complete map of live validator failure classes or private runtime test coverage.",

@@ -944,6 +944,22 @@
       ]
     },
     {
+      "id": "examples.client.cjs-package-support-responses",
+      "path": "examples/client/cjs-package-support-responses.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:package-surface",
+        "npm run check:package-install",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.cjs-package-validate-response",
       "path": "examples/client/cjs-package-validate-response.cjs",
       "kind": "client-recipe",
@@ -1157,6 +1173,22 @@
         "npm run check:client-recipes",
         "npm run check:integrity-recipes",
         "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-support-responses",
+      "path": "examples/client/esm-package-support-responses.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:package-surface",
+        "npm run check:package-install",
+        "npm run check:client-recipes",
         "npm run check:catalog"
       ]
     },
@@ -1456,6 +1488,22 @@
         "npm run check:type-projections",
         "npm run check:client-recipes",
         "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-package-support-responses",
+      "path": "examples/client/ts-package-support-responses.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:package-install",
+        "npm run check:client-recipes",
         "npm run check:catalog"
       ]
     },

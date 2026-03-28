@@ -85,7 +85,7 @@
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, and copyable cURL, Node, TypeScript, Zod, and Python request/response recipes for all published routes.",
+      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, copyable route recipes, and installed-package support-response readers for all published validator routes without depending on private runtime code.",
       "strongest_surfaces": [
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -113,7 +113,11 @@
         "examples/client/node-get-stats.mjs",
         "examples/client/python-get-gates.py",
         "examples/client/python-get-stats.py",
-        "examples/client/node-validate-fix.mjs"
+        "examples/client/node-validate-fix.mjs",
+        "docs/npm-consumption.md",
+        "examples/client/cjs-package-support-responses.cjs",
+        "examples/client/esm-package-support-responses.mjs",
+        "examples/client/ts-package-support-responses.ts"
       ],
       "verify_commands": [
         "npm run check:api-examples",
@@ -227,7 +231,7 @@
       "id": "consume-source-level-type-projections",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, Zod parsing artifacts, and package exports that are verified from fresh consumer installs instead of reverse-engineering shape from prose alone.",
+      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, Zod parsing artifacts, and package exports that are verified from fresh consumer installs for both validate flows and support-response payloads instead of reverse-engineering shape from prose alone.",
       "strongest_surfaces": [
         "docs/type-projections.md",
         "docs/npm-consumption.md",
@@ -252,7 +256,10 @@
         "examples/client/esm-package-capsule-summary.mjs",
         "examples/client/esm-package-validate-response.mjs",
         "examples/client/ts-package-validate-request.ts",
-        "examples/client/README.md"
+        "examples/client/README.md",
+        "examples/client/cjs-package-support-responses.cjs",
+        "examples/client/esm-package-support-responses.mjs",
+        "examples/client/ts-package-support-responses.ts"
       ],
       "verify_commands": [
         "npm run check:type-projections",

@@ -220,7 +220,10 @@
       "/home/n1/codex-workspace/docs/client-recipes.md",
       "/home/n1/codex-workspace/docs/python-consumption.md",
       "/home/n1/codex-workspace/docs/route-reference.md",
-      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; synchronized with validator API type-projection surfaces; package-export projection layer synchronized"
@@ -508,7 +511,10 @@
       "/home/n1/codex-workspace/examples/client/node-get-stats.mjs",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
       "/home/n1/codex-workspace/examples/client/python-get-stats.py",
-      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Consumer-oriented curl, Node, and Python usage guide for the validator HTTP surface with full published route coverage."
@@ -885,7 +891,10 @@
       "/home/n1/codex-workspace/docs/python-consumption.md",
       "/home/n1/codex-workspace/docs/route-reference.md",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
-      "/home/n1/codex-workspace/examples/client/python-get-stats.py"
+      "/home/n1/codex-workspace/examples/client/python-get-stats.py",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Integrator reading path through schema, OpenAPI, examples, support routes, and consumer recipes."
@@ -989,7 +998,12 @@
       "/home/n1/codex-workspace/scripts/check-package-install.js",
       "/home/n1/codex-workspace/projections/typescript/index.ts",
       "/home/n1/codex-workspace/projections/zod/index.ts",
-      "/home/n1/codex-workspace/tsconfig.build.json"
+      "/home/n1/codex-workspace/tsconfig.build.json",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the buildable package-export surface for the maintained projection layer, including local tarball install posture and TypeScript package-consumer resolution."
@@ -1312,7 +1326,10 @@
       "/home/n1/codex-workspace/docs/python-consumption.md",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
       "/home/n1/codex-workspace/examples/client/python-get-stats.py",
-      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release evidence synchronized with public type-projection surfaces; release evidence synchronized with validator API projection surfaces; package-export projection layer synchronized"
@@ -2051,6 +2068,16 @@
     "transformation_type": "generated",
     "notes": "CommonJS package-consumer recipe for compact contract-reference exports."
   },
+  "examples/client/cjs-package-support-responses.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal CommonJS package-consumer recipe for parsing the published validator support responses from installed package exports."
+  },
   "examples/client/cjs-package-validate-response.cjs": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
@@ -2059,6 +2086,24 @@
     ],
     "transformation_type": "generated",
     "notes": "Minimal CommonJS recipe for consuming the built package-export validator API surface."
+  },
+  "examples/client/curl-get-gates.sh": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal cURL recipe for the published GET /api/validate/gates support route."
+  },
+  "examples/client/curl-get-stats.sh": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal cURL recipe for the published GET /api/validate/stats support route."
   },
   "examples/client/curl-validate-batch.sh": {
     "source_paths": [
@@ -2168,6 +2213,16 @@
     "transformation_type": "generated",
     "notes": "Package-consumer ESM recipe for recomputing installed integrity seals and demonstrating intentional G16 repair boundaries."
   },
+  "examples/client/esm-package-support-responses.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal ESM package-consumer recipe for parsing the published validator support responses from installed package exports."
+  },
   "examples/client/esm-package-validate-response.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
@@ -2177,12 +2232,37 @@
     "transformation_type": "generated",
     "notes": "Minimal ESM recipe for consuming the built package-export validator API surface."
   },
+  "examples/client/node-get-gates.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal Node recipe for the published GET /api/validate/gates support route."
+  },
+  "examples/client/node-get-stats.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal Node recipe for the published GET /api/validate/stats support route."
+  },
   "examples/client/node-validate-batch.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-request.batch.json"
     ],
     "transformation_type": "generated",
     "notes": "Minimal Node fetch recipe for POST /api/validate/batch."
+  },
+  "examples/client/node-validate-fix.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal Node fetch recipe for POST /api/validate/fix."
   },
   "examples/client/node-validate-single.mjs": {
     "source_paths": [
@@ -2200,6 +2280,56 @@
     ],
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files."
+  },
+  "examples/client/python-get-gates.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/docs/route-reference.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for reading the published gates support route from sample data or a live validator."
+  },
+  "examples/client/python-get-stats.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/docs/route-reference.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for reading the published stats support route from sample data or a live validator."
+  },
+  "examples/client/python-parse-support-responses.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for parsing the published support response families for the validator HTTP surface."
+  },
+  "examples/client/python-parse-validate-responses.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for parsing the published validate, fail, batch, and fix response examples."
   },
   "examples/client/python-recompute-integrity-seal.py": {
     "source_paths": [
@@ -2231,34 +2361,6 @@
     ],
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for preparing or sending the published fix validator-envelope example."
-  },
-  "examples/client/python-parse-support-responses.py": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
-      "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/api-envelopes.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Python recipe for parsing the published support response families for the validator HTTP surface."
-  },
-  "examples/client/python-parse-validate-responses.py": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.batch.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
-      "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/api-envelopes.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Python recipe for parsing the published validate, fail, batch, and fix response examples."
   },
   "examples/client/python-validate-single.py": {
     "source_paths": [
@@ -2299,7 +2401,10 @@
       "/home/n1/codex-workspace/examples/client/node-get-stats.mjs",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
       "/home/n1/codex-workspace/examples/client/python-get-stats.py",
-      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for live-route, schema, integrity, package, and Python client recipes."
@@ -2336,6 +2441,17 @@
     ],
     "transformation_type": "generated",
     "notes": "TypeScript package-consumer recipe for compact contract-reference exports."
+  },
+  "examples/client/ts-package-support-responses.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/tsconfig.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal TypeScript package-consumer recipe for typed validator support-response handling against the built package exports."
   },
   "examples/client/ts-package-validate-request.ts": {
     "source_paths": [
@@ -2938,7 +3054,10 @@
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-adoption-readiness.js",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -3085,7 +3204,10 @@
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-adoption-readiness.js",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -3533,7 +3655,10 @@
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-adoption-readiness.js",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -3636,7 +3761,10 @@
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-adoption-readiness.js",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -3737,7 +3865,10 @@
       "/home/n1/codex-workspace/docs/python-consumption.md",
       "/home/n1/codex-workspace/docs/route-reference.md",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
-      "/home/n1/codex-workspace/examples/client/python-get-stats.py"
+      "/home/n1/codex-workspace/examples/client/python-get-stats.py",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Release review updated for verification matrix layer; manifest coverage tracked in PUBLIC_RELEASE_METADATA.json; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release review synchronized with public type-projection surfaces; release review synchronized with validator API projection surfaces; package-export projection layer synchronized"
@@ -3874,7 +4005,10 @@
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-adoption-readiness.js",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -3973,7 +4107,10 @@
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-adoption-readiness.js",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -4152,7 +4289,10 @@
       "/home/n1/codex-workspace/examples/client/node-get-gates.mjs",
       "/home/n1/codex-workspace/examples/client/node-get-stats.mjs",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
-      "/home/n1/codex-workspace/examples/client/python-get-stats.py"
+      "/home/n1/codex-workspace/examples/client/python-get-stats.py",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; front door synchronized with public validator API projection surfaces; package-export projection layer synchronized"
@@ -4211,7 +4351,10 @@
       "/home/n1/codex-workspace/docs/client-recipes.md",
       "/home/n1/codex-workspace/docs/python-consumption.md",
       "/home/n1/codex-workspace/docs/route-reference.md",
-      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Public roadmap for the open-core specification surface.; wave 3 updated for published type projections; package-export projection layer synchronized"
@@ -4718,7 +4861,10 @@
       "/home/n1/codex-workspace/examples/client/node-get-stats.mjs",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
       "/home/n1/codex-workspace/examples/client/python-get-stats.py",
-      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local checks for curl, Node, and Python client recipe snippets across all published validator routes."
@@ -4765,7 +4911,10 @@
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/codex-workspace/scripts/check-evidence-gaps.js",
       "/home/n1/codex-workspace/scripts/check-package-surface.js",
-      "/home/n1/codex-workspace/tsconfig.build.json"
+      "/home/n1/codex-workspace/tsconfig.build.json",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local validation for the machine-readable public contract catalog.; synchronized with evidence-gaps surfaces; contract catalog verifier synchronized with projection artifacts; contract catalog verifier synchronized with validator API source-level projections; package-export projection layer synchronized"
@@ -5132,7 +5281,10 @@
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
       "/home/n1/codex-workspace/projections/zod/index.ts",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Verifier for fresh CommonJS, ESM, and TypeScript installs of the packed package-export surface."
@@ -5154,7 +5306,12 @@
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/codex-workspace/tsconfig.build.json",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
-      "/home/n1/codex-workspace/examples/client/python-get-stats.py"
+      "/home/n1/codex-workspace/examples/client/python-get-stats.py",
+      "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the built package-export and pack surface."
@@ -5685,70 +5842,5 @@
     ],
     "transformation_type": "generated",
     "notes": "Versioning and contract-change policy for the public repository surface."
-  },
-  "examples/client/curl-get-gates.sh": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/route-reference.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal cURL recipe for the published GET /api/validate/gates support route."
-  },
-  "examples/client/curl-get-stats.sh": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/route-reference.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal cURL recipe for the published GET /api/validate/stats support route."
-  },
-  "examples/client/node-get-gates.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/route-reference.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal Node recipe for the published GET /api/validate/gates support route."
-  },
-  "examples/client/node-get-stats.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/route-reference.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal Node recipe for the published GET /api/validate/stats support route."
-  },
-  "examples/client/python-get-gates.py": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
-      "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/api-envelopes.md",
-      "/home/n1/codex-workspace/docs/route-reference.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Python recipe for reading the published gates support route from sample data or a live validator."
-  },
-  "examples/client/python-get-stats.py": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
-      "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/api-envelopes.md",
-      "/home/n1/codex-workspace/docs/route-reference.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Python recipe for reading the published stats support route from sample data or a live validator."
-  },
-  "examples/client/node-validate-fix.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/api/validate-request.fix.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal Node fetch recipe for POST /api/validate/fix."
   }
 }

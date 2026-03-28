@@ -79,7 +79,8 @@
       "intentionally schema-invalid archive-bundle fixtures for structural rejection testing",
       "repo-local verification for archive-bundle validation recipes",
       "repo-local verification for intentionally schema-invalid archive-bundle fixtures",
-      "live client recipes for all published validator routes"
+      "live client recipes for all published validator routes",
+      "package-level support-response recipe examples for published gates and stats payloads"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -89,13 +90,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 326,
+    "total_files": 329,
     "markdown_files": 100,
     "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 45,
+    "client_recipe_files": 48,
     "workflow_files": 1,
     "issue_templates": 4
   },

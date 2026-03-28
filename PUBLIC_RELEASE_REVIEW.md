@@ -44,6 +44,7 @@
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - public-safe TypeScript and Zod projection files for capsule and validator API contracts, bundle entrypoints, package-surface build config, package-surface verification, fresh-install verification, and both source-level and package-level CommonJS, ESM, and TypeScript consumer recipe examples
+- package-consumer support-response recipes for `gates` and `stats`, plus fresh-install proof that the installed validator projection layer covers support payload parsing as well as `validate` request/response flows
 - compact contract-reference JSON artifacts, their directory guide and human guide, package-consumer recipes, and repo-local verifier
 - single-file bundled schema artifacts, their human guide, package-consumer recipes, and repo-local verifier
 - Ajv-based raw-schema consumer recipes, their human guide, and repo-local verifier

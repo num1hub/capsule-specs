@@ -99,8 +99,10 @@ If you want package-style consumption instead of file-relative source imports, a
 
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
 - [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs)
+- [`../examples/client/cjs-package-support-responses.cjs`](../examples/client/cjs-package-support-responses.cjs)
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
+- [`../examples/client/esm-package-support-responses.mjs`](../examples/client/esm-package-support-responses.mjs)
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
 - [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs)
 - [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs)
@@ -109,10 +111,11 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs)
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
+- [`../examples/client/ts-package-support-responses.ts`](../examples/client/ts-package-support-responses.ts)
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
 - [`npm-consumption.md`](npm-consumption.md)
 
-These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports, positive raw-schema Ajv consumption, archive-bundle schema validation, bundled single-file schema consumption, package-level rejection of intentionally invalid archive, capsule, and validator-envelope fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows. If you need the same public JSON artifacts from Python instead of Node imports, use the extracted-artifact path documented in [`python-consumption.md`](python-consumption.md).
+These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports, installed-package parsing of `gates` and `stats` support responses, positive raw-schema Ajv consumption, archive-bundle schema validation, bundled single-file schema consumption, package-level rejection of intentionally invalid archive, capsule, and validator-envelope fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows. If you need the same public JSON artifacts from Python instead of Node imports, use the extracted-artifact path documented in [`python-consumption.md`](python-consumption.md).
 
 ## Route mapping
 

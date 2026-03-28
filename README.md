@@ -181,6 +181,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - public-safe TypeScript and Zod validator API envelope projections for source-level validator clients under [`projections/`](projections/)
 - a buildable and packable package-export layer for the maintained projection surface
 - a fresh-project tarball-install verification path for CommonJS, ESM, and TypeScript package consumers
+- package-consumer support-response recipes for installed `gates` and `stats` payload parsing across CommonJS, ESM, and TypeScript flows
 - a cross-language Python consumer path for compact references, published validator route flows, and public `G16` seal proofs from repo-local files or extracted packed artifacts
 - curated raw capsule source assets with repo-local contract checks and package subpath exports
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)

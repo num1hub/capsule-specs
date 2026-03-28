@@ -161,10 +161,14 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal source-level Zod recipe for parsing a validator response envelope.
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
   Minimal package-consumer recipe for the built capsule projection exports.
+- [`../examples/client/cjs-package-support-responses.cjs`](../examples/client/cjs-package-support-responses.cjs)
+  Minimal CommonJS package-consumer recipe for parsing the published `gates` and `stats` support responses from installed package exports.
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
   Minimal package-consumer recipe for the built validator API exports.
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
   Minimal ESM package-consumer recipe for the built capsule projection exports.
+- [`../examples/client/esm-package-support-responses.mjs`](../examples/client/esm-package-support-responses.mjs)
+  Minimal ESM package-consumer recipe for parsing the published `gates` and `stats` support responses from installed package exports.
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
   Minimal ESM package-consumer recipe for the built validator API exports.
 - [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs)
@@ -205,6 +209,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal Python recipe for parsing the published gates, stats, unauthorized, conflict, generic-error, and rate-limit response families.
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
+- [`../examples/client/ts-package-support-responses.ts`](../examples/client/ts-package-support-responses.ts)
+  Minimal TypeScript package-consumer recipe for typed `gates` and `stats` support-response handling through installed package exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
   Minimal TypeScript package-consumer recipe for the built capsule and validator API exports.
 
@@ -214,7 +220,7 @@ The Markdown review surfaces are optimized for people. The JSON surfaces are opt
 
 The citation file, release-note config, and Dependabot config do not replace release evidence, but they make the public GitHub surface more usable as a maintained long-lived repository instead of a one-time export.
 
-The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable across the full published validator route set.
+The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable across the full published validator route set plus the installed-package support-response layer for `gates` and `stats`.
 
 The API envelope schema and its dedicated verification script strengthen that claim by keeping the public HTTP example layer machine-checkable.
 

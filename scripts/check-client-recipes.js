@@ -63,12 +63,18 @@ const pythonRecipeFiles = [
 const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
   'cjs-package-contract-reference.cjs',
+  'cjs-package-support-responses.cjs',
   'cjs-package-validate-response.cjs',
   'esm-package-capsule-summary.mjs',
+  'esm-package-support-responses.mjs',
   'esm-package-validate-response.mjs'
 ];
 
-const packageTypeRecipeFiles = ['ts-package-contract-reference.ts', 'ts-package-validate-request.ts'];
+const packageTypeRecipeFiles = [
+  'ts-package-contract-reference.ts',
+  'ts-package-support-responses.ts',
+  'ts-package-validate-request.ts'
+];
 
 function assert(condition, message) {
   if (!condition) {
@@ -362,6 +368,11 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/references/contract-constants.json',
     '@num1hub/capsule-specs/references/validation-gates.json'
   ],
+  'cjs-package-support-responses.cjs': [
+    '@num1hub/capsule-specs/zod/validator-api',
+    '@num1hub/capsule-specs/examples/api/gates-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/stats-response.sample.json'
+  ],
   'cjs-package-validate-response.cjs': [
     '@num1hub/capsule-specs/zod/validator-api'
   ],
@@ -373,6 +384,11 @@ const expectedPackageImports = {
   'esm-package-validate-response.mjs': [
     '@num1hub/capsule-specs/zod/validator-api',
     '@num1hub/capsule-specs/examples/api/validate-response.pass.json'
+  ],
+  'esm-package-support-responses.mjs': [
+    '@num1hub/capsule-specs/zod/validator-api',
+    '@num1hub/capsule-specs/examples/api/gates-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/stats-response.sample.json'
   ]
 };
 
@@ -384,6 +400,9 @@ const expectedPackageTypeImports = {
   'ts-package-contract-reference.ts': [
     '@num1hub/capsule-specs/references/contract-constants.json',
     '@num1hub/capsule-specs/references/validation-gates.json'
+  ],
+  'ts-package-support-responses.ts': [
+    '@num1hub/capsule-specs/typescript/validator-api'
   ]
 };
 

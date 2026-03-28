@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- added installed-package CommonJS, ESM, and TypeScript support-response recipes for `gates` and `stats`, plus fresh-install proof that the packaged validator projection layer covers support payloads as well as `validate` request/response flows
 - completed Node live-route coverage for `POST /api/validate/fix`, closing the last remaining route-level gap in the published validator client recipe set
 - completed the live client-recipe surface for the published validator support routes by adding cURL, Node, and Python recipes for `GET /api/validate/gates` and `GET /api/validate/stats`
 - added archive-bundle validation recipes for repo-local and installed-package consumers, plus a dedicated verifier and portability-layer sync updates

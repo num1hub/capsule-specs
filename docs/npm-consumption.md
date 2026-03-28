@@ -9,6 +9,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for the root projection namespaces
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - package exports for compact contract reference JSON artifacts
+- package exports for validator support-response parsing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for raw JSON Schema validation with third-party validators such as Ajv
 - package exports for archive-bundle schema validation against the published portability sample
 - package exports for intentionally invalid archive-bundle fixtures used in structural rejection tests
@@ -99,6 +100,24 @@ console.log(contractConstants.validator.integrity_canonicalization);
 A copyable version of this example also lives at [`../examples/client/esm-package-recompute-integrity-seal.mjs`](../examples/client/esm-package-recompute-integrity-seal.mjs).
 
 That recipe proves the installed package exports enough public material to recompute `integrity_sha3_512`, verify the positive note example, and repair the intentional `G16` teaching example without depending on unpublished runtime helpers.
+
+## Minimal package-level support-response example
+
+Copyable versions of this example also live at [`../examples/client/cjs-package-support-responses.cjs`](../examples/client/cjs-package-support-responses.cjs), [`../examples/client/esm-package-support-responses.mjs`](../examples/client/esm-package-support-responses.mjs), and [`../examples/client/ts-package-support-responses.ts`](../examples/client/ts-package-support-responses.ts).
+
+```js
+import * as validatorProjection from "@num1hub/capsule-specs/zod/validator-api";
+import gatesResponse from "@num1hub/capsule-specs/examples/api/gates-response.sample.json" with { type: "json" };
+import statsResponse from "@num1hub/capsule-specs/examples/api/stats-response.sample.json" with { type: "json" };
+
+const gatesResponseSchema = validatorProjection.gatesResponseSchema ?? validatorProjection.default?.gatesResponseSchema;
+const statsResponseSchema = validatorProjection.statsResponseSchema ?? validatorProjection.default?.statsResponseSchema;
+
+console.log(gatesResponseSchema.parse(gatesResponse).gates.map((gate) => gate.id));
+console.log(statsResponseSchema.parse(statsResponse).passRate);
+```
+
+These recipes prove that the installed package surface does not stop at `validate` request/response flows. It also carries the published `gates` and `stats` support-response payloads plus the public Zod and TypeScript validator-envelope projections needed to inspect those support routes without guessing shape from prose.
 
 ## Minimal package-level Ajv schema example
 
@@ -213,6 +232,7 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - The TypeScript package recipe is typechecked through the repo-local self-package path map and rechecked from a fresh installed tarball.
 - The package surface does not turn this repository into a complete SDK.
 - The package surface is compatible with raw-schema validators, but those validators still only prove structural contract conformance, not live gate semantics.
+- The package support-response recipes prove installed-package parsing and typing for the published `gates` and `stats` payloads, not live-route availability or hosted-service behavior.
 - The Python path uses extracted packaged files and raw JSON assets; it does not expose the Node exports as Python modules or imply a PyPI release.
 - The reference-pack exports are convenience JSON layers for compact tooling use, not stronger replacements for the schemas, raw capsules, or validator/OpenAPI surfaces they summarize.
 - The raw capsule exports are curated reference assets, not a promise that the whole upstream vault is available as a package surface.

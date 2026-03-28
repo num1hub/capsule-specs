@@ -74,6 +74,8 @@ const openapi = require('@num1hub/capsule-specs/openapi/validate.openapi.json');
 const contractConstants = require('@num1hub/capsule-specs/references/contract-constants.json');
 const validationGates = require('@num1hub/capsule-specs/references/validation-gates.json');
 const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
+const gatesResponseSample = require('@num1hub/capsule-specs/examples/api/gates-response.sample.json');
+const statsResponseSample = require('@num1hub/capsule-specs/examples/api/stats-response.sample.json');
 const archiveBundleSample = require('@num1hub/capsule-specs/examples/archive/archive-bundle.sample.json');
 const invalidArchiveCreatedAtBundle = require('@num1hub/capsule-specs/examples/archive-invalid/archive-bundle.invalid-created-at.json');
 const invalidArchiveContentClassBundle = require('@num1hub/capsule-specs/examples/archive-invalid/archive-bundle.invalid-content-class.json');
@@ -86,6 +88,8 @@ assert(rootExports && rootExports.typescript && rootExports.zod, 'root package e
 assert(Array.isArray(typescriptProjection.CAPSULE_TYPES), 'typescript export must expose CAPSULE_TYPES');
 assert(typeof zodProjection.capsuleSchema?.parse === 'function', 'zod export must expose capsuleSchema.parse');
 assert(typeof validatorZod.validatePassResponseSchema?.parse === 'function', 'validator zod export must expose validatePassResponseSchema.parse');
+assert(typeof validatorZod.gatesResponseSchema?.parse === 'function', 'validator zod export must expose gatesResponseSchema.parse');
+assert(typeof validatorZod.statsResponseSchema?.parse === 'function', 'validator zod export must expose statsResponseSchema.parse');
 assert(capsuleSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json', 'capsule schema export must expose the public schema JSON');
 assert(archiveBundleSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/archive-bundle.schema.json', 'archive-bundle schema export must expose the public schema JSON');
 assert(capsuleBundleJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.bundle.json', 'capsule bundle export must expose the public bundled schema JSON');
@@ -128,9 +132,13 @@ assert(
 
 const parsedNote = zodProjection.capsuleSchema.parse(exampleNote);
 const parsedPassResponse = validatorZod.validatePassResponseSchema.parse(passResponse);
+const parsedGatesResponse = validatorZod.gatesResponseSchema.parse(gatesResponseSample);
+const parsedStatsResponse = validatorZod.statsResponseSchema.parse(statsResponseSample);
 
 assert(parsedNote.metadata.capsule_id === exampleNote.metadata.capsule_id, 'built package zod export must parse the example note capsule');
 assert(parsedPassResponse.valid === true, 'built package zod export must parse the passing validator response');
+assert(parsedGatesResponse.gates.some((gate) => gate.id === 'G16'), 'built package zod export must parse the gates response sample');
+assert(parsedStatsResponse.passRate === statsResponseSample.passRate, 'built package zod export must parse the stats response sample');
 
 const packResult = spawnSync('npm', ['pack', '--dry-run', '--json', '--ignore-scripts'], {
   cwd: repoRoot,
@@ -180,6 +188,7 @@ for (const relativePath of [
   'examples/client/ajv-reject-invalid-capsules.mjs',
   'examples/client/ajv-reject-invalid-validator-envelopes.mjs',
   'examples/client/cjs-package-contract-reference.cjs',
+  'examples/client/cjs-package-support-responses.cjs',
   'examples/client/esm-package-ajv-validate-contracts.mjs',
   'examples/client/esm-package-ajv-validate-archive-bundle.mjs',
   'examples/client/esm-package-ajv-validate-schema-bundles.mjs',
@@ -198,8 +207,10 @@ for (const relativePath of [
   'examples/client/python-parse-validate-responses.py',
   'examples/client/python-parse-support-responses.py',
   'examples/client/esm-package-capsule-summary.mjs',
+  'examples/client/esm-package-support-responses.mjs',
   'examples/client/esm-package-validate-response.mjs',
   'examples/client/ts-package-contract-reference.ts',
+  'examples/client/ts-package-support-responses.ts',
   'examples/invalid/README.md',
   'examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json',
   'examples/invalid/example-invalid-relation-type.capsule.json',

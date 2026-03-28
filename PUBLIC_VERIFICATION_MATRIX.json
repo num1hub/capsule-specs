@@ -36,7 +36,7 @@
     },
     {
       "id": "capsule-and-api-example-integrity",
-      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, live client recipes for all published validator routes, and the reproducibility of published G16 integrity seals and computedHash values.",
+      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, live client recipes for all published validator routes, installed-package support-response recipes for gates and stats, and the reproducibility of published G16 integrity seals and computedHash values.",
       "commands": [
         "npm run check:examples",
         "npm run check:raw-capsules",
@@ -69,7 +69,10 @@
         "examples/client/node-get-stats.mjs",
         "examples/client/python-get-gates.py",
         "examples/client/python-get-stats.py",
-        "examples/client/node-validate-fix.mjs"
+        "examples/client/node-validate-fix.mjs",
+        "examples/client/cjs-package-support-responses.cjs",
+        "examples/client/esm-package-support-responses.mjs",
+        "examples/client/ts-package-support-responses.ts"
       ],
       "strongest_surfaces": [
         "examples/example-project-hub.capsule.json",
@@ -92,7 +95,8 @@
         "cross-language Python response-family recipes drifting away from the published API example payloads or extracted package layout",
         "live support-route client recipes drifting away from the published validator HTTP surface",
         "cross-language Python support-route recipes drifting away from the published support-response payloads or extracted package layout",
-        "Node fix-route client recipes drifting away from the published validator HTTP surface"
+        "Node fix-route client recipes drifting away from the published validator HTTP surface",
+        "installed-package support-response recipes drifting away from the published support payloads or public package exports"
       ]
     },
     {
