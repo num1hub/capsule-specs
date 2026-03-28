@@ -6,11 +6,11 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 342,
-    "manifest_entries": 342
+    "files": 344,
+    "manifest_entries": 344
   },
   "surface_summary": {
-    "catalog_entries": 295,
+    "catalog_entries": 297,
     "example_capsules": 5,
     "api_example_files": 13,
     "markdown_files": 100

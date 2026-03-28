@@ -191,6 +191,8 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../examples/client/esm-package-recompute-integrity-seal.mjs`](../examples/client/esm-package-recompute-integrity-seal.mjs)
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
+- [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts)
+- [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts)
 - [`../examples/client/ts-package-validate-responses.ts`](../examples/client/ts-package-validate-responses.ts)
 - [`../examples/invalid/README.md`](../examples/invalid/README.md)
 - [`../examples/api-invalid/README.md`](../examples/api-invalid/README.md)

@@ -66,6 +66,8 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 - [`../projections/typescript/index.ts`](../projections/typescript/index.ts)
 - [`../projections/zod/index.ts`](../projections/zod/index.ts)
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
+- [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts)
+- [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts)
 - [`../examples/client/ts-build-validate-batch-request.ts`](../examples/client/ts-build-validate-batch-request.ts)
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
 - [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts)
@@ -84,6 +86,7 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 
 These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
 If you want repo-relative source-level request construction or response parsing instead of package imports, start with the TypeScript batch/fix request recipes plus the Zod batch/fix and support-response recipes under [`../examples/client/`](../examples/client/).
+If you need installed-package typed request construction for the published single, batch, and fix validator request families, start with [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts), [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts), and [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts).
 If you need typed repo-relative handling for the published pass, fail, batch, and fix response families, start with [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts).
 If you need bounded generic, unauthorized, conflict, or rate-limit envelope handling, start with the new error-response recipes under [`../examples/client/`](../examples/client/).
 If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
@@ -91,7 +94,7 @@ If you need the installed-package validate-response family instead of only the p
 If you need the published `gates` and `stats` support responses from that installed-package path instead of repo-local example files, start with the package support-response recipes under [`../examples/client/`](../examples/client/).
 If you need the same bounded shared error envelopes from that installed-package path, start with the package error-response recipes under [`../examples/client/`](../examples/client/).
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
-That check confirms CommonJS runtime usage, ESM runtime usage, installed-package validate-response, support-response, and error-envelope parsing, raw-schema and bundled-schema Ajv usage, and TypeScript type resolution from an installed tarball.
+That check confirms CommonJS runtime usage, ESM runtime usage, installed-package validator request-family typing, installed-package validate-response, support-response, and error-envelope parsing, raw-schema and bundled-schema Ajv usage, and TypeScript type resolution from an installed tarball.
 It also confirms packaged structural rejection recipes for intentionally invalid archive, capsule, and validator-envelope fixtures.
 For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md), including dry-run/live validator-envelope request flows, live `gates` and `stats` support-route reads, and response-family parsing.
 If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.

@@ -86,7 +86,9 @@ const packageTypeRecipeFiles = [
   'ts-package-contract-reference.ts',
   'ts-package-support-responses.ts',
   'ts-package-validate-responses.ts',
-  'ts-package-validate-request.ts'
+  'ts-package-validate-request.ts',
+  'ts-package-validate-batch-request.ts',
+  'ts-package-validate-fix-request.ts'
 ];
 
 function assert(condition, message) {
@@ -451,6 +453,12 @@ const expectedPackageTypeImports = {
     '@num1hub/capsule-specs/typescript/validator-api'
   ],
   'ts-package-validate-responses.ts': [
+    '@num1hub/capsule-specs/typescript/validator-api'
+  ],
+  'ts-package-validate-batch-request.ts': [
+    '@num1hub/capsule-specs/typescript/validator-api'
+  ],
+  'ts-package-validate-fix-request.ts': [
     '@num1hub/capsule-specs/typescript/validator-api'
   ]
 };

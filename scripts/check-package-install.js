@@ -39,7 +39,9 @@ const esmErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-packag
 const esmSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-support-responses.mjs');
 const esmValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-validate-response.mjs');
 const typescriptErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-error-responses.ts');
+const typescriptBatchRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-batch-request.ts');
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
+const typescriptFixRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-fix-request.ts');
 const typescriptValidateResponsesRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-responses.ts');
 const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
 const typescriptSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-support-responses.ts');
@@ -200,10 +202,28 @@ try {
       noEmit: true,
       skipLibCheck: true
     },
-    include: ['consumer.ts', 'error-consumer.ts', 'reference-consumer.ts', 'support-consumer.ts', 'validate-response-consumer.ts']
+    include: [
+      'consumer.ts',
+      'batch-request-consumer.ts',
+      'fix-request-consumer.ts',
+      'error-consumer.ts',
+      'reference-consumer.ts',
+      'support-consumer.ts',
+      'validate-response-consumer.ts'
+    ]
   });
   run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath], typescriptProject);
   fs.writeFileSync(path.join(typescriptProject, 'consumer.ts'), fs.readFileSync(typescriptConsumerRecipePath, 'utf8'), 'utf8');
+  fs.writeFileSync(
+    path.join(typescriptProject, 'batch-request-consumer.ts'),
+    fs.readFileSync(typescriptBatchRequestRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
+    path.join(typescriptProject, 'fix-request-consumer.ts'),
+    fs.readFileSync(typescriptFixRequestRecipePath, 'utf8'),
+    'utf8'
+  );
   fs.writeFileSync(path.join(typescriptProject, 'error-consumer.ts'), fs.readFileSync(typescriptErrorRecipePath, 'utf8'), 'utf8');
   fs.writeFileSync(path.join(typescriptProject, 'reference-consumer.ts'), fs.readFileSync(typescriptReferenceRecipePath, 'utf8'), 'utf8');
   fs.writeFileSync(path.join(typescriptProject, 'support-consumer.ts'), fs.readFileSync(typescriptSupportRecipePath, 'utf8'), 'utf8');
@@ -216,7 +236,7 @@ try {
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, validator validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, validator request, validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

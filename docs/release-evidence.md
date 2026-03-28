@@ -238,7 +238,11 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/ts-package-validate-responses.ts`](../examples/client/ts-package-validate-responses.ts)
   Minimal TypeScript package-consumer recipe for typed pass, fail, batch, and fix validator response-family handling through installed package exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
-  Minimal TypeScript package-consumer recipe for the built capsule and validator API exports.
+  Minimal TypeScript package-consumer recipe for typed single-request construction through the built capsule and validator API exports.
+- [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts)
+  Minimal TypeScript package-consumer recipe for typed batch-request construction through installed package exports.
+- [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts)
+  Minimal TypeScript package-consumer recipe for typed fix-request construction through installed package exports.
 
 ## Why this split exists
 
@@ -254,7 +258,7 @@ The type-projection layer strengthens consumer ergonomics by giving TypeScript a
 
 The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
-The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering the full published validate-response family instead of the positive pass sample only.
+The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering installed-package TypeScript request typing for the published single, batch, and fix families plus the full published validate-response family instead of a single request builder and positive-pass sample only.
 
 The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, and validator option flags without forcing them to parse the larger schemas or prose docs first.
 
@@ -386,6 +390,8 @@ When the public surface changes, these files should move together:
 - `examples/client/python-contract-reference.py`
 - `examples/client/python-recompute-integrity-seal.py`
 - `examples/client/ts-package-validate-request.ts`
+- `examples/client/ts-package-validate-batch-request.ts`
+- `examples/client/ts-package-validate-fix-request.ts`
 - `examples/client/ts-build-validate-request.ts`
 - `examples/client/ts-parse-support-responses.ts`
 - `examples/client/zod-parse-validate-response.ts`

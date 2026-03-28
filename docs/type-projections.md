@@ -53,7 +53,11 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
   Minimal ESM recipe that consumes the built validator API package exports for the published pass, fail, batch, and fix response families.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
-  Minimal TypeScript package-consumer recipe that exercises the published capsule and validator API package subpaths.
+  Minimal TypeScript package-consumer recipe for typed single-request construction through the published capsule and validator API package subpaths.
+- [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts)
+  Minimal TypeScript package-consumer recipe for typed batch-request construction through installed package exports.
+- [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts)
+  Minimal TypeScript package-consumer recipe for typed fix-request construction through installed package exports.
 - [`../examples/client/ts-package-validate-responses.ts`](../examples/client/ts-package-validate-responses.ts)
   Minimal TypeScript package-consumer recipe for typed pass, fail, batch, and fix validator response-family handling through installed package exports.
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
@@ -70,6 +74,7 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - a narrow source-level projection that stays reviewable inside the public repo
 - a public-safe source-level envelope layer for validator clients that do not want to hand-roll request and response shapes
 - a source-level path for batch and fix validator envelopes that stays aligned to the published sample payload families
+- an installed-package TypeScript path for single, batch, and fix validator request-family typing without repo-relative imports
 - a source-level path for typed validate-response families that stays aligned to the published pass, fail, batch, and fix samples
 - a source-level path for bounded shared error-envelope typing and parsing that stays aligned to the published sample payloads
 - a source-level path for support-response typing and parsing that stays aligned to the published sample payloads

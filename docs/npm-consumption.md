@@ -10,6 +10,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - package exports for compact contract reference JSON artifacts
 - package exports for pass, fail, batch, and fix validator response-family parsing and typing through installed CommonJS, ESM, and TypeScript consumer recipes
+- package exports for single, batch, and fix validator request-family typing through installed TypeScript consumer recipes
 - package exports for bounded generic, unauthorized, conflict, and rate-limit error-envelope parsing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for validator support-response parsing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for raw JSON Schema validation with third-party validators such as Ajv
@@ -229,7 +230,7 @@ console.log(parsed.metadata.capsule_id);
 
 ## Minimal TypeScript type-resolution example
 
-A copyable version of this example also lives at [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts). A compact-reference variant lives at [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts).
+A copyable single-request version of this example also lives at [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts). Batch and fix request-family variants live at [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts) and [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts). A compact-reference variant lives at [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts).
 
 ```ts
 import { CAPSULE_TYPES, type Capsule } from "@num1hub/capsule-specs/typescript/capsule";
@@ -265,11 +266,14 @@ const capsule: Capsule = {
 const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, autoFix: false };
 ```
 
+These recipes prove that the installed package surface does not stop at one typed request example. It also covers single, batch, and fix validator request-family construction from TypeScript consumers without falling back to repo-relative projection imports.
+
 ## Important boundaries
 
 - This package-consumer layer is a convenience surface over the stronger public schemas and OpenAPI artifacts.
 - The build output is derived from the maintained source projections in `projections/`.
 - The TypeScript package recipe is typechecked through the repo-local self-package path map and rechecked from a fresh installed tarball.
+- The TypeScript package request recipes prove installed-package typing for the single, batch, and fix validator request families, not live validator execution.
 - The package surface does not turn this repository into a complete SDK.
 - The package surface is compatible with raw-schema validators, but those validators still only prove structural contract conformance, not live gate semantics.
 - The package support-response recipes prove installed-package parsing and typing for the published `gates` and `stats` payloads, not live-route availability or hosted-service behavior.

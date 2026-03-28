@@ -247,6 +247,8 @@ const requiredIds = [
   'examples.client.ts-package-support-responses',
   'examples.client.ts-package-validate-responses',
   'examples.client.ts-package-validate-request',
+  'examples.client.ts-package-validate-batch-request',
+  'examples.client.ts-package-validate-fix-request',
   'examples.client.curl-get-gates',
   'examples.client.curl-get-stats',
   'examples.client.node-get-gates',
