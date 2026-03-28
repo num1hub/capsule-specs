@@ -10,6 +10,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - package exports for compact contract reference JSON artifacts
 - package exports for raw JSON Schema validation with third-party validators such as Ajv
+- package exports for intentionally invalid schema fixtures used in structural rejection tests
 - package exports for curated raw capsule source files
 - pack-time inclusion of the built projection layer
 - fresh-project install checks for CommonJS, ESM, and TypeScript consumers
@@ -100,6 +101,12 @@ if (!validateCapsule(note)) {
 }
 ```
 
+## Minimal package-level Ajv negative example
+
+A copyable version of this example also lives at [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs).
+
+That recipe proves the installed package exports not only valid schemas and examples, but also the intentionally invalid fixtures under `examples/invalid/` that raw-schema consumers can use for regression tests.
+
 ## Minimal ESM example
 
 ```js
@@ -168,3 +175,4 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - `npm run check:package-install`
 - `npm run check:reference-pack`
 - `npm run check:schema-recipes`
+- `npm run check:invalid-examples`

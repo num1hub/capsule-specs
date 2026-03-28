@@ -8,6 +8,7 @@ Use them to:
 - test parsers and renderers
 - compare valid and invalid sealing outcomes
 - inspect a tiny linked capsule graph
+- inspect bounded schema-invalid fixtures for structural rejection tests
 - inspect validator HTTP request and response envelopes
 - build tutorials or integration demos without touching private vault data
 - follow a stable public contract map before depending on edge-case behavior
@@ -27,9 +28,13 @@ Use them to:
   Graph-linked example that references the note, task, and validator examples.
 - `example-known-ids.json`
   JSON-array known-ID catalog for link-aware validation.
+- `invalid/`
+  Intentionally schema-invalid capsule fixtures for raw-schema consumers.
 - `api/`
   Validator HTTP payload examples for integrators and client builders.
 - `client/`
   Minimal curl and Node recipes for external consumers.
 - `archive/`
   Public-safe archive-bundle sample for portability review.
+
+The fixtures under `invalid/` complement the bounded top-level example set. They are for direct schema rejection checks and do not replace the stronger validator-facing negative `G16` example in the top-level directory.

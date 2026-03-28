@@ -35,6 +35,7 @@ let tarballPath = null;
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
 const packageSchemaRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-contracts.mjs');
+const packageInvalidSchemaRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-reject-invalid-capsules.mjs');
 
 try {
   const packOutput = run('npm', ['pack', '--json', '--pack-destination', workspaceRoot], repoRoot);
@@ -120,6 +121,8 @@ try {
   run(process.execPath, ['consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'schema-consumer.mjs'), fs.readFileSync(packageSchemaRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['schema-consumer.mjs'], esmProject);
+  fs.writeFileSync(path.join(esmProject, 'invalid-schema-consumer.mjs'), fs.readFileSync(packageInvalidSchemaRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['invalid-schema-consumer.mjs'], esmProject);
 
   const typescriptProject = path.join(workspaceRoot, 'consumer-typescript');
   fs.mkdirSync(typescriptProject, { recursive: true });
@@ -146,7 +149,7 @@ try {
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, and raw schema exports'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, raw schema exports, and invalid schema fixtures'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

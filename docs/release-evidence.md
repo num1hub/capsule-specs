@@ -87,6 +87,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Human-readable guide to the compact contract-reference layer for enums, gate IDs, and validator flags.
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
   Human-readable guide to validating public capsules and validator-envelope payloads directly against the raw JSON Schema layer.
+- [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
+  Human-readable guide to intentionally schema-invalid capsule fixtures and their documented structural rejection paths.
 - [`../capsules/README.md`](../capsules/README.md)
   Human-readable guide to the curated raw law-adjacent capsule source set.
 - [`../references/README.md`](../references/README.md)
@@ -125,6 +127,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that the compact contract-reference exports stay aligned to stronger schemas, validator flags, and published gate summaries.
 - [`../scripts/check-schema-recipes.js`](../scripts/check-schema-recipes.js)
   Repo-local verification that the Ajv-based raw-schema consumer recipes stay executable and aligned to published schema exports.
+- [`../scripts/check-invalid-examples.js`](../scripts/check-invalid-examples.js)
+  Repo-local verification that the published invalid schema fixtures stay rejected for the documented structural reasons.
 - [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator request envelope.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
@@ -143,8 +147,12 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal repo-local Ajv recipe for validating a public capsule against the published capsule schema.
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
   Minimal repo-local Ajv recipe for validating public validator request/response payloads against the envelope schema bundle.
+- [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
+  Minimal repo-local Ajv recipe for rejecting intentionally invalid capsule fixtures against the published capsule schema.
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
   Minimal package-consumer Ajv recipe for validating installed schema exports and packaged example payloads.
+- [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
+  Minimal package-consumer Ajv recipe for rejecting installed invalid schema fixtures from package exports.
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
@@ -169,6 +177,8 @@ The package-consumer layer strengthens that path further by making the maintaine
 The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, and validator option flags without forcing them to parse the larger schemas or prose docs first.
 
 The raw-schema recipe layer strengthens that path further by proving that downstream consumers can validate public capsules and validator-envelope payloads directly against the published JSON Schemas, both from a repo checkout and from installed package exports, without depending on the projection layer.
+
+The invalid-fixture layer strengthens that path further by proving that downstream consumers can also test documented structural rejection cases instead of seeing only happy-path schema examples or live-validator-only failures.
 
 The curated raw capsule layer strengthens that path further by publishing a small, verifier-backed set of stronger law-adjacent source artifacts for confidence-vector semantics, subtype meaning, and version-lineage posture without pretending the whole upstream capsule corpus is public.
 

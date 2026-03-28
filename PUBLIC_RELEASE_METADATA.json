@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 272,
-    "manifest_entries": 272
+    "files": 279,
+    "manifest_entries": 279
   },
   "surface_summary": {
-    "catalog_entries": 228,
+    "catalog_entries": 235,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 90
+    "markdown_files": 92
   },
   "repo_local_checks": [
     {
@@ -54,6 +54,10 @@
     },
     {
       "command": "npm run check:schema-recipes",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:invalid-examples",
       "status": "pass"
     },
     {
@@ -262,6 +266,7 @@
     "The package-export layer in docs/npm-consumption.md, package.json, scripts/check-package-install.js, the built projection bundles, and the packaged raw capsule exports is a convenience distribution surface and must stay subordinate to the stronger source projections, raw curated sources, JSON Schemas, OpenAPI, curated examples, and live validator behavior it packages.",
     "The package-install checks prove fresh-project tarball consumption for CommonJS, ESM, TypeScript type-resolution, and Ajv-based raw-schema flows, but they do not by themselves imply a published npm registry release.",
     "The compact reference pack in docs/reference-pack.md and references/ is a convenience summary layer for tool-builders and must stay subordinate to the stronger schemas, gate docs, raw capsules, and live validator behavior it summarizes.",
-    "The raw-schema recipe layer in docs/schema-validation-recipes.md and examples/client/ is a convenience consumer path and must stay subordinate to the stronger published schemas, OpenAPI, curated examples, and live validator behavior it demonstrates."
+    "The raw-schema recipe layer in docs/schema-validation-recipes.md and examples/client/ is a convenience consumer path and must stay subordinate to the stronger published schemas, OpenAPI, curated examples, and live validator behavior it demonstrates.",
+    "The invalid-fixture layer in docs/invalid-capsule-examples.md and examples/invalid/ is a bounded teaching surface for structural rejection testing and must not be mistaken for a complete map of live validator failure classes or private runtime test coverage."
   ]
 }

@@ -33,24 +33,30 @@ Start with these copyable examples:
 
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
+- [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 
 They validate:
 
 - a public example capsule against the capsule and neuro-concentrate schemas
 - validator request/response payloads against the validator envelope schema bundle
+- intentionally invalid capsule fixtures against their documented structural rejection rules
 
 Run them from a repo checkout after `npm install`:
 
 ```bash
 node examples/client/ajv-validate-capsule.mjs
 node examples/client/ajv-validate-validator-envelope.mjs
+node examples/client/ajv-reject-invalid-capsules.mjs
 ```
+
+For the underlying invalid fixtures and their intended failure reasons, see [`invalid-capsule-examples.md`](invalid-capsule-examples.md) and [`../examples/invalid/README.md`](../examples/invalid/README.md).
 
 ## Package-consumer Ajv recipe
 
 If you want the same raw-schema path from an installed tarball or future package distribution, use:
 
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
+- [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
 
 That recipe consumes:
 
@@ -70,6 +76,6 @@ The fresh-install proof for that path lives in [`../scripts/check-package-instal
 ## Verification
 
 - `npm run check:schema-recipes`
+- `npm run check:invalid-examples`
 - `npm run check:package-install`
 - `npm run check:api-schemas`
-

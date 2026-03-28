@@ -34,3 +34,5 @@ Public examples are strongest when they are not random fixtures. This repository
 ## Important boundary
 
 The coverage map is a curated public summary. It does not claim to enumerate every upstream private test fixture or every internal runtime scenario.
+
+The structural invalid fixtures under [`../examples/invalid/`](../examples/invalid/) are complementary raw-schema teaching artifacts. They are intentionally outside the bounded top-level capsule coverage set summarized here.

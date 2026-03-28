@@ -142,9 +142,10 @@
       "id": "validate-with-raw-json-schema",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Validate public capsules and validator-envelope payloads directly against raw JSON Schema exports with Ajv from either a repo checkout or an installed package, without depending on the projection layer.",
+      "outcome": "Validate public capsules and validator-envelope payloads directly against raw JSON Schema exports with Ajv from either a repo checkout or an installed package, and confirm that intentionally invalid fixtures are rejected without depending on the projection layer.",
       "strongest_surfaces": [
         "docs/schema-validation-recipes.md",
+        "docs/invalid-capsule-examples.md",
         "schemas/capsule-schema.json",
         "schemas/neuro-concentrate.schema.json",
         "schemas/validator-api-envelopes.schema.json"
@@ -154,12 +155,19 @@
         "docs/npm-consumption.md",
         "examples/client/ajv-validate-capsule.mjs",
         "examples/client/ajv-validate-validator-envelope.mjs",
+        "examples/client/ajv-reject-invalid-capsules.mjs",
         "examples/client/esm-package-ajv-validate-contracts.mjs",
+        "examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
+        "examples/invalid/README.md",
+        "examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+        "examples/invalid/example-invalid-relation-type.capsule.json",
         "scripts/check-schema-recipes.js",
+        "scripts/check-invalid-examples.js",
         "scripts/check-package-install.js"
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
+        "npm run check:invalid-examples",
         "npm run check:package-install",
         "npm run check:api-schemas",
         "npm run check:capability-matrix"

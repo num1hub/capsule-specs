@@ -89,21 +89,27 @@
     },
     {
       "id": "raw-schema-consumer-recipes",
-      "summary": "Protects Ajv-based raw-schema consumer recipes so direct capsule and validator-envelope validation stays executable from both repo-relative files and installed package exports.",
+      "summary": "Protects Ajv-based raw-schema consumer recipes so direct capsule and validator-envelope validation, including structural rejection of intentionally invalid fixtures, stays executable from both repo-relative files and installed package exports.",
       "commands": [
         "npm run check:schema-recipes",
+        "npm run check:invalid-examples",
         "npm run check:package-install",
         "npm run check:api-schemas"
       ],
       "protects": [
         "docs/schema-validation-recipes.md",
+        "docs/invalid-capsule-examples.md",
         "examples/client/ajv-validate-capsule.mjs",
         "examples/client/ajv-validate-validator-envelope.mjs",
+        "examples/client/ajv-reject-invalid-capsules.mjs",
         "examples/client/esm-package-ajv-validate-contracts.mjs",
+        "examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
+        "examples/invalid/",
         "package.json"
       ],
       "strongest_surfaces": [
         "scripts/check-schema-recipes.js",
+        "scripts/check-invalid-examples.js",
         "docs/schema-validation-recipes.md",
         "schemas/capsule-schema.json",
         "schemas/neuro-concentrate.schema.json",
@@ -112,7 +118,8 @@
       "failure_modes_prevented": [
         "broken raw-schema consumer recipes",
         "Ajv/package-schema drift",
-        "package-level schema export claims that only work through repo-local paths"
+        "package-level schema export claims that only work through repo-local paths",
+        "invalid schema fixtures that unexpectedly pass structural validation"
       ]
     },
     {
@@ -120,21 +127,27 @@
       "summary": "Protects bounded example coverage and explicit negative-path behavior on the public surface.",
       "commands": [
         "npm run check:example-coverage",
+        "npm run check:invalid-examples",
         "npm run check:failure-model"
       ],
       "protects": [
         "PUBLIC_EXAMPLE_COVERAGE.json",
-        "PUBLIC_FAILURE_MODEL.json"
+        "PUBLIC_FAILURE_MODEL.json",
+        "docs/invalid-capsule-examples.md",
+        "examples/invalid/"
       ],
       "strongest_surfaces": [
         "PUBLIC_EXAMPLE_COVERAGE.json",
         "PUBLIC_FAILURE_MODEL.json",
-        "examples/example-validator-invalid-g16.capsule.json"
+        "examples/example-validator-invalid-g16.capsule.json",
+        "examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+        "examples/invalid/example-invalid-relation-type.capsule.json"
       ],
       "failure_modes_prevented": [
         "fake example coverage claims",
         "missing negative-path evidence",
-        "happy-path-only review posture"
+        "happy-path-only review posture",
+        "undocumented schema-negative teaching artifacts"
       ]
     },
     {

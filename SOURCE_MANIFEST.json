@@ -4843,6 +4843,17 @@
     "transformation_type": "generated",
     "notes": "Guide to validating public capsules and validator-envelope payloads directly against the raw JSON Schema surface."
   },
+  "docs/invalid-capsule-examples.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
+      "/home/n1/codex-workspace/examples/invalid/README.md",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to intentionally schema-invalid capsule fixtures and their structural rejection boundaries."
+  },
   "examples/client/ts-package-validate-request.ts": {
     "source_paths": [
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
@@ -4966,6 +4977,16 @@
     "transformation_type": "generated",
     "notes": "Repo-local Ajv recipe for validating public validator-envelope payloads against the published schema bundle."
   },
+  "examples/client/ajv-reject-invalid-capsules.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for rejecting intentionally invalid capsule fixtures against the published schema."
+  },
   "examples/client/esm-package-ajv-validate-contracts.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
@@ -4978,6 +4999,41 @@
     ],
     "transformation_type": "generated",
     "notes": "Package-consumer Ajv recipe for validating installed schema exports and packaged public examples."
+  },
+  "examples/client/esm-package-ajv-reject-invalid-capsules.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for rejecting installed invalid schema fixtures."
+  },
+  "examples/invalid/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-capsule-examples.md",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for intentionally schema-invalid capsule fixtures."
+  },
+  "examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Intentionally schema-invalid capsule fixture that omits the required neuro_concentrate root."
+  },
+  "examples/invalid/example-invalid-relation-type.capsule.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Intentionally schema-invalid capsule fixture that uses a non-canonical relation_type."
   },
   "examples/client/ts-package-contract-reference.ts": {
     "source_paths": [
@@ -5000,8 +5056,10 @@
   "scripts/check-package-surface.js": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
       "/home/n1/codex-workspace/examples/client/esm-package-capsule-summary.mjs",
       "/home/n1/codex-workspace/examples/client/esm-package-validate-response.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
       "/home/n1/codex-workspace/examples/example-note.capsule.json",
       "/home/n1/codex-workspace/openapi/validate.openapi.json",
       "/home/n1/codex-workspace/package.json",
@@ -5019,6 +5077,8 @@
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
       "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-contracts.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
       "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
@@ -5059,12 +5119,30 @@
     "source_paths": [
       "/home/n1/codex-workspace/examples/client/ajv-validate-capsule.mjs",
       "/home/n1/codex-workspace/examples/client/ajv-validate-validator-envelope.mjs",
+      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-capsules.mjs",
       "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-contracts.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
       "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
     ],
     "transformation_type": "generated",
     "notes": "Verifier for repo-local and package-consumer raw-schema Ajv recipes."
+  },
+  "scripts/check-invalid-examples.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-capsule-examples.md",
+      "/home/n1/codex-workspace/examples/invalid/README.md",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
+      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-capsules.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for intentionally schema-invalid capsule fixtures and their documented rejection expectations."
   }
 }

@@ -90,6 +90,7 @@ const requiredIds = [
   'reference.validation-gates',
   'reference.check',
   'docs.schema-validation-recipes',
+  'docs.invalid-capsule-examples',
   'schema.reference-doc',
   'schema.family-reference-doc',
   'schema.directory-guide',
@@ -205,14 +206,20 @@ const requiredIds = [
   'examples.client.cjs-package-capsule-summary',
   'examples.client.ajv-validate-capsule',
   'examples.client.ajv-validate-validator-envelope',
+  'examples.client.ajv-reject-invalid-capsules',
   'examples.client.cjs-package-contract-reference',
   'examples.client.cjs-package-validate-response',
   'examples.client.esm-package-ajv-validate-contracts',
+  'examples.client.esm-package-ajv-reject-invalid-capsules',
   'examples.client.esm-package-capsule-summary',
   'examples.client.esm-package-validate-response',
   'examples.client.ts-package-contract-reference',
   'examples.client.ts-package-validate-request',
-  'schema.recipe-check'
+  'schema.recipe-check',
+  'examples.invalid.readme',
+  'examples.invalid.missing-neuro-concentrate',
+  'examples.invalid.relation-type',
+  'examples.invalid.check'
 ];
 
 for (const requiredId of requiredIds) {

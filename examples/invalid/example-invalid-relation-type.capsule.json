@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.example.invalid-relation-type.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "operations",
+    "subtype": "atomic",
+    "author": "egor-n1",
+    "created_at": "2026-03-28T09:00:00Z",
+    "updated_at": "2026-03-28T09:00:00Z",
+    "name": "Invalid Example Relation Type",
+    "semantic_hash": "invalid-example-relation-type-structural-schema-enum-failure",
+    "source": {
+      "uri": "https://github.com/num1hub/capsule-specs/examples/invalid/example-invalid-relation-type.capsule.json",
+      "type": "generated_public_example"
+    }
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Invalid Example\n\nThis fixture intentionally uses a non-canonical relation_type so raw-schema consumers can confirm enum enforcement in recursive_layer.links."
+  },
+  "neuro_concentrate": {
+    "summary": "This invalid example keeps the standard five-element shell but uses a non-canonical relation_type value inside the recursive layer. It exists so schema consumers can see a predictable enum rejection without depending on live validator routes or private runtime fixtures. The file is intentionally small and public-safe, but it still preserves the same broad outer shape, semantic-hash parity, and confidence-vector geometry as the positive examples. That makes the failure easy to isolate to a single structural contract breach rather than a confusing combination of unrelated errors across multiple nested surfaces.",
+    "keywords": [
+      "invalid",
+      "relation-type",
+      "schema",
+      "ajv",
+      "capsule",
+      "negative-path"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 0.97,
+      "linking": 0.9,
+      "provenance_coverage": 0.96,
+      "validation_score": 0.92,
+      "contradiction_pressure": 0.02
+    },
+    "semantic_hash": "invalid-example-relation-type-structural-schema-enum-failure"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.example.note.v1",
+        "relation_type": "invalid_relation_type"
+      }
+    ],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "fa282f90d323024889dec453ea5b470abfeec6f6a4a2b37dbdffd3761b6f335a87b0132f3dd3c9ef2773f273e40a429bbe05eb0decc0143c0e655bfc31d60ce7"
+}

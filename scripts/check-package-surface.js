@@ -71,6 +71,7 @@ const openapi = require('@num1hub/capsule-specs/openapi/validate.openapi.json');
 const contractConstants = require('@num1hub/capsule-specs/references/contract-constants.json');
 const validationGates = require('@num1hub/capsule-specs/references/validation-gates.json');
 const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
+const invalidRelationTypeCapsule = require('@num1hub/capsule-specs/examples/invalid/example-invalid-relation-type.capsule.json');
 const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsule.json'));
 const passResponse = require(path.join(repoRoot, 'examples', 'api', 'validate-response.pass.json'));
 
@@ -87,6 +88,10 @@ assert(Array.isArray(validationGates.gates) && validationGates.gates.length === 
 assert(
   rawConfidenceCapsule.metadata?.capsule_id === 'capsule.foundation.capsuleos.confidence-vector.v1',
   'raw capsule export must expose the curated confidence-vector capsule'
+);
+assert(
+  invalidRelationTypeCapsule.metadata?.capsule_id === 'capsule.example.invalid-relation-type.v1',
+  'package exports must expose nested invalid-example fixtures'
 );
 
 const parsedNote = zodProjection.capsuleSchema.parse(exampleNote);
@@ -117,6 +122,7 @@ for (const relativePath of [
   'dist/projections/zod/validator-api.js',
   'docs/npm-consumption.md',
   'docs/schema-validation-recipes.md',
+  'docs/invalid-capsule-examples.md',
   'schemas/capsule-schema.json',
   'schemas/neuro-concentrate.schema.json',
   'schemas/validator-api-envelopes.schema.json',
@@ -127,11 +133,16 @@ for (const relativePath of [
   'docs/reference-pack.md',
   'examples/client/ajv-validate-capsule.mjs',
   'examples/client/ajv-validate-validator-envelope.mjs',
+  'examples/client/ajv-reject-invalid-capsules.mjs',
   'examples/client/cjs-package-contract-reference.cjs',
   'examples/client/esm-package-ajv-validate-contracts.mjs',
+  'examples/client/esm-package-ajv-reject-invalid-capsules.mjs',
   'examples/client/esm-package-capsule-summary.mjs',
   'examples/client/esm-package-validate-response.mjs',
-  'examples/client/ts-package-contract-reference.ts'
+  'examples/client/ts-package-contract-reference.ts',
+  'examples/invalid/README.md',
+  'examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json',
+  'examples/invalid/example-invalid-relation-type.capsule.json'
 ]) {
   assert(packedFiles.has(relativePath), `npm pack surface must include ${relativePath}`);
 }

@@ -3270,6 +3270,22 @@
       ]
     },
     {
+      "id": "docs.invalid-capsule-examples",
+      "path": "docs/invalid-capsule-examples.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:invalid-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "references.directory-guide",
       "path": "references/README.md",
       "kind": "index",
@@ -3377,6 +3393,22 @@
       ]
     },
     {
+      "id": "examples.client.ajv-reject-invalid-capsules",
+      "path": "examples/client/ajv-reject-invalid-capsules.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-recipes",
+        "npm run check:invalid-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.esm-package-ajv-validate-contracts",
       "path": "examples/client/esm-package-ajv-validate-contracts.mjs",
       "kind": "client-recipe",
@@ -3388,6 +3420,23 @@
       "verify_commands": [
         "npm run check:client-recipes",
         "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-ajv-reject-invalid-capsules",
+      "path": "examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-recipes",
+        "npm run check:invalid-examples",
         "npm run check:package-install",
         "npm run check:catalog"
       ]
@@ -3420,6 +3469,69 @@
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.invalid.readme",
+      "path": "examples/invalid/README.md",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:invalid-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.invalid.missing-neuro-concentrate",
+      "path": "examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "kind": "example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-examples",
+        "npm run check:schema-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.invalid.relation-type",
+      "path": "examples/invalid/example-invalid-relation-type.capsule.json",
+      "kind": "example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-examples",
+        "npm run check:schema-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.invalid.check",
+      "path": "scripts/check-invalid-examples.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-examples",
         "npm run check:catalog"
       ]
     },

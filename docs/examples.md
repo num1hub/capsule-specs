@@ -16,10 +16,14 @@ The examples in [`../examples/`](../examples/) are intentionally small and publi
   Linked graph example that references the public note, task, and validator-smoke capsules.
 - `example-known-ids.json`
   JSON-array known-ID catalog used for link-aware validation of graph examples.
+- `invalid/`
+  Intentionally schema-invalid capsule fixtures for raw-schema consumers.
 
 ## Why there is a negative example
 
 Public specs are stronger when they show both a passing case and a controlled failing case. The G16-negative example demonstrates the difference between a structurally correct capsule and a sealed, trusted one.
+
+For schema-invalid fixtures that should fail before live validator semantics matter, see [`invalid-capsule-examples.md`](invalid-capsule-examples.md) and [`../examples/invalid/README.md`](../examples/invalid/README.md).
 
 ## Validation status
 

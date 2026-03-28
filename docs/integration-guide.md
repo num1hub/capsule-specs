@@ -21,8 +21,10 @@ If you need compact enums, gate IDs, or validator option flags for UI pickers, c
 If you want a raw JSON Schema validation path instead of the projection layer or the live validator API, also inspect:
 
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
+- [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
+- [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 
 ## 2. Add source-level projections where helpful
 
@@ -58,9 +60,10 @@ These are the smallest public-safe examples that still satisfy the five-element 
 Read:
 
 - [`../examples/example-validator-invalid-g16.capsule.json`](../examples/example-validator-invalid-g16.capsule.json)
+- [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
 - [`16-gates.md`](16-gates.md)
 
-This helps you distinguish structural validity from trust and sealing.
+This helps you distinguish structural schema rejection from trust- and sealing-level rejection.
 
 ## 5. Learn graph-aware validation
 

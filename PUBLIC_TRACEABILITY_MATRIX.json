@@ -108,7 +108,7 @@
     },
     {
       "id": "raw-json-schema-consumer-path",
-      "claim": "The public surface supports direct raw-schema validation of capsules and validator-envelope payloads through Ajv-based recipes from both a repo checkout and an installed package, without forcing consumers onto the projection layer.",
+      "claim": "The public surface supports direct raw-schema validation of capsules and validator-envelope payloads through Ajv-based recipes from both a repo checkout and an installed package, including explicit schema-invalid fixtures, without forcing consumers onto the projection layer.",
       "audiences": [
         "integrators",
         "tool-builders",
@@ -116,6 +116,7 @@
       ],
       "strongest_surfaces": [
         "docs/schema-validation-recipes.md",
+        "docs/invalid-capsule-examples.md",
         "schemas/capsule-schema.json",
         "schemas/neuro-concentrate.schema.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -127,11 +128,16 @@
         "docs/npm-consumption.md",
         "examples/client/ajv-validate-capsule.mjs",
         "examples/client/ajv-validate-validator-envelope.mjs",
+        "examples/client/ajv-reject-invalid-capsules.mjs",
         "examples/client/esm-package-ajv-validate-contracts.mjs",
+        "examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
+        "examples/invalid/README.md",
+        "scripts/check-invalid-examples.js",
         "scripts/check-package-install.js"
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
+        "npm run check:invalid-examples",
         "npm run check:package-install",
         "npm run check:traceability"
       ]
@@ -146,7 +152,10 @@
       "strongest_surfaces": [
         "PUBLIC_FAILURE_MODEL.json",
         "docs/failure-model.md",
+        "docs/invalid-capsule-examples.md",
         "examples/example-validator-invalid-g16.capsule.json",
+        "examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+        "examples/invalid/example-invalid-relation-type.capsule.json",
         "examples/api/unauthorized-response.sample.json",
         "examples/api/conflict-response.sample.json"
       ],
@@ -155,10 +164,12 @@
         "docs/openapi.md",
         "docs/portability.md",
         "schemas/public-failure-model.schema.json",
-        "PUBLIC_EXAMPLE_COVERAGE.json"
+        "PUBLIC_EXAMPLE_COVERAGE.json",
+        "scripts/check-invalid-examples.js"
       ],
       "verify_commands": [
         "npm run check:failure-model",
+        "npm run check:invalid-examples",
         "npm run check:api-examples",
         "npm run check:traceability"
       ]

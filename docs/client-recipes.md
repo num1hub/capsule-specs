@@ -47,9 +47,11 @@ If you want direct structural validation against the published schemas, inspect:
 
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
+- [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
+- [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
 
-These recipes demonstrate how to validate public examples against the raw JSON Schema layer with Ajv, without relying on the projection layer or live validator API calls.
+These recipes demonstrate how to validate public examples against the raw JSON Schema layer with Ajv, and how to confirm that intentionally invalid fixtures are rejected for the documented structural reasons, without relying on the projection layer or live validator API calls.
 
 ## Package recipes
 
@@ -60,12 +62,13 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
+- [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
 - [`npm-consumption.md`](npm-consumption.md)
 
-These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports and raw-schema Ajv consumption through package subpaths.
+These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports, positive raw-schema Ajv consumption, and package-level rejection of intentionally invalid schema fixtures through package subpaths.
 
 ## Route mapping
 
