@@ -27,7 +27,9 @@ const typeRecipeFiles = [
   'ts-capsule-summary.ts',
   'zod-parse-capsule.ts',
   'ts-build-validate-request.ts',
-  'zod-parse-validate-response.ts'
+  'ts-parse-support-responses.ts',
+  'zod-parse-validate-response.ts',
+  'zod-parse-support-responses.ts'
 ];
 
 const schemaRecipeFiles = [
@@ -148,7 +150,9 @@ const expectedTypeProjectionImports = {
   'ts-capsule-summary.ts': '../../projections/typescript/capsule.js',
   'zod-parse-capsule.ts': '../../projections/zod/capsule.js',
   'ts-build-validate-request.ts': '../../projections/typescript/validator-api.js',
-  'zod-parse-validate-response.ts': '../../projections/zod/validator-api.js'
+  'ts-parse-support-responses.ts': '../../projections/typescript/validator-api.js',
+  'zod-parse-validate-response.ts': '../../projections/zod/validator-api.js',
+  'zod-parse-support-responses.ts': '../../projections/zod/validator-api.js'
 };
 
 for (const [fileName, projectionImport] of Object.entries(expectedTypeProjectionImports)) {

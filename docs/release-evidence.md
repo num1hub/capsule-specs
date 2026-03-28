@@ -157,8 +157,12 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that the Python recipes work both from a checkout and from extracted packed artifacts.
 - [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator request envelope.
+- [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
+  Minimal source-level TypeScript recipe for typing the published `gates` and `stats` support-response payloads.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
   Minimal source-level Zod recipe for parsing a validator response envelope.
+- [`../examples/client/zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
+  Minimal source-level Zod recipe for parsing the published `gates` and `stats` support-response payloads.
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
   Minimal package-consumer recipe for the built capsule projection exports.
 - [`../examples/client/cjs-package-support-responses.cjs`](../examples/client/cjs-package-support-responses.cjs)
@@ -226,7 +230,7 @@ The API envelope schema and its dedicated verification script strengthen that cl
 
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
-The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer that stays subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
+The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for both `validate` envelopes and `gates` / `stats` support responses while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree.
 
@@ -361,6 +365,8 @@ When the public surface changes, these files should move together:
 - `examples/client/python-recompute-integrity-seal.py`
 - `examples/client/ts-package-validate-request.ts`
 - `examples/client/ts-build-validate-request.ts`
+- `examples/client/ts-parse-support-responses.ts`
 - `examples/client/zod-parse-validate-response.ts`
+- `examples/client/zod-parse-support-responses.ts`
 
 If they drift, the release evidence is incomplete even if the individual docs still read well.

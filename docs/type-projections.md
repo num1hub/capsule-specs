@@ -24,8 +24,12 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal Zod parsing recipe for the same public-safe projection layer.
 - [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
   Minimal TypeScript recipe for building a validator request envelope from the published API projection.
+- [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
+  Minimal TypeScript recipe for typing the published `gates` and `stats` support responses through the public projection layer.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
   Minimal Zod recipe for parsing a validator response envelope through the public projection layer.
+- [`../examples/client/zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
+  Minimal Zod recipe for parsing the published `gates` and `stats` support responses through the public projection layer.
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
   Minimal CommonJS recipe that consumes the built package exports.
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
@@ -49,6 +53,7 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - Zod schemas for local validation and application-level parsing
 - a narrow source-level projection that stays reviewable inside the public repo
 - a public-safe source-level envelope layer for validator clients that do not want to hand-roll request and response shapes
+- a source-level path for support-response typing and parsing that stays aligned to the published sample payloads
 
 ## Important boundaries
 

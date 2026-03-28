@@ -160,7 +160,9 @@
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts",
       "/home/n1/codex-workspace/projections/index.ts",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/index.ts",
@@ -491,9 +493,11 @@
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
       "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts",
       "/home/n1/codex-workspace/projections/index.ts",
       "/home/n1/codex-workspace/projections/typescript/index.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
@@ -862,6 +866,7 @@
       "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
       "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
       "/home/n1/codex-workspace/examples/example-known-ids.json",
       "/home/n1/codex-workspace/examples/example-note.capsule.json",
       "/home/n1/codex-workspace/examples/example-project-hub.capsule.json",
@@ -894,7 +899,8 @@
       "/home/n1/codex-workspace/examples/client/python-get-stats.py",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Integrator reading path through schema, OpenAPI, examples, support routes, and consumer recipes."
@@ -1260,7 +1266,9 @@
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
       "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts",
       "/home/n1/codex-workspace/projections/index.ts",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/index.ts",
@@ -1329,7 +1337,9 @@
       "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release evidence synchronized with public type-projection surfaces; release evidence synchronized with validator API projection surfaces; package-export projection layer synchronized"
@@ -2380,6 +2390,7 @@
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
       "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
       "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
       "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py",
@@ -2390,6 +2401,7 @@
       "/home/n1/codex-workspace/examples/client/python-parse-support-responses.py",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts",
       "/home/n1/codex-workspace/projections/index.ts",
       "/home/n1/codex-workspace/projections/typescript/index.ts",
       "/home/n1/codex-workspace/projections/zod/index.ts",
@@ -2463,12 +2475,32 @@
     "transformation_type": "generated",
     "notes": "Minimal TypeScript package-consumer recipe for a typed validator request against the built package exports."
   },
+  "examples/client/ts-parse-support-responses.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/tsconfig.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal TypeScript consumer recipe for typing the published validator support responses through the public projection layer."
+  },
   "examples/client/zod-parse-capsule.ts": {
     "source_paths": [
       "/home/n1/codex-workspace/projections/zod/capsule.ts"
     ],
     "transformation_type": "generated",
     "notes": "Minimal Zod consumer recipe for the published capsule projection layer."
+  },
+  "examples/client/zod-parse-support-responses.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/tsconfig.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal Zod consumer recipe for parsing the published validator support responses through the public projection layer."
   },
   "examples/client/zod-parse-validate-response.ts": {
     "source_paths": [
@@ -3057,7 +3089,9 @@
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -3207,7 +3241,9 @@
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -3658,7 +3694,9 @@
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -3764,7 +3802,9 @@
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -3868,7 +3908,9 @@
       "/home/n1/codex-workspace/examples/client/python-get-stats.py",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Release review updated for verification matrix layer; manifest coverage tracked in PUBLIC_RELEASE_METADATA.json; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release review synchronized with public type-projection surfaces; release review synchronized with validator API projection surfaces; package-export projection layer synchronized"
@@ -4008,7 +4050,9 @@
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -4110,7 +4154,9 @@
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -4354,7 +4400,9 @@
       "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Public roadmap for the open-core specification surface.; wave 3 updated for published type projections; package-export projection layer synchronized"
@@ -4841,9 +4889,11 @@
       "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
       "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts",
       "/home/n1/codex-workspace/projections/index.ts",
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/index.ts",
@@ -4864,7 +4914,9 @@
       "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs",
       "/home/n1/codex-workspace/examples/client/cjs-package-support-responses.cjs",
       "/home/n1/codex-workspace/examples/client/esm-package-support-responses.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/ts-parse-support-responses.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-support-responses.ts"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local checks for curl, Node, and Python client recipe snippets across all published validator routes."
