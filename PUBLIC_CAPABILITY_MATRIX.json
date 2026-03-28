@@ -85,7 +85,7 @@
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, and copyable Node, TypeScript, Zod, and Python request/response recipes.",
+      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, and copyable cURL, Node, TypeScript, Zod, and Python request/response recipes for all published routes.",
       "strongest_surfaces": [
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -105,13 +105,21 @@
         "examples/client/python-parse-support-responses.py",
         "examples/api/validate-request.single.json",
         "examples/api/validate-response.pass.json",
-        "docs/schema-family-reference.md"
+        "docs/schema-family-reference.md",
+        "docs/route-reference.md",
+        "examples/client/curl-get-gates.sh",
+        "examples/client/curl-get-stats.sh",
+        "examples/client/node-get-gates.mjs",
+        "examples/client/node-get-stats.mjs",
+        "examples/client/python-get-gates.py",
+        "examples/client/python-get-stats.py"
       ],
       "verify_commands": [
         "npm run check:api-examples",
         "npm run check:api-schemas",
         "npm run check:client-recipes",
-        "npm run check:capability-matrix"
+        "npm run check:capability-matrix",
+        "npm run check:python-recipes"
       ]
     },
     {

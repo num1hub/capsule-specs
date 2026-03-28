@@ -10,12 +10,16 @@ const clientDir = path.join(repoRoot, 'examples', 'client');
 const shellFiles = [
   'curl-validate-single.sh',
   'curl-validate-batch.sh',
-  'curl-validate-fix.sh'
+  'curl-validate-fix.sh',
+  'curl-get-gates.sh',
+  'curl-get-stats.sh'
 ];
 
 const nodeFiles = [
   'node-validate-single.mjs',
-  'node-validate-batch.mjs'
+  'node-validate-batch.mjs',
+  'node-get-gates.mjs',
+  'node-get-stats.mjs'
 ];
 
 const typeRecipeFiles = [
@@ -49,6 +53,8 @@ const pythonRecipeFiles = [
   'python-validate-single.py',
   'python-validate-batch.py',
   'python-validate-fix.py',
+  'python-get-gates.py',
+  'python-get-stats.py',
   'python-parse-validate-responses.py',
   'python-parse-support-responses.py'
 ];
@@ -75,29 +81,49 @@ for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles, ...sche
   assert(fs.existsSync(filePath), `missing client recipe ${fileName}`);
 }
 
+const expectedShellRoutes = {
+  'curl-validate-single.sh': {
+    route: '/api/validate',
+    requiresPayload: true
+  },
+  'curl-validate-batch.sh': {
+    route: '/api/validate/batch',
+    requiresPayload: true
+  },
+  'curl-validate-fix.sh': {
+    route: '/api/validate/fix',
+    requiresPayload: true
+  },
+  'curl-get-gates.sh': {
+    route: '/api/validate/gates',
+    requiresPayload: false
+  },
+  'curl-get-stats.sh': {
+    route: '/api/validate/stats',
+    requiresPayload: false
+  }
+};
+
 for (const fileName of shellFiles) {
   const filePath = path.join(clientDir, fileName);
   const content = fs.readFileSync(filePath, 'utf8');
+  const expectations = expectedShellRoutes[fileName];
   assert(content.includes('N1HUB_BASE_URL'), `${fileName} must require N1HUB_BASE_URL`);
   assert(content.includes('N1HUB_TOKEN'), `${fileName} must require N1HUB_TOKEN`);
+  assert(content.includes(expectations.route), `${fileName} must target ${expectations.route}`);
   assert(content.includes('Authorization: Bearer ${N1HUB_TOKEN}'), `${fileName} must send a bearer token`);
-  assert(content.includes('--data "@/home/n1/codex-workspace/examples/api/'), `${fileName} must point at a repository API example payload`);
-}
-
-const expectedShellRoutes = {
-  'curl-validate-single.sh': '/api/validate',
-  'curl-validate-batch.sh': '/api/validate/batch',
-  'curl-validate-fix.sh': '/api/validate/fix'
-};
-
-for (const [fileName, route] of Object.entries(expectedShellRoutes)) {
-  const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
-  assert(content.includes(`${route}`), `${fileName} must target ${route}`);
+  if (expectations.requiresPayload) {
+    assert(content.includes('--data "@/home/n1/codex-workspace/examples/api/'), `${fileName} must point at a repository API example payload`);
+  } else {
+    assert(!content.includes('--data "@/home/n1/codex-workspace/examples/api/'), `${fileName} must not send a request body`);
+  }
 }
 
 const expectedNodeRoutes = {
   'node-validate-single.mjs': '/api/validate',
-  'node-validate-batch.mjs': '/api/validate/batch'
+  'node-validate-batch.mjs': '/api/validate/batch',
+  'node-get-gates.mjs': '/api/validate/gates',
+  'node-get-stats.mjs': '/api/validate/stats'
 };
 
 for (const [fileName, route] of Object.entries(expectedNodeRoutes)) {
@@ -266,6 +292,20 @@ const expectedPythonRecipeReferences = {
     'N1HUB_BASE_URL',
     'N1HUB_TOKEN',
     '/api/validate/fix',
+    'urllib'
+  ],
+  'python-get-gates.py': [
+    'examples/api/gates-response.sample.json',
+    'N1HUB_BASE_URL',
+    'N1HUB_TOKEN',
+    '/api/validate/gates',
+    'urllib'
+  ],
+  'python-get-stats.py': [
+    'examples/api/stats-response.sample.json',
+    'N1HUB_BASE_URL',
+    'N1HUB_TOKEN',
+    '/api/validate/stats',
     'urllib'
   ],
   'python-parse-validate-responses.py': [

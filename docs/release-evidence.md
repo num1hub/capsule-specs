@@ -193,6 +193,10 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal Python recipe for preparing or sending the published `POST /api/validate/batch` example envelope.
 - [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
   Minimal Python recipe for preparing or sending the published `POST /api/validate/fix` example envelope.
+- [`../examples/client/python-get-gates.py`](../examples/client/python-get-gates.py)
+  Minimal Python recipe for reading the published `GET /api/validate/gates` support route from sample data or a live validator.
+- [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)
+  Minimal Python recipe for reading the published `GET /api/validate/stats` support route from sample data or a live validator.
 - [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
   Minimal Python recipe for parsing the published pass, fail, batch, and fix validator response families.
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
@@ -208,7 +212,7 @@ The Markdown review surfaces are optimized for people. The JSON surfaces are opt
 
 The citation file, release-note config, and Dependabot config do not replace release evidence, but they make the public GitHub surface more usable as a maintained long-lived repository instead of a one-time export.
 
-The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable.
+The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable across the full published validator route set.
 
 The API envelope schema and its dedicated verification script strengthen that claim by keeping the public HTTP example layer machine-checkable.
 
@@ -232,7 +236,7 @@ The invalid-fixture layer strengthens that path further by proving that downstre
 
 The integrity-recipe layer strengthens that path further by proving that published example capsules and validator response envelopes stay aligned to the current public sealing rule instead of treating their `integrity_sha3_512` or `computedHash` fields as unverified folklore.
 
-The Python-consumption layer strengthens that path further by proving the same compact reference, validator-envelope request/response, and `G16` integrity flows are consumable outside the Node runtime from raw packaged assets, without overclaiming a Python SDK or PyPI distribution.
+The Python-consumption layer strengthens that path further by proving the same compact reference, validator-envelope request/response, live support-route, and `G16` integrity flows are consumable outside the Node runtime from raw packaged assets, without overclaiming a Python SDK or PyPI distribution.
 
 The curated raw capsule layer strengthens that path further by publishing a small, verifier-backed set of stronger law-adjacent source artifacts for confidence-vector semantics, subtype meaning, and version-lineage posture without pretending the whole upstream capsule corpus is public.
 

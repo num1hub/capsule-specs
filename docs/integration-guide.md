@@ -48,6 +48,8 @@ If you want the same compact references and public `G16` proof path from Python 
 - [`../examples/client/python-validate-single.py`](../examples/client/python-validate-single.py)
 - [`../examples/client/python-validate-batch.py`](../examples/client/python-validate-batch.py)
 - [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
+- [`../examples/client/python-get-gates.py`](../examples/client/python-get-gates.py)
+- [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)
 - [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
 
@@ -70,7 +72,7 @@ If you want package-style consumption from a checkout or packed artifact, use th
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
 That check confirms CommonJS runtime usage, ESM runtime usage, raw-schema and bundled-schema Ajv usage, and TypeScript type resolution from an installed tarball.
 It also confirms packaged structural rejection recipes for intentionally invalid archive, capsule, and validator-envelope fixtures.
-For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md), including dry-run/live validator-envelope request flows and response-family parsing.
+For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md), including dry-run/live validator-envelope request flows, live `gates` and `stats` support-route reads, and response-family parsing.
 If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.
 
 If your integration path touches portability, export review, or replay-contract tooling instead of validator HTTP routes, also inspect:
@@ -122,7 +124,7 @@ Read:
 - [`../examples/api-invalid/`](../examples/api-invalid/)
 - [`client-recipes.md`](client-recipes.md)
 
-These show how the public examples appear at the validator HTTP boundary for `validate`, `batch`, and `fix` flows, plus which intentionally invalid envelope shapes should be rejected directly by the raw schema layer.
+These show how the public examples appear at the validator HTTP boundary for `validate`, `batch`, `fix`, `gates`, and `stats` flows, plus which intentionally invalid envelope shapes should be rejected directly by the raw schema layer.
 
 ## 7. Respect the stronger source of truth
 

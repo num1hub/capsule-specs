@@ -33,15 +33,19 @@ function assert(condition, message) {
   }
 }
 
-const recipeFiles = [
-  path.join(repoRoot, 'examples', 'client', 'python-contract-reference.py'),
-  path.join(repoRoot, 'examples', 'client', 'python-recompute-integrity-seal.py'),
-  path.join(repoRoot, 'examples', 'client', 'python-validate-single.py'),
-  path.join(repoRoot, 'examples', 'client', 'python-validate-batch.py'),
-  path.join(repoRoot, 'examples', 'client', 'python-validate-fix.py'),
-  path.join(repoRoot, 'examples', 'client', 'python-parse-validate-responses.py'),
-  path.join(repoRoot, 'examples', 'client', 'python-parse-support-responses.py')
+const recipeRelativePaths = [
+  'examples/client/python-contract-reference.py',
+  'examples/client/python-recompute-integrity-seal.py',
+  'examples/client/python-validate-single.py',
+  'examples/client/python-validate-batch.py',
+  'examples/client/python-validate-fix.py',
+  'examples/client/python-get-gates.py',
+  'examples/client/python-get-stats.py',
+  'examples/client/python-parse-validate-responses.py',
+  'examples/client/python-parse-support-responses.py'
 ];
+
+const recipeFiles = recipeRelativePaths.map((relativePath) => path.join(repoRoot, relativePath));
 
 const workspaceRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'capsule-specs-python-'));
 let tarballPath = null;
@@ -69,15 +73,11 @@ try {
   run('tar', ['-xzf', tarballPath, '-C', extractedRoot], repoRoot);
 
   const packedPackageRoot = path.join(extractedRoot, 'package');
-  run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-contract-reference.py')], packedPackageRoot);
-  run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-recompute-integrity-seal.py')], packedPackageRoot);
-  run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-validate-single.py')], packedPackageRoot);
-  run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-validate-batch.py')], packedPackageRoot);
-  run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-validate-fix.py')], packedPackageRoot);
-  run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-parse-validate-responses.py')], packedPackageRoot);
-  run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-parse-support-responses.py')], packedPackageRoot);
+  for (const relativePath of recipeRelativePaths) {
+    run(python, [path.join(packedPackageRoot, relativePath)], packedPackageRoot);
+  }
 
-  console.log('OK: checked 7 repo-local Python recipes and 7 packed-artifact Python recipes');
+  console.log(`OK: checked ${recipeRelativePaths.length} repo-local Python recipes and ${recipeRelativePaths.length} packed-artifact Python recipes`);
 } catch (error) {
   console.error(`FAIL: ${error.message}`);
   process.exitCode = 1;

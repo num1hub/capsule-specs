@@ -988,6 +988,34 @@
       ]
     },
     {
+      "id": "examples.client.curl-get-gates",
+      "path": "examples/client/curl-get-gates.sh",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.curl-get-stats",
+      "path": "examples/client/curl-get-stats.sh",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.curl-single",
       "path": "examples/client/curl-validate-single.sh",
       "kind": "client-recipe",
@@ -1163,6 +1191,34 @@
       ]
     },
     {
+      "id": "examples.client.node-get-gates",
+      "path": "examples/client/node-get-gates.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.node-get-stats",
+      "path": "examples/client/node-get-stats.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.node-single",
       "path": "examples/client/node-validate-single.mjs",
       "kind": "client-recipe",
@@ -1192,8 +1248,8 @@
       ]
     },
     {
-      "id": "examples.client.python-recompute-integrity-seal",
-      "path": "examples/client/python-recompute-integrity-seal.py",
+      "id": "examples.client.python-get-gates",
+      "path": "examples/client/python-get-gates.py",
       "kind": "client-recipe",
       "stability": "maintained",
       "audiences": [
@@ -1207,8 +1263,53 @@
       ]
     },
     {
-      "id": "examples.client.python-validate-single",
-      "path": "examples/client/python-validate-single.py",
+      "id": "examples.client.python-get-stats",
+      "path": "examples/client/python-get-stats.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-parse-support-responses",
+      "path": "examples/client/python-parse-support-responses.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-parse-validate-responses",
+      "path": "examples/client/python-parse-validate-responses.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-recompute-integrity-seal",
+      "path": "examples/client/python-recompute-integrity-seal.py",
       "kind": "client-recipe",
       "stability": "maintained",
       "audiences": [
@@ -1252,23 +1353,8 @@
       ]
     },
     {
-      "id": "examples.client.python-parse-validate-responses",
-      "path": "examples/client/python-parse-validate-responses.py",
-      "kind": "client-recipe",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:client-recipes",
-        "npm run check:python-recipes",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "examples.client.python-parse-support-responses",
-      "path": "examples/client/python-parse-support-responses.py",
+      "id": "examples.client.python-validate-single",
+      "path": "examples/client/python-validate-single.py",
       "kind": "client-recipe",
       "stability": "maintained",
       "audiences": [

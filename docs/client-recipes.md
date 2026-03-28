@@ -18,8 +18,10 @@ Ready-to-read examples live under [`../examples/client/`](../examples/client/):
 - [`curl-validate-single.sh`](../examples/client/curl-validate-single.sh)
 - [`curl-validate-batch.sh`](../examples/client/curl-validate-batch.sh)
 - [`curl-validate-fix.sh`](../examples/client/curl-validate-fix.sh)
+- [`curl-get-gates.sh`](../examples/client/curl-get-gates.sh)
+- [`curl-get-stats.sh`](../examples/client/curl-get-stats.sh)
 
-These scripts show the request method, route, auth header, and local payload file to send.
+These scripts show the request method, route, auth header, and when applicable the local payload file to send.
 
 ## Node recipes
 
@@ -27,8 +29,10 @@ Minimal Node fetch-based examples also live under [`../examples/client/`](../exa
 
 - [`node-validate-single.mjs`](../examples/client/node-validate-single.mjs)
 - [`node-validate-batch.mjs`](../examples/client/node-validate-batch.mjs)
+- [`node-get-gates.mjs`](../examples/client/node-get-gates.mjs)
+- [`node-get-stats.mjs`](../examples/client/node-get-stats.mjs)
 
-They are intentionally small and avoid framework assumptions.
+They are intentionally small and avoid framework assumptions while covering all published validator routes.
 
 ## TypeScript and Zod recipes
 
@@ -80,11 +84,13 @@ If you need a cross-language raw-asset consumption path outside the Node runtime
 - [`../examples/client/python-validate-single.py`](../examples/client/python-validate-single.py)
 - [`../examples/client/python-validate-batch.py`](../examples/client/python-validate-batch.py)
 - [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
+- [`../examples/client/python-get-gates.py`](../examples/client/python-get-gates.py)
+- [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)
 - [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
 - [`python-consumption.md`](python-consumption.md)
 
-These recipes demonstrate how Python consumers can read compact contract-reference JSON files, inspect curated raw capsule assets, prepare validator-envelope request flows for `validate`, `batch`, and `fix`, parse published validator response families, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
+These recipes demonstrate how Python consumers can read compact contract-reference JSON files, inspect curated raw capsule assets, prepare validator-envelope request flows for `validate`, `batch`, and `fix`, call the published `gates` and `stats` support routes, parse published validator response families, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
 
 ## Package recipes
 
@@ -115,7 +121,15 @@ These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM,
   Use `POST /api/validate/batch`
 - `curl-validate-fix.sh`
   Uses `POST /api/validate/fix`
+- `curl-get-gates.sh`, `node-get-gates.mjs`, and `python-get-gates.py`
+  Use `GET /api/validate/gates`
+- `curl-get-stats.sh`, `node-get-stats.mjs`, and `python-get-stats.py`
+  Use `GET /api/validate/stats`
+- `python-validate-single.py`, `python-validate-batch.py`, and `python-validate-fix.py`
+  Mirror the three published POST validator routes from a cross-language raw-JSON path
+- `python-parse-validate-responses.py` and `python-parse-support-responses.py`
+  Inspect the published response families without requiring live credentials
 
 ## Why these recipes exist
 
-The JSON request and response examples show contract shape. The client recipes show how a consumer actually sends those payloads. Together they reduce the gap between “the contract is documented” and “an external integrator can use it quickly.”
+The JSON request and response examples show contract shape. The client recipes show how a consumer actually sends or reads those payloads across every published validator route. Together they reduce the gap between “the contract is documented” and “an external integrator can use it quickly.”

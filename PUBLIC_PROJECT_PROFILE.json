@@ -63,7 +63,7 @@
       "intentionally schema-invalid capsule fixtures for structural rejection testing",
       "pack-ready projection-consumer docs",
       "fresh-project package-install verification across CommonJS, ESM, and TypeScript consumers",
-      "cross-language Python consumer recipe examples for compact references, validator-envelope request/response flows, and public G16 seal proofs",
+      "cross-language Python consumer recipe examples for compact references, validator-envelope request/response flows, support-route reads, and public G16 seal proofs",
       "repo-local verification for curated raw capsule sources",
       "repo-local verification for compact contract references",
       "repo-local verification for raw JSON Schema consumer recipes",
@@ -78,7 +78,8 @@
       "archive-bundle validation recipes for repo-relative and installed-package consumers",
       "intentionally schema-invalid archive-bundle fixtures for structural rejection testing",
       "repo-local verification for archive-bundle validation recipes",
-      "repo-local verification for intentionally schema-invalid archive-bundle fixtures"
+      "repo-local verification for intentionally schema-invalid archive-bundle fixtures",
+      "live client recipes for all published validator routes"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -88,13 +89,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 319,
+    "total_files": 325,
     "markdown_files": 100,
     "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 38,
+    "client_recipe_files": 44,
     "workflow_files": 1,
     "issue_templates": 4
   },

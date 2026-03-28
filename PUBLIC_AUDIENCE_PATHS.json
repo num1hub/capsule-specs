@@ -59,7 +59,8 @@
         "docs/npm-consumption.md",
         "docs/integrity-recipes.md",
         "docs/python-consumption.md",
-        "docs/invalid-api-envelope-examples.md"
+        "docs/invalid-api-envelope-examples.md",
+        "docs/route-reference.md"
       ],
       "strongest_surfaces": [
         "schemas/validator-api-envelopes.schema.json",
@@ -86,7 +87,8 @@
         "examples/archive/archive-bundle.sample.json",
         "docs/invalid-archive-bundle-examples.md",
         "examples/archive-invalid/archive-bundle.invalid-created-at.json",
-        "examples/archive-invalid/archive-bundle.invalid-content-class.json"
+        "examples/archive-invalid/archive-bundle.invalid-content-class.json",
+        "docs/route-reference.md"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
@@ -120,7 +122,8 @@
         "can distinguish schema-invalid validator-envelope fixtures from structurally valid negative API responses such as the public G16 fail example",
         "can choose between raw multi-file schemas and single-file bundle schemas without guessing which public layer is stronger",
         "can validate the published archive-bundle sample directly against the portability/export schema from either repo-relative files or installed package exports",
-        "can distinguish the structurally valid archive sample from intentionally invalid archive fixtures and use both as portability regression targets"
+        "can distinguish the structurally valid archive sample from intentionally invalid archive fixtures and use both as portability regression targets",
+        "can call the published gates and stats support routes without guessing live route shape from prose alone"
       ],
       "bounded_non_goals": [
         "does not promise a public hosted endpoint",

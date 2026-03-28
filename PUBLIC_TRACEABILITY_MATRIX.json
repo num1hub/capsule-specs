@@ -37,7 +37,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, client recipes, and bounded package/extracted-artifact consumer paths that cover CommonJS, ESM, TypeScript, and Python request/response readers without depending on private runtime code.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, and full-route client recipes plus bounded package/extracted-artifact consumer paths that cover CommonJS, ESM, TypeScript, and Python request/response readers without depending on private runtime code.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -50,7 +50,10 @@
         "examples/client/node-validate-single.mjs",
         "docs/python-consumption.md",
         "examples/client/python-validate-single.py",
-        "examples/client/python-parse-validate-responses.py"
+        "examples/client/python-parse-validate-responses.py",
+        "docs/route-reference.md",
+        "examples/client/node-get-gates.mjs",
+        "examples/client/python-get-gates.py"
       ],
       "supporting_surfaces": [
         "docs/route-reference.md",
@@ -77,7 +80,11 @@
         "examples/client/python-validate-fix.py",
         "examples/client/python-parse-support-responses.py",
         "scripts/check-python-recipes.js",
-        "scripts/check-package-install.js"
+        "scripts/check-package-install.js",
+        "examples/client/curl-get-gates.sh",
+        "examples/client/curl-get-stats.sh",
+        "examples/client/node-get-stats.mjs",
+        "examples/client/python-get-stats.py"
       ],
       "verify_commands": [
         "npm run check:api-examples",

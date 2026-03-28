@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- completed the live client-recipe surface for the published validator support routes by adding cURL, Node, and Python recipes for `GET /api/validate/gates` and `GET /api/validate/stats`
 - added archive-bundle validation recipes for repo-local and installed-package consumers, plus a dedicated verifier and portability-layer sync updates
 - added intentionally schema-invalid archive-bundle fixtures, repo-local and package-consumer Ajv rejection recipes, and verifier-backed portability-layer sync updates
 - expanded the Python consumer layer with repo-local and extracted-package validator-envelope recipes for validate, batch, and fix flows without implying a Python SDK or hosted-service guarantee

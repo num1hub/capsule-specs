@@ -110,7 +110,7 @@ This repository is that home.
 - `examples/api/`
   Concrete validator request and response payload examples.
 - `examples/client/`
-  Minimal curl, Node, and Python recipes for external consumers.
+  Minimal curl, Node, and Python recipes for external consumers across all published validator routes plus raw-JSON consumer paths.
 - `examples/invalid/`
   Intentionally schema-invalid capsule fixtures for raw-schema consumers.
 - `examples/api-invalid/`
@@ -181,7 +181,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - public-safe TypeScript and Zod validator API envelope projections for source-level validator clients under [`projections/`](projections/)
 - a buildable and packable package-export layer for the maintained projection surface
 - a fresh-project tarball-install verification path for CommonJS, ESM, and TypeScript package consumers
-- a cross-language Python consumer path for compact references and public `G16` seal proofs from repo-local files or extracted packed artifacts
+- a cross-language Python consumer path for compact references, published validator route flows, and public `G16` seal proofs from repo-local files or extracted packed artifacts
 - curated raw capsule source assets with repo-local contract checks and package subpath exports
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
 - API payload examples under [`examples/api/`](examples/api/)
@@ -268,4 +268,4 @@ This repository is assembled from public-safe source materials curated out of th
 
 This is the initial public projection of the N1Hub open-core specification surface. The current release focuses on schema, validator-facing contracts, examples, and repository health rather than on the full runtime codebase.
 
-Wave 2 and Wave 3 are delivered. Wave 4 has started through an expanded curated raw capsule set, package-exported raw capsule assets, a compact reference pack for canonical enums and gate maps, fresh Ajv-backed raw-schema consumer recipes, direct archive-bundle validation recipes for portability consumers, explicit schema-invalid archive, capsule, and validator-envelope fixtures, single-file schema bundle artifacts for lower-friction codegen and polyglot consumers, and a cross-language Python raw-asset path for compact references and public `G16` seal proofs, and should continue widening other public-safe contract families without reopening the private runtime boundary.
+Wave 2 and Wave 3 are delivered. Wave 4 has started through an expanded curated raw capsule set, package-exported raw capsule assets, a compact reference pack for canonical enums and gate maps, fresh Ajv-backed raw-schema consumer recipes, direct archive-bundle validation recipes for portability consumers, explicit schema-invalid archive, capsule, and validator-envelope fixtures, single-file schema bundle artifacts for lower-friction codegen and polyglot consumers, and a cross-language Python raw-asset path for compact references, full published validator route coverage, and public `G16` seal proofs, and should continue widening other public-safe contract families without reopening the private runtime boundary.

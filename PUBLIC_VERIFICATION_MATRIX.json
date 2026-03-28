@@ -36,14 +36,15 @@
     },
     {
       "id": "capsule-and-api-example-integrity",
-      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, cross-language Python validator-envelope request/response recipes, and the reproducibility of published G16 integrity seals and computedHash values.",
+      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, live client recipes for all published validator routes, and the reproducibility of published G16 integrity seals and computedHash values.",
       "commands": [
         "npm run check:examples",
         "npm run check:raw-capsules",
         "npm run check:api-examples",
         "npm run check:integrity-recipes",
         "npm run check:python-recipes",
-        "npm run check:api-schemas"
+        "npm run check:api-schemas",
+        "npm run check:client-recipes"
       ],
       "protects": [
         "examples/",
@@ -60,7 +61,14 @@
         "examples/client/python-validate-fix.py",
         "examples/client/python-parse-validate-responses.py",
         "examples/client/python-parse-support-responses.py",
-        "references/contract-constants.json"
+        "references/contract-constants.json",
+        "docs/client-recipes.md",
+        "examples/client/curl-get-gates.sh",
+        "examples/client/curl-get-stats.sh",
+        "examples/client/node-get-gates.mjs",
+        "examples/client/node-get-stats.mjs",
+        "examples/client/python-get-gates.py",
+        "examples/client/python-get-stats.py"
       ],
       "strongest_surfaces": [
         "examples/example-project-hub.capsule.json",
@@ -80,7 +88,9 @@
         "package-level integrity recipe claims that only work through repo-local helper state",
         "cross-language Python integrity recipes drifting away from the published G16 rule or extracted package layout",
         "cross-language Python validator-envelope recipes drifting away from the published API example payloads or extracted package layout",
-        "cross-language Python response-family recipes drifting away from the published API example payloads or extracted package layout"
+        "cross-language Python response-family recipes drifting away from the published API example payloads or extracted package layout",
+        "live support-route client recipes drifting away from the published validator HTTP surface",
+        "cross-language Python support-route recipes drifting away from the published support-response payloads or extracted package layout"
       ]
     },
     {

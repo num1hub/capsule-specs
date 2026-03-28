@@ -49,13 +49,13 @@ This executes all repository-local checks in the expected order.
 - `npm run check:integrity-recipes`
   Verifies the public sealing-rule recipes, recomputed example/API hashes, and the repair boundary for the intentional `G16` teaching example.
 - `npm run check:python-recipes`
-  Verifies the cross-language Python recipes for compact references and public `G16` seal proofs, including execution from both a repo checkout and an extracted packed artifact.
+  Verifies the cross-language Python recipes for compact references, validator-envelope request flows, live support-route reads, response-family parsing, and public `G16` seal proofs, including execution from both a repo checkout and an extracted packed artifact.
 - `npm run check:example-coverage`
   Verifies `PUBLIC_EXAMPLE_COVERAGE.json`, capsule/API example coverage links, and surrounding example docs.
 - `npm run check:boundary-map`
   Verifies `PUBLIC_BOUNDARY_MAP.json`, the new projection/boundary docs, and their contract-catalog coverage.
 - `npm run check:client-recipes`
-  Verifies curl and Node consumer snippets, route targeting, env-var assumptions, and Node syntax.
+  Verifies curl and Node consumer snippets, full published validator-route targeting, env-var assumptions, and Node syntax.
 - `npm run check:community-health`
   Verifies contributor-facing docs, issue templates, support/security alignment, and intake-surface references.
 - `npm run check:github-operations`
@@ -178,4 +178,4 @@ Serious public changes should not be considered complete until:
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`
 - repo-owned GitHub label and milestone surfaces stay aligned with `.github/labels.json`, `.github/milestones.json`, and `docs/github-operations.md`
-- client recipes stay aligned with the API examples and route docs
+- client recipes stay aligned with the API examples and route docs, including the published `gates` and `stats` support routes

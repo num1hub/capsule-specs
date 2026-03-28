@@ -18,6 +18,8 @@ If you need source-level consumer artifacts instead of raw JSON Schema alone, al
 If you need a cross-language raw-JSON consumer path outside the Node runtime, also inspect:
 
 - [`python-consumption.md`](python-consumption.md)
+- [`../examples/client/python-get-gates.py`](../examples/client/python-get-gates.py)
+- [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)
 - [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
 
@@ -60,7 +62,7 @@ If you need a cross-language raw-JSON consumer path outside the Node runtime, al
   The current public example surface uses `{ capsule, options }`.
   Policy variants may exist upstream, but the public repository only schema-covers the documented example envelope.
 
-The public repo currently includes concrete examples for all three published request envelopes and for the bounded response families documented here. That keeps the reference surface useful without trying to mirror every internal runtime path.
+The public repo currently includes concrete examples for all published request and support-route envelopes documented here, plus copyable live client recipes for `validate`, `batch`, `fix`, `gates`, and `stats`. That keeps the reference surface useful without trying to mirror every internal runtime path.
 
 The `fix` response sample is intentionally illustrative: it is derived from the published OpenAPI contract and from local validator behavior on the public negative `G16` example, not from a deployed public HTTP trace.
 

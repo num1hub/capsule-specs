@@ -7,11 +7,15 @@ This directory contains minimal consumer-oriented examples for the published val
 - `curl-validate-single.sh`
 - `curl-validate-batch.sh`
 - `curl-validate-fix.sh`
+- `curl-get-gates.sh`
+- `curl-get-stats.sh`
 
 ## Node recipes
 
 - `node-validate-single.mjs`
 - `node-validate-batch.mjs`
+- `node-get-gates.mjs`
+- `node-get-stats.mjs`
 
 ## Type-level recipes
 
@@ -48,6 +52,8 @@ This directory contains minimal consumer-oriented examples for the published val
 - `python-validate-single.py`
 - `python-validate-batch.py`
 - `python-validate-fix.py`
+- `python-get-gates.py`
+- `python-get-stats.py`
 - `python-parse-validate-responses.py`
 - `python-parse-support-responses.py`
 
@@ -71,4 +77,5 @@ This directory contains minimal consumer-oriented examples for the published val
 - The package recipes also cover compact JSON contract references in addition to projection exports and raw capsule assets.
 - The raw-schema recipes demonstrate direct Ajv validation against published schema files, the archive-bundle portability schema, single-file schema bundles, package-exported schema assets, and intentionally invalid archive, capsule, and validator-envelope fixtures.
 - The integrity recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload and how to repair the intentional `G16` teaching example without private runtime helpers.
-- The Python recipes demonstrate non-Node consumption of compact JSON references, validator-envelope request/response flows, and public seal proofs from a repo checkout or extracted packed artifact.
+- The shell, Node, and Python live-route recipes together now cover all published validator routes: `validate`, `batch`, `fix`, `gates`, and `stats`.
+- The Python recipes demonstrate non-Node consumption of compact JSON references, validator-envelope request/response flows, live support-route reads, and public seal proofs from a repo checkout or extracted packed artifact.

@@ -53,7 +53,7 @@
 - cross-language Python consumption docs, Python recipes for compact references, validator-envelope request/response flows, and public `G16` seal proofs, plus a dedicated verifier for repo-local and extracted packed-artifact execution
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
-- client recipes and trust-model docs for external consumers
+- client recipes and trust-model docs for external consumers, including live support-route coverage for `gates` and `stats`
 - expanded curated raw public law-adjacent capsules for confidence-vector semantics, subtype meaning, and version lineage
 - live validator OpenAPI reference
 
