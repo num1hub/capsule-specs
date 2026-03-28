@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- split the Python response-side consumer path into dedicated validate, error-envelope, and support-response recipes, so cross-language parsing no longer overloads one support script with unrelated bounded error families
 - added a bounded `403 owner role required` API sample and wired it through route metadata, error-envelope recipes, and verifiers, so the published validator surface no longer documents that rejection path without a concrete public-safe example
 - added a reusable Python live-validator client recipe backed by the published route pack and request examples, so cross-language consumers no longer have to stitch separate point scripts together just to cover the full published validator route family
 - added a CommonJS package-consumer live-validator client recipe plus fresh-install proof, so the installed-package live route bridge no longer stops at ESM and TypeScript consumers

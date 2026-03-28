@@ -52,6 +52,7 @@ If you want the same compact references and public `G16` proof path from Python 
 - [`../examples/client/python-get-gates.py`](../examples/client/python-get-gates.py)
 - [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)
 - [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
+- [`../examples/client/python-parse-error-responses.py`](../examples/client/python-parse-error-responses.py)
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
 
 If you want the same cross-language path as one reusable Python bridge instead of five point scripts, start with [`../examples/client/python-live-validator-client.py`](../examples/client/python-live-validator-client.py), which reads the published route pack and request examples directly.
@@ -115,7 +116,7 @@ If you need the same bounded shared error envelopes from that installed-package 
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
 That check confirms CommonJS runtime usage, ESM runtime usage, installed-package validator request-family typing, installed-package validate-response, support-response, and error-envelope parsing, raw-schema and bundled-schema Ajv usage, and TypeScript type resolution from an installed tarball.
 It also confirms packaged structural rejection recipes for intentionally invalid archive, capsule, and validator-envelope fixtures.
-For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md), including dry-run/live validator-envelope request flows, live `gates` and `stats` support-route reads with the bounded `stats` query path, and response-family parsing.
+For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md), including dry-run/live validator-envelope request flows, live `gates` and `stats` support-route reads with the bounded `stats` query path, plus dedicated validate-response, error-envelope, and support-response parsing.
 If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.
 
 If your integration path touches portability, export review, or replay-contract tooling instead of validator HTTP routes, also inspect:

@@ -53,6 +53,7 @@
         "examples/client/python-live-validator-client.py",
         "examples/client/python-validate-single.py",
         "examples/client/python-parse-validate-responses.py",
+        "examples/client/python-parse-error-responses.py",
         "docs/route-reference.md",
         "examples/client/node-get-gates.mjs",
         "examples/client/python-get-gates.py"
@@ -264,7 +265,8 @@
         "PUBLIC_EXAMPLE_COVERAGE.json",
         "scripts/check-invalid-examples.js",
         "examples/api-invalid/README.md",
-        "scripts/check-invalid-api-examples.js"
+        "scripts/check-invalid-api-examples.js",
+        "examples/client/python-parse-error-responses.py"
       ],
       "verify_commands": [
         "npm run check:failure-model",

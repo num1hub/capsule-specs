@@ -119,6 +119,7 @@
         "examples/client/python-validate-batch.py",
         "examples/client/python-validate-fix.py",
         "examples/client/python-parse-validate-responses.py",
+        "examples/client/python-parse-error-responses.py",
         "examples/client/python-parse-support-responses.py",
         "examples/api/validate-request.single.json",
         "examples/api/validate-response.pass.json",
@@ -1083,7 +1084,7 @@
       "id": "consume-public-assets-from-python",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume compact contract references, published validator-envelope request/response examples, and public G16 seal proofs from Python using raw JSON assets from either a repo checkout or an extracted packed artifact, without depending on the Node projection layer.",
+      "outcome": "Consume compact contract references, published validator-envelope request examples, dedicated validate/error/support response examples, and public G16 seal proofs from Python using raw JSON assets from either a repo checkout or an extracted packed artifact, without depending on the Node projection layer.",
       "strongest_surfaces": [
         "docs/python-consumption.md",
         "examples/client/python-contract-reference.py",
@@ -1092,6 +1093,7 @@
         "examples/client/python-validate-batch.py",
         "examples/client/python-validate-fix.py",
         "examples/client/python-parse-validate-responses.py",
+        "examples/client/python-parse-error-responses.py",
         "examples/client/python-parse-support-responses.py",
         "scripts/check-python-recipes.js"
       ],

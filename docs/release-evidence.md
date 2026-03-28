@@ -255,8 +255,10 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal Python recipe for reading the published `GET /api/validate/stats` support route from sample data or a live validator, including the bounded `limit` query path.
 - [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
   Minimal Python recipe for parsing the published pass, fail, batch, and fix validator response families.
+- [`../examples/client/python-parse-error-responses.py`](../examples/client/python-parse-error-responses.py)
+  Minimal Python recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes.
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
-  Minimal Python recipe for parsing the published gates, stats, unauthorized, forbidden, conflict, generic-error, and rate-limit response families.
+  Minimal Python recipe for parsing the published `gates` and `stats` support-response families.
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
 - [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)

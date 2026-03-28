@@ -43,6 +43,7 @@ const recipeRelativePaths = [
   'examples/client/python-get-gates.py',
   'examples/client/python-get-stats.py',
   'examples/client/python-parse-validate-responses.py',
+  'examples/client/python-parse-error-responses.py',
   'examples/client/python-parse-support-responses.py'
 ];
 

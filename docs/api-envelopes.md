@@ -68,6 +68,7 @@ If you need a cross-language raw-JSON consumer path outside the Node runtime, al
 - [`../examples/client/python-get-gates.py`](../examples/client/python-get-gates.py)
 - [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)
 - [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
+- [`../examples/client/python-parse-error-responses.py`](../examples/client/python-parse-error-responses.py)
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
 
 ## Covered example files

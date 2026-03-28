@@ -74,6 +74,7 @@ This directory contains minimal consumer-oriented examples for the published val
 - `python-get-gates.py`
 - `python-get-stats.py`
 - `python-parse-validate-responses.py`
+- `python-parse-error-responses.py`
 - `python-parse-support-responses.py`
 
 ## Package recipes
@@ -114,4 +115,4 @@ This directory contains minimal consumer-oriented examples for the published val
 - The raw-schema recipes demonstrate direct Ajv validation against published schema files, the archive-bundle portability schema, single-file schema bundles, package-exported schema assets, and intentionally invalid archive, capsule, and validator-envelope fixtures.
 - The integrity recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload and how to repair the intentional `G16` teaching example without private runtime helpers.
 - The shell, Node, and Python live-route recipes together now cover all published validator routes: `validate`, `batch`, `fix`, `gates`, and `stats`, including the bounded `limit` query path on `stats`.
-- The Python recipes demonstrate non-Node consumption of compact JSON references, the published validator envelope-family map, a reusable live-client bridge backed by the published route pack, validator-envelope request/response flows, live support-route reads, and public seal proofs from a repo checkout or extracted packed artifact.
+- The Python recipes demonstrate non-Node consumption of compact JSON references, the published validator envelope-family map, a reusable live-client bridge backed by the published route pack, validator-envelope request flows, validate/error/support response parsing, live support-route reads, and public seal proofs from a repo checkout or extracted packed artifact.

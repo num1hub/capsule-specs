@@ -272,6 +272,7 @@ const requiredIds = [
   'examples.client.python-get-stats',
   'examples.client.python-live-validator-client',
   'examples.client.python-parse-validate-responses',
+  'examples.client.python-parse-error-responses',
   'examples.client.python-parse-support-responses',
   'schema.bundle-check',
   'schema.recipe-check',

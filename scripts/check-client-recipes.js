@@ -75,6 +75,7 @@ const pythonRecipeFiles = [
   'python-get-gates.py',
   'python-get-stats.py',
   'python-parse-validate-responses.py',
+  'python-parse-error-responses.py',
   'python-parse-support-responses.py'
 ];
 
@@ -434,14 +435,16 @@ const expectedPythonRecipeReferences = {
     'examples/api/validate-response.batch.json',
     'examples/api/validate-response.fix.sample.json'
   ],
-  'python-parse-support-responses.py': [
-    'examples/api/gates-response.sample.json',
-    'examples/api/stats-response.sample.json',
+  'python-parse-error-responses.py': [
     'examples/api/unauthorized-response.sample.json',
     'examples/api/forbidden-response.sample.json',
     'examples/api/conflict-response.sample.json',
     'examples/api/error-response.sample.json',
     'examples/api/rate-limit-response.sample.json'
+  ],
+  'python-parse-support-responses.py': [
+    'examples/api/gates-response.sample.json',
+    'examples/api/stats-response.sample.json'
   ]
 };
 

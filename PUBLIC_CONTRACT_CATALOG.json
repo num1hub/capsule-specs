@@ -1492,6 +1492,21 @@
       ]
     },
     {
+      "id": "examples.client.python-parse-error-responses",
+      "path": "examples/client/python-parse-error-responses.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.python-recompute-integrity-seal",
       "path": "examples/client/python-recompute-integrity-seal.py",
       "kind": "client-recipe",

@@ -1350,15 +1350,17 @@
       "/home/n1/codex-workspace/examples/client/python-get-stats.py",
       "/home/n1/codex-workspace/examples/client/python-parse-support-responses.py",
       "/home/n1/codex-workspace/examples/client/python-parse-validate-responses.py",
+      "/home/n1/codex-workspace/examples/client/python-parse-error-responses.py",
       "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py",
       "/home/n1/codex-workspace/examples/client/python-validate-batch.py",
       "/home/n1/codex-workspace/examples/client/python-validate-fix.py",
       "/home/n1/codex-workspace/examples/client/python-validate-single.py",
       "/home/n1/codex-workspace/references/validator-envelope-families.json",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
-    "notes": "Human-readable guide to Python consumption of compact references, validator request/response flows, support routes, and public G16 seal proofs."
+    "notes": "Human-readable guide to Python consumption of compact references, validator request flows, validate/error/support response parsing, support routes, and public G16 seal proofs."
   },
   "docs/quickstart.md": {
     "source_paths": [
@@ -2630,13 +2632,8 @@
       "/home/n1/codex-workspace/docs/api-envelopes.md",
       "/home/n1/codex-workspace/docs/client-recipes.md",
       "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
       "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for parsing the published support response families for the validator HTTP surface."
@@ -3867,7 +3864,8 @@
       "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
       "/home/n1/codex-workspace/references/validator-routes.json",
       "/home/n1/codex-workspace/scripts/check-contract-catalog.js",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/client/python-parse-error-responses.py"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -5694,7 +5692,8 @@
       "/home/n1/codex-workspace/references/validator-envelope-families.json",
       "/home/n1/codex-workspace/scripts/check-package-surface.js",
       "/home/n1/codex-workspace/tsconfig.build.json",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/client/python-parse-error-responses.py"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local checks for curl, Node, and Python client recipe snippets across all published validator routes."
@@ -6333,6 +6332,7 @@
       "/home/n1/codex-workspace/examples/client/python-get-stats.py",
       "/home/n1/codex-workspace/examples/client/python-parse-support-responses.py",
       "/home/n1/codex-workspace/examples/client/python-parse-validate-responses.py",
+      "/home/n1/codex-workspace/examples/client/python-parse-error-responses.py",
       "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py",
       "/home/n1/codex-workspace/examples/client/python-validate-batch.py",
       "/home/n1/codex-workspace/examples/client/python-validate-fix.py",
@@ -6340,7 +6340,7 @@
       "/home/n1/codex-workspace/package.json"
     ],
     "transformation_type": "generated",
-    "notes": "Repository-local and packed-artifact checks for Python consumer recipes, including support-route reads and integrity proofs."
+    "notes": "Repository-local and packed-artifact checks for Python consumer recipes, including validate/error/support response parsing, support-route reads, and integrity proofs."
   },
   "scripts/check-raw-capsules.js": {
     "source_paths": [
@@ -6767,5 +6767,19 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Bounded owner-role rejection response example for public negative-path review."
+  },
+  "examples/client/python-parse-error-responses.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for parsing the published bounded shared validator error-envelope families."
   }
 }
