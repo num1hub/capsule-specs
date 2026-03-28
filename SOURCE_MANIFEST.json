@@ -101,6 +101,34 @@
     "transformation_type": "copied",
     "notes": "Raw public relation-types capsule."
   },
+  "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json"
+    ],
+    "transformation_type": "copied",
+    "notes": "Raw public confidence-vector capsule."
+  },
+  "capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json"
+    ],
+    "transformation_type": "copied",
+    "notes": "Raw public versioning-protocol capsule."
+  },
+  "capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json"
+    ],
+    "transformation_type": "copied",
+    "notes": "Raw public subtype-atomic capsule."
+  },
+  "capsules/capsule.foundation.capsuleos.subtype-hub.v1.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.subtype-hub.v1.json"
+    ],
+    "transformation_type": "copied",
+    "notes": "Raw public subtype-hub capsule."
+  },
   "capsules/README.md": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -4906,5 +4934,19 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for fresh CommonJS, ESM, and TypeScript installs of the packed package-export surface."
+  },
+  "scripts/check-raw-capsules.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos-schema.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.16-gates.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.relation-types.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.subtype-hub.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for curated raw law-adjacent capsule sources."
   }
 }

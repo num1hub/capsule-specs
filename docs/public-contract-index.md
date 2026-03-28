@@ -87,6 +87,14 @@ This index maps the highest-signal public surfaces in the repository.
 - [`5-element-law.md`](5-element-law.md)
 - [`16-gates.md`](16-gates.md)
 - [`relation-types.md`](relation-types.md)
+- [`../capsules/README.md`](../capsules/README.md)
+- [`../capsules/capsule.foundation.capsuleos.5-element-law.v1.json`](../capsules/capsule.foundation.capsuleos.5-element-law.v1.json)
+- [`../capsules/capsule.foundation.capsuleos.16-gates.v1.json`](../capsules/capsule.foundation.capsuleos.16-gates.v1.json)
+- [`../capsules/capsule.foundation.capsuleos.relation-types.v1.json`](../capsules/capsule.foundation.capsuleos.relation-types.v1.json)
+- [`../capsules/capsule.foundation.capsuleos.confidence-vector.v1.json`](../capsules/capsule.foundation.capsuleos.confidence-vector.v1.json)
+- [`../capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json`](../capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json)
+- [`../capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json`](../capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json)
+- [`../capsules/capsule.foundation.capsuleos.subtype-hub.v1.json`](../capsules/capsule.foundation.capsuleos.subtype-hub.v1.json)
 
 ## Validator and API
 
@@ -159,6 +167,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`verification.md`](verification.md)
 - [`anchor-governance.md`](anchor-governance.md)
 - [`../SOURCE_MANIFEST.json`](../SOURCE_MANIFEST.json)
+- [`../scripts/check-raw-capsules.js`](../scripts/check-raw-capsules.js)
 - [`../schemas/public-contract-catalog.schema.json`](../schemas/public-contract-catalog.schema.json)
 - [`../schemas/public-boundary-map.schema.json`](../schemas/public-boundary-map.schema.json)
 - [`../schemas/public-release-metadata.schema.json`](../schemas/public-release-metadata.schema.json)

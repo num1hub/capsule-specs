@@ -102,6 +102,10 @@ assert(
   'release metadata must include the package-install verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:raw-capsules'),
+  'release metadata must include the raw-capsules verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:example-coverage'),
   'release metadata must include the example-coverage verification check'
 );
@@ -256,6 +260,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_OWNERSHIP_MAP.json')),
   'release metadata residual risks must mention PUBLIC_OWNERSHIP_MAP.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('curated raw capsule')),
+  'release metadata residual risks must mention the curated raw capsule set'
 );
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_TRACEABILITY_MATRIX.json')),

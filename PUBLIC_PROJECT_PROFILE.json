@@ -21,6 +21,7 @@
     ],
     "publishes": [
       "capsule law docs",
+      "curated raw capsule sources for confidence-vector, subtype, and version-lineage semantics",
       "validator-facing docs and OpenAPI",
       "machine-readable schemas",
       "public-safe examples",
@@ -57,7 +58,8 @@
       "buildable package-export projection bundles",
       "package-level consumer recipe examples",
       "pack-ready projection-consumer docs",
-      "fresh-project package-install verification across CommonJS, ESM, and TypeScript consumers"
+      "fresh-project package-install verification across CommonJS, ESM, and TypeScript consumers",
+      "repo-local verification for curated raw capsule sources"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -67,10 +69,10 @@
     ]
   },
   "surface_summary": {
-    "total_files": 255,
+    "total_files": 260,
     "markdown_files": 87,
     "schema_files": 34,
-    "raw_capsule_files": 4,
+    "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
     "client_recipe_files": 14,
@@ -119,7 +121,7 @@
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 42,
+    "repo_local_check_count": 43,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {

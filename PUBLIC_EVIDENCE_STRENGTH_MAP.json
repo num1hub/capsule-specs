@@ -10,7 +10,11 @@
         "schemas/capsule-schema.json",
         "capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
         "capsules/capsule.foundation.capsuleos.16-gates.v1.json",
-        "capsules/capsule.foundation.capsuleos.relation-types.v1.json"
+        "capsules/capsule.foundation.capsuleos.relation-types.v1.json",
+        "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+        "capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json",
+        "capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json",
+        "capsules/capsule.foundation.capsuleos.subtype-hub.v1.json"
       ],
       "secondary_surfaces": [
         "docs/5-element-law.md",
@@ -28,13 +32,17 @@
       "preferred_for": [
         "understanding capsule outer shape",
         "checking public law terminology",
-        "reviewing reference semantics"
+        "reviewing reference semantics",
+        "reviewing confidence-vector semantics",
+        "checking immutable version lineage",
+        "inspecting structural subtype meaning"
       ],
       "not_authoritative_for": [
         "live runtime-only validator behavior",
         "hosted service guarantees"
       ],
       "verify_commands": [
+        "npm run check:raw-capsules",
         "npm run check:catalog",
         "npm run check:evidence-strength"
       ]

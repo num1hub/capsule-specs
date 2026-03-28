@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.confidence-vector.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "confidence-vector-six-dimensions-epistemic-quality-prioritization-negentropy",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "CapsuleOS Confidence Vector",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# The 6-Dimensional Confidence Vector: Epistemic Quality Control\n\n## 1. Introduction\nEmbedded within the `neuro_concentrate` of every CapsuleOS artifact is the **Confidence Vector**—a precise 6-tuple of floating-point values, each constrained between `0.0` and `1.0`. This vector serves as the capsule's \"cognitive API,\" allowing both human users and N-Infinity agents to instantly assess the quality, origin, and reliability of the knowledge enclosed without parsing the entire payload.\n\n## 2. The Six Dimensions\n\n### 2.1. Extraction (`extraction`)\nMeasures the fidelity and depth of data retrieved from the raw source (e.g., via DeepMine). A high score indicates that the core factual kernels were isolated perfectly, free from ambient noise and conversational slag.\n\n### 2.2. Synthesis (`synthesis`)\nEvaluates the degree of intelligent processing applied to the extracted data. A score of `1.0` means the capsule represents a highly refined, coherent, and novel integration of ideas, rather than a mere regurgitation of raw text.\n\n### 2.3. Linking (`linking`)\nAssesses the topological completeness of the capsule. It measures how effectively the capsule connects to the broader knowledge graph via the `recursive_layer`. High scores denote a well-contextualized artifact.\n\n### 2.4. Provenance Coverage (`provenance_coverage`)\nQuantifies the proportion of claims within the payload that can be traced back to verifiable origins. A score of `1.0` signifies absolute, unbroken traceability (vital for legal or architectural capsules).\n\n### 2.5. Validation Score (`validation_score`)\nReflects the capsule's performance against the 16 Quality Gates. While admission to the Cognitive Plane requires clearing all gates, this metric can indicate the \"smoothness\" of passage (e.g., perfectly formatted Markdown vs. acceptable but messy text).\n\n### 2.6. Contradiction Pressure (`contradiction_pressure`)\nUnlike the others, a high score here is often a warning. It measures the level of epistemic tension—the presence of unverified hypotheses, conflicting data, or highly speculative ideas. \n*Axiomatic Exception*: For capsules with `status: sovereign` and `type: foundation` (like this one), the `contradiction_pressure` must be strictly `0.0`, representing an absolute structural law.\n\n## 3. Operational Synergy with N-Infinity\nThe Confidence Vector is the primary targeting system for the **N-Infinity** swarm:\n- **Weavers** target capsules with low `linking` scores to weave them into the graph.\n- **Parliaments** are triggered when `contradiction_pressure` spikes, isolating the \"radioactive\" capsule into quarantine for arbitration or human review.\n- **Gardeners** prune capsules whose `validation_score` or `extraction` metrics decay relative to newer paradigms."
+  },
+  "neuro_concentrate": {
+    "summary": "The 6-Dimensional Confidence Vector is a critical metric embedded within the neuro_concentrate of every capsule in the N1Hub ecosystem. Represented as a 6-tuple of floats [0.0, 1.0], it instantly quantifies the epistemic quality and reliability of the capsule's payload. The dimensions include extraction fidelity, intelligent synthesis, topological linking, provenance coverage, 16-Gate validation scoring, and contradiction pressure. This vector serves as the primary navigational and prioritization interface for the N-Infinity agent swarm, allowing them to detect isolated knowledge, arbitrate logical tensions, and continuously evolve the graph. As a systemic axiom, sovereign foundation capsules are required to maintain a contradiction_pressure of exactly 0.0.",
+    "keywords": [
+      "confidence-vector",
+      "neuro-concentrate",
+      "epistemic-quality",
+      "capsuleos",
+      "extraction",
+      "synthesis",
+      "linking",
+      "provenance",
+      "validation",
+      "contradiction-pressure",
+      "n-infinity"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "confidence-vector-six-dimensions-epistemic-quality-prioritization-negentropy"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.5-element-law.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "3c945e6f5c2e52f9b47103a9bfcbff6a6617fd89cf0566b26b7656b761b7ea15156f7789bfe7ecc519ce849a99909c9a99a03365c7cdc08a7210c7d920b98ab5"
+}

@@ -8,6 +8,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - built CommonJS projection artifacts under `dist/projections/`
 - package exports for the root projection namespaces
 - package exports for `typescript`, `zod`, and selected JSON artifacts
+- package exports for curated raw capsule source files
 - pack-time inclusion of the built projection layer
 - fresh-project install checks for CommonJS, ESM, and TypeScript consumers
 
@@ -33,6 +34,8 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/schemas/capsule-schema.json`
 - `@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json`
 - `@num1hub/capsule-specs/openapi/validate.openapi.json`
+- `@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json`
+- `@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json`
 
 ## Repo checkout workflow
 
@@ -53,6 +56,14 @@ const note = require("@num1hub/capsule-specs/examples/example-note.capsule.json"
 
 const parsed = capsuleSchema.parse(note);
 console.log(parsed.metadata.capsule_id);
+```
+
+## Minimal raw capsule import example
+
+```js
+const confidenceVectorCapsule = require("@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json");
+
+console.log(confidenceVectorCapsule.metadata.capsule_id);
 ```
 
 ## Minimal ESM example
@@ -110,6 +121,7 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - The build output is derived from the maintained source projections in `projections/`.
 - The TypeScript package recipe is typechecked through the repo-local self-package path map and rechecked from a fresh installed tarball.
 - The package surface does not turn this repository into a complete SDK.
+- The raw capsule exports are curated reference assets, not a promise that the whole upstream vault is available as a package surface.
 - The package surface is verified through local tarball install, subpath consumption, and TypeScript type-resolution checks, not through an implied npm registry promise.
 - The live validator and the published JSON Schema/OpenAPI surfaces remain stronger sources for edge-case semantics.
 

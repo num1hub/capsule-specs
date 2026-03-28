@@ -15,6 +15,7 @@ The runtime lives outside this repository. This repository publishes the public-
 ## Why are there raw capsules here?
 
 The `capsules/` directory gives readers a small, inspectable source set that backs the human-readable docs.
+It is intentionally curated around law-adjacent surfaces such as the 5-element law, gates, relation semantics, confidence-vector semantics, subtype meaning, and version lineage rather than acting as a general vault export.
 
 ## Why is there an intentionally invalid example?
 

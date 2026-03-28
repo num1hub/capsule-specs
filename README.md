@@ -16,7 +16,7 @@ This repository is intentionally narrow. It does not try to expose the full priv
 - validator-facing docs and OpenAPI
 - JSON schema, validator API envelope schema, and neuro-concentrate schema
 - minimal example capsules
-- a small curated capsule source set
+- a small curated raw capsule source set for law, confidence-vector, subtype, and version-lineage semantics
 
 ## Why this repository exists
 
@@ -101,7 +101,7 @@ This repository is that home.
 - `openapi/`
   OpenAPI reference for validator-facing HTTP surfaces.
 - `capsules/`
-  Curated raw public capsules used as source material for the public specs.
+  Curated raw public capsules used as source material for the public specs and exported as package-level reference assets.
 
 ## Repository health
 
@@ -154,6 +154,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - public-safe TypeScript and Zod validator API envelope projections for source-level validator clients under [`projections/`](projections/)
 - a buildable and packable package-export layer for the maintained projection surface
 - a fresh-project tarball-install verification path for CommonJS, ESM, and TypeScript package consumers
+- curated raw capsule source assets with repo-local contract checks and package subpath exports
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
 - API payload examples under [`examples/api/`](examples/api/)
 - consumer recipes under [`examples/client/`](examples/client/)
@@ -206,11 +207,12 @@ Maintainer and review policy:
 28. Inspect [`PUBLIC_PROGRAM_FIT_MAP.json`](PUBLIC_PROGRAM_FIT_MAP.json) if you want the bounded map of why this public surface is already reviewer/program-credible and where that fit is still intentionally bounded.
 29. Inspect [`PUBLIC_PUBLICATION_READINESS.json`](PUBLIC_PUBLICATION_READINESS.json) if you want the bounded map of why this repo remains coherent as a published GitHub surface and which post-publication signals remain intentionally deferred.
 30. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-31. Review the raw capsule sources in [`capsules/`](capsules/).
+31. Review the raw capsule sources in [`capsules/`](capsules/) for the confidence-vector, subtype, and version-lineage law-adjacent surfaces.
 32. Read [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) if you are preparing a bounded repo-only contribution.
 33. Run `npm run verify:repo` for the repository-local integrity checks.
 34. Run `npm run check:package-surface` if you want to confirm the packable projection-export layer as a consumer artifact.
 35. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS, ESM, and TypeScript consumer projects.
+36. Run `npm run check:raw-capsules` if you want to confirm the curated raw capsule set stays structurally aligned and package-consumable.
 
 ## Source of truth
 
@@ -220,4 +222,4 @@ This repository is assembled from public-safe source materials curated out of th
 
 This is the initial public projection of the N1Hub open-core specification surface. The current release focuses on schema, validator-facing contracts, examples, and repository health rather than on the full runtime codebase.
 
-Wave 2 and Wave 3 are delivered. The next public expansion work sits in Wave 4 and should widen the curated raw capsule set and other public-safe contract families without reopening the private runtime boundary.
+Wave 2 and Wave 3 are delivered. Wave 4 has started through an expanded curated raw capsule set and package-exported raw capsule assets, and should continue widening other public-safe contract families without reopening the private runtime boundary.

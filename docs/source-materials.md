@@ -13,7 +13,7 @@ This repository is assembled from public-safe source surfaces rather than from a
 - public architecture capsules for capsules-as-projections and domain ownership
 - public generator-readiness doctrine and projection-index semantics
 - public portability source materials for archive bundles, import trust, and lifecycle posture
-- live law capsules for the five-element contract, relation types, and 16 gates
+- live law capsules for the five-element contract, relation types, 16 gates, confidence-vector semantics, subtype meaning, and version-lineage posture
 - live validator docs and OpenAPI material
 - synthetic public examples derived from safe example fixtures rather than copied from private vault state
 - synthetic archive example derived from the public archive-bundle fixture rather than from hosted runtime state
@@ -24,7 +24,8 @@ This repository is assembled from public-safe source surfaces rather than from a
 
 - docs are derived into a narrower public style
 - projection doctrine and boundary posture are derived from upstream architecture and governance capsules
-- raw law capsules are copied as reference artifacts
+- raw law-adjacent capsules are copied as curated reference artifacts
+- the curated raw capsule set is intentionally selective and stays inside the published law-adjacent boundary rather than mirroring the full upstream vault
 - examples are synthetic and public-safe
 - provenance is tracked in [`../SOURCE_MANIFEST.json`](../SOURCE_MANIFEST.json)
 - public contract discovery is tracked in [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)

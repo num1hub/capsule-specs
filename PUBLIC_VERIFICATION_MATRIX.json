@@ -5,47 +5,55 @@
   "checks": [
     {
       "id": "public-surface-coverage",
-      "summary": "Protects manifest coverage, catalog integrity, and the existence of declared public artifacts.",
+      "summary": "Protects manifest coverage, catalog integrity, curated raw capsule discoverability, and the existence of declared public artifacts.",
       "commands": [
         "npm run audit:public-surface",
-        "npm run check:catalog"
+        "npm run check:catalog",
+        "npm run check:raw-capsules"
       ],
       "protects": [
         "SOURCE_MANIFEST.json",
         "PUBLIC_CONTRACT_CATALOG.json",
+        "capsules/",
         "PUBLIC_RELEASE_METADATA.json"
       ],
       "strongest_surfaces": [
         "SOURCE_MANIFEST.json",
         "PUBLIC_CONTRACT_CATALOG.json",
-        "scripts/audit-public-surface.js"
+        "scripts/audit-public-surface.js",
+        "scripts/check-raw-capsules.js"
       ],
       "failure_modes_prevented": [
         "untracked public files",
         "missing catalog entries",
-        "stale manifest coverage"
+        "stale manifest coverage",
+        "undocumented raw capsule drift"
       ]
     },
     {
       "id": "capsule-and-api-example-integrity",
-      "summary": "Protects public-safe capsules, API payload examples, and schema-backed example correctness.",
+      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, and schema-backed artifact correctness.",
       "commands": [
         "npm run check:examples",
+        "npm run check:raw-capsules",
         "npm run check:api-examples",
         "npm run check:api-schemas"
       ],
       "protects": [
         "examples/",
+        "capsules/",
         "examples/api/",
         "schemas/validator-api-envelopes.schema.json"
       ],
       "strongest_surfaces": [
         "examples/example-project-hub.capsule.json",
+        "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
         "examples/api/validate-request.single.json",
         "schemas/validator-api-envelopes.schema.json"
       ],
       "failure_modes_prevented": [
         "broken example semantics",
+        "broken raw capsule semantics",
         "API/sample drift",
         "schema/example mismatch"
       ]

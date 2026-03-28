@@ -60,10 +60,12 @@ try {
       "const { capsuleSchema } = require('@num1hub/capsule-specs/zod');",
       "const { validatePassResponseSchema } = require('@num1hub/capsule-specs/zod/validator-api');",
       "const capsuleSchemaJson = require('@num1hub/capsule-specs/schemas/capsule-schema.json');",
+      "const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');",
       "const note = require('@num1hub/capsule-specs/examples/example-note.capsule.json');",
       "const passResponse = require('@num1hub/capsule-specs/examples/api/validate-response.pass.json');",
       "if (!rootProjection.typescript || !rootProjection.zod) throw new Error('missing root namespaces');",
       "if (capsuleSchemaJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json') throw new Error('unexpected schema id');",
+      "if (rawConfidenceCapsule.metadata.capsule_id !== 'capsule.foundation.capsuleos.confidence-vector.v1') throw new Error('missing raw capsule export');",
       "const parsedNote = capsuleSchema.parse(note);",
       "const parsedResponse = validatePassResponseSchema.parse(passResponse);",
       "if (parsedNote.metadata.capsule_id !== note.metadata.capsule_id) throw new Error('failed capsule parse');",
@@ -88,6 +90,7 @@ try {
       "import * as zodProjection from '@num1hub/capsule-specs/zod';",
       "import * as validatorProjection from '@num1hub/capsule-specs/zod/validator-api';",
       "import capsuleSchemaJson from '@num1hub/capsule-specs/schemas/capsule-schema.json' with { type: 'json' };",
+      "import rawConfidenceCapsule from '@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json' with { type: 'json' };",
       "import note from '@num1hub/capsule-specs/examples/example-note.capsule.json' with { type: 'json' };",
       "import passResponse from '@num1hub/capsule-specs/examples/api/validate-response.pass.json' with { type: 'json' };",
       "const rootNamespace = rootProjection.default ?? rootProjection;",
@@ -96,6 +99,7 @@ try {
       "if (!rootNamespace.typescript || !rootNamespace.zod) throw new Error('missing root namespaces');",
       "if (!capsuleSchema || !validatePassResponseSchema) throw new Error('missing zod exports');",
       "if (capsuleSchemaJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json') throw new Error('unexpected schema id');",
+      "if (rawConfidenceCapsule.metadata.capsule_id !== 'capsule.foundation.capsuleos.confidence-vector.v1') throw new Error('missing raw capsule export');",
       "const parsedNote = capsuleSchema.parse(note);",
       "const parsedResponse = validatePassResponseSchema.parse(passResponse);",
       "if (parsedNote.metadata.capsule_id !== note.metadata.capsule_id) throw new Error('failed capsule parse');",
@@ -128,7 +132,7 @@ try {
   const repoTsc = path.join(repoRoot, 'node_modules', 'typescript', 'bin', 'tsc');
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
-  console.log('OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects');
+  console.log('OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule exports');
 } catch (error) {
   console.error(`FAIL: ${error.message}`);
   process.exitCode = 1;

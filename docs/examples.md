@@ -34,3 +34,19 @@ For the bounded machine-readable map of what each capsule and API example covers
 The sibling directory [`../examples/api/`](../examples/api/) contains public-safe validator request and response payloads. Those examples complement the capsule examples here by showing how the same artifacts appear at the HTTP boundary.
 
 The sibling directory [`../examples/archive/`](../examples/archive/) contains a public-safe archive-bundle sample for portability and import-trust review.
+
+## Curated raw capsule sources
+
+The sibling directory [`../capsules/`](../capsules/) contains a small curated raw capsule set that backs the public law surface more directly than the synthetic examples do.
+
+That set now includes:
+
+- the 5-Element Law
+- the 16 Validation Gates
+- canonical relation types
+- the schema capsule
+- the confidence-vector capsule
+- the versioning protocol capsule
+- the `atomic` and `hub` subtype capsules
+
+Use those files when you want inspectable upstream-style source material for law-adjacent semantics such as subtype meaning, confidence-vector structure, or immutable version lineage.

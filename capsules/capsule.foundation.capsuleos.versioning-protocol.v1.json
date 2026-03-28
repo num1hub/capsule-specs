@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.versioning-protocol.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T12:00:19Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "semantic_hash": "versioning-protocol-legacy-derived-lineage-audit-trace-control",
+    "source": {
+      "uri": "internal://capsule.foundation.capsuleos.status-legacy.v1",
+      "type": "internal_derivation"
+    },
+    "name": "CapsuleOS Versioning Protocol",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# CapsuleOS Versioning Protocol\n\n## 1. Objective\nThis capsule defines canonical version lineage for CapsuleOS so evolution can happen without violating immutability.\n\n## 2. Core Rule\nProtected capsules are not overwritten in place. A successor capsule is minted and records lineage using canonical links, especially derived_from to the predecessor. Optional references links can support forward discoverability.\n\n## 3. Lifecycle Integration\nWhen superseded, the prior capsule transitions to legacy while keeping payload and seal unchanged.\n\n## 4. Auditability\nThe protocol guarantees deterministic history reconstruction with no non canonical relation types."
+  },
+  "neuro_concentrate": {
+    "summary": "This sovereign foundation capsule specifies how CapsuleOS handles knowledge evolution without destructive edits. It requires minting successors and encoding lineage with canonical relations, especially derived_from from successor to predecessor. Legacy transitions preserve original payload and integrity state, while optional references links improve discoverability of newer variants. By avoiding custom relation semantics, the protocol keeps graph history computable, auditable, and interoperable with validation gates. It formalizes version control as a first class behavior inside the knowledge graph rather than an external convention.",
+    "keywords": [
+      "versioning",
+      "protocol",
+      "legacy",
+      "derived_from",
+      "lineage",
+      "audit",
+      "capsuleos",
+      "immutability"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "versioning-protocol-legacy-derived-lineage-audit-trace-control"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.status-legacy.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.relation-types.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "994f8b419e0b852035d97843de4e88fa42c8705152c157a13f5515ad6049ff36e710359eaac96f42307b9bac157760223f29ab55fc1c58f8f1cd56d63d8bf8d4"
+}

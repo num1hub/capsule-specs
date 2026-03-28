@@ -6,23 +6,29 @@
       "id": "inspect-capsule-law",
       "audience": "reviewers",
       "readiness": "ready",
-      "outcome": "Understand the five-element capsule model, validation gates, and relation semantics without reading the private runtime repository.",
+      "outcome": "Understand the five-element capsule model, validation gates, relation semantics, confidence-vector structure, subtype semantics, and immutable version lineage without reading the private runtime repository.",
       "strongest_surfaces": [
         "docs/5-element-law.md",
         "docs/16-gates.md",
         "docs/relation-types.md",
         "capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
-        "capsules/capsule.foundation.capsuleos.16-gates.v1.json"
+        "capsules/capsule.foundation.capsuleos.16-gates.v1.json",
+        "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+        "capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json",
+        "capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json",
+        "capsules/capsule.foundation.capsuleos.subtype-hub.v1.json"
       ],
       "supporting_surfaces": [
         "docs/overview.md",
         "docs/schema-reference.md",
         "schemas/capsule-schema.json",
         "docs/schema-family-reference.md",
+        "capsules/README.md",
         "schemas/README.md"
       ],
       "verify_commands": [
         "npm run check:docs",
+        "npm run check:raw-capsules",
         "npm run check:catalog",
         "npm run check:capability-matrix"
       ]

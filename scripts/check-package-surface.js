@@ -29,6 +29,7 @@ const requiredExports = [
   './zod/validator-api',
   './schemas/*',
   './openapi/*',
+  './capsules/*',
   './examples/*'
 ];
 
@@ -65,6 +66,7 @@ const validatorZod = require('@num1hub/capsule-specs/zod/validator-api');
 const capsuleSchemaJson = require('@num1hub/capsule-specs/schemas/capsule-schema.json');
 const validatorSchemaJson = require('@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json');
 const openapi = require('@num1hub/capsule-specs/openapi/validate.openapi.json');
+const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
 const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsule.json'));
 const passResponse = require(path.join(repoRoot, 'examples', 'api', 'validate-response.pass.json'));
 
@@ -75,6 +77,10 @@ assert(typeof validatorZod.validatePassResponseSchema?.parse === 'function', 'va
 assert(capsuleSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json', 'capsule schema export must expose the public schema JSON');
 assert(validatorSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json', 'validator schema export must expose the public schema JSON');
 assert(typeof openapi.openapi === 'string' && openapi.openapi.length > 0, 'OpenAPI export must expose a valid OpenAPI document');
+assert(
+  rawConfidenceCapsule.metadata?.capsule_id === 'capsule.foundation.capsuleos.confidence-vector.v1',
+  'raw capsule export must expose the curated confidence-vector capsule'
+);
 
 const parsedNote = zodProjection.capsuleSchema.parse(exampleNote);
 const parsedPassResponse = validatorZod.validatePassResponseSchema.parse(passResponse);
@@ -106,6 +112,7 @@ for (const relativePath of [
   'schemas/capsule-schema.json',
   'schemas/validator-api-envelopes.schema.json',
   'openapi/validate.openapi.json',
+  'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json',
   'examples/client/esm-package-capsule-summary.mjs',
   'examples/client/esm-package-validate-response.mjs'
 ]) {

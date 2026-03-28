@@ -37,5 +37,6 @@ Wave 2 and Wave 3 are already delivered. Wave 4 is the next deliberate expansion
 ## Wave 4: Broader open-core references
 
 - expand the curated raw capsule set
+  Started through the law-adjacent raw capsule additions under [`capsules/`](capsules/) and the guarded repo-local verifier in [`scripts/check-raw-capsules.js`](scripts/check-raw-capsules.js).
 - publish more contract families when they are ready for a stable public boundary
 - improve onboarding for external contributors and integrators

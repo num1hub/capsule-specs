@@ -129,9 +129,18 @@ const expectedPublicIndexLinks = [
   '../projections/typescript/validator-api.ts',
   '../projections/zod/capsule.ts',
   '../projections/zod/validator-api.ts',
+  '../capsules/README.md',
+  '../capsules/capsule.foundation.capsuleos.5-element-law.v1.json',
+  '../capsules/capsule.foundation.capsuleos.16-gates.v1.json',
+  '../capsules/capsule.foundation.capsuleos.relation-types.v1.json',
+  '../capsules/capsule.foundation.capsuleos.confidence-vector.v1.json',
+  '../capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json',
+  '../capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json',
+  '../capsules/capsule.foundation.capsuleos.subtype-hub.v1.json',
   'community-health.md',
   'client-recipes.md',
-  'trust-model.md'
+  'trust-model.md',
+  'source-materials.md'
 ];
 
 for (const needle of expectedPublicIndexLinks) {
@@ -199,11 +208,14 @@ assert(readme.includes('docs/generator-readiness.md'), 'README.md must mention d
 assert(readme.includes('NOTICE'), 'README.md must mention NOTICE');
 assert(readme.includes('examples/client/'), 'README.md must mention examples/client/');
 assert(readme.includes('projections/'), 'README.md must mention projections/');
+assert(readme.includes('capsules/'), 'README.md must mention capsules/');
 assert(readme.includes('npm run verify:repo'), 'README.md must mention npm run verify:repo');
+assert(readme.includes('npm run check:raw-capsules'), 'README.md must mention npm run check:raw-capsules');
 assert(releaseReview.includes('check-contract-catalog.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-contract-catalog.js');
 assert(releaseReview.includes('check-release-metadata.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-release-metadata.js');
 assert(releaseReview.includes('check-api-schemas.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-api-schemas.js');
 assert(releaseReview.includes('tsc --noEmit --pretty false'), 'PUBLIC_RELEASE_REVIEW.md must mention the type-projection typecheck command');
+assert(releaseReview.includes('check-raw-capsules.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-raw-capsules.js');
 assert(releaseReview.includes('check-example-coverage.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-example-coverage.js');
 assert(releaseReview.includes('check-boundary-map.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-boundary-map.js');
 assert(releaseReview.includes('check-client-recipes.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-client-recipes.js');
@@ -231,6 +243,7 @@ assert(verificationDoc.includes('check:surface'), 'docs/verification.md must exp
 assert(verificationDoc.includes('check:release'), 'docs/verification.md must explain check:release');
 assert(verificationDoc.includes('check:api-schemas'), 'docs/verification.md must explain check:api-schemas');
 assert(verificationDoc.includes('check:type-projections'), 'docs/verification.md must explain check:type-projections');
+assert(verificationDoc.includes('check:raw-capsules'), 'docs/verification.md must explain check:raw-capsules');
 assert(verificationDoc.includes('check:example-coverage'), 'docs/verification.md must explain check:example-coverage');
 assert(verificationDoc.includes('check:boundary-map'), 'docs/verification.md must explain check:boundary-map');
 assert(verificationDoc.includes('check:evaluation-packet'), 'docs/verification.md must explain check:evaluation-packet');
@@ -261,6 +274,8 @@ assert(verificationDoc.includes('check:publication-readiness'), 'docs/verificati
 assert(verificationDoc.includes('check:project-profile'), 'docs/verification.md must explain check:project-profile');
 assert(verificationDoc.includes('check:capability-matrix'), 'docs/verification.md must explain check:capability-matrix');
 assert(releaseEvidenceDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'docs/release-evidence.md must mention PUBLIC_RELEASE_METADATA.json');
+assert(releaseEvidenceDoc.includes('capsules/README.md'), 'docs/release-evidence.md must mention capsules/README.md');
+assert(releaseEvidenceDoc.includes('check-raw-capsules.js'), 'docs/release-evidence.md must mention check-raw-capsules.js');
 assert(releaseEvidenceDoc.includes('validator-api-envelopes.schema.json'), 'docs/release-evidence.md must mention validator-api-envelopes.schema.json');
 assert(releaseEvidenceDoc.includes('community-health'), 'docs/release-evidence.md must mention community-health');
 assert(releaseEvidenceDoc.includes('PUBLIC_PROJECT_PROFILE.json'), 'docs/release-evidence.md must mention PUBLIC_PROJECT_PROFILE.json');

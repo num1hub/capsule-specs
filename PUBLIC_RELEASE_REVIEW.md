@@ -45,7 +45,7 @@
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
 - client recipes and trust-model docs for external consumers
-- raw public law capsules
+- expanded curated raw public law-adjacent capsules for confidence-vector semantics, subtype meaning, and version lineage
 - live validator OpenAPI reference
 
 ## Excluded materials
@@ -80,6 +80,7 @@ Repository-local audit on 2026-03-26:
 - `tsc --noEmit --pretty false`: pass
 - `node scripts/check-package-surface.js`: pass
 - `node scripts/check-package-install.js`: pass
+- `node scripts/check-raw-capsules.js`: pass
 - `node scripts/check-example-coverage.js`: pass
 - `node scripts/check-boundary-map.js`: pass
 - `node scripts/check-client-recipes.js`: pass
@@ -115,7 +116,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `255` files / `255` manifest entries
+- manifest coverage: `260` files / `260` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

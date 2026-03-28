@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.subtype-hub.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "subtype-hub-aggregator-container-nexus-blueprint-gold-master",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "CapsuleOS Subtype: Hub",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Subtype: Hub\n\n## 1. Definition\nWithin the CapsuleOS architecture, a capsule designated with `subtype: \"hub\"` acts as an aggregating nexus. It is a structural container designed to organize, contextualize, and marshal collections of other capsules. \n\n## 2. Core Characteristics\n- **Relational Density**: Unlike `atomic` capsules, a `hub` capsule's primary value does not reside in its `core_payload` (which may simply contain a brief description, title, or manifest). Its true power lies in its `recursive_layer`, which houses dense arrays of typed links pointing to its constituent members.\n- **Polymorphic Containers**: Hubs replace traditional, rigid folder hierarchies. Because they operate via graph links, a single atomic capsule can belong to multiple hubs simultaneously without data duplication.\n- **Nested Architecture**: Hubs can contain other hubs, allowing for infinite fractal organization and hierarchical scaling.\n\n## 3. Topography in the Graph\nHubs serve as the \"branches\" and \"gravity wells\" of the knowledge graph. They provide context and boundary parameters for N-Infinity agents, allowing the swarm to process a specific cluster of knowledge (e.g., summarizing an entire project) rather than wandering the global graph aimlessly.\n\n## 4. Examples in Practice\n- **A Project**: Aggregates atomic tasks, notes, discussions, and contributor profiles into a unified goal.\n- **A Team**: A container that aggregates person-capsules, defining collective permissions and roles.\n- **A Knowledge Base**: A high-level hub that organizes domain-specific insights, rules, and sub-hubs (e.g., the \"CapsuleOS Architecture\" hub)."
+  },
+  "neuro_concentrate": {
+    "summary": "In the CapsuleOS architecture, the 'hub' subtype designates a capsule as an aggregating nexus and structural container. Unlike atomic capsules, which store primary content, a hub's core value lies in its recursive_layer, which organizes and links multiple other capsules. Hubs replace rigid folder hierarchies by allowing polymorphic membership—where an atom can belong to multiple hubs—and nested architectures for fractal scaling. Examples include Projects, Teams, and Knowledge Bases. By acting as gravity wells within the graph, hub capsules provide essential context and boundaries, enabling N-Infinity agents to efficiently navigate, analyze, and manage complex clusters of knowledge within the N1Hub ecosystem.",
+    "keywords": [
+      "subtype-hub",
+      "aggregator",
+      "container",
+      "nexus",
+      "capsuleos",
+      "recursive-layer",
+      "knowledge-graph",
+      "n1hub",
+      "structural-organization"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "subtype-hub-aggregator-container-nexus-blueprint-gold-master"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.hub-atomic.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "85f9e5fd7801ed8c80bdcd9218c906dc6c040a9dac87863551335a2e42c6f30f4c95b6a9e03b85ee11a319640d70447f443f5316584d48294b4a1a12b799079b"
+}

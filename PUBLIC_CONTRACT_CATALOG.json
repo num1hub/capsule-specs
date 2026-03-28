@@ -2933,6 +2933,165 @@
       ]
     },
     {
+      "id": "capsules.directory-guide",
+      "path": "capsules/README.md",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:raw-capsules",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "capsules.raw-5-element-law",
+      "path": "capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
+      "kind": "raw-capsule",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:raw-capsules",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "capsules.raw-16-gates",
+      "path": "capsules/capsule.foundation.capsuleos.16-gates.v1.json",
+      "kind": "raw-capsule",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:raw-capsules",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "capsules.raw-relation-types",
+      "path": "capsules/capsule.foundation.capsuleos.relation-types.v1.json",
+      "kind": "raw-capsule",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:raw-capsules",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "capsules.raw-confidence-vector",
+      "path": "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+      "kind": "raw-capsule",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:raw-capsules",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "capsules.raw-versioning-protocol",
+      "path": "capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json",
+      "kind": "raw-capsule",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:raw-capsules",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "capsules.raw-subtype-atomic",
+      "path": "capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json",
+      "kind": "raw-capsule",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:raw-capsules",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "capsules.raw-subtype-hub",
+      "path": "capsules/capsule.foundation.capsuleos.subtype-hub.v1.json",
+      "kind": "raw-capsule",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:raw-capsules",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "capsules.raw-schema",
+      "path": "capsules/capsule.foundation.capsuleos-schema.v1.json",
+      "kind": "raw-capsule",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:raw-capsules",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "capsules.raw-check",
+      "path": "scripts/check-raw-capsules.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:raw-capsules",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "governance.portability-check",
       "path": "scripts/check-portability-profile.js",
       "kind": "verification-doc",

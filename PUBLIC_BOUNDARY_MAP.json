@@ -9,22 +9,30 @@
   "published_boundaries": [
     {
       "id": "capsule-law",
-      "summary": "Public law and schema surface for capsules, validation gates, relation semantics, and example capsules.",
+      "summary": "Public law and schema surface for capsules, validation gates, relation semantics, confidence-vector semantics, subtype meaning, version lineage, and curated raw law-adjacent capsules.",
       "strongest_surfaces": [
         "docs/5-element-law.md",
         "docs/16-gates.md",
         "docs/relation-types.md",
         "schemas/capsule-schema.json",
-        "examples/example-note.capsule.json"
+        "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+        "capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json",
+        "capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json",
+        "capsules/capsule.foundation.capsuleos.subtype-hub.v1.json"
       ],
       "source_capsules": [
         "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
         "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.16-gates.v1.json",
         "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.relation-types.v1.json",
-        "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json"
+        "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json",
+        "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+        "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json",
+        "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json",
+        "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.subtype-hub.v1.json"
       ],
       "verify_commands": [
         "npm run check:examples",
+        "npm run check:raw-capsules",
         "npm run check:docs",
         "npm run check:boundary-map"
       ]

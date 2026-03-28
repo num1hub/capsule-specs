@@ -4,7 +4,7 @@
   "traces": [
     {
       "id": "law-and-schema-contract",
-      "claim": "Capsule law is published as both human-readable doctrine and raw machine-readable artifacts.",
+      "claim": "Capsule law is published as both human-readable doctrine and curated raw machine-readable artifacts, including confidence-vector, subtype, and version-lineage law-adjacent capsules.",
       "audiences": [
         "integrators",
         "reviewers"
@@ -14,16 +14,23 @@
         "docs/16-gates.md",
         "docs/relation-types.md",
         "schemas/capsule-schema.json",
-        "capsules/capsule.foundation.capsuleos-schema.v1.json"
+        "capsules/capsule.foundation.capsuleos-schema.v1.json",
+        "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+        "capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json",
+        "capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json",
+        "capsules/capsule.foundation.capsuleos.subtype-hub.v1.json"
       ],
       "supporting_surfaces": [
         "docs/schema-reference.md",
         "docs/overview.md",
+        "docs/examples.md",
+        "capsules/README.md",
         "PUBLIC_CONTRACT_CATALOG.json",
         "docs/schema-family-reference.md",
         "schemas/README.md"
       ],
       "verify_commands": [
+        "npm run check:raw-capsules",
         "npm run check:catalog",
         "npm run check:traceability"
       ]

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.subtype-atomic.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "subtype-atomic-elemental-unit-knowledge-core-gold-master",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "CapsuleOS Subtype: Atomic",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Subtype: Atomic\n\n## 1. Definition\nWithin the CapsuleOS structural paradigm, a capsule possessing the `subtype: \"atomic\"` represents the absolute, elemental quantum of knowledge in the N1Hub ecosystem. It is an irreducible, indivisible unit that contains concrete, actionable, or informational content.\n\n## 2. Core Characteristics\n- **Indivisibility**: An atomic capsule cannot be meaningfully fractured or segmented into smaller components without losing its core semantic value. It represents a single, cohesive thought, action, or entity.\n- **Content-Heavy**: Unlike `hub` capsules, which derive value from aggregation, an `atomic` capsule's primary value resides in its `core_payload`. \n\n## 3. Topography in the Graph\nAtomic capsules form the \"leaves\" and structural nodes of the knowledge graph. They forge outbound links to other atoms (e.g., `contradicts`, `depends_on`) and are bound together by overarching `hub` capsules (like Projects or Teams). Because of their irreducible nature, they are the primary targets for the A2C extraction phase and N-Infinity's synthesis operations.\n\n## 4. Examples in Practice\n- **A Task**: A single to-do item with a deadline and description.\n- **A Fact/Note**: A specific insight extracted from an LLM dialog regarding architectural limits.\n- **A Profile**: The digital representation of a specific user or contributor.\n- **A Physical Component**: In TileSims, the geometric and material data of a single, specific wall or socket."
+  },
+  "neuro_concentrate": {
+    "summary": "In the CapsuleOS architecture, the 'atomic' subtype designates a capsule as an elemental, irreducible quantum of knowledge. Atomic capsules are the fundamental building blocks of the N1Hub ecosystem, containing concrete payloads that cannot be further subdivided without losing semantic coherence. Unlike hub capsules, which aggregate, atomic capsules are content-heavy, representing single tasks, specific notes, user profiles, or individual physical objects like a wall in TileSims. They form the foundational nodes of the knowledge graph, serving as the primary targets for A2C extraction and N-Infinity synthesis operations.",
+    "keywords": [
+      "subtype-atomic",
+      "irreducible-unit",
+      "quantum-of-knowledge",
+      "capsuleos",
+      "n1hub",
+      "core-payload",
+      "fundamental-node",
+      "indivisible",
+      "elemental"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "subtype-atomic-elemental-unit-knowledge-core-gold-master"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.hub-atomic.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "72014528c889d0c6b1a6f263fd9ca021710ed80e9ae1493716ac55231a5a3660c494b383cdb36fe030ba3abc2079accbb6f1cda1f3852e6c27c7d4fc719a6a9c"
+}

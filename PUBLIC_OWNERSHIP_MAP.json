@@ -4,21 +4,27 @@
   "ownership_groups": [
     {
       "id": "capsule-law-family",
-      "summary": "Human-readable law docs and curated raw law capsules are maintained here, but upstream CapsuleOS law remains stronger when projection drift appears.",
+      "summary": "Human-readable law docs and curated raw law-adjacent capsules are maintained here, but upstream CapsuleOS law remains stronger when projection drift appears.",
       "public_owner": "public CapsuleOS law surface",
       "stronger_sources": [
         "capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
         "capsules/capsule.foundation.capsuleos.16-gates.v1.json",
-        "capsules/capsule.foundation.capsuleos.relation-types.v1.json"
+        "capsules/capsule.foundation.capsuleos.relation-types.v1.json",
+        "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+        "capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json",
+        "capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json",
+        "capsules/capsule.foundation.capsuleos.subtype-hub.v1.json"
       ],
       "owned_artifacts": [
         "docs/5-element-law.md",
         "docs/16-gates.md",
-        "docs/relation-types.md"
+        "docs/relation-types.md",
+        "capsules/README.md"
       ],
       "stability": "contract",
       "verify_commands": [
         "npm run check:docs",
+        "npm run check:raw-capsules",
         "npm run check:ownership-map"
       ]
     },
