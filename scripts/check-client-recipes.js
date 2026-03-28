@@ -81,6 +81,7 @@ const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
   'cjs-package-contract-reference.cjs',
   'cjs-package-error-responses.cjs',
+  'cjs-package-live-validator-client.cjs',
   'cjs-package-validate-request.cjs',
   'cjs-package-support-responses.cjs',
   'cjs-package-validate-response.cjs',
@@ -471,6 +472,17 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/examples/api/conflict-response.sample.json',
     '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json'
   ],
+  'cjs-package-live-validator-client.cjs': [
+    '@num1hub/capsule-specs/typescript/validator-routes',
+    '@num1hub/capsule-specs/examples/api/validate-request.single.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.batch.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.fix.json',
+    'publishedValidatorRoutes',
+    'publishedValidatorRouteDefinitions',
+    'buildStatsUrl',
+    'limit',
+    'fetch('
+  ],
   'cjs-package-validate-request.cjs': [
     '@num1hub/capsule-specs/zod/validator-api',
     '@num1hub/capsule-specs/examples/api/validate-request.single.json',
@@ -591,6 +603,10 @@ for (const [fileName, imports] of Object.entries(expectedPackageImports)) {
   const content = fs.readFileSync(filePath, 'utf8');
   for (const importPath of imports) {
     assert(content.includes(importPath), `${fileName} must import ${importPath}`);
+  }
+  if (fileName === 'cjs-package-live-validator-client.cjs') {
+    assert(!content.includes('${baseUrl}/api/validate'), `${fileName} must rely on shared route constants instead of copied route strings`);
+    assert(content.includes('limit'), `${fileName} must expose the published stats limit query path`);
   }
   if (fileName === 'esm-package-live-validator-client.mjs') {
     assert(!content.includes('${baseUrl}/api/validate'), `${fileName} must rely on shared route constants instead of copied route strings`);

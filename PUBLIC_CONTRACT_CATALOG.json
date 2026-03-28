@@ -960,6 +960,22 @@
       ]
     },
     {
+      "id": "examples.client.cjs-package-live-validator-client",
+      "path": "examples/client/cjs-package-live-validator-client.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:package-surface",
+        "npm run check:package-install",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.cjs-package-support-responses",
       "path": "examples/client/cjs-package-support-responses.cjs",
       "kind": "client-recipe",

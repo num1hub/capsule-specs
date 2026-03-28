@@ -304,7 +304,7 @@ These recipes prove that the installed package surface does not stop at one type
 
 ## Minimal package-level live-client example
 
-A copyable ESM version of this example lives at [`../examples/client/esm-package-live-validator-client.mjs`](../examples/client/esm-package-live-validator-client.mjs). A typed TypeScript version lives at [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts).
+A copyable CommonJS version of this example lives at [`../examples/client/cjs-package-live-validator-client.cjs`](../examples/client/cjs-package-live-validator-client.cjs). A copyable ESM version lives at [`../examples/client/esm-package-live-validator-client.mjs`](../examples/client/esm-package-live-validator-client.mjs). A typed TypeScript version lives at [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts).
 
 Those recipes prove the installed package surface is usable not only for static typing and sample parsing, but also for live `fetch` clients that cover the published `validate`, `batch`, `fix`, `gates`, and `stats` routes, including the bounded `limit` query path on `GET /api/validate/stats`, plus the shared `SimpleErrorResponse` envelope.
 

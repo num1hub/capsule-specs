@@ -33,6 +33,7 @@ const workspaceRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'capsule-specs-insta
 const packedFilePath = path.join(workspaceRoot, 'tarball.json');
 let tarballPath = null;
 const cjsErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-error-responses.cjs');
+const cjsLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-live-validator-client.cjs');
 const cjsValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-request.cjs');
 const cjsSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-support-responses.cjs');
 const cjsValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-response.cjs');
@@ -115,6 +116,12 @@ try {
   run(process.execPath, ['consumer.cjs'], cjsProject);
   fs.writeFileSync(path.join(cjsProject, 'error-consumer.cjs'), fs.readFileSync(cjsErrorRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['error-consumer.cjs'], cjsProject);
+  fs.writeFileSync(
+    path.join(cjsProject, 'live-client-consumer.cjs'),
+    fs.readFileSync(cjsLiveClientRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['live-client-consumer.cjs'], cjsProject);
   fs.writeFileSync(
     path.join(cjsProject, 'validate-request-consumer.cjs'),
     fs.readFileSync(cjsValidateRequestRecipePath, 'utf8'),

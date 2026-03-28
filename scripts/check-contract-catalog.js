@@ -237,6 +237,7 @@ const requiredIds = [
   'examples.client.recompute-integrity-seal',
   'examples.client.cjs-package-contract-reference',
   'examples.client.cjs-package-error-responses',
+  'examples.client.cjs-package-live-validator-client',
   'examples.client.cjs-package-validate-request',
   'examples.client.cjs-package-support-responses',
   'examples.client.cjs-package-validate-response',

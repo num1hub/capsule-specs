@@ -195,6 +195,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
 - [`../examples/client/cjs-package-validate-request.cjs`](../examples/client/cjs-package-validate-request.cjs)
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
+- [`../examples/client/cjs-package-live-validator-client.cjs`](../examples/client/cjs-package-live-validator-client.cjs)
 - [`../examples/client/esm-package-contract-reference.mjs`](../examples/client/esm-package-contract-reference.mjs)
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
 - [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs)

@@ -71,6 +71,7 @@
         "examples/client/python-get-stats.py",
         "examples/client/node-validate-fix.mjs",
         "examples/client/cjs-package-support-responses.cjs",
+        "examples/client/cjs-package-live-validator-client.cjs",
         "examples/client/esm-package-support-responses.mjs",
         "examples/client/ts-package-support-responses.ts"
       ],

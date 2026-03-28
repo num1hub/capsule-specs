@@ -2296,6 +2296,18 @@
     "transformation_type": "generated",
     "notes": "Minimal CommonJS package-consumer recipe for parsing bounded shared validator error envelopes from installed package exports."
   },
+  "examples/client/cjs-package-live-validator-client.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal CommonJS package-consumer recipe for a validator live client that covers the published route family through installed package exports."
+  },
   "examples/client/cjs-package-support-responses.cjs": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/gates-response.sample.json",

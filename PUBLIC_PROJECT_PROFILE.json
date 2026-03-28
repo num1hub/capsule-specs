@@ -85,7 +85,7 @@
       "source-level TypeScript validator request sample reader examples",
       "installed-package TypeScript validator request sample reader examples",
       "source-level TypeScript live-client recipe examples for published validator routes",
-      "installed-package TypeScript live-client recipe examples for published validator routes",
+      "installed-package CommonJS, ESM, and TypeScript live-client recipe examples for published validator routes",
       "compact machine-readable validator envelope-family references for request, response, and shared-definition discovery",
       "source-level TypeScript validator route-behavior reference examples"
     ],
@@ -97,13 +97,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 362,
+    "total_files": 363,
     "markdown_files": 100,
     "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 77,
+    "client_recipe_files": 78,
     "workflow_files": 1,
     "issue_templates": 4
   },

@@ -290,6 +290,7 @@ for (const relativePath of [
   'examples/client/ajv-reject-invalid-validator-envelopes.mjs',
   'examples/client/cjs-package-contract-reference.cjs',
   'examples/client/cjs-package-error-responses.cjs',
+  'examples/client/cjs-package-live-validator-client.cjs',
   'examples/client/cjs-package-validate-request.cjs',
   'examples/client/cjs-package-support-responses.cjs',
   'examples/client/esm-package-contract-reference.mjs',
