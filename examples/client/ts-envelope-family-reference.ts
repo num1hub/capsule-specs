@@ -25,7 +25,7 @@ if (!envelopeReferenceSummary.responseFamilyIds.includes("simpleErrorResponse"))
   throw new Error("missing shared simpleErrorResponse family");
 }
 
-if (envelopeReferenceSummary.simpleErrorExampleCount !== 5) {
+if (envelopeReferenceSummary.simpleErrorExampleCount !== 6) {
   throw new Error("unexpected simpleErrorResponse example count");
 }
 

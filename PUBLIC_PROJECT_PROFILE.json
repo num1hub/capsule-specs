@@ -87,7 +87,8 @@
       "source-level TypeScript live-client recipe examples for published validator routes",
       "installed-package CommonJS, ESM, and TypeScript live-client recipe examples for published validator routes",
       "compact machine-readable validator envelope-family references for request, response, and shared-definition discovery",
-      "source-level TypeScript validator route-behavior reference examples"
+      "source-level TypeScript validator route-behavior reference examples",
+      "bounded support-route failure examples for documented validator statuses"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -97,12 +98,12 @@
     ]
   },
   "surface_summary": {
-    "total_files": 366,
+    "total_files": 367,
     "markdown_files": 100,
     "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
-    "api_example_files": 14,
+    "api_example_files": 15,
     "client_recipe_files": 80,
     "workflow_files": 1,
     "issue_templates": 4

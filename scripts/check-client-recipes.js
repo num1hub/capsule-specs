@@ -440,7 +440,8 @@ const expectedPythonRecipeReferences = {
     'examples/api/forbidden-response.sample.json',
     'examples/api/conflict-response.sample.json',
     'examples/api/error-response.sample.json',
-    'examples/api/rate-limit-response.sample.json'
+    'examples/api/rate-limit-response.sample.json',
+    'examples/api/stats-error-response.sample.json'
   ],
   'python-parse-support-responses.py': [
     'examples/api/gates-response.sample.json',
@@ -492,7 +493,8 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json',
     '@num1hub/capsule-specs/examples/api/forbidden-response.sample.json',
     '@num1hub/capsule-specs/examples/api/conflict-response.sample.json',
-    '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json'
+    '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/stats-error-response.sample.json'
   ],
   'cjs-package-live-validator-client.cjs': [
     '@num1hub/capsule-specs/typescript/validator-routes',
@@ -542,7 +544,8 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json',
     '@num1hub/capsule-specs/examples/api/forbidden-response.sample.json',
     '@num1hub/capsule-specs/examples/api/conflict-response.sample.json',
-    '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json'
+    '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/stats-error-response.sample.json'
   ],
   'esm-package-live-validator-client.mjs': [
     '@num1hub/capsule-specs/typescript/validator-routes',
@@ -584,7 +587,8 @@ const expectedPackageTypeImports = {
     '@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json',
     '@num1hub/capsule-specs/examples/api/forbidden-response.sample.json',
     '@num1hub/capsule-specs/examples/api/conflict-response.sample.json',
-    '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json'
+    '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/stats-error-response.sample.json'
   ],
   'ts-package-contract-reference.ts': [
     '@num1hub/capsule-specs/references/contract-constants.json',

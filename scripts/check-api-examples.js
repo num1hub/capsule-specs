@@ -18,6 +18,7 @@ const files = {
   fixResponse: 'validate-response.fix.sample.json',
   gatesResponse: 'gates-response.sample.json',
   statsResponse: 'stats-response.sample.json',
+  statsErrorResponse: 'stats-error-response.sample.json',
   errorResponse: 'error-response.sample.json',
   unauthorizedResponse: 'unauthorized-response.sample.json',
   forbiddenResponse: 'forbidden-response.sample.json',
@@ -53,6 +54,7 @@ const batchResponse = readJson(files.batchResponse);
 const fixResponse = readJson(files.fixResponse);
 const gatesResponse = readJson(files.gatesResponse);
 const statsResponse = readJson(files.statsResponse);
+const statsErrorResponse = readJson(files.statsErrorResponse);
 const errorResponse = readJson(files.errorResponse);
 const unauthorizedResponse = readJson(files.unauthorizedResponse);
 const forbiddenResponse = readJson(files.forbiddenResponse);
@@ -148,6 +150,7 @@ assert(typeof statsResponse.total === 'number' && statsResponse.total >= 1, 'sta
 assert(Array.isArray(statsResponse.recent), 'stats response sample must include recent entries');
 assert(Array.isArray(statsResponse.trend), 'stats response sample must include trend entries');
 assert(Array.isArray(statsResponse.gates) && statsResponse.gates.some((gate) => gate.gate === 'G16'), 'stats response sample must include gate aggregates');
+assert(statsErrorResponse.error === 'Stats computation failed', 'stats error response sample must use a bounded stats-computation failure message');
 
 assert(typeof errorResponse.error === 'string' && errorResponse.error.length > 0, 'error response sample must include an error string');
 assert(unauthorizedResponse.error === 'Unauthorized', 'unauthorized response sample must use a bounded unauthorized message');

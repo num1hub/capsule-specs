@@ -91,6 +91,8 @@ If you need a cross-language raw-JSON consumer path outside the Node runtime, al
   Small sample response shape for `GET /api/validate/gates`.
 - [`../examples/api/stats-response.sample.json`](../examples/api/stats-response.sample.json)
   Small sample response shape for `GET /api/validate/stats`.
+- [`../examples/api/stats-error-response.sample.json`](../examples/api/stats-error-response.sample.json)
+  Bounded `500` support-route failure example for `GET /api/validate/stats`.
 - [`../examples/api/error-response.sample.json`](../examples/api/error-response.sample.json)
   Shared generic error envelope example.
 - [`../examples/api/unauthorized-response.sample.json`](../examples/api/unauthorized-response.sample.json)
@@ -112,7 +114,7 @@ If you need a cross-language raw-JSON consumer path outside the Node runtime, al
   The current public example surface uses `{ capsule, options }`.
   Policy variants may exist upstream, but the public repository only schema-covers the documented example envelope.
 
-The public repo currently includes concrete examples for all published request and support-route envelopes documented here, plus copyable live client recipes for `validate`, `batch`, `fix`, `gates`, and `stats`. That keeps the reference surface useful without trying to mirror every internal runtime path.
+The public repo currently includes concrete examples for all published request and support-route success envelopes documented here, plus a dedicated bounded `GET /api/validate/stats` failure sample and copyable live client recipes for `validate`, `batch`, `fix`, `gates`, and `stats`. That keeps the reference surface useful without trying to mirror every internal runtime path.
 
 The `fix` response sample is intentionally illustrative: it is derived from the published OpenAPI contract and from local validator behavior on the public negative `G16` example, not from a deployed public HTTP trace.
 

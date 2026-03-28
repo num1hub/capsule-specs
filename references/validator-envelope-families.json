@@ -109,7 +109,8 @@
         "examples/api/unauthorized-response.sample.json",
         "examples/api/forbidden-response.sample.json",
         "examples/api/conflict-response.sample.json",
-        "examples/api/rate-limit-response.sample.json"
+        "examples/api/rate-limit-response.sample.json",
+        "examples/api/stats-error-response.sample.json"
       ]
     }
   ],

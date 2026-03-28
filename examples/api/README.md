@@ -22,6 +22,8 @@ This directory contains concrete JSON payloads for the validator HTTP surface.
   Small response example for the gate-definition route.
 - `stats-response.sample.json`
   Small response example for validator statistics.
+- `stats-error-response.sample.json`
+  Small bounded failure example for the documented `GET /api/validate/stats` `500` status.
 - `error-response.sample.json`
   Shared generic error envelope.
 - `unauthorized-response.sample.json`

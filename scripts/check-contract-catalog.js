@@ -153,6 +153,7 @@ const requiredIds = [
   'examples.api-unauthorized',
   'examples.api-forbidden',
   'examples.api-conflict',
+  'examples.api.stats-error-response',
   'governance.manifest',
   'governance.contract-index',
   'governance.release-metadata',

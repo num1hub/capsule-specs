@@ -92,6 +92,7 @@ const batchResponseSample = require('@num1hub/capsule-specs/examples/api/validat
 const fixResponseSample = require('@num1hub/capsule-specs/examples/api/validate-response.fix.sample.json');
 const gatesResponseSample = require('@num1hub/capsule-specs/examples/api/gates-response.sample.json');
 const statsResponseSample = require('@num1hub/capsule-specs/examples/api/stats-response.sample.json');
+const statsErrorResponseSample = require('@num1hub/capsule-specs/examples/api/stats-error-response.sample.json');
 const errorResponseSample = require('@num1hub/capsule-specs/examples/api/error-response.sample.json');
 const unauthorizedResponseSample = require('@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json');
 const forbiddenResponseSample = require('@num1hub/capsule-specs/examples/api/forbidden-response.sample.json');
@@ -220,6 +221,7 @@ const parsedUnauthorizedResponse = validatorZod.simpleErrorResponseSchema.parse(
 const parsedForbiddenResponse = validatorZod.simpleErrorResponseSchema.parse(forbiddenResponseSample);
 const parsedConflictResponse = validatorZod.simpleErrorResponseSchema.parse(conflictResponseSample);
 const parsedRateLimitResponse = validatorZod.simpleErrorResponseSchema.parse(rateLimitResponseSample);
+const parsedStatsErrorResponse = validatorZod.simpleErrorResponseSchema.parse(statsErrorResponseSample);
 const parsedGatesResponse = validatorZod.gatesResponseSchema.parse(gatesResponseSample);
 const parsedStatsResponse = validatorZod.statsResponseSchema.parse(statsResponseSample);
 
@@ -239,8 +241,40 @@ assert(parsedUnauthorizedResponse.error === 'Unauthorized', 'built package zod e
 assert(parsedForbiddenResponse.error === 'Owner role required', 'built package zod export must parse the forbidden error response sample');
 assert(/conflict/i.test(parsedConflictResponse.error), 'built package zod export must parse the conflict error response sample');
 assert(parsedRateLimitResponse.error === 'Rate limit exceeded', 'built package zod export must parse the rate-limit error response sample');
+assert(parsedStatsErrorResponse.error === 'Stats computation failed', 'built package zod export must parse the stats-computation error response sample');
 assert(parsedGatesResponse.gates.some((gate) => gate.id === 'G16'), 'built package zod export must parse the gates response sample');
 assert(parsedStatsResponse.passRate === statsResponseSample.passRate, 'built package zod export must parse the stats response sample');
+assert(
+  validatorEnvelopeFamilies.response_families.find((family) => family.id === 'simpleErrorResponse')?.example_files?.includes('examples/api/stats-error-response.sample.json'),
+  'reference export must include the dedicated stats-computation error sample in simpleErrorResponse'
+);
+assert(
+  validatorRoutes.routes.find((route) => route.id === 'validateBatch')?.response_statuses?.find((status) => status.status === 403)?.example_files?.includes('examples/api/forbidden-response.sample.json'),
+  'reference export must expose the bounded owner-role example for validateBatch'
+);
+assert(
+  validatorRoutes.routes.find((route) => route.id === 'validateFix')?.response_statuses?.find((status) => status.status === 403)?.example_files?.includes('examples/api/forbidden-response.sample.json'),
+  'reference export must expose the bounded owner-role example for validateFix'
+);
+assert(
+  validatorRoutes.routes.find((route) => route.id === 'getStats')?.response_statuses?.find((status) => status.status === 500)?.example_files?.includes('examples/api/stats-error-response.sample.json'),
+  'reference export must expose the bounded stats-computation failure example'
+);
+assert(
+  typescriptProjection.publishedValidatorRouteDefinitions.find((route) => route.id === 'validateBatch')
+    ?.responseStatuses?.find((status) => status.status === 403)?.exampleFiles?.includes('examples/api/forbidden-response.sample.json'),
+  'typescript route projection must expose the bounded owner-role example for validateBatch'
+);
+assert(
+  typescriptProjection.publishedValidatorRouteDefinitions.find((route) => route.id === 'validateFix')
+    ?.responseStatuses?.find((status) => status.status === 403)?.exampleFiles?.includes('examples/api/forbidden-response.sample.json'),
+  'typescript route projection must expose the bounded owner-role example for validateFix'
+);
+assert(
+  typescriptProjection.publishedValidatorRouteDefinitions.find((route) => route.id === 'getStats')
+    ?.responseStatuses?.find((status) => status.status === 500)?.exampleFiles?.includes('examples/api/stats-error-response.sample.json'),
+  'typescript route projection must expose the bounded stats-computation failure example'
+);
 
 const packResult = spawnSync('npm', ['pack', '--dry-run', '--json', '--ignore-scripts'], {
   cwd: repoRoot,
@@ -319,6 +353,7 @@ for (const relativePath of [
   'examples/client/python-parse-validate-responses.py',
   'examples/client/python-parse-error-responses.py',
   'examples/client/python-parse-support-responses.py',
+  'examples/api/stats-error-response.sample.json',
   'examples/client/esm-package-capsule-summary.mjs',
   'examples/client/esm-package-support-responses.mjs',
   'examples/client/esm-package-validate-response.mjs',

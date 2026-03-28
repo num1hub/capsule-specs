@@ -3,7 +3,7 @@
   "reviewed_at": "2026-03-28",
   "summary": {
     "capsule_examples": 5,
-    "api_examples": 14,
+    "api_examples": 15,
     "positive_capsules": 4,
     "negative_capsules": 1,
     "graph_examples": 1
@@ -265,6 +265,22 @@
       "related_capsule_ids": [
         "capsule.example.validator-valid.v1"
       ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/stats-error-response.sample.json",
+      "route": "GET /api/validate/stats",
+      "example_kind": "response",
+      "coverage_tags": [
+        "stats-route",
+        "bounded-support-route-failure",
+        "typed-error-envelope"
+      ],
+      "related_capsule_ids": [],
       "verify_commands": [
         "npm run check:api-examples",
         "npm run check:api-schemas",

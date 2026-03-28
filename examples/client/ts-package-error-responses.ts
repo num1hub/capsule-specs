@@ -2,6 +2,7 @@ import conflictResponse from "@num1hub/capsule-specs/examples/api/conflict-respo
 import errorResponse from "@num1hub/capsule-specs/examples/api/error-response.sample.json" with { type: "json" };
 import forbiddenResponse from "@num1hub/capsule-specs/examples/api/forbidden-response.sample.json" with { type: "json" };
 import rateLimitResponse from "@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json" with { type: "json" };
+import statsErrorResponse from "@num1hub/capsule-specs/examples/api/stats-error-response.sample.json" with { type: "json" };
 import unauthorizedResponse from "@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json" with { type: "json" };
 import type { SimpleErrorResponse } from "@num1hub/capsule-specs/typescript/validator-api";
 
@@ -10,15 +11,21 @@ export const unauthorizedErrorResponse: SimpleErrorResponse = unauthorizedRespon
 export const forbiddenErrorResponse: SimpleErrorResponse = forbiddenResponse;
 export const conflictErrorResponse: SimpleErrorResponse = conflictResponse;
 export const rateLimitErrorResponse: SimpleErrorResponse = rateLimitResponse;
+export const statsComputationErrorResponse: SimpleErrorResponse = statsErrorResponse;
 
 export const errorResponseSummary = {
   generic: genericErrorResponse.error,
   unauthorized: unauthorizedErrorResponse.error,
   forbidden: forbiddenErrorResponse.error,
   conflict: conflictErrorResponse.error,
-  rateLimit: rateLimitErrorResponse.error
+  rateLimit: rateLimitErrorResponse.error,
+  statsComputation: statsComputationErrorResponse.error
 };
 
 if (errorResponseSummary.forbidden !== "Owner role required") {
   throw new Error("typed package forbidden response drifted from the published sample");
+}
+
+if (errorResponseSummary.statsComputation !== "Stats computation failed") {
+  throw new Error("typed package stats error response drifted from the published sample");
 }

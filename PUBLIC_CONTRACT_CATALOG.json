@@ -762,6 +762,20 @@
       ]
     },
     {
+      "id": "examples.api.stats-error-response",
+      "path": "examples/api/stats-error-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.archive-bundle",
       "path": "examples/archive/archive-bundle.sample.json",
       "kind": "example",

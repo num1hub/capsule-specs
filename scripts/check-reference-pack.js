@@ -259,7 +259,7 @@ const expectedRoutes = [
         status: 500,
         description: 'Stats computation failed',
         family_ids: ['simpleErrorResponse'],
-        example_files: []
+        example_files: ['examples/api/stats-error-response.sample.json']
       }
     ]
   },
@@ -318,7 +318,8 @@ const expectedResponseFamilies = [
       'examples/api/unauthorized-response.sample.json',
       'examples/api/forbidden-response.sample.json',
       'examples/api/conflict-response.sample.json',
-      'examples/api/rate-limit-response.sample.json'
+      'examples/api/rate-limit-response.sample.json',
+      'examples/api/stats-error-response.sample.json'
     ]
   ]
 ];

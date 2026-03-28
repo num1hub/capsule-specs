@@ -178,7 +178,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts)
   Minimal source-level TypeScript recipe for typing the published pass, fail, batch, and fix validator response families.
 - [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts)
-  Minimal source-level TypeScript recipe for typing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes.
+  Minimal source-level TypeScript recipe for typing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample.
 - [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
   Minimal source-level TypeScript recipe for typing the published `gates` and `stats` support-response payloads.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
@@ -190,13 +190,13 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/zod-parse-validate-fix-response.ts`](../examples/client/zod-parse-validate-fix-response.ts)
   Minimal source-level Zod recipe for parsing a validator fix response envelope.
 - [`../examples/client/zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
-  Minimal source-level Zod recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes.
+  Minimal source-level Zod recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample.
 - [`../examples/client/zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
   Minimal source-level Zod recipe for parsing the published `gates` and `stats` support-response payloads.
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
   Minimal package-consumer recipe for the built capsule projection exports.
 - [`../examples/client/cjs-package-error-responses.cjs`](../examples/client/cjs-package-error-responses.cjs)
-  Minimal CommonJS package-consumer recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes from installed package exports.
+  Minimal CommonJS package-consumer recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample from installed package exports.
 - [`../examples/client/cjs-package-live-validator-client.cjs`](../examples/client/cjs-package-live-validator-client.cjs)
   Minimal CommonJS package-consumer recipe for a validator live client that covers the published route family through installed package exports, including the bounded `stats` query path.
 - [`../examples/client/cjs-package-validate-request.cjs`](../examples/client/cjs-package-validate-request.cjs)
@@ -210,7 +210,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/esm-package-contract-reference.mjs`](../examples/client/esm-package-contract-reference.mjs)
   Minimal ESM package-consumer recipe for compact contract-reference exports plus the shared validator-route and envelope-family projection helpers.
 - [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs)
-  Minimal ESM package-consumer recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes from installed package exports.
+  Minimal ESM package-consumer recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample from installed package exports.
 - [`../examples/client/esm-package-live-validator-client.mjs`](../examples/client/esm-package-live-validator-client.mjs)
   Minimal ESM package-consumer recipe for a `fetch` client that covers the published validator route family through installed package exports, including the bounded `stats` query path.
 - [`../examples/client/esm-package-validate-request.mjs`](../examples/client/esm-package-validate-request.mjs)
@@ -256,13 +256,13 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
   Minimal Python recipe for parsing the published pass, fail, batch, and fix validator response families.
 - [`../examples/client/python-parse-error-responses.py`](../examples/client/python-parse-error-responses.py)
-  Minimal Python recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes.
+  Minimal Python recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample.
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
   Minimal Python recipe for parsing the published `gates` and `stats` support-response families.
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
 - [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
-  Minimal TypeScript package-consumer recipe for sample-driven typed generic, unauthorized, forbidden, conflict, and rate-limit error-envelope handling through installed package exports.
+  Minimal TypeScript package-consumer recipe for sample-driven typed generic, unauthorized, forbidden, conflict, and rate-limit error-envelope handling plus the route-specific stats-computation failure sample through installed package exports.
 - [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
   Minimal TypeScript package-consumer recipe for a typed `fetch` client that covers the published validator route family through installed package exports, including the bounded `stats` query path.
 - [`../references/validator-routes.json`](../references/validator-routes.json)
@@ -292,7 +292,7 @@ The API envelope schema and its dedicated verification script strengthen that cl
 
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
-The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, source-level and installed-package CommonJS, ESM, and TypeScript live-client bridges for the published validator route family including the bounded `stats` query path, sample-driven Zod parsing for the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
+The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, source-level and installed-package CommonJS, ESM, and TypeScript live-client bridges for the published validator route family including the bounded `stats` query path, sample-driven Zod parsing for the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering installed-package request parsing and TypeScript request typing for the published single, batch, and fix families plus the full published validate-response family instead of request-side raw Ajv/typing-only proofs and a positive-pass sample only.
 

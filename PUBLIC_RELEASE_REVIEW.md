@@ -54,9 +54,9 @@
 - intentionally schema-invalid capsule fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
 - intentionally schema-invalid validator-envelope fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
 - integrity-seal recomputation docs, repo-local and package-consumer seal recipes, compact integrity constants, and a dedicated verifier for published `G16` example and API hash correctness
-- cross-language Python consumption docs, Python recipes for compact references, a reusable full-route live-validator bridge, validator-envelope request flows, dedicated validate/error/support response parsing, and public `G16` seal proofs, plus a dedicated verifier for repo-local and extracted packed-artifact execution
+- cross-language Python consumption docs, Python recipes for compact references, a reusable full-route live-validator bridge, validator-envelope request flows, dedicated validate/error/support response parsing including the route-specific stats-computation failure sample, and public `G16` seal proofs, plus a dedicated verifier for repo-local and extracted packed-artifact execution
 - synthetic example capsules, a linked graph example, and a known-ID catalog
-- API request, response, bounded owner-role failure, error, and stats sample payloads for the validator HTTP surface
+- API request, response, bounded owner-role failure, bounded stats-computation failure, shared error, and stats sample payloads for the validator HTTP surface
 - client recipes and trust-model docs for external consumers, including live support-route coverage for `gates` and `stats`
 - expanded curated raw public law-adjacent capsules for confidence-vector semantics, subtype meaning, and version lineage
 - live validator OpenAPI reference
@@ -138,7 +138,7 @@ Repository-local audit on 2026-03-28:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `366` files / `366` manifest entries
+- manifest coverage: `367` files / `367` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

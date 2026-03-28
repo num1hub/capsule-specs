@@ -37,7 +37,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, compact machine-readable route-reference JSON, a reusable Python live-client bridge, shared TypeScript route constants plus route-behavior metadata, full-route client recipes, repo-relative TypeScript request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package CommonJS, ESM, and TypeScript live-client bridges, repo-relative Zod request parsers, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package request plus validate/support/error-response readers that cover single, batch, fix, gates, stats, and shared generic rejection paths without depending on private runtime code.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, compact machine-readable route-reference JSON, a reusable Python live-client bridge, shared TypeScript route constants plus route-behavior metadata, full-route client recipes, repo-relative TypeScript request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package CommonJS, ESM, and TypeScript live-client bridges, repo-relative Zod request parsers, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package request plus validate/support/error-response readers that cover single, batch, fix, gates, stats, plus shared generic rejection paths and a bounded support-route failure path without depending on private runtime code.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -56,7 +56,8 @@
         "examples/client/python-parse-error-responses.py",
         "docs/route-reference.md",
         "examples/client/node-get-gates.mjs",
-        "examples/client/python-get-gates.py"
+        "examples/client/python-get-gates.py",
+        "examples/api/stats-error-response.sample.json"
       ],
       "supporting_surfaces": [
         "docs/route-reference.md",
@@ -121,7 +122,8 @@
         "examples/client/ts-route-behavior-reference.ts",
         "examples/client/ts-live-validator-client.ts",
         "examples/client/ts-package-live-validator-client.ts",
-        "examples/client/esm-package-live-validator-client.mjs"
+        "examples/client/esm-package-live-validator-client.mjs",
+        "examples/api/stats-error-response.sample.json"
       ],
       "verify_commands": [
         "npm run check:api-examples",
@@ -255,7 +257,8 @@
         "examples/api/conflict-response.sample.json",
         "docs/invalid-api-envelope-examples.md",
         "examples/api-invalid/validate-request.single.missing-capsule.json",
-        "examples/api-invalid/validate-response.fail.invalid-gate.json"
+        "examples/api-invalid/validate-response.fail.invalid-gate.json",
+        "examples/api/stats-error-response.sample.json"
       ],
       "supporting_surfaces": [
         "examples/api/validate-response.fail.json",
@@ -266,7 +269,8 @@
         "scripts/check-invalid-examples.js",
         "examples/api-invalid/README.md",
         "scripts/check-invalid-api-examples.js",
-        "examples/client/python-parse-error-responses.py"
+        "examples/client/python-parse-error-responses.py",
+        "examples/api/stats-error-response.sample.json"
       ],
       "verify_commands": [
         "npm run check:failure-model",

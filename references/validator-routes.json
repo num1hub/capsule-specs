@@ -244,7 +244,9 @@
           "family_ids": [
             "simpleErrorResponse"
           ],
-          "example_files": []
+          "example_files": [
+            "examples/api/stats-error-response.sample.json"
+          ]
         }
       ],
       "response_examples": [

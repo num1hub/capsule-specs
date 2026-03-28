@@ -152,7 +152,7 @@ console.log(simpleErrorResponseSchema.parse(genericError).error);
 console.log(simpleErrorResponseSchema.parse(unauthorizedError).error);
 ```
 
-These recipes prove that the installed package surface also covers the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes instead of leaving non-2xx parsing as prose-only or Python-only guidance.
+These recipes prove that the installed package surface also covers the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample instead of leaving non-2xx parsing as prose-only or Python-only guidance.
 
 ## Minimal package-level validate-response family example
 
@@ -319,7 +319,7 @@ Those recipes prove the installed package surface is usable not only for static 
 - The package surface does not turn this repository into a complete SDK.
 - The package surface is compatible with raw-schema validators, but those validators still only prove structural contract conformance, not live gate semantics.
 - The package support-response recipes prove installed-package parsing and typing for the published `gates` and `stats` payloads, not live-route availability or hosted-service behavior.
-- The package error-envelope recipes prove installed-package parsing and typing for the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit payloads, not a promise about every private runtime error variant.
+- The package error-envelope recipes prove installed-package parsing and typing for the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit payloads plus one route-specific stats-computation failure sample, not a promise about every private runtime error variant.
 - The package validate-response recipes prove installed-package parsing and typing for the published pass, fail, batch, and fix families, not live validator execution or hosted-service availability.
 - The Python path uses extracted packaged files and raw JSON assets; it does not expose the Node exports as Python modules or imply a PyPI release.
 - The reference-pack exports are convenience JSON layers for compact tooling use, not stronger replacements for the schemas, raw capsules, or validator/OpenAPI surfaces they summarize.

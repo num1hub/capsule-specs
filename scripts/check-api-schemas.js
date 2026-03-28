@@ -17,6 +17,7 @@ const exampleSchemaMap = {
   'validate-response.fix.sample.json': '#/$defs/validateFixResponse',
   'gates-response.sample.json': '#/$defs/gatesResponse',
   'stats-response.sample.json': '#/$defs/statsResponse',
+  'stats-error-response.sample.json': '#/$defs/simpleErrorResponse',
   'error-response.sample.json': '#/$defs/simpleErrorResponse',
   'unauthorized-response.sample.json': '#/$defs/simpleErrorResponse',
   'forbidden-response.sample.json': '#/$defs/simpleErrorResponse',

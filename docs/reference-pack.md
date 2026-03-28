@@ -19,7 +19,7 @@ Use this layer when you want canonical enums, gate IDs, validator option flags, 
 - [`../references/validator-envelope-families.json`](../references/validator-envelope-families.json)
   Compact request-family, response-family, and shared-definition map for the published validator envelope layer
 - [`../references/validator-routes.json`](../references/validator-routes.json)
-  Compact published validator route map covering `POST /api/validate`, `POST /api/validate/batch`, `POST /api/validate/fix`, `GET /api/validate/stats`, and `GET /api/validate/gates`, including bearer-auth posture, request-family linkage, bounded query-parameter metadata, and response status mappings
+  Compact published validator route map covering `POST /api/validate`, `POST /api/validate/batch`, `POST /api/validate/fix`, `GET /api/validate/stats`, and `GET /api/validate/gates`, including bearer-auth posture, request-family linkage, bounded query-parameter metadata, and response status mappings with explicit public example files for the currently documented non-2xx statuses
 
 ## When to use it
 

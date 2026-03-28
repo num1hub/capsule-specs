@@ -16,12 +16,14 @@ forbidden_response = load_json("examples/api/forbidden-response.sample.json")
 conflict_response = load_json("examples/api/conflict-response.sample.json")
 error_response = load_json("examples/api/error-response.sample.json")
 rate_limit_response = load_json("examples/api/rate-limit-response.sample.json")
+stats_error_response = load_json("examples/api/stats-error-response.sample.json")
 
 assert unauthorized_response["error"] == "Unauthorized"
 assert forbidden_response["error"] == "Owner role required"
 assert conflict_response["error"] == "Validation request conflicts with current state"
 assert error_response["error"] == "Invalid validation payload"
 assert rate_limit_response["error"] == "Rate limit exceeded"
+assert stats_error_response["error"] == "Stats computation failed"
 
 summary = {
     "errorFamilies": [
@@ -30,9 +32,11 @@ summary = {
         conflict_response["error"],
         error_response["error"],
         rate_limit_response["error"],
+        stats_error_response["error"],
     ],
     "forbiddenMessage": forbidden_response["error"],
     "rateLimitMessage": rate_limit_response["error"],
+    "statsFailureMessage": stats_error_response["error"],
 }
 
 print(json.dumps(summary, indent=2))

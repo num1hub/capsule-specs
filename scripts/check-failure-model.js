@@ -70,8 +70,11 @@ assert(verificationDoc.includes('check:failure-model'), 'verification doc must m
 assert(capabilityDoc.includes('PUBLIC_FAILURE_MODEL.json'), 'capability-matrix doc must mention PUBLIC_FAILURE_MODEL.json');
 assert(apiExamplesReadme.includes('unauthorized-response.sample.json'), 'API examples README must mention unauthorized-response.sample.json');
 assert(apiExamplesReadme.includes('conflict-response.sample.json'), 'API examples README must mention conflict-response.sample.json');
+assert(apiExamplesReadme.includes('stats-error-response.sample.json'), 'API examples README must mention stats-error-response.sample.json');
 assert(apiEnvelopesDoc.includes('unauthorized-response.sample.json'), 'api-envelopes doc must mention unauthorized-response.sample.json');
 assert(apiEnvelopesDoc.includes('conflict-response.sample.json'), 'api-envelopes doc must mention conflict-response.sample.json');
+assert(apiEnvelopesDoc.includes('stats-error-response.sample.json'), 'api-envelopes doc must mention stats-error-response.sample.json');
+assert(readme.includes('docs/failure-model.md'), 'README.md must mention docs/failure-model.md');
 assert(openapiDoc.includes('failure-model.md'), 'openapi doc must mention failure-model.md');
 
 assert(catalogPaths.has('docs/failure-model.md'), 'contract catalog must include docs/failure-model.md');
@@ -80,6 +83,7 @@ assert(catalogPaths.has('schemas/public-failure-model.schema.json'), 'contract c
 assert(catalogPaths.has('scripts/check-failure-model.js'), 'contract catalog must include failure-model verifier');
 assert(catalogPaths.has('examples/api/unauthorized-response.sample.json'), 'contract catalog must include unauthorized-response.sample.json');
 assert(catalogPaths.has('examples/api/conflict-response.sample.json'), 'contract catalog must include conflict-response.sample.json');
+assert(catalogPaths.has('examples/api/stats-error-response.sample.json'), 'contract catalog must include stats-error-response.sample.json');
 
 if (process.exitCode) {
   process.exit(process.exitCode);

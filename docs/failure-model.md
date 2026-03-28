@@ -11,6 +11,7 @@ Public contracts should explain both successful and rejected behavior in machine
 - malformed validator input is rejected with bounded errors
 - invalid integrity seals remain visible as contract failures rather than silent fixes
 - unauthorized or conflicting requests return typed rejections rather than unhandled errors
+- support-route failures stay bounded and typed instead of surfacing as opaque `500` behavior
 - archive replay should stop when trust evidence is missing instead of attempting partial import
 - broken OpenAPI completeness or reference integrity should block publication instead of drifting silently
 
@@ -20,6 +21,7 @@ Public contracts should explain both successful and rejected behavior in machine
 - [`../examples/api/validate-response.fail.json`](../examples/api/validate-response.fail.json)
 - [`../examples/api/error-response.sample.json`](../examples/api/error-response.sample.json)
 - [`../examples/api/unauthorized-response.sample.json`](../examples/api/unauthorized-response.sample.json)
+- [`../examples/api/stats-error-response.sample.json`](../examples/api/stats-error-response.sample.json)
 - [`../examples/api/conflict-response.sample.json`](../examples/api/conflict-response.sample.json)
 - [`portability.md`](portability.md)
 - [`../PUBLIC_FAILURE_MODEL.json`](../PUBLIC_FAILURE_MODEL.json)

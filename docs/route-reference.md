@@ -33,6 +33,7 @@ If you need the same route family as compact machine-readable data, use [`../ref
 - contract: [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
 - bounded query parameter: optional `limit` integer with minimum `1`
 - response example: [`../examples/api/stats-response.sample.json`](../examples/api/stats-response.sample.json)
+- bounded failure example: [`../examples/api/stats-error-response.sample.json`](../examples/api/stats-error-response.sample.json)
 - live client recipes: [`../examples/client/curl-get-stats.sh`](../examples/client/curl-get-stats.sh), [`../examples/client/node-get-stats.mjs`](../examples/client/node-get-stats.mjs), [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)
 
 ## `GET /api/validate/gates`
@@ -48,6 +49,7 @@ If you need the same route family as compact machine-readable data, use [`../ref
 - forbidden example: [`../examples/api/forbidden-response.sample.json`](../examples/api/forbidden-response.sample.json)
 - conflict example: [`../examples/api/conflict-response.sample.json`](../examples/api/conflict-response.sample.json)
 - rate-limit example: [`../examples/api/rate-limit-response.sample.json`](../examples/api/rate-limit-response.sample.json)
+- stats computation example: [`../examples/api/stats-error-response.sample.json`](../examples/api/stats-error-response.sample.json)
 - source-level client recipes: [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts), [`../examples/client/zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
 - installed-package client recipes: [`../examples/client/cjs-package-error-responses.cjs`](../examples/client/cjs-package-error-responses.cjs), [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs), [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
 
@@ -58,7 +60,7 @@ The compact route pack in [`../references/validator-routes.json`](../references/
 - bearer-auth posture for every published route
 - request-family linkage for the three published `POST` envelopes
 - bounded query-parameter metadata for `GET /api/validate/stats`
-- response-status-to-envelope mappings, including where a public example exists and where the status is documented but currently has no dedicated route-specific sample
+- response-status-to-envelope mappings with explicit public example files for every currently documented non-2xx status
 
 Use [`../examples/client/ts-route-behavior-reference.ts`](../examples/client/ts-route-behavior-reference.ts) if you want a minimal source-level TypeScript path for that route-behavior layer instead of reconstructing it from OpenAPI.
 

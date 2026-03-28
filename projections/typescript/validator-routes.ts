@@ -64,7 +64,7 @@ export const publishedValidatorRouteResponseStatusDefinitions = {
       status: 403,
       description: "Owner role required",
       familyIds: ["simpleErrorResponse"],
-      exampleFiles: []
+      exampleFiles: ["examples/api/forbidden-response.sample.json"]
     },
     {
       status: 429,
@@ -96,7 +96,7 @@ export const publishedValidatorRouteResponseStatusDefinitions = {
       status: 403,
       description: "Owner role required",
       familyIds: ["simpleErrorResponse"],
-      exampleFiles: []
+      exampleFiles: ["examples/api/forbidden-response.sample.json"]
     },
     {
       status: 429,
@@ -128,7 +128,7 @@ export const publishedValidatorRouteResponseStatusDefinitions = {
       status: 500,
       description: "Stats computation failed",
       familyIds: ["simpleErrorResponse"],
-      exampleFiles: []
+      exampleFiles: ["examples/api/stats-error-response.sample.json"]
     }
   ],
   getGates: [

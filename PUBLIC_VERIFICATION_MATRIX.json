@@ -84,7 +84,8 @@
         "schemas/validator-api-envelopes.schema.json",
         "scripts/check-integrity-recipes.js",
         "examples/api/validate-response.pass.json",
-        "examples/api/forbidden-response.sample.json"
+        "examples/api/forbidden-response.sample.json",
+        "examples/api/stats-error-response.sample.json"
       ],
       "failure_modes_prevented": [
         "broken example semantics",
@@ -103,7 +104,8 @@
         "cross-language Python support-route recipes drifting away from the published support-response payloads or extracted package layout",
         "Node fix-route client recipes drifting away from the published validator HTTP surface",
         "installed-package support-response recipes drifting away from the published support payloads or public package exports",
-        "missing bounded owner-role rejection evidence for protected validator routes"
+        "missing bounded owner-role rejection evidence for protected validator routes",
+        "missing bounded stats-computation failure evidence for published support routes"
       ]
     },
     {
@@ -221,7 +223,8 @@
         "PUBLIC_FAILURE_MODEL.json",
         "examples/api/forbidden-response.sample.json",
         "docs/invalid-capsule-examples.md",
-        "examples/invalid/"
+        "examples/invalid/",
+        "examples/api/stats-error-response.sample.json"
       ],
       "strongest_surfaces": [
         "PUBLIC_EXAMPLE_COVERAGE.json",
@@ -229,14 +232,16 @@
         "examples/api/forbidden-response.sample.json",
         "examples/example-validator-invalid-g16.capsule.json",
         "examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
-        "examples/invalid/example-invalid-relation-type.capsule.json"
+        "examples/invalid/example-invalid-relation-type.capsule.json",
+        "examples/api/stats-error-response.sample.json"
       ],
       "failure_modes_prevented": [
         "fake example coverage claims",
         "missing negative-path evidence",
         "happy-path-only review posture",
         "undocumented schema-negative teaching artifacts",
-        "missing owner-role rejection evidence for bounded public API failures"
+        "missing owner-role rejection evidence for bounded public API failures",
+        "missing bounded stats-computation failure evidence for support-route review"
       ]
     },
     {

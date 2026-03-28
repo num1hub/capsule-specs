@@ -376,7 +376,8 @@
       "/home/n1/codex-workspace/references/validator-routes.json",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
-      "/home/n1/n1hub.com/docs/validator.md"
+      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the published validator request, response, and support-route envelope families."
@@ -594,7 +595,8 @@
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
       "/home/n1/codex-workspace/references/validator-routes.json",
       "/home/n1/codex-workspace/scripts/check-package-surface.js",
-      "/home/n1/codex-workspace/tsconfig.build.json"
+      "/home/n1/codex-workspace/tsconfig.build.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Consumer-oriented curl, Node, and Python usage guide for the validator HTTP surface with full published route coverage."
@@ -832,7 +834,8 @@
       "/home/n1/n1hub-repo-vault/testing/capsule.testing.api-validate-negative.v1.json",
       "/home/n1/n1hub-repo-vault/testing/capsule.testing.archive-portability-integration.v1.json",
       "/home/n1/n1hub-repo-vault/testing/capsule.testing.cli-validate-negative.v1.json",
-      "/home/n1/n1hub-repo-vault/testing/capsule.testing.openapi-validate-family-negative.v1.json"
+      "/home/n1/n1hub-repo-vault/testing/capsule.testing.openapi-validate-family-negative.v1.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "derived",
     "notes": "Public fail-closed doctrine derived from validator, CLI, OpenAPI, and portability negative testing capsules."
@@ -1003,7 +1006,8 @@
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
       "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Integrator reading path through schema, OpenAPI, examples, support routes, and consumer recipes."
@@ -1132,7 +1136,8 @@
       "/home/n1/codex-workspace/references/validator-envelope-families.json",
       "/home/n1/codex-workspace/references/validator-routes.json",
       "/home/n1/codex-workspace/scripts/check-package-install.js",
-      "/home/n1/codex-workspace/tsconfig.build.json"
+      "/home/n1/codex-workspace/tsconfig.build.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the buildable package-export surface for the maintained projection layer, including local tarball install posture and TypeScript package-consumer resolution."
@@ -1357,7 +1362,8 @@
       "/home/n1/codex-workspace/examples/client/python-validate-single.py",
       "/home/n1/codex-workspace/references/validator-envelope-families.json",
       "/home/n1/codex-workspace/references/validator-routes.json",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to Python consumption of compact references, validator request flows, validate/error/support response parsing, support routes, and public G16 seal proofs."
@@ -1376,7 +1382,8 @@
       "/home/n1/codex-workspace/references/contract-constants.json",
       "/home/n1/codex-workspace/references/validation-gates.json",
       "/home/n1/codex-workspace/references/validator-envelope-families.json",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the compact contract-reference layer for tool-builders and package consumers."
@@ -1512,7 +1519,8 @@
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
       "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release evidence synchronized with public type-projection surfaces; release evidence synchronized with validator API projection surfaces; package-export projection layer synchronized"
@@ -1681,7 +1689,8 @@
       "/home/n1/codex-workspace/examples/client/zod-parse-error-responses.ts",
       "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
       "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Per-route map from published validator routes to the strongest examples and live client recipes."
@@ -2088,7 +2097,8 @@
       "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for validator HTTP request and response examples."
@@ -2294,10 +2304,11 @@
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
       "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
-    "notes": "Minimal CommonJS package-consumer recipe for parsing bounded shared validator error envelopes from installed package exports."
+    "notes": "Public consumer recipe for bounded shared validator error envelopes plus the route-specific stats-computation failure sample."
   },
   "examples/client/cjs-package-live-validator-client.cjs": {
     "source_paths": [
@@ -2479,10 +2490,11 @@
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
       "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
-    "notes": "Minimal ESM package-consumer recipe for parsing bounded shared validator error envelopes from installed package exports."
+    "notes": "Public consumer recipe for bounded shared validator error envelopes plus the route-specific stats-computation failure sample."
   },
   "examples/client/esm-package-live-validator-client.mjs": {
     "source_paths": [
@@ -2751,7 +2763,8 @@
       "/home/n1/codex-workspace/projections/typescript/index.ts",
       "/home/n1/codex-workspace/projections/zod/index.ts",
       "/home/n1/codex-workspace/scripts/check-package-surface.js",
-      "/home/n1/codex-workspace/tsconfig.build.json"
+      "/home/n1/codex-workspace/tsconfig.build.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for live-route, schema, integrity, package, and Python client recipes."
@@ -2832,10 +2845,11 @@
       "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
       "/home/n1/codex-workspace/tsconfig.json",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
-    "notes": "Minimal TypeScript package-consumer recipe for typing bounded shared validator error envelopes from installed package exports."
+    "notes": "Public consumer recipe for bounded shared validator error envelopes plus the route-specific stats-computation failure sample."
   },
   "examples/client/ts-package-live-validator-client.ts": {
     "source_paths": [
@@ -2922,10 +2936,11 @@
       "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
-    "notes": "Minimal TypeScript consumer recipe for typing bounded shared validator error envelopes from the public projection layer."
+    "notes": "Public consumer recipe for bounded shared validator error envelopes plus the route-specific stats-computation failure sample."
   },
   "examples/client/ts-parse-support-responses.ts": {
     "source_paths": [
@@ -2981,10 +2996,11 @@
       "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
-    "notes": "Minimal Zod consumer recipe for parsing bounded shared validator error envelopes from the public projection layer."
+    "notes": "Public consumer recipe for bounded shared validator error envelopes plus the route-specific stats-computation failure sample."
   },
   "examples/client/zod-parse-support-responses.ts": {
     "source_paths": [
@@ -3378,10 +3394,11 @@
     "source_paths": [
       "/home/n1/codex-workspace/docs/route-reference.md",
       "/home/n1/codex-workspace/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "derived",
-    "notes": "Public-safe TypeScript projection for the published validator route constants."
+    "notes": "Public-safe TypeScript route constants and bounded route-behavior metadata aligned to the compact validator route surface."
   },
   "projections/zod/capsule.ts": {
     "source_paths": [
@@ -3687,7 +3704,8 @@
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
       "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -3865,7 +3883,8 @@
       "/home/n1/codex-workspace/references/validator-routes.json",
       "/home/n1/codex-workspace/scripts/check-contract-catalog.js",
       "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
-      "/home/n1/codex-workspace/examples/client/python-parse-error-responses.py"
+      "/home/n1/codex-workspace/examples/client/python-parse-error-responses.py",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -4090,7 +4109,8 @@
       "/home/n1/codex-workspace/examples/example-project-hub.capsule.json",
       "/home/n1/codex-workspace/examples/example-task.capsule.json",
       "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
-      "/home/n1/codex-workspace/examples/example-validator-valid.capsule.json"
+      "/home/n1/codex-workspace/examples/example-validator-valid.capsule.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable coverage map for public capsule and API examples."
@@ -4103,7 +4123,8 @@
       "/home/n1/codex-workspace/examples/api/error-response.sample.json",
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
       "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
-      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable public failure and fail-closed summary."
@@ -4331,7 +4352,8 @@
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
       "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -4452,7 +4474,8 @@
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
       "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -4564,7 +4587,8 @@
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
       "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Release review updated for verification matrix layer; manifest coverage tracked in PUBLIC_RELEASE_METADATA.json; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release review synchronized with public type-projection surfaces; release review synchronized with validator API projection surfaces; package-export projection layer synchronized"
@@ -4731,7 +4755,8 @@
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
       "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
       "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
-      "/home/n1/codex-workspace/references/validator-routes.json"
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -4835,7 +4860,8 @@
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-adoption-readiness.js",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable bounded map from verification families to protected public surfaces and failure classes.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -5066,10 +5092,11 @@
       "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
       "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
       "/home/n1/codex-workspace/references/validator-routes.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
-    "notes": "Compact published validator-envelope family reference derived from stronger schema defs, route docs, route pack, and curated API examples."
+    "notes": "Compact request/response/shared-definition map for validator envelopes derived from stronger schema, route, and example surfaces, including bounded support-route failure evidence."
   },
   "references/validator-routes.json": {
     "source_paths": [
@@ -5083,10 +5110,11 @@
       "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
       "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
       "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
-    "notes": "Compact published validator-route reference derived from stronger OpenAPI, route docs, and curated API examples."
+    "notes": "Compact published validator-route reference derived from stronger OpenAPI, route docs, and curated API examples, including bounded support-route failure evidence."
   },
   "RELEASING.md": {
     "source_paths": [
@@ -5466,7 +5494,8 @@
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local checks for validator HTTP request and response examples."
@@ -5489,7 +5518,8 @@
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
       "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Repo-local schema coverage check for public validator API example payloads."
@@ -5693,7 +5723,8 @@
       "/home/n1/codex-workspace/scripts/check-package-surface.js",
       "/home/n1/codex-workspace/tsconfig.build.json",
       "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
-      "/home/n1/codex-workspace/examples/client/python-parse-error-responses.py"
+      "/home/n1/codex-workspace/examples/client/python-parse-error-responses.py",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local checks for curl, Node, and Python client recipe snippets across all published validator routes."
@@ -6217,7 +6248,8 @@
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
       "/home/n1/codex-workspace/tsconfig.build.json",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the built package-export and pack surface."
@@ -6370,7 +6402,8 @@
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
       "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the compact contract-reference pack."
@@ -6777,9 +6810,18 @@
       "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
       "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
       "/home/n1/codex-workspace/examples/api/error-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
     ],
     "transformation_type": "generated",
-    "notes": "Repo-local Python recipe for parsing the published bounded shared validator error-envelope families."
+    "notes": "Public consumer recipe for bounded shared validator error envelopes plus the route-specific stats-computation failure sample."
+  },
+  "examples/api/stats-error-response.sample.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/references/validator-routes.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Bounded stats-computation failure envelope sample for the documented GET /api/validate/stats 500 status."
   }
 }

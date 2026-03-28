@@ -39,6 +39,20 @@
       ]
     },
     {
+      "id": "support-route-failure",
+      "summary": "Support-route failures should remain bounded typed envelopes instead of surfacing as opaque 500 behavior.",
+      "strongest_surfaces": [
+        "docs/api-envelopes.md",
+        "examples/api/stats-error-response.sample.json",
+        "docs/failure-model.md"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:failure-model"
+      ]
+    },
+    {
       "id": "portability-trust-block",
       "summary": "Archive replay should stop when checksum, scope, or policy evidence is missing.",
       "strongest_surfaces": [
