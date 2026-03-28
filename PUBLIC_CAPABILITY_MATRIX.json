@@ -85,7 +85,7 @@
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, compact machine-readable route-reference JSON, shared TypeScript validator-route constants plus route-behavior metadata, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package CommonJS, ESM, and TypeScript live-client bridges for all published validator routes, typed validate-response readers, bounded shared error-envelope readers, and installed-package request plus validate/support/error-response readers without depending on private runtime code.",
+      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, compact machine-readable route-reference JSON, a reusable Python live-client bridge backed by the same route pack, shared TypeScript validator-route constants plus route-behavior metadata, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package CommonJS, ESM, and TypeScript live-client bridges for all published validator routes, typed validate-response readers, bounded shared error-envelope readers, and installed-package request plus validate/support/error-response readers without depending on private runtime code.",
       "strongest_surfaces": [
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -96,6 +96,7 @@
       "supporting_surfaces": [
         "docs/client-recipes.md",
         "docs/python-consumption.md",
+        "examples/client/python-live-validator-client.py",
         "examples/client/ts-build-validate-request.ts",
         "examples/client/ts-build-validate-batch-request.ts",
         "examples/client/ts-build-validate-fix-request.ts",

@@ -2587,6 +2587,20 @@
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files."
   },
+  "examples/client/python-live-validator-client.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
+      "/home/n1/codex-workspace/references/validator-routes.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for a reusable live-validator client bridge backed by the published route map and request examples."
+  },
   "examples/client/python-get-gates.py": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/api-envelopes.md",
@@ -6303,6 +6317,7 @@
     "source_paths": [
       "/home/n1/codex-workspace/docs/python-consumption.md",
       "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
+      "/home/n1/codex-workspace/examples/client/python-live-validator-client.py",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
       "/home/n1/codex-workspace/examples/client/python-get-stats.py",
       "/home/n1/codex-workspace/examples/client/python-parse-support-responses.py",

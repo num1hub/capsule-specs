@@ -36,7 +36,7 @@
     },
     {
       "id": "capsule-and-api-example-integrity",
-      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, live client recipes for all published validator routes, installed-package support-response recipes for gates and stats, and the reproducibility of published G16 integrity seals and computedHash values.",
+      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, live client recipes for all published validator routes, the reusable Python validator-route bridge, installed-package support-response recipes for gates and stats, and the reproducibility of published G16 integrity seals and computedHash values.",
       "commands": [
         "npm run check:examples",
         "npm run check:raw-capsules",
@@ -56,6 +56,7 @@
         "examples/client/recompute-integrity-seal.mjs",
         "examples/client/esm-package-recompute-integrity-seal.mjs",
         "examples/client/python-recompute-integrity-seal.py",
+        "examples/client/python-live-validator-client.py",
         "examples/client/python-validate-single.py",
         "examples/client/python-validate-batch.py",
         "examples/client/python-validate-fix.py",
@@ -92,6 +93,7 @@
         "stale computedHash values in validator API examples",
         "package-level integrity recipe claims that only work through repo-local helper state",
         "cross-language Python integrity recipes drifting away from the published G16 rule or extracted package layout",
+        "cross-language Python live-client bridge drifting away from the published route map, request examples, or extracted package layout",
         "cross-language Python validator-envelope recipes drifting away from the published API example payloads or extracted package layout",
         "cross-language Python response-family recipes drifting away from the published API example payloads or extracted package layout",
         "live support-route client recipes drifting away from the published validator HTTP surface",

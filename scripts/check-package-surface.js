@@ -306,6 +306,7 @@ for (const relativePath of [
   'examples/client/esm-package-error-responses.mjs',
   'examples/client/esm-package-validate-request.mjs',
   'examples/client/python-contract-reference.py',
+  'examples/client/python-live-validator-client.py',
   'examples/client/python-recompute-integrity-seal.py',
   'examples/client/python-validate-single.py',
   'examples/client/python-validate-batch.py',

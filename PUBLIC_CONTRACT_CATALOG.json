@@ -1402,6 +1402,21 @@
       ]
     },
     {
+      "id": "examples.client.python-live-validator-client",
+      "path": "examples/client/python-live-validator-client.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.python-get-gates",
       "path": "examples/client/python-get-gates.py",
       "kind": "client-recipe",

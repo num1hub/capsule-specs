@@ -67,6 +67,7 @@ const integrityRecipeFiles = ['recompute-integrity-seal.mjs', 'esm-package-recom
 
 const pythonRecipeFiles = [
   'python-contract-reference.py',
+  'python-live-validator-client.py',
   'python-recompute-integrity-seal.py',
   'python-validate-single.py',
   'python-validate-batch.py',
@@ -368,6 +369,22 @@ const expectedPythonRecipeReferences = {
     'references/validator-envelope-families.json',
     'references/validator-routes.json',
     'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json'
+  ],
+  'python-live-validator-client.py': [
+    'references/validator-routes.json',
+    'examples/api/validate-request.single.json',
+    'examples/api/validate-request.batch.json',
+    'examples/api/validate-request.fix.json',
+    'N1HUB_BASE_URL',
+    'N1HUB_TOKEN',
+    'N1HUB_STATS_LIMIT',
+    'validateSingle',
+    'validateBatch',
+    'validateFix',
+    'getGates',
+    'getStats',
+    'build_stats_url',
+    'urllib'
   ],
   'python-recompute-integrity-seal.py': [
     'examples/example-note.capsule.json',

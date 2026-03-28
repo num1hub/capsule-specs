@@ -44,6 +44,7 @@ If you want the same compact references and public `G16` proof path from Python 
 
 - [`python-consumption.md`](python-consumption.md)
 - [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
+- [`../examples/client/python-live-validator-client.py`](../examples/client/python-live-validator-client.py)
 - [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
 - [`../examples/client/python-validate-single.py`](../examples/client/python-validate-single.py)
 - [`../examples/client/python-validate-batch.py`](../examples/client/python-validate-batch.py)
@@ -52,6 +53,8 @@ If you want the same compact references and public `G16` proof path from Python 
 - [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)
 - [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
+
+If you want the same cross-language path as one reusable Python bridge instead of five point scripts, start with [`../examples/client/python-live-validator-client.py`](../examples/client/python-live-validator-client.py), which reads the published route pack and request examples directly.
 
 ## 2. Add source-level projections where helpful
 

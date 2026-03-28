@@ -37,7 +37,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, compact machine-readable route-reference JSON, shared TypeScript route constants plus route-behavior metadata, full-route client recipes, repo-relative TypeScript request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package CommonJS, ESM, and TypeScript live-client bridges, repo-relative Zod request parsers, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package request plus validate/support/error-response readers that cover single, batch, fix, gates, stats, and shared generic rejection paths without depending on private runtime code.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, compact machine-readable route-reference JSON, a reusable Python live-client bridge, shared TypeScript route constants plus route-behavior metadata, full-route client recipes, repo-relative TypeScript request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package CommonJS, ESM, and TypeScript live-client bridges, repo-relative Zod request parsers, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package request plus validate/support/error-response readers that cover single, batch, fix, gates, stats, and shared generic rejection paths without depending on private runtime code.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -50,6 +50,7 @@
         "references/validator-routes.json",
         "examples/client/node-validate-single.mjs",
         "docs/python-consumption.md",
+        "examples/client/python-live-validator-client.py",
         "examples/client/python-validate-single.py",
         "examples/client/python-parse-validate-responses.py",
         "docs/route-reference.md",
@@ -98,6 +99,7 @@
         "examples/client/zod-parse-support-responses.ts",
         "examples/client/python-validate-batch.py",
         "examples/client/python-validate-fix.py",
+        "examples/client/python-live-validator-client.py",
         "examples/client/python-parse-support-responses.py",
         "scripts/check-python-recipes.js",
         "scripts/check-package-install.js",

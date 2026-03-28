@@ -237,6 +237,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal package-consumer recipe for recomputing `integrity_sha3_512` from the installed artifact and compact reference constants.
 - [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
   Minimal Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files.
+- [`../examples/client/python-live-validator-client.py`](../examples/client/python-live-validator-client.py)
+  Minimal reusable Python client bridge for the full published validator route family, backed by the compact route pack and bounded stats-query metadata.
 - [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
   Minimal Python recipe for recomputing public `G16` seals from published examples and compact reference constants.
 - [`../examples/client/python-validate-single.py`](../examples/client/python-validate-single.py)

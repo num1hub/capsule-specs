@@ -98,6 +98,7 @@ These recipes demonstrate how to recompute `integrity_sha3_512` over the publish
 If you need a cross-language raw-asset consumption path outside the Node runtime, inspect:
 
 - [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
+- [`../examples/client/python-live-validator-client.py`](../examples/client/python-live-validator-client.py)
 - [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
 - [`../examples/client/python-validate-single.py`](../examples/client/python-validate-single.py)
 - [`../examples/client/python-validate-batch.py`](../examples/client/python-validate-batch.py)
@@ -108,7 +109,7 @@ If you need a cross-language raw-asset consumption path outside the Node runtime
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
 - [`python-consumption.md`](python-consumption.md)
 
-These recipes demonstrate how Python consumers can read compact contract-reference JSON files, including the validator envelope-family map, inspect curated raw capsule assets, prepare validator-envelope request flows for `validate`, `batch`, and `fix`, call the published `gates` and `stats` support routes including the bounded `stats` query path, parse published validator response families, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
+These recipes demonstrate how Python consumers can read compact contract-reference JSON files, including the validator envelope-family map, use the published route pack as one reusable full-route live-client bridge, inspect curated raw capsule assets, prepare validator-envelope request flows for `validate`, `batch`, and `fix`, call the published `gates` and `stats` support routes including the bounded `stats` query path, parse published validator response families, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
 
 ## Package recipes
 
@@ -163,6 +164,8 @@ These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM,
   Mirror the three published POST validator routes from a cross-language raw-JSON path
 - `python-parse-validate-responses.py` and `python-parse-support-responses.py`
   Inspect the published response families without requiring live credentials
+- `python-live-validator-client.py`
+  Bridges the full published validator route family from one reusable Python client backed by the shared route pack and bounded stats query metadata
 
 ## Why these recipes exist
 
