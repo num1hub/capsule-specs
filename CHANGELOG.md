@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- added compact validator-route reference data plus a shared TypeScript validator-route projection, so OpenAPI, contract-reference consumers, and live-client recipes no longer depend on copied route strings
 - added source-level and installed-package TypeScript live-client recipes for the published `validate`, `batch`, `fix`, `gates`, and `stats` validator routes, so typed route usage no longer stops at sample parsing, package-only request builders, or non-TypeScript live examples
 - added source-level and installed-package TypeScript request-family sample parsers for the published single, batch, and fix validator envelopes, so TypeScript consumers no longer have to choose between construction-only builders and Zod/runtime-only sample parsing on the request side
 - added source-level Zod request-family parsers plus installed-package CommonJS and ESM request-family parsers for the published single, batch, and fix validator request samples, so request-side projection consumers no longer depend only on TypeScript builders or raw Ajv validation

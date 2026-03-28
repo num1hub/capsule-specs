@@ -2,7 +2,7 @@
 
 This guide covers the compact machine-readable reference artifacts under [`../references/`](../references/).
 
-Use this layer when you want canonical enums, gate IDs, and validator option flags quickly without parsing the larger schema or prose surfaces first.
+Use this layer when you want canonical enums, gate IDs, validator option flags, and published validator route constants quickly without parsing the larger schema or prose surfaces first.
 
 ## What this layer publishes
 
@@ -16,6 +16,8 @@ Use this layer when you want canonical enums, gate IDs, and validator option fla
   - validator option flags and gate-severity enum values
 - [`../references/validation-gates.json`](../references/validation-gates.json)
   Compact ordered gate-family map and short summaries for `G01` through `G16`
+- [`../references/validator-routes.json`](../references/validator-routes.json)
+  Compact published validator route map covering `POST /api/validate`, `POST /api/validate/batch`, `POST /api/validate/fix`, `GET /api/validate/stats`, and `GET /api/validate/gates`
 
 ## When to use it
 
@@ -26,6 +28,7 @@ Use the reference pack when you are building:
 - tool-builder defaults for confidence-vector dimensions
 - integrity-seal recomputation helpers that need the bounded root scope without parsing the full prose stack
 - CLI hints, dashboards, or docs generators that need the ordered gate list
+- HTTP clients or route mappers that need published validator paths and methods without scraping OpenAPI first
 
 ## What stays stronger than this layer
 
@@ -45,6 +48,7 @@ The package surface exports these files directly:
 
 - `@num1hub/capsule-specs/references/contract-constants.json`
 - `@num1hub/capsule-specs/references/validation-gates.json`
+- `@num1hub/capsule-specs/references/validator-routes.json`
 
 See also:
 

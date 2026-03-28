@@ -2,6 +2,8 @@
 
 The published validator OpenAPI document lives at [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json).
 
+If you need a smaller machine-readable route map instead of the full OpenAPI document, also inspect [`../references/validator-routes.json`](../references/validator-routes.json) and the TypeScript convenience layer [`../projections/typescript/validator-routes.ts`](../projections/typescript/validator-routes.ts).
+
 ## Covered route family
 
 The current OpenAPI surface documents the validator HTTP family:

@@ -85,7 +85,7 @@
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, repo-relative and installed-package TypeScript live-client bridges for all published validator routes, typed validate-response readers, bounded shared error-envelope readers, and installed-package request plus validate/support/error-response readers without depending on private runtime code.",
+      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, compact machine-readable route-reference JSON, shared TypeScript validator-route constants, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, repo-relative and installed-package TypeScript live-client bridges for all published validator routes, typed validate-response readers, bounded shared error-envelope readers, and installed-package request plus validate/support/error-response readers without depending on private runtime code.",
       "strongest_surfaces": [
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -131,6 +131,8 @@
         "examples/client/python-get-stats.py",
         "examples/client/node-validate-fix.mjs",
         "docs/npm-consumption.md",
+        "references/validator-routes.json",
+        "projections/typescript/validator-routes.ts",
         "examples/client/cjs-package-validate-response.cjs",
         "examples/client/esm-package-validate-response.mjs",
         "examples/client/ts-package-validate-responses.ts",
@@ -157,12 +159,13 @@
       "id": "consume-compact-contract-references",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume canonical enums, validation-gate families, and validator option flags from a compact package-consumable reference layer instead of parsing larger schemas or prose docs for every small tooling need.",
+      "outcome": "Consume canonical enums, validation-gate families, validator option flags, and published validator route constants from a compact package-consumable reference layer instead of parsing larger schemas or prose docs for every small tooling need.",
       "strongest_surfaces": [
         "docs/reference-pack.md",
         "docs/python-consumption.md",
         "references/contract-constants.json",
         "references/validation-gates.json",
+        "references/validator-routes.json",
         "references/README.md",
         "examples/client/python-contract-reference.py",
         "scripts/check-python-recipes.js"
@@ -257,7 +260,7 @@
       "id": "consume-source-level-type-projections",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, Zod parsing artifacts, and package exports that are verified from fresh consumer installs for single, batch, and fix validate request flows, source-level and installed-package typed request-sample handling, repo-relative and installed-package TypeScript live-client bridges for all published validator routes, full validate response families, bounded shared error envelopes, and support-response payloads instead of reverse-engineering shape from prose alone.",
+      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, shared validator-route constants, Zod parsing artifacts, and package exports that are verified from fresh consumer installs for single, batch, and fix validate request flows, source-level and installed-package typed request-sample handling, repo-relative and installed-package TypeScript live-client bridges for all published validator routes, full validate response families, bounded shared error envelopes, and support-response payloads instead of reverse-engineering shape from prose alone.",
       "strongest_surfaces": [
         "docs/type-projections.md",
         "docs/npm-consumption.md",
@@ -265,6 +268,7 @@
         "projections/zod/index.ts",
         "projections/typescript/capsule.ts",
         "projections/typescript/validator-api.ts",
+        "projections/typescript/validator-routes.ts",
         "projections/zod/capsule.ts",
         "projections/zod/validator-api.ts"
       ],

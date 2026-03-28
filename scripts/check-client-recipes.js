@@ -176,6 +176,7 @@ const expectedTypeProjectionImports = {
   'ts-build-validate-batch-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-fix-request.ts': '../../projections/typescript/validator-api.js',
   'ts-live-validator-client.ts': '../../projections/typescript/validator-api.js',
+  'ts-live-validator-client.ts#routes': '../../projections/typescript/validator-routes.js',
   'ts-parse-validate-requests.ts': '../../projections/typescript/validator-api.js',
   'zod-parse-validate-request.ts': '../../projections/zod/validator-api.js',
   'zod-parse-validate-batch-request.ts': '../../projections/zod/validator-api.js',
@@ -191,7 +192,8 @@ const expectedTypeProjectionImports = {
   'zod-parse-support-responses.ts': '../../projections/zod/validator-api.js'
 };
 
-for (const [fileName, projectionImport] of Object.entries(expectedTypeProjectionImports)) {
+for (const [entryName, projectionImport] of Object.entries(expectedTypeProjectionImports)) {
+  const fileName = entryName.split('#')[0];
   const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
   assert(content.includes(projectionImport), `${fileName} must import ${projectionImport}`);
 }
@@ -201,11 +203,7 @@ const expectedTypeLiveRouteReferences = {
     '../api/validate-request.single.json',
     '../api/validate-request.batch.json',
     '../api/validate-request.fix.json',
-    '/api/validate',
-    '/api/validate/batch',
-    '/api/validate/fix',
-    '/api/validate/gates',
-    '/api/validate/stats',
+    'publishedValidatorRoutes',
     'fetch('
   ]
 };
@@ -215,6 +213,7 @@ for (const [fileName, references] of Object.entries(expectedTypeLiveRouteReferen
   for (const reference of references) {
     assert(content.includes(reference), `${fileName} must reference ${reference}`);
   }
+  assert(!content.includes('${baseUrl}/api/validate'), `${fileName} must rely on shared route constants instead of copied route strings`);
 }
 
 const expectedSchemaRecipeImports = {
@@ -500,14 +499,11 @@ const expectedPackageTypeImports = {
   ],
   'ts-package-live-validator-client.ts': [
     '@num1hub/capsule-specs/typescript/validator-api',
+    '@num1hub/capsule-specs/typescript/validator-routes',
     '@num1hub/capsule-specs/examples/api/validate-request.single.json',
     '@num1hub/capsule-specs/examples/api/validate-request.batch.json',
     '@num1hub/capsule-specs/examples/api/validate-request.fix.json',
-    '/api/validate',
-    '/api/validate/batch',
-    '/api/validate/fix',
-    '/api/validate/gates',
-    '/api/validate/stats',
+    'publishedValidatorRoutes',
     'fetch('
   ],
   'ts-package-support-responses.ts': [
@@ -544,6 +540,9 @@ for (const [fileName, imports] of Object.entries(expectedPackageTypeImports)) {
   const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
   for (const importPath of imports) {
     assert(content.includes(importPath), `${fileName} must import ${importPath}`);
+  }
+  if (fileName === 'ts-package-live-validator-client.ts') {
+    assert(!content.includes('${baseUrl}/api/validate'), `${fileName} must rely on shared route constants instead of copied route strings`);
   }
 }
 

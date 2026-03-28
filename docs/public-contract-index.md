@@ -100,6 +100,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../references/README.md`](../references/README.md)
 - [`../references/contract-constants.json`](../references/contract-constants.json)
 - [`../references/validation-gates.json`](../references/validation-gates.json)
+- [`../references/validator-routes.json`](../references/validator-routes.json)
 - [`../capsules/README.md`](../capsules/README.md)
 - [`../capsules/capsule.foundation.capsuleos.5-element-law.v1.json`](../capsules/capsule.foundation.capsuleos.5-element-law.v1.json)
 - [`../capsules/capsule.foundation.capsuleos.16-gates.v1.json`](../capsules/capsule.foundation.capsuleos.16-gates.v1.json)
@@ -116,6 +117,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`api-envelopes.md`](api-envelopes.md)
 - [`route-reference.md`](route-reference.md)
 - [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
+- [`../projections/typescript/validator-routes.ts`](../projections/typescript/validator-routes.ts)
 
 ## Schemas
 

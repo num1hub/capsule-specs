@@ -37,7 +37,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, full-route client recipes, repo-relative TypeScript request builders plus typed request readers, repo-relative and installed-package TypeScript live-client bridges, repo-relative Zod request parsers, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package request plus validate/support/error-response readers that cover single, batch, fix, gates, stats, and shared generic rejection paths without depending on private runtime code.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, compact machine-readable route-reference JSON, shared TypeScript route constants, full-route client recipes, repo-relative TypeScript request builders plus typed request readers, repo-relative and installed-package TypeScript live-client bridges, repo-relative Zod request parsers, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package request plus validate/support/error-response readers that cover single, batch, fix, gates, stats, and shared generic rejection paths without depending on private runtime code.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -47,6 +47,7 @@
         "openapi/validate.openapi.json",
         "docs/api-envelopes.md",
         "schemas/validator-api-envelopes.schema.json",
+        "references/validator-routes.json",
         "examples/client/node-validate-single.mjs",
         "docs/python-consumption.md",
         "examples/client/python-validate-single.py",
@@ -111,6 +112,7 @@
         "examples/client/esm-package-error-responses.mjs",
         "examples/client/ts-package-support-responses.ts",
         "examples/client/ts-package-error-responses.ts",
+        "projections/typescript/validator-routes.ts",
         "examples/client/ts-live-validator-client.ts",
         "examples/client/ts-package-live-validator-client.ts"
       ],
@@ -126,7 +128,7 @@
     },
     {
       "id": "compact-contract-reference-pack",
-      "claim": "Tool-builders can consume canonical enums, validation-gate families, and validator option flags from a compact package-consumable reference layer without treating that layer as stronger than the schemas, gate docs, or raw capsules it summarizes.",
+      "claim": "Tool-builders can consume canonical enums, validation-gate families, validator option flags, and published validator route constants from a compact package-consumable reference layer without treating that layer as stronger than the schemas, gate docs, OpenAPI, or raw capsules it summarizes.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -136,6 +138,7 @@
         "docs/python-consumption.md",
         "references/contract-constants.json",
         "references/validation-gates.json",
+        "references/validator-routes.json",
         "scripts/check-reference-pack.js",
         "examples/client/python-contract-reference.py",
         "scripts/check-python-recipes.js"
@@ -143,6 +146,7 @@
       "supporting_surfaces": [
         "docs/integration-guide.md",
         "docs/npm-consumption.md",
+        "docs/route-reference.md",
         "docs/16-gates.md",
         "schemas/capsule-schema.json",
         "schemas/neuro-concentrate.schema.json",

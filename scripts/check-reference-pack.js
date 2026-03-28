@@ -30,7 +30,11 @@ const neuroSchema = readJson('schemas/neuro-concentrate.schema.json');
 const validatorSchema = readJson('schemas/validator-api-envelopes.schema.json');
 const constants = readJson('references/contract-constants.json');
 const gates = readJson('references/validation-gates.json');
+const routes = readJson('references/validator-routes.json');
 const gatesDoc = readText('docs/16-gates.md');
+const routeDoc = readText('docs/route-reference.md');
+const openapiDoc = readText('docs/openapi.md');
+const openapi = readJson('openapi/validate.openapi.json');
 
 const expectedRootKeys = capsuleSchema.required;
 const expectedTypes = capsuleSchema.properties.metadata.properties.type.enum;
@@ -86,8 +90,17 @@ const expectedGates = [
   ['G16', 'cryptographic', '`integrity_sha3_512` matches the recomputed SHA3-512 hash over the canonicalized first four roots']
 ];
 
+const expectedRoutes = [
+  ['validateSingle', 'POST', '/api/validate', 'examples/api/validate-request.single.json', ['examples/api/validate-response.pass.json', 'examples/api/validate-response.fail.json']],
+  ['validateBatch', 'POST', '/api/validate/batch', 'examples/api/validate-request.batch.json', ['examples/api/validate-response.batch.json']],
+  ['validateFix', 'POST', '/api/validate/fix', 'examples/api/validate-request.fix.json', ['examples/api/validate-response.fix.sample.json']],
+  ['getStats', 'GET', '/api/validate/stats', null, ['examples/api/stats-response.sample.json']],
+  ['getGates', 'GET', '/api/validate/gates', null, ['examples/api/gates-response.sample.json']]
+];
+
 assert(constants.version === pkg.version, 'contract-constants version must match package.json version');
 assert(gates.version === pkg.version, 'validation-gates version must match package.json version');
+assert(routes.version === pkg.version, 'validator-routes version must match package.json version');
 
 assert(sameArray(constants.capsule_root_keys, expectedRootKeys), 'contract-constants capsule_root_keys must match schema required roots');
 assert(sameArray(constants.metadata.type_enum, expectedTypes), 'contract-constants metadata.type_enum must match schema enum');
@@ -106,6 +119,7 @@ assert(constants.validator.integrity_sha3_512_pattern === expectedIntegrityPatte
 
 assert(Array.isArray(gates.families) && sameArray(gates.families, expectedFamilies), 'validation-gates families must match the expected gate-family map');
 assert(Array.isArray(gates.gates) && gates.gates.length === expectedGates.length, 'validation-gates must publish all 16 gates');
+assert(Array.isArray(routes.routes) && routes.routes.length === expectedRoutes.length, 'validator-routes must publish all 5 routes');
 
 for (const [index, [id, family, summary]] of expectedGates.entries()) {
   const gate = gates.gates[index];
@@ -122,8 +136,22 @@ for (const family of gates.families) {
   }
 }
 
+for (const [index, [id, method, pathName, requestExample, responseExamples]] of expectedRoutes.entries()) {
+  const route = routes.routes[index];
+  assert(route.id === id, `validator-routes route ${index} must have id ${id}`);
+  assert(route.method === method, `validator-routes ${id} must use ${method}`);
+  assert(route.path === pathName, `validator-routes ${id} must use path ${pathName}`);
+  if (requestExample) {
+    assert(route.request_example === requestExample, `validator-routes ${id} request example must match expected public example`);
+  }
+  assert(sameArray(route.response_examples, responseExamples), `validator-routes ${id} response examples must match expected public examples`);
+  assert(openapi.paths?.[pathName]?.[method.toLowerCase()], `OpenAPI must publish ${method} ${pathName}`);
+  assert(routeDoc.includes(`## \`${method} ${pathName}\``), `docs/route-reference.md must include ${method} ${pathName}`);
+  assert(openapiDoc.includes(`- \`${method} ${pathName}\``), `docs/openapi.md must include ${method} ${pathName}`);
+}
+
 if (process.exitCode) {
   process.exit(process.exitCode);
 }
 
-console.log(`OK: checked reference pack constants and ${gates.gates.length} validation gates`);
+console.log(`OK: checked reference pack constants, ${routes.routes.length} validator routes, and ${gates.gates.length} validation gates`);

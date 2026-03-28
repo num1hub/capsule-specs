@@ -12,6 +12,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for pass, fail, batch, and fix validator response-family parsing and typing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for single, batch, and fix validator request-family typing through installed TypeScript consumer recipes
 - package exports for typed reading of the published single, batch, and fix validator request samples through installed TypeScript consumer recipes
+- package exports for compact published validator route constants through JSON and TypeScript surfaces
 - package exports for a typed installed-package TypeScript `fetch` client across the published `validate`, `batch`, `fix`, `gates`, and `stats` validator routes
 - package exports for single, batch, and fix validator request-family parsing through installed CommonJS and ESM consumer recipes
 - package exports for bounded generic, unauthorized, conflict, and rate-limit error-envelope parsing through installed CommonJS, ESM, and TypeScript consumer recipes
@@ -42,6 +43,7 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/zod`
   Public-safe Zod projection bundle.
 - `@num1hub/capsule-specs/typescript/capsule`
+- `@num1hub/capsule-specs/typescript/validator-routes`
 - `@num1hub/capsule-specs/typescript/validator-api`
 - `@num1hub/capsule-specs/zod/capsule`
 - `@num1hub/capsule-specs/zod/validator-api`
@@ -54,6 +56,7 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/openapi/validate.openapi.json`
 - `@num1hub/capsule-specs/references/contract-constants.json`
 - `@num1hub/capsule-specs/references/validation-gates.json`
+- `@num1hub/capsule-specs/references/validator-routes.json`
 - `@num1hub/capsule-specs/examples/example-validator-invalid-g16.capsule.json`
 - `@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json`
 - `@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json`

@@ -30,6 +30,11 @@
       "require": "./dist/projections/typescript/capsule.js",
       "default": "./dist/projections/typescript/capsule.js"
     },
+    "./typescript/validator-routes": {
+      "types": "./dist/projections/typescript/validator-routes.d.ts",
+      "require": "./dist/projections/typescript/validator-routes.js",
+      "default": "./dist/projections/typescript/validator-routes.js"
+    },
     "./typescript/validator-api": {
       "types": "./dist/projections/typescript/validator-api.d.ts",
       "require": "./dist/projections/typescript/validator-api.js",

@@ -45,7 +45,7 @@
 - machine-readable schemas, including validator API envelope coverage
 - public-safe TypeScript and Zod projection files for capsule and validator API contracts, bundle entrypoints, package-surface build config, package-surface verification, fresh-install verification, and both source-level and package-level CommonJS, ESM, and TypeScript consumer recipe examples
 - source-level and installed-package TypeScript request-sample readers for the published single, batch, and fix validator envelopes, so request-side TypeScript consumers are no longer construction-only
-- source-level and installed-package TypeScript live-client recipes for the published `validate`, `batch`, `fix`, `gates`, and `stats` validator routes, so typed route usage no longer stops at static sample parsing or language-specific live recipes
+- compact validator-route reference JSON, a shared TypeScript validator-route projection, and source-level plus installed-package TypeScript live-client recipes for the published `validate`, `batch`, `fix`, `gates`, and `stats` validator routes, so typed route usage no longer stops at static sample parsing or language-specific live recipes
 - package-consumer support-response recipes for `gates` and `stats`, plus fresh-install proof that the installed validator projection layer covers support payload parsing as well as `validate` request/response flows
 - compact contract-reference JSON artifacts, their directory guide and human guide, package-consumer recipes, and repo-local verifier
 - single-file bundled schema artifacts, their human guide, package-consumer recipes, and repo-local verifier
@@ -137,7 +137,7 @@ Repository-local audit on 2026-03-28:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `314` files / `314` manifest entries
+- manifest coverage: `356` files / `356` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

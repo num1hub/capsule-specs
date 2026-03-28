@@ -188,7 +188,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; synchronized with validator API type-projection surfaces; package-export projection layer synchronized"
@@ -576,7 +578,9 @@
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable matrix of concrete outcomes supported by the current public repository surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -749,7 +753,10 @@
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-adoption-readiness.js",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/scripts/check-contract-catalog.js"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -1213,7 +1220,9 @@
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable reviewer/program profile summarizing repository maturity and public-surface signals.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -1332,7 +1341,9 @@
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable release evidence covering verification, coverage counts, and residual risks.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -1442,7 +1453,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Release review updated for verification matrix layer; manifest coverage tracked in PUBLIC_RELEASE_METADATA.json; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release review synchronized with public type-projection surfaces; release review synchronized with validator API projection surfaces; package-export projection layer synchronized"
@@ -1607,7 +1620,9 @@
       "scripts/check-audience-paths.js",
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable claim-to-evidence and claim-to-verification matrix for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -1893,7 +1908,9 @@
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-adoption-readiness.js",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; front door synchronized with public validator API projection surfaces; package-export projection layer synchronized"
@@ -1958,7 +1975,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Public roadmap for the open-core specification surface.; wave 3 updated for published type projections; package-export projection layer synchronized"
@@ -2141,7 +2160,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the published validator request, response, and support-route envelope families."
@@ -2356,7 +2377,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Consumer-oriented curl, Node, and Python usage guide for the validator HTTP surface with full published route coverage."
@@ -2763,7 +2786,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Integrator reading path through schema, OpenAPI, examples, support routes, and consumer recipes."
@@ -2888,7 +2913,9 @@
       "/home/n1/codex-workspace/scripts/check-package-install.js",
       "/home/n1/codex-workspace/tsconfig.build.json",
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the buildable package-export surface for the maintained projection layer, including local tarball install posture and TypeScript package-consumer resolution."
@@ -2898,7 +2925,9 @@
       "/home/n1/codex-workspace/docs/failure-model.md",
       "/home/n1/codex-workspace/docs/schema-family-reference.md",
       "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
-      "/home/n1/n1hub.com/docs/validator.md"
+      "/home/n1/n1hub.com/docs/validator.md",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "derived",
     "notes": "Human-readable note about the published OpenAPI surface."
@@ -3057,7 +3086,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable index of the major public contract surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; contract index synchronized with validator API source-level projections; package-export projection layer synchronized"
@@ -3102,7 +3133,8 @@
       "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py",
       "/home/n1/codex-workspace/examples/client/python-validate-batch.py",
       "/home/n1/codex-workspace/examples/client/python-validate-fix.py",
-      "/home/n1/codex-workspace/examples/client/python-validate-single.py"
+      "/home/n1/codex-workspace/examples/client/python-validate-single.py",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to Python consumption of compact references, validator request/response flows, support routes, and public G16 seal proofs."
@@ -3119,7 +3151,8 @@
       "/home/n1/codex-workspace/docs/integration-guide.md",
       "/home/n1/codex-workspace/docs/npm-consumption.md",
       "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/references/validation-gates.json"
+      "/home/n1/codex-workspace/references/validation-gates.json",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the compact contract-reference layer for tool-builders and package consumers."
@@ -3253,7 +3286,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release evidence synchronized with public type-projection surfaces; release evidence synchronized with validator API projection surfaces; package-export projection layer synchronized"
@@ -3420,7 +3455,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-error-responses.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-error-responses.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-error-responses.ts",
-      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json"
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Per-route map from published validator routes to the strongest examples and live client recipes."
@@ -3622,7 +3659,8 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the public-safe TypeScript and Zod projection layer and its bounded consumer recipes.; type-projection guide synchronized with validator API source-level surfaces; package-export projection layer synchronized"
@@ -4088,7 +4126,8 @@
   "examples/client/cjs-package-contract-reference.cjs": {
     "source_paths": [
       "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/references/validation-gates.json"
+      "/home/n1/codex-workspace/references/validation-gates.json",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "CommonJS package-consumer recipe for compact contract-reference exports."
@@ -4353,7 +4392,8 @@
       "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
       "/home/n1/codex-workspace/docs/python-consumption.md",
       "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/references/validation-gates.json"
+      "/home/n1/codex-workspace/references/validation-gates.json",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files."
@@ -4491,7 +4531,8 @@
   "examples/client/ts-package-contract-reference.ts": {
     "source_paths": [
       "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/references/validation-gates.json"
+      "/home/n1/codex-workspace/references/validation-gates.json",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "TypeScript package-consumer recipe for compact contract-reference exports."
@@ -4837,7 +4878,9 @@
       "schemas/public-evidence-strength-map.schema.json",
       "scripts/check-adoption-readiness.js",
       "scripts/check-audience-paths.js",
-      "scripts/check-evidence-strength.js"
+      "scripts/check-evidence-strength.js",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package metadata synchronized with type-projection tooling; package-export projection layer synchronized"
@@ -4883,7 +4926,8 @@
   "projections/typescript/index.ts": {
     "source_paths": [
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/typescript/validator-api.ts"
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts"
     ],
     "transformation_type": "generated",
     "notes": "Bundle entrypoint for the public-safe TypeScript projection surface."
@@ -4897,6 +4941,15 @@
     ],
     "transformation_type": "derived",
     "notes": "Public-safe TypeScript projection for validator request and response envelopes."
+  },
+  "projections/typescript/validator-routes.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/references/validator-routes.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public-safe TypeScript projection for the published validator route constants."
   },
   "projections/zod/capsule.ts": {
     "source_paths": [
@@ -4927,7 +4980,8 @@
   },
   "references/README.md": {
     "source_paths": [
-      "/home/n1/codex-workspace/docs/reference-pack.md"
+      "/home/n1/codex-workspace/docs/reference-pack.md",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for compact machine-readable contract references."
@@ -4948,6 +5002,23 @@
     ],
     "transformation_type": "generated",
     "notes": "Compact gate-family and gate-summary reference derived from the stronger public gate docs and raw capsule."
+  },
+  "references/validator-routes.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Compact published validator-route reference derived from stronger OpenAPI, route docs, and curated API examples."
   },
   "schemas/README.md": {
     "source_paths": [
@@ -5480,7 +5551,8 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local checks for curl, Node, and Python client recipe snippets across all published validator routes."
@@ -5554,7 +5626,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local validation for the machine-readable public contract catalog.; synchronized with evidence-gaps surfaces; contract catalog verifier synchronized with projection artifacts; contract catalog verifier synchronized with validator API source-level projections; package-export projection layer synchronized"
@@ -5997,7 +6071,9 @@
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the built package-export and pack surface."
@@ -6141,7 +6217,11 @@
       "/home/n1/codex-workspace/references/validation-gates.json",
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
       "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/openapi.md",
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the compact contract-reference pack."
@@ -6484,7 +6564,8 @@
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
       "/home/n1/codex-workspace/examples/client/ts-package-parse-validate-requests.ts",
       "/home/n1/codex-workspace/examples/client/ts-live-validator-client.ts",
-      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts"
+      "/home/n1/codex-workspace/examples/client/ts-package-live-validator-client.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local TypeScript config for typechecking the public projection layer, including self-package path mapping for package-style TypeScript recipes."
@@ -6525,7 +6606,9 @@
       "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
       "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
       "/home/n1/codex-workspace/examples/api/validate-request.single.json",
-      "/home/n1/codex-workspace/projections/typescript/validator-api.ts"
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Minimal TypeScript consumer recipe for a typed validator live client that covers the published route family through the public projection layer."
@@ -6537,7 +6620,9 @@
       "/home/n1/codex-workspace/examples/api/validate-request.single.json",
       "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
-      "/home/n1/codex-workspace/tsconfig.json"
+      "/home/n1/codex-workspace/tsconfig.json",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
     ],
     "transformation_type": "generated",
     "notes": "Minimal TypeScript package-consumer recipe for a typed validator live client that covers the published route family through installed package exports."

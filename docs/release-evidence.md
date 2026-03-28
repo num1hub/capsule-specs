@@ -163,6 +163,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal source-level TypeScript recipe for constructing a validator fix request envelope.
 - [`../examples/client/ts-live-validator-client.ts`](../examples/client/ts-live-validator-client.ts)
   Minimal source-level TypeScript recipe for a typed `fetch` client that covers the published validator route family from repo-relative projection imports.
+- [`../projections/typescript/validator-routes.ts`](../projections/typescript/validator-routes.ts)
+  Shared TypeScript route constants for the published validator HTTP family, used by the typed live-client bridge instead of copied route strings.
 - [`../examples/client/ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts)
   Minimal source-level TypeScript recipe for typing the published single, batch, and fix validator request samples.
 - [`../examples/client/zod-parse-validate-request.ts`](../examples/client/zod-parse-validate-request.ts)
@@ -251,6 +253,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal TypeScript package-consumer recipe for typed generic, unauthorized, conflict, and rate-limit error-envelope handling through installed package exports.
 - [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
   Minimal TypeScript package-consumer recipe for a typed `fetch` client that covers the published validator route family through installed package exports.
+- [`../references/validator-routes.json`](../references/validator-routes.json)
+  Compact machine-readable route map for the published validator HTTP family, kept aligned to OpenAPI and route docs through the reference-pack verifier.
 - [`../examples/client/ts-package-support-responses.ts`](../examples/client/ts-package-support-responses.ts)
   Minimal TypeScript package-consumer recipe for typed `gates` and `stats` support-response handling through installed package exports.
 - [`../examples/client/ts-package-validate-responses.ts`](../examples/client/ts-package-validate-responses.ts)
@@ -280,7 +284,7 @@ The validator API projection layer strengthens that path further by giving tool-
 
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering installed-package request parsing and TypeScript request typing for the published single, batch, and fix families plus the full published validate-response family instead of request-side raw Ajv/typing-only proofs and a positive-pass sample only.
 
-The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, and validator option flags without forcing them to parse the larger schemas or prose docs first.
+The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, validator option flags, and published validator route constants without forcing them to parse the larger schemas or prose docs first.
 
 The schema-bundle layer strengthens that path further by giving code generators, Ajv consumers, and polyglot tooling a single-file schema path that stays subordinate to the stronger raw schema files instead of forcing every downstream consumer to wire the same multi-file `$ref` graph manually.
 

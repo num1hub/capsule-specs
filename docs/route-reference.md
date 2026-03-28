@@ -2,6 +2,8 @@
 
 This page maps each published validator route to the strongest public example surfaces in this repository.
 
+If you need the same route family as compact machine-readable data, use [`../references/validator-routes.json`](../references/validator-routes.json). If you need typed route constants from the projection layer, use [`../projections/typescript/validator-routes.ts`](../projections/typescript/validator-routes.ts).
+
 ## `POST /api/validate`
 
 - contract: [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
@@ -51,4 +53,5 @@ This page maps each published validator route to the strongest public example su
 - some response samples are illustrative rather than deployed HTTP captures
 - the bounded cross-map between routes, payloads, and capsule examples lives in [`../PUBLIC_EXAMPLE_COVERAGE.json`](../PUBLIC_EXAMPLE_COVERAGE.json)
 - consumer snippets live in [`client-recipes.md`](client-recipes.md) and [`../examples/client/`](../examples/client/), and they now cover all published validator routes
+- the compact route pack in [`../references/validator-routes.json`](../references/validator-routes.json) stays subordinate to the stronger OpenAPI document and the route-level docs on this page
 - when route behavior changes, update this map, the OpenAPI file, the API examples, and the contract catalog together

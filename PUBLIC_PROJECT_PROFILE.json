@@ -57,8 +57,9 @@
       "contributor-facing repo-only validation workflow docs",
       "buildable package-export projection bundles",
       "package-level consumer recipe examples",
-      "compact machine-readable contract references for canonical enums, gate families, and validator option flags",
+      "compact machine-readable contract references for canonical enums, gate families, validator option flags, and published validator route constants",
       "package-level compact reference consumer recipe examples",
+      "public-safe TypeScript validator route constants",
       "raw JSON Schema consumer recipes for capsule and validator-envelope validation",
       "intentionally schema-invalid capsule fixtures for structural rejection testing",
       "pack-ready projection-consumer docs",
@@ -94,7 +95,7 @@
     ]
   },
   "surface_summary": {
-    "total_files": 354,
+    "total_files": 356,
     "markdown_files": 100,
     "schema_files": 36,
     "raw_capsule_files": 8,

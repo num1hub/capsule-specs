@@ -1,0 +1,50 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-28",
+  "routes": [
+    {
+      "id": "validateSingle",
+      "method": "POST",
+      "path": "/api/validate",
+      "request_example": "examples/api/validate-request.single.json",
+      "response_examples": [
+        "examples/api/validate-response.pass.json",
+        "examples/api/validate-response.fail.json"
+      ]
+    },
+    {
+      "id": "validateBatch",
+      "method": "POST",
+      "path": "/api/validate/batch",
+      "request_example": "examples/api/validate-request.batch.json",
+      "response_examples": [
+        "examples/api/validate-response.batch.json"
+      ]
+    },
+    {
+      "id": "validateFix",
+      "method": "POST",
+      "path": "/api/validate/fix",
+      "request_example": "examples/api/validate-request.fix.json",
+      "response_examples": [
+        "examples/api/validate-response.fix.sample.json"
+      ]
+    },
+    {
+      "id": "getStats",
+      "method": "GET",
+      "path": "/api/validate/stats",
+      "response_examples": [
+        "examples/api/stats-response.sample.json"
+      ]
+    },
+    {
+      "id": "getGates",
+      "method": "GET",
+      "path": "/api/validate/gates",
+      "response_examples": [
+        "examples/api/gates-response.sample.json"
+      ]
+    }
+  ]
+}

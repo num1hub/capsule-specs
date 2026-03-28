@@ -23,6 +23,7 @@ const requiredExports = [
   '.',
   './typescript',
   './typescript/capsule',
+  './typescript/validator-routes',
   './typescript/validator-api',
   './zod',
   './zod/capsule',
@@ -49,6 +50,8 @@ const requiredBuiltFiles = [
   'dist/projections/typescript/index.js',
   'dist/projections/typescript/index.d.ts',
   'dist/projections/typescript/capsule.js',
+  'dist/projections/typescript/validator-routes.js',
+  'dist/projections/typescript/validator-routes.d.ts',
   'dist/projections/typescript/validator-api.js',
   'dist/projections/zod/index.js',
   'dist/projections/zod/index.d.ts',
@@ -73,6 +76,7 @@ const validatorBundleJson = require('@num1hub/capsule-specs/schemas/validator-ap
 const openapi = require('@num1hub/capsule-specs/openapi/validate.openapi.json');
 const contractConstants = require('@num1hub/capsule-specs/references/contract-constants.json');
 const validationGates = require('@num1hub/capsule-specs/references/validation-gates.json');
+const validatorRoutes = require('@num1hub/capsule-specs/references/validator-routes.json');
 const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
 const singleRequestSample = require('@num1hub/capsule-specs/examples/api/validate-request.single.json');
 const batchRequestSample = require('@num1hub/capsule-specs/examples/api/validate-request.batch.json');
@@ -96,6 +100,7 @@ const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsul
 
 assert(rootExports && rootExports.typescript && rootExports.zod, 'root package export must expose typescript and zod namespaces');
 assert(Array.isArray(typescriptProjection.CAPSULE_TYPES), 'typescript export must expose CAPSULE_TYPES');
+assert(typescriptProjection.publishedValidatorRoutes?.validateSingle === '/api/validate', 'typescript export must expose published validator route constants');
 assert(typeof zodProjection.capsuleSchema?.parse === 'function', 'zod export must expose capsuleSchema.parse');
 assert(typeof validatorZod.validateSingleRequestSchema?.parse === 'function', 'validator zod export must expose validateSingleRequestSchema.parse');
 assert(typeof validatorZod.validateBatchRequestSchema?.parse === 'function', 'validator zod export must expose validateBatchRequestSchema.parse');
@@ -115,6 +120,7 @@ assert(validatorSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/sch
 assert(validatorBundleJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json', 'validator bundle export must expose the public bundled schema JSON');
 assert(typeof openapi.openapi === 'string' && openapi.openapi.length > 0, 'OpenAPI export must expose a valid OpenAPI document');
 assert(Array.isArray(contractConstants.relation_types) && contractConstants.relation_types.length === 9, 'reference export must expose canonical relation types');
+assert(Array.isArray(validatorRoutes.routes) && validatorRoutes.routes.length === 5, 'reference export must expose all published validator routes');
 assert(
   Array.isArray(contractConstants.validator?.integrity_payload_root_keys) &&
     contractConstants.validator.integrity_payload_root_keys.length === 4,
@@ -218,6 +224,7 @@ for (const relativePath of [
   'openapi/validate.openapi.json',
   'references/contract-constants.json',
   'references/validation-gates.json',
+  'references/validator-routes.json',
   'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json',
   'docs/reference-pack.md',
   'examples/client/ajv-validate-capsule.mjs',

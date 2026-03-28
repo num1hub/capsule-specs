@@ -3910,6 +3910,21 @@
       ]
     },
     {
+      "id": "projection.typescript-validator-routes",
+      "path": "projections/typescript/validator-routes.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
       "id": "projection.zod-capsule",
       "path": "projections/zod/capsule.ts",
       "kind": "projection",
@@ -3987,6 +4002,22 @@
     {
       "id": "reference.validation-gates",
       "path": "references/validation-gates.json",
+      "kind": "reference-data",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:reference-pack",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "reference.validator-routes",
+      "path": "references/validator-routes.json",
       "kind": "reference-data",
       "stability": "contract",
       "audiences": [

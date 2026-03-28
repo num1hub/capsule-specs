@@ -8,6 +8,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Public-safe TypeScript interfaces and literal unions for the capsule outer shape.
 - [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
   Public-safe TypeScript interfaces for validator request and response envelopes.
+- [`../projections/typescript/validator-routes.ts`](../projections/typescript/validator-routes.ts)
+  Shared TypeScript route constants for the published validator HTTP family.
 - [`../projections/typescript/index.ts`](../projections/typescript/index.ts)
   Bundle entrypoint for the public-safe TypeScript surface.
 - [`../projections/zod/capsule.ts`](../projections/zod/capsule.ts)
@@ -96,10 +98,12 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - a source-level path for batch and fix validator envelopes that stays aligned to the published sample payload families
 - a source-level TypeScript path for typing the published single, batch, and fix request samples instead of treating TypeScript as construction-only on the request side
 - a source-level TypeScript `fetch` client path that keeps request shapes, response unions, support payloads, and bounded shared error envelopes tied to the published validator API projection
+- a source-level TypeScript route-constant path that keeps live-client examples and downstream tooling aligned to one maintained validator-route surface instead of copied strings
 - a source-level Zod path for parsing the published single, batch, and fix request families instead of validating them only through raw Ajv
 - an installed-package TypeScript path for single, batch, and fix validator request-family typing without repo-relative imports
 - an installed-package TypeScript path for typing the published single, batch, and fix request samples from package-exported JSON assets instead of relying only on runtime CJS/ESM parsing
 - an installed-package TypeScript `fetch` client path that proves the public validator API projection remains usable from a fresh consumer install, not just from repo-relative examples
+- an installed-package TypeScript route-constant path that proves shared validator-route constants survive packaging and fresh-install consumption, not just repo-relative usage
 - an installed-package runtime path for parsing the published single, batch, and fix request families from CommonJS and ESM consumers
 - a source-level path for typed validate-response families that stays aligned to the published pass, fail, batch, and fix samples
 - a source-level Zod path for parsing the published pass, fail, batch, and fix validator response samples instead of mixing published fixtures with synthetic response objects

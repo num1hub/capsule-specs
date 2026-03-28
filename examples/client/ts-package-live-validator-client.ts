@@ -1,6 +1,7 @@
 import batchRequest from "@num1hub/capsule-specs/examples/api/validate-request.batch.json" with { type: "json" };
 import fixRequest from "@num1hub/capsule-specs/examples/api/validate-request.fix.json" with { type: "json" };
 import singleRequest from "@num1hub/capsule-specs/examples/api/validate-request.single.json" with { type: "json" };
+import { publishedValidatorRoutes } from "@num1hub/capsule-specs/typescript/validator-routes";
 import type {
   GatesResponse,
   SimpleErrorResponse,
@@ -15,14 +16,6 @@ import type {
 } from "@num1hub/capsule-specs/typescript/validator-api";
 
 export type ValidatorRouteResult<T> = T | SimpleErrorResponse;
-
-export const publishedValidatorRoutes = {
-  validateSingle: "/api/validate",
-  validateBatch: "/api/validate/batch",
-  validateFix: "/api/validate/fix",
-  getGates: "/api/validate/gates",
-  getStats: "/api/validate/stats"
-} as const;
 
 export const exampleSingleRequest = singleRequest as ValidateSingleRequest;
 export const exampleBatchRequest = batchRequest as ValidateBatchRequest;

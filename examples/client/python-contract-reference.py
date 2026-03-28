@@ -13,6 +13,7 @@ def load_json(relative_path: str) -> dict:
 
 contract_constants = load_json("references/contract-constants.json")
 validation_gates = load_json("references/validation-gates.json")
+validator_routes = load_json("references/validator-routes.json")
 confidence_vector_capsule = load_json(
     "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json"
 )
@@ -29,6 +30,8 @@ assert contract_constants["validator"]["integrity_payload_root_keys"] == expecte
 assert contract_constants["validator"]["integrity_canonicalization"] == "sorted-key-json"
 assert len(validation_gates["gates"]) == 16
 assert len(validation_gates["families"]) == 4
+assert len(validator_routes["routes"]) == 5
+assert validator_routes["routes"][0]["path"] == "/api/validate"
 assert (
     confidence_vector_capsule["metadata"]["capsule_id"]
     == "capsule.foundation.capsuleos.confidence-vector.v1"
@@ -38,6 +41,10 @@ summary = {
     "relationTypeCount": len(contract_constants["relation_types"]),
     "gateCount": len(validation_gates["gates"]),
     "gateFamilies": [family["id"] for family in validation_gates["families"]],
+    "routeCount": len(validator_routes["routes"]),
+    "supportRoutes": [
+        route["path"] for route in validator_routes["routes"] if route["method"] == "GET"
+    ],
     "integrityPayloadRootKeys": contract_constants["validator"]["integrity_payload_root_keys"],
     "integrityCanonicalization": contract_constants["validator"]["integrity_canonicalization"],
     "confidenceVectorCapsuleId": confidence_vector_capsule["metadata"]["capsule_id"],
