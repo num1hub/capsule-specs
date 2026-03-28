@@ -20,6 +20,12 @@ This directory contains minimal consumer-oriented examples for the published val
 - `ts-build-validate-request.ts`
 - `zod-parse-validate-response.ts`
 
+## Raw schema recipes
+
+- `ajv-validate-capsule.mjs`
+- `ajv-validate-validator-envelope.mjs`
+- `esm-package-ajv-validate-contracts.mjs`
+
 ## Package recipes
 
 - `cjs-package-capsule-summary.cjs`
@@ -38,3 +44,4 @@ This directory contains minimal consumer-oriented examples for the published val
 - The TypeScript recipes demonstrate source-level consumer usage of the published projection layer under `projections/`.
 - The package recipes demonstrate CommonJS, ESM, and TypeScript consumption after `npm run build:projections` or from a packed artifact installed into a fresh project.
 - The package recipes also cover compact JSON contract references in addition to projection exports and raw capsule assets.
+- The raw-schema recipes demonstrate direct Ajv validation against published schema files and package-exported schema assets.

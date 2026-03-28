@@ -89,6 +89,7 @@ const requiredIds = [
   'reference.contract-constants',
   'reference.validation-gates',
   'reference.check',
+  'docs.schema-validation-recipes',
   'schema.reference-doc',
   'schema.family-reference-doc',
   'schema.directory-guide',
@@ -202,11 +203,16 @@ const requiredIds = [
   'examples.client.ts-build-validate-request',
   'examples.client.zod-parse-validate-response',
   'examples.client.cjs-package-capsule-summary',
+  'examples.client.ajv-validate-capsule',
+  'examples.client.ajv-validate-validator-envelope',
   'examples.client.cjs-package-contract-reference',
   'examples.client.cjs-package-validate-response',
+  'examples.client.esm-package-ajv-validate-contracts',
   'examples.client.esm-package-capsule-summary',
   'examples.client.esm-package-validate-response',
-  'examples.client.ts-package-contract-reference'
+  'examples.client.ts-package-contract-reference',
+  'examples.client.ts-package-validate-request',
+  'schema.recipe-check'
 ];
 
 for (const requiredId of requiredIds) {

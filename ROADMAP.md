@@ -41,3 +41,4 @@ Wave 2 and Wave 3 are already delivered. Wave 4 is the next deliberate expansion
 - publish more contract families when they are ready for a stable public boundary
   Started through the compact contract-reference layer under [`references/`](references/), the guide in [`docs/reference-pack.md`](docs/reference-pack.md), and the verifier in [`scripts/check-reference-pack.js`](scripts/check-reference-pack.js).
 - improve onboarding for external contributors and integrators
+  Started through [`docs/schema-validation-recipes.md`](docs/schema-validation-recipes.md), the Ajv consumer recipes under [`examples/client/`](examples/client/), and the verifier in [`scripts/check-schema-recipes.js`](scripts/check-schema-recipes.js).

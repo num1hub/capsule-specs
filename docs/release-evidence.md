@@ -85,6 +85,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable summary of the public portability and archive trust posture.
 - [`reference-pack.md`](reference-pack.md)
   Human-readable guide to the compact contract-reference layer for enums, gate IDs, and validator flags.
+- [`schema-validation-recipes.md`](schema-validation-recipes.md)
+  Human-readable guide to validating public capsules and validator-envelope payloads directly against the raw JSON Schema layer.
 - [`../capsules/README.md`](../capsules/README.md)
   Human-readable guide to the curated raw law-adjacent capsule source set.
 - [`../references/README.md`](../references/README.md)
@@ -121,6 +123,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that the curated raw capsule exports remain structurally aligned, package-consumable, and law-adjacent rather than drifting into an unbounded vault export.
 - [`../scripts/check-reference-pack.js`](../scripts/check-reference-pack.js)
   Repo-local verification that the compact contract-reference exports stay aligned to stronger schemas, validator flags, and published gate summaries.
+- [`../scripts/check-schema-recipes.js`](../scripts/check-schema-recipes.js)
+  Repo-local verification that the Ajv-based raw-schema consumer recipes stay executable and aligned to published schema exports.
 - [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator request envelope.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
@@ -135,6 +139,12 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal ESM package-consumer recipe for the built validator API exports.
 - [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs)
   Minimal CommonJS package-consumer recipe for compact contract-reference exports.
+- [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
+  Minimal repo-local Ajv recipe for validating a public capsule against the published capsule schema.
+- [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
+  Minimal repo-local Ajv recipe for validating public validator request/response payloads against the envelope schema bundle.
+- [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
+  Minimal package-consumer Ajv recipe for validating installed schema exports and packaged example payloads.
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
@@ -157,6 +167,8 @@ The validator API projection layer strengthens that path further by giving tool-
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree.
 
 The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, and validator option flags without forcing them to parse the larger schemas or prose docs first.
+
+The raw-schema recipe layer strengthens that path further by proving that downstream consumers can validate public capsules and validator-envelope payloads directly against the published JSON Schemas, both from a repo checkout and from installed package exports, without depending on the projection layer.
 
 The curated raw capsule layer strengthens that path further by publishing a small, verifier-backed set of stronger law-adjacent source artifacts for confidence-vector semantics, subtype meaning, and version-lineage posture without pretending the whole upstream capsule corpus is public.
 

@@ -33,6 +33,7 @@ The Markdown docs are optimized for people. The catalog is optimized for machine
 - source-level TypeScript and Zod projections can be tracked as first-class public artifacts instead of existing only as side notes in prose docs
 - curated raw capsule sources can be tracked as first-class public artifacts instead of remaining discoverable only through directory browsing
 - compact contract-reference JSON files can be tracked as first-class public artifacts instead of remaining implicit inside larger schemas and prose docs
+- raw-schema consumer recipes can be tracked as first-class public artifacts instead of remaining implicit in integrator folklore
 
 ## Important boundary
 

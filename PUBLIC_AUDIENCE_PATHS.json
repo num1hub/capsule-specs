@@ -51,6 +51,7 @@
         "docs/api-envelopes.md",
         "docs/schema-family-reference.md",
         "docs/reference-pack.md",
+        "docs/schema-validation-recipes.md",
         "docs/npm-consumption.md"
       ],
       "strongest_surfaces": [
@@ -59,6 +60,7 @@
         "examples/api/README.md",
         "PUBLIC_EVIDENCE_STRENGTH_MAP.json",
         "docs/client-recipes.md",
+        "docs/schema-validation-recipes.md",
         "PUBLIC_EXAMPLE_COVERAGE.json",
         "PUBLIC_ADOPTION_READINESS.json",
         "references/contract-constants.json",
@@ -72,6 +74,7 @@
         "npm run check:api-examples",
         "npm run check:client-recipes",
         "npm run check:reference-pack",
+        "npm run check:schema-recipes",
         "npm run check:package-surface",
         "npm run check:package-install"
       ],
@@ -80,6 +83,7 @@
         "can identify the negative-path and graph-aware examples",
         "can explain where the live validator remains stronger than public prose",
         "can consume compact enums and gate references when a full schema parse is unnecessary",
+        "can validate public capsules and validator-envelope payloads directly against raw JSON Schemas with Ajv when projection-layer ergonomics are unnecessary",
         "can consume the projection layer through package exports from a fresh install, including TypeScript type resolution, without relying on repo-relative imports"
       ],
       "bounded_non_goals": [
@@ -131,12 +135,14 @@
         "docs/schema-reference.md",
         "docs/integration-guide.md",
         "docs/reference-pack.md",
+        "docs/schema-validation-recipes.md",
         "docs/npm-consumption.md"
       ],
       "strongest_surfaces": [
         "schemas/capsule-schema.json",
         "schemas/neuro-concentrate.schema.json",
         "openapi/validate.openapi.json",
+        "docs/schema-validation-recipes.md",
         "references/contract-constants.json",
         "references/validation-gates.json",
         "PUBLIC_CONTRACT_CATALOG.json",
@@ -151,6 +157,7 @@
         "npm run check:catalog",
         "npm run check:api-schemas",
         "npm run check:reference-pack",
+        "npm run check:schema-recipes",
         "npm run check:capability-matrix",
         "npm run check:package-surface",
         "npm run check:package-install"
@@ -160,6 +167,7 @@
         "can map examples to contract surfaces without guessing",
         "can explain the stronger-source hierarchy for public generation targets",
         "can consume compact enums and gate references without parsing the larger schema files for every small tooling task",
+        "can validate public capsules and validator-envelope payloads directly against raw JSON Schemas from both repo-relative files and installed package exports",
         "can consume the projection layer through package exports from a fresh install, including TypeScript type resolution, without relying on repo-relative imports"
       ],
       "bounded_non_goals": [

@@ -21,6 +21,7 @@
         "docs/16-gates.md",
         "docs/relation-types.md",
         "docs/reference-pack.md",
+        "docs/schema-validation-recipes.md",
         "docs/schema-reference.md",
         "docs/schema-family-reference.md",
         "references/contract-constants.json",
@@ -39,7 +40,8 @@
         "reviewing confidence-vector semantics",
         "checking immutable version lineage",
         "inspecting structural subtype meaning",
-        "consuming compact enums and gate IDs without parsing the larger schema files first"
+        "consuming compact enums and gate IDs without parsing the larger schema files first",
+        "performing direct structural validation against the published capsule schemas"
       ],
       "not_authoritative_for": [
         "live runtime-only validator behavior",
@@ -63,17 +65,20 @@
         "docs/api-envelopes.md",
         "docs/route-reference.md",
         "docs/integration-guide.md",
-        "docs/schema-family-reference.md"
+        "docs/schema-family-reference.md",
+        "docs/schema-validation-recipes.md"
       ],
       "illustrative_surfaces": [
         "examples/api/validate-request.single.json",
         "examples/api/validate-response.pass.json",
+        "examples/client/ajv-validate-validator-envelope.mjs",
         "examples/client/node-validate-single.mjs"
       ],
       "preferred_for": [
         "building validator-facing clients",
         "understanding public request and response contracts",
-        "checking route and envelope expectations"
+        "checking route and envelope expectations",
+        "performing direct structural validation against the published validator-envelope schema bundle"
       ],
       "not_authoritative_for": [
         "deployed endpoint telemetry",

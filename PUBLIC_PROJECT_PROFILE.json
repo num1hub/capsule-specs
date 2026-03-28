@@ -59,10 +59,12 @@
       "package-level consumer recipe examples",
       "compact machine-readable contract references for canonical enums, gate families, and validator option flags",
       "package-level compact reference consumer recipe examples",
+      "raw JSON Schema consumer recipes for capsule and validator-envelope validation",
       "pack-ready projection-consumer docs",
       "fresh-project package-install verification across CommonJS, ESM, and TypeScript consumers",
       "repo-local verification for curated raw capsule sources",
-      "repo-local verification for compact contract references"
+      "repo-local verification for compact contract references",
+      "repo-local verification for raw JSON Schema consumer recipes"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -72,13 +74,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 267,
-    "markdown_files": 89,
+    "total_files": 272,
+    "markdown_files": 90,
     "schema_files": 34,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 16,
+    "client_recipe_files": 19,
     "workflow_files": 1,
     "issue_templates": 4
   },
@@ -124,7 +126,7 @@
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 44,
+    "repo_local_check_count": 45,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -168,6 +170,7 @@
     "schema_family_reference": "docs/schema-family-reference.md",
     "schema_directory_guide": "schemas/README.md",
     "reference_pack": "docs/reference-pack.md",
+    "schema_validation_recipes": "docs/schema-validation-recipes.md",
     "repo_validation_workflow": "docs/repo-validation-workflow.md",
     "npm_consumption": "docs/npm-consumption.md"
   },

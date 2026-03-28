@@ -38,6 +38,7 @@ This repository is that home.
 - [`docs/archive-bundles.md`](docs/archive-bundles.md) for the archive export / replay contract
 - [`docs/schema-family-reference.md`](docs/schema-family-reference.md) for choosing the right schema family first
 - [`docs/reference-pack.md`](docs/reference-pack.md) for compact machine-readable enums, gate IDs, and validator option flags
+- [`docs/schema-validation-recipes.md`](docs/schema-validation-recipes.md) for raw JSON Schema validation with Ajv from a repo checkout or installed package
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/type-projections.md`](docs/type-projections.md) for the public-safe TypeScript and Zod projection layer
 - [`docs/npm-consumption.md`](docs/npm-consumption.md) for the buildable package surface, local tarball install path, and subpath entrypoints
@@ -155,6 +156,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - local validator-backed example checks
 - machine-readable validator API envelope schemas backed by repo-local validation
 - compact machine-readable contract references exported directly for tool-builders and package consumers
+- raw JSON Schema consumer recipes for Ajv-based structural validation from repo-relative files and installed package exports
 - public-safe TypeScript and Zod projections for source-level consumers under [`projections/`](projections/)
 - public-safe TypeScript and Zod validator API envelope projections for source-level validator clients under [`projections/`](projections/)
 - a buildable and packable package-export layer for the maintained projection surface
@@ -189,8 +191,9 @@ Maintainer and review policy:
 5. Inspect [`docs/schema-family-reference.md`](docs/schema-family-reference.md) to choose the right schema family and abstraction level.
 6. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
 7. Inspect [`docs/reference-pack.md`](docs/reference-pack.md) and [`references/`](references/) if you want compact machine-readable enums, gate IDs, and validator option flags without parsing larger schemas first.
-8. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`docs/npm-consumption.md`](docs/npm-consumption.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level or package-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
-9. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
+8. Inspect [`docs/schema-validation-recipes.md`](docs/schema-validation-recipes.md) if you want to validate capsules and validator-envelope payloads directly against the published raw JSON Schemas with Ajv.
+9. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`docs/npm-consumption.md`](docs/npm-consumption.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level or package-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
+10. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
 10. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
 11. Inspect [`PUBLIC_EXAMPLE_COVERAGE.json`](PUBLIC_EXAMPLE_COVERAGE.json) if you want the bounded map from examples to covered routes, law surfaces, and negative paths.
 12. Inspect [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) if you want the bounded model for issue intake, review rules, and release posture.
@@ -217,9 +220,10 @@ Maintainer and review policy:
 33. Read [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) if you are preparing a bounded repo-only contribution.
 34. Run `npm run verify:repo` for the repository-local integrity checks.
 35. Run `npm run check:package-surface` if you want to confirm the packable projection-export layer as a consumer artifact.
-36. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS, ESM, TypeScript, and compact-reference consumers.
+36. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS, ESM, TypeScript, raw-schema, and compact-reference consumers.
 37. Run `npm run check:raw-capsules` if you want to confirm the curated raw capsule set stays structurally aligned and package-consumable.
 38. Run `npm run check:reference-pack` if you want to confirm the compact reference pack stays aligned to the stronger schema and gate surfaces.
+39. Run `npm run check:schema-recipes` if you want to confirm the Ajv-based raw JSON Schema consumer recipes stay executable and aligned to the published schema exports.
 
 ## Source of truth
 
@@ -229,4 +233,4 @@ This repository is assembled from public-safe source materials curated out of th
 
 This is the initial public projection of the N1Hub open-core specification surface. The current release focuses on schema, validator-facing contracts, examples, and repository health rather than on the full runtime codebase.
 
-Wave 2 and Wave 3 are delivered. Wave 4 has started through an expanded curated raw capsule set, package-exported raw capsule assets, and a compact reference pack for canonical enums and gate maps, and should continue widening other public-safe contract families without reopening the private runtime boundary.
+Wave 2 and Wave 3 are delivered. Wave 4 has started through an expanded curated raw capsule set, package-exported raw capsule assets, a compact reference pack for canonical enums and gate maps, and fresh Ajv-backed raw-schema consumer recipes, and should continue widening other public-safe contract families without reopening the private runtime boundary.

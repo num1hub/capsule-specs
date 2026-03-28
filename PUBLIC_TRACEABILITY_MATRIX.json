@@ -107,6 +107,36 @@
       ]
     },
     {
+      "id": "raw-json-schema-consumer-path",
+      "claim": "The public surface supports direct raw-schema validation of capsules and validator-envelope payloads through Ajv-based recipes from both a repo checkout and an installed package, without forcing consumers onto the projection layer.",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "strongest_surfaces": [
+        "docs/schema-validation-recipes.md",
+        "schemas/capsule-schema.json",
+        "schemas/neuro-concentrate.schema.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "scripts/check-schema-recipes.js"
+      ],
+      "supporting_surfaces": [
+        "docs/integration-guide.md",
+        "docs/client-recipes.md",
+        "docs/npm-consumption.md",
+        "examples/client/ajv-validate-capsule.mjs",
+        "examples/client/ajv-validate-validator-envelope.mjs",
+        "examples/client/esm-package-ajv-validate-contracts.mjs",
+        "scripts/check-package-install.js"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:traceability"
+      ]
+    },
+    {
       "id": "negative-evidence-and-fail-closed",
       "claim": "The public surface documents bounded negative paths instead of exposing only happy-path examples.",
       "audiences": [

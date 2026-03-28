@@ -139,6 +139,33 @@
       ]
     },
     {
+      "id": "validate-with-raw-json-schema",
+      "audience": "tool-builders",
+      "readiness": "ready",
+      "outcome": "Validate public capsules and validator-envelope payloads directly against raw JSON Schema exports with Ajv from either a repo checkout or an installed package, without depending on the projection layer.",
+      "strongest_surfaces": [
+        "docs/schema-validation-recipes.md",
+        "schemas/capsule-schema.json",
+        "schemas/neuro-concentrate.schema.json",
+        "schemas/validator-api-envelopes.schema.json"
+      ],
+      "supporting_surfaces": [
+        "docs/integration-guide.md",
+        "docs/npm-consumption.md",
+        "examples/client/ajv-validate-capsule.mjs",
+        "examples/client/ajv-validate-validator-envelope.mjs",
+        "examples/client/esm-package-ajv-validate-contracts.mjs",
+        "scripts/check-schema-recipes.js",
+        "scripts/check-package-install.js"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:api-schemas",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "consume-source-level-type-projections",
       "audience": "tool-builders",
       "readiness": "ready",

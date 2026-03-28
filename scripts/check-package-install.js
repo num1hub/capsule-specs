@@ -34,6 +34,7 @@ const packedFilePath = path.join(workspaceRoot, 'tarball.json');
 let tarballPath = null;
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
+const packageSchemaRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-contracts.mjs');
 
 try {
   const packOutput = run('npm', ['pack', '--json', '--pack-destination', workspaceRoot], repoRoot);
@@ -87,7 +88,7 @@ try {
     private: true,
     type: 'module'
   });
-  run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath], esmProject);
+  run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'ajv'], esmProject);
   fs.writeFileSync(
     path.join(esmProject, 'consumer.mjs'),
     [
@@ -117,6 +118,8 @@ try {
     'utf8'
   );
   run(process.execPath, ['consumer.mjs'], esmProject);
+  fs.writeFileSync(path.join(esmProject, 'schema-consumer.mjs'), fs.readFileSync(packageSchemaRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['schema-consumer.mjs'], esmProject);
 
   const typescriptProject = path.join(workspaceRoot, 'consumer-typescript');
   fs.mkdirSync(typescriptProject, { recursive: true });
@@ -142,7 +145,9 @@ try {
   const repoTsc = path.join(repoRoot, 'node_modules', 'typescript', 'bin', 'tsc');
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
-  console.log('OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule and reference-pack exports');
+  console.log(
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, and raw schema exports'
+  );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);
   process.exitCode = 1;

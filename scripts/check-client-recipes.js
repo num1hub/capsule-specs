@@ -25,6 +25,12 @@ const typeRecipeFiles = [
   'zod-parse-validate-response.ts'
 ];
 
+const schemaRecipeFiles = [
+  'ajv-validate-capsule.mjs',
+  'ajv-validate-validator-envelope.mjs',
+  'esm-package-ajv-validate-contracts.mjs'
+];
+
 const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
   'cjs-package-contract-reference.cjs',
@@ -42,7 +48,7 @@ function assert(condition, message) {
   }
 }
 
-for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles, ...packageRecipeFiles, ...packageTypeRecipeFiles]) {
+for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles, ...schemaRecipeFiles, ...packageRecipeFiles, ...packageTypeRecipeFiles]) {
   const filePath = path.join(clientDir, fileName);
   assert(fs.existsSync(filePath), `missing client recipe ${fileName}`);
 }
@@ -92,6 +98,42 @@ const expectedTypeProjectionImports = {
 for (const [fileName, projectionImport] of Object.entries(expectedTypeProjectionImports)) {
   const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
   assert(content.includes(projectionImport), `${fileName} must import ${projectionImport}`);
+}
+
+const expectedSchemaRecipeImports = {
+  'ajv-validate-capsule.mjs': [
+    'ajv/dist/2020.js',
+    '../../schemas/capsule-schema.json',
+    '../../schemas/neuro-concentrate.schema.json',
+    '../example-note.capsule.json'
+  ],
+  'ajv-validate-validator-envelope.mjs': [
+    'ajv/dist/2020.js',
+    '../../schemas/capsule-schema.json',
+    '../../schemas/neuro-concentrate.schema.json',
+    '../../schemas/validator-api-envelopes.schema.json',
+    '../api/validate-request.single.json',
+    '../api/validate-response.pass.json'
+  ],
+  'esm-package-ajv-validate-contracts.mjs': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/capsule-schema.json',
+    '@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json',
+    '@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json',
+    '@num1hub/capsule-specs/examples/example-note.capsule.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.single.json',
+    '@num1hub/capsule-specs/examples/api/validate-response.pass.json'
+  ]
+};
+
+for (const [fileName, imports] of Object.entries(expectedSchemaRecipeImports)) {
+  const filePath = path.join(clientDir, fileName);
+  const content = fs.readFileSync(filePath, 'utf8');
+  for (const importPath of imports) {
+    assert(content.includes(importPath), `${fileName} must import ${importPath}`);
+  }
+  const result = spawnSync(process.execPath, ['--check', filePath], { encoding: 'utf8' });
+  assert(result.status === 0, `${fileName} must be syntactically valid: ${result.stderr || result.stdout}`);
 }
 
 const expectedPackageImports = {
@@ -149,4 +191,13 @@ if (process.exitCode) {
   process.exit(process.exitCode);
 }
 
-console.log(`OK: checked ${shellFiles.length + nodeFiles.length + typeRecipeFiles.length + packageRecipeFiles.length + packageTypeRecipeFiles.length} client recipe files`);
+console.log(
+  `OK: checked ${
+    shellFiles.length +
+    nodeFiles.length +
+    typeRecipeFiles.length +
+    schemaRecipeFiles.length +
+    packageRecipeFiles.length +
+    packageTypeRecipeFiles.length
+  } client recipe files`
+);

@@ -43,6 +43,7 @@
 - machine-readable schemas, including validator API envelope coverage
 - public-safe TypeScript and Zod projection files for capsule and validator API contracts, bundle entrypoints, package-surface build config, package-surface verification, fresh-install verification, and both source-level and package-level CommonJS, ESM, and TypeScript consumer recipe examples
 - compact contract-reference JSON artifacts, their directory guide and human guide, package-consumer recipes, and repo-local verifier
+- Ajv-based raw-schema consumer recipes, their human guide, and repo-local verifier
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
 - client recipes and trust-model docs for external consumers
@@ -83,6 +84,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-package-install.js`: pass
 - `node scripts/check-raw-capsules.js`: pass
 - `node scripts/check-reference-pack.js`: pass
+- `node scripts/check-schema-recipes.js`: pass
 - `node scripts/check-example-coverage.js`: pass
 - `node scripts/check-boundary-map.js`: pass
 - `node scripts/check-client-recipes.js`: pass
@@ -118,7 +120,7 @@ Repository-local audit on 2026-03-26:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `267` files / `267` manifest entries
+- manifest coverage: `272` files / `272` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

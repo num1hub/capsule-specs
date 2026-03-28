@@ -9,7 +9,7 @@
   "published_boundaries": [
     {
       "id": "capsule-law",
-      "summary": "Public law and schema surface for capsules, validation gates, relation semantics, confidence-vector semantics, subtype meaning, version lineage, compact contract references, and curated raw law-adjacent capsules.",
+      "summary": "Public law and schema surface for capsules, validation gates, relation semantics, confidence-vector semantics, subtype meaning, version lineage, compact contract references, raw-schema validation recipes, and curated raw law-adjacent capsules.",
       "strongest_surfaces": [
         "docs/5-element-law.md",
         "docs/16-gates.md",
@@ -34,13 +34,14 @@
         "npm run check:examples",
         "npm run check:raw-capsules",
         "npm run check:reference-pack",
+        "npm run check:schema-recipes",
         "npm run check:docs",
         "npm run check:boundary-map"
       ]
     },
     {
       "id": "validator-api",
-      "summary": "Public validator route family with OpenAPI, request and response envelopes, API examples, and consumer recipes.",
+      "summary": "Public validator route family with OpenAPI, request and response envelopes, API examples, raw-schema validation recipes, and consumer recipes.",
       "strongest_surfaces": [
         "docs/validator.md",
         "openapi/validate.openapi.json",
@@ -57,6 +58,7 @@
         "npm run check:api-examples",
         "npm run check:api-schemas",
         "npm run check:client-recipes",
+        "npm run check:schema-recipes",
         "npm run check:boundary-map"
       ]
     },

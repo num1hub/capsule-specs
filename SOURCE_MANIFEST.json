@@ -4832,6 +4832,17 @@
     "transformation_type": "generated",
     "notes": "Guide to the compact contract-reference layer for tool-builders and package consumers."
   },
+  "docs/schema-validation-recipes.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/integration-guide.md",
+      "/home/n1/codex-workspace/docs/npm-consumption.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to validating public capsules and validator-envelope payloads directly against the raw JSON Schema surface."
+  },
   "examples/client/ts-package-validate-request.ts": {
     "source_paths": [
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
@@ -4935,6 +4946,39 @@
     "transformation_type": "generated",
     "notes": "CommonJS package-consumer recipe for compact contract-reference exports."
   },
+  "examples/client/ajv-validate-capsule.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for validating a public capsule against the published capsule schema."
+  },
+  "examples/client/ajv-validate-validator-envelope.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for validating public validator-envelope payloads against the published schema bundle."
+  },
+  "examples/client/esm-package-ajv-validate-contracts.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for validating installed schema exports and packaged public examples."
+  },
   "examples/client/ts-package-contract-reference.ts": {
     "source_paths": [
       "/home/n1/codex-workspace/references/contract-constants.json",
@@ -5010,5 +5054,17 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the compact contract-reference pack."
+  },
+  "scripts/check-schema-recipes.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/ajv-validate-capsule.mjs",
+      "/home/n1/codex-workspace/examples/client/ajv-validate-validator-envelope.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-contracts.mjs",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for repo-local and package-consumer raw-schema Ajv recipes."
   }
 }

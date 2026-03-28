@@ -110,6 +110,10 @@ assert(
   'release metadata must include the reference-pack verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:schema-recipes'),
+  'release metadata must include the schema-recipes verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:example-coverage'),
   'release metadata must include the example-coverage verification check'
 );
@@ -248,6 +252,10 @@ assert(
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_FAILURE_MODEL.json')),
   'release metadata residual risks must mention PUBLIC_FAILURE_MODEL.json'
+);
+assert(
+  metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.toLowerCase().includes('schema')),
+  'release metadata residual risks must mention the schema-validation convenience layer'
 );
 assert(
   metadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_EXAMPLE_COVERAGE.json')),

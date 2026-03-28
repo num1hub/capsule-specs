@@ -3254,6 +3254,22 @@
       ]
     },
     {
+      "id": "docs.schema-validation-recipes",
+      "path": "docs/schema-validation-recipes.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:schema-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "references.directory-guide",
       "path": "references/README.md",
       "kind": "index",
@@ -3331,6 +3347,52 @@
       ]
     },
     {
+      "id": "examples.client.ajv-validate-capsule",
+      "path": "examples/client/ajv-validate-capsule.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ajv-validate-validator-envelope",
+      "path": "examples/client/ajv-validate-validator-envelope.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-ajv-validate-contracts",
+      "path": "examples/client/esm-package-ajv-validate-contracts.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.ts-package-contract-reference",
       "path": "examples/client/ts-package-contract-reference.ts",
       "kind": "client-recipe",
@@ -3343,6 +3405,21 @@
         "npm run check:type-projections",
         "npm run check:client-recipes",
         "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "schema.recipe-check",
+      "path": "scripts/check-schema-recipes.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
         "npm run check:catalog"
       ]
     },

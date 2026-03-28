@@ -14,6 +14,7 @@ const requiredIds = [
   'validate-public-examples-locally',
   'build-validator-client-from-public-contracts',
   'consume-compact-contract-references',
+  'validate-with-raw-json-schema',
   'consume-source-level-type-projections',
   'understand-trust-boundaries',
   'review-repository-maturity-quickly',

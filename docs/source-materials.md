@@ -20,6 +20,7 @@ This repository is assembled from public-safe source surfaces rather than from a
 - API request and response examples derived from the published OpenAPI contract plus live validator outputs on the public example set
 - validator API envelope schemas derived from the public OpenAPI, the API examples, and the published capsule schema
 - compact contract-reference files derived from the stronger schemas and the published gate docs rather than from private runtime code
+- Ajv-based schema-consumer recipes derived from the published schema files and public example payloads rather than from private runtime code
 
 ## Projection strategy
 
@@ -28,6 +29,7 @@ This repository is assembled from public-safe source surfaces rather than from a
 - raw law-adjacent capsules are copied as curated reference artifacts
 - the curated raw capsule set is intentionally selective and stays inside the published law-adjacent boundary rather than mirroring the full upstream vault
 - compact contract-reference files are generated as convenience artifacts for tool-builders and stay subordinate to the stronger schemas, gate docs, and raw capsules they summarize
+- Ajv-based schema-consumer recipes are generated as convenience artifacts for raw-schema consumers and stay subordinate to the stronger schemas, OpenAPI, examples, and live validator behavior they demonstrate
 - examples are synthetic and public-safe
 - provenance is tracked in [`../SOURCE_MANIFEST.json`](../SOURCE_MANIFEST.json)
 - public contract discovery is tracked in [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)

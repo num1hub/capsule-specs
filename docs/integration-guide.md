@@ -18,6 +18,12 @@ If you need compact enums, gate IDs, or validator option flags for UI pickers, c
 - [`../references/contract-constants.json`](../references/contract-constants.json)
 - [`../references/validation-gates.json`](../references/validation-gates.json)
 
+If you want a raw JSON Schema validation path instead of the projection layer or the live validator API, also inspect:
+
+- [`schema-validation-recipes.md`](schema-validation-recipes.md)
+- [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
+- [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
+
 ## 2. Add source-level projections where helpful
 
 If your toolchain uses TypeScript or Zod directly, also inspect:
@@ -35,7 +41,7 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
 If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
-That check confirms CommonJS runtime usage, ESM runtime usage, and TypeScript type resolution from an installed tarball.
+That check confirms CommonJS runtime usage, ESM runtime usage, raw-schema Ajv usage, and TypeScript type resolution from an installed tarball.
 If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.
 
 ## 3. Learn the minimal capsule shape

@@ -65,6 +65,7 @@ const typescriptProjection = require('@num1hub/capsule-specs/typescript');
 const zodProjection = require('@num1hub/capsule-specs/zod');
 const validatorZod = require('@num1hub/capsule-specs/zod/validator-api');
 const capsuleSchemaJson = require('@num1hub/capsule-specs/schemas/capsule-schema.json');
+const neuroSchemaJson = require('@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json');
 const validatorSchemaJson = require('@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json');
 const openapi = require('@num1hub/capsule-specs/openapi/validate.openapi.json');
 const contractConstants = require('@num1hub/capsule-specs/references/contract-constants.json');
@@ -78,6 +79,7 @@ assert(Array.isArray(typescriptProjection.CAPSULE_TYPES), 'typescript export mus
 assert(typeof zodProjection.capsuleSchema?.parse === 'function', 'zod export must expose capsuleSchema.parse');
 assert(typeof validatorZod.validatePassResponseSchema?.parse === 'function', 'validator zod export must expose validatePassResponseSchema.parse');
 assert(capsuleSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json', 'capsule schema export must expose the public schema JSON');
+assert(neuroSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/neuro-concentrate.schema.json', 'neuro schema export must expose the public schema JSON');
 assert(validatorSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json', 'validator schema export must expose the public schema JSON');
 assert(typeof openapi.openapi === 'string' && openapi.openapi.length > 0, 'OpenAPI export must expose a valid OpenAPI document');
 assert(Array.isArray(contractConstants.relation_types) && contractConstants.relation_types.length === 9, 'reference export must expose canonical relation types');
@@ -114,14 +116,19 @@ for (const relativePath of [
   'dist/projections/typescript/capsule.js',
   'dist/projections/zod/validator-api.js',
   'docs/npm-consumption.md',
+  'docs/schema-validation-recipes.md',
   'schemas/capsule-schema.json',
+  'schemas/neuro-concentrate.schema.json',
   'schemas/validator-api-envelopes.schema.json',
   'openapi/validate.openapi.json',
   'references/contract-constants.json',
   'references/validation-gates.json',
   'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json',
   'docs/reference-pack.md',
+  'examples/client/ajv-validate-capsule.mjs',
+  'examples/client/ajv-validate-validator-envelope.mjs',
   'examples/client/cjs-package-contract-reference.cjs',
+  'examples/client/esm-package-ajv-validate-contracts.mjs',
   'examples/client/esm-package-capsule-summary.mjs',
   'examples/client/esm-package-validate-response.mjs',
   'examples/client/ts-package-contract-reference.ts'

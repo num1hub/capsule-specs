@@ -9,6 +9,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for the root projection namespaces
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - package exports for compact contract reference JSON artifacts
+- package exports for raw JSON Schema validation with third-party validators such as Ajv
 - package exports for curated raw capsule source files
 - pack-time inclusion of the built projection layer
 - fresh-project install checks for CommonJS, ESM, and TypeScript consumers
@@ -33,6 +34,7 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/zod/capsule`
 - `@num1hub/capsule-specs/zod/validator-api`
 - `@num1hub/capsule-specs/schemas/capsule-schema.json`
+- `@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json`
 - `@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json`
 - `@num1hub/capsule-specs/openapi/validate.openapi.json`
 - `@num1hub/capsule-specs/references/contract-constants.json`
@@ -77,6 +79,25 @@ const validationGates = require("@num1hub/capsule-specs/references/validation-ga
 
 console.log(contractConstants.relation_types);
 console.log(validationGates.gates.map((gate) => gate.id));
+```
+
+## Minimal package-level Ajv schema example
+
+A copyable version of this example also lives at [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs).
+
+```js
+import Ajv2020 from "ajv/dist/2020.js";
+import capsuleSchema from "@num1hub/capsule-specs/schemas/capsule-schema.json" with { type: "json" };
+import neuroSchema from "@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json" with { type: "json" };
+import note from "@num1hub/capsule-specs/examples/example-note.capsule.json" with { type: "json" };
+
+const ajv = new Ajv2020({ allErrors: true, strict: true });
+ajv.addSchema(neuroSchema);
+const validateCapsule = ajv.compile(capsuleSchema);
+
+if (!validateCapsule(note)) {
+  throw new Error(JSON.stringify(validateCapsule.errors));
+}
 ```
 
 ## Minimal ESM example
@@ -134,6 +155,7 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - The build output is derived from the maintained source projections in `projections/`.
 - The TypeScript package recipe is typechecked through the repo-local self-package path map and rechecked from a fresh installed tarball.
 - The package surface does not turn this repository into a complete SDK.
+- The package surface is compatible with raw-schema validators, but those validators still only prove structural contract conformance, not live gate semantics.
 - The reference-pack exports are convenience JSON layers for compact tooling use, not stronger replacements for the schemas, raw capsules, or validator/OpenAPI surfaces they summarize.
 - The raw capsule exports are curated reference assets, not a promise that the whole upstream vault is available as a package surface.
 - The package surface is verified through local tarball install, subpath consumption, and TypeScript type-resolution checks, not through an implied npm registry promise.
@@ -145,3 +167,4 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - `npm run check:package-surface`
 - `npm run check:package-install`
 - `npm run check:reference-pack`
+- `npm run check:schema-recipes`

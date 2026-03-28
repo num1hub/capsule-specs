@@ -41,6 +41,16 @@ Source-level consumer examples also live under [`../examples/client/`](../exampl
 
 These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema.
 
+## Raw JSON Schema recipes
+
+If you want direct structural validation against the published schemas, inspect:
+
+- [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
+- [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
+- [`schema-validation-recipes.md`](schema-validation-recipes.md)
+
+These recipes demonstrate how to validate public examples against the raw JSON Schema layer with Ajv, without relying on the projection layer or live validator API calls.
+
 ## Package recipes
 
 If you want package-style consumption instead of file-relative source imports, also inspect:
@@ -49,12 +59,13 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs)
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
+- [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
 - [`npm-consumption.md`](npm-consumption.md)
 
-These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports.
+These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports and raw-schema Ajv consumption through package subpaths.
 
 ## Route mapping
 
