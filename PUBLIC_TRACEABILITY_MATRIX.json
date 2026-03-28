@@ -37,7 +37,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, full-route client recipes, repo-relative TypeScript request builders, repo-relative Zod response parsers, and installed-package support-response readers that cover single, batch, fix, gates, and stats handling without depending on private runtime code.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, full-route client recipes, repo-relative TypeScript request builders, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package support/error-response readers that cover single, batch, fix, gates, stats, and shared generic rejection paths without depending on private runtime code.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -78,8 +78,10 @@
         "examples/client/ts-package-validate-request.ts",
         "examples/client/ts-build-validate-batch-request.ts",
         "examples/client/ts-build-validate-fix-request.ts",
+        "examples/client/ts-parse-error-responses.ts",
         "examples/client/zod-parse-validate-batch-response.ts",
         "examples/client/zod-parse-validate-fix-response.ts",
+        "examples/client/zod-parse-error-responses.ts",
         "examples/client/ts-parse-support-responses.ts",
         "examples/client/zod-parse-support-responses.ts",
         "examples/client/python-validate-batch.py",
@@ -93,8 +95,11 @@
         "examples/client/python-get-stats.py",
         "examples/client/node-validate-fix.mjs",
         "examples/client/cjs-package-support-responses.cjs",
+        "examples/client/cjs-package-error-responses.cjs",
         "examples/client/esm-package-support-responses.mjs",
-        "examples/client/ts-package-support-responses.ts"
+        "examples/client/esm-package-error-responses.mjs",
+        "examples/client/ts-package-support-responses.ts",
+        "examples/client/ts-package-error-responses.ts"
       ],
       "verify_commands": [
         "npm run check:api-examples",

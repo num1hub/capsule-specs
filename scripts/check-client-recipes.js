@@ -29,7 +29,9 @@ const typeRecipeFiles = [
   'ts-build-validate-request.ts',
   'ts-build-validate-batch-request.ts',
   'ts-build-validate-fix-request.ts',
+  'ts-parse-error-responses.ts',
   'ts-parse-support-responses.ts',
+  'zod-parse-error-responses.ts',
   'zod-parse-validate-response.ts',
   'zod-parse-validate-batch-response.ts',
   'zod-parse-validate-fix-response.ts',
@@ -69,14 +71,17 @@ const pythonRecipeFiles = [
 const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
   'cjs-package-contract-reference.cjs',
+  'cjs-package-error-responses.cjs',
   'cjs-package-support-responses.cjs',
   'cjs-package-validate-response.cjs',
   'esm-package-capsule-summary.mjs',
+  'esm-package-error-responses.mjs',
   'esm-package-support-responses.mjs',
   'esm-package-validate-response.mjs'
 ];
 
 const packageTypeRecipeFiles = [
+  'ts-package-error-responses.ts',
   'ts-package-contract-reference.ts',
   'ts-package-support-responses.ts',
   'ts-package-validate-request.ts'
@@ -156,7 +161,9 @@ const expectedTypeProjectionImports = {
   'ts-build-validate-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-batch-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-fix-request.ts': '../../projections/typescript/validator-api.js',
+  'ts-parse-error-responses.ts': '../../projections/typescript/validator-api.js',
   'ts-parse-support-responses.ts': '../../projections/typescript/validator-api.js',
+  'zod-parse-error-responses.ts': '../../projections/zod/validator-api.js',
   'zod-parse-validate-response.ts': '../../projections/zod/validator-api.js',
   'zod-parse-validate-batch-response.ts': '../../projections/zod/validator-api.js',
   'zod-parse-validate-fix-response.ts': '../../projections/zod/validator-api.js',
@@ -380,6 +387,13 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/references/contract-constants.json',
     '@num1hub/capsule-specs/references/validation-gates.json'
   ],
+  'cjs-package-error-responses.cjs': [
+    '@num1hub/capsule-specs/zod/validator-api',
+    '@num1hub/capsule-specs/examples/api/error-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/conflict-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json'
+  ],
   'cjs-package-support-responses.cjs': [
     '@num1hub/capsule-specs/zod/validator-api',
     '@num1hub/capsule-specs/examples/api/gates-response.sample.json',
@@ -392,6 +406,13 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs',
     '@num1hub/capsule-specs/zod',
     '@num1hub/capsule-specs/examples/example-note.capsule.json'
+  ],
+  'esm-package-error-responses.mjs': [
+    '@num1hub/capsule-specs/zod/validator-api',
+    '@num1hub/capsule-specs/examples/api/error-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/conflict-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json'
   ],
   'esm-package-validate-response.mjs': [
     '@num1hub/capsule-specs/zod/validator-api',
@@ -407,6 +428,9 @@ const expectedPackageImports = {
 const expectedPackageTypeImports = {
   'ts-package-validate-request.ts': [
     '@num1hub/capsule-specs/typescript/capsule',
+    '@num1hub/capsule-specs/typescript/validator-api'
+  ],
+  'ts-package-error-responses.ts': [
     '@num1hub/capsule-specs/typescript/validator-api'
   ],
   'ts-package-contract-reference.ts': [

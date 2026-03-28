@@ -32,8 +32,11 @@ function safeRemove(targetPath) {
 const workspaceRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'capsule-specs-install-'));
 const packedFilePath = path.join(workspaceRoot, 'tarball.json');
 let tarballPath = null;
+const cjsErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-error-responses.cjs');
 const cjsSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-support-responses.cjs');
+const esmErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-error-responses.mjs');
 const esmSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-support-responses.mjs');
+const typescriptErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-error-responses.ts');
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
 const typescriptSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-support-responses.ts');
@@ -99,6 +102,8 @@ try {
     'utf8'
   );
   run(process.execPath, ['consumer.cjs'], cjsProject);
+  fs.writeFileSync(path.join(cjsProject, 'error-consumer.cjs'), fs.readFileSync(cjsErrorRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['error-consumer.cjs'], cjsProject);
   fs.writeFileSync(path.join(cjsProject, 'support-consumer.cjs'), fs.readFileSync(cjsSupportRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['support-consumer.cjs'], cjsProject);
 
@@ -145,6 +150,8 @@ try {
     'utf8'
   );
   run(process.execPath, ['consumer.mjs'], esmProject);
+  fs.writeFileSync(path.join(esmProject, 'error-consumer.mjs'), fs.readFileSync(esmErrorRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['error-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'support-consumer.mjs'), fs.readFileSync(esmSupportRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['support-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'schema-consumer.mjs'), fs.readFileSync(packageSchemaRecipePath, 'utf8'), 'utf8');
@@ -178,17 +185,18 @@ try {
       noEmit: true,
       skipLibCheck: true
     },
-    include: ['consumer.ts', 'reference-consumer.ts', 'support-consumer.ts']
+    include: ['consumer.ts', 'error-consumer.ts', 'reference-consumer.ts', 'support-consumer.ts']
   });
   run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath], typescriptProject);
   fs.writeFileSync(path.join(typescriptProject, 'consumer.ts'), fs.readFileSync(typescriptConsumerRecipePath, 'utf8'), 'utf8');
+  fs.writeFileSync(path.join(typescriptProject, 'error-consumer.ts'), fs.readFileSync(typescriptErrorRecipePath, 'utf8'), 'utf8');
   fs.writeFileSync(path.join(typescriptProject, 'reference-consumer.ts'), fs.readFileSync(typescriptReferenceRecipePath, 'utf8'), 'utf8');
   fs.writeFileSync(path.join(typescriptProject, 'support-consumer.ts'), fs.readFileSync(typescriptSupportRecipePath, 'utf8'), 'utf8');
   const repoTsc = path.join(repoRoot, 'node_modules', 'typescript', 'bin', 'tsc');
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, validator support-response, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, validator support-response and error-response, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

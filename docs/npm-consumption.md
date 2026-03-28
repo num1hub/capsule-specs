@@ -9,6 +9,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for the root projection namespaces
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - package exports for compact contract reference JSON artifacts
+- package exports for bounded generic, unauthorized, conflict, and rate-limit error-envelope parsing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for validator support-response parsing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for raw JSON Schema validation with third-party validators such as Ajv
 - package exports for archive-bundle schema validation against the published portability sample
@@ -118,6 +119,24 @@ console.log(statsResponseSchema.parse(statsResponse).passRate);
 ```
 
 These recipes prove that the installed package surface does not stop at `validate` request/response flows. It also carries the published `gates` and `stats` support-response payloads plus the public Zod and TypeScript validator-envelope projections needed to inspect those support routes without guessing shape from prose.
+
+## Minimal package-level error-envelope example
+
+Copyable versions of this example also live at [`../examples/client/cjs-package-error-responses.cjs`](../examples/client/cjs-package-error-responses.cjs), [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs), and [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts).
+
+```js
+import * as validatorProjection from "@num1hub/capsule-specs/zod/validator-api";
+import genericError from "@num1hub/capsule-specs/examples/api/error-response.sample.json" with { type: "json" };
+import unauthorizedError from "@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json" with { type: "json" };
+
+const simpleErrorResponseSchema =
+  validatorProjection.simpleErrorResponseSchema ?? validatorProjection.default?.simpleErrorResponseSchema;
+
+console.log(simpleErrorResponseSchema.parse(genericError).error);
+console.log(simpleErrorResponseSchema.parse(unauthorizedError).error);
+```
+
+These recipes prove that the installed package surface also covers the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes instead of leaving non-2xx parsing as prose-only or Python-only guidance.
 
 ## Minimal package-level Ajv schema example
 
@@ -233,6 +252,7 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - The package surface does not turn this repository into a complete SDK.
 - The package surface is compatible with raw-schema validators, but those validators still only prove structural contract conformance, not live gate semantics.
 - The package support-response recipes prove installed-package parsing and typing for the published `gates` and `stats` payloads, not live-route availability or hosted-service behavior.
+- The package error-envelope recipes prove installed-package parsing and typing for the bounded shared generic, unauthorized, conflict, and rate-limit payloads, not a promise about every private runtime error variant.
 - The Python path uses extracted packaged files and raw JSON assets; it does not expose the Node exports as Python modules or imply a PyPI release.
 - The reference-pack exports are convenience JSON layers for compact tooling use, not stronger replacements for the schemas, raw capsules, or validator/OpenAPI surfaces they summarize.
 - The raw capsule exports are curated reference assets, not a promise that the whole upstream vault is available as a package surface.

@@ -39,7 +39,11 @@ This page maps each published validator route to the strongest public example su
 ## Shared error envelopes
 
 - generic error example: [`../examples/api/error-response.sample.json`](../examples/api/error-response.sample.json)
+- unauthorized example: [`../examples/api/unauthorized-response.sample.json`](../examples/api/unauthorized-response.sample.json)
+- conflict example: [`../examples/api/conflict-response.sample.json`](../examples/api/conflict-response.sample.json)
 - rate-limit example: [`../examples/api/rate-limit-response.sample.json`](../examples/api/rate-limit-response.sample.json)
+- source-level client recipes: [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts), [`../examples/client/zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
+- installed-package client recipes: [`../examples/client/cjs-package-error-responses.cjs`](../examples/client/cjs-package-error-responses.cjs), [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs), [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
 
 ## Notes
 

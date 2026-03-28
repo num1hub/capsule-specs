@@ -161,6 +161,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal source-level TypeScript recipe for constructing a validator batch request envelope.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator fix request envelope.
+- [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts)
+  Minimal source-level TypeScript recipe for typing the published generic, unauthorized, conflict, and rate-limit error envelopes.
 - [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
   Minimal source-level TypeScript recipe for typing the published `gates` and `stats` support-response payloads.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
@@ -169,16 +171,22 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal source-level Zod recipe for parsing a validator batch response envelope.
 - [`../examples/client/zod-parse-validate-fix-response.ts`](../examples/client/zod-parse-validate-fix-response.ts)
   Minimal source-level Zod recipe for parsing a validator fix response envelope.
+- [`../examples/client/zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
+  Minimal source-level Zod recipe for parsing the published generic, unauthorized, conflict, and rate-limit error envelopes.
 - [`../examples/client/zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
   Minimal source-level Zod recipe for parsing the published `gates` and `stats` support-response payloads.
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
   Minimal package-consumer recipe for the built capsule projection exports.
+- [`../examples/client/cjs-package-error-responses.cjs`](../examples/client/cjs-package-error-responses.cjs)
+  Minimal CommonJS package-consumer recipe for parsing the published generic, unauthorized, conflict, and rate-limit error envelopes from installed package exports.
 - [`../examples/client/cjs-package-support-responses.cjs`](../examples/client/cjs-package-support-responses.cjs)
   Minimal CommonJS package-consumer recipe for parsing the published `gates` and `stats` support responses from installed package exports.
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
   Minimal package-consumer recipe for the built validator API exports.
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
   Minimal ESM package-consumer recipe for the built capsule projection exports.
+- [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs)
+  Minimal ESM package-consumer recipe for parsing the published generic, unauthorized, conflict, and rate-limit error envelopes from installed package exports.
 - [`../examples/client/esm-package-support-responses.mjs`](../examples/client/esm-package-support-responses.mjs)
   Minimal ESM package-consumer recipe for parsing the published `gates` and `stats` support responses from installed package exports.
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
@@ -221,6 +229,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal Python recipe for parsing the published gates, stats, unauthorized, conflict, generic-error, and rate-limit response families.
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
+- [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
+  Minimal TypeScript package-consumer recipe for typed generic, unauthorized, conflict, and rate-limit error-envelope handling through installed package exports.
 - [`../examples/client/ts-package-support-responses.ts`](../examples/client/ts-package-support-responses.ts)
   Minimal TypeScript package-consumer recipe for typed `gates` and `stats` support-response handling through installed package exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
@@ -232,13 +242,13 @@ The Markdown review surfaces are optimized for people. The JSON surfaces are opt
 
 The citation file, release-note config, and Dependabot config do not replace release evidence, but they make the public GitHub surface more usable as a maintained long-lived repository instead of a one-time export.
 
-The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable across the full published validator route set plus the installed-package support-response layer for `gates` and `stats`.
+The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable across the full published validator route set plus the installed-package support-response layer for `gates` and `stats` and the bounded shared error-envelope layer for generic, unauthorized, conflict, and rate-limit handling.
 
 The API envelope schema and its dedicated verification script strengthen that claim by keeping the public HTTP example layer machine-checkable.
 
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
-The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes plus `gates` / `stats` support responses while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
+The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree.
 

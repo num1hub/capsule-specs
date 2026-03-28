@@ -28,6 +28,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal TypeScript recipe for building a validator batch request envelope from the published API projection.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
   Minimal TypeScript recipe for building a validator fix request envelope from the published API projection.
+- [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts)
+  Minimal TypeScript recipe for typing the published generic, unauthorized, conflict, and rate-limit error envelopes through the public projection layer.
 - [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
   Minimal TypeScript recipe for typing the published `gates` and `stats` support responses through the public projection layer.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
@@ -36,6 +38,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal Zod recipe for parsing a validator batch response envelope through the public projection layer.
 - [`../examples/client/zod-parse-validate-fix-response.ts`](../examples/client/zod-parse-validate-fix-response.ts)
   Minimal Zod recipe for parsing a validator fix response envelope through the public projection layer.
+- [`../examples/client/zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
+  Minimal Zod recipe for parsing the published generic, unauthorized, conflict, and rate-limit error envelopes through the public projection layer.
 - [`../examples/client/zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
   Minimal Zod recipe for parsing the published `gates` and `stats` support responses through the public projection layer.
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
@@ -62,6 +66,7 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - a narrow source-level projection that stays reviewable inside the public repo
 - a public-safe source-level envelope layer for validator clients that do not want to hand-roll request and response shapes
 - a source-level path for batch and fix validator envelopes that stays aligned to the published sample payload families
+- a source-level path for bounded shared error-envelope typing and parsing that stays aligned to the published sample payloads
 - a source-level path for support-response typing and parsing that stays aligned to the published sample payloads
 
 ## Important boundaries
