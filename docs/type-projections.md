@@ -8,6 +8,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Public-safe TypeScript interfaces and literal unions for the capsule outer shape.
 - [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
   Public-safe TypeScript interfaces for validator request and response envelopes.
+- [`../projections/typescript/validator-envelope-families.ts`](../projections/typescript/validator-envelope-families.ts)
+  Shared TypeScript envelope-family constants for the published validator request, response, and shared-definition surface.
 - [`../projections/typescript/validator-routes.ts`](../projections/typescript/validator-routes.ts)
   Shared TypeScript route constants for the published validator HTTP family.
 - [`../projections/typescript/index.ts`](../projections/typescript/index.ts)
@@ -32,6 +34,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal TypeScript recipe for building a validator fix request envelope from the published API projection.
 - [`../examples/client/ts-live-validator-client.ts`](../examples/client/ts-live-validator-client.ts)
   Minimal TypeScript recipe for a typed `fetch` client that covers the published validator route family from repo-relative projection imports.
+- [`../examples/client/ts-envelope-family-reference.ts`](../examples/client/ts-envelope-family-reference.ts)
+  Minimal TypeScript recipe for consuming the compact validator envelope-family map together with the shared projection constants.
 - [`../examples/client/ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts)
   Minimal TypeScript recipe for typing the published single, batch, and fix validator request samples through the public projection layer.
 - [`../examples/client/zod-parse-validate-request.ts`](../examples/client/zod-parse-validate-request.ts)
@@ -99,11 +103,13 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - a source-level TypeScript path for typing the published single, batch, and fix request samples instead of treating TypeScript as construction-only on the request side
 - a source-level TypeScript `fetch` client path that keeps request shapes, response unions, support payloads, and bounded shared error envelopes tied to the published validator API projection
 - a source-level TypeScript route-constant path that keeps live-client examples and downstream tooling aligned to one maintained validator-route surface instead of copied strings
+- a source-level TypeScript envelope-family path that keeps request, response, and shared-definition discovery aligned to one maintained public surface instead of ad-hoc schema-def crawling
 - a source-level Zod path for parsing the published single, batch, and fix request families instead of validating them only through raw Ajv
 - an installed-package TypeScript path for single, batch, and fix validator request-family typing without repo-relative imports
 - an installed-package TypeScript path for typing the published single, batch, and fix request samples from package-exported JSON assets instead of relying only on runtime CJS/ESM parsing
 - an installed-package TypeScript `fetch` client path that proves the public validator API projection remains usable from a fresh consumer install, not just from repo-relative examples
 - an installed-package TypeScript route-constant path that proves shared validator-route constants survive packaging and fresh-install consumption, not just repo-relative usage
+- an installed-package TypeScript envelope-family path that proves shared request/response family constants survive packaging and fresh-install consumption, not just repo-relative usage
 - an installed-package runtime path for parsing the published single, batch, and fix request families from CommonJS and ESM consumers
 - a source-level path for typed validate-response families that stays aligned to the published pass, fail, batch, and fix samples
 - a source-level Zod path for parsing the published pass, fail, batch, and fix validator response samples instead of mixing published fixtures with synthetic response objects

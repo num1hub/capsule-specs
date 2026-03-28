@@ -9,6 +9,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for the root projection namespaces
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - package exports for compact contract reference JSON artifacts
+- package exports for compact validator envelope-family JSON artifacts and typed TypeScript envelope-family constants
 - package exports for pass, fail, batch, and fix validator response-family parsing and typing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for single, batch, and fix validator request-family typing through installed TypeScript consumer recipes
 - package exports for typed reading of the published single, batch, and fix validator request samples through installed TypeScript consumer recipes
@@ -43,6 +44,7 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/zod`
   Public-safe Zod projection bundle.
 - `@num1hub/capsule-specs/typescript/capsule`
+- `@num1hub/capsule-specs/typescript/validator-envelope-families`
 - `@num1hub/capsule-specs/typescript/validator-routes`
 - `@num1hub/capsule-specs/typescript/validator-api`
 - `@num1hub/capsule-specs/zod/capsule`
@@ -56,6 +58,7 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/openapi/validate.openapi.json`
 - `@num1hub/capsule-specs/references/contract-constants.json`
 - `@num1hub/capsule-specs/references/validation-gates.json`
+- `@num1hub/capsule-specs/references/validator-envelope-families.json`
 - `@num1hub/capsule-specs/references/validator-routes.json`
 - `@num1hub/capsule-specs/examples/example-validator-invalid-g16.capsule.json`
 - `@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json`
@@ -97,9 +100,11 @@ console.log(confidenceVectorCapsule.metadata.capsule_id);
 ```js
 const contractConstants = require("@num1hub/capsule-specs/references/contract-constants.json");
 const validationGates = require("@num1hub/capsule-specs/references/validation-gates.json");
+const validatorEnvelopeFamilies = require("@num1hub/capsule-specs/references/validator-envelope-families.json");
 
 console.log(contractConstants.relation_types);
 console.log(validationGates.gates.map((gate) => gate.id));
+console.log(validatorEnvelopeFamilies.response_families.map((family) => family.id));
 console.log(contractConstants.validator.integrity_payload_root_keys);
 console.log(contractConstants.validator.integrity_canonicalization);
 ```

@@ -23,6 +23,7 @@ const requiredExports = [
   '.',
   './typescript',
   './typescript/capsule',
+  './typescript/validator-envelope-families',
   './typescript/validator-routes',
   './typescript/validator-api',
   './zod',
@@ -50,6 +51,8 @@ const requiredBuiltFiles = [
   'dist/projections/typescript/index.js',
   'dist/projections/typescript/index.d.ts',
   'dist/projections/typescript/capsule.js',
+  'dist/projections/typescript/validator-envelope-families.js',
+  'dist/projections/typescript/validator-envelope-families.d.ts',
   'dist/projections/typescript/validator-routes.js',
   'dist/projections/typescript/validator-routes.d.ts',
   'dist/projections/typescript/validator-api.js',
@@ -65,6 +68,7 @@ for (const relativePath of requiredBuiltFiles) {
 
 const rootExports = require('@num1hub/capsule-specs');
 const typescriptProjection = require('@num1hub/capsule-specs/typescript');
+const validatorEnvelopeProjection = require('@num1hub/capsule-specs/typescript/validator-envelope-families');
 const zodProjection = require('@num1hub/capsule-specs/zod');
 const validatorZod = require('@num1hub/capsule-specs/zod/validator-api');
 const capsuleSchemaJson = require('@num1hub/capsule-specs/schemas/capsule-schema.json');
@@ -76,6 +80,7 @@ const validatorBundleJson = require('@num1hub/capsule-specs/schemas/validator-ap
 const openapi = require('@num1hub/capsule-specs/openapi/validate.openapi.json');
 const contractConstants = require('@num1hub/capsule-specs/references/contract-constants.json');
 const validationGates = require('@num1hub/capsule-specs/references/validation-gates.json');
+const validatorEnvelopeFamilies = require('@num1hub/capsule-specs/references/validator-envelope-families.json');
 const validatorRoutes = require('@num1hub/capsule-specs/references/validator-routes.json');
 const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
 const singleRequestSample = require('@num1hub/capsule-specs/examples/api/validate-request.single.json');
@@ -100,6 +105,15 @@ const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsul
 
 assert(rootExports && rootExports.typescript && rootExports.zod, 'root package export must expose typescript and zod namespaces');
 assert(Array.isArray(typescriptProjection.CAPSULE_TYPES), 'typescript export must expose CAPSULE_TYPES');
+assert(
+  typescriptProjection.publishedValidatorEnvelopeFamilyCounts?.requests === 3,
+  'typescript export must expose validator envelope family counts'
+);
+assert(
+  Array.isArray(validatorEnvelopeProjection.publishedValidatorResponseFamilyDefinitions) &&
+    validatorEnvelopeProjection.publishedValidatorResponseFamilyDefinitions.length === 7,
+  'typescript validator-envelope-families export must expose response family definitions'
+);
 assert(typescriptProjection.publishedValidatorRoutes?.validateSingle === '/api/validate', 'typescript export must expose published validator route constants');
 assert(typeof zodProjection.capsuleSchema?.parse === 'function', 'zod export must expose capsuleSchema.parse');
 assert(typeof validatorZod.validateSingleRequestSchema?.parse === 'function', 'validator zod export must expose validateSingleRequestSchema.parse');
@@ -120,6 +134,14 @@ assert(validatorSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/sch
 assert(validatorBundleJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json', 'validator bundle export must expose the public bundled schema JSON');
 assert(typeof openapi.openapi === 'string' && openapi.openapi.length > 0, 'OpenAPI export must expose a valid OpenAPI document');
 assert(Array.isArray(contractConstants.relation_types) && contractConstants.relation_types.length === 9, 'reference export must expose canonical relation types');
+assert(
+  Array.isArray(validatorEnvelopeFamilies.request_families) && validatorEnvelopeFamilies.request_families.length === 3,
+  'reference export must expose all published validator request families'
+);
+assert(
+  Array.isArray(validatorEnvelopeFamilies.response_families) && validatorEnvelopeFamilies.response_families.length === 7,
+  'reference export must expose all published validator response families'
+);
 assert(Array.isArray(validatorRoutes.routes) && validatorRoutes.routes.length === 5, 'reference export must expose all published validator routes');
 assert(
   Array.isArray(contractConstants.validator?.integrity_payload_root_keys) &&
@@ -224,6 +246,7 @@ for (const relativePath of [
   'openapi/validate.openapi.json',
   'references/contract-constants.json',
   'references/validation-gates.json',
+  'references/validator-envelope-families.json',
   'references/validator-routes.json',
   'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json',
   'docs/reference-pack.md',
@@ -270,6 +293,7 @@ for (const relativePath of [
   'examples/client/ts-parse-validate-requests.ts',
   'examples/client/ts-live-validator-client.ts',
   'examples/client/ts-package-contract-reference.ts',
+  'examples/client/ts-envelope-family-reference.ts',
   'examples/client/ts-package-error-responses.ts',
   'examples/client/ts-package-live-validator-client.ts',
   'examples/client/ts-package-parse-validate-requests.ts',

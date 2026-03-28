@@ -41,6 +41,7 @@ Source-level consumer examples also live under [`../examples/client/`](../exampl
 
 - [`ts-capsule-summary.ts`](../examples/client/ts-capsule-summary.ts)
 - [`zod-parse-capsule.ts`](../examples/client/zod-parse-capsule.ts)
+- [`ts-envelope-family-reference.ts`](../examples/client/ts-envelope-family-reference.ts)
 - [`ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
 - [`ts-build-validate-batch-request.ts`](../examples/client/ts-build-validate-batch-request.ts)
 - [`ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
@@ -59,7 +60,7 @@ Source-level consumer examples also live under [`../examples/client/`](../exampl
 - [`zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
 - [`zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
 
-These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema, including single, batch, and fix `validate` request families, source-level TypeScript builders plus source-level typed reading of the published request samples, a typed live-client bridge for all published validator routes backed by the shared route projection, typed/parsing paths for the published pass, fail, batch, and fix response families, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes.
+These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema, including single, batch, and fix `validate` request families, source-level TypeScript builders plus source-level typed reading of the published request samples, a typed live-client bridge for all published validator routes backed by the shared route projection, a typed validator envelope-family discovery path backed by the shared envelope-family projection, typed/parsing paths for the published pass, fail, batch, and fix response families, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes.
 
 ## Raw JSON Schema recipes
 
@@ -106,7 +107,7 @@ If you need a cross-language raw-asset consumption path outside the Node runtime
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
 - [`python-consumption.md`](python-consumption.md)
 
-These recipes demonstrate how Python consumers can read compact contract-reference JSON files, inspect curated raw capsule assets, prepare validator-envelope request flows for `validate`, `batch`, and `fix`, call the published `gates` and `stats` support routes, parse published validator response families, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
+These recipes demonstrate how Python consumers can read compact contract-reference JSON files, including the validator envelope-family map, inspect curated raw capsule assets, prepare validator-envelope request flows for `validate`, `batch`, and `fix`, call the published `gates` and `stats` support routes, parse published validator response families, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
 
 ## Package recipes
 
@@ -140,7 +141,7 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts)
 - [`npm-consumption.md`](npm-consumption.md)
 
-These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including installed-package runtime parsing plus installed-package TypeScript typed construction and typed reading for the published single, batch, and fix validator request families, an installed-package typed live-client bridge for all published validator routes backed by the shared route projection, installed-package parsing and typing for the published pass, fail, batch, and fix validator response families, the compact reference-pack JSON exports, installed-package parsing of `gates` and `stats` support responses, installed-package parsing and typing for the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes, positive raw-schema Ajv consumption, archive-bundle schema validation, bundled single-file schema consumption, package-level rejection of intentionally invalid archive, capsule, and validator-envelope fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows. If you need the same public JSON artifacts from Python instead of Node imports, use the extracted-artifact path documented in [`python-consumption.md`](python-consumption.md).
+These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including installed-package runtime parsing plus installed-package TypeScript typed construction and typed reading for the published single, batch, and fix validator request families, an installed-package typed live-client bridge for all published validator routes backed by the shared route projection, installed-package typed discovery of the published validator envelope-family map, installed-package parsing and typing for the published pass, fail, batch, and fix validator response families, the compact reference-pack JSON exports, installed-package parsing of `gates` and `stats` support responses, installed-package parsing and typing for the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes, positive raw-schema Ajv consumption, archive-bundle schema validation, bundled single-file schema consumption, package-level rejection of intentionally invalid archive, capsule, and validator-envelope fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows. If you need the same public JSON artifacts from Python instead of Node imports, use the extracted-artifact path documented in [`python-consumption.md`](python-consumption.md).
 
 ## Route mapping
 

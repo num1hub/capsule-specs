@@ -16,6 +16,8 @@ These files are convenience artifacts. They do not outrank the stronger source l
   Compact constants for root keys, metadata enums, relation types, confidence-vector dimensions, and validator option/severity enums.
 - `validation-gates.json`
   Compact ordered gate-family map and gate summaries for `G01` through `G16`.
+- `validator-envelope-families.json`
+  Compact request-family, response-family, and shared-definition map for the published validator envelope surface.
 - `validator-routes.json`
   Compact published validator route map covering the `validate`, `batch`, `fix`, `stats`, and `gates` HTTP surfaces.
 

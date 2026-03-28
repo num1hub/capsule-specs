@@ -30,8 +30,11 @@ const neuroSchema = readJson('schemas/neuro-concentrate.schema.json');
 const validatorSchema = readJson('schemas/validator-api-envelopes.schema.json');
 const constants = readJson('references/contract-constants.json');
 const gates = readJson('references/validation-gates.json');
+const envelopeFamilies = readJson('references/validator-envelope-families.json');
 const routes = readJson('references/validator-routes.json');
 const gatesDoc = readText('docs/16-gates.md');
+const apiDoc = readText('docs/api-envelopes.md');
+const referencePackDoc = readText('docs/reference-pack.md');
 const routeDoc = readText('docs/route-reference.md');
 const openapiDoc = readText('docs/openapi.md');
 const openapi = readJson('openapi/validate.openapi.json');
@@ -98,8 +101,42 @@ const expectedRoutes = [
   ['getGates', 'GET', '/api/validate/gates', null, ['examples/api/gates-response.sample.json']]
 ];
 
+const expectedRequestFamilies = [
+  ['validateSingleRequest', ['validateSingle'], '#/$defs/validateSingleRequest', ['examples/api/validate-request.single.json']],
+  ['validateBatchRequest', ['validateBatch'], '#/$defs/validateBatchRequest', ['examples/api/validate-request.batch.json']],
+  ['validateFixRequest', ['validateFix'], '#/$defs/validateFixRequest', ['examples/api/validate-request.fix.json']]
+];
+
+const expectedResponseFamilies = [
+  ['validatePassResponse', ['validateSingle'], '#/$defs/validatePassResponse', ['examples/api/validate-response.pass.json']],
+  ['validateFailResponse', ['validateSingle'], '#/$defs/validateFailResponse', ['examples/api/validate-response.fail.json']],
+  ['validateBatchResponse', ['validateBatch'], '#/$defs/validateBatchResponse', ['examples/api/validate-response.batch.json']],
+  ['validateFixResponse', ['validateFix'], '#/$defs/validateFixResponse', ['examples/api/validate-response.fix.sample.json']],
+  ['gatesResponse', ['getGates'], '#/$defs/gatesResponse', ['examples/api/gates-response.sample.json']],
+  ['statsResponse', ['getStats'], '#/$defs/statsResponse', ['examples/api/stats-response.sample.json']],
+  [
+    'simpleErrorResponse',
+    ['validateSingle', 'validateBatch', 'validateFix', 'getStats', 'getGates'],
+    '#/$defs/simpleErrorResponse',
+    [
+      'examples/api/error-response.sample.json',
+      'examples/api/unauthorized-response.sample.json',
+      'examples/api/conflict-response.sample.json',
+      'examples/api/rate-limit-response.sample.json'
+    ]
+  ]
+];
+
+const expectedSharedDefinitions = [
+  ['validationOptions', '#/$defs/validationOptions', ['validateSingleRequest', 'validateBatchRequest', 'validateFixRequest']],
+  ['validatorIssue', '#/$defs/validatorIssue', ['validatePassResponse', 'validateFailResponse', 'validateBatchResponse', 'validateFixResponse']],
+  ['warningItem', '#/$defs/warningItem', ['validatePassResponse', 'validateFailResponse', 'validateBatchResponse', 'validateFixResponse']],
+  ['gateDescriptor', '#/$defs/gateDescriptor', ['gatesResponse']]
+];
+
 assert(constants.version === pkg.version, 'contract-constants version must match package.json version');
 assert(gates.version === pkg.version, 'validation-gates version must match package.json version');
+assert(envelopeFamilies.version === pkg.version, 'validator-envelope-families version must match package.json version');
 assert(routes.version === pkg.version, 'validator-routes version must match package.json version');
 
 assert(sameArray(constants.capsule_root_keys, expectedRootKeys), 'contract-constants capsule_root_keys must match schema required roots');
@@ -119,7 +156,12 @@ assert(constants.validator.integrity_sha3_512_pattern === expectedIntegrityPatte
 
 assert(Array.isArray(gates.families) && sameArray(gates.families, expectedFamilies), 'validation-gates families must match the expected gate-family map');
 assert(Array.isArray(gates.gates) && gates.gates.length === expectedGates.length, 'validation-gates must publish all 16 gates');
+assert(Array.isArray(envelopeFamilies.request_families) && envelopeFamilies.request_families.length === expectedRequestFamilies.length, 'validator-envelope-families must publish all request families');
+assert(Array.isArray(envelopeFamilies.response_families) && envelopeFamilies.response_families.length === expectedResponseFamilies.length, 'validator-envelope-families must publish all response families');
+assert(Array.isArray(envelopeFamilies.shared_definitions) && envelopeFamilies.shared_definitions.length === expectedSharedDefinitions.length, 'validator-envelope-families must publish all shared definitions');
 assert(Array.isArray(routes.routes) && routes.routes.length === expectedRoutes.length, 'validator-routes must publish all 5 routes');
+assert(referencePackDoc.includes('validator-envelope-families.json'), 'docs/reference-pack.md must mention validator-envelope-families.json');
+assert(apiDoc.includes('validator-envelope-families.json'), 'docs/api-envelopes.md must mention validator-envelope-families.json');
 
 for (const [index, [id, family, summary]] of expectedGates.entries()) {
   const gate = gates.gates[index];
@@ -150,8 +192,39 @@ for (const [index, [id, method, pathName, requestExample, responseExamples]] of 
   assert(openapiDoc.includes(`- \`${method} ${pathName}\``), `docs/openapi.md must include ${method} ${pathName}`);
 }
 
+for (const [index, [id, routeIds, schemaRef, exampleFiles]] of expectedRequestFamilies.entries()) {
+  const family = envelopeFamilies.request_families[index];
+  assert(family.id === id, `validator-envelope-families request family ${index} must have id ${id}`);
+  assert(sameArray(family.route_ids, routeIds), `validator-envelope-families ${id} route_ids must match expected route ids`);
+  assert(family.schema_ref === schemaRef, `validator-envelope-families ${id} schema_ref must match expected schema ref`);
+  assert(sameArray(family.example_files, exampleFiles), `validator-envelope-families ${id} example files must match expected examples`);
+  assert(Boolean(validatorSchema.$defs?.[id]), `validator schema must publish ${id}`);
+  assert(apiDoc.includes(`\`${id}\``), `docs/api-envelopes.md must mention ${id}`);
+}
+
+for (const [index, [id, routeIds, schemaRef, exampleFiles]] of expectedResponseFamilies.entries()) {
+  const family = envelopeFamilies.response_families[index];
+  assert(family.id === id, `validator-envelope-families response family ${index} must have id ${id}`);
+  assert(sameArray(family.route_ids, routeIds), `validator-envelope-families ${id} route_ids must match expected route ids`);
+  assert(family.schema_ref === schemaRef, `validator-envelope-families ${id} schema_ref must match expected schema ref`);
+  assert(sameArray(family.example_files, exampleFiles), `validator-envelope-families ${id} example files must match expected examples`);
+  assert(Boolean(validatorSchema.$defs?.[id]), `validator schema must publish ${id}`);
+  assert(apiDoc.includes(`\`${id}\``), `docs/api-envelopes.md must mention ${id}`);
+}
+
+for (const [index, [id, schemaRef, usedBy]] of expectedSharedDefinitions.entries()) {
+  const definition = envelopeFamilies.shared_definitions[index];
+  assert(definition.id === id, `validator-envelope-families shared definition ${index} must have id ${id}`);
+  assert(definition.schema_ref === schemaRef, `validator-envelope-families ${id} schema_ref must match expected schema ref`);
+  assert(sameArray(definition.used_by, usedBy), `validator-envelope-families ${id} used_by must match expected family ids`);
+  assert(Boolean(validatorSchema.$defs?.[id]), `validator schema must publish ${id}`);
+  assert(apiDoc.includes(`\`${id}\``), `docs/api-envelopes.md must mention shared definition ${id}`);
+}
+
 if (process.exitCode) {
   process.exit(process.exitCode);
 }
 
-console.log(`OK: checked reference pack constants, ${routes.routes.length} validator routes, and ${gates.gates.length} validation gates`);
+console.log(
+  `OK: checked reference pack constants, ${routes.routes.length} validator routes, ${gates.gates.length} validation gates, and ${envelopeFamilies.request_families.length + envelopeFamilies.response_families.length} validator envelope families`
+);

@@ -1,0 +1,153 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-28",
+  "request_families": [
+    {
+      "id": "validateSingleRequest",
+      "route_ids": [
+        "validateSingle"
+      ],
+      "schema_ref": "#/$defs/validateSingleRequest",
+      "example_files": [
+        "examples/api/validate-request.single.json"
+      ]
+    },
+    {
+      "id": "validateBatchRequest",
+      "route_ids": [
+        "validateBatch"
+      ],
+      "schema_ref": "#/$defs/validateBatchRequest",
+      "example_files": [
+        "examples/api/validate-request.batch.json"
+      ]
+    },
+    {
+      "id": "validateFixRequest",
+      "route_ids": [
+        "validateFix"
+      ],
+      "schema_ref": "#/$defs/validateFixRequest",
+      "example_files": [
+        "examples/api/validate-request.fix.json"
+      ]
+    }
+  ],
+  "response_families": [
+    {
+      "id": "validatePassResponse",
+      "route_ids": [
+        "validateSingle"
+      ],
+      "schema_ref": "#/$defs/validatePassResponse",
+      "example_files": [
+        "examples/api/validate-response.pass.json"
+      ]
+    },
+    {
+      "id": "validateFailResponse",
+      "route_ids": [
+        "validateSingle"
+      ],
+      "schema_ref": "#/$defs/validateFailResponse",
+      "example_files": [
+        "examples/api/validate-response.fail.json"
+      ]
+    },
+    {
+      "id": "validateBatchResponse",
+      "route_ids": [
+        "validateBatch"
+      ],
+      "schema_ref": "#/$defs/validateBatchResponse",
+      "example_files": [
+        "examples/api/validate-response.batch.json"
+      ]
+    },
+    {
+      "id": "validateFixResponse",
+      "route_ids": [
+        "validateFix"
+      ],
+      "schema_ref": "#/$defs/validateFixResponse",
+      "example_files": [
+        "examples/api/validate-response.fix.sample.json"
+      ]
+    },
+    {
+      "id": "gatesResponse",
+      "route_ids": [
+        "getGates"
+      ],
+      "schema_ref": "#/$defs/gatesResponse",
+      "example_files": [
+        "examples/api/gates-response.sample.json"
+      ]
+    },
+    {
+      "id": "statsResponse",
+      "route_ids": [
+        "getStats"
+      ],
+      "schema_ref": "#/$defs/statsResponse",
+      "example_files": [
+        "examples/api/stats-response.sample.json"
+      ]
+    },
+    {
+      "id": "simpleErrorResponse",
+      "route_ids": [
+        "validateSingle",
+        "validateBatch",
+        "validateFix",
+        "getStats",
+        "getGates"
+      ],
+      "schema_ref": "#/$defs/simpleErrorResponse",
+      "example_files": [
+        "examples/api/error-response.sample.json",
+        "examples/api/unauthorized-response.sample.json",
+        "examples/api/conflict-response.sample.json",
+        "examples/api/rate-limit-response.sample.json"
+      ]
+    }
+  ],
+  "shared_definitions": [
+    {
+      "id": "validationOptions",
+      "schema_ref": "#/$defs/validationOptions",
+      "used_by": [
+        "validateSingleRequest",
+        "validateBatchRequest",
+        "validateFixRequest"
+      ]
+    },
+    {
+      "id": "validatorIssue",
+      "schema_ref": "#/$defs/validatorIssue",
+      "used_by": [
+        "validatePassResponse",
+        "validateFailResponse",
+        "validateBatchResponse",
+        "validateFixResponse"
+      ]
+    },
+    {
+      "id": "warningItem",
+      "schema_ref": "#/$defs/warningItem",
+      "used_by": [
+        "validatePassResponse",
+        "validateFailResponse",
+        "validateBatchResponse",
+        "validateFixResponse"
+      ]
+    },
+    {
+      "id": "gateDescriptor",
+      "schema_ref": "#/$defs/gateDescriptor",
+      "used_by": [
+        "gatesResponse"
+      ]
+    }
+  ]
+}

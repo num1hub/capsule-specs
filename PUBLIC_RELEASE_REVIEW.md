@@ -48,6 +48,7 @@
 - compact validator-route reference JSON, a shared TypeScript validator-route projection, and source-level plus installed-package TypeScript live-client recipes for the published `validate`, `batch`, `fix`, `gates`, and `stats` validator routes, so typed route usage no longer stops at static sample parsing or language-specific live recipes
 - package-consumer support-response recipes for `gates` and `stats`, plus fresh-install proof that the installed validator projection layer covers support payload parsing as well as `validate` request/response flows
 - compact contract-reference JSON artifacts, their directory guide and human guide, package-consumer recipes, and repo-local verifier
+- compact validator-envelope-family reference JSON, a shared TypeScript envelope-family projection, their consumer recipes, and repo-local verifier
 - single-file bundled schema artifacts, their human guide, package-consumer recipes, and repo-local verifier
 - Ajv-based raw-schema consumer recipes, their human guide, and repo-local verifier
 - intentionally schema-invalid capsule fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier

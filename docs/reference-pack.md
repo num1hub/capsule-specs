@@ -16,6 +16,8 @@ Use this layer when you want canonical enums, gate IDs, validator option flags, 
   - validator option flags and gate-severity enum values
 - [`../references/validation-gates.json`](../references/validation-gates.json)
   Compact ordered gate-family map and short summaries for `G01` through `G16`
+- [`../references/validator-envelope-families.json`](../references/validator-envelope-families.json)
+  Compact request-family, response-family, and shared-definition map for the published validator envelope layer
 - [`../references/validator-routes.json`](../references/validator-routes.json)
   Compact published validator route map covering `POST /api/validate`, `POST /api/validate/batch`, `POST /api/validate/fix`, `GET /api/validate/stats`, and `GET /api/validate/gates`
 
@@ -28,6 +30,7 @@ Use the reference pack when you are building:
 - tool-builder defaults for confidence-vector dimensions
 - integrity-seal recomputation helpers that need the bounded root scope without parsing the full prose stack
 - CLI hints, dashboards, or docs generators that need the ordered gate list
+- SDK generators or contract explorers that need the published validator request/response family map without walking schema defs by hand
 - HTTP clients or route mappers that need published validator paths and methods without scraping OpenAPI first
 
 ## What stays stronger than this layer
@@ -48,6 +51,7 @@ The package surface exports these files directly:
 
 - `@num1hub/capsule-specs/references/contract-constants.json`
 - `@num1hub/capsule-specs/references/validation-gates.json`
+- `@num1hub/capsule-specs/references/validator-envelope-families.json`
 - `@num1hub/capsule-specs/references/validator-routes.json`
 
 See also:
@@ -58,4 +62,5 @@ See also:
 - [`python-consumption.md`](python-consumption.md)
 - [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs)
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
+- [`../examples/client/ts-envelope-family-reference.ts`](../examples/client/ts-envelope-family-reference.ts)
 - [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)

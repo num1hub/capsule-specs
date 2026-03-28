@@ -26,6 +26,7 @@ const nodeFiles = [
 const typeRecipeFiles = [
   'ts-capsule-summary.ts',
   'zod-parse-capsule.ts',
+  'ts-envelope-family-reference.ts',
   'ts-build-validate-request.ts',
   'ts-build-validate-batch-request.ts',
   'ts-build-validate-fix-request.ts',
@@ -172,6 +173,7 @@ for (const [fileName, route] of Object.entries(expectedNodeRoutes)) {
 const expectedTypeProjectionImports = {
   'ts-capsule-summary.ts': '../../projections/typescript/capsule.js',
   'zod-parse-capsule.ts': '../../projections/zod/capsule.js',
+  'ts-envelope-family-reference.ts': '../../projections/typescript/validator-envelope-families.js',
   'ts-build-validate-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-batch-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-fix-request.ts': '../../projections/typescript/validator-api.js',
@@ -333,6 +335,7 @@ const expectedPythonRecipeReferences = {
   'python-contract-reference.py': [
     'references/contract-constants.json',
     'references/validation-gates.json',
+    'references/validator-envelope-families.json',
     'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json'
   ],
   'python-recompute-integrity-seal.py': [
@@ -426,7 +429,8 @@ const expectedPackageImports = {
   ],
   'cjs-package-contract-reference.cjs': [
     '@num1hub/capsule-specs/references/contract-constants.json',
-    '@num1hub/capsule-specs/references/validation-gates.json'
+    '@num1hub/capsule-specs/references/validation-gates.json',
+    '@num1hub/capsule-specs/references/validator-envelope-families.json'
   ],
   'cjs-package-error-responses.cjs': [
     '@num1hub/capsule-specs/zod/validator-api',
@@ -495,7 +499,9 @@ const expectedPackageTypeImports = {
   ],
   'ts-package-contract-reference.ts': [
     '@num1hub/capsule-specs/references/contract-constants.json',
-    '@num1hub/capsule-specs/references/validation-gates.json'
+    '@num1hub/capsule-specs/references/validation-gates.json',
+    '@num1hub/capsule-specs/references/validator-envelope-families.json',
+    '@num1hub/capsule-specs/typescript/validator-envelope-families'
   ],
   'ts-package-live-validator-client.ts': [
     '@num1hub/capsule-specs/typescript/validator-api',

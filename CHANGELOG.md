@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- added a compact validator-envelope family reference layer plus a shared TypeScript envelope-family projection, so tool-builders and package consumers no longer have to crawl schema defs or prose docs by hand to discover the published request, response, and shared-definition families
 - added compact validator-route reference data plus a shared TypeScript validator-route projection, so OpenAPI, contract-reference consumers, and live-client recipes no longer depend on copied route strings
 - added source-level and installed-package TypeScript live-client recipes for the published `validate`, `batch`, `fix`, `gates`, and `stats` validator routes, so typed route usage no longer stops at sample parsing, package-only request builders, or non-TypeScript live examples
 - added source-level and installed-package TypeScript request-family sample parsers for the published single, batch, and fix validator envelopes, so TypeScript consumers no longer have to choose between construction-only builders and Zod/runtime-only sample parsing on the request side

@@ -46,8 +46,19 @@ If you need installed-package consumer artifacts for the bounded shared error-en
 
 If you need compact machine-readable route data instead of full OpenAPI or prose docs, also inspect:
 
+- [`../references/validator-envelope-families.json`](../references/validator-envelope-families.json)
 - [`../references/validator-routes.json`](../references/validator-routes.json)
 - [`route-reference.md`](route-reference.md)
+
+## Compact family map
+
+The compact envelope-family surface publishes:
+
+- request families: `validateSingleRequest`, `validateBatchRequest`, `validateFixRequest`
+- response families: `validatePassResponse`, `validateFailResponse`, `validateBatchResponse`, `validateFixResponse`, `gatesResponse`, `statsResponse`, `simpleErrorResponse`
+- shared definitions: `validationOptions`, `validatorIssue`, `warningItem`, `gateDescriptor`
+
+Use [`../references/validator-envelope-families.json`](../references/validator-envelope-families.json) when you want those families as a compact route-linked machine-readable surface instead of walking schema defs or prose sections manually.
 
 If you need a cross-language raw-JSON consumer path outside the Node runtime, also inspect:
 
