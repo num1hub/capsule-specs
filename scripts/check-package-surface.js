@@ -74,6 +74,10 @@ const openapi = require('@num1hub/capsule-specs/openapi/validate.openapi.json');
 const contractConstants = require('@num1hub/capsule-specs/references/contract-constants.json');
 const validationGates = require('@num1hub/capsule-specs/references/validation-gates.json');
 const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
+const passResponseSample = require('@num1hub/capsule-specs/examples/api/validate-response.pass.json');
+const failResponseSample = require('@num1hub/capsule-specs/examples/api/validate-response.fail.json');
+const batchResponseSample = require('@num1hub/capsule-specs/examples/api/validate-response.batch.json');
+const fixResponseSample = require('@num1hub/capsule-specs/examples/api/validate-response.fix.sample.json');
 const gatesResponseSample = require('@num1hub/capsule-specs/examples/api/gates-response.sample.json');
 const statsResponseSample = require('@num1hub/capsule-specs/examples/api/stats-response.sample.json');
 const errorResponseSample = require('@num1hub/capsule-specs/examples/api/error-response.sample.json');
@@ -86,12 +90,14 @@ const invalidArchiveContentClassBundle = require('@num1hub/capsule-specs/example
 const invalidRelationTypeCapsule = require('@num1hub/capsule-specs/examples/invalid/example-invalid-relation-type.capsule.json');
 const invalidApiFailResponse = require('@num1hub/capsule-specs/examples/api-invalid/validate-response.fail.invalid-gate.json');
 const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsule.json'));
-const passResponse = require(path.join(repoRoot, 'examples', 'api', 'validate-response.pass.json'));
 
 assert(rootExports && rootExports.typescript && rootExports.zod, 'root package export must expose typescript and zod namespaces');
 assert(Array.isArray(typescriptProjection.CAPSULE_TYPES), 'typescript export must expose CAPSULE_TYPES');
 assert(typeof zodProjection.capsuleSchema?.parse === 'function', 'zod export must expose capsuleSchema.parse');
 assert(typeof validatorZod.validatePassResponseSchema?.parse === 'function', 'validator zod export must expose validatePassResponseSchema.parse');
+assert(typeof validatorZod.validateFailResponseSchema?.parse === 'function', 'validator zod export must expose validateFailResponseSchema.parse');
+assert(typeof validatorZod.validateBatchResponseSchema?.parse === 'function', 'validator zod export must expose validateBatchResponseSchema.parse');
+assert(typeof validatorZod.validateFixResponseSchema?.parse === 'function', 'validator zod export must expose validateFixResponseSchema.parse');
 assert(typeof validatorZod.simpleErrorResponseSchema?.parse === 'function', 'validator zod export must expose simpleErrorResponseSchema.parse');
 assert(typeof validatorZod.gatesResponseSchema?.parse === 'function', 'validator zod export must expose gatesResponseSchema.parse');
 assert(typeof validatorZod.statsResponseSchema?.parse === 'function', 'validator zod export must expose statsResponseSchema.parse');
@@ -136,7 +142,10 @@ assert(
 );
 
 const parsedNote = zodProjection.capsuleSchema.parse(exampleNote);
-const parsedPassResponse = validatorZod.validatePassResponseSchema.parse(passResponse);
+const parsedPassResponse = validatorZod.validatePassResponseSchema.parse(passResponseSample);
+const parsedFailResponse = validatorZod.validateFailResponseSchema.parse(failResponseSample);
+const parsedBatchResponse = validatorZod.validateBatchResponseSchema.parse(batchResponseSample);
+const parsedFixResponse = validatorZod.validateFixResponseSchema.parse(fixResponseSample);
 const parsedErrorResponse = validatorZod.simpleErrorResponseSchema.parse(errorResponseSample);
 const parsedUnauthorizedResponse = validatorZod.simpleErrorResponseSchema.parse(unauthorizedResponseSample);
 const parsedConflictResponse = validatorZod.simpleErrorResponseSchema.parse(conflictResponseSample);
@@ -146,6 +155,12 @@ const parsedStatsResponse = validatorZod.statsResponseSchema.parse(statsResponse
 
 assert(parsedNote.metadata.capsule_id === exampleNote.metadata.capsule_id, 'built package zod export must parse the example note capsule');
 assert(parsedPassResponse.valid === true, 'built package zod export must parse the passing validator response');
+assert(parsedFailResponse.errors[0]?.gate === 'G16', 'built package zod export must parse the failing validator response sample');
+assert(parsedBatchResponse.summary.invalid === 1, 'built package zod export must parse the batch validator response sample');
+assert(
+  parsedFixResponse.fixedCapsule.metadata.capsule_id === 'capsule.example.validator-invalid-g16.v1',
+  'built package zod export must parse the fix validator response sample'
+);
 assert(parsedErrorResponse.error === errorResponseSample.error, 'built package zod export must parse the generic error response sample');
 assert(parsedUnauthorizedResponse.error === 'Unauthorized', 'built package zod export must parse the unauthorized error response sample');
 assert(/conflict/i.test(parsedConflictResponse.error), 'built package zod export must parse the conflict error response sample');
@@ -226,6 +241,7 @@ for (const relativePath of [
   'examples/client/esm-package-validate-response.mjs',
   'examples/client/ts-package-contract-reference.ts',
   'examples/client/ts-package-error-responses.ts',
+  'examples/client/ts-package-validate-responses.ts',
   'examples/client/ts-package-support-responses.ts',
   'examples/invalid/README.md',
   'examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json',

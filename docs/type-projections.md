@@ -28,6 +28,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal TypeScript recipe for building a validator batch request envelope from the published API projection.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
   Minimal TypeScript recipe for building a validator fix request envelope from the published API projection.
+- [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts)
+  Minimal TypeScript recipe for typing the published pass, fail, batch, and fix validator response families through the public projection layer.
 - [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts)
   Minimal TypeScript recipe for typing the published generic, unauthorized, conflict, and rate-limit error envelopes through the public projection layer.
 - [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
@@ -45,13 +47,15 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
   Minimal CommonJS recipe that consumes the built package exports.
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
-  Minimal CommonJS recipe that consumes the built validator API package exports.
+  Minimal CommonJS recipe that consumes the built validator API package exports for the published pass, fail, batch, and fix response families.
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
   Minimal ESM recipe that consumes the built capsule package exports.
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
-  Minimal ESM recipe that consumes the built validator API package exports.
+  Minimal ESM recipe that consumes the built validator API package exports for the published pass, fail, batch, and fix response families.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
   Minimal TypeScript package-consumer recipe that exercises the published capsule and validator API package subpaths.
+- [`../examples/client/ts-package-validate-responses.ts`](../examples/client/ts-package-validate-responses.ts)
+  Minimal TypeScript package-consumer recipe for typed pass, fail, batch, and fix validator response-family handling through installed package exports.
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
   The stronger machine-readable contract surface these projections are aligned to.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
@@ -66,6 +70,7 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - a narrow source-level projection that stays reviewable inside the public repo
 - a public-safe source-level envelope layer for validator clients that do not want to hand-roll request and response shapes
 - a source-level path for batch and fix validator envelopes that stays aligned to the published sample payload families
+- a source-level path for typed validate-response families that stays aligned to the published pass, fail, batch, and fix samples
 - a source-level path for bounded shared error-envelope typing and parsing that stays aligned to the published sample payloads
 - a source-level path for support-response typing and parsing that stays aligned to the published sample payloads
 

@@ -37,7 +37,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, full-route client recipes, repo-relative TypeScript request builders, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package support/error-response readers that cover single, batch, fix, gates, stats, and shared generic rejection paths without depending on private runtime code.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, full-route client recipes, repo-relative TypeScript request builders, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package validate/support/error-response readers that cover single, batch, fix, gates, stats, and shared generic rejection paths without depending on private runtime code.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -76,8 +76,10 @@
         "examples/client/esm-package-capsule-summary.mjs",
         "examples/client/esm-package-validate-response.mjs",
         "examples/client/ts-package-validate-request.ts",
+        "examples/client/ts-package-validate-responses.ts",
         "examples/client/ts-build-validate-batch-request.ts",
         "examples/client/ts-build-validate-fix-request.ts",
+        "examples/client/ts-parse-validate-responses.ts",
         "examples/client/ts-parse-error-responses.ts",
         "examples/client/zod-parse-validate-batch-response.ts",
         "examples/client/zod-parse-validate-fix-response.ts",

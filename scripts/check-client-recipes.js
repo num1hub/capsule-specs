@@ -29,6 +29,7 @@ const typeRecipeFiles = [
   'ts-build-validate-request.ts',
   'ts-build-validate-batch-request.ts',
   'ts-build-validate-fix-request.ts',
+  'ts-parse-validate-responses.ts',
   'ts-parse-error-responses.ts',
   'ts-parse-support-responses.ts',
   'zod-parse-error-responses.ts',
@@ -84,6 +85,7 @@ const packageTypeRecipeFiles = [
   'ts-package-error-responses.ts',
   'ts-package-contract-reference.ts',
   'ts-package-support-responses.ts',
+  'ts-package-validate-responses.ts',
   'ts-package-validate-request.ts'
 ];
 
@@ -161,6 +163,7 @@ const expectedTypeProjectionImports = {
   'ts-build-validate-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-batch-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-fix-request.ts': '../../projections/typescript/validator-api.js',
+  'ts-parse-validate-responses.ts': '../../projections/typescript/validator-api.js',
   'ts-parse-error-responses.ts': '../../projections/typescript/validator-api.js',
   'ts-parse-support-responses.ts': '../../projections/typescript/validator-api.js',
   'zod-parse-error-responses.ts': '../../projections/zod/validator-api.js',
@@ -400,7 +403,11 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/examples/api/stats-response.sample.json'
   ],
   'cjs-package-validate-response.cjs': [
-    '@num1hub/capsule-specs/zod/validator-api'
+    '@num1hub/capsule-specs/zod/validator-api',
+    '@num1hub/capsule-specs/examples/api/validate-response.pass.json',
+    '@num1hub/capsule-specs/examples/api/validate-response.fail.json',
+    '@num1hub/capsule-specs/examples/api/validate-response.batch.json',
+    '@num1hub/capsule-specs/examples/api/validate-response.fix.sample.json'
   ],
   'esm-package-capsule-summary.mjs': [
     '@num1hub/capsule-specs',
@@ -416,7 +423,10 @@ const expectedPackageImports = {
   ],
   'esm-package-validate-response.mjs': [
     '@num1hub/capsule-specs/zod/validator-api',
-    '@num1hub/capsule-specs/examples/api/validate-response.pass.json'
+    '@num1hub/capsule-specs/examples/api/validate-response.pass.json',
+    '@num1hub/capsule-specs/examples/api/validate-response.fail.json',
+    '@num1hub/capsule-specs/examples/api/validate-response.batch.json',
+    '@num1hub/capsule-specs/examples/api/validate-response.fix.sample.json'
   ],
   'esm-package-support-responses.mjs': [
     '@num1hub/capsule-specs/zod/validator-api',
@@ -438,6 +448,9 @@ const expectedPackageTypeImports = {
     '@num1hub/capsule-specs/references/validation-gates.json'
   ],
   'ts-package-support-responses.ts': [
+    '@num1hub/capsule-specs/typescript/validator-api'
+  ],
+  'ts-package-validate-responses.ts': [
     '@num1hub/capsule-specs/typescript/validator-api'
   ]
 };

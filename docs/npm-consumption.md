@@ -9,6 +9,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for the root projection namespaces
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - package exports for compact contract reference JSON artifacts
+- package exports for pass, fail, batch, and fix validator response-family parsing and typing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for bounded generic, unauthorized, conflict, and rate-limit error-envelope parsing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for validator support-response parsing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for raw JSON Schema validation with third-party validators such as Ajv
@@ -138,6 +139,26 @@ console.log(simpleErrorResponseSchema.parse(unauthorizedError).error);
 
 These recipes prove that the installed package surface also covers the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes instead of leaving non-2xx parsing as prose-only or Python-only guidance.
 
+## Minimal package-level validate-response family example
+
+Copyable versions of this example also live at [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs), [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs), and [`../examples/client/ts-package-validate-responses.ts`](../examples/client/ts-package-validate-responses.ts).
+
+```js
+import * as validatorProjection from "@num1hub/capsule-specs/zod/validator-api";
+import passResponse from "@num1hub/capsule-specs/examples/api/validate-response.pass.json" with { type: "json" };
+import failResponse from "@num1hub/capsule-specs/examples/api/validate-response.fail.json" with { type: "json" };
+
+const validatePassResponseSchema =
+  validatorProjection.validatePassResponseSchema ?? validatorProjection.default?.validatePassResponseSchema;
+const validateFailResponseSchema =
+  validatorProjection.validateFailResponseSchema ?? validatorProjection.default?.validateFailResponseSchema;
+
+console.log(validatePassResponseSchema.parse(passResponse).valid);
+console.log(validateFailResponseSchema.parse(failResponse).errors[0]?.gate);
+```
+
+These recipes prove that the installed package surface covers the published pass, fail, batch, and fix validator response families instead of leaving installed-package response handling at the single positive-pass sample only.
+
 ## Minimal package-level Ajv schema example
 
 A copyable version of this example also lives at [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs).
@@ -253,6 +274,7 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - The package surface is compatible with raw-schema validators, but those validators still only prove structural contract conformance, not live gate semantics.
 - The package support-response recipes prove installed-package parsing and typing for the published `gates` and `stats` payloads, not live-route availability or hosted-service behavior.
 - The package error-envelope recipes prove installed-package parsing and typing for the bounded shared generic, unauthorized, conflict, and rate-limit payloads, not a promise about every private runtime error variant.
+- The package validate-response recipes prove installed-package parsing and typing for the published pass, fail, batch, and fix families, not live validator execution or hosted-service availability.
 - The Python path uses extracted packaged files and raw JSON assets; it does not expose the Node exports as Python modules or imply a PyPI release.
 - The reference-pack exports are convenience JSON layers for compact tooling use, not stronger replacements for the schemas, raw capsules, or validator/OpenAPI surfaces they summarize.
 - The raw capsule exports are curated reference assets, not a promise that the whole upstream vault is available as a package surface.

@@ -161,6 +161,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal source-level TypeScript recipe for constructing a validator batch request envelope.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator fix request envelope.
+- [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts)
+  Minimal source-level TypeScript recipe for typing the published pass, fail, batch, and fix validator response families.
 - [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts)
   Minimal source-level TypeScript recipe for typing the published generic, unauthorized, conflict, and rate-limit error envelopes.
 - [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
@@ -182,7 +184,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/cjs-package-support-responses.cjs`](../examples/client/cjs-package-support-responses.cjs)
   Minimal CommonJS package-consumer recipe for parsing the published `gates` and `stats` support responses from installed package exports.
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
-  Minimal package-consumer recipe for the built validator API exports.
+  Minimal CommonJS package-consumer recipe for parsing the published pass, fail, batch, and fix validator response families from installed package exports.
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
   Minimal ESM package-consumer recipe for the built capsule projection exports.
 - [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs)
@@ -190,7 +192,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/esm-package-support-responses.mjs`](../examples/client/esm-package-support-responses.mjs)
   Minimal ESM package-consumer recipe for parsing the published `gates` and `stats` support responses from installed package exports.
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
-  Minimal ESM package-consumer recipe for the built validator API exports.
+  Minimal ESM package-consumer recipe for parsing the published pass, fail, batch, and fix validator response families from installed package exports.
 - [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs)
   Minimal CommonJS package-consumer recipe for compact contract-reference exports.
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
@@ -233,6 +235,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal TypeScript package-consumer recipe for typed generic, unauthorized, conflict, and rate-limit error-envelope handling through installed package exports.
 - [`../examples/client/ts-package-support-responses.ts`](../examples/client/ts-package-support-responses.ts)
   Minimal TypeScript package-consumer recipe for typed `gates` and `stats` support-response handling through installed package exports.
+- [`../examples/client/ts-package-validate-responses.ts`](../examples/client/ts-package-validate-responses.ts)
+  Minimal TypeScript package-consumer recipe for typed pass, fail, batch, and fix validator response-family handling through installed package exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
   Minimal TypeScript package-consumer recipe for the built capsule and validator API exports.
 
@@ -248,9 +252,9 @@ The API envelope schema and its dedicated verification script strengthen that cl
 
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
-The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
+The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
-The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree.
+The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering the full published validate-response family instead of the positive pass sample only.
 
 The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, and validator option flags without forcing them to parse the larger schemas or prose docs first.
 
