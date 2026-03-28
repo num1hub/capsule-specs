@@ -122,6 +122,10 @@ assert(
   'release metadata must include the archive-recipes verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:invalid-archive-examples'),
+  'release metadata must include the invalid-archive-examples verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:invalid-examples'),
   'release metadata must include the invalid-examples verification check'
 );

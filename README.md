@@ -37,6 +37,7 @@ This repository is that home.
 - [`docs/portability.md`](docs/portability.md) for public portability and no-lock-in posture
 - [`docs/archive-bundles.md`](docs/archive-bundles.md) for the archive export / replay contract
 - [`docs/archive-validation-recipes.md`](docs/archive-validation-recipes.md) for direct Ajv validation of the published archive-bundle contract from repo and installed-package paths
+- [`docs/invalid-archive-bundle-examples.md`](docs/invalid-archive-bundle-examples.md) for intentionally schema-invalid archive-bundle fixtures and their bounded structural rejection reasons
 - [`docs/schema-family-reference.md`](docs/schema-family-reference.md) for choosing the right schema family first
 - [`docs/reference-pack.md`](docs/reference-pack.md) for compact machine-readable enums, gate IDs, and validator option flags
 - [`docs/schema-bundles.md`](docs/schema-bundles.md) for single-file bundled schema artifacts when you want less multi-file `$ref` wiring
@@ -114,6 +115,8 @@ This repository is that home.
   Intentionally schema-invalid capsule fixtures for raw-schema consumers.
 - `examples/api-invalid/`
   Intentionally schema-invalid validator API envelope fixtures for raw-schema consumers.
+- `examples/archive-invalid/`
+  Intentionally schema-invalid archive-bundle fixtures for portability and export consumers.
 - `openapi/`
   OpenAPI reference for validator-facing HTTP surfaces.
 - `capsules/`
@@ -169,6 +172,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - compact machine-readable contract references exported directly for tool-builders and package consumers
 - raw JSON Schema consumer recipes for Ajv-based structural validation from repo-relative files and installed package exports
 - archive-bundle schema validation recipes for portability/export consumers from repo-relative files and installed package exports
+- intentionally schema-invalid archive-bundle fixtures plus Ajv rejection recipes for raw-schema portability consumers
 - single-file bundled schema artifacts plus repo-local and package-level Ajv bundle recipes for lower-friction codegen and polyglot consumers
 - intentionally schema-invalid capsule fixtures plus Ajv rejection recipes for raw-schema consumers
 - intentionally schema-invalid validator API envelope fixtures plus Ajv rejection recipes for raw-schema consumers
@@ -211,48 +215,50 @@ Maintainer and review policy:
 8. Inspect [`docs/reference-pack.md`](docs/reference-pack.md) and [`references/`](references/) if you want compact machine-readable enums, gate IDs, and validator option flags without parsing larger schemas first.
 9. Inspect [`docs/schema-validation-recipes.md`](docs/schema-validation-recipes.md) if you want to validate capsules and validator-envelope payloads directly against the published raw JSON Schemas with Ajv.
 10. Inspect [`docs/archive-validation-recipes.md`](docs/archive-validation-recipes.md) if you want to validate the published archive-bundle sample directly against the public portability/export schema.
-11. Inspect [`docs/invalid-capsule-examples.md`](docs/invalid-capsule-examples.md) if you want structural negative fixtures that should fail raw-schema validation before any stronger live-validator behavior is involved.
-12. Inspect [`docs/invalid-api-envelope-examples.md`](docs/invalid-api-envelope-examples.md) if you want structural negative validator-envelope fixtures that should fail raw-schema validation before any stronger live-validator route behavior is involved.
-13. Inspect [`docs/integrity-recipes.md`](docs/integrity-recipes.md) if you want the exact public sealing rule for `integrity_sha3_512`, the shortest recomputation path, and the repair boundary for the intentional `G16` example.
-14. Inspect [`docs/python-consumption.md`](docs/python-consumption.md) if you want a cross-language raw-JSON path for compact references and public `G16` seal proofs without depending on the Node projection layer.
-15. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`docs/npm-consumption.md`](docs/npm-consumption.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level or package-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
-16. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
-16. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
-17. Inspect [`PUBLIC_EXAMPLE_COVERAGE.json`](PUBLIC_EXAMPLE_COVERAGE.json) if you want the bounded map from examples to covered routes, law surfaces, and negative paths.
-18. Inspect [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) if you want the bounded model for issue intake, review rules, and release posture.
-19. Inspect [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) if you want the bounded model for additive, deprecated, and breaking public changes.
-20. Inspect [`PUBLIC_OWNERSHIP_MAP.json`](PUBLIC_OWNERSHIP_MAP.json) if you want the bounded map of which artifact families are maintained here and which stronger surfaces outrank them.
-21. Inspect [`PUBLIC_DEPENDENCY_GRAPH.json`](PUBLIC_DEPENDENCY_GRAPH.json) if you want the bounded map of which public artifacts depend on which stronger surfaces and in what order they are easiest to read.
-22. Inspect [`PUBLIC_ASSURANCE_CASE.json`](PUBLIC_ASSURANCE_CASE.json) if you want the bounded public claims, strongest evidence, and explicit non-claims in one reviewer-facing surface.
-23. Inspect [`PUBLIC_UPDATE_COHERENCE_MAP.json`](PUBLIC_UPDATE_COHERENCE_MAP.json) if you want the bounded sync groups that must move together when release, reviewer, or contract surfaces change.
-24. Inspect [`PUBLIC_LIMITATIONS_REGISTER.json`](PUBLIC_LIMITATIONS_REGISTER.json) if you want the bounded map of deferred domains, non-promises, and public review limits.
-25. Inspect [`PUBLIC_EVIDENCE_TIMELINE.json`](PUBLIC_EVIDENCE_TIMELINE.json) if you want the bounded map of how this public surface hardened over time.
-26. Inspect [`PUBLIC_REVIEW_SCORECARD.json`](PUBLIC_REVIEW_SCORECARD.json) if you want the bounded reviewer-grade checklist for public repository maturity.
-27. Inspect [`PUBLIC_VERIFICATION_MATRIX.json`](PUBLIC_VERIFICATION_MATRIX.json) if you want the bounded map of which verification families protect which public surfaces.
-28. Inspect [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) if you want the bounded role-specific entry paths for reviewers, integrators, contributors, tool-builders, and maintainers.
-29. Inspect [`PUBLIC_EVIDENCE_STRENGTH_MAP.json`](PUBLIC_EVIDENCE_STRENGTH_MAP.json) if you want the bounded map of which public artifacts are strongest, secondary, or illustrative.
-30. Inspect [`PUBLIC_ADOPTION_READINESS.json`](PUBLIC_ADOPTION_READINESS.json) if you want the bounded map of which audience paths are ready today, which prerequisites apply, and which hosted-runtime expectations stay deferred.
-31. Inspect [`PUBLIC_FRESHNESS_MODEL.json`](PUBLIC_FRESHNESS_MODEL.json) if you want the bounded map of which public summary layers go stale under which triggers and how freshness is kept tied to release evidence.
-32. Inspect [`PUBLIC_ECOSYSTEM_VALUE_MAP.json`](PUBLIC_ECOSYSTEM_VALUE_MAP.json) if you want the bounded map of why this public surface is concretely useful to reviewers, integrators, tool-builders, contributors, and external OSS-support programs.
-33. Inspect [`PUBLIC_DECISION_LOG.json`](PUBLIC_DECISION_LOG.json) if you want the bounded map of the major public decisions and the rationale behind this repository's projection, trust posture, and release discipline.
-34. Inspect [`PUBLIC_EVIDENCE_GAPS_REGISTER.json`](PUBLIC_EVIDENCE_GAPS_REGISTER.json) if you want the bounded map of which high-signal public evidence still remains intentionally incomplete and where review confidence must stay bounded.
-35. Inspect [`PUBLIC_PROGRAM_FIT_MAP.json`](PUBLIC_PROGRAM_FIT_MAP.json) if you want the bounded map of why this public surface is already reviewer/program-credible and where that fit is still intentionally bounded.
-36. Inspect [`PUBLIC_PUBLICATION_READINESS.json`](PUBLIC_PUBLICATION_READINESS.json) if you want the bounded map of why this repo remains coherent as a published GitHub surface and which post-publication signals remain intentionally deferred.
-37. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
-38. Review the raw capsule sources in [`capsules/`](capsules/) for the confidence-vector, subtype, and version-lineage law-adjacent surfaces.
-39. Read [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) if you are preparing a bounded repo-only contribution.
-40. Run `npm run verify:repo` for the repository-local integrity checks.
-41. Run `npm run check:package-surface` if you want to confirm the packable projection-export layer as a consumer artifact.
-42. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS, ESM, TypeScript, raw-schema, archive-schema, bundled-schema, invalid-fixture, compact-reference, integrity-recipe, and Python raw-asset consumers.
-43. Run `npm run check:raw-capsules` if you want to confirm the curated raw capsule set stays structurally aligned and package-consumable.
-44. Run `npm run check:reference-pack` if you want to confirm the compact reference pack stays aligned to the stronger schema and gate surfaces.
-45. Run `npm run check:schema-bundles` if you want to confirm the committed single-file bundled schema artifacts and their consumer recipes stay aligned to the stronger raw schema files.
-46. Run `npm run check:schema-recipes` if you want to confirm the Ajv-based raw JSON Schema consumer recipes stay executable and aligned to the published schema exports.
-47. Run `npm run check:archive-recipes` if you want to confirm the archive-bundle validation recipes stay executable and aligned to the published portability/export schema.
-48. Run `npm run check:invalid-examples` if you want to confirm the published schema-invalid capsule fixtures keep failing for the documented structural reasons.
-49. Run `npm run check:invalid-api-examples` if you want to confirm the published schema-invalid validator-envelope fixtures keep failing for the documented structural reasons.
-50. Run `npm run check:integrity-recipes` if you want to confirm the published examples, validator API payloads, and sealing recipes stay aligned to the current public `G16` rule.
-51. Run `npm run check:python-recipes` if you want to confirm the cross-language Python consumer recipes stay aligned to the published compact references, public example seals, and extracted packed-artifact layout.
+11. Inspect [`docs/invalid-archive-bundle-examples.md`](docs/invalid-archive-bundle-examples.md) if you want structural negative archive fixtures that should fail raw-schema validation before any stronger replay-policy or hosted-import assumptions are involved.
+12. Inspect [`docs/invalid-capsule-examples.md`](docs/invalid-capsule-examples.md) if you want structural negative fixtures that should fail raw-schema validation before any stronger live-validator behavior is involved.
+13. Inspect [`docs/invalid-api-envelope-examples.md`](docs/invalid-api-envelope-examples.md) if you want structural negative validator-envelope fixtures that should fail raw-schema validation before any stronger live-validator route behavior is involved.
+14. Inspect [`docs/integrity-recipes.md`](docs/integrity-recipes.md) if you want the exact public sealing rule for `integrity_sha3_512`, the shortest recomputation path, and the repair boundary for the intentional `G16` example.
+15. Inspect [`docs/python-consumption.md`](docs/python-consumption.md) if you want a cross-language raw-JSON path for compact references and public `G16` seal proofs without depending on the Node projection layer.
+16. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`docs/npm-consumption.md`](docs/npm-consumption.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level or package-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
+17. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
+18. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
+19. Inspect [`PUBLIC_EXAMPLE_COVERAGE.json`](PUBLIC_EXAMPLE_COVERAGE.json) if you want the bounded map from examples to covered routes, law surfaces, and negative paths.
+20. Inspect [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) if you want the bounded model for issue intake, review rules, and release posture.
+21. Inspect [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) if you want the bounded model for additive, deprecated, and breaking public changes.
+22. Inspect [`PUBLIC_OWNERSHIP_MAP.json`](PUBLIC_OWNERSHIP_MAP.json) if you want the bounded map of which artifact families are maintained here and which stronger surfaces outrank them.
+23. Inspect [`PUBLIC_DEPENDENCY_GRAPH.json`](PUBLIC_DEPENDENCY_GRAPH.json) if you want the bounded map of which public artifacts depend on which stronger surfaces and in what order they are easiest to read.
+24. Inspect [`PUBLIC_ASSURANCE_CASE.json`](PUBLIC_ASSURANCE_CASE.json) if you want the bounded public claims, strongest evidence, and explicit non-claims in one reviewer-facing surface.
+25. Inspect [`PUBLIC_UPDATE_COHERENCE_MAP.json`](PUBLIC_UPDATE_COHERENCE_MAP.json) if you want the bounded sync groups that must move together when release, reviewer, or contract surfaces change.
+26. Inspect [`PUBLIC_LIMITATIONS_REGISTER.json`](PUBLIC_LIMITATIONS_REGISTER.json) if you want the bounded map of deferred domains, non-promises, and public review limits.
+27. Inspect [`PUBLIC_EVIDENCE_TIMELINE.json`](PUBLIC_EVIDENCE_TIMELINE.json) if you want the bounded map of how this public surface hardened over time.
+28. Inspect [`PUBLIC_REVIEW_SCORECARD.json`](PUBLIC_REVIEW_SCORECARD.json) if you want the bounded reviewer-grade checklist for public repository maturity.
+29. Inspect [`PUBLIC_VERIFICATION_MATRIX.json`](PUBLIC_VERIFICATION_MATRIX.json) if you want the bounded map of which verification families protect which public surfaces.
+30. Inspect [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) if you want the bounded role-specific entry paths for reviewers, integrators, contributors, tool-builders, and maintainers.
+31. Inspect [`PUBLIC_EVIDENCE_STRENGTH_MAP.json`](PUBLIC_EVIDENCE_STRENGTH_MAP.json) if you want the bounded map of which public artifacts are strongest, secondary, or illustrative.
+32. Inspect [`PUBLIC_ADOPTION_READINESS.json`](PUBLIC_ADOPTION_READINESS.json) if you want the bounded map of which audience paths are ready today, which prerequisites apply, and which hosted-runtime expectations stay deferred.
+33. Inspect [`PUBLIC_FRESHNESS_MODEL.json`](PUBLIC_FRESHNESS_MODEL.json) if you want the bounded map of which public summary layers go stale under which triggers and how freshness is kept tied to release evidence.
+34. Inspect [`PUBLIC_ECOSYSTEM_VALUE_MAP.json`](PUBLIC_ECOSYSTEM_VALUE_MAP.json) if you want the bounded map of why this public surface is concretely useful to reviewers, integrators, tool-builders, contributors, and external OSS-support programs.
+35. Inspect [`PUBLIC_DECISION_LOG.json`](PUBLIC_DECISION_LOG.json) if you want the bounded map of the major public decisions and the rationale behind this repository's projection, trust posture, and release discipline.
+36. Inspect [`PUBLIC_EVIDENCE_GAPS_REGISTER.json`](PUBLIC_EVIDENCE_GAPS_REGISTER.json) if you want the bounded map of which high-signal public evidence still remains intentionally incomplete and where review confidence must stay bounded.
+37. Inspect [`PUBLIC_PROGRAM_FIT_MAP.json`](PUBLIC_PROGRAM_FIT_MAP.json) if you want the bounded map of why this public surface is already reviewer/program-credible and where that fit is still intentionally bounded.
+38. Inspect [`PUBLIC_PUBLICATION_READINESS.json`](PUBLIC_PUBLICATION_READINESS.json) if you want the bounded map of why this repo remains coherent as a published GitHub surface and which post-publication signals remain intentionally deferred.
+39. Compare the examples in [`examples/`](examples/) with the schema in [`schemas/`](schemas/).
+40. Review the raw capsule sources in [`capsules/`](capsules/) for the confidence-vector, subtype, and version-lineage law-adjacent surfaces.
+41. Read [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) if you are preparing a bounded repo-only contribution.
+42. Run `npm run verify:repo` for the repository-local integrity checks.
+43. Run `npm run check:package-surface` if you want to confirm the packable projection-export layer as a consumer artifact.
+44. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS, ESM, TypeScript, raw-schema, archive-schema, bundled-schema, invalid-fixture, compact-reference, integrity-recipe, and Python raw-asset consumers.
+45. Run `npm run check:raw-capsules` if you want to confirm the curated raw capsule set stays structurally aligned and package-consumable.
+46. Run `npm run check:reference-pack` if you want to confirm the compact reference pack stays aligned to the stronger schema and gate surfaces.
+47. Run `npm run check:schema-bundles` if you want to confirm the committed single-file bundled schema artifacts and their consumer recipes stay aligned to the stronger raw schema files.
+48. Run `npm run check:schema-recipes` if you want to confirm the Ajv-based raw JSON Schema consumer recipes stay executable and aligned to the published schema exports.
+49. Run `npm run check:archive-recipes` if you want to confirm the archive-bundle validation recipes stay executable and aligned to the published portability/export schema.
+50. Run `npm run check:invalid-archive-examples` if you want to confirm the published schema-invalid archive fixtures keep failing for the documented structural reasons.
+51. Run `npm run check:invalid-examples` if you want to confirm the published schema-invalid capsule fixtures keep failing for the documented structural reasons.
+52. Run `npm run check:invalid-api-examples` if you want to confirm the published schema-invalid validator-envelope fixtures keep failing for the documented structural reasons.
+53. Run `npm run check:integrity-recipes` if you want to confirm the published examples, validator API payloads, and sealing recipes stay aligned to the current public `G16` rule.
+54. Run `npm run check:python-recipes` if you want to confirm the cross-language Python consumer recipes stay aligned to the published compact references, public example seals, and extracted packed-artifact layout.
 
 ## Source of truth
 
@@ -262,4 +268,4 @@ This repository is assembled from public-safe source materials curated out of th
 
 This is the initial public projection of the N1Hub open-core specification surface. The current release focuses on schema, validator-facing contracts, examples, and repository health rather than on the full runtime codebase.
 
-Wave 2 and Wave 3 are delivered. Wave 4 has started through an expanded curated raw capsule set, package-exported raw capsule assets, a compact reference pack for canonical enums and gate maps, fresh Ajv-backed raw-schema consumer recipes, direct archive-bundle validation recipes for portability consumers, explicit schema-invalid capsule and validator-envelope fixtures, single-file schema bundle artifacts for lower-friction codegen and polyglot consumers, and a cross-language Python raw-asset path for compact references and public `G16` seal proofs, and should continue widening other public-safe contract families without reopening the private runtime boundary.
+Wave 2 and Wave 3 are delivered. Wave 4 has started through an expanded curated raw capsule set, package-exported raw capsule assets, a compact reference pack for canonical enums and gate maps, fresh Ajv-backed raw-schema consumer recipes, direct archive-bundle validation recipes for portability consumers, explicit schema-invalid archive, capsule, and validator-envelope fixtures, single-file schema bundle artifacts for lower-friction codegen and polyglot consumers, and a cross-language Python raw-asset path for compact references and public `G16` seal proofs, and should continue widening other public-safe contract families without reopening the private runtime boundary.

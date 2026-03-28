@@ -113,7 +113,7 @@
     },
     {
       "id": "raw-json-schema-consumer-path",
-      "claim": "The public surface supports direct raw-schema and single-file bundled-schema validation of capsules and validator-envelope payloads through Ajv-based recipes from both a repo checkout and an installed package, including explicit schema-invalid fixtures, without forcing consumers onto the projection layer.",
+      "claim": "The public surface supports direct raw-schema and single-file bundled-schema validation of capsules, validator-envelope payloads, and archive-bundle payloads through Ajv-based recipes from both a repo checkout and an installed package, including explicit schema-invalid archive, capsule, and validator-envelope fixtures, without forcing consumers onto the projection layer.",
       "audiences": [
         "integrators",
         "tool-builders",
@@ -129,7 +129,8 @@
         "schemas/validator-api-envelopes.schema.json",
         "schemas/validator-api-envelopes.bundle.json",
         "scripts/check-schema-recipes.js",
-        "docs/invalid-api-envelope-examples.md"
+        "docs/invalid-api-envelope-examples.md",
+        "docs/invalid-archive-bundle-examples.md"
       ],
       "supporting_surfaces": [
         "docs/integration-guide.md",
@@ -150,7 +151,16 @@
         "examples/client/ajv-reject-invalid-validator-envelopes.mjs",
         "examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs",
         "examples/api-invalid/README.md",
-        "scripts/check-invalid-api-examples.js"
+        "scripts/check-invalid-api-examples.js",
+        "examples/client/ajv-validate-archive-bundle.mjs",
+        "examples/client/esm-package-ajv-validate-archive-bundle.mjs",
+        "examples/client/ajv-reject-invalid-archive-bundles.mjs",
+        "examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs",
+        "examples/archive-invalid/README.md",
+        "examples/archive-invalid/archive-bundle.invalid-created-at.json",
+        "examples/archive-invalid/archive-bundle.invalid-content-class.json",
+        "scripts/check-archive-recipes.js",
+        "scripts/check-invalid-archive-examples.js"
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
@@ -158,7 +168,9 @@
         "npm run check:invalid-examples",
         "npm run check:package-install",
         "npm run check:traceability",
-        "npm run check:invalid-api-examples"
+        "npm run check:invalid-api-examples",
+        "npm run check:archive-recipes",
+        "npm run check:invalid-archive-examples"
       ]
     },
     {
@@ -255,7 +267,7 @@
     },
     {
       "id": "portability-and-archive-contracts",
-      "claim": "Public portability and archive trust posture are documented as bounded contracts rather than vague product promises.",
+      "claim": "Public portability and archive trust posture are documented as bounded contracts with both positive and intentionally invalid archive-bundle examples rather than vague product promises.",
       "audiences": [
         "reviewers",
         "integrators"
@@ -266,7 +278,8 @@
         "PUBLIC_PORTABILITY_PROFILE.json",
         "schemas/archive-bundle.schema.json",
         "examples/archive/archive-bundle.sample.json",
-        "docs/archive-validation-recipes.md"
+        "docs/archive-validation-recipes.md",
+        "docs/invalid-archive-bundle-examples.md"
       ],
       "supporting_surfaces": [
         "docs/trust-model.md",
@@ -274,13 +287,20 @@
         "schemas/public-portability-profile.schema.json",
         "examples/client/ajv-validate-archive-bundle.mjs",
         "examples/client/esm-package-ajv-validate-archive-bundle.mjs",
-        "scripts/check-archive-recipes.js"
+        "scripts/check-archive-recipes.js",
+        "examples/archive-invalid/README.md",
+        "examples/archive-invalid/archive-bundle.invalid-created-at.json",
+        "examples/archive-invalid/archive-bundle.invalid-content-class.json",
+        "examples/client/ajv-reject-invalid-archive-bundles.mjs",
+        "examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs",
+        "scripts/check-invalid-archive-examples.js"
       ],
       "verify_commands": [
         "npm run check:portability",
         "npm run check:archive-recipes",
         "npm run check:surface",
-        "npm run check:traceability"
+        "npm run check:traceability",
+        "npm run check:invalid-archive-examples"
       ]
     },
     {

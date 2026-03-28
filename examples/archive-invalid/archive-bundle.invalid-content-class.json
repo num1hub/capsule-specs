@@ -1,0 +1,28 @@
+{
+  "bundleId": "bundle.public-specs.invalid-content-class.2026-03-28",
+  "sourcePolicyId": "policy.portability.public-demo.v1",
+  "createdAt": "2026-03-28T12:00:00Z",
+  "sourceRegion": "us-west-1",
+  "tenantScope": "single-tenant",
+  "compression": "zstd",
+  "encryption": "age",
+  "exportEvidenceId": "evidence.export.invalid-content-class.2026-03-28T12:00:00Z",
+  "manifest": [
+    {
+      "entryId": "capsules-window",
+      "capsuleId": "capsule.example.public-portability.v1",
+      "contentClass": "logs",
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "bytes": 4096,
+      "tenantScoped": true,
+      "redacted": false
+    }
+  ],
+  "replay": {
+    "replayMode": "validate-only",
+    "validatorRequired": true,
+    "tenantBoundaryRequired": true,
+    "policyPackRequired": true,
+    "duplicateStrategy": "version"
+  }
+}

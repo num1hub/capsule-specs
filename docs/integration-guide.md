@@ -23,11 +23,13 @@ If you want a raw JSON Schema validation path instead of the projection layer or
 
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
 - [`archive-validation-recipes.md`](archive-validation-recipes.md)
+- [`invalid-archive-bundle-examples.md`](invalid-archive-bundle-examples.md)
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
 - [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
 - [`../examples/client/ajv-validate-archive-bundle.mjs`](../examples/client/ajv-validate-archive-bundle.mjs)
+- [`../examples/client/ajv-reject-invalid-archive-bundles.mjs`](../examples/client/ajv-reject-invalid-archive-bundles.mjs)
 - [`../examples/client/ajv-validate-schema-bundles.mjs`](../examples/client/ajv-validate-schema-bundles.mjs)
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/ajv-reject-invalid-validator-envelopes.mjs)
@@ -62,7 +64,7 @@ These are convenience projections for consumer ergonomics, not replacements for 
 If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
 That check confirms CommonJS runtime usage, ESM runtime usage, raw-schema and bundled-schema Ajv usage, and TypeScript type resolution from an installed tarball.
-It also confirms packaged structural rejection recipes for intentionally invalid capsule and validator-envelope fixtures.
+It also confirms packaged structural rejection recipes for intentionally invalid archive, capsule, and validator-envelope fixtures.
 For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md).
 If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.
 
@@ -70,8 +72,10 @@ If your integration path touches portability, export review, or replay-contract 
 
 - [`archive-bundles.md`](archive-bundles.md)
 - [`archive-validation-recipes.md`](archive-validation-recipes.md)
+- [`invalid-archive-bundle-examples.md`](invalid-archive-bundle-examples.md)
 - [`../schemas/archive-bundle.schema.json`](../schemas/archive-bundle.schema.json)
 - [`../examples/archive/archive-bundle.sample.json`](../examples/archive/archive-bundle.sample.json)
+- [`../examples/archive-invalid/README.md`](../examples/archive-invalid/README.md)
 
 ## 3. Learn the minimal capsule shape
 
@@ -86,12 +90,13 @@ These are the smallest public-safe examples that still satisfy the five-element 
 
 Read:
 
+- [`invalid-archive-bundle-examples.md`](invalid-archive-bundle-examples.md)
 - [`../examples/example-validator-invalid-g16.capsule.json`](../examples/example-validator-invalid-g16.capsule.json)
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
 - [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
 - [`16-gates.md`](16-gates.md)
 
-This helps you distinguish structural schema rejection from trust- and sealing-level rejection, both for capsules and for validator HTTP envelopes.
+This helps you distinguish structural schema rejection from trust- and sealing-level rejection across archive bundles, capsules, and validator HTTP envelopes.
 
 ## 5. Learn graph-aware validation
 

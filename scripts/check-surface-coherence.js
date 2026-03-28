@@ -97,6 +97,7 @@ const expectedPublicIndexLinks = [
   'schema-bundles.md',
   'schema-validation-recipes.md',
   'archive-validation-recipes.md',
+  'invalid-archive-bundle-examples.md',
   'invalid-capsule-examples.md',
   'invalid-api-envelope-examples.md',
   'integrity-recipes.md',
@@ -140,15 +141,18 @@ const expectedPublicIndexLinks = [
   '../examples/client/ajv-validate-validator-envelope.mjs',
   '../examples/client/ajv-validate-archive-bundle.mjs',
   '../examples/client/ajv-validate-schema-bundles.mjs',
+  '../examples/client/ajv-reject-invalid-archive-bundles.mjs',
   '../examples/client/ajv-reject-invalid-capsules.mjs',
   '../examples/client/ajv-reject-invalid-validator-envelopes.mjs',
   '../examples/client/recompute-integrity-seal.mjs',
   '../examples/client/esm-package-ajv-validate-contracts.mjs',
   '../examples/client/esm-package-ajv-validate-archive-bundle.mjs',
   '../examples/client/esm-package-ajv-validate-schema-bundles.mjs',
+  '../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs',
   '../examples/client/esm-package-ajv-reject-invalid-capsules.mjs',
   '../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs',
   '../examples/client/esm-package-recompute-integrity-seal.mjs',
+  '../examples/archive-invalid/README.md',
   '../examples/invalid/README.md',
   '../examples/api-invalid/README.md',
   '../projections/README.md',
@@ -206,6 +210,7 @@ assert(readme.includes('schemas/validator-api-envelopes.schema.json'), 'README.m
 assert(readme.includes('docs/portability.md'), 'README.md must mention docs/portability.md');
 assert(readme.includes('docs/archive-bundles.md'), 'README.md must mention docs/archive-bundles.md');
 assert(readme.includes('docs/archive-validation-recipes.md'), 'README.md must mention docs/archive-validation-recipes.md');
+assert(readme.includes('docs/invalid-archive-bundle-examples.md'), 'README.md must mention docs/invalid-archive-bundle-examples.md');
 assert(readme.includes('docs/evaluation-packet.md'), 'README.md must mention docs/evaluation-packet.md');
 assert(readme.includes('docs/failure-model.md'), 'README.md must mention docs/failure-model.md');
 assert(readme.includes('docs/example-coverage.md'), 'README.md must mention docs/example-coverage.md');
@@ -250,6 +255,7 @@ assert(readme.includes('npm run check:reference-pack'), 'README.md must mention 
 assert(readme.includes('npm run check:schema-bundles'), 'README.md must mention npm run check:schema-bundles');
 assert(readme.includes('npm run check:schema-recipes'), 'README.md must mention npm run check:schema-recipes');
 assert(readme.includes('npm run check:archive-recipes'), 'README.md must mention npm run check:archive-recipes');
+assert(readme.includes('npm run check:invalid-archive-examples'), 'README.md must mention npm run check:invalid-archive-examples');
 assert(readme.includes('npm run check:invalid-examples'), 'README.md must mention npm run check:invalid-examples');
 assert(readme.includes('npm run check:invalid-api-examples'), 'README.md must mention npm run check:invalid-api-examples');
 assert(readme.includes('npm run check:integrity-recipes'), 'README.md must mention npm run check:integrity-recipes');
@@ -297,6 +303,7 @@ assert(verificationDoc.includes('check:reference-pack'), 'docs/verification.md m
 assert(verificationDoc.includes('check:schema-bundles'), 'docs/verification.md must explain check:schema-bundles');
 assert(verificationDoc.includes('check:schema-recipes'), 'docs/verification.md must explain check:schema-recipes');
 assert(verificationDoc.includes('check:archive-recipes'), 'docs/verification.md must explain check:archive-recipes');
+assert(verificationDoc.includes('check:invalid-archive-examples'), 'docs/verification.md must explain check:invalid-archive-examples');
 assert(verificationDoc.includes('check:invalid-examples'), 'docs/verification.md must explain check:invalid-examples');
 assert(verificationDoc.includes('check:invalid-api-examples'), 'docs/verification.md must explain check:invalid-api-examples');
 assert(verificationDoc.includes('check:integrity-recipes'), 'docs/verification.md must explain check:integrity-recipes');

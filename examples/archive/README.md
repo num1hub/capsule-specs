@@ -20,3 +20,8 @@ For copyable validation paths, also inspect:
 - [`../client/ajv-validate-archive-bundle.mjs`](../client/ajv-validate-archive-bundle.mjs)
 - [`../client/esm-package-ajv-validate-archive-bundle.mjs`](../client/esm-package-ajv-validate-archive-bundle.mjs)
 - [`../../docs/archive-validation-recipes.md`](../../docs/archive-validation-recipes.md)
+
+For intentionally invalid archive fixtures and structural rejection recipes, inspect:
+
+- [`../archive-invalid/README.md`](../archive-invalid/README.md)
+- [`../../docs/invalid-archive-bundle-examples.md`](../../docs/invalid-archive-bundle-examples.md)

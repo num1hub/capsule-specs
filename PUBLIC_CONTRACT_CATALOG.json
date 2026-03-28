@@ -400,6 +400,22 @@
       ]
     },
     {
+      "id": "docs.invalid-archive-bundle-examples",
+      "path": "docs/invalid-archive-bundle-examples.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:invalid-archive-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "docs.invalid-capsule-examples",
       "path": "docs/invalid-capsule-examples.md",
       "kind": "integration-doc",
@@ -746,6 +762,65 @@
       ]
     },
     {
+      "id": "examples.archive-invalid.invalid-content-class",
+      "path": "examples/archive-invalid/archive-bundle.invalid-content-class.json",
+      "kind": "example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-archive-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.archive-invalid.invalid-created-at",
+      "path": "examples/archive-invalid/archive-bundle.invalid-created-at.json",
+      "kind": "example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-archive-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.archive-invalid.readme",
+      "path": "examples/archive-invalid/README.md",
+      "kind": "example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-archive-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ajv-reject-invalid-archive-bundles",
+      "path": "examples/client/ajv-reject-invalid-archive-bundles.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-recipes",
+        "npm run check:invalid-archive-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.ajv-reject-invalid-capsules",
       "path": "examples/client/ajv-reject-invalid-capsules.mjs",
       "kind": "client-recipe",
@@ -923,6 +998,23 @@
       ],
       "verify_commands": [
         "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-ajv-reject-invalid-archive-bundles",
+      "path": "examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-recipes",
+        "npm run check:invalid-archive-examples",
+        "npm run check:package-install",
         "npm run check:catalog"
       ]
     },
@@ -1267,6 +1359,21 @@
       ],
       "verify_commands": [
         "npm run check:invalid-api-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.invalid-archive.check",
+      "path": "scripts/check-invalid-archive-examples.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-archive-examples",
         "npm run check:catalog"
       ]
     },

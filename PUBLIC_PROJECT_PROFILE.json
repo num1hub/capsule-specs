@@ -76,7 +76,9 @@
       "package-level bundled-schema consumer recipe examples",
       "repo-local verification for single-file schema bundle artifacts",
       "archive-bundle validation recipes for repo-relative and installed-package consumers",
-      "repo-local verification for archive-bundle validation recipes"
+      "intentionally schema-invalid archive-bundle fixtures for structural rejection testing",
+      "repo-local verification for archive-bundle validation recipes",
+      "repo-local verification for intentionally schema-invalid archive-bundle fixtures"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -86,13 +88,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 307,
-    "markdown_files": 98,
+    "total_files": 314,
+    "markdown_files": 100,
     "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 31,
+    "client_recipe_files": 33,
     "workflow_files": 1,
     "issue_templates": 4
   },
@@ -138,7 +140,7 @@
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 51,
+    "repo_local_check_count": 52,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -190,7 +192,8 @@
     "integrity_recipes": "docs/integrity-recipes.md",
     "invalid_api_envelope_examples": "docs/invalid-api-envelope-examples.md",
     "schema_bundles": "docs/schema-bundles.md",
-    "archive_validation_recipes": "docs/archive-validation-recipes.md"
+    "archive_validation_recipes": "docs/archive-validation-recipes.md",
+    "invalid_archive_bundle_examples": "docs/invalid-archive-bundle-examples.md"
   },
   "program_readiness": {
     "maintainer_owned": true,

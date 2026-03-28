@@ -891,6 +891,20 @@
     "transformation_type": "generated",
     "notes": "Guide to intentionally schema-invalid validator-envelope fixtures and their structural rejection boundaries."
   },
+  "docs/invalid-archive-bundle-examples.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/archive-bundles.md",
+      "/home/n1/codex-workspace/docs/archive-validation-recipes.md",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-created-at.json",
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-content-class.json",
+      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-archive-bundles.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to intentionally schema-invalid archive-bundle fixtures and their bounded structural rejection reasons."
+  },
   "docs/invalid-capsule-examples.md": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
@@ -1851,6 +1865,30 @@
     "transformation_type": "generated",
     "notes": "Positive validator response sample aligned to the public note example."
   },
+  "examples/archive-invalid/archive-bundle.invalid-content-class.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Intentionally invalid archive fixture with a non-canonical manifest contentClass value."
+  },
+  "examples/archive-invalid/archive-bundle.invalid-created-at.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Intentionally invalid archive fixture with a non-date-time createdAt value."
+  },
+  "examples/archive-invalid/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-archive-bundle-examples.md",
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for intentionally schema-invalid archive-bundle fixtures."
+  },
   "examples/archive/archive-bundle.sample.json": {
     "source_paths": [
       "/home/n1/n1hub-repo-vault/examples/capsule.example.archive-bundle-fixture.v1.json"
@@ -1862,6 +1900,15 @@
     "source_paths": [],
     "transformation_type": "generated",
     "notes": "Directory guide for archive portability examples."
+  },
+  "examples/client/ajv-reject-invalid-archive-bundles.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-created-at.json",
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-content-class.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for rejecting intentionally invalid archive-bundle fixtures."
   },
   "examples/client/ajv-reject-invalid-capsules.mjs": {
     "source_paths": [
@@ -1970,6 +2017,16 @@
     ],
     "transformation_type": "generated",
     "notes": "Shell recipe for POST /api/validate using the public single-request example."
+  },
+  "examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-created-at.json",
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-content-class.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for rejecting intentionally invalid archive-bundle fixtures from installed package exports."
   },
   "examples/client/esm-package-ajv-reject-invalid-capsules.mjs": {
     "source_paths": [
@@ -4836,6 +4893,19 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for intentionally schema-invalid validator-envelope fixtures and their documented rejection paths."
+  },
+  "scripts/check-invalid-archive-examples.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-archive-bundle-examples.md",
+      "/home/n1/codex-workspace/examples/archive-invalid/README.md",
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-created-at.json",
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-content-class.json",
+      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-archive-bundles.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for intentionally schema-invalid archive-bundle fixtures and their rejection recipes."
   },
   "scripts/check-invalid-examples.js": {
     "source_paths": [

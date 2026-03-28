@@ -108,10 +108,11 @@
     },
     {
       "id": "raw-schema-consumer-recipes",
-      "summary": "Protects Ajv-based raw-schema, archive-schema, and bundled-schema consumer recipes so direct capsule, validator-envelope, and archive-bundle validation, including structural rejection of intentionally invalid capsule and API-envelope fixtures, stays executable from both repo-relative files and installed package exports.",
+      "summary": "Protects Ajv-based raw-schema, archive-schema, and bundled-schema consumer recipes so direct capsule, validator-envelope, and archive-bundle validation, including structural rejection of intentionally invalid archive, capsule, and API-envelope fixtures, stays executable from both repo-relative files and installed package exports.",
       "commands": [
         "npm run check:schema-recipes",
         "npm run check:archive-recipes",
+        "npm run check:invalid-archive-examples",
         "npm run check:schema-bundles",
         "npm run check:invalid-examples",
         "npm run check:package-install",
@@ -138,7 +139,11 @@
         "docs/archive-validation-recipes.md",
         "examples/client/ajv-validate-archive-bundle.mjs",
         "examples/client/esm-package-ajv-validate-archive-bundle.mjs",
-        "examples/archive/"
+        "examples/archive/",
+        "docs/invalid-archive-bundle-examples.md",
+        "examples/client/ajv-reject-invalid-archive-bundles.mjs",
+        "examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs",
+        "examples/archive-invalid/"
       ],
       "strongest_surfaces": [
         "scripts/check-schema-recipes.js",
@@ -155,7 +160,9 @@
         "docs/archive-validation-recipes.md",
         "scripts/check-archive-recipes.js",
         "schemas/archive-bundle.schema.json",
-        "examples/archive/archive-bundle.sample.json"
+        "examples/archive/archive-bundle.sample.json",
+        "docs/invalid-archive-bundle-examples.md",
+        "scripts/check-invalid-archive-examples.js"
       ],
       "failure_modes_prevented": [
         "broken raw-schema consumer recipes",
@@ -166,7 +173,9 @@
         "broken single-file bundled-schema consumer recipes",
         "bundle schemas drifting away from the stronger raw schema files",
         "broken archive-bundle validation recipes",
-        "archive portability sample drifting away from the published archive schema"
+        "archive portability sample drifting away from the published archive schema",
+        "invalid archive fixtures that unexpectedly pass structural validation",
+        "archive negative-path teaching drift between docs, fixtures, and rejection recipes"
       ]
     },
     {

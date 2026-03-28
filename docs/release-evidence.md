@@ -91,6 +91,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Human-readable guide to validating public capsules and validator-envelope payloads directly against the raw JSON Schema layer.
 - [`archive-validation-recipes.md`](archive-validation-recipes.md)
   Human-readable guide to validating the published archive-bundle sample directly against the public portability/export schema.
+- [`invalid-archive-bundle-examples.md`](invalid-archive-bundle-examples.md)
+  Human-readable guide to intentionally schema-invalid archive-bundle fixtures and their documented structural rejection paths.
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
   Human-readable guide to intentionally schema-invalid capsule fixtures and their documented structural rejection paths.
 - [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
@@ -213,6 +215,8 @@ The schema-bundle layer strengthens that path further by giving code generators,
 The raw-schema recipe layer strengthens that path further by proving that downstream consumers can validate public capsules and validator-envelope payloads directly against the published JSON Schemas, both from a repo checkout and from installed package exports, without depending on the projection layer.
 
 The archive-validation layer strengthens that path further by proving that portability consumers can validate the published archive-bundle sample directly against the public export/replay schema, both from a repo checkout and from installed package exports, without mistaking the specs repo for a hosted import/export runtime.
+
+The invalid-archive layer strengthens that path further by proving that portability consumers can also keep documented schema-level rejection fixtures for archive bundles, both from a repo checkout and from installed package exports, instead of seeing only the happy-path portability sample.
 
 The invalid-fixture layer strengthens that path further by proving that downstream consumers can also test documented structural rejection cases for both capsules and validator HTTP envelopes instead of seeing only happy-path schema examples or live-validator-only failures.
 

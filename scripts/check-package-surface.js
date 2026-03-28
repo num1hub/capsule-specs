@@ -75,6 +75,8 @@ const contractConstants = require('@num1hub/capsule-specs/references/contract-co
 const validationGates = require('@num1hub/capsule-specs/references/validation-gates.json');
 const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
 const archiveBundleSample = require('@num1hub/capsule-specs/examples/archive/archive-bundle.sample.json');
+const invalidArchiveCreatedAtBundle = require('@num1hub/capsule-specs/examples/archive-invalid/archive-bundle.invalid-created-at.json');
+const invalidArchiveContentClassBundle = require('@num1hub/capsule-specs/examples/archive-invalid/archive-bundle.invalid-content-class.json');
 const invalidRelationTypeCapsule = require('@num1hub/capsule-specs/examples/invalid/example-invalid-relation-type.capsule.json');
 const invalidApiFailResponse = require('@num1hub/capsule-specs/examples/api-invalid/validate-response.fail.invalid-gate.json');
 const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsule.json'));
@@ -115,6 +117,14 @@ assert(
   archiveBundleSample.bundleId === 'bundle.public-specs.demo.2026-03-26',
   'package exports must expose the archive-bundle sample payload'
 );
+assert(
+  invalidArchiveCreatedAtBundle.bundleId === 'bundle.public-specs.invalid-created-at.2026-03-28',
+  'package exports must expose nested invalid archive fixtures'
+);
+assert(
+  invalidArchiveContentClassBundle.manifest?.[0]?.contentClass === 'logs',
+  'package exports must expose nested invalid archive enum fixtures'
+);
 
 const parsedNote = zodProjection.capsuleSchema.parse(exampleNote);
 const parsedPassResponse = validatorZod.validatePassResponseSchema.parse(passResponse);
@@ -144,6 +154,7 @@ for (const relativePath of [
   'dist/projections/zod/validator-api.js',
   'docs/npm-consumption.md',
   'docs/archive-validation-recipes.md',
+  'docs/invalid-archive-bundle-examples.md',
   'docs/schema-bundles.md',
   'docs/schema-validation-recipes.md',
   'docs/invalid-capsule-examples.md',
@@ -165,12 +176,14 @@ for (const relativePath of [
   'examples/client/ajv-validate-validator-envelope.mjs',
   'examples/client/ajv-validate-archive-bundle.mjs',
   'examples/client/ajv-validate-schema-bundles.mjs',
+  'examples/client/ajv-reject-invalid-archive-bundles.mjs',
   'examples/client/ajv-reject-invalid-capsules.mjs',
   'examples/client/ajv-reject-invalid-validator-envelopes.mjs',
   'examples/client/cjs-package-contract-reference.cjs',
   'examples/client/esm-package-ajv-validate-contracts.mjs',
   'examples/client/esm-package-ajv-validate-archive-bundle.mjs',
   'examples/client/esm-package-ajv-validate-schema-bundles.mjs',
+  'examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs',
   'examples/client/esm-package-ajv-reject-invalid-capsules.mjs',
   'examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs',
   'examples/client/recompute-integrity-seal.mjs',
@@ -185,7 +198,10 @@ for (const relativePath of [
   'examples/invalid/example-invalid-relation-type.capsule.json',
   'examples/api-invalid/README.md',
   'examples/api-invalid/validate-request.single.missing-capsule.json',
-  'examples/api-invalid/validate-response.fail.invalid-gate.json'
+  'examples/api-invalid/validate-response.fail.invalid-gate.json',
+  'examples/archive-invalid/README.md',
+  'examples/archive-invalid/archive-bundle.invalid-created-at.json',
+  'examples/archive-invalid/archive-bundle.invalid-content-class.json'
 ]) {
   assert(packedFiles.has(relativePath), `npm pack surface must include ${relativePath}`);
 }

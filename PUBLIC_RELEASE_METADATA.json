@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 307,
-    "manifest_entries": 307
+    "files": 314,
+    "manifest_entries": 314
   },
   "surface_summary": {
-    "catalog_entries": 260,
+    "catalog_entries": 267,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 98
+    "markdown_files": 100
   },
   "repo_local_checks": [
     {
@@ -65,7 +65,15 @@
       "status": "pass"
     },
     {
+      "command": "npm run check:invalid-archive-examples",
+      "status": "pass"
+    },
+    {
       "command": "npm run check:invalid-examples",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:invalid-api-examples",
       "status": "pass"
     },
     {
@@ -153,6 +161,14 @@
       "status": "pass"
     },
     {
+      "command": "npm run check:ecosystem-value",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:decision-log",
+      "status": "pass"
+    },
+    {
       "command": "npm run check:evidence-gaps",
       "status": "pass"
     },
@@ -166,10 +182,6 @@
     },
     {
       "command": "npm run check:repository-identity",
-      "status": "pass"
-    },
-    {
-      "command": "npm run check:capability-matrix",
       "status": "pass"
     },
     {
@@ -201,23 +213,15 @@
       "status": "pass"
     },
     {
+      "command": "npm run check:capability-matrix",
+      "status": "pass"
+    },
+    {
       "command": "npm run check:surface",
       "status": "pass"
     },
     {
       "command": "npm run check:release",
-      "status": "pass"
-    },
-    {
-      "command": "npm run check:ecosystem-value",
-      "status": "pass"
-    },
-    {
-      "command": "npm run check:decision-log",
-      "status": "pass"
-    },
-    {
-      "command": "npm run check:invalid-api-examples",
       "status": "pass"
     }
   ],
@@ -258,6 +262,7 @@
     "PUBLIC_BOUNDARY_MAP.json is a curated summary of published vs deferred boundaries and can drift if scope docs change without updating the boundary map",
     "PUBLIC_PORTABILITY_PROFILE.json and the archive-bundle sample are public contract summaries, not proof of a deployed hosted export/import service",
     "The archive-validation recipe layer in docs/archive-validation-recipes.md, examples/client/, and scripts/check-archive-recipes.js is a bounded structural portability teaching surface, not proof of a hosted export/import runtime or full replay workflow exposure.",
+    "The invalid-archive layer in docs/invalid-archive-bundle-examples.md, examples/archive-invalid/, and scripts/check-invalid-archive-examples.js is a bounded structural portability teaching surface, not proof of every upstream replay-policy or hosted import/export failure mode.",
     "PUBLIC_EVALUATION_PACKET.json is a reviewer shortcut layer and must stay subordinate to the stronger docs, schemas, release evidence, and machine-readable source surfaces",
     "PUBLIC_FAILURE_MODEL.json is a bounded negative-evidence summary and must stay subordinate to the stronger examples, validator docs, OpenAPI, and portability surfaces",
     "PUBLIC_TRACEABILITY_MATRIX.json is a curated cross-surface map and can drift if maintainers stop updating it together with docs, schemas, examples, and verification artifacts",

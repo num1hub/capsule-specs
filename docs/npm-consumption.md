@@ -11,6 +11,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for compact contract reference JSON artifacts
 - package exports for raw JSON Schema validation with third-party validators such as Ajv
 - package exports for archive-bundle schema validation against the published portability sample
+- package exports for intentionally invalid archive-bundle fixtures used in structural rejection tests
 - package exports for intentionally invalid capsule and validator-envelope fixtures used in structural rejection tests
 - package exports for integrity-rule constants and copyable seal-recomputation recipes
 - package exports for curated raw capsule source files
@@ -130,6 +131,12 @@ A copyable version of this example also lives at [`../examples/client/esm-packag
 
 That recipe proves the installed package exports the published archive-bundle schema and sample payload, so portability consumers can validate export/replay contract shape without reaching into private runtime code or a hosted service. Use `ajv/dist/2020.js` together with `ajv-formats` when consuming that path because the archive schema includes `date-time` fields.
 
+## Minimal package-level invalid archive example
+
+A copyable version of this example also lives at [`../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs`](../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs).
+
+That recipe proves the installed package exports intentionally invalid archive fixtures under `examples/archive-invalid/` so portability consumers can keep schema-level rejection tests next to the positive archive sample instead of inventing their own negative fixtures first.
+
 ## Minimal package-level Ajv negative example
 
 A copyable version of this example also lives at [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs).
@@ -221,6 +228,7 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - `npm run check:schema-bundles`
 - `npm run check:schema-recipes`
 - `npm run check:archive-recipes`
+- `npm run check:invalid-archive-examples`
 - `npm run check:invalid-examples`
 - `npm run check:invalid-api-examples`
 - `npm run check:integrity-recipes`

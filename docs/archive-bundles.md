@@ -11,8 +11,11 @@ The sample payload lives at [`../examples/archive/archive-bundle.sample.json`](.
 If you need an executable structural validation path instead of prose alone, also inspect:
 
 - [`archive-validation-recipes.md`](archive-validation-recipes.md)
+- [`invalid-archive-bundle-examples.md`](invalid-archive-bundle-examples.md)
 - [`../examples/client/ajv-validate-archive-bundle.mjs`](../examples/client/ajv-validate-archive-bundle.mjs)
 - [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs)
+- [`../examples/client/ajv-reject-invalid-archive-bundles.mjs`](../examples/client/ajv-reject-invalid-archive-bundles.mjs)
+- [`../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs`](../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs)
 
 ## Key fields
 
@@ -48,3 +51,5 @@ The public sample emphasizes validator-aware replay:
 ## Important boundary
 
 This repository publishes the archive-bundle contract and trust posture, not a hosted import/export product surface. The goal is reviewability and contract clarity, not a promise that every upstream runtime workflow is public.
+
+If you need intentionally invalid archive fixtures for structural regression tests, use [`invalid-archive-bundle-examples.md`](invalid-archive-bundle-examples.md) and the sibling directory guide in [`../examples/archive-invalid/README.md`](../examples/archive-invalid/README.md). Those artifacts are bounded schema-level rejection targets, not proof of replay-policy or hosted import/export behavior.
