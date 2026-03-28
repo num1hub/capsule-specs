@@ -17,6 +17,7 @@ If you need the same route family as compact machine-readable data, use [`../ref
 - contract: [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
 - request example: [`../examples/api/validate-request.batch.json`](../examples/api/validate-request.batch.json)
 - response example: [`../examples/api/validate-response.batch.json`](../examples/api/validate-response.batch.json)
+- owner-role failure example: [`../examples/api/forbidden-response.sample.json`](../examples/api/forbidden-response.sample.json)
 - live client recipes: [`../examples/client/curl-validate-batch.sh`](../examples/client/curl-validate-batch.sh), [`../examples/client/node-validate-batch.mjs`](../examples/client/node-validate-batch.mjs), [`../examples/client/python-validate-batch.py`](../examples/client/python-validate-batch.py)
 
 ## `POST /api/validate/fix`
@@ -24,6 +25,7 @@ If you need the same route family as compact machine-readable data, use [`../ref
 - contract: [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
 - request example: [`../examples/api/validate-request.fix.json`](../examples/api/validate-request.fix.json)
 - response example: [`../examples/api/validate-response.fix.sample.json`](../examples/api/validate-response.fix.sample.json)
+- owner-role failure example: [`../examples/api/forbidden-response.sample.json`](../examples/api/forbidden-response.sample.json)
 - live client recipes: [`../examples/client/curl-validate-fix.sh`](../examples/client/curl-validate-fix.sh), [`../examples/client/node-validate-fix.mjs`](../examples/client/node-validate-fix.mjs), [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
 
 ## `GET /api/validate/stats`
@@ -43,6 +45,7 @@ If you need the same route family as compact machine-readable data, use [`../ref
 
 - generic error example: [`../examples/api/error-response.sample.json`](../examples/api/error-response.sample.json)
 - unauthorized example: [`../examples/api/unauthorized-response.sample.json`](../examples/api/unauthorized-response.sample.json)
+- forbidden example: [`../examples/api/forbidden-response.sample.json`](../examples/api/forbidden-response.sample.json)
 - conflict example: [`../examples/api/conflict-response.sample.json`](../examples/api/conflict-response.sample.json)
 - rate-limit example: [`../examples/api/rate-limit-response.sample.json`](../examples/api/rate-limit-response.sample.json)
 - source-level client recipes: [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts), [`../examples/client/zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)

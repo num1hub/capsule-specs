@@ -82,7 +82,8 @@
         "examples/api/validate-request.single.json",
         "schemas/validator-api-envelopes.schema.json",
         "scripts/check-integrity-recipes.js",
-        "examples/api/validate-response.pass.json"
+        "examples/api/validate-response.pass.json",
+        "examples/api/forbidden-response.sample.json"
       ],
       "failure_modes_prevented": [
         "broken example semantics",
@@ -99,7 +100,8 @@
         "live support-route client recipes drifting away from the published validator HTTP surface",
         "cross-language Python support-route recipes drifting away from the published support-response payloads or extracted package layout",
         "Node fix-route client recipes drifting away from the published validator HTTP surface",
-        "installed-package support-response recipes drifting away from the published support payloads or public package exports"
+        "installed-package support-response recipes drifting away from the published support payloads or public package exports",
+        "missing bounded owner-role rejection evidence for protected validator routes"
       ]
     },
     {
@@ -215,12 +217,14 @@
       "protects": [
         "PUBLIC_EXAMPLE_COVERAGE.json",
         "PUBLIC_FAILURE_MODEL.json",
+        "examples/api/forbidden-response.sample.json",
         "docs/invalid-capsule-examples.md",
         "examples/invalid/"
       ],
       "strongest_surfaces": [
         "PUBLIC_EXAMPLE_COVERAGE.json",
         "PUBLIC_FAILURE_MODEL.json",
+        "examples/api/forbidden-response.sample.json",
         "examples/example-validator-invalid-g16.capsule.json",
         "examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
         "examples/invalid/example-invalid-relation-type.capsule.json"
@@ -229,7 +233,8 @@
         "fake example coverage claims",
         "missing negative-path evidence",
         "happy-path-only review posture",
-        "undocumented schema-negative teaching artifacts"
+        "undocumented schema-negative teaching artifacts",
+        "missing owner-role rejection evidence for bounded public API failures"
       ]
     },
     {

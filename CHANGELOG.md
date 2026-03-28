@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- added a bounded `403 owner role required` API sample and wired it through route metadata, error-envelope recipes, and verifiers, so the published validator surface no longer documents that rejection path without a concrete public-safe example
 - added a reusable Python live-validator client recipe backed by the published route pack and request examples, so cross-language consumers no longer have to stitch separate point scripts together just to cover the full published validator route family
 - added a CommonJS package-consumer live-validator client recipe plus fresh-install proof, so the installed-package live route bridge no longer stops at ESM and TypeScript consumers
 - expanded the shell, Node, Python, and source-level/package TypeScript live-client recipes to cover the bounded `GET /api/validate/stats?limit=...` query path, so public route metadata and real consumer examples no longer drift apart on the published stats route

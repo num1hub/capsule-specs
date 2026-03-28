@@ -49,7 +49,7 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
 - [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts)
   Minimal TypeScript recipe for typing the published pass, fail, batch, and fix validator response families through the public projection layer.
 - [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts)
-  Minimal TypeScript recipe for typing the published generic, unauthorized, conflict, and rate-limit error envelopes through the public projection layer.
+  Minimal TypeScript recipe for typing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes through the public projection layer.
 - [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
   Minimal TypeScript recipe for typing the published `gates` and `stats` support responses through the public projection layer.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
@@ -61,7 +61,7 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
 - [`../examples/client/zod-parse-validate-fix-response.ts`](../examples/client/zod-parse-validate-fix-response.ts)
   Minimal Zod recipe for parsing a validator fix response envelope through the public projection layer.
 - [`../examples/client/zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
-  Minimal Zod recipe for parsing the published generic, unauthorized, conflict, and rate-limit error envelopes through the public projection layer.
+  Minimal Zod recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes through the public projection layer.
 - [`../examples/client/zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
   Minimal Zod recipe for parsing the published `gates` and `stats` support responses through the public projection layer.
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)

@@ -151,6 +151,7 @@ const requiredIds = [
   'examples.note',
   'examples.archive-bundle',
   'examples.api-unauthorized',
+  'examples.api-forbidden',
   'examples.api-conflict',
   'governance.manifest',
   'governance.contract-index',

@@ -1,9 +1,9 @@
 {
   "version": "0.1.0",
-  "reviewed_at": "2026-03-26",
+  "reviewed_at": "2026-03-28",
   "summary": {
     "capsule_examples": 5,
-    "api_examples": 13,
+    "api_examples": 14,
     "positive_capsules": 4,
     "negative_capsules": 1,
     "graph_examples": 1
@@ -293,6 +293,21 @@
       "coverage_tags": [
         "unauthorized",
         "bounded-access-rejection"
+      ],
+      "related_capsule_ids": [],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:example-coverage"
+      ]
+    },
+    {
+      "path": "examples/api/forbidden-response.sample.json",
+      "route": "shared-error-envelope",
+      "example_kind": "response",
+      "coverage_tags": [
+        "forbidden",
+        "bounded-owner-role-rejection"
       ],
       "related_capsule_ids": [],
       "verify_commands": [

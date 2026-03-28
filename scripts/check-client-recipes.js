@@ -438,6 +438,7 @@ const expectedPythonRecipeReferences = {
     'examples/api/gates-response.sample.json',
     'examples/api/stats-response.sample.json',
     'examples/api/unauthorized-response.sample.json',
+    'examples/api/forbidden-response.sample.json',
     'examples/api/conflict-response.sample.json',
     'examples/api/error-response.sample.json',
     'examples/api/rate-limit-response.sample.json'
@@ -486,6 +487,7 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/zod/validator-api',
     '@num1hub/capsule-specs/examples/api/error-response.sample.json',
     '@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/forbidden-response.sample.json',
     '@num1hub/capsule-specs/examples/api/conflict-response.sample.json',
     '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json'
   ],
@@ -535,6 +537,7 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/zod/validator-api',
     '@num1hub/capsule-specs/examples/api/error-response.sample.json',
     '@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/forbidden-response.sample.json',
     '@num1hub/capsule-specs/examples/api/conflict-response.sample.json',
     '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json'
   ],
@@ -573,7 +576,12 @@ const expectedPackageTypeImports = {
     '@num1hub/capsule-specs/typescript/validator-api'
   ],
   'ts-package-error-responses.ts': [
-    '@num1hub/capsule-specs/typescript/validator-api'
+    '@num1hub/capsule-specs/typescript/validator-api',
+    '@num1hub/capsule-specs/examples/api/error-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/forbidden-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/conflict-response.sample.json',
+    '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json'
   ],
   'ts-package-contract-reference.ts': [
     '@num1hub/capsule-specs/references/contract-constants.json',

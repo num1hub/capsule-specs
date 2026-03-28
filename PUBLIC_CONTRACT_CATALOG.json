@@ -607,6 +607,21 @@
       ]
     },
     {
+      "id": "examples.api-forbidden",
+      "path": "examples/api/forbidden-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:failure-model"
+      ]
+    },
+    {
       "id": "examples.api.batch-request",
       "path": "examples/api/validate-request.batch.json",
       "kind": "api-example",

@@ -410,6 +410,7 @@
         "docs/failure-model.md",
         "examples/api/validate-response.fail.json",
         "examples/api/unauthorized-response.sample.json",
+        "examples/api/forbidden-response.sample.json",
         "examples/api/conflict-response.sample.json"
       ],
       "supporting_surfaces": [

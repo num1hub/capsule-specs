@@ -107,6 +107,7 @@
       "example_files": [
         "examples/api/error-response.sample.json",
         "examples/api/unauthorized-response.sample.json",
+        "examples/api/forbidden-response.sample.json",
         "examples/api/conflict-response.sample.json",
         "examples/api/rate-limit-response.sample.json"
       ]

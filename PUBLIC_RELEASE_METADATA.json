@@ -6,13 +6,13 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 364,
-    "manifest_entries": 364
+    "files": 365,
+    "manifest_entries": 365
   },
   "surface_summary": {
-    "catalog_entries": 313,
+    "catalog_entries": 314,
     "example_capsules": 5,
-    "api_example_files": 13,
+    "api_example_files": 14,
     "markdown_files": 100
   },
   "repo_local_checks": [

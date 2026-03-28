@@ -164,7 +164,7 @@ const expectedRoutes = [
         status: 403,
         description: 'Owner role required',
         family_ids: ['simpleErrorResponse'],
-        example_files: []
+        example_files: ['examples/api/forbidden-response.sample.json']
       },
       {
         status: 429,
@@ -207,7 +207,7 @@ const expectedRoutes = [
         status: 403,
         description: 'Owner role required',
         family_ids: ['simpleErrorResponse'],
-        example_files: []
+        example_files: ['examples/api/forbidden-response.sample.json']
       },
       {
         status: 429,
@@ -316,6 +316,7 @@ const expectedResponseFamilies = [
     [
       'examples/api/error-response.sample.json',
       'examples/api/unauthorized-response.sample.json',
+      'examples/api/forbidden-response.sample.json',
       'examples/api/conflict-response.sample.json',
       'examples/api/rate-limit-response.sample.json'
     ]

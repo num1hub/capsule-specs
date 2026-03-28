@@ -106,7 +106,9 @@
           "family_ids": [
             "simpleErrorResponse"
           ],
-          "example_files": []
+          "example_files": [
+            "examples/api/forbidden-response.sample.json"
+          ]
         },
         {
           "status": 429,
@@ -169,7 +171,9 @@
           "family_ids": [
             "simpleErrorResponse"
           ],
-          "example_files": []
+          "example_files": [
+            "examples/api/forbidden-response.sample.json"
+          ]
         },
         {
           "status": 429,

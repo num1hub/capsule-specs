@@ -14,6 +14,7 @@ def load_json(relative_path: str) -> dict:
 gates_response = load_json("examples/api/gates-response.sample.json")
 stats_response = load_json("examples/api/stats-response.sample.json")
 unauthorized_response = load_json("examples/api/unauthorized-response.sample.json")
+forbidden_response = load_json("examples/api/forbidden-response.sample.json")
 conflict_response = load_json("examples/api/conflict-response.sample.json")
 error_response = load_json("examples/api/error-response.sample.json")
 rate_limit_response = load_json("examples/api/rate-limit-response.sample.json")
@@ -23,6 +24,7 @@ assert "G16" in gate_ids
 assert stats_response["total"] >= stats_response["passed"]
 assert stats_response["gates"][0]["gate"] == "G16"
 assert unauthorized_response["error"] == "Unauthorized"
+assert forbidden_response["error"] == "Owner role required"
 assert conflict_response["error"] == "Validation request conflicts with current state"
 assert error_response["error"] == "Invalid validation payload"
 assert rate_limit_response["error"] == "Rate limit exceeded"
@@ -35,6 +37,7 @@ summary = {
     "recentCount": len(stats_response["recent"]),
     "errorFamilies": [
         unauthorized_response["error"],
+        forbidden_response["error"],
         conflict_response["error"],
         error_response["error"],
         rate_limit_response["error"],

@@ -52,7 +52,7 @@ if (referenceSummary.responseFamilyCount !== 7 || referenceSummary.requestFamily
   throw new Error("unexpected published validator envelope family counts");
 }
 
-if (referenceSummary.errorExampleCount !== 4) {
+if (referenceSummary.errorExampleCount !== 5) {
   throw new Error("unexpected simpleErrorResponse example count");
 }
 

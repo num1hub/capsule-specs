@@ -94,6 +94,8 @@ If you need a cross-language raw-JSON consumer path outside the Node runtime, al
   Shared generic error envelope example.
 - [`../examples/api/unauthorized-response.sample.json`](../examples/api/unauthorized-response.sample.json)
   Small bounded unauthorized example for rejection-path review.
+- [`../examples/api/forbidden-response.sample.json`](../examples/api/forbidden-response.sample.json)
+  Small bounded owner-role rejection example for the documented `403` route status.
 - [`../examples/api/conflict-response.sample.json`](../examples/api/conflict-response.sample.json)
   Small bounded conflict example for rejection-path review.
 - [`../examples/api/rate-limit-response.sample.json`](../examples/api/rate-limit-response.sample.json)

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "reviewed_at": "2026-03-26",
+  "reviewed_at": "2026-03-28",
   "principles": [
     "Public boundaries should reject malformed input before trusted state changes.",
     "Negative paths should stay typed and bounded rather than surfacing as unhandled failures.",
@@ -29,6 +29,7 @@
         "docs/api-envelopes.md",
         "examples/api/error-response.sample.json",
         "examples/api/unauthorized-response.sample.json",
+        "examples/api/forbidden-response.sample.json",
         "examples/api/conflict-response.sample.json"
       ],
       "verify_commands": [

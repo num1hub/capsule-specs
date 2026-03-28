@@ -2291,7 +2291,8 @@
       "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
       "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Minimal CommonJS package-consumer recipe for parsing bounded shared validator error envelopes from installed package exports."
@@ -2475,7 +2476,8 @@
       "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
       "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Minimal ESM package-consumer recipe for parsing bounded shared validator error envelopes from installed package exports."
@@ -2633,7 +2635,8 @@
       "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
       "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
       "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for parsing the published support response families for the validator HTTP surface."
@@ -2831,7 +2834,8 @@
     "source_paths": [
       "/home/n1/codex-workspace/package.json",
       "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
-      "/home/n1/codex-workspace/tsconfig.json"
+      "/home/n1/codex-workspace/tsconfig.json",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Minimal TypeScript package-consumer recipe for typing bounded shared validator error envelopes from installed package exports."
@@ -2920,7 +2924,8 @@
       "/home/n1/codex-workspace/examples/api/error-response.sample.json",
       "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
-      "/home/n1/codex-workspace/projections/typescript/validator-api.ts"
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Minimal TypeScript consumer recipe for typing bounded shared validator error envelopes from the public projection layer."
@@ -2978,7 +2983,8 @@
       "/home/n1/codex-workspace/examples/api/error-response.sample.json",
       "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
       "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Minimal Zod consumer recipe for parsing bounded shared validator error envelopes from the public projection layer."
@@ -3860,7 +3866,8 @@
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
       "/home/n1/codex-workspace/references/validator-routes.json",
-      "/home/n1/codex-workspace/scripts/check-contract-catalog.js"
+      "/home/n1/codex-workspace/scripts/check-contract-catalog.js",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Machine-readable catalog of the public contract surfaces, their stability, and verification paths.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package-export projection layer synchronized"
@@ -5460,7 +5467,8 @@
   "scripts/check-api-examples.js": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json"
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local checks for validator HTTP request and response examples."
@@ -5482,7 +5490,8 @@
       "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
       "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Repo-local schema coverage check for public validator API example payloads."
@@ -5684,7 +5693,8 @@
       "/home/n1/codex-workspace/projections/zod/validator-api.ts",
       "/home/n1/codex-workspace/references/validator-envelope-families.json",
       "/home/n1/codex-workspace/scripts/check-package-surface.js",
-      "/home/n1/codex-workspace/tsconfig.build.json"
+      "/home/n1/codex-workspace/tsconfig.build.json",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local checks for curl, Node, and Python client recipe snippets across all published validator routes."
@@ -6207,7 +6217,8 @@
       "/home/n1/codex-workspace/references/validator-routes.json",
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/tsconfig.build.json"
+      "/home/n1/codex-workspace/tsconfig.build.json",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the built package-export and pack surface."
@@ -6358,7 +6369,8 @@
       "/home/n1/codex-workspace/references/validator-routes.json",
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
       "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json"
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the compact contract-reference pack."
@@ -6750,5 +6762,10 @@
     ],
     "transformation_type": "generated",
     "notes": "Versioning and contract-change policy for the public repository surface."
+  },
+  "examples/api/forbidden-response.sample.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Bounded owner-role rejection response example for public negative-path review."
   }
 }

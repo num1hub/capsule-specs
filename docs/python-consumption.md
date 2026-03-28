@@ -85,7 +85,7 @@ Those scripts resolve the package root from their own location, so they still wo
 - Python consumers can use `references/validator-routes.json` plus the published request examples to build one reusable live client for all published validator routes instead of stitching five separate scripts together.
 - Python consumers can load the published validator-envelope request examples for `POST /api/validate`, `POST /api/validate/batch`, and `POST /api/validate/fix` without inferring request shape from prose alone.
 - Python consumers can call the published `GET /api/validate/gates` and `GET /api/validate/stats` routes, including the bounded optional `limit` query path on `stats`, or inspect their sample payloads from the same raw-JSON path.
-- Python consumers can inspect the published pass/fail/batch/fix, gates, stats, unauthorized, conflict, generic-error, and rate-limit response families directly from raw JSON assets.
+- Python consumers can inspect the published pass/fail/batch/fix, gates, stats, unauthorized, forbidden, conflict, generic-error, and rate-limit response families directly from raw JSON assets.
 - Python consumers can recompute published integrity seals without calling private runtime helpers.
 - The packed artifact includes enough public JSON and example material for cross-language consumption.
 

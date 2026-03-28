@@ -94,6 +94,7 @@ const gatesResponseSample = require('@num1hub/capsule-specs/examples/api/gates-r
 const statsResponseSample = require('@num1hub/capsule-specs/examples/api/stats-response.sample.json');
 const errorResponseSample = require('@num1hub/capsule-specs/examples/api/error-response.sample.json');
 const unauthorizedResponseSample = require('@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json');
+const forbiddenResponseSample = require('@num1hub/capsule-specs/examples/api/forbidden-response.sample.json');
 const conflictResponseSample = require('@num1hub/capsule-specs/examples/api/conflict-response.sample.json');
 const rateLimitResponseSample = require('@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json');
 const archiveBundleSample = require('@num1hub/capsule-specs/examples/archive/archive-bundle.sample.json');
@@ -216,6 +217,7 @@ const parsedBatchResponse = validatorZod.validateBatchResponseSchema.parse(batch
 const parsedFixResponse = validatorZod.validateFixResponseSchema.parse(fixResponseSample);
 const parsedErrorResponse = validatorZod.simpleErrorResponseSchema.parse(errorResponseSample);
 const parsedUnauthorizedResponse = validatorZod.simpleErrorResponseSchema.parse(unauthorizedResponseSample);
+const parsedForbiddenResponse = validatorZod.simpleErrorResponseSchema.parse(forbiddenResponseSample);
 const parsedConflictResponse = validatorZod.simpleErrorResponseSchema.parse(conflictResponseSample);
 const parsedRateLimitResponse = validatorZod.simpleErrorResponseSchema.parse(rateLimitResponseSample);
 const parsedGatesResponse = validatorZod.gatesResponseSchema.parse(gatesResponseSample);
@@ -234,6 +236,7 @@ assert(
 );
 assert(parsedErrorResponse.error === errorResponseSample.error, 'built package zod export must parse the generic error response sample');
 assert(parsedUnauthorizedResponse.error === 'Unauthorized', 'built package zod export must parse the unauthorized error response sample');
+assert(parsedForbiddenResponse.error === 'Owner role required', 'built package zod export must parse the forbidden error response sample');
 assert(/conflict/i.test(parsedConflictResponse.error), 'built package zod export must parse the conflict error response sample');
 assert(parsedRateLimitResponse.error === 'Rate limit exceeded', 'built package zod export must parse the rate-limit error response sample');
 assert(parsedGatesResponse.gates.some((gate) => gate.id === 'G16'), 'built package zod export must parse the gates response sample');
