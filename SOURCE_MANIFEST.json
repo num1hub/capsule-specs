@@ -6690,5 +6690,14 @@
     ],
     "transformation_type": "generated",
     "notes": "Minimal TypeScript consumer recipe for the compact validator envelope-family reference layer."
+  },
+  "examples/client/ts-route-behavior-reference.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/reference-pack.md",
+      "/home/n1/codex-workspace/projections/typescript/validator-routes.ts",
+      "/home/n1/codex-workspace/references/validator-routes.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal TypeScript consumer recipe for compact validator route-behavior references backed by the shared route projection."
   }
 }

@@ -7,6 +7,8 @@ const firstGate = validationGates.gates[0];
 const typeSummary = contractConstants.metadata.type_enum.join(", ");
 const supportRoutes = validatorRoutes.routes.filter((route) => route.method === "GET").map((route) => route.path);
 const simpleErrorFamily = validatorEnvelopeFamilies.response_families.find((family) => family.id === "simpleErrorResponse");
+const validateSingleRoute = validatorRoutes.routes.find((route) => route.id === "validateSingle");
+const statsRoute = validatorRoutes.routes.find((route) => route.id === "getStats");
 
 if (!validationGates.gates.length) {
   throw new Error("missing validation gates");
@@ -30,6 +32,9 @@ console.log({
   responseFamilyIds: validatorEnvelopeFamilies.response_families.map((family) => family.id),
   sharedDefinitionIds: validatorEnvelopeFamilies.shared_definitions.map((definition) => definition.id),
   errorExampleCount: simpleErrorFamily?.example_files.length ?? 0,
+  authProtectedRouteCount: validatorRoutes.routes.filter((route) => route.requires_bearer_auth).length,
+  validateSingleStatusCodes: validateSingleRoute?.response_statuses.map((status) => status.status) ?? [],
+  statsQueryParameters: statsRoute?.query_parameters.map((parameter) => parameter.name) ?? [],
   supportRoutes,
   typeSummary
 });

@@ -2,7 +2,7 @@
 
 This page maps each published validator route to the strongest public example surfaces in this repository.
 
-If you need the same route family as compact machine-readable data, use [`../references/validator-routes.json`](../references/validator-routes.json). If you need typed route constants from the projection layer, use [`../projections/typescript/validator-routes.ts`](../projections/typescript/validator-routes.ts).
+If you need the same route family as compact machine-readable data, use [`../references/validator-routes.json`](../references/validator-routes.json). If you need typed route constants and status metadata from the projection layer, use [`../projections/typescript/validator-routes.ts`](../projections/typescript/validator-routes.ts).
 
 ## `POST /api/validate`
 
@@ -47,11 +47,22 @@ If you need the same route family as compact machine-readable data, use [`../ref
 - source-level client recipes: [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts), [`../examples/client/zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
 - installed-package client recipes: [`../examples/client/cjs-package-error-responses.cjs`](../examples/client/cjs-package-error-responses.cjs), [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs), [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
 
+## Compact route behavior
+
+The compact route pack in [`../references/validator-routes.json`](../references/validator-routes.json) now carries:
+
+- bearer-auth posture for every published route
+- request-family linkage for the three published `POST` envelopes
+- bounded query-parameter metadata for `GET /api/validate/stats`
+- response-status-to-envelope mappings, including where a public example exists and where the status is documented but currently has no dedicated route-specific sample
+
+Use [`../examples/client/ts-route-behavior-reference.ts`](../examples/client/ts-route-behavior-reference.ts) if you want a minimal source-level TypeScript path for that route-behavior layer instead of reconstructing it from OpenAPI.
+
 ## Notes
 
 - the route contracts live in OpenAPI and remain stronger than prose summaries
 - some response samples are illustrative rather than deployed HTTP captures
 - the bounded cross-map between routes, payloads, and capsule examples lives in [`../PUBLIC_EXAMPLE_COVERAGE.json`](../PUBLIC_EXAMPLE_COVERAGE.json)
 - consumer snippets live in [`client-recipes.md`](client-recipes.md) and [`../examples/client/`](../examples/client/), and they now cover all published validator routes
-- the compact route pack in [`../references/validator-routes.json`](../references/validator-routes.json) stays subordinate to the stronger OpenAPI document and the route-level docs on this page
+- the compact route pack in [`../references/validator-routes.json`](../references/validator-routes.json) stays subordinate to the stronger OpenAPI document and the route-level docs on this page even when it carries auth, query, and response-status summary data
 - when route behavior changes, update this map, the OpenAPI file, the API examples, and the contract catalog together

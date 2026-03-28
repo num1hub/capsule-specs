@@ -15,7 +15,7 @@ This repository is intentionally narrow. It does not try to expose the full priv
 - canonical relation types
 - validator-facing docs and OpenAPI
 - JSON schema, validator API envelope schema, and neuro-concentrate schema
-- a compact reference pack for canonical enums, gate families, and validator option flags
+- a compact reference pack for canonical enums, gate families, validator option flags, and validator route behavior summaries
 - minimal example capsules
 - a small curated raw capsule source set for law, confidence-vector, subtype, and version-lineage semantics
 
@@ -39,7 +39,7 @@ This repository is that home.
 - [`docs/archive-validation-recipes.md`](docs/archive-validation-recipes.md) for direct Ajv validation of the published archive-bundle contract from repo and installed-package paths
 - [`docs/invalid-archive-bundle-examples.md`](docs/invalid-archive-bundle-examples.md) for intentionally schema-invalid archive-bundle fixtures and their bounded structural rejection reasons
 - [`docs/schema-family-reference.md`](docs/schema-family-reference.md) for choosing the right schema family first
-- [`docs/reference-pack.md`](docs/reference-pack.md) for compact machine-readable enums, gate IDs, and validator option flags
+- [`docs/reference-pack.md`](docs/reference-pack.md) for compact machine-readable enums, gate IDs, validator option flags, and validator route behavior summaries
 - [`docs/schema-bundles.md`](docs/schema-bundles.md) for single-file bundled schema artifacts when you want less multi-file `$ref` wiring
 - [`docs/schema-validation-recipes.md`](docs/schema-validation-recipes.md) for raw JSON Schema validation with Ajv from a repo checkout or installed package
 - [`docs/invalid-capsule-examples.md`](docs/invalid-capsule-examples.md) for intentionally schema-invalid capsule fixtures and the boundary between raw-schema rejection and validator-only failures
@@ -169,7 +169,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - repo-local verification via `npm run verify:repo`
 - local validator-backed example checks
 - machine-readable validator API envelope schemas backed by repo-local validation
-- compact machine-readable contract references, including published validator route constants, exported directly for tool-builders and package consumers
+- compact machine-readable contract references, including published validator route behavior summaries, exported directly for tool-builders and package consumers
 - raw JSON Schema consumer recipes for Ajv-based structural validation from repo-relative files and installed package exports
 - archive-bundle schema validation recipes for portability/export consumers from repo-relative files and installed package exports
 - intentionally schema-invalid archive-bundle fixtures plus Ajv rejection recipes for raw-schema portability consumers
@@ -213,7 +213,7 @@ Maintainer and review policy:
 5. Inspect [`docs/schema-family-reference.md`](docs/schema-family-reference.md) to choose the right schema family and abstraction level.
 6. Inspect [`schemas/capsule-schema.json`](schemas/capsule-schema.json).
 7. Inspect [`docs/schema-bundles.md`](docs/schema-bundles.md), [`schemas/capsule-schema.bundle.json`](schemas/capsule-schema.bundle.json), and [`schemas/validator-api-envelopes.bundle.json`](schemas/validator-api-envelopes.bundle.json) if you want single-file schema imports instead of multi-file `$ref` wiring.
-8. Inspect [`docs/reference-pack.md`](docs/reference-pack.md) and [`references/`](references/) if you want compact machine-readable enums, gate IDs, validator route constants, and validator option flags without parsing larger schemas first.
+8. Inspect [`docs/reference-pack.md`](docs/reference-pack.md) and [`references/`](references/) if you want compact machine-readable enums, gate IDs, validator route behavior summaries, and validator option flags without parsing larger schemas first.
 9. Inspect [`docs/schema-validation-recipes.md`](docs/schema-validation-recipes.md) if you want to validate capsules and validator-envelope payloads directly against the published raw JSON Schemas with Ajv.
 10. Inspect [`docs/archive-validation-recipes.md`](docs/archive-validation-recipes.md) if you want to validate the published archive-bundle sample directly against the public portability/export schema.
 11. Inspect [`docs/invalid-archive-bundle-examples.md`](docs/invalid-archive-bundle-examples.md) if you want structural negative archive fixtures that should fail raw-schema validation before any stronger replay-policy or hosted-import assumptions are involved.

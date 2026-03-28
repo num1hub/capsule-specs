@@ -50,6 +50,8 @@ If you need compact machine-readable route data instead of full OpenAPI or prose
 - [`../references/validator-routes.json`](../references/validator-routes.json)
 - [`route-reference.md`](route-reference.md)
 
+The compact route layer now carries response-status-to-envelope mappings and bounded auth/query metadata, so SDK and client builders can recover practical route behavior without scraping the full OpenAPI document first.
+
 ## Compact family map
 
 The compact envelope-family surface publishes:
@@ -58,7 +60,7 @@ The compact envelope-family surface publishes:
 - response families: `validatePassResponse`, `validateFailResponse`, `validateBatchResponse`, `validateFixResponse`, `gatesResponse`, `statsResponse`, `simpleErrorResponse`
 - shared definitions: `validationOptions`, `validatorIssue`, `warningItem`, `gateDescriptor`
 
-Use [`../references/validator-envelope-families.json`](../references/validator-envelope-families.json) when you want those families as a compact route-linked machine-readable surface instead of walking schema defs or prose sections manually.
+Use [`../references/validator-envelope-families.json`](../references/validator-envelope-families.json) when you want those families as a compact route-linked machine-readable surface instead of walking schema defs or prose sections manually. Use [`../references/validator-routes.json`](../references/validator-routes.json) when you need the per-route auth, query, and response-status map that sits beside those families.
 
 If you need a cross-language raw-JSON consumer path outside the Node runtime, also inspect:
 

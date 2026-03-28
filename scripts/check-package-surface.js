@@ -115,6 +115,25 @@ assert(
   'typescript validator-envelope-families export must expose response family definitions'
 );
 assert(typescriptProjection.publishedValidatorRoutes?.validateSingle === '/api/validate', 'typescript export must expose published validator route constants');
+assert(
+  Array.isArray(typescriptProjection.publishedValidatorRouteDefinitions) &&
+    typescriptProjection.publishedValidatorRouteDefinitions.length === 5,
+  'typescript export must expose published validator route definitions'
+);
+assert(
+  typescriptProjection.publishedValidatorRouteDefinitions.every((route) => route.requiresBearerAuth === true),
+  'typescript export must expose route auth posture'
+);
+assert(
+  typescriptProjection.publishedValidatorRouteDefinitions.find((route) => route.id === 'getStats')?.queryParameters?.[0]?.name === 'limit',
+  'typescript export must expose compact stats query metadata'
+);
+assert(
+  typescriptProjection.publishedValidatorRouteDefinitions
+    .find((route) => route.id === 'validateSingle')
+    ?.responseStatuses?.some((status) => status.status === 401),
+  'typescript export must expose compact route status metadata'
+);
 assert(typeof zodProjection.capsuleSchema?.parse === 'function', 'zod export must expose capsuleSchema.parse');
 assert(typeof validatorZod.validateSingleRequestSchema?.parse === 'function', 'validator zod export must expose validateSingleRequestSchema.parse');
 assert(typeof validatorZod.validateBatchRequestSchema?.parse === 'function', 'validator zod export must expose validateBatchRequestSchema.parse');
@@ -143,6 +162,18 @@ assert(
   'reference export must expose all published validator response families'
 );
 assert(Array.isArray(validatorRoutes.routes) && validatorRoutes.routes.length === 5, 'reference export must expose all published validator routes');
+assert(
+  validatorRoutes.routes.every((route) => route.requires_bearer_auth === true),
+  'reference export must expose validator route auth posture'
+);
+assert(
+  validatorRoutes.routes.find((route) => route.id === 'getStats')?.query_parameters?.[0]?.name === 'limit',
+  'reference export must expose compact stats query metadata'
+);
+assert(
+  validatorRoutes.routes.find((route) => route.id === 'validateSingle')?.response_statuses?.some((status) => status.status === 401),
+  'reference export must expose compact route status metadata'
+);
 assert(
   Array.isArray(contractConstants.validator?.integrity_payload_root_keys) &&
     contractConstants.validator.integrity_payload_root_keys.length === 4,
@@ -294,6 +325,7 @@ for (const relativePath of [
   'examples/client/ts-live-validator-client.ts',
   'examples/client/ts-package-contract-reference.ts',
   'examples/client/ts-envelope-family-reference.ts',
+  'examples/client/ts-route-behavior-reference.ts',
   'examples/client/ts-package-error-responses.ts',
   'examples/client/ts-package-live-validator-client.ts',
   'examples/client/ts-package-parse-validate-requests.ts',

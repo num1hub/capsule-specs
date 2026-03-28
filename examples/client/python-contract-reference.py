@@ -36,6 +36,7 @@ assert len(validator_envelope_families["response_families"]) == 7
 assert len(validator_envelope_families["shared_definitions"]) == 4
 assert len(validator_routes["routes"]) == 5
 assert validator_routes["routes"][0]["path"] == "/api/validate"
+assert all(route["requires_bearer_auth"] for route in validator_routes["routes"])
 assert (
     confidence_vector_capsule["metadata"]["capsule_id"]
     == "capsule.foundation.capsuleos.confidence-vector.v1"
@@ -46,6 +47,8 @@ simple_error_family = next(
     for family in validator_envelope_families["response_families"]
     if family["id"] == "simpleErrorResponse"
 )
+validate_single_route = next(route for route in validator_routes["routes"] if route["id"] == "validateSingle")
+stats_route = next(route for route in validator_routes["routes"] if route["id"] == "getStats")
 
 summary = {
     "relationTypeCount": len(contract_constants["relation_types"]),
@@ -56,6 +59,15 @@ summary = {
     "sharedDefinitionIds": [definition["id"] for definition in validator_envelope_families["shared_definitions"]],
     "errorExampleCount": len(simple_error_family["example_files"]),
     "routeCount": len(validator_routes["routes"]),
+    "authProtectedRouteCount": len(
+        [route for route in validator_routes["routes"] if route["requires_bearer_auth"]]
+    ),
+    "validateSingleStatusCodes": [
+        status["status"] for status in validate_single_route["response_statuses"]
+    ],
+    "statsQueryParameters": [
+        parameter["name"] for parameter in stats_route["query_parameters"]
+    ],
     "supportRoutes": [
         route["path"] for route in validator_routes["routes"] if route["method"] == "GET"
     ],

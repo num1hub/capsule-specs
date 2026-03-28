@@ -27,6 +27,7 @@ const typeRecipeFiles = [
   'ts-capsule-summary.ts',
   'zod-parse-capsule.ts',
   'ts-envelope-family-reference.ts',
+  'ts-route-behavior-reference.ts',
   'ts-build-validate-request.ts',
   'ts-build-validate-batch-request.ts',
   'ts-build-validate-fix-request.ts',
@@ -174,6 +175,7 @@ const expectedTypeProjectionImports = {
   'ts-capsule-summary.ts': '../../projections/typescript/capsule.js',
   'zod-parse-capsule.ts': '../../projections/zod/capsule.js',
   'ts-envelope-family-reference.ts': '../../projections/typescript/validator-envelope-families.js',
+  'ts-route-behavior-reference.ts': '../../projections/typescript/validator-routes.js',
   'ts-build-validate-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-batch-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-fix-request.ts': '../../projections/typescript/validator-api.js',
@@ -210,12 +212,26 @@ const expectedTypeLiveRouteReferences = {
   ]
 };
 
+const expectedTypeRouteBehaviorReferences = {
+  'ts-route-behavior-reference.ts': [
+    '../references/validator-routes.json',
+    'publishedValidatorRouteDefinitions'
+  ]
+};
+
 for (const [fileName, references] of Object.entries(expectedTypeLiveRouteReferences)) {
   const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
   for (const reference of references) {
     assert(content.includes(reference), `${fileName} must reference ${reference}`);
   }
   assert(!content.includes('${baseUrl}/api/validate'), `${fileName} must rely on shared route constants instead of copied route strings`);
+}
+
+for (const [fileName, references] of Object.entries(expectedTypeRouteBehaviorReferences)) {
+  const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
+  for (const reference of references) {
+    assert(content.includes(reference), `${fileName} must reference ${reference}`);
+  }
 }
 
 const expectedSchemaRecipeImports = {
@@ -336,6 +352,7 @@ const expectedPythonRecipeReferences = {
     'references/contract-constants.json',
     'references/validation-gates.json',
     'references/validator-envelope-families.json',
+    'references/validator-routes.json',
     'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json'
   ],
   'python-recompute-integrity-seal.py': [
@@ -430,7 +447,8 @@ const expectedPackageImports = {
   'cjs-package-contract-reference.cjs': [
     '@num1hub/capsule-specs/references/contract-constants.json',
     '@num1hub/capsule-specs/references/validation-gates.json',
-    '@num1hub/capsule-specs/references/validator-envelope-families.json'
+    '@num1hub/capsule-specs/references/validator-envelope-families.json',
+    '@num1hub/capsule-specs/references/validator-routes.json'
   ],
   'cjs-package-error-responses.cjs': [
     '@num1hub/capsule-specs/zod/validator-api',
@@ -501,7 +519,9 @@ const expectedPackageTypeImports = {
     '@num1hub/capsule-specs/references/contract-constants.json',
     '@num1hub/capsule-specs/references/validation-gates.json',
     '@num1hub/capsule-specs/references/validator-envelope-families.json',
-    '@num1hub/capsule-specs/typescript/validator-envelope-families'
+    '@num1hub/capsule-specs/references/validator-routes.json',
+    '@num1hub/capsule-specs/typescript/validator-envelope-families',
+    '@num1hub/capsule-specs/typescript/validator-routes'
   ],
   'ts-package-live-validator-client.ts': [
     '@num1hub/capsule-specs/typescript/validator-api',

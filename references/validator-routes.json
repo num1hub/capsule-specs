@@ -6,7 +6,55 @@
       "id": "validateSingle",
       "method": "POST",
       "path": "/api/validate",
+      "requires_bearer_auth": true,
+      "request_body_required": true,
+      "request_family_id": "validateSingleRequest",
+      "query_parameters": [],
       "request_example": "examples/api/validate-request.single.json",
+      "response_statuses": [
+        {
+          "status": 200,
+          "description": "Validation result",
+          "family_ids": [
+            "validatePassResponse",
+            "validateFailResponse"
+          ],
+          "example_files": [
+            "examples/api/validate-response.pass.json",
+            "examples/api/validate-response.fail.json"
+          ]
+        },
+        {
+          "status": 400,
+          "description": "Invalid validation payload",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/error-response.sample.json"
+          ]
+        },
+        {
+          "status": 401,
+          "description": "Authorization required",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/unauthorized-response.sample.json"
+          ]
+        },
+        {
+          "status": 429,
+          "description": "Rate limit exceeded",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/rate-limit-response.sample.json"
+          ]
+        }
+      ],
       "response_examples": [
         "examples/api/validate-response.pass.json",
         "examples/api/validate-response.fail.json"
@@ -16,7 +64,61 @@
       "id": "validateBatch",
       "method": "POST",
       "path": "/api/validate/batch",
+      "requires_bearer_auth": true,
+      "request_body_required": true,
+      "request_family_id": "validateBatchRequest",
+      "query_parameters": [],
       "request_example": "examples/api/validate-request.batch.json",
+      "response_statuses": [
+        {
+          "status": 200,
+          "description": "Batch validation result",
+          "family_ids": [
+            "validateBatchResponse"
+          ],
+          "example_files": [
+            "examples/api/validate-response.batch.json"
+          ]
+        },
+        {
+          "status": 400,
+          "description": "Invalid batch payload",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/error-response.sample.json"
+          ]
+        },
+        {
+          "status": 401,
+          "description": "Authorization required",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/unauthorized-response.sample.json"
+          ]
+        },
+        {
+          "status": 403,
+          "description": "Owner role required",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": []
+        },
+        {
+          "status": 429,
+          "description": "Rate limit exceeded",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/rate-limit-response.sample.json"
+          ]
+        }
+      ],
       "response_examples": [
         "examples/api/validate-response.batch.json"
       ]
@@ -25,7 +127,61 @@
       "id": "validateFix",
       "method": "POST",
       "path": "/api/validate/fix",
+      "requires_bearer_auth": true,
+      "request_body_required": true,
+      "request_family_id": "validateFixRequest",
+      "query_parameters": [],
       "request_example": "examples/api/validate-request.fix.json",
+      "response_statuses": [
+        {
+          "status": 200,
+          "description": "Fixed payload with validation result",
+          "family_ids": [
+            "validateFixResponse"
+          ],
+          "example_files": [
+            "examples/api/validate-response.fix.sample.json"
+          ]
+        },
+        {
+          "status": 400,
+          "description": "Invalid fix payload",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/error-response.sample.json"
+          ]
+        },
+        {
+          "status": 401,
+          "description": "Authorization required",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/unauthorized-response.sample.json"
+          ]
+        },
+        {
+          "status": 403,
+          "description": "Owner role required",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": []
+        },
+        {
+          "status": 429,
+          "description": "Rate limit exceeded",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/rate-limit-response.sample.json"
+          ]
+        }
+      ],
       "response_examples": [
         "examples/api/validate-response.fix.sample.json"
       ]
@@ -34,6 +190,59 @@
       "id": "getStats",
       "method": "GET",
       "path": "/api/validate/stats",
+      "requires_bearer_auth": true,
+      "request_body_required": false,
+      "request_family_id": null,
+      "query_parameters": [
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "type": "integer",
+          "minimum": 1,
+          "description": "Maximum number of validation log entries to aggregate. Defaults to 500."
+        }
+      ],
+      "response_statuses": [
+        {
+          "status": 200,
+          "description": "Validation stats payload",
+          "family_ids": [
+            "statsResponse"
+          ],
+          "example_files": [
+            "examples/api/stats-response.sample.json"
+          ]
+        },
+        {
+          "status": 401,
+          "description": "Authorization required",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/unauthorized-response.sample.json"
+          ]
+        },
+        {
+          "status": 429,
+          "description": "Rate limit exceeded",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/rate-limit-response.sample.json"
+          ]
+        },
+        {
+          "status": 500,
+          "description": "Stats computation failed",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": []
+        }
+      ],
       "response_examples": [
         "examples/api/stats-response.sample.json"
       ]
@@ -42,6 +251,42 @@
       "id": "getGates",
       "method": "GET",
       "path": "/api/validate/gates",
+      "requires_bearer_auth": true,
+      "request_body_required": false,
+      "request_family_id": null,
+      "query_parameters": [],
+      "response_statuses": [
+        {
+          "status": 200,
+          "description": "Gate metadata payload",
+          "family_ids": [
+            "gatesResponse"
+          ],
+          "example_files": [
+            "examples/api/gates-response.sample.json"
+          ]
+        },
+        {
+          "status": 401,
+          "description": "Authorization required",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/unauthorized-response.sample.json"
+          ]
+        },
+        {
+          "status": 429,
+          "description": "Rate limit exceeded",
+          "family_ids": [
+            "simpleErrorResponse"
+          ],
+          "example_files": [
+            "examples/api/rate-limit-response.sample.json"
+          ]
+        }
+      ],
       "response_examples": [
         "examples/api/gates-response.sample.json"
       ]

@@ -10,10 +10,11 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - package exports for compact contract reference JSON artifacts
 - package exports for compact validator envelope-family JSON artifacts and typed TypeScript envelope-family constants
+- package exports for compact validator route JSON artifacts and typed TypeScript route behavior constants
 - package exports for pass, fail, batch, and fix validator response-family parsing and typing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for single, batch, and fix validator request-family typing through installed TypeScript consumer recipes
 - package exports for typed reading of the published single, batch, and fix validator request samples through installed TypeScript consumer recipes
-- package exports for compact published validator route constants through JSON and TypeScript surfaces
+- package exports for compact published validator route constants, auth/query metadata, and response-status maps through JSON and TypeScript surfaces
 - package exports for a typed installed-package TypeScript `fetch` client across the published `validate`, `batch`, `fix`, `gates`, and `stats` validator routes
 - package exports for single, batch, and fix validator request-family parsing through installed CommonJS and ESM consumer recipes
 - package exports for bounded generic, unauthorized, conflict, and rate-limit error-envelope parsing through installed CommonJS, ESM, and TypeScript consumer recipes

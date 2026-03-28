@@ -120,6 +120,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
 - [`../projections/typescript/validator-envelope-families.ts`](../projections/typescript/validator-envelope-families.ts)
 - [`../projections/typescript/validator-routes.ts`](../projections/typescript/validator-routes.ts)
+- [`../examples/client/ts-route-behavior-reference.ts`](../examples/client/ts-route-behavior-reference.ts)
 
 ## Schemas
 

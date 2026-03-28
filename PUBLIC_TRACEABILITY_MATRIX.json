@@ -37,7 +37,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, compact machine-readable route-reference JSON, shared TypeScript route constants, full-route client recipes, repo-relative TypeScript request builders plus typed request readers, repo-relative and installed-package TypeScript live-client bridges, repo-relative Zod request parsers, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package request plus validate/support/error-response readers that cover single, batch, fix, gates, stats, and shared generic rejection paths without depending on private runtime code.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, compact machine-readable route-reference JSON, shared TypeScript route constants plus route-behavior metadata, full-route client recipes, repo-relative TypeScript request builders plus typed request readers, repo-relative and installed-package TypeScript live-client bridges, repo-relative Zod request parsers, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package request plus validate/support/error-response readers that cover single, batch, fix, gates, stats, and shared generic rejection paths without depending on private runtime code.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -113,6 +113,7 @@
         "examples/client/ts-package-support-responses.ts",
         "examples/client/ts-package-error-responses.ts",
         "projections/typescript/validator-routes.ts",
+        "examples/client/ts-route-behavior-reference.ts",
         "examples/client/ts-live-validator-client.ts",
         "examples/client/ts-package-live-validator-client.ts"
       ],
@@ -128,7 +129,7 @@
     },
     {
       "id": "compact-contract-reference-pack",
-      "claim": "Tool-builders can consume canonical enums, validation-gate families, validator option flags, and published validator route constants from a compact package-consumable reference layer without treating that layer as stronger than the schemas, gate docs, OpenAPI, or raw capsules it summarizes.",
+      "claim": "Tool-builders can consume canonical enums, validation-gate families, validator option flags, and published validator route behavior summaries from a compact package-consumable reference layer without treating that layer as stronger than the schemas, gate docs, OpenAPI, or raw capsules it summarizes.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -154,7 +155,8 @@
         "examples/client/cjs-package-contract-reference.cjs",
         "examples/client/ts-package-contract-reference.ts",
         "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
-        "scripts/check-package-install.js"
+        "scripts/check-package-install.js",
+        "examples/client/ts-route-behavior-reference.ts"
       ],
       "verify_commands": [
         "npm run check:reference-pack",

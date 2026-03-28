@@ -85,7 +85,7 @@
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, compact machine-readable route-reference JSON, shared TypeScript validator-route constants, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, repo-relative and installed-package TypeScript live-client bridges for all published validator routes, typed validate-response readers, bounded shared error-envelope readers, and installed-package request plus validate/support/error-response readers without depending on private runtime code.",
+      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, compact machine-readable route-reference JSON, shared TypeScript validator-route constants plus route-behavior metadata, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, repo-relative and installed-package TypeScript live-client bridges for all published validator routes, typed validate-response readers, bounded shared error-envelope readers, and installed-package request plus validate/support/error-response readers without depending on private runtime code.",
       "strongest_surfaces": [
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -133,6 +133,7 @@
         "docs/npm-consumption.md",
         "references/validator-routes.json",
         "projections/typescript/validator-routes.ts",
+        "examples/client/ts-route-behavior-reference.ts",
         "examples/client/cjs-package-validate-response.cjs",
         "examples/client/esm-package-validate-response.mjs",
         "examples/client/ts-package-validate-responses.ts",
@@ -159,7 +160,7 @@
       "id": "consume-compact-contract-references",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume canonical enums, validation-gate families, validator option flags, and published validator route constants from a compact package-consumable reference layer instead of parsing larger schemas or prose docs for every small tooling need.",
+      "outcome": "Consume canonical enums, validation-gate families, validator option flags, and published validator route behavior summaries from a compact package-consumable reference layer instead of parsing larger schemas or prose docs for every small tooling need.",
       "strongest_surfaces": [
         "docs/reference-pack.md",
         "docs/python-consumption.md",
@@ -180,7 +181,8 @@
         "examples/client/cjs-package-contract-reference.cjs",
         "examples/client/ts-package-contract-reference.ts",
         "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
-        "scripts/check-reference-pack.js"
+        "scripts/check-reference-pack.js",
+        "examples/client/ts-route-behavior-reference.ts"
       ],
       "verify_commands": [
         "npm run check:reference-pack",
@@ -260,7 +262,7 @@
       "id": "consume-source-level-type-projections",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, shared validator-route constants, Zod parsing artifacts, and package exports that are verified from fresh consumer installs for single, batch, and fix validate request flows, source-level and installed-package typed request-sample handling, repo-relative and installed-package TypeScript live-client bridges for all published validator routes, full validate response families, bounded shared error envelopes, and support-response payloads instead of reverse-engineering shape from prose alone.",
+      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, shared validator-route constants and route-behavior metadata, Zod parsing artifacts, and package exports that are verified from fresh consumer installs for single, batch, and fix validate request flows, source-level and installed-package typed request-sample handling, repo-relative and installed-package TypeScript live-client bridges for all published validator routes, full validate response families, bounded shared error envelopes, and support-response payloads instead of reverse-engineering shape from prose alone.",
       "strongest_surfaces": [
         "docs/type-projections.md",
         "docs/npm-consumption.md",
@@ -308,6 +310,7 @@
         "examples/client/esm-package-support-responses.mjs",
         "examples/client/ts-package-support-responses.ts",
         "examples/client/ts-package-validate-responses.ts",
+        "examples/client/ts-route-behavior-reference.ts",
         "examples/client/ts-live-validator-client.ts",
         "examples/client/ts-package-live-validator-client.ts"
       ],

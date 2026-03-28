@@ -6,12 +6,15 @@ import {
   publishedValidatorEnvelopeFamilies,
   publishedValidatorEnvelopeFamilyCounts
 } from "@num1hub/capsule-specs/typescript/validator-envelope-families";
+import { publishedValidatorRouteDefinitions } from "@num1hub/capsule-specs/typescript/validator-routes";
 
 export const gateIds = validationGates.gates.map((gate) => gate.id);
 export const routeIds = validatorRoutes.routes.map((route) => route.id);
 const simpleErrorFamily = validatorEnvelopeFamilies.response_families.find(
   (family) => family.id === "simpleErrorResponse"
 );
+const statsRoute = publishedValidatorRouteDefinitions.find((route) => route.id === "getStats");
+const validateSingleRoute = publishedValidatorRouteDefinitions.find((route) => route.id === "validateSingle");
 
 export const referenceSummary = {
   rootKeys: contractConstants.capsule_root_keys,
@@ -21,10 +24,13 @@ export const referenceSummary = {
   confidenceDimensions: contractConstants.confidence_vector.dimensions,
   firstGate: validationGates.gates[0]?.id ?? "G01",
   routeCount: validatorRoutes.routes.length,
+  authProtectedRouteCount: validatorRoutes.routes.filter((route) => route.requires_bearer_auth).length,
   requestFamilyCount: publishedValidatorEnvelopeFamilyCounts.requests,
   responseFamilyCount: publishedValidatorEnvelopeFamilyCounts.responses,
   sharedDefinitionIds: publishedValidatorEnvelopeFamilies.sharedDefinitions.map((definition) => definition.id),
   errorExampleCount: simpleErrorFamily?.example_files.length ?? 0,
+  validateSingleStatusCodes: validateSingleRoute?.responseStatuses.map((status) => status.status) ?? [],
+  statsQueryParameters: statsRoute?.queryParameters.map((parameter) => parameter.name) ?? [],
   supportRoutePaths: validatorRoutes.routes
     .filter((route) => route.method === "GET")
     .map((route) => route.path)
@@ -48,4 +54,16 @@ if (referenceSummary.responseFamilyCount !== 7 || referenceSummary.requestFamily
 
 if (referenceSummary.errorExampleCount !== 4) {
   throw new Error("unexpected simpleErrorResponse example count");
+}
+
+if (referenceSummary.authProtectedRouteCount !== referenceSummary.routeCount) {
+  throw new Error("unexpected validator route auth coverage");
+}
+
+if (!referenceSummary.statsQueryParameters.includes("limit")) {
+  throw new Error("unexpected stats query parameter coverage");
+}
+
+if (!referenceSummary.validateSingleStatusCodes.includes(401) || !referenceSummary.validateSingleStatusCodes.includes(429)) {
+  throw new Error("unexpected validator route status coverage");
 }

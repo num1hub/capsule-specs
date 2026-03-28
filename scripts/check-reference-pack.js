@@ -94,11 +94,206 @@ const expectedGates = [
 ];
 
 const expectedRoutes = [
-  ['validateSingle', 'POST', '/api/validate', 'examples/api/validate-request.single.json', ['examples/api/validate-response.pass.json', 'examples/api/validate-response.fail.json']],
-  ['validateBatch', 'POST', '/api/validate/batch', 'examples/api/validate-request.batch.json', ['examples/api/validate-response.batch.json']],
-  ['validateFix', 'POST', '/api/validate/fix', 'examples/api/validate-request.fix.json', ['examples/api/validate-response.fix.sample.json']],
-  ['getStats', 'GET', '/api/validate/stats', null, ['examples/api/stats-response.sample.json']],
-  ['getGates', 'GET', '/api/validate/gates', null, ['examples/api/gates-response.sample.json']]
+  {
+    id: 'validateSingle',
+    method: 'POST',
+    path: '/api/validate',
+    requires_bearer_auth: true,
+    request_body_required: true,
+    request_family_id: 'validateSingleRequest',
+    query_parameters: [],
+    request_example: 'examples/api/validate-request.single.json',
+    response_examples: ['examples/api/validate-response.pass.json', 'examples/api/validate-response.fail.json'],
+    response_statuses: [
+      {
+        status: 200,
+        description: 'Validation result',
+        family_ids: ['validatePassResponse', 'validateFailResponse'],
+        example_files: ['examples/api/validate-response.pass.json', 'examples/api/validate-response.fail.json']
+      },
+      {
+        status: 400,
+        description: 'Invalid validation payload',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/error-response.sample.json']
+      },
+      {
+        status: 401,
+        description: 'Authorization required',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/unauthorized-response.sample.json']
+      },
+      {
+        status: 429,
+        description: 'Rate limit exceeded',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/rate-limit-response.sample.json']
+      }
+    ]
+  },
+  {
+    id: 'validateBatch',
+    method: 'POST',
+    path: '/api/validate/batch',
+    requires_bearer_auth: true,
+    request_body_required: true,
+    request_family_id: 'validateBatchRequest',
+    query_parameters: [],
+    request_example: 'examples/api/validate-request.batch.json',
+    response_examples: ['examples/api/validate-response.batch.json'],
+    response_statuses: [
+      {
+        status: 200,
+        description: 'Batch validation result',
+        family_ids: ['validateBatchResponse'],
+        example_files: ['examples/api/validate-response.batch.json']
+      },
+      {
+        status: 400,
+        description: 'Invalid batch payload',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/error-response.sample.json']
+      },
+      {
+        status: 401,
+        description: 'Authorization required',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/unauthorized-response.sample.json']
+      },
+      {
+        status: 403,
+        description: 'Owner role required',
+        family_ids: ['simpleErrorResponse'],
+        example_files: []
+      },
+      {
+        status: 429,
+        description: 'Rate limit exceeded',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/rate-limit-response.sample.json']
+      }
+    ]
+  },
+  {
+    id: 'validateFix',
+    method: 'POST',
+    path: '/api/validate/fix',
+    requires_bearer_auth: true,
+    request_body_required: true,
+    request_family_id: 'validateFixRequest',
+    query_parameters: [],
+    request_example: 'examples/api/validate-request.fix.json',
+    response_examples: ['examples/api/validate-response.fix.sample.json'],
+    response_statuses: [
+      {
+        status: 200,
+        description: 'Fixed payload with validation result',
+        family_ids: ['validateFixResponse'],
+        example_files: ['examples/api/validate-response.fix.sample.json']
+      },
+      {
+        status: 400,
+        description: 'Invalid fix payload',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/error-response.sample.json']
+      },
+      {
+        status: 401,
+        description: 'Authorization required',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/unauthorized-response.sample.json']
+      },
+      {
+        status: 403,
+        description: 'Owner role required',
+        family_ids: ['simpleErrorResponse'],
+        example_files: []
+      },
+      {
+        status: 429,
+        description: 'Rate limit exceeded',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/rate-limit-response.sample.json']
+      }
+    ]
+  },
+  {
+    id: 'getStats',
+    method: 'GET',
+    path: '/api/validate/stats',
+    requires_bearer_auth: true,
+    request_body_required: false,
+    request_family_id: null,
+    query_parameters: [
+      {
+        name: 'limit',
+        in: 'query',
+        required: false,
+        type: 'integer',
+        minimum: 1,
+        description: 'Maximum number of validation log entries to aggregate. Defaults to 500.'
+      }
+    ],
+    request_example: null,
+    response_examples: ['examples/api/stats-response.sample.json'],
+    response_statuses: [
+      {
+        status: 200,
+        description: 'Validation stats payload',
+        family_ids: ['statsResponse'],
+        example_files: ['examples/api/stats-response.sample.json']
+      },
+      {
+        status: 401,
+        description: 'Authorization required',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/unauthorized-response.sample.json']
+      },
+      {
+        status: 429,
+        description: 'Rate limit exceeded',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/rate-limit-response.sample.json']
+      },
+      {
+        status: 500,
+        description: 'Stats computation failed',
+        family_ids: ['simpleErrorResponse'],
+        example_files: []
+      }
+    ]
+  },
+  {
+    id: 'getGates',
+    method: 'GET',
+    path: '/api/validate/gates',
+    requires_bearer_auth: true,
+    request_body_required: false,
+    request_family_id: null,
+    query_parameters: [],
+    request_example: null,
+    response_examples: ['examples/api/gates-response.sample.json'],
+    response_statuses: [
+      {
+        status: 200,
+        description: 'Gate metadata payload',
+        family_ids: ['gatesResponse'],
+        example_files: ['examples/api/gates-response.sample.json']
+      },
+      {
+        status: 401,
+        description: 'Authorization required',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/unauthorized-response.sample.json']
+      },
+      {
+        status: 429,
+        description: 'Rate limit exceeded',
+        family_ids: ['simpleErrorResponse'],
+        example_files: ['examples/api/rate-limit-response.sample.json']
+      }
+    ]
+  }
 ];
 
 const expectedRequestFamilies = [
@@ -161,7 +356,9 @@ assert(Array.isArray(envelopeFamilies.response_families) && envelopeFamilies.res
 assert(Array.isArray(envelopeFamilies.shared_definitions) && envelopeFamilies.shared_definitions.length === expectedSharedDefinitions.length, 'validator-envelope-families must publish all shared definitions');
 assert(Array.isArray(routes.routes) && routes.routes.length === expectedRoutes.length, 'validator-routes must publish all 5 routes');
 assert(referencePackDoc.includes('validator-envelope-families.json'), 'docs/reference-pack.md must mention validator-envelope-families.json');
+assert(referencePackDoc.includes('response status'), 'docs/reference-pack.md must describe validator route response-status coverage');
 assert(apiDoc.includes('validator-envelope-families.json'), 'docs/api-envelopes.md must mention validator-envelope-families.json');
+assert(apiDoc.includes('response-status-to-envelope'), 'docs/api-envelopes.md must describe compact route response-status coverage');
 
 for (const [index, [id, family, summary]] of expectedGates.entries()) {
   const gate = gates.gates[index];
@@ -178,18 +375,64 @@ for (const family of gates.families) {
   }
 }
 
-for (const [index, [id, method, pathName, requestExample, responseExamples]] of expectedRoutes.entries()) {
+const publishedRequestFamilyIds = new Set(expectedRequestFamilies.map(([id]) => id));
+const publishedResponseFamilyIds = new Set(expectedResponseFamilies.map(([id]) => id));
+
+for (const [index, expectedRoute] of expectedRoutes.entries()) {
   const route = routes.routes[index];
-  assert(route.id === id, `validator-routes route ${index} must have id ${id}`);
-  assert(route.method === method, `validator-routes ${id} must use ${method}`);
-  assert(route.path === pathName, `validator-routes ${id} must use path ${pathName}`);
-  if (requestExample) {
-    assert(route.request_example === requestExample, `validator-routes ${id} request example must match expected public example`);
+  const operation = openapi.paths?.[expectedRoute.path]?.[expectedRoute.method.toLowerCase()];
+
+  assert(route.id === expectedRoute.id, `validator-routes route ${index} must have id ${expectedRoute.id}`);
+  assert(route.method === expectedRoute.method, `validator-routes ${expectedRoute.id} must use ${expectedRoute.method}`);
+  assert(route.path === expectedRoute.path, `validator-routes ${expectedRoute.id} must use path ${expectedRoute.path}`);
+  assert(route.requires_bearer_auth === expectedRoute.requires_bearer_auth, `validator-routes ${expectedRoute.id} must publish bearer-auth posture`);
+  assert(route.request_body_required === expectedRoute.request_body_required, `validator-routes ${expectedRoute.id} must publish request-body requirement`);
+  assert(route.request_family_id === expectedRoute.request_family_id, `validator-routes ${expectedRoute.id} request family must match expected public family`);
+  if (expectedRoute.request_example) {
+    assert(route.request_example === expectedRoute.request_example, `validator-routes ${expectedRoute.id} request example must match expected public example`);
   }
-  assert(sameArray(route.response_examples, responseExamples), `validator-routes ${id} response examples must match expected public examples`);
-  assert(openapi.paths?.[pathName]?.[method.toLowerCase()], `OpenAPI must publish ${method} ${pathName}`);
-  assert(routeDoc.includes(`## \`${method} ${pathName}\``), `docs/route-reference.md must include ${method} ${pathName}`);
-  assert(openapiDoc.includes(`- \`${method} ${pathName}\``), `docs/openapi.md must include ${method} ${pathName}`);
+  assert(sameArray(route.query_parameters, expectedRoute.query_parameters), `validator-routes ${expectedRoute.id} query parameters must match expected public metadata`);
+  assert(sameArray(route.response_examples, expectedRoute.response_examples), `validator-routes ${expectedRoute.id} response examples must match expected public examples`);
+  assert(sameArray(route.response_statuses, expectedRoute.response_statuses), `validator-routes ${expectedRoute.id} response status map must match expected public metadata`);
+  assert(Boolean(operation), `OpenAPI must publish ${expectedRoute.method} ${expectedRoute.path}`);
+  assert(routeDoc.includes(`## \`${expectedRoute.method} ${expectedRoute.path}\``), `docs/route-reference.md must include ${expectedRoute.method} ${expectedRoute.path}`);
+  assert(openapiDoc.includes(`- \`${expectedRoute.method} ${expectedRoute.path}\``), `docs/openapi.md must include ${expectedRoute.method} ${expectedRoute.path}`);
+  assert(routeDoc.includes('Compact route behavior'), 'docs/route-reference.md must describe the compact route behavior layer');
+  if (expectedRoute.request_family_id) {
+    assert(publishedRequestFamilyIds.has(expectedRoute.request_family_id), `validator-routes ${expectedRoute.id} request family must exist in validator-envelope-families`);
+  }
+
+  const openapiQueryParameters = (operation.parameters || []).map((parameter) => ({
+    name: parameter.name,
+    in: parameter.in,
+    required: Boolean(parameter.required),
+    type: parameter.schema?.type ?? null,
+    minimum: parameter.schema?.minimum ?? null,
+    description: parameter.description
+  }));
+
+  assert(sameArray(openapiQueryParameters, expectedRoute.query_parameters), `OpenAPI query parameters for ${expectedRoute.id} must match compact route metadata`);
+  assert(Array.isArray(operation.security) && operation.security.some((entry) => entry.bearerAuth), `OpenAPI ${expectedRoute.id} must require bearerAuth`);
+  if (expectedRoute.request_body_required) {
+    assert(operation.requestBody?.required === true, `OpenAPI ${expectedRoute.id} requestBody must stay required`);
+  } else {
+    assert(!operation.requestBody, `OpenAPI ${expectedRoute.id} must not require a request body`);
+  }
+
+  for (const responseStatus of route.response_statuses) {
+    const openapiResponse = operation.responses?.[String(responseStatus.status)];
+    assert(Boolean(openapiResponse), `OpenAPI ${expectedRoute.id} must publish response status ${responseStatus.status}`);
+    assert(
+      openapiResponse.description === responseStatus.description,
+      `validator-routes ${expectedRoute.id} status ${responseStatus.status} description must match OpenAPI`
+    );
+    for (const familyId of responseStatus.family_ids) {
+      assert(
+        publishedResponseFamilyIds.has(familyId),
+        `validator-routes ${expectedRoute.id} status ${responseStatus.status} must reference published response family ${familyId}`
+      );
+    }
+  }
 }
 
 for (const [index, [id, routeIds, schemaRef, exampleFiles]] of expectedRequestFamilies.entries()) {
@@ -226,5 +469,5 @@ if (process.exitCode) {
 }
 
 console.log(
-  `OK: checked reference pack constants, ${routes.routes.length} validator routes, ${gates.gates.length} validation gates, and ${envelopeFamilies.request_families.length + envelopeFamilies.response_families.length} validator envelope families`
+  `OK: checked reference pack constants, ${routes.routes.length} validator routes with status maps, ${gates.gates.length} validation gates, and ${envelopeFamilies.request_families.length + envelopeFamilies.response_families.length} validator envelope families`
 );
