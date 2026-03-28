@@ -12,6 +12,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for pass, fail, batch, and fix validator response-family parsing and typing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for single, batch, and fix validator request-family typing through installed TypeScript consumer recipes
 - package exports for typed reading of the published single, batch, and fix validator request samples through installed TypeScript consumer recipes
+- package exports for a typed installed-package TypeScript `fetch` client across the published `validate`, `batch`, `fix`, `gates`, and `stats` validator routes
 - package exports for single, batch, and fix validator request-family parsing through installed CommonJS and ESM consumer recipes
 - package exports for bounded generic, unauthorized, conflict, and rate-limit error-envelope parsing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for validator support-response parsing through installed CommonJS, ESM, and TypeScript consumer recipes
@@ -290,6 +291,12 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 
 These recipes prove that the installed package surface does not stop at one typed request example. It also covers single, batch, and fix validator request-family construction plus typed reading of the published request samples from TypeScript consumers without falling back to repo-relative projection imports.
 
+## Minimal package-level live-client example
+
+A copyable version of this example also lives at [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts).
+
+That recipe proves the installed package surface is usable not only for static typing and sample parsing, but also for a typed `fetch` client that covers the published `validate`, `batch`, `fix`, `gates`, and `stats` routes plus the bounded shared `SimpleErrorResponse` envelope.
+
 ## Important boundaries
 
 - This package-consumer layer is a convenience surface over the stronger public schemas and OpenAPI artifacts.
@@ -297,6 +304,7 @@ These recipes prove that the installed package surface does not stop at one type
 - The TypeScript package recipe is typechecked through the repo-local self-package path map and rechecked from a fresh installed tarball.
 - The TypeScript package request recipes prove installed-package typing for the single, batch, and fix validator request families, not live validator execution.
 - The TypeScript package request-parser recipe proves installed-package typing for the published single, batch, and fix request samples, not live validator execution.
+- The TypeScript package live-client recipe proves installed-package route typing and request/response shaping for the published validator routes, not hosted-service availability.
 - The package surface does not turn this repository into a complete SDK.
 - The package surface is compatible with raw-schema validators, but those validators still only prove structural contract conformance, not live gate semantics.
 - The package support-response recipes prove installed-package parsing and typing for the published `gates` and `stats` payloads, not live-route availability or hosted-service behavior.

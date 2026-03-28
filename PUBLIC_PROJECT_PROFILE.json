@@ -82,7 +82,9 @@
       "live client recipes for all published validator routes",
       "package-level support-response recipe examples for published gates and stats payloads",
       "source-level TypeScript validator request sample reader examples",
-      "installed-package TypeScript validator request sample reader examples"
+      "installed-package TypeScript validator request sample reader examples",
+      "source-level TypeScript live-client recipe examples for published validator routes",
+      "installed-package TypeScript live-client recipe examples for published validator routes"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -92,13 +94,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 352,
+    "total_files": 354,
     "markdown_files": 100,
     "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 71,
+    "client_recipe_files": 73,
     "workflow_files": 1,
     "issue_templates": 4
   },

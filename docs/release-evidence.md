@@ -161,6 +161,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal source-level TypeScript recipe for constructing a validator batch request envelope.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator fix request envelope.
+- [`../examples/client/ts-live-validator-client.ts`](../examples/client/ts-live-validator-client.ts)
+  Minimal source-level TypeScript recipe for a typed `fetch` client that covers the published validator route family from repo-relative projection imports.
 - [`../examples/client/ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts)
   Minimal source-level TypeScript recipe for typing the published single, batch, and fix validator request samples.
 - [`../examples/client/zod-parse-validate-request.ts`](../examples/client/zod-parse-validate-request.ts)
@@ -247,6 +249,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
 - [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
   Minimal TypeScript package-consumer recipe for typed generic, unauthorized, conflict, and rate-limit error-envelope handling through installed package exports.
+- [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
+  Minimal TypeScript package-consumer recipe for a typed `fetch` client that covers the published validator route family through installed package exports.
 - [`../examples/client/ts-package-support-responses.ts`](../examples/client/ts-package-support-responses.ts)
   Minimal TypeScript package-consumer recipe for typed `gates` and `stats` support-response handling through installed package exports.
 - [`../examples/client/ts-package-validate-responses.ts`](../examples/client/ts-package-validate-responses.ts)
@@ -272,7 +276,7 @@ The API envelope schema and its dedicated verification script strengthen that cl
 
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
-The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, sample-driven Zod parsing for the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
+The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, source-level and installed-package TypeScript live-client bridges for the published validator route family, sample-driven Zod parsing for the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering installed-package request parsing and TypeScript request typing for the published single, batch, and fix families plus the full published validate-response family instead of request-side raw Ajv/typing-only proofs and a positive-pass sample only.
 

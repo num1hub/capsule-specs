@@ -14,6 +14,7 @@ If you need source-level consumer artifacts instead of raw JSON Schema alone, al
 - [`type-projections.md`](type-projections.md)
 - [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
 - [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
+- [`../examples/client/ts-live-validator-client.ts`](../examples/client/ts-live-validator-client.ts)
 - [`../examples/client/ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts)
 - [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts)
 - [`../examples/client/zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
@@ -36,6 +37,7 @@ If you need installed-package consumer artifacts for the bounded shared error-en
 - [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
 - [`../examples/client/cjs-package-validate-request.cjs`](../examples/client/cjs-package-validate-request.cjs)
 - [`../examples/client/esm-package-validate-request.mjs`](../examples/client/esm-package-validate-request.mjs)
+- [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
 - [`../examples/client/ts-package-parse-validate-requests.ts`](../examples/client/ts-package-parse-validate-requests.ts)
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
@@ -102,4 +104,4 @@ OpenAPI alone tells tooling what shapes exist. Example envelopes show human read
 
 The dedicated API envelope schema keeps these example files machine-readable without forcing consumers to infer shape rules from prose alone.
 
-The published validator API projections strengthen that path further by giving TypeScript and Zod consumers a public-safe source-level envelope layer for `validate` request families, sample-driven TypeScript and Zod request readers, response families, support, and bounded shared error envelopes while staying subordinate to the stronger JSON Schema and OpenAPI surfaces.
+The published validator API projections strengthen that path further by giving TypeScript and Zod consumers a public-safe source-level envelope layer for `validate` request families, sample-driven TypeScript and Zod request readers, a repo-relative and installed-package TypeScript `fetch` bridge for the published validator route family, response families, support, and bounded shared error envelopes while staying subordinate to the stronger JSON Schema and OpenAPI surfaces.

@@ -1538,6 +1538,22 @@
       ]
     },
     {
+      "id": "examples.client.ts-live-validator-client",
+      "path": "examples/client/ts-live-validator-client.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
       "id": "examples.client.ts-parse-validate-requests",
       "path": "examples/client/ts-parse-validate-requests.ts",
       "kind": "client-recipe",
@@ -1604,6 +1620,22 @@
     {
       "id": "examples.client.ts-package-error-responses",
       "path": "examples/client/ts-package-error-responses.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:package-install",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-package-live-validator-client",
+      "path": "examples/client/ts-package-live-validator-client.ts",
       "kind": "client-recipe",
       "stability": "maintained",
       "audiences": [

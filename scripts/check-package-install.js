@@ -44,6 +44,7 @@ const typescriptErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-
 const typescriptBatchRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-batch-request.ts');
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 const typescriptFixRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-fix-request.ts');
+const typescriptLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-live-validator-client.ts');
 const typescriptParseRequestsRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-parse-validate-requests.ts');
 const typescriptValidateResponsesRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-responses.ts');
 const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
@@ -222,6 +223,7 @@ try {
       'consumer.ts',
       'batch-request-consumer.ts',
       'fix-request-consumer.ts',
+      'live-client-consumer.ts',
       'parse-request-consumer.ts',
       'error-consumer.ts',
       'reference-consumer.ts',
@@ -239,6 +241,11 @@ try {
   fs.writeFileSync(
     path.join(typescriptProject, 'fix-request-consumer.ts'),
     fs.readFileSync(typescriptFixRequestRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
+    path.join(typescriptProject, 'live-client-consumer.ts'),
+    fs.readFileSync(typescriptLiveClientRecipePath, 'utf8'),
     'utf8'
   );
   fs.writeFileSync(

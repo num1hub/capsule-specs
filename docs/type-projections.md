@@ -28,6 +28,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal TypeScript recipe for building a validator batch request envelope from the published API projection.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
   Minimal TypeScript recipe for building a validator fix request envelope from the published API projection.
+- [`../examples/client/ts-live-validator-client.ts`](../examples/client/ts-live-validator-client.ts)
+  Minimal TypeScript recipe for a typed `fetch` client that covers the published validator route family from repo-relative projection imports.
 - [`../examples/client/ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts)
   Minimal TypeScript recipe for typing the published single, batch, and fix validator request samples through the public projection layer.
 - [`../examples/client/zod-parse-validate-request.ts`](../examples/client/zod-parse-validate-request.ts)
@@ -68,6 +70,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal ESM recipe that consumes the built validator API package exports for the published pass, fail, batch, and fix response families.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
   Minimal TypeScript package-consumer recipe for typed single-request construction through the published capsule and validator API package subpaths.
+- [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
+  Minimal TypeScript package-consumer recipe for a typed `fetch` client that covers the published validator route family through installed package exports.
 - [`../examples/client/ts-package-parse-validate-requests.ts`](../examples/client/ts-package-parse-validate-requests.ts)
   Minimal TypeScript package-consumer recipe for typing the published single, batch, and fix validator request samples through installed package exports.
 - [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts)
@@ -91,9 +95,11 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - a public-safe source-level envelope layer for validator clients that do not want to hand-roll request and response shapes
 - a source-level path for batch and fix validator envelopes that stays aligned to the published sample payload families
 - a source-level TypeScript path for typing the published single, batch, and fix request samples instead of treating TypeScript as construction-only on the request side
+- a source-level TypeScript `fetch` client path that keeps request shapes, response unions, support payloads, and bounded shared error envelopes tied to the published validator API projection
 - a source-level Zod path for parsing the published single, batch, and fix request families instead of validating them only through raw Ajv
 - an installed-package TypeScript path for single, batch, and fix validator request-family typing without repo-relative imports
 - an installed-package TypeScript path for typing the published single, batch, and fix request samples from package-exported JSON assets instead of relying only on runtime CJS/ESM parsing
+- an installed-package TypeScript `fetch` client path that proves the public validator API projection remains usable from a fresh consumer install, not just from repo-relative examples
 - an installed-package runtime path for parsing the published single, batch, and fix request families from CommonJS and ESM consumers
 - a source-level path for typed validate-response families that stays aligned to the published pass, fail, batch, and fix samples
 - a source-level Zod path for parsing the published pass, fail, batch, and fix validator response samples instead of mixing published fixtures with synthetic response objects

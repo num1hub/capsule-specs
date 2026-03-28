@@ -29,6 +29,7 @@ const typeRecipeFiles = [
   'ts-build-validate-request.ts',
   'ts-build-validate-batch-request.ts',
   'ts-build-validate-fix-request.ts',
+  'ts-live-validator-client.ts',
   'ts-parse-validate-requests.ts',
   'zod-parse-validate-request.ts',
   'zod-parse-validate-batch-request.ts',
@@ -91,6 +92,7 @@ const packageRecipeFiles = [
 const packageTypeRecipeFiles = [
   'ts-package-error-responses.ts',
   'ts-package-contract-reference.ts',
+  'ts-package-live-validator-client.ts',
   'ts-package-support-responses.ts',
   'ts-package-validate-responses.ts',
   'ts-package-parse-validate-requests.ts',
@@ -173,6 +175,7 @@ const expectedTypeProjectionImports = {
   'ts-build-validate-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-batch-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-fix-request.ts': '../../projections/typescript/validator-api.js',
+  'ts-live-validator-client.ts': '../../projections/typescript/validator-api.js',
   'ts-parse-validate-requests.ts': '../../projections/typescript/validator-api.js',
   'zod-parse-validate-request.ts': '../../projections/zod/validator-api.js',
   'zod-parse-validate-batch-request.ts': '../../projections/zod/validator-api.js',
@@ -191,6 +194,27 @@ const expectedTypeProjectionImports = {
 for (const [fileName, projectionImport] of Object.entries(expectedTypeProjectionImports)) {
   const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
   assert(content.includes(projectionImport), `${fileName} must import ${projectionImport}`);
+}
+
+const expectedTypeLiveRouteReferences = {
+  'ts-live-validator-client.ts': [
+    '../api/validate-request.single.json',
+    '../api/validate-request.batch.json',
+    '../api/validate-request.fix.json',
+    '/api/validate',
+    '/api/validate/batch',
+    '/api/validate/fix',
+    '/api/validate/gates',
+    '/api/validate/stats',
+    'fetch('
+  ]
+};
+
+for (const [fileName, references] of Object.entries(expectedTypeLiveRouteReferences)) {
+  const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
+  for (const reference of references) {
+    assert(content.includes(reference), `${fileName} must reference ${reference}`);
+  }
 }
 
 const expectedSchemaRecipeImports = {
@@ -473,6 +497,18 @@ const expectedPackageTypeImports = {
   'ts-package-contract-reference.ts': [
     '@num1hub/capsule-specs/references/contract-constants.json',
     '@num1hub/capsule-specs/references/validation-gates.json'
+  ],
+  'ts-package-live-validator-client.ts': [
+    '@num1hub/capsule-specs/typescript/validator-api',
+    '@num1hub/capsule-specs/examples/api/validate-request.single.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.batch.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.fix.json',
+    '/api/validate',
+    '/api/validate/batch',
+    '/api/validate/fix',
+    '/api/validate/gates',
+    '/api/validate/stats',
+    'fetch('
   ],
   'ts-package-support-responses.ts': [
     '@num1hub/capsule-specs/typescript/validator-api'
