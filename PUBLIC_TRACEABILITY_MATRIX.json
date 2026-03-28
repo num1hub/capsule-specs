@@ -84,7 +84,8 @@
         "examples/client/curl-get-gates.sh",
         "examples/client/curl-get-stats.sh",
         "examples/client/node-get-stats.mjs",
-        "examples/client/python-get-stats.py"
+        "examples/client/python-get-stats.py",
+        "examples/client/node-validate-fix.mjs"
       ],
       "verify_commands": [
         "npm run check:api-examples",

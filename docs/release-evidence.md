@@ -193,6 +193,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal Python recipe for preparing or sending the published `POST /api/validate/batch` example envelope.
 - [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
   Minimal Python recipe for preparing or sending the published `POST /api/validate/fix` example envelope.
+- [`../examples/client/node-validate-fix.mjs`](../examples/client/node-validate-fix.mjs)
+  Minimal Node recipe for sending the published `POST /api/validate/fix` example envelope.
 - [`../examples/client/python-get-gates.py`](../examples/client/python-get-gates.py)
   Minimal Python recipe for reading the published `GET /api/validate/gates` support route from sample data or a live validator.
 - [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)

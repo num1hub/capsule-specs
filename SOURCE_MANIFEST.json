@@ -219,7 +219,8 @@
       "scripts/check-evidence-strength.js",
       "/home/n1/codex-workspace/docs/client-recipes.md",
       "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/docs/route-reference.md"
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
     ],
     "transformation_type": "generated",
     "notes": "Repository changelog starting at the initial public projection.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; synchronized with validator API type-projection surfaces; package-export projection layer synchronized"
@@ -506,7 +507,8 @@
       "/home/n1/codex-workspace/examples/client/node-get-gates.mjs",
       "/home/n1/codex-workspace/examples/client/node-get-stats.mjs",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
-      "/home/n1/codex-workspace/examples/client/python-get-stats.py"
+      "/home/n1/codex-workspace/examples/client/python-get-stats.py",
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
     ],
     "transformation_type": "generated",
     "notes": "Consumer-oriented curl, Node, and Python usage guide for the validator HTTP surface with full published route coverage."
@@ -1309,7 +1311,8 @@
       "/home/n1/codex-workspace/docs/client-recipes.md",
       "/home/n1/codex-workspace/docs/python-consumption.md",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
-      "/home/n1/codex-workspace/examples/client/python-get-stats.py"
+      "/home/n1/codex-workspace/examples/client/python-get-stats.py",
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release evidence synchronized with public type-projection surfaces; release evidence synchronized with validator API projection surfaces; package-export projection layer synchronized"
@@ -1470,7 +1473,8 @@
       "/home/n1/codex-workspace/examples/client/node-get-gates.mjs",
       "/home/n1/codex-workspace/examples/client/node-get-stats.mjs",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
-      "/home/n1/codex-workspace/examples/client/python-get-stats.py"
+      "/home/n1/codex-workspace/examples/client/python-get-stats.py",
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
     ],
     "transformation_type": "generated",
     "notes": "Per-route map from published validator routes to the strongest examples and live client recipes."
@@ -2294,7 +2298,8 @@
       "/home/n1/codex-workspace/examples/client/node-get-gates.mjs",
       "/home/n1/codex-workspace/examples/client/node-get-stats.mjs",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
-      "/home/n1/codex-workspace/examples/client/python-get-stats.py"
+      "/home/n1/codex-workspace/examples/client/python-get-stats.py",
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for live-route, schema, integrity, package, and Python client recipes."
@@ -4205,7 +4210,8 @@
       "/home/n1/codex-workspace/tsconfig.build.json",
       "/home/n1/codex-workspace/docs/client-recipes.md",
       "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/docs/route-reference.md"
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
     ],
     "transformation_type": "generated",
     "notes": "Public roadmap for the open-core specification surface.; wave 3 updated for published type projections; package-export projection layer synchronized"
@@ -4711,7 +4717,8 @@
       "/home/n1/codex-workspace/examples/client/node-get-gates.mjs",
       "/home/n1/codex-workspace/examples/client/node-get-stats.mjs",
       "/home/n1/codex-workspace/examples/client/python-get-gates.py",
-      "/home/n1/codex-workspace/examples/client/python-get-stats.py"
+      "/home/n1/codex-workspace/examples/client/python-get-stats.py",
+      "/home/n1/codex-workspace/examples/client/node-validate-fix.mjs"
     ],
     "transformation_type": "generated",
     "notes": "Repository-local checks for curl, Node, and Python client recipe snippets across all published validator routes."
@@ -5736,5 +5743,12 @@
     ],
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for reading the published stats support route from sample data or a live validator."
+  },
+  "examples/client/node-validate-fix.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal Node fetch recipe for POST /api/validate/fix."
   }
 }

@@ -22,7 +22,7 @@ This page maps each published validator route to the strongest public example su
 - contract: [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
 - request example: [`../examples/api/validate-request.fix.json`](../examples/api/validate-request.fix.json)
 - response example: [`../examples/api/validate-response.fix.sample.json`](../examples/api/validate-response.fix.sample.json)
-- live client recipes: [`../examples/client/curl-validate-fix.sh`](../examples/client/curl-validate-fix.sh), [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
+- live client recipes: [`../examples/client/curl-validate-fix.sh`](../examples/client/curl-validate-fix.sh), [`../examples/client/node-validate-fix.mjs`](../examples/client/node-validate-fix.mjs), [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
 
 ## `GET /api/validate/stats`
 

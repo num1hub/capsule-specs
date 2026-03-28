@@ -14,6 +14,7 @@ This directory contains minimal consumer-oriented examples for the published val
 
 - `node-validate-single.mjs`
 - `node-validate-batch.mjs`
+- `node-validate-fix.mjs`
 - `node-get-gates.mjs`
 - `node-get-stats.mjs`
 

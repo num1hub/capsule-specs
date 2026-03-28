@@ -1191,6 +1191,20 @@
       ]
     },
     {
+      "id": "examples.client.node-fix",
+      "path": "examples/client/node-validate-fix.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.node-get-gates",
       "path": "examples/client/node-get-gates.mjs",
       "kind": "client-recipe",

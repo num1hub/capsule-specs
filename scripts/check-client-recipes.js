@@ -18,6 +18,7 @@ const shellFiles = [
 const nodeFiles = [
   'node-validate-single.mjs',
   'node-validate-batch.mjs',
+  'node-validate-fix.mjs',
   'node-get-gates.mjs',
   'node-get-stats.mjs'
 ];
@@ -122,6 +123,7 @@ for (const fileName of shellFiles) {
 const expectedNodeRoutes = {
   'node-validate-single.mjs': '/api/validate',
   'node-validate-batch.mjs': '/api/validate/batch',
+  'node-validate-fix.mjs': '/api/validate/fix',
   'node-get-gates.mjs': '/api/validate/gates',
   'node-get-stats.mjs': '/api/validate/stats'
 };

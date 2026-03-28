@@ -234,6 +234,7 @@ const requiredIds = [
   'examples.client.curl-get-gates',
   'examples.client.curl-get-stats',
   'examples.client.node-get-gates',
+  'examples.client.node-fix',
   'examples.client.node-get-stats',
   'examples.client.python-get-gates',
   'examples.client.python-get-stats',

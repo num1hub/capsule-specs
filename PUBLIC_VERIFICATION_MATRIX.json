@@ -68,7 +68,8 @@
         "examples/client/node-get-gates.mjs",
         "examples/client/node-get-stats.mjs",
         "examples/client/python-get-gates.py",
-        "examples/client/python-get-stats.py"
+        "examples/client/python-get-stats.py",
+        "examples/client/node-validate-fix.mjs"
       ],
       "strongest_surfaces": [
         "examples/example-project-hub.capsule.json",
@@ -90,7 +91,8 @@
         "cross-language Python validator-envelope recipes drifting away from the published API example payloads or extracted package layout",
         "cross-language Python response-family recipes drifting away from the published API example payloads or extracted package layout",
         "live support-route client recipes drifting away from the published validator HTTP surface",
-        "cross-language Python support-route recipes drifting away from the published support-response payloads or extracted package layout"
+        "cross-language Python support-route recipes drifting away from the published support-response payloads or extracted package layout",
+        "Node fix-route client recipes drifting away from the published validator HTTP surface"
       ]
     },
     {

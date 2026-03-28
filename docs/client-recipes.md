@@ -29,6 +29,7 @@ Minimal Node fetch-based examples also live under [`../examples/client/`](../exa
 
 - [`node-validate-single.mjs`](../examples/client/node-validate-single.mjs)
 - [`node-validate-batch.mjs`](../examples/client/node-validate-batch.mjs)
+- [`node-validate-fix.mjs`](../examples/client/node-validate-fix.mjs)
 - [`node-get-gates.mjs`](../examples/client/node-get-gates.mjs)
 - [`node-get-stats.mjs`](../examples/client/node-get-stats.mjs)
 
@@ -119,8 +120,8 @@ These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM,
   Use `POST /api/validate`
 - `curl-validate-batch.sh` and `node-validate-batch.mjs`
   Use `POST /api/validate/batch`
-- `curl-validate-fix.sh`
-  Uses `POST /api/validate/fix`
+- `curl-validate-fix.sh` and `node-validate-fix.mjs`
+  Use `POST /api/validate/fix`
 - `curl-get-gates.sh`, `node-get-gates.mjs`, and `python-get-gates.py`
   Use `GET /api/validate/gates`
 - `curl-get-stats.sh`, `node-get-stats.mjs`, and `python-get-stats.py`
