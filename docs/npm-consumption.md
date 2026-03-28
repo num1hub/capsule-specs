@@ -11,6 +11,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for compact contract reference JSON artifacts
 - package exports for pass, fail, batch, and fix validator response-family parsing and typing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for single, batch, and fix validator request-family typing through installed TypeScript consumer recipes
+- package exports for single, batch, and fix validator request-family parsing through installed CommonJS and ESM consumer recipes
 - package exports for bounded generic, unauthorized, conflict, and rate-limit error-envelope parsing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for validator support-response parsing through installed CommonJS, ESM, and TypeScript consumer recipes
 - package exports for raw JSON Schema validation with third-party validators such as Ajv
@@ -159,6 +160,26 @@ console.log(validateFailResponseSchema.parse(failResponse).errors[0]?.gate);
 ```
 
 These recipes prove that the installed package surface covers the published pass, fail, batch, and fix validator response families instead of leaving installed-package response handling at the single positive-pass sample only.
+
+## Minimal package-level validate-request family example
+
+Copyable versions of this example also live at [`../examples/client/cjs-package-validate-request.cjs`](../examples/client/cjs-package-validate-request.cjs) and [`../examples/client/esm-package-validate-request.mjs`](../examples/client/esm-package-validate-request.mjs).
+
+```js
+import * as validatorProjection from "@num1hub/capsule-specs/zod/validator-api";
+import validateSingleRequest from "@num1hub/capsule-specs/examples/api/validate-request.single.json" with { type: "json" };
+import validateBatchRequest from "@num1hub/capsule-specs/examples/api/validate-request.batch.json" with { type: "json" };
+
+const validateSingleRequestSchema =
+  validatorProjection.validateSingleRequestSchema ?? validatorProjection.default?.validateSingleRequestSchema;
+const validateBatchRequestSchema =
+  validatorProjection.validateBatchRequestSchema ?? validatorProjection.default?.validateBatchRequestSchema;
+
+console.log(validateSingleRequestSchema.parse(validateSingleRequest).capsule.metadata.capsule_id);
+console.log(validateBatchRequestSchema.parse(validateBatchRequest).capsules.length);
+```
+
+These recipes prove that the installed package surface covers the published single, batch, and fix validator request families at runtime instead of leaving request-side package consumers with only TypeScript builders or raw Ajv validation.
 
 ## Minimal package-level Ajv schema example
 

@@ -68,9 +68,14 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
 - [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts)
 - [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts)
+- [`../examples/client/zod-parse-validate-request.ts`](../examples/client/zod-parse-validate-request.ts)
+- [`../examples/client/zod-parse-validate-batch-request.ts`](../examples/client/zod-parse-validate-batch-request.ts)
+- [`../examples/client/zod-parse-validate-fix-request.ts`](../examples/client/zod-parse-validate-fix-request.ts)
 - [`../examples/client/ts-build-validate-batch-request.ts`](../examples/client/ts-build-validate-batch-request.ts)
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
 - [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts)
+- [`../examples/client/cjs-package-validate-request.cjs`](../examples/client/cjs-package-validate-request.cjs)
+- [`../examples/client/esm-package-validate-request.mjs`](../examples/client/esm-package-validate-request.mjs)
 - [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs)
 - [`../examples/client/esm-package-support-responses.mjs`](../examples/client/esm-package-support-responses.mjs)
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
@@ -85,8 +90,9 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 - [`../examples/client/zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
 
 These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
-If you want repo-relative source-level request construction or response parsing instead of package imports, start with the TypeScript batch/fix request recipes plus the Zod batch/fix and support-response recipes under [`../examples/client/`](../examples/client/).
+If you want repo-relative source-level request construction or response parsing instead of package imports, start with the TypeScript request builders plus the Zod single/batch/fix request parsers under [`../examples/client/`](../examples/client/).
 If you need installed-package typed request construction for the published single, batch, and fix validator request families, start with [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts), [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts), and [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts).
+If you need installed-package runtime parsing for those published request samples instead of TypeScript-only builders, start with [`../examples/client/cjs-package-validate-request.cjs`](../examples/client/cjs-package-validate-request.cjs) and [`../examples/client/esm-package-validate-request.mjs`](../examples/client/esm-package-validate-request.mjs).
 If you need typed repo-relative handling for the published pass, fail, batch, and fix response families, start with [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts).
 If you need bounded generic, unauthorized, conflict, or rate-limit envelope handling, start with the new error-response recipes under [`../examples/client/`](../examples/client/).
 If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).

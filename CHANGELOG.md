@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- added source-level Zod request-family parsers plus installed-package CommonJS and ESM request-family parsers for the published single, batch, and fix validator request samples, so request-side projection consumers no longer depend only on TypeScript builders or raw Ajv validation
 - expanded the installed-package TypeScript request path to cover the published single, batch, and fix validator request families, so package consumers no longer stop at one request builder while source-level recipes cover the broader envelope set
 - expanded the source-level and installed-package validator response path to cover the full published pass, fail, batch, and fix response families, so typed/package consumers no longer stop at request builders, pass-only parsing, or Python-only multi-response handling
 - added source-level and installed-package TypeScript/Zod/CommonJS/ESM recipes for the bounded shared generic, unauthorized, conflict, and rate-limit validator error-envelope family, so non-2xx consumers no longer have to infer those public responses from raw JSON samples or Python-only examples

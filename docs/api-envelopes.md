@@ -16,6 +16,9 @@ If you need source-level consumer artifacts instead of raw JSON Schema alone, al
 - [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
 - [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts)
 - [`../examples/client/zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
+- [`../examples/client/zod-parse-validate-request.ts`](../examples/client/zod-parse-validate-request.ts)
+- [`../examples/client/zod-parse-validate-batch-request.ts`](../examples/client/zod-parse-validate-batch-request.ts)
+- [`../examples/client/zod-parse-validate-fix-request.ts`](../examples/client/zod-parse-validate-fix-request.ts)
 - [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts)
 - [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
 - [`../examples/client/zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
@@ -26,6 +29,8 @@ If you need installed-package consumer artifacts for the bounded shared error-en
 - [`../examples/client/cjs-package-error-responses.cjs`](../examples/client/cjs-package-error-responses.cjs)
 - [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs)
 - [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
+- [`../examples/client/cjs-package-validate-request.cjs`](../examples/client/cjs-package-validate-request.cjs)
+- [`../examples/client/esm-package-validate-request.mjs`](../examples/client/esm-package-validate-request.mjs)
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
 - [`../examples/client/ts-package-validate-responses.ts`](../examples/client/ts-package-validate-responses.ts)
@@ -91,4 +96,4 @@ OpenAPI alone tells tooling what shapes exist. Example envelopes show human read
 
 The dedicated API envelope schema keeps these example files machine-readable without forcing consumers to infer shape rules from prose alone.
 
-The published validator API projections strengthen that path further by giving TypeScript and Zod consumers a public-safe source-level envelope layer for `validate`, response-family, support, and bounded shared error envelopes while staying subordinate to the stronger JSON Schema and OpenAPI surfaces.
+The published validator API projections strengthen that path further by giving TypeScript and Zod consumers a public-safe source-level envelope layer for `validate` request families, response families, support, and bounded shared error envelopes while staying subordinate to the stronger JSON Schema and OpenAPI surfaces.

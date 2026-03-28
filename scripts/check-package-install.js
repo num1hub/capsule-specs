@@ -33,9 +33,11 @@ const workspaceRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'capsule-specs-insta
 const packedFilePath = path.join(workspaceRoot, 'tarball.json');
 let tarballPath = null;
 const cjsErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-error-responses.cjs');
+const cjsValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-request.cjs');
 const cjsSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-support-responses.cjs');
 const cjsValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-response.cjs');
 const esmErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-error-responses.mjs');
+const esmValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-validate-request.mjs');
 const esmSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-support-responses.mjs');
 const esmValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-validate-response.mjs');
 const typescriptErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-error-responses.ts');
@@ -110,6 +112,12 @@ try {
   fs.writeFileSync(path.join(cjsProject, 'error-consumer.cjs'), fs.readFileSync(cjsErrorRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['error-consumer.cjs'], cjsProject);
   fs.writeFileSync(
+    path.join(cjsProject, 'validate-request-consumer.cjs'),
+    fs.readFileSync(cjsValidateRequestRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['validate-request-consumer.cjs'], cjsProject);
+  fs.writeFileSync(
     path.join(cjsProject, 'validate-response-consumer.cjs'),
     fs.readFileSync(cjsValidateResponseRecipePath, 'utf8'),
     'utf8'
@@ -163,6 +171,12 @@ try {
   run(process.execPath, ['consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'error-consumer.mjs'), fs.readFileSync(esmErrorRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['error-consumer.mjs'], esmProject);
+  fs.writeFileSync(
+    path.join(esmProject, 'validate-request-consumer.mjs'),
+    fs.readFileSync(esmValidateRequestRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['validate-request-consumer.mjs'], esmProject);
   fs.writeFileSync(
     path.join(esmProject, 'validate-response-consumer.mjs'),
     fs.readFileSync(esmValidateResponseRecipePath, 'utf8'),

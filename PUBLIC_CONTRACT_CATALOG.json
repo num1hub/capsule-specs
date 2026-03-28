@@ -976,6 +976,21 @@
       ]
     },
     {
+      "id": "examples.client.cjs-package-validate-request",
+      "path": "examples/client/cjs-package-validate-request.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.cjs-package-validate-response",
       "path": "examples/client/cjs-package-validate-response.cjs",
       "kind": "client-recipe",
@@ -1221,6 +1236,21 @@
         "npm run check:package-surface",
         "npm run check:package-install",
         "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-validate-request",
+      "path": "examples/client/esm-package-validate-request.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:package-install",
         "npm run check:catalog"
       ]
     },
@@ -1748,6 +1778,21 @@
       ]
     },
     {
+      "id": "examples.client.zod-parse-validate-batch-request",
+      "path": "examples/client/zod-parse-validate-batch-request.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.zod-parse-validate-batch-response",
       "path": "examples/client/zod-parse-validate-batch-response.ts",
       "kind": "client-recipe",
@@ -1764,6 +1809,21 @@
       ]
     },
     {
+      "id": "examples.client.zod-parse-validate-fix-request",
+      "path": "examples/client/zod-parse-validate-fix-request.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.zod-parse-validate-fix-response",
       "path": "examples/client/zod-parse-validate-fix-response.ts",
       "kind": "client-recipe",
@@ -1777,6 +1837,21 @@
         "npm run check:client-recipes",
         "npm run check:catalog",
         "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "examples.client.zod-parse-validate-request",
+      "path": "examples/client/zod-parse-validate-request.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
       ]
     },
     {

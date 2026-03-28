@@ -161,6 +161,12 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal source-level TypeScript recipe for constructing a validator batch request envelope.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator fix request envelope.
+- [`../examples/client/zod-parse-validate-request.ts`](../examples/client/zod-parse-validate-request.ts)
+  Minimal source-level Zod recipe for parsing the published single validator request envelope.
+- [`../examples/client/zod-parse-validate-batch-request.ts`](../examples/client/zod-parse-validate-batch-request.ts)
+  Minimal source-level Zod recipe for parsing the published batch validator request envelope.
+- [`../examples/client/zod-parse-validate-fix-request.ts`](../examples/client/zod-parse-validate-fix-request.ts)
+  Minimal source-level Zod recipe for parsing the published fix validator request envelope.
 - [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts)
   Minimal source-level TypeScript recipe for typing the published pass, fail, batch, and fix validator response families.
 - [`../examples/client/ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts)
@@ -181,6 +187,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal package-consumer recipe for the built capsule projection exports.
 - [`../examples/client/cjs-package-error-responses.cjs`](../examples/client/cjs-package-error-responses.cjs)
   Minimal CommonJS package-consumer recipe for parsing the published generic, unauthorized, conflict, and rate-limit error envelopes from installed package exports.
+- [`../examples/client/cjs-package-validate-request.cjs`](../examples/client/cjs-package-validate-request.cjs)
+  Minimal CommonJS package-consumer recipe for parsing the published single, batch, and fix validator request families from installed package exports.
 - [`../examples/client/cjs-package-support-responses.cjs`](../examples/client/cjs-package-support-responses.cjs)
   Minimal CommonJS package-consumer recipe for parsing the published `gates` and `stats` support responses from installed package exports.
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
@@ -189,6 +197,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal ESM package-consumer recipe for the built capsule projection exports.
 - [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs)
   Minimal ESM package-consumer recipe for parsing the published generic, unauthorized, conflict, and rate-limit error envelopes from installed package exports.
+- [`../examples/client/esm-package-validate-request.mjs`](../examples/client/esm-package-validate-request.mjs)
+  Minimal ESM package-consumer recipe for parsing the published single, batch, and fix validator request families from installed package exports.
 - [`../examples/client/esm-package-support-responses.mjs`](../examples/client/esm-package-support-responses.mjs)
   Minimal ESM package-consumer recipe for parsing the published `gates` and `stats` support responses from installed package exports.
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
@@ -256,9 +266,9 @@ The API envelope schema and its dedicated verification script strengthen that cl
 
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
-The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
+The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
-The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering installed-package TypeScript request typing for the published single, batch, and fix families plus the full published validate-response family instead of a single request builder and positive-pass sample only.
+The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering installed-package request parsing and TypeScript request typing for the published single, batch, and fix families plus the full published validate-response family instead of request-side raw Ajv/typing-only proofs and a positive-pass sample only.
 
 The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, and validator option flags without forcing them to parse the larger schemas or prose docs first.
 
@@ -382,13 +392,18 @@ When the public surface changes, these files should move together:
 - `projections/zod/capsule.ts`
 - `projections/zod/validator-api.ts`
 - `examples/client/cjs-package-capsule-summary.cjs`
+- `examples/client/cjs-package-validate-request.cjs`
 - `examples/client/cjs-package-validate-response.cjs`
 - `examples/client/esm-package-capsule-summary.mjs`
+- `examples/client/esm-package-validate-request.mjs`
 - `examples/client/esm-package-validate-response.mjs`
 - `examples/client/cjs-package-contract-reference.cjs`
 - `examples/client/ts-package-contract-reference.ts`
 - `examples/client/python-contract-reference.py`
 - `examples/client/python-recompute-integrity-seal.py`
+- `examples/client/zod-parse-validate-request.ts`
+- `examples/client/zod-parse-validate-batch-request.ts`
+- `examples/client/zod-parse-validate-fix-request.ts`
 - `examples/client/ts-package-validate-request.ts`
 - `examples/client/ts-package-validate-batch-request.ts`
 - `examples/client/ts-package-validate-fix-request.ts`
