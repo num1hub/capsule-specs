@@ -110,6 +110,8 @@ console.log(contractConstants.validator.integrity_payload_root_keys);
 console.log(contractConstants.validator.integrity_canonicalization);
 ```
 
+Copyable package-consumer versions of that flow also live at [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs), [`../examples/client/esm-package-contract-reference.mjs`](../examples/client/esm-package-contract-reference.mjs), [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts), and [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py).
+
 ## Minimal package-level integrity example
 
 A copyable version of this example also lives at [`../examples/client/esm-package-recompute-integrity-seal.mjs`](../examples/client/esm-package-recompute-integrity-seal.mjs).
@@ -302,9 +304,9 @@ These recipes prove that the installed package surface does not stop at one type
 
 ## Minimal package-level live-client example
 
-A copyable version of this example also lives at [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts).
+A copyable ESM version of this example lives at [`../examples/client/esm-package-live-validator-client.mjs`](../examples/client/esm-package-live-validator-client.mjs). A typed TypeScript version lives at [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts).
 
-That recipe proves the installed package surface is usable not only for static typing and sample parsing, but also for a typed `fetch` client that covers the published `validate`, `batch`, `fix`, `gates`, and `stats` routes plus the bounded shared `SimpleErrorResponse` envelope.
+Those recipes prove the installed package surface is usable not only for static typing and sample parsing, but also for live `fetch` clients that cover the published `validate`, `batch`, `fix`, `gates`, and `stats` routes, including the bounded `limit` query path on `GET /api/validate/stats`, plus the shared `SimpleErrorResponse` envelope.
 
 ## Important boundaries
 
@@ -313,7 +315,7 @@ That recipe proves the installed package surface is usable not only for static t
 - The TypeScript package recipe is typechecked through the repo-local self-package path map and rechecked from a fresh installed tarball.
 - The TypeScript package request recipes prove installed-package typing for the single, batch, and fix validator request families, not live validator execution.
 - The TypeScript package request-parser recipe proves installed-package typing for the published single, batch, and fix request samples, not live validator execution.
-- The TypeScript package live-client recipe proves installed-package route typing and request/response shaping for the published validator routes, not hosted-service availability.
+- The package live-client recipes prove installed-package route typing or route-behavior-backed request/response shaping for the published validator routes, not hosted-service availability.
 - The package surface does not turn this repository into a complete SDK.
 - The package surface is compatible with raw-schema validators, but those validators still only prove structural contract conformance, not live gate semantics.
 - The package support-response recipes prove installed-package parsing and typing for the published `gates` and `stats` payloads, not live-route availability or hosted-service behavior.

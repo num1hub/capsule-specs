@@ -37,6 +37,8 @@ const cjsValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', '
 const cjsSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-support-responses.cjs');
 const cjsValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-response.cjs');
 const esmErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-error-responses.mjs');
+const esmReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-contract-reference.mjs');
+const esmLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-live-validator-client.mjs');
 const esmValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-validate-request.mjs');
 const esmSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-support-responses.mjs');
 const esmValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-validate-response.mjs');
@@ -171,8 +173,12 @@ try {
     'utf8'
   );
   run(process.execPath, ['consumer.mjs'], esmProject);
+  fs.writeFileSync(path.join(esmProject, 'reference-consumer.mjs'), fs.readFileSync(esmReferenceRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['reference-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'error-consumer.mjs'), fs.readFileSync(esmErrorRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['error-consumer.mjs'], esmProject);
+  fs.writeFileSync(path.join(esmProject, 'live-client-consumer.mjs'), fs.readFileSync(esmLiveClientRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['live-client-consumer.mjs'], esmProject);
   fs.writeFileSync(
     path.join(esmProject, 'validate-request-consumer.mjs'),
     fs.readFileSync(esmValidateRequestRecipePath, 'utf8'),
@@ -265,7 +271,7 @@ try {
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, validator request, validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

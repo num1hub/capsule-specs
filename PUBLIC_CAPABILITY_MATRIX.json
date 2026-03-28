@@ -85,7 +85,7 @@
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, compact machine-readable route-reference JSON, shared TypeScript validator-route constants plus route-behavior metadata, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, repo-relative and installed-package TypeScript live-client bridges for all published validator routes, typed validate-response readers, bounded shared error-envelope readers, and installed-package request plus validate/support/error-response readers without depending on private runtime code.",
+      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, compact machine-readable route-reference JSON, shared TypeScript validator-route constants plus route-behavior metadata, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package ESM and TypeScript live-client bridges for all published validator routes, typed validate-response readers, bounded shared error-envelope readers, and installed-package request plus validate/support/error-response readers without depending on private runtime code.",
       "strongest_surfaces": [
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -146,7 +146,9 @@
         "examples/client/ts-package-support-responses.ts",
         "examples/client/ts-package-error-responses.ts",
         "examples/client/ts-live-validator-client.ts",
-        "examples/client/ts-package-live-validator-client.ts"
+        "examples/client/ts-package-live-validator-client.ts",
+        "examples/client/esm-package-contract-reference.mjs",
+        "examples/client/esm-package-live-validator-client.mjs"
       ],
       "verify_commands": [
         "npm run check:api-examples",
@@ -182,7 +184,8 @@
         "examples/client/ts-package-contract-reference.ts",
         "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
         "scripts/check-reference-pack.js",
-        "examples/client/ts-route-behavior-reference.ts"
+        "examples/client/ts-route-behavior-reference.ts",
+        "examples/client/esm-package-contract-reference.mjs"
       ],
       "verify_commands": [
         "npm run check:reference-pack",
@@ -262,7 +265,7 @@
       "id": "consume-source-level-type-projections",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, shared validator-route constants and route-behavior metadata, Zod parsing artifacts, and package exports that are verified from fresh consumer installs for single, batch, and fix validate request flows, source-level and installed-package typed request-sample handling, repo-relative and installed-package TypeScript live-client bridges for all published validator routes, full validate response families, bounded shared error envelopes, and support-response payloads instead of reverse-engineering shape from prose alone.",
+      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, shared validator-route constants and route-behavior metadata, Zod parsing artifacts, and package exports that are verified from fresh consumer installs for single, batch, and fix validate request flows, source-level and installed-package typed request-sample handling, repo-relative TypeScript and installed-package ESM/TypeScript live-client bridges for all published validator routes, full validate response families, bounded shared error envelopes, and support-response payloads instead of reverse-engineering shape from prose alone.",
       "strongest_surfaces": [
         "docs/type-projections.md",
         "docs/npm-consumption.md",
@@ -312,7 +315,8 @@
         "examples/client/ts-package-validate-responses.ts",
         "examples/client/ts-route-behavior-reference.ts",
         "examples/client/ts-live-validator-client.ts",
-        "examples/client/ts-package-live-validator-client.ts"
+        "examples/client/ts-package-live-validator-client.ts",
+        "examples/client/esm-package-live-validator-client.mjs"
       ],
       "verify_commands": [
         "npm run check:type-projections",

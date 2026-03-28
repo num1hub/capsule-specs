@@ -205,8 +205,12 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal CommonJS package-consumer recipe for parsing the published pass, fail, batch, and fix validator response families from installed package exports.
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
   Minimal ESM package-consumer recipe for the built capsule projection exports.
+- [`../examples/client/esm-package-contract-reference.mjs`](../examples/client/esm-package-contract-reference.mjs)
+  Minimal ESM package-consumer recipe for compact contract-reference exports plus the shared validator-route and envelope-family projection helpers.
 - [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs)
   Minimal ESM package-consumer recipe for parsing the published generic, unauthorized, conflict, and rate-limit error envelopes from installed package exports.
+- [`../examples/client/esm-package-live-validator-client.mjs`](../examples/client/esm-package-live-validator-client.mjs)
+  Minimal ESM package-consumer recipe for a `fetch` client that covers the published validator route family through installed package exports, including the bounded `stats` query path.
 - [`../examples/client/esm-package-validate-request.mjs`](../examples/client/esm-package-validate-request.mjs)
   Minimal ESM package-consumer recipe for parsing the published single, batch, and fix validator request families from installed package exports.
 - [`../examples/client/esm-package-support-responses.mjs`](../examples/client/esm-package-support-responses.mjs)
@@ -282,11 +286,11 @@ The API envelope schema and its dedicated verification script strengthen that cl
 
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
-The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, source-level and installed-package TypeScript live-client bridges for the published validator route family, sample-driven Zod parsing for the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
+The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, source-level and installed-package TypeScript live-client bridges plus an installed-package ESM live-client bridge for the published validator route family, sample-driven Zod parsing for the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering installed-package request parsing and TypeScript request typing for the published single, batch, and fix families plus the full published validate-response family instead of request-side raw Ajv/typing-only proofs and a positive-pass sample only.
 
-The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, validator option flags, and published validator route behavior summaries without forcing them to parse the larger schemas or prose docs first.
+The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, validator option flags, and published validator route behavior summaries without forcing them to parse the larger schemas or prose docs first, now with copyable CommonJS, ESM, TypeScript, and Python consumer paths.
 
 The schema-bundle layer strengthens that path further by giving code generators, Ajv consumers, and polyglot tooling a single-file schema path that stays subordinate to the stronger raw schema files instead of forcing every downstream consumer to wire the same multi-file `$ref` graph manually.
 
@@ -414,7 +418,9 @@ When the public surface changes, these files should move together:
 - `examples/client/esm-package-validate-request.mjs`
 - `examples/client/esm-package-validate-response.mjs`
 - `examples/client/cjs-package-contract-reference.cjs`
+- `examples/client/esm-package-contract-reference.mjs`
 - `examples/client/ts-package-contract-reference.ts`
+- `examples/client/esm-package-live-validator-client.mjs`
 - `examples/client/python-contract-reference.py`
 - `examples/client/python-recompute-integrity-seal.py`
 - `examples/client/zod-parse-validate-request.ts`

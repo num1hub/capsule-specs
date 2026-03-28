@@ -85,7 +85,9 @@ const packageRecipeFiles = [
   'cjs-package-support-responses.cjs',
   'cjs-package-validate-response.cjs',
   'esm-package-capsule-summary.mjs',
+  'esm-package-contract-reference.mjs',
   'esm-package-error-responses.mjs',
+  'esm-package-live-validator-client.mjs',
   'esm-package-validate-request.mjs',
   'esm-package-support-responses.mjs',
   'esm-package-validate-response.mjs'
@@ -480,12 +482,29 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/zod',
     '@num1hub/capsule-specs/examples/example-note.capsule.json'
   ],
+  'esm-package-contract-reference.mjs': [
+    '@num1hub/capsule-specs/references/contract-constants.json',
+    '@num1hub/capsule-specs/references/validation-gates.json',
+    '@num1hub/capsule-specs/references/validator-envelope-families.json',
+    '@num1hub/capsule-specs/references/validator-routes.json',
+    '@num1hub/capsule-specs/typescript/validator-envelope-families',
+    '@num1hub/capsule-specs/typescript/validator-routes'
+  ],
   'esm-package-error-responses.mjs': [
     '@num1hub/capsule-specs/zod/validator-api',
     '@num1hub/capsule-specs/examples/api/error-response.sample.json',
     '@num1hub/capsule-specs/examples/api/unauthorized-response.sample.json',
     '@num1hub/capsule-specs/examples/api/conflict-response.sample.json',
     '@num1hub/capsule-specs/examples/api/rate-limit-response.sample.json'
+  ],
+  'esm-package-live-validator-client.mjs': [
+    '@num1hub/capsule-specs/typescript/validator-routes',
+    '@num1hub/capsule-specs/examples/api/validate-request.single.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.batch.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.fix.json',
+    'publishedValidatorRoutes',
+    'publishedValidatorRouteDefinitions',
+    'fetch('
   ],
   'esm-package-validate-request.mjs': [
     '@num1hub/capsule-specs/zod/validator-api',
@@ -557,6 +576,10 @@ for (const [fileName, imports] of Object.entries(expectedPackageImports)) {
   const content = fs.readFileSync(filePath, 'utf8');
   for (const importPath of imports) {
     assert(content.includes(importPath), `${fileName} must import ${importPath}`);
+  }
+  if (fileName === 'esm-package-live-validator-client.mjs') {
+    assert(!content.includes('${baseUrl}/api/validate'), `${fileName} must rely on shared route constants instead of copied route strings`);
+    assert(content.includes('limit'), `${fileName} must expose the published stats limit query path`);
   }
   const result = spawnSync(process.execPath, ['--check', filePath], { encoding: 'utf8' });
   assert(result.status === 0, `${fileName} must be syntactically valid: ${result.stderr || result.stdout}`);

@@ -97,13 +97,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 360,
+    "total_files": 362,
     "markdown_files": 100,
     "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 75,
+    "client_recipe_files": 77,
     "workflow_files": 1,
     "issue_templates": 4
   },

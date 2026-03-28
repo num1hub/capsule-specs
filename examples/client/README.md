@@ -84,7 +84,9 @@ This directory contains minimal consumer-oriented examples for the published val
 - `cjs-package-support-responses.cjs`
 - `cjs-package-validate-response.cjs`
 - `esm-package-capsule-summary.mjs`
+- `esm-package-contract-reference.mjs`
 - `esm-package-error-responses.mjs`
+- `esm-package-live-validator-client.mjs`
 - `esm-package-validate-request.mjs`
 - `esm-package-support-responses.mjs`
 - `esm-package-validate-response.mjs`
@@ -106,7 +108,7 @@ This directory contains minimal consumer-oriented examples for the published val
 - The TypeScript recipes demonstrate source-level consumer usage of the published projection layer under `projections/`.
 - The source-level TypeScript and Zod recipes now cover single, batch, and fix `validate` envelopes, request-family building plus sample-driven typed/parsing paths, a compact typed envelope-family reference layer, a compact typed route-behavior reference layer, a typed live-client bridge for all published validator routes backed by shared route constants, the full published pass/fail/batch/fix response family, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes.
 - The package recipes demonstrate CommonJS, ESM, and TypeScript consumption after `npm run build:projections` or from a packed artifact installed into a fresh project.
-- The package recipes also cover runtime request-family parsing, TypeScript typed reading plus typed single/batch/fix request construction, a typed installed-package live-client bridge for all published validator routes backed by shared route constants, validator pass/fail/batch/fix response families, compact JSON contract references including the validator envelope-family map, validator support responses, shared error envelopes, and raw capsule assets in addition to projection exports.
+- The package recipes also cover runtime request-family parsing, TypeScript typed reading plus typed single/batch/fix request construction, installed-package ESM and TypeScript live-client bridges for all published validator routes backed by shared route constants, validator pass/fail/batch/fix response families, compact JSON contract references including the validator envelope-family map and route-behavior summaries, validator support responses, shared error envelopes, and raw capsule assets in addition to projection exports.
 - The raw-schema recipes demonstrate direct Ajv validation against published schema files, the archive-bundle portability schema, single-file schema bundles, package-exported schema assets, and intentionally invalid archive, capsule, and validator-envelope fixtures.
 - The integrity recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload and how to repair the intentional `G16` teaching example without private runtime helpers.
 - The shell, Node, and Python live-route recipes together now cover all published validator routes: `validate`, `batch`, `fix`, `gates`, and `stats`.
