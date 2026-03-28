@@ -33,7 +33,7 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
   Minimal TypeScript recipe for building a validator fix request envelope from the published API projection.
 - [`../examples/client/ts-live-validator-client.ts`](../examples/client/ts-live-validator-client.ts)
-  Minimal TypeScript recipe for a typed `fetch` client that covers the published validator route family from repo-relative projection imports.
+  Minimal TypeScript recipe for a typed `fetch` client that covers the published validator route family from repo-relative projection imports, including the bounded `stats` query path.
 - [`../examples/client/ts-envelope-family-reference.ts`](../examples/client/ts-envelope-family-reference.ts)
   Minimal TypeScript recipe for consuming the compact validator envelope-family map together with the shared projection constants.
 - [`../examples/client/ts-route-behavior-reference.ts`](../examples/client/ts-route-behavior-reference.ts)
@@ -79,7 +79,7 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
   Minimal TypeScript package-consumer recipe for typed single-request construction through the published capsule and validator API package subpaths.
 - [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
-  Minimal TypeScript package-consumer recipe for a typed `fetch` client that covers the published validator route family through installed package exports.
+  Minimal TypeScript package-consumer recipe for a typed `fetch` client that covers the published validator route family through installed package exports, including the bounded `stats` query path.
 - [`../examples/client/ts-package-parse-validate-requests.ts`](../examples/client/ts-package-parse-validate-requests.ts)
   Minimal TypeScript package-consumer recipe for typing the published single, batch, and fix validator request samples through installed package exports.
 - [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts)

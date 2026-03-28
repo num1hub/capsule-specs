@@ -47,7 +47,7 @@ The first recipe reads the compact contract-reference JSON exports.
 That includes the compact validator envelope-family map in addition to the root constants, gate map, route map, and curated confidence-vector capsule.
 The second recipe recomputes `integrity_sha3_512` over the published four-root payload, verifies the positive note example, and computes the repaired hash for the intentional `G16` teaching example.
 The validator-envelope request recipes load the published `validate`, `batch`, and `fix` request examples, print dry-run summaries by default, and can send those envelopes to a live validator when `N1HUB_BASE_URL` and `N1HUB_TOKEN` are set.
-The support-route recipes read the published `gates` and `stats` samples by default and switch to live HTTP requests against the same routes when `N1HUB_BASE_URL` and `N1HUB_TOKEN` are set.
+The support-route recipes read the published `gates` and `stats` samples by default and switch to live HTTP requests against the same routes when `N1HUB_BASE_URL` and `N1HUB_TOKEN` are set. `python-get-stats.py` also accepts `N1HUB_STATS_LIMIT` for the bounded published `GET /api/validate/stats?limit=...` path.
 The response-parsing recipes load the published pass/fail/batch/fix and support-response examples so Python consumers can inspect bounded response families without guessing field layout from prose alone.
 
 ## Packed-artifact workflow
@@ -79,7 +79,7 @@ Those scripts resolve the package root from their own location, so they still wo
 - Python consumers can read `references/contract-constants.json`, `references/validation-gates.json`, and `references/validator-envelope-families.json` directly.
 - Python consumers can discover the published validator request families, response families, and shared definitions without scraping schema defs by hand.
 - Python consumers can load the published validator-envelope request examples for `POST /api/validate`, `POST /api/validate/batch`, and `POST /api/validate/fix` without inferring request shape from prose alone.
-- Python consumers can call the published `GET /api/validate/gates` and `GET /api/validate/stats` routes or inspect their sample payloads from the same raw-JSON path.
+- Python consumers can call the published `GET /api/validate/gates` and `GET /api/validate/stats` routes, including the bounded optional `limit` query path on `stats`, or inspect their sample payloads from the same raw-JSON path.
 - Python consumers can inspect the published pass/fail/batch/fix, gates, stats, unauthorized, conflict, generic-error, and rate-limit response families directly from raw JSON assets.
 - Python consumers can recompute published integrity seals without calling private runtime helpers.
 - The packed artifact includes enough public JSON and example material for cross-language consumption.

@@ -162,7 +162,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator fix request envelope.
 - [`../examples/client/ts-live-validator-client.ts`](../examples/client/ts-live-validator-client.ts)
-  Minimal source-level TypeScript recipe for a typed `fetch` client that covers the published validator route family from repo-relative projection imports.
+  Minimal source-level TypeScript recipe for a typed `fetch` client that covers the published validator route family from repo-relative projection imports, including the bounded `stats` query path.
 - [`../projections/typescript/validator-routes.ts`](../projections/typescript/validator-routes.ts)
   Shared TypeScript route constants and bounded route-behavior metadata for the published validator HTTP family, used by the typed live-client bridge and route-behavior reference recipes instead of copied route strings.
 - [`../examples/client/ts-route-behavior-reference.ts`](../examples/client/ts-route-behavior-reference.ts)
@@ -248,7 +248,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/python-get-gates.py`](../examples/client/python-get-gates.py)
   Minimal Python recipe for reading the published `GET /api/validate/gates` support route from sample data or a live validator.
 - [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)
-  Minimal Python recipe for reading the published `GET /api/validate/stats` support route from sample data or a live validator.
+  Minimal Python recipe for reading the published `GET /api/validate/stats` support route from sample data or a live validator, including the bounded `limit` query path.
 - [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
   Minimal Python recipe for parsing the published pass, fail, batch, and fix validator response families.
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
@@ -258,7 +258,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
   Minimal TypeScript package-consumer recipe for typed generic, unauthorized, conflict, and rate-limit error-envelope handling through installed package exports.
 - [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
-  Minimal TypeScript package-consumer recipe for a typed `fetch` client that covers the published validator route family through installed package exports.
+  Minimal TypeScript package-consumer recipe for a typed `fetch` client that covers the published validator route family through installed package exports, including the bounded `stats` query path.
 - [`../references/validator-routes.json`](../references/validator-routes.json)
   Compact machine-readable route map for the published validator HTTP family, including bearer-auth posture, bounded query-parameter metadata, and response-status mappings, kept aligned to OpenAPI and route docs through the reference-pack verifier.
 - [`../examples/client/ts-package-support-responses.ts`](../examples/client/ts-package-support-responses.ts)
@@ -280,13 +280,13 @@ The Markdown review surfaces are optimized for people. The JSON surfaces are opt
 
 The citation file, release-note config, and Dependabot config do not replace release evidence, but they make the public GitHub surface more usable as a maintained long-lived repository instead of a one-time export.
 
-The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable across the full published validator route set plus the installed-package support-response layer for `gates` and `stats` and the bounded shared error-envelope layer for generic, unauthorized, conflict, and rate-limit handling.
+The client recipes and trust-model docs do not replace release evidence, but they help reviewers understand whether the public surface is only documented or also realistically consumable across the full published validator route set, including the bounded `GET /api/validate/stats?limit=...` path, plus the installed-package support-response layer for `gates` and `stats` and the bounded shared error-envelope layer for generic, unauthorized, conflict, and rate-limit handling.
 
 The API envelope schema and its dedicated verification script strengthen that claim by keeping the public HTTP example layer machine-checkable.
 
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
-The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, source-level and installed-package TypeScript live-client bridges plus an installed-package ESM live-client bridge for the published validator route family, sample-driven Zod parsing for the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
+The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, source-level and installed-package TypeScript live-client bridges plus an installed-package ESM live-client bridge for the published validator route family including the bounded `stats` query path, sample-driven Zod parsing for the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering installed-package request parsing and TypeScript request typing for the published single, batch, and fix families plus the full published validate-response family instead of request-side raw Ajv/typing-only proofs and a positive-pass sample only.
 

@@ -17,17 +17,32 @@ route = "/api/validate/stats"
 sample = load_json("examples/api/stats-response.sample.json")
 base_url = os.environ.get("N1HUB_BASE_URL")
 token = os.environ.get("N1HUB_TOKEN")
+limit_raw = os.environ.get("N1HUB_STATS_LIMIT")
+
+limit = None
+if limit_raw is not None:
+    try:
+        limit = int(limit_raw)
+    except ValueError as exc:
+        raise ValueError("N1HUB_STATS_LIMIT must be a positive integer") from exc
+    if limit < 1:
+        raise ValueError("N1HUB_STATS_LIMIT must be a positive integer")
 
 summary = {
     "route": route,
     "sampleTotal": sample["total"],
     "samplePassRate": sample["passRate"],
     "sampleRecentCount": len(sample["recent"]),
+    "statsLimit": limit,
 }
 
 if base_url and token:
+    route_suffix = route
+    if limit is not None:
+        route_suffix = f"{route}?limit={limit}"
+
     http_request = request.Request(
-        f"{base_url.rstrip('/')}{route}",
+        f"{base_url.rstrip('/')}{route_suffix}",
         method="GET",
         headers={
             "Authorization": f"Bearer {token}",
@@ -41,6 +56,7 @@ if base_url and token:
             {
                 "mode": "live",
                 "httpStatus": response.status,
+                "requestUrl": f"{base_url.rstrip('/')}{route_suffix}",
                 "total": parsed.get("total"),
                 "passRate": parsed.get("passRate"),
                 "recentCount": len(parsed.get("recent", [])),
@@ -50,7 +66,7 @@ else:
     summary.update(
         {
             "mode": "dry-run",
-            "nextStep": "Set N1HUB_BASE_URL and N1HUB_TOKEN to request the published stats route from a live validator.",
+            "nextStep": "Set N1HUB_BASE_URL and N1HUB_TOKEN to request the published stats route from a live validator. Optionally set N1HUB_STATS_LIMIT for the bounded stats query path.",
         }
     )
 

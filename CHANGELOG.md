@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- expanded the shell, Node, Python, and source-level/package TypeScript live-client recipes to cover the bounded `GET /api/validate/stats?limit=...` query path, so public route metadata and real consumer examples no longer drift apart on the published stats route
 - added a compact validator-envelope family reference layer plus a shared TypeScript envelope-family projection, so tool-builders and package consumers no longer have to crawl schema defs or prose docs by hand to discover the published request, response, and shared-definition families
 - expanded the compact validator-route reference layer with auth posture, bounded query metadata, and response-status-to-envelope mappings, plus a source-level TypeScript route-behavior reference recipe, so SDK and client builders no longer have to scrape OpenAPI to recover the practical published route behavior
 - added installed-package ESM compact-reference and live-client recipes, so modern JavaScript consumers no longer have to fall back to CommonJS or TypeScript just to consume the compact reference pack or the published validator route family

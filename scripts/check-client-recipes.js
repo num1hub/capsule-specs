@@ -153,6 +153,10 @@ for (const fileName of shellFiles) {
   } else {
     assert(!content.includes('--data "@/home/n1/codex-workspace/examples/api/'), `${fileName} must not send a request body`);
   }
+  if (fileName === 'curl-get-stats.sh') {
+    assert(content.includes('N1HUB_STATS_LIMIT'), `${fileName} must expose the published stats limit query path`);
+    assert(content.includes('limit='), `${fileName} must render the published stats limit query parameter`);
+  }
 }
 
 const expectedNodeRoutes = {
@@ -169,6 +173,10 @@ for (const [fileName, route] of Object.entries(expectedNodeRoutes)) {
   assert(content.includes('N1HUB_BASE_URL'), `${fileName} must require N1HUB_BASE_URL`);
   assert(content.includes('N1HUB_TOKEN'), `${fileName} must require N1HUB_TOKEN`);
   assert(content.includes(route), `${fileName} must target ${route}`);
+  if (fileName === 'node-get-stats.mjs') {
+    assert(content.includes('N1HUB_STATS_LIMIT'), `${fileName} must expose the published stats limit query path`);
+    assert(content.includes("searchParams.set('limit'"), `${fileName} must set the published stats limit query parameter`);
+  }
   const result = spawnSync(process.execPath, ['--check', filePath], { encoding: 'utf8' });
   assert(result.status === 0, `${fileName} must be syntactically valid: ${result.stderr || result.stdout}`);
 }
@@ -210,6 +218,9 @@ const expectedTypeLiveRouteReferences = {
     '../api/validate-request.batch.json',
     '../api/validate-request.fix.json',
     'publishedValidatorRoutes',
+    'publishedValidatorRouteDefinitions',
+    'buildStatsUrl',
+    'limit',
     'fetch('
   ]
 };
@@ -395,6 +406,7 @@ const expectedPythonRecipeReferences = {
     'examples/api/stats-response.sample.json',
     'N1HUB_BASE_URL',
     'N1HUB_TOKEN',
+    'N1HUB_STATS_LIMIT',
     '/api/validate/stats',
     'urllib'
   ],
@@ -549,6 +561,9 @@ const expectedPackageTypeImports = {
     '@num1hub/capsule-specs/examples/api/validate-request.batch.json',
     '@num1hub/capsule-specs/examples/api/validate-request.fix.json',
     'publishedValidatorRoutes',
+    'publishedValidatorRouteDefinitions',
+    'buildStatsUrl',
+    'limit',
     'fetch('
   ],
   'ts-package-support-responses.ts': [
@@ -592,6 +607,7 @@ for (const [fileName, imports] of Object.entries(expectedPackageTypeImports)) {
   }
   if (fileName === 'ts-package-live-validator-client.ts') {
     assert(!content.includes('${baseUrl}/api/validate'), `${fileName} must rely on shared route constants instead of copied route strings`);
+    assert(content.includes('limit'), `${fileName} must expose the published stats limit query path`);
   }
 }
 

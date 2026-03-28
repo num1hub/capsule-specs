@@ -29,6 +29,7 @@ If you need the same route family as compact machine-readable data, use [`../ref
 ## `GET /api/validate/stats`
 
 - contract: [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
+- bounded query parameter: optional `limit` integer with minimum `1`
 - response example: [`../examples/api/stats-response.sample.json`](../examples/api/stats-response.sample.json)
 - live client recipes: [`../examples/client/curl-get-stats.sh`](../examples/client/curl-get-stats.sh), [`../examples/client/node-get-stats.mjs`](../examples/client/node-get-stats.mjs), [`../examples/client/python-get-stats.py`](../examples/client/python-get-stats.py)
 
