@@ -8,10 +8,14 @@ Start with [`../docs/schema-family-reference.md`](../docs/schema-family-referenc
 
 - `capsule-schema.json`
   Public JSON Schema for the five-element outer capsule structure.
+- `capsule-schema.bundle.json`
+  Single-file bundle variant of the public capsule schema for consumers who want one import instead of a multi-file `$ref` graph.
 - `neuro-concentrate.schema.json`
   Public JSON Schema for the semantic summary layer.
 - `validator-api-envelopes.schema.json`
   JSON Schema bundle for validator request and response envelopes published under `examples/api/`.
+- `validator-api-envelopes.bundle.json`
+  Single-file bundle variant of the validator request and response envelope schema.
 - `archive-bundle.schema.json`
   JSON Schema for the public archive-bundle portability contract.
 
@@ -88,4 +92,5 @@ Start with [`../docs/schema-family-reference.md`](../docs/schema-family-referenc
 
 - These schemas are projection artifacts aligned to the live validator surface.
 - The live validator remains the stronger source of truth for edge-case semantics and admission behavior.
+- If you want single-file schema artifacts for code generation, package consumption, or lower-friction Ajv wiring, start with [`../docs/schema-bundles.md`](../docs/schema-bundles.md).
 - If you need source-level consumer artifacts rather than raw JSON Schema alone, start with [`../docs/type-projections.md`](../docs/type-projections.md) and the published files under [`../projections/`](../projections/).

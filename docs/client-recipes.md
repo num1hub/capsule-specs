@@ -47,13 +47,15 @@ If you want direct structural validation against the published schemas, inspect:
 
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
+- [`../examples/client/ajv-validate-schema-bundles.mjs`](../examples/client/ajv-validate-schema-bundles.mjs)
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/ajv-reject-invalid-validator-envelopes.mjs)
+- [`schema-bundles.md`](schema-bundles.md)
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
 - [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
 
-These recipes demonstrate how to validate public examples against the raw JSON Schema layer with Ajv, and how to confirm that intentionally invalid capsule and validator-envelope fixtures are rejected for the documented structural reasons, without relying on the projection layer or live validator API calls.
+These recipes demonstrate how to validate public examples against the raw JSON Schema layer with Ajv, how to consume the same contracts as single-file schema bundles, and how to confirm that intentionally invalid capsule and validator-envelope fixtures are rejected for the documented structural reasons, without relying on the projection layer or live validator API calls.
 
 ## Integrity recipes
 
@@ -84,6 +86,7 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
+- [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs)
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
@@ -91,7 +94,7 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
 - [`npm-consumption.md`](npm-consumption.md)
 
-These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports, positive raw-schema Ajv consumption, package-level rejection of intentionally invalid capsule and validator-envelope fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows. If you need the same public JSON artifacts from Python instead of Node imports, use the extracted-artifact path documented in [`python-consumption.md`](python-consumption.md).
+These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports, positive raw-schema Ajv consumption, bundled single-file schema consumption, package-level rejection of intentionally invalid capsule and validator-envelope fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows. If you need the same public JSON artifacts from Python instead of Node imports, use the extracted-artifact path documented in [`python-consumption.md`](python-consumption.md).
 
 ## Route mapping
 

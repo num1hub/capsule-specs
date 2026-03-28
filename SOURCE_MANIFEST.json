@@ -94,13 +94,6 @@
     "transformation_type": "copied",
     "notes": "Raw public law capsule."
   },
-  "capsules/capsule.foundation.capsuleos.relation-types.v1.json": {
-    "source_paths": [
-      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.relation-types.v1.json"
-    ],
-    "transformation_type": "copied",
-    "notes": "Raw public relation-types capsule."
-  },
   "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json": {
     "source_paths": [
       "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json"
@@ -108,12 +101,12 @@
     "transformation_type": "copied",
     "notes": "Raw public confidence-vector capsule."
   },
-  "capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json": {
+  "capsules/capsule.foundation.capsuleos.relation-types.v1.json": {
     "source_paths": [
-      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json"
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.relation-types.v1.json"
     ],
     "transformation_type": "copied",
-    "notes": "Raw public versioning-protocol capsule."
+    "notes": "Raw public relation-types capsule."
   },
   "capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json": {
     "source_paths": [
@@ -128,6 +121,13 @@
     ],
     "transformation_type": "copied",
     "notes": "Raw public subtype-hub capsule."
+  },
+  "capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json"
+    ],
+    "transformation_type": "copied",
+    "notes": "Raw public versioning-protocol capsule."
   },
   "capsules/README.md": {
     "source_paths": [],
@@ -855,6 +855,41 @@
     "transformation_type": "generated",
     "notes": "Recommended integration path across schema, examples, graph validation, and HTTP envelopes.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; integration guide synchronized with source-level type projections; integration guide synchronized with validator API source-level projections; package-export projection layer synchronized"
   },
+  "docs/integrity-recipes.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/5-element-law.md",
+      "/home/n1/codex-workspace/docs/16-gates.md",
+      "/home/n1/codex-workspace/docs/reference-pack.md",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to the public G16 sealing rule, integrity payload scope, and repo/package-level recomputation recipes."
+  },
+  "docs/invalid-api-envelope-examples.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/examples/api-invalid/README.md",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to intentionally schema-invalid validator-envelope fixtures and their structural rejection boundaries."
+  },
+  "docs/invalid-capsule-examples.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
+      "/home/n1/codex-workspace/examples/invalid/README.md",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to intentionally schema-invalid capsule fixtures and their structural rejection boundaries."
+  },
   "docs/limitations-register.md": {
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json",
@@ -892,6 +927,23 @@
     ],
     "transformation_type": "generated",
     "notes": "Human-readable guide to the bounded public maintainer workflow.; synchronized with audience paths surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces"
+  },
+  "docs/npm-consumption.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
+      "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-capsule-summary.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-validate-response.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/index.ts",
+      "/home/n1/codex-workspace/scripts/check-package-install.js",
+      "/home/n1/codex-workspace/projections/typescript/index.ts",
+      "/home/n1/codex-workspace/projections/zod/index.ts",
+      "/home/n1/codex-workspace/tsconfig.build.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to the buildable package-export surface for the maintained projection layer, including local tarball install posture and TypeScript package-consumer resolution."
   },
   "docs/openapi.md": {
     "source_paths": [
@@ -1061,12 +1113,33 @@
     "transformation_type": "generated",
     "notes": "Bounded publication-readiness guidance derived from project-profile, release, verification, evidence-gap, program-fit, and limitation surfaces."
   },
+  "docs/python-consumption.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/reference-pack.md",
+      "/home/n1/codex-workspace/docs/integrity-recipes.md",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
+      "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to Python JSON-first consumption of compact references and public G16 seal proofs from repo-local files or extracted packed artifacts."
+  },
   "docs/quickstart.md": {
     "source_paths": [
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.quickstart.v1.json"
     ],
     "transformation_type": "derived",
     "notes": "Shortened for public users."
+  },
+  "docs/reference-pack.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/references/validation-gates.json",
+      "/home/n1/codex-workspace/docs/integration-guide.md",
+      "/home/n1/codex-workspace/docs/npm-consumption.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to the compact contract-reference layer for tool-builders and package consumers."
   },
   "docs/relation-types.md": {
     "source_paths": [
@@ -1167,6 +1240,28 @@
     ],
     "transformation_type": "generated",
     "notes": "Guide to the human-readable and machine-readable release-evidence surfaces.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; release evidence synchronized with public type-projection surfaces; release evidence synchronized with validator API projection surfaces; package-export projection layer synchronized"
+  },
+  "docs/repo-validation-workflow.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/CONTRIBUTING.md",
+      "/home/n1/codex-workspace/docs/community-health.md",
+      "/home/n1/codex-workspace/docs/maintainer-operations.md",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/verification.md",
+      "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
+      "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/projections/index.ts",
+      "/home/n1/codex-workspace/projections/typescript/index.ts",
+      "/home/n1/codex-workspace/projections/zod/index.ts",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
+      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
+      "/home/n1/codex-workspace/ROADMAP.md",
+      "/home/n1/codex-workspace/scripts/check-package-surface.js",
+      "/home/n1/codex-workspace/tsconfig.build.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Contributor-facing repo-only validation workflow for bounded public-surface changes.; package-export projection layer synchronized"
   },
   "docs/repository-identity.md": {
     "source_paths": [
@@ -1301,6 +1396,32 @@
     "transformation_type": "generated",
     "notes": "Route-by-route map from published validator routes to the strongest public sample artifacts."
   },
+  "docs/schema-bundles.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/client/ajv-validate-capsule.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-contracts.mjs"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to single-file schema bundle consumption for lower-friction raw-schema consumers."
+  },
+  "docs/schema-family-reference.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/schemas/README.md",
+      "/home/n1/codex-workspace/docs/schema-reference.md",
+      "/home/n1/codex-workspace/docs/type-projections.md",
+      "/home/n1/codex-workspace/docs/integration-guide.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Human-readable index for choosing the right public schema family and abstraction level."
+  },
   "docs/schema-reference.md": {
     "source_paths": [
       "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos-schema.v1.json",
@@ -1314,6 +1435,17 @@
     ],
     "transformation_type": "derived",
     "notes": "Field-level capsule and validator-envelope schema guide.; synchronized with schema family index and source-level type projections"
+  },
+  "docs/schema-validation-recipes.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/integration-guide.md",
+      "/home/n1/codex-workspace/docs/npm-consumption.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to validating public capsules and validator-envelope payloads directly against the raw JSON Schema surface."
   },
   "docs/source-materials.md": {
     "source_paths": [
@@ -1416,6 +1548,31 @@
     ],
     "transformation_type": "generated",
     "notes": "Source-of-truth hierarchy across validator behavior, schemas, prose docs, and illustrative examples.; synchronized with evidence strength surfaces"
+  },
+  "docs/type-projections.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
+      "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/projections/index.ts",
+      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/index.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/zod/index.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/scripts/check-package-surface.js",
+      "/home/n1/codex-workspace/tsconfig.build.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to the public-safe TypeScript and Zod projection layer and its bounded consumer recipes.; type-projection guide synchronized with validator API source-level surfaces; package-export projection layer synchronized"
   },
   "docs/update-coherence.md": {
     "source_paths": [
@@ -1549,6 +1706,30 @@
     "transformation_type": "generated",
     "notes": "Guide to the repository-local verification stack and what each check protects.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; verification docs synchronized with type-projection checks; verification docs synchronized with validator API projection and recipe surfaces; package-export projection layer synchronized"
   },
+  "examples/api-invalid/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-api-envelope-examples.md",
+      "/home/n1/codex-workspace/examples/api/README.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for intentionally schema-invalid validator-envelope fixtures."
+  },
+  "examples/api-invalid/validate-request.single.missing-capsule.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema-invalid single-validate request fixture missing the required capsule field."
+  },
+  "examples/api-invalid/validate-response.fail.invalid-gate.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema-invalid fail-response fixture using a non-canonical gate identifier."
+  },
   "examples/api/conflict-response.sample.json": {
     "source_paths": [],
     "transformation_type": "generated",
@@ -1670,6 +1851,85 @@
     "transformation_type": "generated",
     "notes": "Directory guide for archive portability examples."
   },
+  "examples/client/ajv-reject-invalid-capsules.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for rejecting intentionally invalid capsule fixtures against the published schema."
+  },
+  "examples/client/ajv-reject-invalid-validator-envelopes.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for rejecting intentionally invalid validator-envelope fixtures against the published schema bundle."
+  },
+  "examples/client/ajv-validate-capsule.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for validating a public capsule against the published capsule schema."
+  },
+  "examples/client/ajv-validate-schema-bundles.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.bundle.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.bundle.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for single-file bundled schema consumption."
+  },
+  "examples/client/ajv-validate-validator-envelope.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for validating public validator-envelope payloads against the published schema bundle."
+  },
+  "examples/client/cjs-package-capsule-summary.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/typescript/index.ts",
+      "/home/n1/codex-workspace/projections/zod/index.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal CommonJS recipe for consuming the built package-export capsule surface."
+  },
+  "examples/client/cjs-package-contract-reference.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/references/validation-gates.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer recipe for compact contract-reference exports."
+  },
+  "examples/client/cjs-package-validate-response.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal CommonJS recipe for consuming the built package-export validator API surface."
+  },
   "examples/client/curl-validate-batch.sh": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-request.batch.json"
@@ -1691,6 +1951,83 @@
     "transformation_type": "generated",
     "notes": "Shell recipe for POST /api/validate using the public single-request example."
   },
+  "examples/client/esm-package-ajv-reject-invalid-capsules.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for rejecting installed invalid schema fixtures."
+  },
+  "examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for rejecting installed invalid validator-envelope fixtures."
+  },
+  "examples/client/esm-package-ajv-validate-contracts.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for validating installed schema exports and packaged public examples."
+  },
+  "examples/client/esm-package-ajv-validate-schema-bundles.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.bundle.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.bundle.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for single-file bundled schema consumption."
+  },
+  "examples/client/esm-package-capsule-summary.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/zod/index.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal ESM recipe for consuming the built package-export capsule surface."
+  },
+  "examples/client/esm-package-recompute-integrity-seal.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/docs/integrity-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer ESM recipe for recomputing installed integrity seals and demonstrating intentional G16 repair boundaries."
+  },
+  "examples/client/esm-package-validate-response.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal ESM recipe for consuming the built package-export validator API surface."
+  },
   "examples/client/node-validate-batch.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-request.batch.json"
@@ -1704,6 +2041,27 @@
     ],
     "transformation_type": "generated",
     "notes": "Minimal Node fetch recipe for POST /api/validate."
+  },
+  "examples/client/python-contract-reference.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/references/validation-gates.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files."
+  },
+  "examples/client/python-recompute-integrity-seal.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/docs/integrity-recipes.md",
+      "/home/n1/codex-workspace/docs/python-consumption.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for recomputing public integrity seals and demonstrating the intentional G16 repair boundary."
   },
   "examples/client/README.md": {
     "source_paths": [
@@ -1724,6 +2082,63 @@
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for curl and Node consumer recipe snippets.; client recipe guide synchronized with source-level type recipes; client recipe guide synchronized with validator API source-level recipes; package-export projection layer synchronized"
+  },
+  "examples/client/recompute-integrity-seal.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/docs/integrity-recipes.md",
+      "/home/n1/codex-workspace/scripts/lib/integrity.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local ESM recipe for recomputing published integrity seals and demonstrating intentional G16 repair boundaries."
+  },
+  "examples/client/ts-build-validate-request.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal TypeScript consumer recipe for a typed validator request envelope."
+  },
+  "examples/client/ts-capsule-summary.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/typescript/capsule.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal TypeScript consumer recipe for the published capsule projection layer."
+  },
+  "examples/client/ts-package-contract-reference.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/references/validation-gates.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer recipe for compact contract-reference exports."
+  },
+  "examples/client/ts-package-validate-request.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/tsconfig.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal TypeScript package-consumer recipe for a typed validator request against the built package exports."
+  },
+  "examples/client/zod-parse-capsule.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/zod/capsule.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal Zod consumer recipe for the published capsule projection layer."
+  },
+  "examples/client/zod-parse-validate-response.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal Zod consumer recipe for parsing a validator response envelope."
   },
   "examples/example-known-ids.json": {
     "source_paths": [],
@@ -1766,6 +2181,30 @@
     ],
     "transformation_type": "generated",
     "notes": "Synthetic validator smoke example."
+  },
+  "examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Intentionally schema-invalid capsule fixture that omits the required neuro_concentrate root."
+  },
+  "examples/invalid/example-invalid-relation-type.capsule.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Intentionally schema-invalid capsule fixture that uses a non-canonical relation_type."
+  },
+  "examples/invalid/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-capsule-examples.md",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for intentionally schema-invalid capsule fixtures."
   },
   "examples/README.md": {
     "source_paths": [
@@ -1847,6 +2286,13 @@
     ],
     "transformation_type": "copied",
     "notes": "Live OpenAPI document from the validator surface."
+  },
+  "package-lock.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "npm lockfile for the public type-projection dependency surface."
   },
   "package.json": {
     "source_paths": [
@@ -1940,6 +2386,89 @@
     ],
     "transformation_type": "generated",
     "notes": "Repository metadata and lightweight verification scripts for the public surface.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; package metadata synchronized with type-projection tooling; package-export projection layer synchronized"
+  },
+  "projections/index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/typescript/index.ts",
+      "/home/n1/codex-workspace/projections/zod/index.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Root namespace export for the built package-consumer projection layer."
+  },
+  "projections/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/type-projections.md",
+      "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
+      "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
+      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
+      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
+      "/home/n1/codex-workspace/projections/index.ts",
+      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/index.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/zod/index.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
+      "/home/n1/codex-workspace/scripts/check-package-surface.js",
+      "/home/n1/codex-workspace/tsconfig.build.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for the public-safe projection layer.; projection guide synchronized with validator API source-level surfaces; package-export projection layer synchronized"
+  },
+  "projections/typescript/capsule.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/docs/schema-reference.md",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public-safe TypeScript projection for the capsule outer contract."
+  },
+  "projections/typescript/index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Bundle entrypoint for the public-safe TypeScript projection surface."
+  },
+  "projections/typescript/validator-api.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public-safe TypeScript projection for validator request and response envelopes."
+  },
+  "projections/zod/capsule.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/docs/schema-reference.md",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public-safe Zod projection for the capsule outer contract."
+  },
+  "projections/zod/index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/zod/capsule.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Bundle entrypoint for the public-safe Zod projection surface."
+  },
+  "projections/zod/validator-api.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public-safe Zod projection for validator request and response envelopes."
   },
   "PUBLIC_ADOPTION_READINESS.json": {
     "source_paths": [
@@ -3392,6 +3921,30 @@
     "transformation_type": "generated",
     "notes": "Public-facing repo front door written from source concepts.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with adoption-readiness surfaces; synchronized with freshness surfaces; synchronized with ecosystem-value surfaces; synchronized with decision-log surfaces; synchronized with evidence-gaps surfaces; synchronized with public type-projection surfaces; front door synchronized with public validator API projection surfaces; package-export projection layer synchronized"
   },
+  "references/contract-constants.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Compact contract constants derived from stronger schema enums and validator option flags."
+  },
+  "references/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/reference-pack.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for compact machine-readable contract references."
+  },
+  "references/validation-gates.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/16-gates.md",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.16-gates.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Compact gate-family and gate-summary reference derived from the stronger public gate docs and raw capsule."
+  },
   "RELEASING.md": {
     "source_paths": [
       "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
@@ -3429,6 +3982,16 @@
     ],
     "transformation_type": "derived",
     "notes": "JSON Schema projection of the public archive-bundle contract."
+  },
+  "schemas/capsule-schema.bundle.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/scripts/lib/schema-bundles.js",
+      "/home/n1/codex-workspace/scripts/build-schema-bundles.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Single-file bundle projection for the public capsule schema."
   },
   "schemas/capsule-schema.json": {
     "source_paths": [
@@ -3656,6 +4219,17 @@
     "transformation_type": "generated",
     "notes": "Directory guide for public schema artifacts grouped by family."
   },
+  "schemas/validator-api-envelopes.bundle.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/scripts/lib/schema-bundles.js",
+      "/home/n1/codex-workspace/scripts/build-schema-bundles.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Single-file bundle projection for the public validator envelope schema."
+  },
   "schemas/validator-api-envelopes.schema.json": {
     "source_paths": [
       "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
@@ -3688,6 +4262,13 @@
     ],
     "transformation_type": "generated",
     "notes": "Repository-local audit script for manifest coverage and JSON integrity.; package-export projection layer synchronized"
+  },
+  "scripts/build-schema-bundles.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/scripts/lib/schema-bundles.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Generator for committed single-file schema bundle artifacts."
   },
   "scripts/check-adoption-readiness.js": {
     "source_paths": [
@@ -4186,6 +4767,50 @@
     "transformation_type": "generated",
     "notes": "Verifier for repo-owned GitHub labels, milestones, release-note grouping, and doc alignment."
   },
+  "scripts/check-integrity-recipes.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/integrity-recipes.md",
+      "/home/n1/codex-workspace/examples/client/recompute-integrity-seal.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-recompute-integrity-seal.mjs",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/scripts/lib/integrity.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for public integrity-seal recomputation recipes and example/API hash correctness under the current G16 rule."
+  },
+  "scripts/check-invalid-api-examples.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-api-envelope-examples.md",
+      "/home/n1/codex-workspace/examples/api-invalid/README.md",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
+      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-validator-envelopes.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for intentionally schema-invalid validator-envelope fixtures and their documented rejection paths."
+  },
+  "scripts/check-invalid-examples.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-capsule-examples.md",
+      "/home/n1/codex-workspace/examples/invalid/README.md",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
+      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-capsules.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for intentionally schema-invalid capsule fixtures and their documented rejection expectations."
+  },
   "scripts/check-limitations-register.js": {
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_LIMITATIONS_REGISTER.json",
@@ -4222,6 +4847,42 @@
     ],
     "transformation_type": "generated",
     "notes": "Repository-local verifier for ownership and stronger-source hierarchy coherence."
+  },
+  "scripts/check-package-install.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-contracts.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
+      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
+      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
+      "/home/n1/codex-workspace/projections/zod/index.ts",
+      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for fresh CommonJS, ESM, and TypeScript installs of the packed package-export surface."
+  },
+  "scripts/check-package-surface.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
+      "/home/n1/codex-workspace/examples/client/esm-package-capsule-summary.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-validate-response.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/projections/index.ts",
+      "/home/n1/codex-workspace/projections/typescript/index.ts",
+      "/home/n1/codex-workspace/projections/zod/index.ts",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/tsconfig.build.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for the built package-export and pack surface."
   },
   "scripts/check-portability-profile.js": {
     "source_paths": [
@@ -4323,6 +4984,42 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for publication-readiness cross-surface coherence."
+  },
+  "scripts/check-python-recipes.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
+      "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for repo-local and extracted packed-artifact Python recipes that consume compact references and public G16 seal proofs."
+  },
+  "scripts/check-raw-capsules.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos-schema.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.16-gates.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.relation-types.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.subtype-hub.v1.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for curated raw law-adjacent capsule sources."
+  },
+  "scripts/check-reference-pack.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/references/validation-gates.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/16-gates.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for the compact contract-reference pack."
   },
   "scripts/check-release-metadata.js": {
     "source_paths": [
@@ -4427,6 +5124,34 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for the machine-readable public review scorecard and bounded reviewer criteria.; synchronized with verification matrix surfaces; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with evidence-gaps surfaces"
+  },
+  "scripts/check-schema-bundles.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/scripts/lib/schema-bundles.js",
+      "/home/n1/codex-workspace/docs/schema-bundles.md",
+      "/home/n1/codex-workspace/examples/client/ajv-validate-schema-bundles.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-schema-bundles.mjs",
+      "/home/n1/codex-workspace/schemas/capsule-schema.bundle.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.bundle.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for committed single-file schema bundle artifacts and recipes."
+  },
+  "scripts/check-schema-recipes.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/ajv-validate-capsule.mjs",
+      "/home/n1/codex-workspace/examples/client/ajv-validate-validator-envelope.mjs",
+      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-capsules.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-contracts.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for repo-local and package-consumer raw-schema Ajv recipes."
   },
   "scripts/check-surface-coherence.js": {
     "source_paths": [
@@ -4591,6 +5316,25 @@
     "transformation_type": "generated",
     "notes": "Verifier for the machine-readable public verification matrix and check-family coverage.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with evidence-gaps surfaces"
   },
+  "scripts/lib/integrity.js": {
+    "source_paths": [
+      "/home/n1/n1hub.com/lib/validator/utils.ts",
+      "/home/n1/n1hub-repo-vault/scripts/seal-integrity.mjs",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Repo-local helper for the public G16 sealing rule derived from validator-owned integrity semantics and compact reference constants."
+  },
+  "scripts/lib/schema-bundles.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Shared helper for building the committed single-file schema bundle artifacts."
+  },
   "SECURITY.md": {
     "source_paths": [
       "/home/n1/n1hub-repo-vault/governance/capsule.governance.security.v1.json"
@@ -4626,91 +5370,15 @@
     "transformation_type": "generated",
     "notes": "Repo-specific support guidance."
   },
-  "VERSIONING.md": {
+  "tsconfig.build.json": {
     "source_paths": [
-      "/home/n1/codex-workspace/docs/change-control.md",
-      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Versioning and contract-change policy for the public repository surface."
-  },
-  "docs/type-projections.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
-      "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
-      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
-      "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
-      "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
-      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
       "/home/n1/codex-workspace/projections/index.ts",
-      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
       "/home/n1/codex-workspace/projections/typescript/index.ts",
-      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts",
       "/home/n1/codex-workspace/projections/zod/index.ts",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/scripts/check-package-surface.js",
-      "/home/n1/codex-workspace/tsconfig.build.json"
+      "/home/n1/codex-workspace/tsconfig.json"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to the public-safe TypeScript and Zod projection layer and its bounded consumer recipes.; type-projection guide synchronized with validator API source-level surfaces; package-export projection layer synchronized"
-  },
-  "projections/README.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/docs/type-projections.md",
-      "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
-      "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
-      "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
-      "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
-      "/home/n1/codex-workspace/projections/index.ts",
-      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/typescript/index.ts",
-      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
-      "/home/n1/codex-workspace/projections/zod/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/index.ts",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts",
-      "/home/n1/codex-workspace/scripts/check-package-surface.js",
-      "/home/n1/codex-workspace/tsconfig.build.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Directory guide for the public-safe projection layer.; projection guide synchronized with validator API source-level surfaces; package-export projection layer synchronized"
-  },
-  "projections/typescript/capsule.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/docs/schema-reference.md",
-      "/home/n1/codex-workspace/examples/example-note.capsule.json"
-    ],
-    "transformation_type": "derived",
-    "notes": "Public-safe TypeScript projection for the capsule outer contract."
-  },
-  "projections/zod/capsule.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/docs/schema-reference.md",
-      "/home/n1/codex-workspace/examples/example-note.capsule.json"
-    ],
-    "transformation_type": "derived",
-    "notes": "Public-safe Zod projection for the capsule outer contract."
-  },
-  "examples/client/ts-capsule-summary.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/projections/typescript/capsule.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal TypeScript consumer recipe for the published capsule projection layer."
-  },
-  "examples/client/zod-parse-capsule.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/projections/zod/capsule.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal Zod consumer recipe for the published capsule projection layer."
+    "notes": "Build configuration for the consumable projection package layer."
   },
   "tsconfig.json": {
     "source_paths": [
@@ -4728,596 +5396,12 @@
     "transformation_type": "generated",
     "notes": "Repository-local TypeScript config for typechecking the public projection layer, including self-package path mapping for package-style TypeScript recipes."
   },
-  "package-lock.json": {
+  "VERSIONING.md": {
     "source_paths": [
-      "/home/n1/codex-workspace/package.json"
+      "/home/n1/codex-workspace/docs/change-control.md",
+      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json"
     ],
     "transformation_type": "generated",
-    "notes": "npm lockfile for the public type-projection dependency surface."
-  },
-  "projections/typescript/validator-api.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/docs/api-envelopes.md",
-      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
-    ],
-    "transformation_type": "derived",
-    "notes": "Public-safe TypeScript projection for validator request and response envelopes."
-  },
-  "projections/zod/validator-api.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/docs/api-envelopes.md",
-      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
-    ],
-    "transformation_type": "derived",
-    "notes": "Public-safe Zod projection for validator request and response envelopes."
-  },
-  "examples/client/ts-build-validate-request.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/projections/typescript/validator-api.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal TypeScript consumer recipe for a typed validator request envelope."
-  },
-  "examples/client/zod-parse-validate-response.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal Zod consumer recipe for parsing a validator response envelope."
-  },
-  "docs/schema-family-reference.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
-      "/home/n1/codex-workspace/schemas/README.md",
-      "/home/n1/codex-workspace/docs/schema-reference.md",
-      "/home/n1/codex-workspace/docs/type-projections.md",
-      "/home/n1/codex-workspace/docs/integration-guide.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Human-readable index for choosing the right public schema family and abstraction level."
-  },
-  "docs/repo-validation-workflow.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/CONTRIBUTING.md",
-      "/home/n1/codex-workspace/docs/community-health.md",
-      "/home/n1/codex-workspace/docs/maintainer-operations.md",
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/docs/verification.md",
-      "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
-      "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
-      "/home/n1/codex-workspace/projections/index.ts",
-      "/home/n1/codex-workspace/projections/typescript/index.ts",
-      "/home/n1/codex-workspace/projections/zod/index.ts",
-      "/home/n1/codex-workspace/PUBLIC_CHANGE_CONTROL_MODEL.json",
-      "/home/n1/codex-workspace/PUBLIC_MAINTENANCE_MODEL.json",
-      "/home/n1/codex-workspace/PUBLIC_VERIFICATION_MATRIX.json",
-      "/home/n1/codex-workspace/ROADMAP.md",
-      "/home/n1/codex-workspace/scripts/check-package-surface.js",
-      "/home/n1/codex-workspace/tsconfig.build.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Contributor-facing repo-only validation workflow for bounded public-surface changes.; package-export projection layer synchronized"
-  },
-  "docs/npm-consumption.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client/cjs-package-capsule-summary.cjs",
-      "/home/n1/codex-workspace/examples/client/cjs-package-validate-response.cjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-capsule-summary.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-validate-response.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
-      "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/projections/index.ts",
-      "/home/n1/codex-workspace/scripts/check-package-install.js",
-      "/home/n1/codex-workspace/projections/typescript/index.ts",
-      "/home/n1/codex-workspace/projections/zod/index.ts",
-      "/home/n1/codex-workspace/tsconfig.build.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Guide to the buildable package-export surface for the maintained projection layer, including local tarball install posture and TypeScript package-consumer resolution."
-  },
-  "docs/reference-pack.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/references/validation-gates.json",
-      "/home/n1/codex-workspace/docs/integration-guide.md",
-      "/home/n1/codex-workspace/docs/npm-consumption.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Guide to the compact contract-reference layer for tool-builders and package consumers."
-  },
-  "docs/schema-validation-recipes.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/docs/integration-guide.md",
-      "/home/n1/codex-workspace/docs/npm-consumption.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Guide to validating public capsules and validator-envelope payloads directly against the raw JSON Schema surface."
-  },
-  "docs/invalid-capsule-examples.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
-      "/home/n1/codex-workspace/examples/invalid/README.md",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
-      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Guide to intentionally schema-invalid capsule fixtures and their structural rejection boundaries."
-  },
-  "examples/client/ts-package-validate-request.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
-      "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/tsconfig.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal TypeScript package-consumer recipe for a typed validator request against the built package exports."
-  },
-  "references/README.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/reference-pack.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Directory guide for compact machine-readable contract references."
-  },
-  "references/contract-constants.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Compact contract constants derived from stronger schema enums and validator option flags."
-  },
-  "references/validation-gates.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/16-gates.md",
-      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.16-gates.v1.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Compact gate-family and gate-summary reference derived from the stronger public gate docs and raw capsule."
-  },
-  "projections/index.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/projections/typescript/index.ts",
-      "/home/n1/codex-workspace/projections/zod/index.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Root namespace export for the built package-consumer projection layer."
-  },
-  "projections/typescript/index.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/typescript/validator-api.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Bundle entrypoint for the public-safe TypeScript projection surface."
-  },
-  "projections/zod/index.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/projections/zod/capsule.ts",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Bundle entrypoint for the public-safe Zod projection surface."
-  },
-  "examples/client/cjs-package-capsule-summary.cjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/projections/typescript/index.ts",
-      "/home/n1/codex-workspace/projections/zod/index.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal CommonJS recipe for consuming the built package-export capsule surface."
-  },
-  "examples/client/cjs-package-validate-response.cjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
-      "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal CommonJS recipe for consuming the built package-export validator API surface."
-  },
-  "examples/client/esm-package-capsule-summary.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/projections/zod/index.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal ESM recipe for consuming the built package-export capsule surface."
-  },
-  "examples/client/esm-package-validate-response.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
-      "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal ESM recipe for consuming the built package-export validator API surface."
-  },
-  "examples/client/cjs-package-contract-reference.cjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/references/validation-gates.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "CommonJS package-consumer recipe for compact contract-reference exports."
-  },
-  "examples/client/ajv-validate-capsule.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/examples/example-note.capsule.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Ajv recipe for validating a public capsule against the published capsule schema."
-  },
-  "examples/client/ajv-validate-validator-envelope.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.pass.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Ajv recipe for validating public validator-envelope payloads against the published schema bundle."
-  },
-  "examples/client/ajv-reject-invalid-capsules.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Ajv recipe for rejecting intentionally invalid capsule fixtures against the published schema."
-  },
-  "examples/client/esm-package-ajv-validate-contracts.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Package-consumer Ajv recipe for validating installed schema exports and packaged public examples."
-  },
-  "examples/client/esm-package-ajv-reject-invalid-capsules.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Package-consumer Ajv recipe for rejecting installed invalid schema fixtures."
-  },
-  "examples/invalid/README.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/invalid-capsule-examples.md",
-      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Directory guide for intentionally schema-invalid capsule fixtures."
-  },
-  "examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/schemas/capsule-schema.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Intentionally schema-invalid capsule fixture that omits the required neuro_concentrate root."
-  },
-  "examples/invalid/example-invalid-relation-type.capsule.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/schemas/capsule-schema.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Intentionally schema-invalid capsule fixture that uses a non-canonical relation_type."
-  },
-  "examples/client/ts-package-contract-reference.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/references/validation-gates.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "TypeScript package-consumer recipe for compact contract-reference exports."
-  },
-  "tsconfig.build.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/projections/index.ts",
-      "/home/n1/codex-workspace/projections/typescript/index.ts",
-      "/home/n1/codex-workspace/projections/zod/index.ts",
-      "/home/n1/codex-workspace/tsconfig.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Build configuration for the consumable projection package layer."
-  },
-  "scripts/check-package-surface.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
-      "/home/n1/codex-workspace/examples/client/esm-package-capsule-summary.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-validate-response.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/projections/index.ts",
-      "/home/n1/codex-workspace/projections/typescript/index.ts",
-      "/home/n1/codex-workspace/projections/zod/index.ts",
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/tsconfig.build.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Verifier for the built package-export and pack surface."
-  },
-  "scripts/check-package-install.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-contracts.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
-      "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
-      "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/projections/typescript/capsule.ts",
-      "/home/n1/codex-workspace/projections/typescript/validator-api.ts",
-      "/home/n1/codex-workspace/projections/zod/index.ts",
-      "/home/n1/codex-workspace/projections/zod/validator-api.ts"
-    ],
-    "transformation_type": "generated",
-    "notes": "Verifier for fresh CommonJS, ESM, and TypeScript installs of the packed package-export surface."
-  },
-  "scripts/check-raw-capsules.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos-schema.v1.json",
-      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.16-gates.v1.json",
-      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.5-element-law.v1.json",
-      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
-      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.relation-types.v1.json",
-      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.subtype-atomic.v1.json",
-      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.subtype-hub.v1.json",
-      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Verifier for curated raw law-adjacent capsule sources."
-  },
-  "scripts/check-reference-pack.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/references/validation-gates.json",
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/docs/16-gates.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Verifier for the compact contract-reference pack."
-  },
-  "scripts/check-schema-recipes.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client/ajv-validate-capsule.mjs",
-      "/home/n1/codex-workspace/examples/client/ajv-validate-validator-envelope.mjs",
-      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-capsules.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-contracts.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Verifier for repo-local and package-consumer raw-schema Ajv recipes."
-  },
-  "scripts/check-invalid-examples.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/invalid-capsule-examples.md",
-      "/home/n1/codex-workspace/examples/invalid/README.md",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
-      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
-      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-capsules.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Verifier for intentionally schema-invalid capsule fixtures and their documented rejection expectations."
-  },
-  "docs/integrity-recipes.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/5-element-law.md",
-      "/home/n1/codex-workspace/docs/16-gates.md",
-      "/home/n1/codex-workspace/docs/reference-pack.md",
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Guide to the public G16 sealing rule, integrity payload scope, and repo/package-level recomputation recipes."
-  },
-  "examples/client/recompute-integrity-seal.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/docs/integrity-recipes.md",
-      "/home/n1/codex-workspace/scripts/lib/integrity.js"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local ESM recipe for recomputing published integrity seals and demonstrating intentional G16 repair boundaries."
-  },
-  "examples/client/esm-package-recompute-integrity-seal.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/package.json",
-      "/home/n1/codex-workspace/docs/integrity-recipes.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Package-consumer ESM recipe for recomputing installed integrity seals and demonstrating intentional G16 repair boundaries."
-  },
-  "scripts/check-integrity-recipes.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/integrity-recipes.md",
-      "/home/n1/codex-workspace/examples/client/recompute-integrity-seal.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-recompute-integrity-seal.mjs",
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.batch.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/scripts/lib/integrity.js"
-    ],
-    "transformation_type": "generated",
-    "notes": "Verifier for public integrity-seal recomputation recipes and example/API hash correctness under the current G16 rule."
-  },
-  "docs/python-consumption.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/reference-pack.md",
-      "/home/n1/codex-workspace/docs/integrity-recipes.md",
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
-      "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py"
-    ],
-    "transformation_type": "generated",
-    "notes": "Guide to Python JSON-first consumption of compact references and public G16 seal proofs from repo-local files or extracted packed artifacts."
-  },
-  "examples/client/python-contract-reference.py": {
-    "source_paths": [
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/references/validation-gates.json",
-      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
-      "/home/n1/codex-workspace/docs/python-consumption.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files."
-  },
-  "examples/client/python-recompute-integrity-seal.py": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/example-note.capsule.json",
-      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/docs/integrity-recipes.md",
-      "/home/n1/codex-workspace/docs/python-consumption.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Python recipe for recomputing public integrity seals and demonstrating the intentional G16 repair boundary."
-  },
-  "scripts/check-python-recipes.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
-      "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Verifier for repo-local and extracted packed-artifact Python recipes that consume compact references and public G16 seal proofs."
-  },
-  "scripts/lib/integrity.js": {
-    "source_paths": [
-      "/home/n1/n1hub.com/lib/validator/utils.ts",
-      "/home/n1/n1hub-repo-vault/scripts/seal-integrity.mjs",
-      "/home/n1/codex-workspace/references/contract-constants.json",
-      "/home/n1/codex-workspace/schemas/capsule-schema.json"
-    ],
-    "transformation_type": "derived",
-    "notes": "Repo-local helper for the public G16 sealing rule derived from validator-owned integrity semantics and compact reference constants."
-  },
-  "docs/invalid-api-envelope-examples.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
-      "/home/n1/codex-workspace/docs/api-envelopes.md",
-      "/home/n1/codex-workspace/examples/api-invalid/README.md",
-      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
-      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.fail.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Guide to intentionally schema-invalid validator-envelope fixtures and their structural rejection boundaries."
-  },
-  "examples/api-invalid/README.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/invalid-api-envelope-examples.md",
-      "/home/n1/codex-workspace/examples/api/README.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Directory guide for intentionally schema-invalid validator-envelope fixtures."
-  },
-  "examples/api-invalid/validate-request.single.missing-capsule.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/examples/api/validate-request.single.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Schema-invalid single-validate request fixture missing the required capsule field."
-  },
-  "examples/api-invalid/validate-response.fail.invalid-gate.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/examples/api/validate-response.fail.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Schema-invalid fail-response fixture using a non-canonical gate identifier."
-  },
-  "examples/client/ajv-reject-invalid-validator-envelopes.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
-      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Ajv recipe for rejecting intentionally invalid validator-envelope fixtures against the published schema bundle."
-  },
-  "examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/schemas/capsule-schema.json",
-      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
-      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
-      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Package-consumer Ajv recipe for rejecting installed invalid validator-envelope fixtures."
-  },
-  "scripts/check-invalid-api-examples.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/invalid-api-envelope-examples.md",
-      "/home/n1/codex-workspace/examples/api-invalid/README.md",
-      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
-      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
-      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-validator-envelopes.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs",
-      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Verifier for intentionally schema-invalid validator-envelope fixtures and their documented rejection paths."
+    "notes": "Versioning and contract-change policy for the public repository surface."
   }
 }

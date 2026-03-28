@@ -2081,6 +2081,21 @@
       ]
     },
     {
+      "id": "schema.capsule-bundle",
+      "path": "schemas/capsule-schema.bundle.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-bundles",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "schema.neuro-concentrate",
       "path": "schemas/neuro-concentrate.schema.json",
       "kind": "schema",
@@ -2564,6 +2579,22 @@
         "npm run check:api-schemas",
         "npm run check:catalog",
         "npm run check:surface"
+      ]
+    },
+    {
+      "id": "schema.validator-api-envelopes-bundle",
+      "path": "schemas/validator-api-envelopes.bundle.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:schema-bundles",
+        "npm run check:package-surface",
+        "npm run check:catalog"
       ]
     },
     {
@@ -3254,6 +3285,22 @@
       ]
     },
     {
+      "id": "docs.schema-bundles",
+      "path": "docs/schema-bundles.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:schema-bundles",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "docs.schema-validation-recipes",
       "path": "docs/schema-validation-recipes.md",
       "kind": "integration-doc",
@@ -3393,6 +3440,21 @@
       ]
     },
     {
+      "id": "examples.client.ajv-validate-schema-bundles",
+      "path": "examples/client/ajv-validate-schema-bundles.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-bundles",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.ajv-reject-invalid-capsules",
       "path": "examples/client/ajv-reject-invalid-capsules.mjs",
       "kind": "client-recipe",
@@ -3420,6 +3482,22 @@
       "verify_commands": [
         "npm run check:client-recipes",
         "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-ajv-validate-schema-bundles",
+      "path": "examples/client/esm-package-ajv-validate-schema-bundles.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-bundles",
         "npm run check:package-install",
         "npm run check:catalog"
       ]
@@ -3469,6 +3547,21 @@
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "schema.bundle-check",
+      "path": "scripts/check-schema-bundles.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:schema-bundles",
         "npm run check:catalog"
       ]
     },

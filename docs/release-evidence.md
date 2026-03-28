@@ -85,6 +85,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable summary of the public portability and archive trust posture.
 - [`reference-pack.md`](reference-pack.md)
   Human-readable guide to the compact contract-reference layer for enums, gate IDs, and validator flags.
+- [`schema-bundles.md`](schema-bundles.md)
+  Human-readable guide to the single-file bundled schema layer for lower-friction consumers.
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
   Human-readable guide to validating public capsules and validator-envelope payloads directly against the raw JSON Schema layer.
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
@@ -103,6 +105,10 @@ This repository keeps release evidence in both human-readable and machine-readab
   JSON Schema for the release-metadata file.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
   JSON Schema bundle for the public validator request and response envelope layer.
+- [`../schemas/capsule-schema.bundle.json`](../schemas/capsule-schema.bundle.json)
+  Single-file bundle artifact for capsule consumers who want fewer imports.
+- [`../schemas/validator-api-envelopes.bundle.json`](../schemas/validator-api-envelopes.bundle.json)
+  Single-file bundle artifact for validator-envelope consumers who want fewer imports.
 - [`type-projections.md`](type-projections.md)
   Human-readable guide to the public-safe TypeScript and Zod projection layer.
 - [`npm-consumption.md`](npm-consumption.md)
@@ -131,6 +137,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that the curated raw capsule exports remain structurally aligned, package-consumable, and law-adjacent rather than drifting into an unbounded vault export.
 - [`../scripts/check-reference-pack.js`](../scripts/check-reference-pack.js)
   Repo-local verification that the compact contract-reference exports stay aligned to stronger schemas, validator flags, and published gate summaries.
+- [`../scripts/check-schema-bundles.js`](../scripts/check-schema-bundles.js)
+  Repo-local verification that the committed single-file bundle schemas, their consumer recipes, and their human guide stay aligned to the stronger raw schema files.
 - [`../scripts/check-schema-recipes.js`](../scripts/check-schema-recipes.js)
   Repo-local verification that the Ajv-based raw-schema consumer recipes stay executable and aligned to published schema exports.
 - [`../scripts/check-invalid-examples.js`](../scripts/check-invalid-examples.js)
@@ -195,6 +203,8 @@ The validator API projection layer strengthens that path further by giving tool-
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree.
 
 The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, and validator option flags without forcing them to parse the larger schemas or prose docs first.
+
+The schema-bundle layer strengthens that path further by giving code generators, Ajv consumers, and polyglot tooling a single-file schema path that stays subordinate to the stronger raw schema files instead of forcing every downstream consumer to wire the same multi-file `$ref` graph manually.
 
 The raw-schema recipe layer strengthens that path further by proving that downstream consumers can validate public capsules and validator-envelope payloads directly against the published JSON Schemas, both from a repo checkout and from installed package exports, without depending on the projection layer.
 

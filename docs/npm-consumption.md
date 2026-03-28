@@ -37,8 +37,10 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/zod/capsule`
 - `@num1hub/capsule-specs/zod/validator-api`
 - `@num1hub/capsule-specs/schemas/capsule-schema.json`
+- `@num1hub/capsule-specs/schemas/capsule-schema.bundle.json`
 - `@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json`
 - `@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json`
+- `@num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json`
 - `@num1hub/capsule-specs/openapi/validate.openapi.json`
 - `@num1hub/capsule-specs/references/contract-constants.json`
 - `@num1hub/capsule-specs/references/validation-gates.json`
@@ -57,6 +59,7 @@ If you are working from a repository checkout rather than an already packed arti
 For a dry-run pack check, use `npm run check:package-surface`.
 For a real install smoke test in fresh CommonJS, ESM, and TypeScript projects, use `npm run check:package-install`.
 If you need the same packaged JSON artifacts from Python without package imports, use the extracted-artifact path in [`python-consumption.md`](python-consumption.md).
+If you want a single-file schema path for Ajv, code generators, or polyglot tooling, start with [`schema-bundles.md`](schema-bundles.md).
 
 ## Minimal CommonJS example
 
@@ -112,6 +115,12 @@ if (!validateCapsule(note)) {
   throw new Error(JSON.stringify(validateCapsule.errors));
 }
 ```
+
+## Minimal package-level bundled-schema example
+
+A copyable version of this example also lives at [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs).
+
+That recipe proves the installed package exports single-file schema bundle artifacts for both capsule validation and validator-envelope validation, so downstream consumers do not need to wire multi-file `$ref` graphs manually.
 
 ## Minimal package-level Ajv negative example
 
@@ -201,6 +210,7 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - `npm run check:package-surface`
 - `npm run check:package-install`
 - `npm run check:reference-pack`
+- `npm run check:schema-bundles`
 - `npm run check:schema-recipes`
 - `npm run check:invalid-examples`
 - `npm run check:invalid-api-examples`

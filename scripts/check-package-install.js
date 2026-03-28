@@ -35,6 +35,7 @@ let tarballPath = null;
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
 const packageSchemaRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-contracts.mjs');
+const packageBundleRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-schema-bundles.mjs');
 const packageInvalidSchemaRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-reject-invalid-capsules.mjs');
 const packageInvalidApiRecipePath = path.join(
   repoRoot,
@@ -104,6 +105,8 @@ try {
       "import * as zodProjection from '@num1hub/capsule-specs/zod';",
       "import * as validatorProjection from '@num1hub/capsule-specs/zod/validator-api';",
       "import capsuleSchemaJson from '@num1hub/capsule-specs/schemas/capsule-schema.json' with { type: 'json' };",
+      "import capsuleBundleJson from '@num1hub/capsule-specs/schemas/capsule-schema.bundle.json' with { type: 'json' };",
+      "import validatorBundleJson from '@num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json' with { type: 'json' };",
       "import contractConstants from '@num1hub/capsule-specs/references/contract-constants.json' with { type: 'json' };",
       "import validationGates from '@num1hub/capsule-specs/references/validation-gates.json' with { type: 'json' };",
       "import rawConfidenceCapsule from '@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json' with { type: 'json' };",
@@ -115,6 +118,8 @@ try {
       "if (!rootNamespace.typescript || !rootNamespace.zod) throw new Error('missing root namespaces');",
       "if (!capsuleSchema || !validatePassResponseSchema) throw new Error('missing zod exports');",
       "if (capsuleSchemaJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json') throw new Error('unexpected schema id');",
+      "if (capsuleBundleJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.bundle.json') throw new Error('unexpected capsule bundle id');",
+      "if (validatorBundleJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json') throw new Error('unexpected validator bundle id');",
       "if (contractConstants.relation_types.length !== 9) throw new Error('missing reference constants export');",
       "if (validationGates.gates.length !== 16) throw new Error('missing validation gate export');",
       "if (rawConfidenceCapsule.metadata.capsule_id !== 'capsule.foundation.capsuleos.confidence-vector.v1') throw new Error('missing raw capsule export');",
@@ -128,6 +133,8 @@ try {
   run(process.execPath, ['consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'schema-consumer.mjs'), fs.readFileSync(packageSchemaRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['schema-consumer.mjs'], esmProject);
+  fs.writeFileSync(path.join(esmProject, 'bundle-schema-consumer.mjs'), fs.readFileSync(packageBundleRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['bundle-schema-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'invalid-schema-consumer.mjs'), fs.readFileSync(packageInvalidSchemaRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['invalid-schema-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'invalid-api-consumer.mjs'), fs.readFileSync(packageInvalidApiRecipePath, 'utf8'), 'utf8');
@@ -160,7 +167,7 @@ try {
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, raw schema exports, invalid capsule and API schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, raw and bundled schema exports, invalid capsule and API schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

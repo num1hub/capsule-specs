@@ -43,6 +43,7 @@
 - machine-readable schemas, including validator API envelope coverage
 - public-safe TypeScript and Zod projection files for capsule and validator API contracts, bundle entrypoints, package-surface build config, package-surface verification, fresh-install verification, and both source-level and package-level CommonJS, ESM, and TypeScript consumer recipe examples
 - compact contract-reference JSON artifacts, their directory guide and human guide, package-consumer recipes, and repo-local verifier
+- single-file bundled schema artifacts, their human guide, package-consumer recipes, and repo-local verifier
 - Ajv-based raw-schema consumer recipes, their human guide, and repo-local verifier
 - intentionally schema-invalid capsule fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
 - intentionally schema-invalid validator-envelope fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
@@ -88,6 +89,7 @@ Repository-local audit on 2026-03-28:
 - `node scripts/check-package-install.js`: pass
 - `node scripts/check-raw-capsules.js`: pass
 - `node scripts/check-reference-pack.js`: pass
+- `node scripts/check-schema-bundles.js`: pass
 - `node scripts/check-schema-recipes.js`: pass
 - `node scripts/check-invalid-examples.js`: pass
 - `node scripts/check-invalid-api-examples.js`: pass
@@ -128,7 +130,7 @@ Repository-local audit on 2026-03-28:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `288` files / `288` manifest entries
+- manifest coverage: `303` files / `303` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -177,3 +179,4 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_PUBLICATION_READINESS.json` is a bounded publication-state and public-release-safety summary and must stay subordinate to stronger front-door, boundary, verification, evidence-gap, and release-evidence surfaces it references
 - `projections/typescript/capsule.ts`, `projections/typescript/validator-api.ts`, `projections/zod/capsule.ts`, `projections/zod/validator-api.ts`, and the source-level client recipe examples are public-safe convenience projections and must stay subordinate to the stronger JSON Schema, OpenAPI, curated API examples, and live validator behavior they align to
 - `docs/npm-consumption.md`, `package.json`, `tsconfig.build.json`, `scripts/check-package-install.js`, the built projection bundles, and the package-based client recipes are a convenience distribution layer and must stay subordinate to the stronger source projections, JSON Schemas, OpenAPI, curated examples, and live validator behavior they package
+- `docs/schema-bundles.md`, `schemas/capsule-schema.bundle.json`, `schemas/validator-api-envelopes.bundle.json`, the bundled-schema recipes under `examples/client/`, and `scripts/check-schema-bundles.js` are a bounded convenience layer for lower-friction single-file schema consumption and must stay subordinate to the stronger raw schema files, OpenAPI artifacts, and live validator behavior they simplify

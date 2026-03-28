@@ -34,6 +34,8 @@ This executes all repository-local checks in the expected order.
   Verifies the curated raw capsule source set, including five-root shape, semantic-hash parity, confidence-vector structure, link semantics, and filename-to-capsule identity alignment.
 - `npm run check:reference-pack`
   Verifies that the compact contract-reference JSON exports stay aligned to stronger schema enums, validator option flags, and published gate summaries.
+- `npm run check:schema-bundles`
+  Verifies the committed single-file schema bundle artifacts, their human guide, and the repo-local bundled-schema Ajv recipe.
 - `npm run check:schema-recipes`
   Verifies the Ajv-based raw-schema consumer recipes, including repo-local execution and package-consumer recipe syntax.
 - `npm run check:invalid-examples`
@@ -161,6 +163,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_TRACEABILITY_MATRIX.json` stays aligned with the real docs, schemas, examples, and verification commands it claims to connect
 - `capsules/`, `capsules/README.md`, and `scripts/check-raw-capsules.js` stay aligned with the curated raw law-adjacent source set they claim to publish
 - `references/`, `docs/reference-pack.md`, and `scripts/check-reference-pack.js` stay aligned with the stronger schema and gate surfaces they summarize
+- `docs/schema-bundles.md`, the single-file bundle schemas under `schemas/`, the bundled-schema Ajv recipes under `examples/client/`, and `scripts/check-schema-bundles.js` stay aligned with the stronger raw schema files they simplify
 - `docs/schema-validation-recipes.md`, the Ajv-based schema recipes under `examples/client/`, and `scripts/check-schema-recipes.js` stay aligned with the published schema exports and example payloads they validate
 - `docs/invalid-capsule-examples.md`, `examples/invalid/`, the invalid-example Ajv recipes under `examples/client/`, and `scripts/check-invalid-examples.js` stay aligned with the published schema-invalid fixtures and their documented structural rejection paths
 - `docs/invalid-api-envelope-examples.md`, `examples/api-invalid/`, the invalid-envelope Ajv recipes under `examples/client/`, and `scripts/check-invalid-api-examples.js` stay aligned with the published schema-invalid validator-envelope fixtures and their documented structural rejection paths

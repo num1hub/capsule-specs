@@ -28,9 +28,11 @@ const typeRecipeFiles = [
 const schemaRecipeFiles = [
   'ajv-validate-capsule.mjs',
   'ajv-validate-validator-envelope.mjs',
+  'ajv-validate-schema-bundles.mjs',
   'ajv-reject-invalid-capsules.mjs',
   'ajv-reject-invalid-validator-envelopes.mjs',
   'esm-package-ajv-validate-contracts.mjs',
+  'esm-package-ajv-validate-schema-bundles.mjs',
   'esm-package-ajv-reject-invalid-capsules.mjs',
   'esm-package-ajv-reject-invalid-validator-envelopes.mjs'
 ];
@@ -126,6 +128,14 @@ const expectedSchemaRecipeImports = {
     '../api/validate-request.single.json',
     '../api/validate-response.pass.json'
   ],
+  'ajv-validate-schema-bundles.mjs': [
+    'ajv/dist/2020.js',
+    '../../schemas/capsule-schema.bundle.json',
+    '../../schemas/validator-api-envelopes.bundle.json',
+    '../example-note.capsule.json',
+    '../api/validate-request.single.json',
+    '../api/validate-response.pass.json'
+  ],
   'ajv-reject-invalid-capsules.mjs': [
     'ajv/dist/2020.js',
     '../../schemas/capsule-schema.json',
@@ -146,6 +156,14 @@ const expectedSchemaRecipeImports = {
     '@num1hub/capsule-specs/schemas/capsule-schema.json',
     '@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json',
     '@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json',
+    '@num1hub/capsule-specs/examples/example-note.capsule.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.single.json',
+    '@num1hub/capsule-specs/examples/api/validate-response.pass.json'
+  ],
+  'esm-package-ajv-validate-schema-bundles.mjs': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/capsule-schema.bundle.json',
+    '@num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json',
     '@num1hub/capsule-specs/examples/example-note.capsule.json',
     '@num1hub/capsule-specs/examples/api/validate-request.single.json',
     '@num1hub/capsule-specs/examples/api/validate-response.pass.json'

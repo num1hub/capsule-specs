@@ -62,6 +62,7 @@
 - added intentionally schema-invalid validator-envelope fixtures, Ajv rejection recipes, and verifier-backed package/export proof for structural rejection testing
 - added public integrity-seal recipes, compact reference-pack integrity constants, verifier-backed seal recomputation proofs, and corrected public example/API hashes to align with the current `G16` sealing rule
 - added cross-language Python consumer recipes plus packed-artifact verification for compact references and public `G16` seal proofs without implying a Python SDK or PyPI release
+- added single-file bundled schema artifacts, bundled-schema Ajv consumer recipes, and verifier-backed install/export proof for lower-friction codegen and polyglot consumers
 ## 0.1.0 - 2026-03-26
 
 Initial public open-core projection from N1Hub:

@@ -113,7 +113,7 @@
     },
     {
       "id": "raw-json-schema-consumer-path",
-      "claim": "The public surface supports direct raw-schema validation of capsules and validator-envelope payloads through Ajv-based recipes from both a repo checkout and an installed package, including explicit schema-invalid fixtures, without forcing consumers onto the projection layer.",
+      "claim": "The public surface supports direct raw-schema and single-file bundled-schema validation of capsules and validator-envelope payloads through Ajv-based recipes from both a repo checkout and an installed package, including explicit schema-invalid fixtures, without forcing consumers onto the projection layer.",
       "audiences": [
         "integrators",
         "tool-builders",
@@ -121,10 +121,13 @@
       ],
       "strongest_surfaces": [
         "docs/schema-validation-recipes.md",
+        "docs/schema-bundles.md",
         "docs/invalid-capsule-examples.md",
         "schemas/capsule-schema.json",
+        "schemas/capsule-schema.bundle.json",
         "schemas/neuro-concentrate.schema.json",
         "schemas/validator-api-envelopes.schema.json",
+        "schemas/validator-api-envelopes.bundle.json",
         "scripts/check-schema-recipes.js",
         "docs/invalid-api-envelope-examples.md"
       ],
@@ -132,14 +135,17 @@
         "docs/integration-guide.md",
         "docs/client-recipes.md",
         "docs/npm-consumption.md",
+        "examples/client/ajv-validate-schema-bundles.mjs",
         "examples/client/ajv-validate-capsule.mjs",
         "examples/client/ajv-validate-validator-envelope.mjs",
         "examples/client/ajv-reject-invalid-capsules.mjs",
         "examples/client/esm-package-ajv-validate-contracts.mjs",
+        "examples/client/esm-package-ajv-validate-schema-bundles.mjs",
         "examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
         "examples/invalid/README.md",
         "scripts/check-invalid-examples.js",
         "scripts/check-package-install.js",
+        "scripts/check-schema-bundles.js",
         "docs/api-envelopes.md",
         "examples/client/ajv-reject-invalid-validator-envelopes.mjs",
         "examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs",
@@ -148,6 +154,7 @@
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
+        "npm run check:schema-bundles",
         "npm run check:invalid-examples",
         "npm run check:package-install",
         "npm run check:traceability",

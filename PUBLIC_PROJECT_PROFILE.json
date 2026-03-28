@@ -71,7 +71,10 @@
       "public-safe integrity-seal recomputation recipes and verifier-backed example/API hash proofs",
       "repo-local verification for cross-language Python consumer recipes",
       "intentionally schema-invalid validator-envelope fixtures for structural rejection testing",
-      "repo-local verification for intentionally schema-invalid validator-envelope fixtures"
+      "repo-local verification for intentionally schema-invalid validator-envelope fixtures",
+      "single-file bundled JSON Schema artifacts for capsule and validator-envelope consumers",
+      "package-level bundled-schema consumer recipe examples",
+      "repo-local verification for single-file schema bundle artifacts"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -81,13 +84,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 295,
-    "markdown_files": 96,
-    "schema_files": 34,
+    "total_files": 303,
+    "markdown_files": 97,
+    "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 27,
+    "client_recipe_files": 29,
     "workflow_files": 1,
     "issue_templates": 4
   },
@@ -133,7 +136,7 @@
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 49,
+    "repo_local_check_count": 50,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -183,7 +186,8 @@
     "repo_validation_workflow": "docs/repo-validation-workflow.md",
     "npm_consumption": "docs/npm-consumption.md",
     "integrity_recipes": "docs/integrity-recipes.md",
-    "invalid_api_envelope_examples": "docs/invalid-api-envelope-examples.md"
+    "invalid_api_envelope_examples": "docs/invalid-api-envelope-examples.md",
+    "schema_bundles": "docs/schema-bundles.md"
   },
   "program_readiness": {
     "maintainer_owned": true,

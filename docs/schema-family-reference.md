@@ -12,6 +12,8 @@ Use this family when you need to read, validate, or generate a capsule artifact 
   Canonical outer contract for the five-element capsule artifact.
 - [`../schemas/neuro-concentrate.schema.json`](../schemas/neuro-concentrate.schema.json)
   Nested semantic-summary contract referenced by `capsule-schema.json`.
+- [`../schemas/capsule-schema.bundle.json`](../schemas/capsule-schema.bundle.json)
+  Single-file bundle variant of the capsule contract for consumers who want fewer imports.
 - [`schema-reference.md`](schema-reference.md)
   Field-level explanation of both the outer capsule shape and the nested neuro layer.
 - [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
@@ -25,6 +27,7 @@ Choose this family when you are building:
 - a capsule writer
 - a validator input generator
 - source-level tooling that needs the public artifact shape
+- code-generation or polyglot tooling that prefers one-file schema imports via [`schema-bundles.md`](schema-bundles.md)
 
 ## Family 2: validator transport and HTTP envelopes
 
@@ -32,6 +35,8 @@ Use this family when you need public validator request and response shapes rathe
 
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
   Canonical public schema bundle for validator request and response envelopes.
+- [`../schemas/validator-api-envelopes.bundle.json`](../schemas/validator-api-envelopes.bundle.json)
+  Single-file bundle variant for validator request and response envelopes.
 - [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
   Route-level HTTP contract for the published validator family.
 - [`api-envelopes.md`](api-envelopes.md)
@@ -49,6 +54,7 @@ Choose this family when you are building:
 - API tests
 - a request/response parser
 - transport-level integration code
+- code-generation or polyglot tooling that wants one-file envelope imports via [`schema-bundles.md`](schema-bundles.md)
 
 ## Family 3: portability and archive contracts
 
@@ -124,8 +130,10 @@ Choose this family when you are building:
 ## Which family is strongest for what
 
 - Use `capsule-schema.json` when the question is about capsule outer shape.
+- Use `capsule-schema.bundle.json` when you need the same outer shape as a single-file schema artifact.
 - Use `neuro-concentrate.schema.json` when the question is about the semantic-summary subobject.
 - Use `validator-api-envelopes.schema.json` when the question is about public validator request or response object shape.
+- Use `validator-api-envelopes.bundle.json` when you need the same public validator request or response object shape as a single-file schema artifact.
 - Use `validate.openapi.json` when the question is about routes, methods, or HTTP-level transport semantics.
 - Use `archive-bundle.schema.json` when the question is about portability/export bundle shape.
 - Use the `public-*.schema.json` family when the question is about this repository's own machine-readable review, release, provenance, or governance summaries.

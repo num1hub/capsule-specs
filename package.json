@@ -111,6 +111,7 @@
   "scripts": {
     "audit:public-surface": "node scripts/audit-public-surface.js",
     "build:projections": "tsc -p tsconfig.build.json",
+    "build:schema-bundles": "node scripts/build-schema-bundles.js",
     "check:examples": "node scripts/check-example-contracts.js",
     "check:api-examples": "node scripts/check-api-examples.js",
     "check:api-schemas": "node scripts/check-api-schemas.js",
@@ -119,6 +120,7 @@
     "check:package-install": "node scripts/check-package-install.js",
     "check:raw-capsules": "node scripts/check-raw-capsules.js",
     "check:reference-pack": "node scripts/check-reference-pack.js",
+    "check:schema-bundles": "node scripts/check-schema-bundles.js",
     "check:schema-recipes": "node scripts/check-schema-recipes.js",
     "check:invalid-examples": "node scripts/check-invalid-examples.js",
     "check:invalid-api-examples": "node scripts/check-invalid-api-examples.js",
@@ -157,7 +159,7 @@
     "check:project-profile": "node scripts/check-project-profile.js",
     "check:surface": "node scripts/check-surface-coherence.js",
     "check:release": "node scripts/check-release-metadata.js",
-    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:api-schemas && npm run check:type-projections && npm run check:package-surface && npm run check:package-install && npm run check:raw-capsules && npm run check:reference-pack && npm run check:schema-recipes && npm run check:invalid-examples && npm run check:invalid-api-examples && npm run check:integrity-recipes && npm run check:python-recipes && npm run check:example-coverage && npm run check:boundary-map && npm run check:client-recipes && npm run check:community-health && npm run check:github-operations && npm run check:maintenance-model && npm run check:change-control && npm run check:ownership-map && npm run check:dependency-graph && npm run check:assurance-case && npm run check:update-coherence && npm run check:limitations-register && npm run check:evidence-timeline && npm run check:review-scorecard && npm run check:verification-matrix && npm run check:audience-paths && npm run check:evidence-strength && npm run check:adoption-readiness && npm run check:freshness && npm run check:ecosystem-value && npm run check:decision-log && npm run check:evidence-gaps && npm run check:program-fit && npm run check:publication-readiness && npm run check:repository-identity && npm run check:docs && npm run check:catalog && npm run check:evaluation-packet && npm run check:failure-model && npm run check:traceability && npm run check:portability && npm run check:project-profile && npm run check:capability-matrix && npm run check:surface && npm run check:release",
+    "verify:repo": "npm run audit:public-surface && npm run check:examples && npm run check:api-examples && npm run check:api-schemas && npm run check:type-projections && npm run check:package-surface && npm run check:package-install && npm run check:raw-capsules && npm run check:reference-pack && npm run check:schema-bundles && npm run check:schema-recipes && npm run check:invalid-examples && npm run check:invalid-api-examples && npm run check:integrity-recipes && npm run check:python-recipes && npm run check:example-coverage && npm run check:boundary-map && npm run check:client-recipes && npm run check:community-health && npm run check:github-operations && npm run check:maintenance-model && npm run check:change-control && npm run check:ownership-map && npm run check:dependency-graph && npm run check:assurance-case && npm run check:update-coherence && npm run check:limitations-register && npm run check:evidence-timeline && npm run check:review-scorecard && npm run check:verification-matrix && npm run check:audience-paths && npm run check:evidence-strength && npm run check:adoption-readiness && npm run check:freshness && npm run check:ecosystem-value && npm run check:decision-log && npm run check:evidence-gaps && npm run check:program-fit && npm run check:publication-readiness && npm run check:repository-identity && npm run check:docs && npm run check:catalog && npm run check:evaluation-packet && npm run check:failure-model && npm run check:traceability && npm run check:portability && npm run check:project-profile && npm run check:capability-matrix && npm run check:surface && npm run check:release",
     "check:ecosystem-value": "node scripts/check-ecosystem-value.js",
     "check:decision-log": "node scripts/check-decision-log.js",
     "prepack": "npm run build:projections"

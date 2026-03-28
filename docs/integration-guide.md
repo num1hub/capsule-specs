@@ -7,6 +7,7 @@ This guide shows the safest path for building against the public N1Hub specifica
 - read [`schema-family-reference.md`](schema-family-reference.md)
 - read [`schema-reference.md`](schema-reference.md)
 - inspect [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
+- inspect [`schema-bundles.md`](schema-bundles.md) if you prefer one-file schema artifacts for code generation, Ajv wiring, or polyglot tooling
 - inspect [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
 - inspect [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
 
@@ -25,6 +26,7 @@ If you want a raw JSON Schema validation path instead of the projection layer or
 - [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
+- [`../examples/client/ajv-validate-schema-bundles.mjs`](../examples/client/ajv-validate-schema-bundles.mjs)
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/ajv-reject-invalid-validator-envelopes.mjs)
 
@@ -57,7 +59,7 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
 If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
-That check confirms CommonJS runtime usage, ESM runtime usage, raw-schema Ajv usage, and TypeScript type resolution from an installed tarball.
+That check confirms CommonJS runtime usage, ESM runtime usage, raw-schema and bundled-schema Ajv usage, and TypeScript type resolution from an installed tarball.
 It also confirms packaged structural rejection recipes for intentionally invalid capsule and validator-envelope fixtures.
 For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md).
 If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.
