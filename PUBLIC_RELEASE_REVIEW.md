@@ -11,6 +11,7 @@
 - public docs for the capsule law, validator, relation types, schema-family selection, field-level schema reference, API envelopes, integration guidance, package consumption, compatibility, examples, anchor governance, repository boundary, FAQ, and source materials
 - projection doctrine, domain boundaries, generator-readiness guidance, and a machine-readable boundary map
 - portability docs, archive-bundle schema and sample, and a machine-readable portability profile
+- archive-bundle validation recipes for repo-local and installed-package consumers, plus a dedicated verifier
 - route reference and verification docs for navigating and auditing the public surface
 - explicit versioning policy in `VERSIONING.md`
 - machine-readable public contract catalog in `PUBLIC_CONTRACT_CATALOG.json` plus the companion guide in `docs/contract-catalog.md`
@@ -91,6 +92,7 @@ Repository-local audit on 2026-03-28:
 - `node scripts/check-reference-pack.js`: pass
 - `node scripts/check-schema-bundles.js`: pass
 - `node scripts/check-schema-recipes.js`: pass
+- `node scripts/check-archive-recipes.js`: pass
 - `node scripts/check-invalid-examples.js`: pass
 - `node scripts/check-invalid-api-examples.js`: pass
 - `node scripts/check-integrity-recipes.js`: pass
@@ -180,3 +182,4 @@ Upstream validator checks on 2026-03-26:
 - `projections/typescript/capsule.ts`, `projections/typescript/validator-api.ts`, `projections/zod/capsule.ts`, `projections/zod/validator-api.ts`, and the source-level client recipe examples are public-safe convenience projections and must stay subordinate to the stronger JSON Schema, OpenAPI, curated API examples, and live validator behavior they align to
 - `docs/npm-consumption.md`, `package.json`, `tsconfig.build.json`, `scripts/check-package-install.js`, the built projection bundles, and the package-based client recipes are a convenience distribution layer and must stay subordinate to the stronger source projections, JSON Schemas, OpenAPI, curated examples, and live validator behavior they package
 - `docs/schema-bundles.md`, `schemas/capsule-schema.bundle.json`, `schemas/validator-api-envelopes.bundle.json`, the bundled-schema recipes under `examples/client/`, and `scripts/check-schema-bundles.js` are a bounded convenience layer for lower-friction single-file schema consumption and must stay subordinate to the stronger raw schema files, OpenAPI artifacts, and live validator behavior they simplify
+- `docs/archive-validation-recipes.md`, the archive-bundle Ajv recipes under `examples/client/`, and `scripts/check-archive-recipes.js` are a bounded portability-contract teaching layer and must stay subordinate to the stronger archive schema, portability docs, and non-hosted trust posture they simplify

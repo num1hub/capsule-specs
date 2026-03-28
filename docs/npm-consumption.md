@@ -10,6 +10,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - package exports for compact contract reference JSON artifacts
 - package exports for raw JSON Schema validation with third-party validators such as Ajv
+- package exports for archive-bundle schema validation against the published portability sample
 - package exports for intentionally invalid capsule and validator-envelope fixtures used in structural rejection tests
 - package exports for integrity-rule constants and copyable seal-recomputation recipes
 - package exports for curated raw capsule source files
@@ -41,6 +42,7 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json`
 - `@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json`
 - `@num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json`
+- `@num1hub/capsule-specs/schemas/archive-bundle.schema.json`
 - `@num1hub/capsule-specs/openapi/validate.openapi.json`
 - `@num1hub/capsule-specs/references/contract-constants.json`
 - `@num1hub/capsule-specs/references/validation-gates.json`
@@ -121,6 +123,12 @@ if (!validateCapsule(note)) {
 A copyable version of this example also lives at [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs).
 
 That recipe proves the installed package exports single-file schema bundle artifacts for both capsule validation and validator-envelope validation, so downstream consumers do not need to wire multi-file `$ref` graphs manually.
+
+## Minimal package-level archive-schema example
+
+A copyable version of this example also lives at [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs).
+
+That recipe proves the installed package exports the published archive-bundle schema and sample payload, so portability consumers can validate export/replay contract shape without reaching into private runtime code or a hosted service. Use `ajv/dist/2020.js` together with `ajv-formats` when consuming that path because the archive schema includes `date-time` fields.
 
 ## Minimal package-level Ajv negative example
 
@@ -212,6 +220,7 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - `npm run check:reference-pack`
 - `npm run check:schema-bundles`
 - `npm run check:schema-recipes`
+- `npm run check:archive-recipes`
 - `npm run check:invalid-examples`
 - `npm run check:invalid-api-examples`
 - `npm run check:integrity-recipes`

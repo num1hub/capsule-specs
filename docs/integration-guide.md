@@ -22,10 +22,12 @@ If you need compact enums, gate IDs, or validator option flags for UI pickers, c
 If you want a raw JSON Schema validation path instead of the projection layer or the live validator API, also inspect:
 
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
+- [`archive-validation-recipes.md`](archive-validation-recipes.md)
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
 - [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
+- [`../examples/client/ajv-validate-archive-bundle.mjs`](../examples/client/ajv-validate-archive-bundle.mjs)
 - [`../examples/client/ajv-validate-schema-bundles.mjs`](../examples/client/ajv-validate-schema-bundles.mjs)
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/ajv-reject-invalid-validator-envelopes.mjs)
@@ -63,6 +65,13 @@ That check confirms CommonJS runtime usage, ESM runtime usage, raw-schema and bu
 It also confirms packaged structural rejection recipes for intentionally invalid capsule and validator-envelope fixtures.
 For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md).
 If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.
+
+If your integration path touches portability, export review, or replay-contract tooling instead of validator HTTP routes, also inspect:
+
+- [`archive-bundles.md`](archive-bundles.md)
+- [`archive-validation-recipes.md`](archive-validation-recipes.md)
+- [`../schemas/archive-bundle.schema.json`](../schemas/archive-bundle.schema.json)
+- [`../examples/archive/archive-bundle.sample.json`](../examples/archive/archive-bundle.sample.json)
 
 ## 3. Learn the minimal capsule shape
 

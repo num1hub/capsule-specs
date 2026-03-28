@@ -10,6 +10,7 @@ const clientDir = path.join(repoRoot, 'examples', 'client');
 const repoLocalRecipes = [
   'ajv-validate-capsule.mjs',
   'ajv-validate-validator-envelope.mjs',
+  'ajv-validate-archive-bundle.mjs',
   'ajv-validate-schema-bundles.mjs',
   'ajv-reject-invalid-capsules.mjs',
   'ajv-reject-invalid-validator-envelopes.mjs'
@@ -17,6 +18,7 @@ const repoLocalRecipes = [
 
 const packageRecipes = [
   'esm-package-ajv-validate-contracts.mjs',
+  'esm-package-ajv-validate-archive-bundle.mjs',
   'esm-package-ajv-validate-schema-bundles.mjs',
   'esm-package-ajv-reject-invalid-capsules.mjs',
   'esm-package-ajv-reject-invalid-validator-envelopes.mjs'
@@ -37,6 +39,9 @@ for (const fileName of repoLocalRecipes) {
   const filePath = path.join(clientDir, fileName);
   const content = fs.readFileSync(filePath, 'utf8');
   assert(content.includes('ajv/dist/2020.js'), `${fileName} must use Ajv draft-2020 support`);
+  if (fileName === 'ajv-validate-archive-bundle.mjs') {
+    assert(content.includes('ajv-formats'), `${fileName} must import ajv-formats for schema format support`);
+  }
   const syntaxResult = spawnSync(process.execPath, ['--check', filePath], { encoding: 'utf8' });
   assert(syntaxResult.status === 0, `${fileName} must be syntactically valid: ${syntaxResult.stderr || syntaxResult.stdout}`);
   const execResult = spawnSync(process.execPath, [filePath], { encoding: 'utf8' });
@@ -52,6 +57,12 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/examples/example-note.capsule.json',
     '@num1hub/capsule-specs/examples/api/validate-request.single.json',
     '@num1hub/capsule-specs/examples/api/validate-response.pass.json'
+  ],
+  'esm-package-ajv-validate-archive-bundle.mjs': [
+    'ajv/dist/2020.js',
+    'ajv-formats',
+    '@num1hub/capsule-specs/schemas/archive-bundle.schema.json',
+    '@num1hub/capsule-specs/examples/archive/archive-bundle.sample.json'
   ],
   'esm-package-ajv-validate-schema-bundles.mjs': [
     'ajv/dist/2020.js',

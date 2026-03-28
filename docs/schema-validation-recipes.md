@@ -12,6 +12,7 @@ Use this path when you want:
 
 - validating capsule shape against [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
 - validating request and response envelopes against [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
+- validating archive portability payloads against [`../schemas/archive-bundle.schema.json`](../schemas/archive-bundle.schema.json)
 - wiring raw-schema tooling with a mainstream JSON Schema validator such as Ajv
 - consuming the same schema artifacts either from a repo checkout or from package exports
 
@@ -33,6 +34,7 @@ Start with these copyable examples:
 
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
+- [`../examples/client/ajv-validate-archive-bundle.mjs`](../examples/client/ajv-validate-archive-bundle.mjs)
 - [`../examples/client/ajv-validate-schema-bundles.mjs`](../examples/client/ajv-validate-schema-bundles.mjs)
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/ajv-reject-invalid-validator-envelopes.mjs)
@@ -41,6 +43,7 @@ They validate:
 
 - a public example capsule against the capsule and neuro-concentrate schemas
 - validator request/response payloads against the validator envelope schema bundle
+- the published archive-bundle sample against the public portability/export schema with `Ajv2020 + ajv-formats`
 - the same capsule and validator-envelope payloads against single-file schema bundles when you want fewer imports and no manual multi-file `addSchema` choreography
 - intentionally invalid capsule fixtures against their documented structural rejection rules
 - intentionally invalid validator-envelope fixtures against their documented structural rejection rules
@@ -50,6 +53,7 @@ Run them from a repo checkout after `npm install`:
 ```bash
 node examples/client/ajv-validate-capsule.mjs
 node examples/client/ajv-validate-validator-envelope.mjs
+node examples/client/ajv-validate-archive-bundle.mjs
 node examples/client/ajv-validate-schema-bundles.mjs
 node examples/client/ajv-reject-invalid-capsules.mjs
 node examples/client/ajv-reject-invalid-validator-envelopes.mjs
@@ -62,6 +66,7 @@ For the underlying invalid fixtures and their intended failure reasons, see [`in
 If you want the same raw-schema path from an installed tarball or future package distribution, use:
 
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
+- [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs)
 - [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs)
@@ -71,15 +76,18 @@ That recipe consumes:
 - `@num1hub/capsule-specs/schemas/capsule-schema.json`
 - `@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json`
 - `@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json`
+- `@num1hub/capsule-specs/schemas/archive-bundle.schema.json`
 - `@num1hub/capsule-specs/schemas/capsule-schema.bundle.json`
 - `@num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json`
 - public example capsule and API payload files from package exports
+- the public archive-bundle sample from package exports
 
 The fresh-install proof for that path lives in [`../scripts/check-package-install.js`](../scripts/check-package-install.js).
 
 ## Minimal decision rule
 
 - choose raw schemas when you need a portable structural contract
+- choose the archive schema when the contract you care about is portability/export replay shape
 - choose schema bundles when you want that same contract as a single-file import
 - choose the projection layer when you want typed ergonomics
 - choose the live validator and OpenAPI docs when edge-case runtime behavior matters
@@ -88,6 +96,7 @@ The fresh-install proof for that path lives in [`../scripts/check-package-instal
 
 - `npm run check:schema-bundles`
 - `npm run check:schema-recipes`
+- `npm run check:archive-recipes`
 - `npm run check:invalid-examples`
 - `npm run check:invalid-api-examples`
 - `npm run check:package-install`

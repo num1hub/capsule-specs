@@ -93,4 +93,5 @@ Start with [`../docs/schema-family-reference.md`](../docs/schema-family-referenc
 - These schemas are projection artifacts aligned to the live validator surface.
 - The live validator remains the stronger source of truth for edge-case semantics and admission behavior.
 - If you want single-file schema artifacts for code generation, package consumption, or lower-friction Ajv wiring, start with [`../docs/schema-bundles.md`](../docs/schema-bundles.md).
+- If you want copyable Ajv validation for the published archive-bundle portability sample, start with [`../docs/archive-validation-recipes.md`](../docs/archive-validation-recipes.md).
 - If you need source-level consumer artifacts rather than raw JSON Schema alone, start with [`../docs/type-projections.md`](../docs/type-projections.md) and the published files under [`../projections/`](../projections/).

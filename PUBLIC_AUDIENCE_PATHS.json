@@ -53,6 +53,7 @@
         "docs/schema-bundles.md",
         "docs/reference-pack.md",
         "docs/schema-validation-recipes.md",
+        "docs/archive-validation-recipes.md",
         "docs/invalid-capsule-examples.md",
         "docs/npm-consumption.md",
         "docs/integrity-recipes.md",
@@ -78,7 +79,10 @@
         "docs/integrity-recipes.md",
         "docs/python-consumption.md",
         "docs/invalid-api-envelope-examples.md",
-        "examples/api-invalid/README.md"
+        "examples/api-invalid/README.md",
+        "docs/archive-validation-recipes.md",
+        "schemas/archive-bundle.schema.json",
+        "examples/archive/archive-bundle.sample.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
@@ -87,6 +91,7 @@
         "npm run check:client-recipes",
         "npm run check:reference-pack",
         "npm run check:schema-recipes",
+        "npm run check:archive-recipes",
         "npm run check:schema-bundles",
         "npm run check:invalid-examples",
         "npm run check:package-surface",
@@ -106,7 +111,8 @@
         "can recompute integrity_sha3_512 and validator computedHash values from the published first-four-roots sealing rule instead of guessing from stale example hashes",
         "can consume compact references and public seal proofs from Python by reading raw packaged assets instead of depending on Node-specific imports",
         "can distinguish schema-invalid validator-envelope fixtures from structurally valid negative API responses such as the public G16 fail example",
-        "can choose between raw multi-file schemas and single-file bundle schemas without guessing which public layer is stronger"
+        "can choose between raw multi-file schemas and single-file bundle schemas without guessing which public layer is stronger",
+        "can validate the published archive-bundle sample directly against the portability/export schema from either repo-relative files or installed package exports"
       ],
       "bounded_non_goals": [
         "does not promise a public hosted endpoint",
@@ -161,6 +167,7 @@
         "docs/integration-guide.md",
         "docs/reference-pack.md",
         "docs/schema-validation-recipes.md",
+        "docs/archive-validation-recipes.md",
         "docs/invalid-capsule-examples.md",
         "docs/npm-consumption.md",
         "docs/integrity-recipes.md",
@@ -187,7 +194,10 @@
         "docs/python-consumption.md",
         "docs/invalid-api-envelope-examples.md",
         "examples/api-invalid/README.md",
-        "schemas/validator-api-envelopes.bundle.json"
+        "schemas/validator-api-envelopes.bundle.json",
+        "docs/archive-validation-recipes.md",
+        "schemas/archive-bundle.schema.json",
+        "examples/archive/archive-bundle.sample.json"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
@@ -195,6 +205,7 @@
         "npm run check:api-schemas",
         "npm run check:reference-pack",
         "npm run check:schema-recipes",
+        "npm run check:archive-recipes",
         "npm run check:schema-bundles",
         "npm run check:invalid-examples",
         "npm run check:capability-matrix",
@@ -215,7 +226,8 @@
         "can recompute public integrity seals and validator computedHash values from both repo-relative files and installed package exports",
         "can consume compact references and public seal proofs from Python using extracted packaged JSON assets instead of relying on Node-only imports",
         "can use intentionally invalid validator-envelope fixtures as structural regression tests instead of confusing them with structurally valid negative API examples",
-        "can choose between raw multi-file schemas and single-file bundle schemas without guessing which public layer is stronger"
+        "can choose between raw multi-file schemas and single-file bundle schemas without guessing which public layer is stronger",
+        "can use the archive-bundle schema and sample as a public portability/export regression target from both repo-relative files and installed package exports"
       ],
       "bounded_non_goals": [
         "does not guarantee a feature-complete SDK",
@@ -246,7 +258,8 @@
         "docs/schema-bundles.md",
         "docs/integrity-recipes.md",
         "docs/python-consumption.md",
-        "docs/invalid-api-envelope-examples.md"
+        "docs/invalid-api-envelope-examples.md",
+        "docs/archive-validation-recipes.md"
       ],
       "verify_commands": [
         "npm run check:audience-paths",
@@ -254,6 +267,7 @@
         "npm run check:update-coherence",
         "npm run check:release",
         "npm run check:schema-bundles",
+        "npm run check:archive-recipes",
         "npm run check:integrity-recipes",
         "npm run check:python-recipes",
         "npm run check:invalid-api-examples"
@@ -264,7 +278,8 @@
         "can keep reviewer shortcuts aligned with the real public artifact set",
         "can keep cross-language Python consumer claims aligned with packaged assets, compact references, and public G16 proof surfaces",
         "can keep the invalid validator-envelope teaching layer aligned with schema recipes, package-install proof, and structurally valid negative API examples",
-        "can keep the bundled-schema layer aligned with the stronger raw schema files, package-install proof, and consumer docs"
+        "can keep the bundled-schema layer aligned with the stronger raw schema files, package-install proof, and consumer docs",
+        "can keep the archive-bundle validation layer aligned with the stronger portability docs, archive schema, sample payload, and package-install proof"
       ],
       "bounded_non_goals": [
         "does not expose private operator playbooks",

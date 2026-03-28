@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 303,
-    "manifest_entries": 303
+    "files": 307,
+    "manifest_entries": 307
   },
   "surface_summary": {
-    "catalog_entries": 256,
+    "catalog_entries": 260,
     "example_capsules": 5,
     "api_example_files": 13,
-    "markdown_files": 97
+    "markdown_files": 98
   },
   "repo_local_checks": [
     {
@@ -58,6 +58,10 @@
     },
     {
       "command": "npm run check:schema-recipes",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:archive-recipes",
       "status": "pass"
     },
     {
@@ -253,6 +257,7 @@
     "PUBLIC_CAPABILITY_MATRIX.json is a high-level usability summary and can drift if maintainers add or remove strong public surfaces without updating the matrix",
     "PUBLIC_BOUNDARY_MAP.json is a curated summary of published vs deferred boundaries and can drift if scope docs change without updating the boundary map",
     "PUBLIC_PORTABILITY_PROFILE.json and the archive-bundle sample are public contract summaries, not proof of a deployed hosted export/import service",
+    "The archive-validation recipe layer in docs/archive-validation-recipes.md, examples/client/, and scripts/check-archive-recipes.js is a bounded structural portability teaching surface, not proof of a hosted export/import runtime or full replay workflow exposure.",
     "PUBLIC_EVALUATION_PACKET.json is a reviewer shortcut layer and must stay subordinate to the stronger docs, schemas, release evidence, and machine-readable source surfaces",
     "PUBLIC_FAILURE_MODEL.json is a bounded negative-evidence summary and must stay subordinate to the stronger examples, validator docs, OpenAPI, and portability surfaces",
     "PUBLIC_TRACEABILITY_MATRIX.json is a curated cross-surface map and can drift if maintainers stop updating it together with docs, schemas, examples, and verification artifacts",

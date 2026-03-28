@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- added archive-bundle validation recipes for repo-local and installed-package consumers, plus a dedicated verifier and portability-layer sync updates
 - added citation metadata, Dependabot update hygiene, repo-owned GitHub label/milestone configs, release-note categorization, and release-identity synchronization to the live GitHub release
 - added repo-local package metadata and a single `npm run verify:repo` entrypoint
 - added release and provenance docs for source materials, FAQ, and release cadence

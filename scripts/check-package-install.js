@@ -35,6 +35,7 @@ let tarballPath = null;
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
 const packageSchemaRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-contracts.mjs');
+const packageArchiveRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-archive-bundle.mjs');
 const packageBundleRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-schema-bundles.mjs');
 const packageInvalidSchemaRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-reject-invalid-capsules.mjs');
 const packageInvalidApiRecipePath = path.join(
@@ -97,7 +98,7 @@ try {
     private: true,
     type: 'module'
   });
-  run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'ajv'], esmProject);
+  run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'ajv', 'ajv-formats'], esmProject);
   fs.writeFileSync(
     path.join(esmProject, 'consumer.mjs'),
     [
@@ -105,6 +106,7 @@ try {
       "import * as zodProjection from '@num1hub/capsule-specs/zod';",
       "import * as validatorProjection from '@num1hub/capsule-specs/zod/validator-api';",
       "import capsuleSchemaJson from '@num1hub/capsule-specs/schemas/capsule-schema.json' with { type: 'json' };",
+      "import archiveBundleSchemaJson from '@num1hub/capsule-specs/schemas/archive-bundle.schema.json' with { type: 'json' };",
       "import capsuleBundleJson from '@num1hub/capsule-specs/schemas/capsule-schema.bundle.json' with { type: 'json' };",
       "import validatorBundleJson from '@num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json' with { type: 'json' };",
       "import contractConstants from '@num1hub/capsule-specs/references/contract-constants.json' with { type: 'json' };",
@@ -118,6 +120,7 @@ try {
       "if (!rootNamespace.typescript || !rootNamespace.zod) throw new Error('missing root namespaces');",
       "if (!capsuleSchema || !validatePassResponseSchema) throw new Error('missing zod exports');",
       "if (capsuleSchemaJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json') throw new Error('unexpected schema id');",
+      "if (archiveBundleSchemaJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/archive-bundle.schema.json') throw new Error('unexpected archive schema id');",
       "if (capsuleBundleJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.bundle.json') throw new Error('unexpected capsule bundle id');",
       "if (validatorBundleJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json') throw new Error('unexpected validator bundle id');",
       "if (contractConstants.relation_types.length !== 9) throw new Error('missing reference constants export');",
@@ -133,6 +136,8 @@ try {
   run(process.execPath, ['consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'schema-consumer.mjs'), fs.readFileSync(packageSchemaRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['schema-consumer.mjs'], esmProject);
+  fs.writeFileSync(path.join(esmProject, 'archive-schema-consumer.mjs'), fs.readFileSync(packageArchiveRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['archive-schema-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'bundle-schema-consumer.mjs'), fs.readFileSync(packageBundleRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['bundle-schema-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'invalid-schema-consumer.mjs'), fs.readFileSync(packageInvalidSchemaRecipePath, 'utf8'), 'utf8');
@@ -167,7 +172,7 @@ try {
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, raw and bundled schema exports, invalid capsule and API schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, raw, archive, and bundled schema exports, invalid capsule and API schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

@@ -147,7 +147,7 @@
       "id": "validate-with-raw-json-schema",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Validate public capsules and validator-envelope payloads directly against raw JSON Schema exports or single-file schema bundles with Ajv from either a repo checkout or an installed package, and confirm that intentionally invalid fixtures are rejected without depending on the projection layer.",
+      "outcome": "Validate public capsules, validator-envelope payloads, and archive-bundle portability samples directly against raw JSON Schema exports or single-file schema bundles with Ajv from either a repo checkout or an installed package, and confirm that intentionally invalid fixtures are rejected without depending on the projection layer.",
       "strongest_surfaces": [
         "docs/schema-validation-recipes.md",
         "docs/schema-bundles.md",
@@ -157,7 +157,9 @@
         "schemas/neuro-concentrate.schema.json",
         "schemas/validator-api-envelopes.schema.json",
         "schemas/validator-api-envelopes.bundle.json",
-        "docs/invalid-api-envelope-examples.md"
+        "docs/invalid-api-envelope-examples.md",
+        "docs/archive-validation-recipes.md",
+        "schemas/archive-bundle.schema.json"
       ],
       "supporting_surfaces": [
         "docs/integration-guide.md",
@@ -182,10 +184,15 @@
         "examples/api-invalid/README.md",
         "examples/api-invalid/validate-request.single.missing-capsule.json",
         "examples/api-invalid/validate-response.fail.invalid-gate.json",
-        "scripts/check-invalid-api-examples.js"
+        "scripts/check-invalid-api-examples.js",
+        "examples/archive/archive-bundle.sample.json",
+        "examples/client/ajv-validate-archive-bundle.mjs",
+        "examples/client/esm-package-ajv-validate-archive-bundle.mjs",
+        "scripts/check-archive-recipes.js"
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
+        "npm run check:archive-recipes",
         "npm run check:schema-bundles",
         "npm run check:invalid-examples",
         "npm run check:package-install",
@@ -388,15 +395,20 @@
         "docs/archive-bundles.md",
         "schemas/archive-bundle.schema.json",
         "examples/archive/archive-bundle.sample.json",
-        "PUBLIC_PORTABILITY_PROFILE.json"
+        "PUBLIC_PORTABILITY_PROFILE.json",
+        "docs/archive-validation-recipes.md"
       ],
       "supporting_surfaces": [
         "docs/trust-model.md",
         "docs/source-materials.md",
-        "schemas/public-portability-profile.schema.json"
+        "schemas/public-portability-profile.schema.json",
+        "examples/client/ajv-validate-archive-bundle.mjs",
+        "examples/client/esm-package-ajv-validate-archive-bundle.mjs",
+        "scripts/check-archive-recipes.js"
       ],
       "verify_commands": [
         "npm run check:portability",
+        "npm run check:archive-recipes",
         "npm run check:catalog",
         "npm run check:surface",
         "npm run check:capability-matrix"

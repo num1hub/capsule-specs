@@ -108,9 +108,10 @@
     },
     {
       "id": "raw-schema-consumer-recipes",
-      "summary": "Protects Ajv-based raw-schema and bundled-schema consumer recipes so direct capsule and validator-envelope validation, including structural rejection of intentionally invalid capsule and API-envelope fixtures, stays executable from both repo-relative files and installed package exports.",
+      "summary": "Protects Ajv-based raw-schema, archive-schema, and bundled-schema consumer recipes so direct capsule, validator-envelope, and archive-bundle validation, including structural rejection of intentionally invalid capsule and API-envelope fixtures, stays executable from both repo-relative files and installed package exports.",
       "commands": [
         "npm run check:schema-recipes",
+        "npm run check:archive-recipes",
         "npm run check:schema-bundles",
         "npm run check:invalid-examples",
         "npm run check:package-install",
@@ -133,7 +134,11 @@
         "docs/invalid-api-envelope-examples.md",
         "examples/client/ajv-reject-invalid-validator-envelopes.mjs",
         "examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs",
-        "examples/api-invalid/"
+        "examples/api-invalid/",
+        "docs/archive-validation-recipes.md",
+        "examples/client/ajv-validate-archive-bundle.mjs",
+        "examples/client/esm-package-ajv-validate-archive-bundle.mjs",
+        "examples/archive/"
       ],
       "strongest_surfaces": [
         "scripts/check-schema-recipes.js",
@@ -146,7 +151,11 @@
         "schemas/neuro-concentrate.schema.json",
         "schemas/validator-api-envelopes.schema.json",
         "schemas/validator-api-envelopes.bundle.json",
-        "scripts/check-invalid-api-examples.js"
+        "scripts/check-invalid-api-examples.js",
+        "docs/archive-validation-recipes.md",
+        "scripts/check-archive-recipes.js",
+        "schemas/archive-bundle.schema.json",
+        "examples/archive/archive-bundle.sample.json"
       ],
       "failure_modes_prevented": [
         "broken raw-schema consumer recipes",
@@ -155,7 +164,9 @@
         "invalid schema fixtures that unexpectedly pass structural validation",
         "invalid validator-envelope fixtures that unexpectedly pass structural validation",
         "broken single-file bundled-schema consumer recipes",
-        "bundle schemas drifting away from the stronger raw schema files"
+        "bundle schemas drifting away from the stronger raw schema files",
+        "broken archive-bundle validation recipes",
+        "archive portability sample drifting away from the published archive schema"
       ]
     },
     {

@@ -65,6 +65,7 @@ const typescriptProjection = require('@num1hub/capsule-specs/typescript');
 const zodProjection = require('@num1hub/capsule-specs/zod');
 const validatorZod = require('@num1hub/capsule-specs/zod/validator-api');
 const capsuleSchemaJson = require('@num1hub/capsule-specs/schemas/capsule-schema.json');
+const archiveBundleSchemaJson = require('@num1hub/capsule-specs/schemas/archive-bundle.schema.json');
 const capsuleBundleJson = require('@num1hub/capsule-specs/schemas/capsule-schema.bundle.json');
 const neuroSchemaJson = require('@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json');
 const validatorSchemaJson = require('@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json');
@@ -73,6 +74,7 @@ const openapi = require('@num1hub/capsule-specs/openapi/validate.openapi.json');
 const contractConstants = require('@num1hub/capsule-specs/references/contract-constants.json');
 const validationGates = require('@num1hub/capsule-specs/references/validation-gates.json');
 const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
+const archiveBundleSample = require('@num1hub/capsule-specs/examples/archive/archive-bundle.sample.json');
 const invalidRelationTypeCapsule = require('@num1hub/capsule-specs/examples/invalid/example-invalid-relation-type.capsule.json');
 const invalidApiFailResponse = require('@num1hub/capsule-specs/examples/api-invalid/validate-response.fail.invalid-gate.json');
 const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsule.json'));
@@ -83,6 +85,7 @@ assert(Array.isArray(typescriptProjection.CAPSULE_TYPES), 'typescript export mus
 assert(typeof zodProjection.capsuleSchema?.parse === 'function', 'zod export must expose capsuleSchema.parse');
 assert(typeof validatorZod.validatePassResponseSchema?.parse === 'function', 'validator zod export must expose validatePassResponseSchema.parse');
 assert(capsuleSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json', 'capsule schema export must expose the public schema JSON');
+assert(archiveBundleSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/archive-bundle.schema.json', 'archive-bundle schema export must expose the public schema JSON');
 assert(capsuleBundleJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.bundle.json', 'capsule bundle export must expose the public bundled schema JSON');
 assert(neuroSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/neuro-concentrate.schema.json', 'neuro schema export must expose the public schema JSON');
 assert(validatorSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json', 'validator schema export must expose the public schema JSON');
@@ -107,6 +110,10 @@ assert(
 assert(
   invalidApiFailResponse.errors?.[0]?.gate === 'gate-16',
   'package exports must expose nested invalid API envelope fixtures'
+);
+assert(
+  archiveBundleSample.bundleId === 'bundle.public-specs.demo.2026-03-26',
+  'package exports must expose the archive-bundle sample payload'
 );
 
 const parsedNote = zodProjection.capsuleSchema.parse(exampleNote);
@@ -136,6 +143,7 @@ for (const relativePath of [
   'dist/projections/typescript/capsule.js',
   'dist/projections/zod/validator-api.js',
   'docs/npm-consumption.md',
+  'docs/archive-validation-recipes.md',
   'docs/schema-bundles.md',
   'docs/schema-validation-recipes.md',
   'docs/invalid-capsule-examples.md',
@@ -143,6 +151,7 @@ for (const relativePath of [
   'docs/integrity-recipes.md',
   'docs/python-consumption.md',
   'schemas/capsule-schema.json',
+  'schemas/archive-bundle.schema.json',
   'schemas/capsule-schema.bundle.json',
   'schemas/neuro-concentrate.schema.json',
   'schemas/validator-api-envelopes.schema.json',
@@ -154,11 +163,13 @@ for (const relativePath of [
   'docs/reference-pack.md',
   'examples/client/ajv-validate-capsule.mjs',
   'examples/client/ajv-validate-validator-envelope.mjs',
+  'examples/client/ajv-validate-archive-bundle.mjs',
   'examples/client/ajv-validate-schema-bundles.mjs',
   'examples/client/ajv-reject-invalid-capsules.mjs',
   'examples/client/ajv-reject-invalid-validator-envelopes.mjs',
   'examples/client/cjs-package-contract-reference.cjs',
   'examples/client/esm-package-ajv-validate-contracts.mjs',
+  'examples/client/esm-package-ajv-validate-archive-bundle.mjs',
   'examples/client/esm-package-ajv-validate-schema-bundles.mjs',
   'examples/client/esm-package-ajv-reject-invalid-capsules.mjs',
   'examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs',

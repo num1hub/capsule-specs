@@ -265,15 +265,20 @@
         "docs/archive-bundles.md",
         "PUBLIC_PORTABILITY_PROFILE.json",
         "schemas/archive-bundle.schema.json",
-        "examples/archive/archive-bundle.sample.json"
+        "examples/archive/archive-bundle.sample.json",
+        "docs/archive-validation-recipes.md"
       ],
       "supporting_surfaces": [
         "docs/trust-model.md",
         "docs/compatibility.md",
-        "schemas/public-portability-profile.schema.json"
+        "schemas/public-portability-profile.schema.json",
+        "examples/client/ajv-validate-archive-bundle.mjs",
+        "examples/client/esm-package-ajv-validate-archive-bundle.mjs",
+        "scripts/check-archive-recipes.js"
       ],
       "verify_commands": [
         "npm run check:portability",
+        "npm run check:archive-recipes",
         "npm run check:surface",
         "npm run check:traceability"
       ]

@@ -327,6 +327,18 @@
     "transformation_type": "derived",
     "notes": "Human-readable reference for the archive-bundle contract and replay posture."
   },
+  "docs/archive-validation-recipes.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/archive-bundles.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
+      "/home/n1/codex-workspace/examples/client/ajv-validate-archive-bundle.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-archive-bundle.mjs"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to validating the published archive-bundle sample against the public portability/export schema from repo-relative files or installed package exports."
+  },
   "docs/artifact-ownership.md": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/trust-model.md",
@@ -1872,6 +1884,14 @@
     "transformation_type": "generated",
     "notes": "Repo-local Ajv recipe for rejecting intentionally invalid validator-envelope fixtures against the published schema bundle."
   },
+  "examples/client/ajv-validate-archive-bundle.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for validating the published archive-bundle sample."
+  },
   "examples/client/ajv-validate-capsule.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
@@ -1973,6 +1993,15 @@
     ],
     "transformation_type": "generated",
     "notes": "Package-consumer Ajv recipe for rejecting installed invalid validator-envelope fixtures."
+  },
+  "examples/client/esm-package-ajv-validate-archive-bundle.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for validating the published archive-bundle sample from installed package exports."
   },
   "examples/client/esm-package-ajv-validate-contracts.mjs": {
     "source_paths": [
@@ -4312,6 +4341,17 @@
     ],
     "transformation_type": "generated",
     "notes": "Repo-local schema coverage check for public validator API example payloads."
+  },
+  "scripts/check-archive-recipes.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/archive-validation-recipes.md",
+      "/home/n1/codex-workspace/examples/client/ajv-validate-archive-bundle.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-validate-archive-bundle.mjs",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json",
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for archive-bundle validation recipes and archive-schema consumer guidance."
   },
   "scripts/check-assurance-case.js": {
     "source_paths": [

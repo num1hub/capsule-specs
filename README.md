@@ -36,6 +36,7 @@ This repository is that home.
 - [`docs/generator-readiness.md`](docs/generator-readiness.md) for the generator/projection model
 - [`docs/portability.md`](docs/portability.md) for public portability and no-lock-in posture
 - [`docs/archive-bundles.md`](docs/archive-bundles.md) for the archive export / replay contract
+- [`docs/archive-validation-recipes.md`](docs/archive-validation-recipes.md) for direct Ajv validation of the published archive-bundle contract from repo and installed-package paths
 - [`docs/schema-family-reference.md`](docs/schema-family-reference.md) for choosing the right schema family first
 - [`docs/reference-pack.md`](docs/reference-pack.md) for compact machine-readable enums, gate IDs, and validator option flags
 - [`docs/schema-bundles.md`](docs/schema-bundles.md) for single-file bundled schema artifacts when you want less multi-file `$ref` wiring
@@ -167,6 +168,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - machine-readable validator API envelope schemas backed by repo-local validation
 - compact machine-readable contract references exported directly for tool-builders and package consumers
 - raw JSON Schema consumer recipes for Ajv-based structural validation from repo-relative files and installed package exports
+- archive-bundle schema validation recipes for portability/export consumers from repo-relative files and installed package exports
 - single-file bundled schema artifacts plus repo-local and package-level Ajv bundle recipes for lower-friction codegen and polyglot consumers
 - intentionally schema-invalid capsule fixtures plus Ajv rejection recipes for raw-schema consumers
 - intentionally schema-invalid validator API envelope fixtures plus Ajv rejection recipes for raw-schema consumers
@@ -208,12 +210,13 @@ Maintainer and review policy:
 7. Inspect [`docs/schema-bundles.md`](docs/schema-bundles.md), [`schemas/capsule-schema.bundle.json`](schemas/capsule-schema.bundle.json), and [`schemas/validator-api-envelopes.bundle.json`](schemas/validator-api-envelopes.bundle.json) if you want single-file schema imports instead of multi-file `$ref` wiring.
 8. Inspect [`docs/reference-pack.md`](docs/reference-pack.md) and [`references/`](references/) if you want compact machine-readable enums, gate IDs, and validator option flags without parsing larger schemas first.
 9. Inspect [`docs/schema-validation-recipes.md`](docs/schema-validation-recipes.md) if you want to validate capsules and validator-envelope payloads directly against the published raw JSON Schemas with Ajv.
-10. Inspect [`docs/invalid-capsule-examples.md`](docs/invalid-capsule-examples.md) if you want structural negative fixtures that should fail raw-schema validation before any stronger live-validator behavior is involved.
-11. Inspect [`docs/invalid-api-envelope-examples.md`](docs/invalid-api-envelope-examples.md) if you want structural negative validator-envelope fixtures that should fail raw-schema validation before any stronger live-validator route behavior is involved.
-12. Inspect [`docs/integrity-recipes.md`](docs/integrity-recipes.md) if you want the exact public sealing rule for `integrity_sha3_512`, the shortest recomputation path, and the repair boundary for the intentional `G16` example.
-13. Inspect [`docs/python-consumption.md`](docs/python-consumption.md) if you want a cross-language raw-JSON path for compact references and public `G16` seal proofs without depending on the Node projection layer.
-14. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`docs/npm-consumption.md`](docs/npm-consumption.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level or package-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
-15. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
+10. Inspect [`docs/archive-validation-recipes.md`](docs/archive-validation-recipes.md) if you want to validate the published archive-bundle sample directly against the public portability/export schema.
+11. Inspect [`docs/invalid-capsule-examples.md`](docs/invalid-capsule-examples.md) if you want structural negative fixtures that should fail raw-schema validation before any stronger live-validator behavior is involved.
+12. Inspect [`docs/invalid-api-envelope-examples.md`](docs/invalid-api-envelope-examples.md) if you want structural negative validator-envelope fixtures that should fail raw-schema validation before any stronger live-validator route behavior is involved.
+13. Inspect [`docs/integrity-recipes.md`](docs/integrity-recipes.md) if you want the exact public sealing rule for `integrity_sha3_512`, the shortest recomputation path, and the repair boundary for the intentional `G16` example.
+14. Inspect [`docs/python-consumption.md`](docs/python-consumption.md) if you want a cross-language raw-JSON path for compact references and public `G16` seal proofs without depending on the Node projection layer.
+15. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`docs/npm-consumption.md`](docs/npm-consumption.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level or package-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
+16. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
 16. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
 17. Inspect [`PUBLIC_EXAMPLE_COVERAGE.json`](PUBLIC_EXAMPLE_COVERAGE.json) if you want the bounded map from examples to covered routes, law surfaces, and negative paths.
 18. Inspect [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) if you want the bounded model for issue intake, review rules, and release posture.
@@ -240,15 +243,16 @@ Maintainer and review policy:
 39. Read [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) if you are preparing a bounded repo-only contribution.
 40. Run `npm run verify:repo` for the repository-local integrity checks.
 41. Run `npm run check:package-surface` if you want to confirm the packable projection-export layer as a consumer artifact.
-42. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS, ESM, TypeScript, raw-schema, bundled-schema, invalid-fixture, compact-reference, integrity-recipe, and Python raw-asset consumers.
+42. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS, ESM, TypeScript, raw-schema, archive-schema, bundled-schema, invalid-fixture, compact-reference, integrity-recipe, and Python raw-asset consumers.
 43. Run `npm run check:raw-capsules` if you want to confirm the curated raw capsule set stays structurally aligned and package-consumable.
 44. Run `npm run check:reference-pack` if you want to confirm the compact reference pack stays aligned to the stronger schema and gate surfaces.
 45. Run `npm run check:schema-bundles` if you want to confirm the committed single-file bundled schema artifacts and their consumer recipes stay aligned to the stronger raw schema files.
 46. Run `npm run check:schema-recipes` if you want to confirm the Ajv-based raw JSON Schema consumer recipes stay executable and aligned to the published schema exports.
-47. Run `npm run check:invalid-examples` if you want to confirm the published schema-invalid capsule fixtures keep failing for the documented structural reasons.
-48. Run `npm run check:invalid-api-examples` if you want to confirm the published schema-invalid validator-envelope fixtures keep failing for the documented structural reasons.
-49. Run `npm run check:integrity-recipes` if you want to confirm the published examples, validator API payloads, and sealing recipes stay aligned to the current public `G16` rule.
-50. Run `npm run check:python-recipes` if you want to confirm the cross-language Python consumer recipes stay aligned to the published compact references, public example seals, and extracted packed-artifact layout.
+47. Run `npm run check:archive-recipes` if you want to confirm the archive-bundle validation recipes stay executable and aligned to the published portability/export schema.
+48. Run `npm run check:invalid-examples` if you want to confirm the published schema-invalid capsule fixtures keep failing for the documented structural reasons.
+49. Run `npm run check:invalid-api-examples` if you want to confirm the published schema-invalid validator-envelope fixtures keep failing for the documented structural reasons.
+50. Run `npm run check:integrity-recipes` if you want to confirm the published examples, validator API payloads, and sealing recipes stay aligned to the current public `G16` rule.
+51. Run `npm run check:python-recipes` if you want to confirm the cross-language Python consumer recipes stay aligned to the published compact references, public example seals, and extracted packed-artifact layout.
 
 ## Source of truth
 
@@ -258,4 +262,4 @@ This repository is assembled from public-safe source materials curated out of th
 
 This is the initial public projection of the N1Hub open-core specification surface. The current release focuses on schema, validator-facing contracts, examples, and repository health rather than on the full runtime codebase.
 
-Wave 2 and Wave 3 are delivered. Wave 4 has started through an expanded curated raw capsule set, package-exported raw capsule assets, a compact reference pack for canonical enums and gate maps, fresh Ajv-backed raw-schema consumer recipes, explicit schema-invalid capsule and validator-envelope fixtures, single-file schema bundle artifacts for lower-friction codegen and polyglot consumers, and a cross-language Python raw-asset path for compact references and public `G16` seal proofs, and should continue widening other public-safe contract families without reopening the private runtime boundary.
+Wave 2 and Wave 3 are delivered. Wave 4 has started through an expanded curated raw capsule set, package-exported raw capsule assets, a compact reference pack for canonical enums and gate maps, fresh Ajv-backed raw-schema consumer recipes, direct archive-bundle validation recipes for portability consumers, explicit schema-invalid capsule and validator-envelope fixtures, single-file schema bundle artifacts for lower-friction codegen and polyglot consumers, and a cross-language Python raw-asset path for compact references and public `G16` seal proofs, and should continue widening other public-safe contract families without reopening the private runtime boundary.

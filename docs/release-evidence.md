@@ -89,6 +89,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Human-readable guide to the single-file bundled schema layer for lower-friction consumers.
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
   Human-readable guide to validating public capsules and validator-envelope payloads directly against the raw JSON Schema layer.
+- [`archive-validation-recipes.md`](archive-validation-recipes.md)
+  Human-readable guide to validating the published archive-bundle sample directly against the public portability/export schema.
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
   Human-readable guide to intentionally schema-invalid capsule fixtures and their documented structural rejection paths.
 - [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
@@ -141,6 +143,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that the committed single-file bundle schemas, their consumer recipes, and their human guide stay aligned to the stronger raw schema files.
 - [`../scripts/check-schema-recipes.js`](../scripts/check-schema-recipes.js)
   Repo-local verification that the Ajv-based raw-schema consumer recipes stay executable and aligned to published schema exports.
+- [`../scripts/check-archive-recipes.js`](../scripts/check-archive-recipes.js)
+  Repo-local verification that the archive-bundle validation recipes stay executable and aligned to the published portability/export schema.
 - [`../scripts/check-invalid-examples.js`](../scripts/check-invalid-examples.js)
   Repo-local verification that the published invalid schema fixtures stay rejected for the documented structural reasons.
 - [`../scripts/check-invalid-api-examples.js`](../scripts/check-invalid-api-examples.js)
@@ -207,6 +211,8 @@ The compact reference-pack layer strengthens that path further by giving tool-bu
 The schema-bundle layer strengthens that path further by giving code generators, Ajv consumers, and polyglot tooling a single-file schema path that stays subordinate to the stronger raw schema files instead of forcing every downstream consumer to wire the same multi-file `$ref` graph manually.
 
 The raw-schema recipe layer strengthens that path further by proving that downstream consumers can validate public capsules and validator-envelope payloads directly against the published JSON Schemas, both from a repo checkout and from installed package exports, without depending on the projection layer.
+
+The archive-validation layer strengthens that path further by proving that portability consumers can validate the published archive-bundle sample directly against the public export/replay schema, both from a repo checkout and from installed package exports, without mistaking the specs repo for a hosted import/export runtime.
 
 The invalid-fixture layer strengthens that path further by proving that downstream consumers can also test documented structural rejection cases for both capsules and validator HTTP envelopes instead of seeing only happy-path schema examples or live-validator-only failures.
 

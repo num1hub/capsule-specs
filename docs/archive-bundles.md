@@ -8,6 +8,12 @@ The published bundle schema lives at [`../schemas/archive-bundle.schema.json`](.
 
 The sample payload lives at [`../examples/archive/archive-bundle.sample.json`](../examples/archive/archive-bundle.sample.json).
 
+If you need an executable structural validation path instead of prose alone, also inspect:
+
+- [`archive-validation-recipes.md`](archive-validation-recipes.md)
+- [`../examples/client/ajv-validate-archive-bundle.mjs`](../examples/client/ajv-validate-archive-bundle.mjs)
+- [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs)
+
 ## Key fields
 
 - `bundleId`
