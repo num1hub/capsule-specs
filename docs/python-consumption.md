@@ -5,6 +5,7 @@ This page describes the public JSON-first consumption path for Python users.
 It is intentionally narrow:
 
 - read compact reference JSON artifacts
+- build validator-envelope requests for `validate`, `batch`, and `fix` flows from the published example payloads
 - inspect curated raw capsule assets
 - recompute `integrity_sha3_512` from the published `G16` rule
 - consume the same assets from a repository checkout or an extracted packed artifact
@@ -17,16 +18,23 @@ The shortest repo-relative Python examples live under [`../examples/client/`](..
 
 - [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
 - [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
+- [`../examples/client/python-validate-single.py`](../examples/client/python-validate-single.py)
+- [`../examples/client/python-validate-batch.py`](../examples/client/python-validate-batch.py)
+- [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
 
 Run them from a checkout with:
 
 ```bash
 python3 examples/client/python-contract-reference.py
 python3 examples/client/python-recompute-integrity-seal.py
+python3 examples/client/python-validate-single.py
+python3 examples/client/python-validate-batch.py
+python3 examples/client/python-validate-fix.py
 ```
 
 The first recipe reads the compact contract-reference JSON exports.
 The second recipe recomputes `integrity_sha3_512` over the published four-root payload, verifies the positive note example, and computes the repaired hash for the intentional `G16` teaching example.
+The validator-envelope recipes load the published `validate`, `batch`, and `fix` request examples, print dry-run summaries by default, and can send those envelopes to a live validator when `N1HUB_BASE_URL` and `N1HUB_TOKEN` are set.
 
 ## Packed-artifact workflow
 
@@ -41,6 +49,9 @@ mkdir -p packed-artifact
 tar -xzf num1hub-capsule-specs-0.1.0.tgz -C packed-artifact
 python3 packed-artifact/package/examples/client/python-contract-reference.py
 python3 packed-artifact/package/examples/client/python-recompute-integrity-seal.py
+python3 packed-artifact/package/examples/client/python-validate-single.py
+python3 packed-artifact/package/examples/client/python-validate-batch.py
+python3 packed-artifact/package/examples/client/python-validate-fix.py
 ```
 
 Those scripts resolve the package root from their own location, so they still work after extraction as long as the `package/` layout is preserved.
@@ -48,6 +59,7 @@ Those scripts resolve the package root from their own location, so they still wo
 ## What this proves
 
 - Python consumers can read `references/contract-constants.json` and `references/validation-gates.json` directly.
+- Python consumers can load the published validator-envelope request examples for `POST /api/validate`, `POST /api/validate/batch`, and `POST /api/validate/fix` without inferring request shape from prose alone.
 - Python consumers can recompute published integrity seals without calling private runtime helpers.
 - The packed artifact includes enough public JSON and example material for cross-language consumption.
 
@@ -55,7 +67,8 @@ Those scripts resolve the package root from their own location, so they still wo
 
 - This is a raw-asset consumption path, not a Python package distribution promise.
 - The recipes read published JSON artifacts and documented sealing rules; they do not expose the TypeScript or Zod projection layer as Python modules.
-- The recipes prove the published `G16` rule and packaged asset layout, not every edge-case behavior of the live validator.
+- The validator-envelope recipes are thin client examples, not a Python SDK, retry stack, or hosted-service guarantee.
+- The recipes prove the published `G16` rule, validator-envelope payload shapes, and packaged asset layout, not every edge-case behavior of the live validator.
 
 ## Related surfaces
 

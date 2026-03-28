@@ -77,9 +77,12 @@ If you need a cross-language raw-asset consumption path outside the Node runtime
 
 - [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
 - [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
+- [`../examples/client/python-validate-single.py`](../examples/client/python-validate-single.py)
+- [`../examples/client/python-validate-batch.py`](../examples/client/python-validate-batch.py)
+- [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
 - [`python-consumption.md`](python-consumption.md)
 
-These recipes demonstrate how Python consumers can read compact contract-reference JSON files, inspect curated raw capsule assets, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
+These recipes demonstrate how Python consumers can read compact contract-reference JSON files, inspect curated raw capsule assets, prepare validator-envelope request flows for `validate`, `batch`, and `fix`, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
 
 ## Package recipes
 

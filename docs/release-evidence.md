@@ -187,6 +187,12 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files.
 - [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
   Minimal Python recipe for recomputing public `G16` seals from published examples and compact reference constants.
+- [`../examples/client/python-validate-single.py`](../examples/client/python-validate-single.py)
+  Minimal Python recipe for preparing or sending the published `POST /api/validate` example envelope.
+- [`../examples/client/python-validate-batch.py`](../examples/client/python-validate-batch.py)
+  Minimal Python recipe for preparing or sending the published `POST /api/validate/batch` example envelope.
+- [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
+  Minimal Python recipe for preparing or sending the published `POST /api/validate/fix` example envelope.
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
@@ -222,7 +228,7 @@ The invalid-fixture layer strengthens that path further by proving that downstre
 
 The integrity-recipe layer strengthens that path further by proving that published example capsules and validator response envelopes stay aligned to the current public sealing rule instead of treating their `integrity_sha3_512` or `computedHash` fields as unverified folklore.
 
-The Python-consumption layer strengthens that path further by proving the same compact reference and `G16` integrity flows are consumable outside the Node runtime from raw packaged assets, without overclaiming a Python SDK or PyPI distribution.
+The Python-consumption layer strengthens that path further by proving the same compact reference, validator-envelope request, and `G16` integrity flows are consumable outside the Node runtime from raw packaged assets, without overclaiming a Python SDK or PyPI distribution.
 
 The curated raw capsule layer strengthens that path further by publishing a small, verifier-backed set of stronger law-adjacent source artifacts for confidence-vector semantics, subtype meaning, and version-lineage posture without pretending the whole upstream capsule corpus is public.
 

@@ -85,7 +85,7 @@
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Build a validator-facing client from public OpenAPI, schema-backed envelopes, and copyable client recipes.",
+      "outcome": "Build a validator-facing client from public OpenAPI, schema-backed envelopes, and copyable Node, TypeScript, Zod, and Python client recipes.",
       "strongest_surfaces": [
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -95,8 +95,12 @@
       ],
       "supporting_surfaces": [
         "docs/client-recipes.md",
+        "docs/python-consumption.md",
         "examples/client/ts-build-validate-request.ts",
         "examples/client/zod-parse-validate-response.ts",
+        "examples/client/python-validate-single.py",
+        "examples/client/python-validate-batch.py",
+        "examples/client/python-validate-fix.py",
         "examples/api/validate-request.single.json",
         "examples/api/validate-response.pass.json",
         "docs/schema-family-reference.md"
@@ -1000,19 +1004,26 @@
       "id": "consume-public-assets-from-python",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume compact contract references and public G16 seal proofs from Python using raw JSON assets from either a repo checkout or an extracted packed artifact, without depending on the Node projection layer.",
+      "outcome": "Consume compact contract references, published validator-envelope request examples, and public G16 seal proofs from Python using raw JSON assets from either a repo checkout or an extracted packed artifact, without depending on the Node projection layer.",
       "strongest_surfaces": [
         "docs/python-consumption.md",
         "examples/client/python-contract-reference.py",
         "examples/client/python-recompute-integrity-seal.py",
+        "examples/client/python-validate-single.py",
+        "examples/client/python-validate-batch.py",
+        "examples/client/python-validate-fix.py",
         "scripts/check-python-recipes.js"
       ],
       "supporting_surfaces": [
         "docs/reference-pack.md",
+        "docs/api-envelopes.md",
         "docs/integrity-recipes.md",
         "docs/npm-consumption.md",
         "references/contract-constants.json",
         "references/validation-gates.json",
+        "examples/api/validate-request.single.json",
+        "examples/api/validate-request.batch.json",
+        "examples/api/validate-request.fix.json",
         "examples/example-note.capsule.json",
         "examples/example-validator-invalid-g16.capsule.json",
         "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json"

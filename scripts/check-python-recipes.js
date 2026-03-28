@@ -35,7 +35,10 @@ function assert(condition, message) {
 
 const recipeFiles = [
   path.join(repoRoot, 'examples', 'client', 'python-contract-reference.py'),
-  path.join(repoRoot, 'examples', 'client', 'python-recompute-integrity-seal.py')
+  path.join(repoRoot, 'examples', 'client', 'python-recompute-integrity-seal.py'),
+  path.join(repoRoot, 'examples', 'client', 'python-validate-single.py'),
+  path.join(repoRoot, 'examples', 'client', 'python-validate-batch.py'),
+  path.join(repoRoot, 'examples', 'client', 'python-validate-fix.py')
 ];
 
 const workspaceRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'capsule-specs-python-'));
@@ -66,8 +69,11 @@ try {
   const packedPackageRoot = path.join(extractedRoot, 'package');
   run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-contract-reference.py')], packedPackageRoot);
   run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-recompute-integrity-seal.py')], packedPackageRoot);
+  run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-validate-single.py')], packedPackageRoot);
+  run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-validate-batch.py')], packedPackageRoot);
+  run(python, [path.join(packedPackageRoot, 'examples', 'client', 'python-validate-fix.py')], packedPackageRoot);
 
-  console.log('OK: checked 2 repo-local Python recipes and 2 packed-artifact Python recipes');
+  console.log('OK: checked 5 repo-local Python recipes and 5 packed-artifact Python recipes');
 } catch (error) {
   console.error(`FAIL: ${error.message}`);
   process.exitCode = 1;

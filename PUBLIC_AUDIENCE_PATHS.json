@@ -115,6 +115,7 @@
         "can consume the projection layer through package exports from a fresh install, including TypeScript type resolution, without relying on repo-relative imports",
         "can recompute integrity_sha3_512 and validator computedHash values from the published first-four-roots sealing rule instead of guessing from stale example hashes",
         "can consume compact references and public seal proofs from Python by reading raw packaged assets instead of depending on Node-specific imports",
+        "can prepare validate, batch, and fix request envelopes from Python without guessing HTTP payload shape from prose alone",
         "can distinguish schema-invalid validator-envelope fixtures from structurally valid negative API responses such as the public G16 fail example",
         "can choose between raw multi-file schemas and single-file bundle schemas without guessing which public layer is stronger",
         "can validate the published archive-bundle sample directly against the portability/export schema from either repo-relative files or installed package exports",

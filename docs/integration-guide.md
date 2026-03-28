@@ -45,6 +45,9 @@ If you want the same compact references and public `G16` proof path from Python 
 - [`python-consumption.md`](python-consumption.md)
 - [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
 - [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
+- [`../examples/client/python-validate-single.py`](../examples/client/python-validate-single.py)
+- [`../examples/client/python-validate-batch.py`](../examples/client/python-validate-batch.py)
+- [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
 
 ## 2. Add source-level projections where helpful
 
@@ -65,7 +68,7 @@ If you want package-style consumption from a checkout or packed artifact, use th
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
 That check confirms CommonJS runtime usage, ESM runtime usage, raw-schema and bundled-schema Ajv usage, and TypeScript type resolution from an installed tarball.
 It also confirms packaged structural rejection recipes for intentionally invalid archive, capsule, and validator-envelope fixtures.
-For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md).
+For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md), including dry-run/live validator-envelope request flows.
 If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.
 
 If your integration path touches portability, export review, or replay-contract tooling instead of validator HTTP routes, also inspect:

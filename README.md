@@ -45,7 +45,7 @@ This repository is that home.
 - [`docs/invalid-capsule-examples.md`](docs/invalid-capsule-examples.md) for intentionally schema-invalid capsule fixtures and the boundary between raw-schema rejection and validator-only failures
 - [`docs/invalid-api-envelope-examples.md`](docs/invalid-api-envelope-examples.md) for intentionally schema-invalid validator API envelopes and the boundary between raw-schema rejection and structurally valid negative API payloads
 - [`docs/integrity-recipes.md`](docs/integrity-recipes.md) for recomputing `integrity_sha3_512`, verifying sealed examples, and repairing the intentional `G16` teaching example
-- [`docs/python-consumption.md`](docs/python-consumption.md) for cross-language Python consumption of compact references and public `G16` seal proofs from a repo checkout or extracted packed artifact
+- [`docs/python-consumption.md`](docs/python-consumption.md) for cross-language Python consumption of compact references, validator-envelope request flows, and public `G16` seal proofs from a repo checkout or extracted packed artifact
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/type-projections.md`](docs/type-projections.md) for the public-safe TypeScript and Zod projection layer
 - [`docs/npm-consumption.md`](docs/npm-consumption.md) for the buildable package surface, local tarball install path, and subpath entrypoints
@@ -110,7 +110,7 @@ This repository is that home.
 - `examples/api/`
   Concrete validator request and response payload examples.
 - `examples/client/`
-  Minimal curl and Node recipes for external consumers.
+  Minimal curl, Node, and Python recipes for external consumers.
 - `examples/invalid/`
   Intentionally schema-invalid capsule fixtures for raw-schema consumers.
 - `examples/api-invalid/`
@@ -219,7 +219,7 @@ Maintainer and review policy:
 12. Inspect [`docs/invalid-capsule-examples.md`](docs/invalid-capsule-examples.md) if you want structural negative fixtures that should fail raw-schema validation before any stronger live-validator behavior is involved.
 13. Inspect [`docs/invalid-api-envelope-examples.md`](docs/invalid-api-envelope-examples.md) if you want structural negative validator-envelope fixtures that should fail raw-schema validation before any stronger live-validator route behavior is involved.
 14. Inspect [`docs/integrity-recipes.md`](docs/integrity-recipes.md) if you want the exact public sealing rule for `integrity_sha3_512`, the shortest recomputation path, and the repair boundary for the intentional `G16` example.
-15. Inspect [`docs/python-consumption.md`](docs/python-consumption.md) if you want a cross-language raw-JSON path for compact references and public `G16` seal proofs without depending on the Node projection layer.
+15. Inspect [`docs/python-consumption.md`](docs/python-consumption.md) if you want a cross-language raw-JSON path for compact references, validator-envelope request flows, and public `G16` seal proofs without depending on the Node projection layer.
 16. Inspect [`docs/type-projections.md`](docs/type-projections.md), [`docs/npm-consumption.md`](docs/npm-consumption.md), [`projections/typescript/capsule.ts`](projections/typescript/capsule.ts), [`projections/zod/capsule.ts`](projections/zod/capsule.ts), [`projections/typescript/validator-api.ts`](projections/typescript/validator-api.ts), and [`projections/zod/validator-api.ts`](projections/zod/validator-api.ts) if you need source-level or package-level consumer artifacts in addition to raw JSON Schema and raw validator envelope schemas.
 17. Inspect [`schemas/validator-api-envelopes.schema.json`](schemas/validator-api-envelopes.schema.json) if you need request and response contracts for the validator HTTP surface.
 18. Inspect [`PUBLIC_TRACEABILITY_MATRIX.json`](PUBLIC_TRACEABILITY_MATRIX.json) if you want the bounded map from public claims to files and verification commands.
@@ -258,7 +258,7 @@ Maintainer and review policy:
 51. Run `npm run check:invalid-examples` if you want to confirm the published schema-invalid capsule fixtures keep failing for the documented structural reasons.
 52. Run `npm run check:invalid-api-examples` if you want to confirm the published schema-invalid validator-envelope fixtures keep failing for the documented structural reasons.
 53. Run `npm run check:integrity-recipes` if you want to confirm the published examples, validator API payloads, and sealing recipes stay aligned to the current public `G16` rule.
-54. Run `npm run check:python-recipes` if you want to confirm the cross-language Python consumer recipes stay aligned to the published compact references, public example seals, and extracted packed-artifact layout.
+54. Run `npm run check:python-recipes` if you want to confirm the cross-language Python consumer recipes stay aligned to the published compact references, validator-envelope example payloads, public example seals, and extracted packed-artifact layout.
 
 ## Source of truth
 

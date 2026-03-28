@@ -1142,13 +1142,20 @@
   "docs/python-consumption.md": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/reference-pack.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
       "/home/n1/codex-workspace/docs/integrity-recipes.md",
       "/home/n1/codex-workspace/docs/npm-consumption.md",
       "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
-      "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py"
+      "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py",
+      "/home/n1/codex-workspace/examples/client/python-validate-single.py",
+      "/home/n1/codex-workspace/examples/client/python-validate-batch.py",
+      "/home/n1/codex-workspace/examples/client/python-validate-fix.py",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to Python JSON-first consumption of compact references and public G16 seal proofs from repo-local files or extracted packed artifacts."
+    "notes": "Guide to Python JSON-first consumption of compact references, validator-envelope request flows, and public G16 seal proofs from repo-local files or extracted packed artifacts."
   },
   "docs/quickstart.md": {
     "source_paths": [
@@ -2149,6 +2156,36 @@
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for recomputing public integrity seals and demonstrating the intentional G16 repair boundary."
   },
+  "examples/client/python-validate-batch.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for preparing or sending the published batch validator-envelope example."
+  },
+  "examples/client/python-validate-fix.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for preparing or sending the published fix validator-envelope example."
+  },
+  "examples/client/python-validate-single.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for preparing or sending the published single-validate validator-envelope example."
+  },
   "examples/client/README.md": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/client-recipes.md",
@@ -2158,6 +2195,11 @@
       "/home/n1/codex-workspace/examples/client/ts-package-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-build-validate-request.ts",
       "/home/n1/codex-workspace/examples/client/ts-capsule-summary.ts",
+      "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
+      "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py",
+      "/home/n1/codex-workspace/examples/client/python-validate-single.py",
+      "/home/n1/codex-workspace/examples/client/python-validate-batch.py",
+      "/home/n1/codex-workspace/examples/client/python-validate-fix.py",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
       "/home/n1/codex-workspace/projections/index.ts",
@@ -2167,7 +2209,7 @@
       "/home/n1/codex-workspace/tsconfig.build.json"
     ],
     "transformation_type": "generated",
-    "notes": "Directory guide for curl and Node consumer recipe snippets.; client recipe guide synchronized with source-level type recipes; client recipe guide synchronized with validator API source-level recipes; package-export projection layer synchronized"
+    "notes": "Directory guide for curl, Node, and Python consumer recipe snippets.; client recipe guide synchronized with source-level type recipes; client recipe guide synchronized with validator API source-level recipes; package-export projection layer synchronized"
   },
   "examples/client/recompute-integrity-seal.mjs": {
     "source_paths": [
@@ -5100,10 +5142,13 @@
       "/home/n1/codex-workspace/docs/python-consumption.md",
       "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
       "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py",
+      "/home/n1/codex-workspace/examples/client/python-validate-single.py",
+      "/home/n1/codex-workspace/examples/client/python-validate-batch.py",
+      "/home/n1/codex-workspace/examples/client/python-validate-fix.py",
       "/home/n1/codex-workspace/package.json"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for repo-local and extracted packed-artifact Python recipes that consume compact references and public G16 seal proofs."
+    "notes": "Verifier for repo-local and extracted packed-artifact Python recipes that consume compact references, validator-envelope request examples, and public G16 seal proofs."
   },
   "scripts/check-raw-capsules.js": {
     "source_paths": [

@@ -37,7 +37,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, client recipes, and a bounded package-consumer export path that is smoke-tested from a packed artifact for CommonJS, ESM, and TypeScript consumers.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, client recipes, and bounded package/extracted-artifact consumer paths that cover CommonJS, ESM, TypeScript, and Python readers without depending on private runtime code.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -47,12 +47,16 @@
         "openapi/validate.openapi.json",
         "docs/api-envelopes.md",
         "schemas/validator-api-envelopes.schema.json",
-        "examples/client/node-validate-single.mjs"
+        "examples/client/node-validate-single.mjs",
+        "docs/python-consumption.md",
+        "examples/client/python-validate-single.py"
       ],
       "supporting_surfaces": [
         "docs/route-reference.md",
         "docs/integration-guide.md",
         "examples/api/validate-request.single.json",
+        "examples/api/validate-request.batch.json",
+        "examples/api/validate-request.fix.json",
         "examples/api/validate-response.pass.json",
         "PUBLIC_EXAMPLE_COVERAGE.json",
         "docs/schema-family-reference.md",
@@ -63,12 +67,16 @@
         "examples/client/esm-package-capsule-summary.mjs",
         "examples/client/esm-package-validate-response.mjs",
         "examples/client/ts-package-validate-request.ts",
+        "examples/client/python-validate-batch.py",
+        "examples/client/python-validate-fix.py",
+        "scripts/check-python-recipes.js",
         "scripts/check-package-install.js"
       ],
       "verify_commands": [
         "npm run check:api-examples",
         "npm run check:api-schemas",
         "npm run check:client-recipes",
+        "npm run check:python-recipes",
         "npm run check:traceability",
         "npm run check:package-surface",
         "npm run check:package-install"

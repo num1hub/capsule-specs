@@ -45,7 +45,10 @@ const integrityRecipeFiles = ['recompute-integrity-seal.mjs', 'esm-package-recom
 
 const pythonRecipeFiles = [
   'python-contract-reference.py',
-  'python-recompute-integrity-seal.py'
+  'python-recompute-integrity-seal.py',
+  'python-validate-single.py',
+  'python-validate-batch.py',
+  'python-validate-fix.py'
 ];
 
 const packageRecipeFiles = [
@@ -241,6 +244,27 @@ const expectedPythonRecipeReferences = {
     'examples/example-validator-invalid-g16.capsule.json',
     'references/contract-constants.json',
     'hashlib.sha3_512'
+  ],
+  'python-validate-single.py': [
+    'examples/api/validate-request.single.json',
+    'N1HUB_BASE_URL',
+    'N1HUB_TOKEN',
+    '/api/validate',
+    'urllib'
+  ],
+  'python-validate-batch.py': [
+    'examples/api/validate-request.batch.json',
+    'N1HUB_BASE_URL',
+    'N1HUB_TOKEN',
+    '/api/validate/batch',
+    'urllib'
+  ],
+  'python-validate-fix.py': [
+    'examples/api/validate-request.fix.json',
+    'N1HUB_BASE_URL',
+    'N1HUB_TOKEN',
+    '/api/validate/fix',
+    'urllib'
   ]
 };
 

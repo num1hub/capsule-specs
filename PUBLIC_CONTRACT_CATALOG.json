@@ -1207,6 +1207,51 @@
       ]
     },
     {
+      "id": "examples.client.python-validate-single",
+      "path": "examples/client/python-validate-single.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-validate-batch",
+      "path": "examples/client/python-validate-batch.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-validate-fix",
+      "path": "examples/client/python-validate-fix.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.readme",
       "path": "examples/client/README.md",
       "kind": "support-artifact",
