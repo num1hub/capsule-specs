@@ -89,6 +89,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Human-readable guide to validating public capsules and validator-envelope payloads directly against the raw JSON Schema layer.
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
   Human-readable guide to intentionally schema-invalid capsule fixtures and their documented structural rejection paths.
+- [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
+  Human-readable guide to intentionally schema-invalid validator-envelope fixtures and their documented structural rejection paths.
 - [`integrity-recipes.md`](integrity-recipes.md)
   Human-readable guide to the public `G16` sealing rule, recomputation recipes, and repair boundary.
 - [`python-consumption.md`](python-consumption.md)
@@ -133,6 +135,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that the Ajv-based raw-schema consumer recipes stay executable and aligned to published schema exports.
 - [`../scripts/check-invalid-examples.js`](../scripts/check-invalid-examples.js)
   Repo-local verification that the published invalid schema fixtures stay rejected for the documented structural reasons.
+- [`../scripts/check-invalid-api-examples.js`](../scripts/check-invalid-api-examples.js)
+  Repo-local verification that intentionally invalid validator-envelope fixtures stay rejected for the documented structural reasons.
 - [`../scripts/check-integrity-recipes.js`](../scripts/check-integrity-recipes.js)
   Repo-local verification that the published example/API integrity hashes and seal-recomputation recipes stay aligned to the current public `G16` rule.
 - [`../scripts/check-python-recipes.js`](../scripts/check-python-recipes.js)
@@ -194,7 +198,7 @@ The compact reference-pack layer strengthens that path further by giving tool-bu
 
 The raw-schema recipe layer strengthens that path further by proving that downstream consumers can validate public capsules and validator-envelope payloads directly against the published JSON Schemas, both from a repo checkout and from installed package exports, without depending on the projection layer.
 
-The invalid-fixture layer strengthens that path further by proving that downstream consumers can also test documented structural rejection cases instead of seeing only happy-path schema examples or live-validator-only failures.
+The invalid-fixture layer strengthens that path further by proving that downstream consumers can also test documented structural rejection cases for both capsules and validator HTTP envelopes instead of seeing only happy-path schema examples or live-validator-only failures.
 
 The integrity-recipe layer strengthens that path further by proving that published example capsules and validator response envelopes stay aligned to the current public sealing rule instead of treating their `integrity_sha3_512` or `computedHash` fields as unverified folklore.
 

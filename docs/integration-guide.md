@@ -22,9 +22,11 @@ If you want a raw JSON Schema validation path instead of the projection layer or
 
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
+- [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
+- [`../examples/client/ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/ajv-reject-invalid-validator-envelopes.mjs)
 
 If you need the exact public sealing rule for `integrity_sha3_512`, also inspect:
 
@@ -56,6 +58,7 @@ These are convenience projections for consumer ergonomics, not replacements for 
 If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
 That check confirms CommonJS runtime usage, ESM runtime usage, raw-schema Ajv usage, and TypeScript type resolution from an installed tarball.
+It also confirms packaged structural rejection recipes for intentionally invalid capsule and validator-envelope fixtures.
 For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md).
 If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.
 
@@ -74,9 +77,10 @@ Read:
 
 - [`../examples/example-validator-invalid-g16.capsule.json`](../examples/example-validator-invalid-g16.capsule.json)
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
+- [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
 - [`16-gates.md`](16-gates.md)
 
-This helps you distinguish structural schema rejection from trust- and sealing-level rejection.
+This helps you distinguish structural schema rejection from trust- and sealing-level rejection, both for capsules and for validator HTTP envelopes.
 
 ## 5. Learn graph-aware validation
 
@@ -94,9 +98,10 @@ Read:
 - [`api-envelopes.md`](api-envelopes.md)
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
 - [`../examples/api/`](../examples/api/)
+- [`../examples/api-invalid/`](../examples/api-invalid/)
 - [`client-recipes.md`](client-recipes.md)
 
-These show how the public examples appear at the validator HTTP boundary for `validate`, `batch`, and `fix` flows.
+These show how the public examples appear at the validator HTTP boundary for `validate`, `batch`, and `fix` flows, plus which intentionally invalid envelope shapes should be rejected directly by the raw schema layer.
 
 ## 7. Respect the stronger source of truth
 

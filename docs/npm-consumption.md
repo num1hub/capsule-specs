@@ -10,7 +10,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for `typescript`, `zod`, and selected JSON artifacts
 - package exports for compact contract reference JSON artifacts
 - package exports for raw JSON Schema validation with third-party validators such as Ajv
-- package exports for intentionally invalid schema fixtures used in structural rejection tests
+- package exports for intentionally invalid capsule and validator-envelope fixtures used in structural rejection tests
 - package exports for integrity-rule constants and copyable seal-recomputation recipes
 - package exports for curated raw capsule source files
 - extracted-artifact consumption of packaged JSON assets from Python recipes
@@ -117,7 +117,11 @@ if (!validateCapsule(note)) {
 
 A copyable version of this example also lives at [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs).
 
-That recipe proves the installed package exports not only valid schemas and examples, but also the intentionally invalid fixtures under `examples/invalid/` that raw-schema consumers can use for regression tests.
+That recipe proves the installed package exports not only valid schemas and examples, but also the intentionally invalid capsule fixtures under `examples/invalid/` that raw-schema consumers can use for regression tests.
+
+A package-level validator-envelope variant also lives at [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs).
+
+That recipe proves the installed package exports intentionally invalid validator-envelope fixtures under `examples/api-invalid/` for raw-schema regression tests at the HTTP-contract layer.
 
 ## Cross-language packed-artifact example
 
@@ -199,5 +203,6 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - `npm run check:reference-pack`
 - `npm run check:schema-recipes`
 - `npm run check:invalid-examples`
+- `npm run check:invalid-api-examples`
 - `npm run check:integrity-recipes`
 - `npm run check:python-recipes`

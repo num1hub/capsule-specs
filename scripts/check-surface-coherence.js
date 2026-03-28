@@ -96,6 +96,7 @@ const expectedPublicIndexLinks = [
   'reference-pack.md',
   'schema-validation-recipes.md',
   'invalid-capsule-examples.md',
+  'invalid-api-envelope-examples.md',
   'integrity-recipes.md',
   'projection-doctrine.md',
   'domain-boundaries.md',
@@ -134,11 +135,14 @@ const expectedPublicIndexLinks = [
   '../examples/client/ajv-validate-capsule.mjs',
   '../examples/client/ajv-validate-validator-envelope.mjs',
   '../examples/client/ajv-reject-invalid-capsules.mjs',
+  '../examples/client/ajv-reject-invalid-validator-envelopes.mjs',
   '../examples/client/recompute-integrity-seal.mjs',
   '../examples/client/esm-package-ajv-validate-contracts.mjs',
   '../examples/client/esm-package-ajv-reject-invalid-capsules.mjs',
+  '../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs',
   '../examples/client/esm-package-recompute-integrity-seal.mjs',
   '../examples/invalid/README.md',
+  '../examples/api-invalid/README.md',
   '../projections/README.md',
   '../projections/typescript/capsule.ts',
   '../projections/typescript/validator-api.ts',
@@ -218,6 +222,7 @@ assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/r
 assert(readme.includes('docs/reference-pack.md'), 'README.md must mention docs/reference-pack.md');
 assert(readme.includes('docs/schema-validation-recipes.md'), 'README.md must mention docs/schema-validation-recipes.md');
 assert(readme.includes('docs/invalid-capsule-examples.md'), 'README.md must mention docs/invalid-capsule-examples.md');
+assert(readme.includes('docs/invalid-api-envelope-examples.md'), 'README.md must mention docs/invalid-api-envelope-examples.md');
 assert(readme.includes('docs/integrity-recipes.md'), 'README.md must mention docs/integrity-recipes.md');
 assert(readme.includes('docs/type-projections.md'), 'README.md must mention docs/type-projections.md');
 assert(readme.includes('docs/capability-matrix.md'), 'README.md must mention docs/capability-matrix.md');
@@ -234,6 +239,7 @@ assert(readme.includes('npm run check:raw-capsules'), 'README.md must mention np
 assert(readme.includes('npm run check:reference-pack'), 'README.md must mention npm run check:reference-pack');
 assert(readme.includes('npm run check:schema-recipes'), 'README.md must mention npm run check:schema-recipes');
 assert(readme.includes('npm run check:invalid-examples'), 'README.md must mention npm run check:invalid-examples');
+assert(readme.includes('npm run check:invalid-api-examples'), 'README.md must mention npm run check:invalid-api-examples');
 assert(readme.includes('npm run check:integrity-recipes'), 'README.md must mention npm run check:integrity-recipes');
 assert(releaseReview.includes('check-contract-catalog.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-contract-catalog.js');
 assert(releaseReview.includes('check-release-metadata.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-release-metadata.js');
@@ -243,6 +249,7 @@ assert(releaseReview.includes('check-raw-capsules.js'), 'PUBLIC_RELEASE_REVIEW.m
 assert(releaseReview.includes('check-reference-pack.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-reference-pack.js');
 assert(releaseReview.includes('check-schema-recipes.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-schema-recipes.js');
 assert(releaseReview.includes('check-invalid-examples.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-invalid-examples.js');
+assert(releaseReview.includes('check-invalid-api-examples.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-invalid-api-examples.js');
 assert(releaseReview.includes('check-integrity-recipes.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-integrity-recipes.js');
 assert(releaseReview.includes('check-example-coverage.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-example-coverage.js');
 assert(releaseReview.includes('check-boundary-map.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-boundary-map.js');
@@ -275,6 +282,7 @@ assert(verificationDoc.includes('check:raw-capsules'), 'docs/verification.md mus
 assert(verificationDoc.includes('check:reference-pack'), 'docs/verification.md must explain check:reference-pack');
 assert(verificationDoc.includes('check:schema-recipes'), 'docs/verification.md must explain check:schema-recipes');
 assert(verificationDoc.includes('check:invalid-examples'), 'docs/verification.md must explain check:invalid-examples');
+assert(verificationDoc.includes('check:invalid-api-examples'), 'docs/verification.md must explain check:invalid-api-examples');
 assert(verificationDoc.includes('check:integrity-recipes'), 'docs/verification.md must explain check:integrity-recipes');
 assert(verificationDoc.includes('check:example-coverage'), 'docs/verification.md must explain check:example-coverage');
 assert(verificationDoc.includes('check:boundary-map'), 'docs/verification.md must explain check:boundary-map');
@@ -309,12 +317,14 @@ assert(releaseEvidenceDoc.includes('PUBLIC_RELEASE_METADATA.json'), 'docs/releas
 assert(releaseEvidenceDoc.includes('reference-pack.md'), 'docs/release-evidence.md must mention reference-pack.md');
 assert(releaseEvidenceDoc.includes('schema-validation-recipes.md'), 'docs/release-evidence.md must mention schema-validation-recipes.md');
 assert(releaseEvidenceDoc.includes('invalid-capsule-examples.md'), 'docs/release-evidence.md must mention invalid-capsule-examples.md');
+assert(releaseEvidenceDoc.includes('invalid-api-envelope-examples.md'), 'docs/release-evidence.md must mention invalid-api-envelope-examples.md');
 assert(releaseEvidenceDoc.includes('integrity-recipes.md'), 'docs/release-evidence.md must mention integrity-recipes.md');
 assert(releaseEvidenceDoc.includes('capsules/README.md'), 'docs/release-evidence.md must mention capsules/README.md');
 assert(releaseEvidenceDoc.includes('references/README.md'), 'docs/release-evidence.md must mention references/README.md');
 assert(releaseEvidenceDoc.includes('check-reference-pack.js'), 'docs/release-evidence.md must mention check-reference-pack.js');
 assert(releaseEvidenceDoc.includes('check-schema-recipes.js'), 'docs/release-evidence.md must mention check-schema-recipes.js');
 assert(releaseEvidenceDoc.includes('check-invalid-examples.js'), 'docs/release-evidence.md must mention check-invalid-examples.js');
+assert(releaseEvidenceDoc.includes('check-invalid-api-examples.js'), 'docs/release-evidence.md must mention check-invalid-api-examples.js');
 assert(releaseEvidenceDoc.includes('check-integrity-recipes.js'), 'docs/release-evidence.md must mention check-integrity-recipes.js');
 assert(releaseEvidenceDoc.includes('check-raw-capsules.js'), 'docs/release-evidence.md must mention check-raw-capsules.js');
 assert(releaseEvidenceDoc.includes('validator-api-envelopes.schema.json'), 'docs/release-evidence.md must mention validator-api-envelopes.schema.json');

@@ -72,6 +72,7 @@ const contractConstants = require('@num1hub/capsule-specs/references/contract-co
 const validationGates = require('@num1hub/capsule-specs/references/validation-gates.json');
 const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
 const invalidRelationTypeCapsule = require('@num1hub/capsule-specs/examples/invalid/example-invalid-relation-type.capsule.json');
+const invalidApiFailResponse = require('@num1hub/capsule-specs/examples/api-invalid/validate-response.fail.invalid-gate.json');
 const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsule.json'));
 const passResponse = require(path.join(repoRoot, 'examples', 'api', 'validate-response.pass.json'));
 
@@ -98,6 +99,10 @@ assert(
 assert(
   invalidRelationTypeCapsule.metadata?.capsule_id === 'capsule.example.invalid-relation-type.v1',
   'package exports must expose nested invalid-example fixtures'
+);
+assert(
+  invalidApiFailResponse.errors?.[0]?.gate === 'gate-16',
+  'package exports must expose nested invalid API envelope fixtures'
 );
 
 const parsedNote = zodProjection.capsuleSchema.parse(exampleNote);
@@ -129,6 +134,7 @@ for (const relativePath of [
   'docs/npm-consumption.md',
   'docs/schema-validation-recipes.md',
   'docs/invalid-capsule-examples.md',
+  'docs/invalid-api-envelope-examples.md',
   'docs/integrity-recipes.md',
   'docs/python-consumption.md',
   'schemas/capsule-schema.json',
@@ -142,9 +148,11 @@ for (const relativePath of [
   'examples/client/ajv-validate-capsule.mjs',
   'examples/client/ajv-validate-validator-envelope.mjs',
   'examples/client/ajv-reject-invalid-capsules.mjs',
+  'examples/client/ajv-reject-invalid-validator-envelopes.mjs',
   'examples/client/cjs-package-contract-reference.cjs',
   'examples/client/esm-package-ajv-validate-contracts.mjs',
   'examples/client/esm-package-ajv-reject-invalid-capsules.mjs',
+  'examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs',
   'examples/client/recompute-integrity-seal.mjs',
   'examples/client/esm-package-recompute-integrity-seal.mjs',
   'examples/client/python-contract-reference.py',
@@ -154,7 +162,10 @@ for (const relativePath of [
   'examples/client/ts-package-contract-reference.ts',
   'examples/invalid/README.md',
   'examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json',
-  'examples/invalid/example-invalid-relation-type.capsule.json'
+  'examples/invalid/example-invalid-relation-type.capsule.json',
+  'examples/api-invalid/README.md',
+  'examples/api-invalid/validate-request.single.missing-capsule.json',
+  'examples/api-invalid/validate-response.fail.invalid-gate.json'
 ]) {
   assert(packedFiles.has(relativePath), `npm pack surface must include ${relativePath}`);
 }

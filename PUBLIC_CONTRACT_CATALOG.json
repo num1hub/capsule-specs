@@ -3686,6 +3686,117 @@
         "npm run check:python-recipes",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "docs.invalid-api-envelope-examples",
+      "path": "docs/invalid-api-envelope-examples.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:invalid-api-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.api-invalid.readme",
+      "path": "examples/api-invalid/README.md",
+      "kind": "example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-api-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.api-invalid.validate-request.single.missing-capsule",
+      "path": "examples/api-invalid/validate-request.single.missing-capsule.json",
+      "kind": "api-example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-api-examples",
+        "npm run check:schema-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.api-invalid.validate-response.fail.invalid-gate",
+      "path": "examples/api-invalid/validate-response.fail.invalid-gate.json",
+      "kind": "api-example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-api-examples",
+        "npm run check:schema-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ajv-reject-invalid-validator-envelopes",
+      "path": "examples/client/ajv-reject-invalid-validator-envelopes.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-recipes",
+        "npm run check:invalid-api-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-ajv-reject-invalid-validator-envelopes",
+      "path": "examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-recipes",
+        "npm run check:invalid-api-examples",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.invalid-api.check",
+      "path": "scripts/check-invalid-api-examples.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-api-examples",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

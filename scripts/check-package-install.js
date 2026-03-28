@@ -36,6 +36,12 @@ const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', '
 const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
 const packageSchemaRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-contracts.mjs');
 const packageInvalidSchemaRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-reject-invalid-capsules.mjs');
+const packageInvalidApiRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'esm-package-ajv-reject-invalid-validator-envelopes.mjs'
+);
 const packageIntegrityRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-recompute-integrity-seal.mjs');
 
 try {
@@ -124,6 +130,8 @@ try {
   run(process.execPath, ['schema-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'invalid-schema-consumer.mjs'), fs.readFileSync(packageInvalidSchemaRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['invalid-schema-consumer.mjs'], esmProject);
+  fs.writeFileSync(path.join(esmProject, 'invalid-api-consumer.mjs'), fs.readFileSync(packageInvalidApiRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['invalid-api-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'integrity-consumer.mjs'), fs.readFileSync(packageIntegrityRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['integrity-consumer.mjs'], esmProject);
 
@@ -152,7 +160,7 @@ try {
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, raw schema exports, invalid schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, reference-pack, raw schema exports, invalid capsule and API schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

@@ -92,6 +92,7 @@ const requiredIds = [
   'docs.integrity-recipes',
   'docs.schema-validation-recipes',
   'docs.invalid-capsule-examples',
+  'docs.invalid-api-envelope-examples',
   'schema.reference-doc',
   'schema.family-reference-doc',
   'schema.directory-guide',
@@ -208,11 +209,13 @@ const requiredIds = [
   'examples.client.ajv-validate-capsule',
   'examples.client.ajv-validate-validator-envelope',
   'examples.client.ajv-reject-invalid-capsules',
+  'examples.client.ajv-reject-invalid-validator-envelopes',
   'examples.client.recompute-integrity-seal',
   'examples.client.cjs-package-contract-reference',
   'examples.client.cjs-package-validate-response',
   'examples.client.esm-package-ajv-validate-contracts',
   'examples.client.esm-package-ajv-reject-invalid-capsules',
+  'examples.client.esm-package-ajv-reject-invalid-validator-envelopes',
   'examples.client.esm-package-recompute-integrity-seal',
   'examples.client.esm-package-capsule-summary',
   'examples.client.esm-package-validate-response',
@@ -223,7 +226,11 @@ const requiredIds = [
   'examples.invalid.readme',
   'examples.invalid.missing-neuro-concentrate',
   'examples.invalid.relation-type',
-  'examples.invalid.check'
+  'examples.invalid.check',
+  'examples.api-invalid.readme',
+  'examples.api-invalid.validate-request.single.missing-capsule',
+  'examples.api-invalid.validate-response.fail.invalid-gate',
+  'examples.invalid-api.check'
 ];
 
 for (const requiredId of requiredIds) {

@@ -108,12 +108,13 @@
     },
     {
       "id": "raw-schema-consumer-recipes",
-      "summary": "Protects Ajv-based raw-schema consumer recipes so direct capsule and validator-envelope validation, including structural rejection of intentionally invalid fixtures, stays executable from both repo-relative files and installed package exports.",
+      "summary": "Protects Ajv-based raw-schema consumer recipes so direct capsule and validator-envelope validation, including structural rejection of intentionally invalid capsule and API-envelope fixtures, stays executable from both repo-relative files and installed package exports.",
       "commands": [
         "npm run check:schema-recipes",
         "npm run check:invalid-examples",
         "npm run check:package-install",
-        "npm run check:api-schemas"
+        "npm run check:api-schemas",
+        "npm run check:invalid-api-examples"
       ],
       "protects": [
         "docs/schema-validation-recipes.md",
@@ -124,7 +125,11 @@
         "examples/client/esm-package-ajv-validate-contracts.mjs",
         "examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
         "examples/invalid/",
-        "package.json"
+        "package.json",
+        "docs/invalid-api-envelope-examples.md",
+        "examples/client/ajv-reject-invalid-validator-envelopes.mjs",
+        "examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs",
+        "examples/api-invalid/"
       ],
       "strongest_surfaces": [
         "scripts/check-schema-recipes.js",
@@ -132,13 +137,15 @@
         "docs/schema-validation-recipes.md",
         "schemas/capsule-schema.json",
         "schemas/neuro-concentrate.schema.json",
-        "schemas/validator-api-envelopes.schema.json"
+        "schemas/validator-api-envelopes.schema.json",
+        "scripts/check-invalid-api-examples.js"
       ],
       "failure_modes_prevented": [
         "broken raw-schema consumer recipes",
         "Ajv/package-schema drift",
         "package-level schema export claims that only work through repo-local paths",
-        "invalid schema fixtures that unexpectedly pass structural validation"
+        "invalid schema fixtures that unexpectedly pass structural validation",
+        "invalid validator-envelope fixtures that unexpectedly pass structural validation"
       ]
     },
     {

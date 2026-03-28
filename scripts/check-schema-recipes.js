@@ -10,12 +10,14 @@ const clientDir = path.join(repoRoot, 'examples', 'client');
 const repoLocalRecipes = [
   'ajv-validate-capsule.mjs',
   'ajv-validate-validator-envelope.mjs',
-  'ajv-reject-invalid-capsules.mjs'
+  'ajv-reject-invalid-capsules.mjs',
+  'ajv-reject-invalid-validator-envelopes.mjs'
 ];
 
 const packageRecipes = [
   'esm-package-ajv-validate-contracts.mjs',
-  'esm-package-ajv-reject-invalid-capsules.mjs'
+  'esm-package-ajv-reject-invalid-capsules.mjs',
+  'esm-package-ajv-reject-invalid-validator-envelopes.mjs'
 ];
 
 function assert(condition, message) {
@@ -55,6 +57,14 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json',
     '@num1hub/capsule-specs/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json',
     '@num1hub/capsule-specs/examples/invalid/example-invalid-relation-type.capsule.json'
+  ],
+  'esm-package-ajv-reject-invalid-validator-envelopes.mjs': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/capsule-schema.json',
+    '@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json',
+    '@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json',
+    '@num1hub/capsule-specs/examples/api-invalid/validate-request.single.missing-capsule.json',
+    '@num1hub/capsule-specs/examples/api-invalid/validate-response.fail.invalid-gate.json'
   ]
 };
 

@@ -25,6 +25,8 @@ Public specs are stronger when they show both a passing case and a controlled fa
 
 For schema-invalid fixtures that should fail before live validator semantics matter, see [`invalid-capsule-examples.md`](invalid-capsule-examples.md) and [`../examples/invalid/README.md`](../examples/invalid/README.md).
 
+For schema-invalid validator-envelope fixtures that should fail before live route semantics matter, see [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md) and [`../examples/api-invalid/README.md`](../examples/api-invalid/README.md).
+
 For a copyable public-safe sealing and `G16` repair path, see [`integrity-recipes.md`](integrity-recipes.md).
 
 ## Validation status
@@ -38,6 +40,8 @@ For the bounded machine-readable map of what each capsule and API example covers
 ## API payload examples
 
 The sibling directory [`../examples/api/`](../examples/api/) contains public-safe validator request and response payloads. Those examples complement the capsule examples here by showing how the same artifacts appear at the HTTP boundary.
+
+The sibling directory [`../examples/api-invalid/`](../examples/api-invalid/) contains intentionally schema-invalid validator-envelope fixtures for direct raw-schema rejection tests.
 
 The sibling directory [`../examples/archive/`](../examples/archive/) contains a public-safe archive-bundle sample for portability and import-trust review.
 

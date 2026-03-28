@@ -5247,5 +5247,77 @@
     ],
     "transformation_type": "derived",
     "notes": "Repo-local helper for the public G16 sealing rule derived from validator-owned integrity semantics and compact reference constants."
+  },
+  "docs/invalid-api-envelope-examples.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/examples/api-invalid/README.md",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to intentionally schema-invalid validator-envelope fixtures and their structural rejection boundaries."
+  },
+  "examples/api-invalid/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-api-envelope-examples.md",
+      "/home/n1/codex-workspace/examples/api/README.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for intentionally schema-invalid validator-envelope fixtures."
+  },
+  "examples/api-invalid/validate-request.single.missing-capsule.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema-invalid single-validate request fixture missing the required capsule field."
+  },
+  "examples/api-invalid/validate-response.fail.invalid-gate.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema-invalid fail-response fixture using a non-canonical gate identifier."
+  },
+  "examples/client/ajv-reject-invalid-validator-envelopes.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for rejecting intentionally invalid validator-envelope fixtures against the published schema bundle."
+  },
+  "examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for rejecting installed invalid validator-envelope fixtures."
+  },
+  "scripts/check-invalid-api-examples.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-api-envelope-examples.md",
+      "/home/n1/codex-workspace/examples/api-invalid/README.md",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
+      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-validator-envelopes.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for intentionally schema-invalid validator-envelope fixtures and their documented rejection paths."
   }
 }

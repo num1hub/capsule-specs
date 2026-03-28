@@ -38,6 +38,8 @@ This executes all repository-local checks in the expected order.
   Verifies the Ajv-based raw-schema consumer recipes, including repo-local execution and package-consumer recipe syntax.
 - `npm run check:invalid-examples`
   Verifies the intentionally schema-invalid capsule fixtures, their documented failure reasons, and the invalid-example recipe layer.
+- `npm run check:invalid-api-examples`
+  Verifies the intentionally schema-invalid validator-envelope fixtures, their documented failure reasons, and the invalid-envelope recipe layer.
 - `npm run check:integrity-recipes`
   Verifies the public sealing-rule recipes, recomputed example/API hashes, and the repair boundary for the intentional `G16` teaching example.
 - `npm run check:python-recipes`
@@ -161,6 +163,7 @@ Serious public changes should not be considered complete until:
 - `references/`, `docs/reference-pack.md`, and `scripts/check-reference-pack.js` stay aligned with the stronger schema and gate surfaces they summarize
 - `docs/schema-validation-recipes.md`, the Ajv-based schema recipes under `examples/client/`, and `scripts/check-schema-recipes.js` stay aligned with the published schema exports and example payloads they validate
 - `docs/invalid-capsule-examples.md`, `examples/invalid/`, the invalid-example Ajv recipes under `examples/client/`, and `scripts/check-invalid-examples.js` stay aligned with the published schema-invalid fixtures and their documented structural rejection paths
+- `docs/invalid-api-envelope-examples.md`, `examples/api-invalid/`, the invalid-envelope Ajv recipes under `examples/client/`, and `scripts/check-invalid-api-examples.js` stay aligned with the published schema-invalid validator-envelope fixtures and their documented structural rejection paths
 - `docs/integrity-recipes.md`, the seal-recomputation recipes under `examples/client/`, and `scripts/check-integrity-recipes.js` stay aligned with the public `G16` rule and the published example/API integrity hashes
 - `docs/python-consumption.md`, the Python recipes under `examples/client/`, and `scripts/check-python-recipes.js` stay aligned with the published compact references, public example seals, and extracted packed-artifact layout they claim to support
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`

@@ -29,8 +29,10 @@ const schemaRecipeFiles = [
   'ajv-validate-capsule.mjs',
   'ajv-validate-validator-envelope.mjs',
   'ajv-reject-invalid-capsules.mjs',
+  'ajv-reject-invalid-validator-envelopes.mjs',
   'esm-package-ajv-validate-contracts.mjs',
-  'esm-package-ajv-reject-invalid-capsules.mjs'
+  'esm-package-ajv-reject-invalid-capsules.mjs',
+  'esm-package-ajv-reject-invalid-validator-envelopes.mjs'
 ];
 
 const integrityRecipeFiles = ['recompute-integrity-seal.mjs', 'esm-package-recompute-integrity-seal.mjs'];
@@ -131,6 +133,14 @@ const expectedSchemaRecipeImports = {
     '../invalid/example-invalid-missing-neuro-concentrate.capsule.json',
     '../invalid/example-invalid-relation-type.capsule.json'
   ],
+  'ajv-reject-invalid-validator-envelopes.mjs': [
+    'ajv/dist/2020.js',
+    '../../schemas/capsule-schema.json',
+    '../../schemas/neuro-concentrate.schema.json',
+    '../../schemas/validator-api-envelopes.schema.json',
+    '../api-invalid/validate-request.single.missing-capsule.json',
+    '../api-invalid/validate-response.fail.invalid-gate.json'
+  ],
   'esm-package-ajv-validate-contracts.mjs': [
     'ajv/dist/2020.js',
     '@num1hub/capsule-specs/schemas/capsule-schema.json',
@@ -146,6 +156,14 @@ const expectedSchemaRecipeImports = {
     '@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json',
     '@num1hub/capsule-specs/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json',
     '@num1hub/capsule-specs/examples/invalid/example-invalid-relation-type.capsule.json'
+  ],
+  'esm-package-ajv-reject-invalid-validator-envelopes.mjs': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/capsule-schema.json',
+    '@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json',
+    '@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json',
+    '@num1hub/capsule-specs/examples/api-invalid/validate-request.single.missing-capsule.json',
+    '@num1hub/capsule-specs/examples/api-invalid/validate-response.fail.invalid-gate.json'
   ]
 };
 

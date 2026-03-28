@@ -125,7 +125,8 @@
         "schemas/capsule-schema.json",
         "schemas/neuro-concentrate.schema.json",
         "schemas/validator-api-envelopes.schema.json",
-        "scripts/check-schema-recipes.js"
+        "scripts/check-schema-recipes.js",
+        "docs/invalid-api-envelope-examples.md"
       ],
       "supporting_surfaces": [
         "docs/integration-guide.md",
@@ -138,13 +139,19 @@
         "examples/client/esm-package-ajv-reject-invalid-capsules.mjs",
         "examples/invalid/README.md",
         "scripts/check-invalid-examples.js",
-        "scripts/check-package-install.js"
+        "scripts/check-package-install.js",
+        "docs/api-envelopes.md",
+        "examples/client/ajv-reject-invalid-validator-envelopes.mjs",
+        "examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs",
+        "examples/api-invalid/README.md",
+        "scripts/check-invalid-api-examples.js"
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
         "npm run check:invalid-examples",
         "npm run check:package-install",
-        "npm run check:traceability"
+        "npm run check:traceability",
+        "npm run check:invalid-api-examples"
       ]
     },
     {
@@ -162,7 +169,10 @@
         "examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
         "examples/invalid/example-invalid-relation-type.capsule.json",
         "examples/api/unauthorized-response.sample.json",
-        "examples/api/conflict-response.sample.json"
+        "examples/api/conflict-response.sample.json",
+        "docs/invalid-api-envelope-examples.md",
+        "examples/api-invalid/validate-request.single.missing-capsule.json",
+        "examples/api-invalid/validate-response.fail.invalid-gate.json"
       ],
       "supporting_surfaces": [
         "examples/api/validate-response.fail.json",
@@ -170,13 +180,16 @@
         "docs/portability.md",
         "schemas/public-failure-model.schema.json",
         "PUBLIC_EXAMPLE_COVERAGE.json",
-        "scripts/check-invalid-examples.js"
+        "scripts/check-invalid-examples.js",
+        "examples/api-invalid/README.md",
+        "scripts/check-invalid-api-examples.js"
       ],
       "verify_commands": [
         "npm run check:failure-model",
         "npm run check:invalid-examples",
         "npm run check:api-examples",
-        "npm run check:traceability"
+        "npm run check:traceability",
+        "npm run check:invalid-api-examples"
       ]
     },
     {

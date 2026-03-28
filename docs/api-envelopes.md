@@ -4,6 +4,11 @@ This repository publishes the validator OpenAPI document and a small set of conc
 
 The request and response examples are also covered by [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json), which gives tooling a machine-readable contract bundle for the public envelope layer.
 
+For intentionally schema-invalid validator-envelope fixtures that should fail before any live route semantics matter, also inspect:
+
+- [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
+- [`../examples/api-invalid/README.md`](../examples/api-invalid/README.md)
+
 If you need source-level consumer artifacts instead of raw JSON Schema alone, also inspect:
 
 - [`type-projections.md`](type-projections.md)
@@ -52,6 +57,8 @@ If you need source-level consumer artifacts instead of raw JSON Schema alone, al
 The public repo currently includes concrete examples for the first two request envelopes and for common response shapes. That keeps the reference surface useful without trying to mirror every internal runtime path.
 
 The `fix` response sample is intentionally illustrative: it is derived from the published OpenAPI contract and from local validator behavior on the public negative `G16` example, not from a deployed public HTTP trace.
+
+The fixtures under [`../examples/api-invalid/`](../examples/api-invalid/) are different: they are intentionally not valid public request/response envelopes. They exist to teach raw-schema consumers what should be rejected directly by the envelope schema bundle.
 
 For the higher-level fail-closed summary across validator, OpenAPI, and portability surfaces, see [`failure-model.md`](failure-model.md).
 

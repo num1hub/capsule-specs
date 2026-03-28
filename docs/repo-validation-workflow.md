@@ -11,6 +11,7 @@ This is the right workflow for:
 - docs and index changes
 - schema commentary and schema-family docs
 - example and API-payload refinements
+- schema-invalid capsule or validator-envelope fixture refinements
 - public-safe TypeScript or Zod projection updates
 - package-export, build, or pack-surface updates for the published projection layer
 - community-health and GitHub-surface maintenance
@@ -73,8 +74,10 @@ Examples:
 
 - `examples/*.capsule.json`
 - `examples/api/*.json`
+- `examples/api-invalid/*.json`
 - `docs/examples.md`
 - `docs/route-reference.md`
+- `docs/invalid-api-envelope-examples.md`
 - `docs/integrity-recipes.md`
 
 Start with:
@@ -82,6 +85,8 @@ Start with:
 ```bash
 npm run check:examples
 npm run check:api-examples
+npm run check:invalid-examples
+npm run check:invalid-api-examples
 npm run check:integrity-recipes
 npm run check:example-coverage
 ```
@@ -140,6 +145,8 @@ Common co-movement rules:
   and re-run `npm run check:package-install` after `npm run check:package-surface`
 - changed sealing, `integrity_sha3_512`, or validator response `computedHash` examples:
   review `docs/integrity-recipes.md`, `docs/reference-pack.md`, `examples/client/`, `examples/api/`, and re-run `npm run check:integrity-recipes`
+- changed schema-invalid fixture layers for capsules or validator envelopes:
+  review `docs/schema-validation-recipes.md`, `docs/invalid-capsule-examples.md`, `docs/invalid-api-envelope-examples.md`, `examples/invalid/`, `examples/api-invalid/`, and re-run `npm run check:invalid-examples`, `npm run check:invalid-api-examples`, and `npm run check:schema-recipes`
 
 ## Step 3: Re-run the narrow checks
 

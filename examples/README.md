@@ -32,9 +32,11 @@ Use them to:
   Intentionally schema-invalid capsule fixtures for raw-schema consumers.
 - `api/`
   Validator HTTP payload examples for integrators and client builders.
+- `api-invalid/`
+  Intentionally schema-invalid validator-envelope fixtures for raw-schema consumers.
 - `client/`
   Minimal curl and Node recipes for external consumers.
 - `archive/`
   Public-safe archive-bundle sample for portability review.
 
-The fixtures under `invalid/` complement the bounded top-level example set. They are for direct schema rejection checks and do not replace the stronger validator-facing negative `G16` example in the top-level directory.
+The fixtures under `invalid/` and `api-invalid/` complement the bounded top-level example set. They are for direct schema rejection checks and do not replace the stronger validator-facing negative `G16` example in the top-level directory or the structurally valid negative response examples under `api/`.

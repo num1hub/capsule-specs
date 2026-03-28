@@ -1,0 +1,8 @@
+{
+  "options": {
+    "skipG16": false,
+    "allowRefutes": false,
+    "existingIds": []
+  },
+  "autoFix": false
+}
