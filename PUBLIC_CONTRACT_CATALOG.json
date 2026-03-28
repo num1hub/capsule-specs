@@ -1444,6 +1444,38 @@
       ]
     },
     {
+      "id": "examples.client.ts-build-validate-batch-request",
+      "path": "examples/client/ts-build-validate-batch-request.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "examples.client.ts-build-validate-fix-request",
+      "path": "examples/client/ts-build-validate-fix-request.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
       "id": "examples.client.ts-build-validate-request",
       "path": "examples/client/ts-build-validate-request.ts",
       "kind": "client-recipe",
@@ -1558,6 +1590,38 @@
     {
       "id": "examples.client.zod-parse-support-responses",
       "path": "examples/client/zod-parse-support-responses.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "examples.client.zod-parse-validate-batch-response",
+      "path": "examples/client/zod-parse-validate-batch-response.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "examples.client.zod-parse-validate-fix-response",
+      "path": "examples/client/zod-parse-validate-fix-response.ts",
       "kind": "client-recipe",
       "stability": "maintained",
       "audiences": [

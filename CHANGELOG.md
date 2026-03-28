@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- added source-level TypeScript batch and fix request recipes plus source-level Zod batch and fix response recipes, so repo-relative projection consumers no longer need to infer those validator-envelope families from package-only or Python-only examples
 - added source-level TypeScript and Zod support-response recipes for `gates` and `stats`, tying repo-relative projection consumers to the published sample payloads instead of leaving support-response parsing proven only through Python or installed-package flows
 - added installed-package CommonJS, ESM, and TypeScript support-response recipes for `gates` and `stats`, plus fresh-install proof that the packaged validator projection layer covers support payloads as well as `validate` request/response flows
 - completed Node live-route coverage for `POST /api/validate/fix`, closing the last remaining route-level gap in the published validator client recipe set

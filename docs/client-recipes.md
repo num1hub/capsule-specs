@@ -42,11 +42,15 @@ Source-level consumer examples also live under [`../examples/client/`](../exampl
 - [`ts-capsule-summary.ts`](../examples/client/ts-capsule-summary.ts)
 - [`zod-parse-capsule.ts`](../examples/client/zod-parse-capsule.ts)
 - [`ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
+- [`ts-build-validate-batch-request.ts`](../examples/client/ts-build-validate-batch-request.ts)
+- [`ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
 - [`ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
 - [`zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
+- [`zod-parse-validate-batch-response.ts`](../examples/client/zod-parse-validate-batch-response.ts)
+- [`zod-parse-validate-fix-response.ts`](../examples/client/zod-parse-validate-fix-response.ts)
 - [`zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
 
-These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema, including both `validate` envelopes and the published `gates` / `stats` support responses.
+These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema, including single, batch, and fix `validate` envelopes plus the published `gates` / `stats` support responses.
 
 ## Raw JSON Schema recipes
 

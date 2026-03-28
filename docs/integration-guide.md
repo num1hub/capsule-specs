@@ -66,13 +66,17 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 - [`../projections/typescript/index.ts`](../projections/typescript/index.ts)
 - [`../projections/zod/index.ts`](../projections/zod/index.ts)
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
+- [`../examples/client/ts-build-validate-batch-request.ts`](../examples/client/ts-build-validate-batch-request.ts)
+- [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
 - [`../examples/client/esm-package-support-responses.mjs`](../examples/client/esm-package-support-responses.mjs)
 - [`../examples/client/ts-package-support-responses.ts`](../examples/client/ts-package-support-responses.ts)
+- [`../examples/client/zod-parse-validate-batch-response.ts`](../examples/client/zod-parse-validate-batch-response.ts)
+- [`../examples/client/zod-parse-validate-fix-response.ts`](../examples/client/zod-parse-validate-fix-response.ts)
 - [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
 - [`../examples/client/zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
 
 These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
-If you want repo-relative source-level support-response parsing instead of package imports, start with the new TypeScript and Zod support-response recipes under [`../examples/client/`](../examples/client/).
+If you want repo-relative source-level request construction or response parsing instead of package imports, start with the TypeScript batch/fix request recipes plus the Zod batch/fix and support-response recipes under [`../examples/client/`](../examples/client/).
 If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
 If you need the published `gates` and `stats` support responses from that installed-package path instead of repo-local example files, start with the package support-response recipes under [`../examples/client/`](../examples/client/).
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.

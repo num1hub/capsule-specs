@@ -27,8 +27,12 @@ const typeRecipeFiles = [
   'ts-capsule-summary.ts',
   'zod-parse-capsule.ts',
   'ts-build-validate-request.ts',
+  'ts-build-validate-batch-request.ts',
+  'ts-build-validate-fix-request.ts',
   'ts-parse-support-responses.ts',
   'zod-parse-validate-response.ts',
+  'zod-parse-validate-batch-response.ts',
+  'zod-parse-validate-fix-response.ts',
   'zod-parse-support-responses.ts'
 ];
 
@@ -150,8 +154,12 @@ const expectedTypeProjectionImports = {
   'ts-capsule-summary.ts': '../../projections/typescript/capsule.js',
   'zod-parse-capsule.ts': '../../projections/zod/capsule.js',
   'ts-build-validate-request.ts': '../../projections/typescript/validator-api.js',
+  'ts-build-validate-batch-request.ts': '../../projections/typescript/validator-api.js',
+  'ts-build-validate-fix-request.ts': '../../projections/typescript/validator-api.js',
   'ts-parse-support-responses.ts': '../../projections/typescript/validator-api.js',
   'zod-parse-validate-response.ts': '../../projections/zod/validator-api.js',
+  'zod-parse-validate-batch-response.ts': '../../projections/zod/validator-api.js',
+  'zod-parse-validate-fix-response.ts': '../../projections/zod/validator-api.js',
   'zod-parse-support-responses.ts': '../../projections/zod/validator-api.js'
 };
 
