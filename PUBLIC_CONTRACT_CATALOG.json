@@ -3238,6 +3238,115 @@
       ]
     },
     {
+      "id": "docs.reference-pack",
+      "path": "docs/reference-pack.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:reference-pack",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "references.directory-guide",
+      "path": "references/README.md",
+      "kind": "index",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:reference-pack",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "reference.contract-constants",
+      "path": "references/contract-constants.json",
+      "kind": "reference-data",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:reference-pack",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "reference.validation-gates",
+      "path": "references/validation-gates.json",
+      "kind": "reference-data",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:reference-pack",
+        "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "reference.check",
+      "path": "scripts/check-reference-pack.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:reference-pack",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.cjs-package-contract-reference",
+      "path": "examples/client/cjs-package-contract-reference.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-package-contract-reference",
+      "path": "examples/client/ts-package-contract-reference.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "projection.build-config",
       "path": "tsconfig.build.json",
       "kind": "support-artifact",

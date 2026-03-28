@@ -29,6 +29,7 @@ const requiredExports = [
   './zod/validator-api',
   './schemas/*',
   './openapi/*',
+  './references/*',
   './capsules/*',
   './examples/*'
 ];
@@ -66,6 +67,8 @@ const validatorZod = require('@num1hub/capsule-specs/zod/validator-api');
 const capsuleSchemaJson = require('@num1hub/capsule-specs/schemas/capsule-schema.json');
 const validatorSchemaJson = require('@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json');
 const openapi = require('@num1hub/capsule-specs/openapi/validate.openapi.json');
+const contractConstants = require('@num1hub/capsule-specs/references/contract-constants.json');
+const validationGates = require('@num1hub/capsule-specs/references/validation-gates.json');
 const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
 const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsule.json'));
 const passResponse = require(path.join(repoRoot, 'examples', 'api', 'validate-response.pass.json'));
@@ -77,6 +80,8 @@ assert(typeof validatorZod.validatePassResponseSchema?.parse === 'function', 'va
 assert(capsuleSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json', 'capsule schema export must expose the public schema JSON');
 assert(validatorSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json', 'validator schema export must expose the public schema JSON');
 assert(typeof openapi.openapi === 'string' && openapi.openapi.length > 0, 'OpenAPI export must expose a valid OpenAPI document');
+assert(Array.isArray(contractConstants.relation_types) && contractConstants.relation_types.length === 9, 'reference export must expose canonical relation types');
+assert(Array.isArray(validationGates.gates) && validationGates.gates.length === 16, 'reference export must expose all 16 validation gates');
 assert(
   rawConfidenceCapsule.metadata?.capsule_id === 'capsule.foundation.capsuleos.confidence-vector.v1',
   'raw capsule export must expose the curated confidence-vector capsule'
@@ -112,9 +117,14 @@ for (const relativePath of [
   'schemas/capsule-schema.json',
   'schemas/validator-api-envelopes.schema.json',
   'openapi/validate.openapi.json',
+  'references/contract-constants.json',
+  'references/validation-gates.json',
   'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json',
+  'docs/reference-pack.md',
+  'examples/client/cjs-package-contract-reference.cjs',
   'examples/client/esm-package-capsule-summary.mjs',
-  'examples/client/esm-package-validate-response.mjs'
+  'examples/client/esm-package-validate-response.mjs',
+  'examples/client/ts-package-contract-reference.ts'
 ]) {
   assert(packedFiles.has(relativePath), `npm pack surface must include ${relativePath}`);
 }

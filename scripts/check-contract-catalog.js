@@ -17,6 +17,7 @@ const allowedKinds = new Set([
   'api-doc',
   'integration-doc',
   'verification-doc',
+  'reference-data',
   'schema',
   'projection',
   'example',
@@ -83,6 +84,11 @@ const requiredIds = [
   'capsules.raw-versioning-protocol',
   'capsules.raw-subtype-atomic',
   'capsules.raw-subtype-hub',
+  'docs.reference-pack',
+  'references.directory-guide',
+  'reference.contract-constants',
+  'reference.validation-gates',
+  'reference.check',
   'schema.reference-doc',
   'schema.family-reference-doc',
   'schema.directory-guide',
@@ -196,9 +202,11 @@ const requiredIds = [
   'examples.client.ts-build-validate-request',
   'examples.client.zod-parse-validate-response',
   'examples.client.cjs-package-capsule-summary',
+  'examples.client.cjs-package-contract-reference',
   'examples.client.cjs-package-validate-response',
   'examples.client.esm-package-capsule-summary',
-  'examples.client.esm-package-validate-response'
+  'examples.client.esm-package-validate-response',
+  'examples.client.ts-package-contract-reference'
 ];
 
 for (const requiredId of requiredIds) {

@@ -56,6 +56,7 @@
 - added a buildable and packable package-export layer for the public-safe projection surface, including npm-consumer docs and package-based client recipes
 - added fresh-project tarball install verification plus ESM package recipes for the package-consumer layer, and clarified that local package checks do not imply npm registry publication
 - added a copyable TypeScript package-consumer recipe, repo-local self-package typecheck mapping, and fresh-install compile verification tied to the same public artifact
+- added a compact contract-reference pack with machine-readable enum and gate summaries, package-consumer recipes, and verifier-backed install/export proof for tool-builders
 ## 0.1.0 - 2026-03-26
 
 Initial public open-core projection from N1Hub:

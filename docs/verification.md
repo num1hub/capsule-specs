@@ -32,6 +32,8 @@ This executes all repository-local checks in the expected order.
   Packs the repository and verifies clean installs in fresh CommonJS, ESM, and TypeScript consumer projects.
 - `npm run check:raw-capsules`
   Verifies the curated raw capsule source set, including five-root shape, semantic-hash parity, confidence-vector structure, link semantics, and filename-to-capsule identity alignment.
+- `npm run check:reference-pack`
+  Verifies that the compact contract-reference JSON exports stay aligned to stronger schema enums, validator option flags, and published gate summaries.
 - `npm run check:example-coverage`
   Verifies `PUBLIC_EXAMPLE_COVERAGE.json`, capsule/API example coverage links, and surrounding example docs.
 - `npm run check:boundary-map`
@@ -148,6 +150,7 @@ Serious public changes should not be considered complete until:
 - `PUBLIC_PUBLICATION_READINESS.json` stays aligned with the real front-door, legal, contract, release, and bounded post-publication signals it summarizes
 - `PUBLIC_TRACEABILITY_MATRIX.json` stays aligned with the real docs, schemas, examples, and verification commands it claims to connect
 - `capsules/`, `capsules/README.md`, and `scripts/check-raw-capsules.js` stay aligned with the curated raw law-adjacent source set they claim to publish
+- `references/`, `docs/reference-pack.md`, and `scripts/check-reference-pack.js` stay aligned with the stronger schema and gate surfaces they summarize
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`
 - repo-owned GitHub label and milestone surfaces stay aligned with `.github/labels.json`, `.github/milestones.json`, and `docs/github-operations.md`

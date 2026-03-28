@@ -8,6 +8,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - built CommonJS projection artifacts under `dist/projections/`
 - package exports for the root projection namespaces
 - package exports for `typescript`, `zod`, and selected JSON artifacts
+- package exports for compact contract reference JSON artifacts
 - package exports for curated raw capsule source files
 - pack-time inclusion of the built projection layer
 - fresh-project install checks for CommonJS, ESM, and TypeScript consumers
@@ -34,6 +35,8 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/schemas/capsule-schema.json`
 - `@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json`
 - `@num1hub/capsule-specs/openapi/validate.openapi.json`
+- `@num1hub/capsule-specs/references/contract-constants.json`
+- `@num1hub/capsule-specs/references/validation-gates.json`
 - `@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json`
 - `@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.versioning-protocol.v1.json`
 
@@ -66,6 +69,16 @@ const confidenceVectorCapsule = require("@num1hub/capsule-specs/capsules/capsule
 console.log(confidenceVectorCapsule.metadata.capsule_id);
 ```
 
+## Minimal compact reference import example
+
+```js
+const contractConstants = require("@num1hub/capsule-specs/references/contract-constants.json");
+const validationGates = require("@num1hub/capsule-specs/references/validation-gates.json");
+
+console.log(contractConstants.relation_types);
+console.log(validationGates.gates.map((gate) => gate.id));
+```
+
 ## Minimal ESM example
 
 ```js
@@ -79,7 +92,7 @@ console.log(parsed.metadata.capsule_id);
 
 ## Minimal TypeScript type-resolution example
 
-A copyable version of this example also lives at [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts).
+A copyable version of this example also lives at [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts). A compact-reference variant lives at [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts).
 
 ```ts
 import { CAPSULE_TYPES, type Capsule } from "@num1hub/capsule-specs/typescript/capsule";
@@ -121,6 +134,7 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - The build output is derived from the maintained source projections in `projections/`.
 - The TypeScript package recipe is typechecked through the repo-local self-package path map and rechecked from a fresh installed tarball.
 - The package surface does not turn this repository into a complete SDK.
+- The reference-pack exports are convenience JSON layers for compact tooling use, not stronger replacements for the schemas, raw capsules, or validator/OpenAPI surfaces they summarize.
 - The raw capsule exports are curated reference assets, not a promise that the whole upstream vault is available as a package surface.
 - The package surface is verified through local tarball install, subpath consumption, and TypeScript type-resolution checks, not through an implied npm registry promise.
 - The live validator and the published JSON Schema/OpenAPI surfaces remain stronger sources for edge-case semantics.
@@ -130,3 +144,4 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - `npm run build:projections`
 - `npm run check:package-surface`
 - `npm run check:package-install`
+- `npm run check:reference-pack`

@@ -75,6 +75,38 @@
       ]
     },
     {
+      "id": "compact-contract-reference-pack",
+      "claim": "Tool-builders can consume canonical enums, validation-gate families, and validator option flags from a compact package-consumable reference layer without treating that layer as stronger than the schemas, gate docs, or raw capsules it summarizes.",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "strongest_surfaces": [
+        "docs/reference-pack.md",
+        "references/contract-constants.json",
+        "references/validation-gates.json",
+        "scripts/check-reference-pack.js"
+      ],
+      "supporting_surfaces": [
+        "docs/integration-guide.md",
+        "docs/npm-consumption.md",
+        "docs/16-gates.md",
+        "schemas/capsule-schema.json",
+        "schemas/neuro-concentrate.schema.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "examples/client/cjs-package-contract-reference.cjs",
+        "examples/client/ts-package-contract-reference.ts",
+        "scripts/check-package-install.js"
+      ],
+      "verify_commands": [
+        "npm run check:reference-pack",
+        "npm run check:client-recipes",
+        "npm run check:package-surface",
+        "npm run check:package-install",
+        "npm run check:traceability"
+      ]
+    },
+    {
       "id": "negative-evidence-and-fail-closed",
       "claim": "The public surface documents bounded negative paths instead of exposing only happy-path examples.",
       "audiences": [

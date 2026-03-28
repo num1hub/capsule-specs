@@ -13,6 +13,7 @@ const requiredIds = [
   'inspect-capsule-law',
   'validate-public-examples-locally',
   'build-validator-client-from-public-contracts',
+  'consume-compact-contract-references',
   'consume-source-level-type-projections',
   'understand-trust-boundaries',
   'review-repository-maturity-quickly',

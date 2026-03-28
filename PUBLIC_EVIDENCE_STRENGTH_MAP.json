@@ -20,8 +20,11 @@
         "docs/5-element-law.md",
         "docs/16-gates.md",
         "docs/relation-types.md",
+        "docs/reference-pack.md",
         "docs/schema-reference.md",
         "docs/schema-family-reference.md",
+        "references/contract-constants.json",
+        "references/validation-gates.json",
         "schemas/README.md"
       ],
       "illustrative_surfaces": [
@@ -35,7 +38,8 @@
         "reviewing reference semantics",
         "reviewing confidence-vector semantics",
         "checking immutable version lineage",
-        "inspecting structural subtype meaning"
+        "inspecting structural subtype meaning",
+        "consuming compact enums and gate IDs without parsing the larger schema files first"
       ],
       "not_authoritative_for": [
         "live runtime-only validator behavior",

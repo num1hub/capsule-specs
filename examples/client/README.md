@@ -23,9 +23,11 @@ This directory contains minimal consumer-oriented examples for the published val
 ## Package recipes
 
 - `cjs-package-capsule-summary.cjs`
+- `cjs-package-contract-reference.cjs`
 - `cjs-package-validate-response.cjs`
 - `esm-package-capsule-summary.mjs`
 - `esm-package-validate-response.mjs`
+- `ts-package-contract-reference.ts`
 - `ts-package-validate-request.ts`
 
 ## Notes
@@ -35,3 +37,4 @@ This directory contains minimal consumer-oriented examples for the published val
 - They demonstrate route usage, not deployment-specific infrastructure.
 - The TypeScript recipes demonstrate source-level consumer usage of the published projection layer under `projections/`.
 - The package recipes demonstrate CommonJS, ESM, and TypeScript consumption after `npm run build:projections` or from a packed artifact installed into a fresh project.
+- The package recipes also cover compact JSON contract references in addition to projection exports and raw capsule assets.

@@ -5,15 +5,17 @@
   "checks": [
     {
       "id": "public-surface-coverage",
-      "summary": "Protects manifest coverage, catalog integrity, curated raw capsule discoverability, and the existence of declared public artifacts.",
+      "summary": "Protects manifest coverage, catalog integrity, curated raw capsule discoverability, compact reference-pack discoverability, and the existence of declared public artifacts.",
       "commands": [
         "npm run audit:public-surface",
         "npm run check:catalog",
-        "npm run check:raw-capsules"
+        "npm run check:raw-capsules",
+        "npm run check:reference-pack"
       ],
       "protects": [
         "SOURCE_MANIFEST.json",
         "PUBLIC_CONTRACT_CATALOG.json",
+        "references/",
         "capsules/",
         "PUBLIC_RELEASE_METADATA.json"
       ],
@@ -21,12 +23,14 @@
         "SOURCE_MANIFEST.json",
         "PUBLIC_CONTRACT_CATALOG.json",
         "scripts/audit-public-surface.js",
+        "scripts/check-reference-pack.js",
         "scripts/check-raw-capsules.js"
       ],
       "failure_modes_prevented": [
         "untracked public files",
         "missing catalog entries",
         "stale manifest coverage",
+        "undocumented compact reference drift",
         "undocumented raw capsule drift"
       ]
     },
@@ -56,6 +60,31 @@
         "broken raw capsule semantics",
         "API/sample drift",
         "schema/example mismatch"
+      ]
+    },
+    {
+      "id": "compact-contract-references",
+      "summary": "Protects compact package-consumable references for enums, gate IDs, and validator option flags without letting them drift from stronger schema and gate surfaces.",
+      "commands": [
+        "npm run check:reference-pack",
+        "npm run check:package-surface",
+        "npm run check:package-install"
+      ],
+      "protects": [
+        "references/",
+        "docs/reference-pack.md",
+        "package.json"
+      ],
+      "strongest_surfaces": [
+        "references/contract-constants.json",
+        "references/validation-gates.json",
+        "scripts/check-reference-pack.js",
+        "docs/reference-pack.md"
+      ],
+      "failure_modes_prevented": [
+        "compact reference/schema drift",
+        "broken reference package exports",
+        "consumer-facing gate-map drift"
       ]
     },
     {

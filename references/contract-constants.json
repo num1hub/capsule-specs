@@ -1,0 +1,69 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "capsule_root_keys": [
+    "metadata",
+    "core_payload",
+    "neuro_concentrate",
+    "recursive_layer",
+    "integrity_sha3_512"
+  ],
+  "metadata": {
+    "type_enum": [
+      "foundation",
+      "concept",
+      "operations",
+      "physical_object",
+      "project"
+    ],
+    "subtype_enum": [
+      "atomic",
+      "hub"
+    ],
+    "status_enum": [
+      "draft",
+      "active",
+      "frozen",
+      "archived",
+      "legacy",
+      "sovereign",
+      "quarantined"
+    ],
+    "semantic_hash_pattern": "^(?:[a-z0-9]+-){7}[a-z0-9]+$"
+  },
+  "relation_types": [
+    "supports",
+    "contradicts",
+    "extends",
+    "derived_from",
+    "depends_on",
+    "references",
+    "duplicates",
+    "implements",
+    "part_of"
+  ],
+  "confidence_vector": {
+    "dimensions": [
+      "extraction",
+      "synthesis",
+      "linking",
+      "provenance_coverage",
+      "validation_score",
+      "contradiction_pressure"
+    ],
+    "minimum": 0,
+    "maximum": 1
+  },
+  "validator": {
+    "validation_option_flags": [
+      "skipG16",
+      "allowRefutes",
+      "existingIds"
+    ],
+    "gate_severity_enum": [
+      "error",
+      "warning"
+    ],
+    "integrity_sha3_512_pattern": "^[a-f0-9]{128}$"
+  }
+}

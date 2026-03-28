@@ -12,6 +12,12 @@ This guide shows the safest path for building against the public N1Hub specifica
 
 The schema family guide helps you choose the right level first. The schemas and OpenAPI artifacts should then shape your parser, validator client, and payload expectations.
 
+If you need compact enums, gate IDs, or validator option flags for UI pickers, code generators, or CLI hints, also inspect:
+
+- [`reference-pack.md`](reference-pack.md)
+- [`../references/contract-constants.json`](../references/contract-constants.json)
+- [`../references/validation-gates.json`](../references/validation-gates.json)
+
 ## 2. Add source-level projections where helpful
 
 If your toolchain uses TypeScript or Zod directly, also inspect:
@@ -30,6 +36,7 @@ These are convenience projections for consumer ergonomics, not replacements for 
 If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
 That check confirms CommonJS runtime usage, ESM runtime usage, and TypeScript type resolution from an installed tarball.
+If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.
 
 ## 3. Learn the minimal capsule shape
 

@@ -9,7 +9,7 @@
   "published_boundaries": [
     {
       "id": "capsule-law",
-      "summary": "Public law and schema surface for capsules, validation gates, relation semantics, confidence-vector semantics, subtype meaning, version lineage, and curated raw law-adjacent capsules.",
+      "summary": "Public law and schema surface for capsules, validation gates, relation semantics, confidence-vector semantics, subtype meaning, version lineage, compact contract references, and curated raw law-adjacent capsules.",
       "strongest_surfaces": [
         "docs/5-element-law.md",
         "docs/16-gates.md",
@@ -33,6 +33,7 @@
       "verify_commands": [
         "npm run check:examples",
         "npm run check:raw-capsules",
+        "npm run check:reference-pack",
         "npm run check:docs",
         "npm run check:boundary-map"
       ]

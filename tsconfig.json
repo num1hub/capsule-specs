@@ -25,6 +25,9 @@
       ],
       "@num1hub/capsule-specs/zod/validator-api": [
         "./projections/zod/validator-api.ts"
+      ],
+      "@num1hub/capsule-specs/references/*": [
+        "./references/*"
       ]
     },
     "strict": true,

@@ -4822,6 +4822,16 @@
     "transformation_type": "generated",
     "notes": "Guide to the buildable package-export surface for the maintained projection layer, including local tarball install posture and TypeScript package-consumer resolution."
   },
+  "docs/reference-pack.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/references/validation-gates.json",
+      "/home/n1/codex-workspace/docs/integration-guide.md",
+      "/home/n1/codex-workspace/docs/npm-consumption.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to the compact contract-reference layer for tool-builders and package consumers."
+  },
   "examples/client/ts-package-validate-request.ts": {
     "source_paths": [
       "/home/n1/codex-workspace/projections/typescript/capsule.ts",
@@ -4831,6 +4841,30 @@
     ],
     "transformation_type": "generated",
     "notes": "Minimal TypeScript package-consumer recipe for a typed validator request against the built package exports."
+  },
+  "references/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/reference-pack.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for compact machine-readable contract references."
+  },
+  "references/contract-constants.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Compact contract constants derived from stronger schema enums and validator option flags."
+  },
+  "references/validation-gates.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/16-gates.md",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.16-gates.v1.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Compact gate-family and gate-summary reference derived from the stronger public gate docs and raw capsule."
   },
   "projections/index.ts": {
     "source_paths": [
@@ -4893,6 +4927,22 @@
     "transformation_type": "generated",
     "notes": "Minimal ESM recipe for consuming the built package-export validator API surface."
   },
+  "examples/client/cjs-package-contract-reference.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/references/validation-gates.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer recipe for compact contract-reference exports."
+  },
+  "examples/client/ts-package-contract-reference.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/references/validation-gates.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer recipe for compact contract-reference exports."
+  },
   "tsconfig.build.json": {
     "source_paths": [
       "/home/n1/codex-workspace/projections/index.ts",
@@ -4948,5 +4998,17 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for curated raw law-adjacent capsule sources."
+  },
+  "scripts/check-reference-pack.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/references/validation-gates.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json",
+      "/home/n1/codex-workspace/docs/16-gates.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for the compact contract-reference pack."
   }
 }

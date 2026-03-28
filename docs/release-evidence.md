@@ -83,8 +83,12 @@ This repository keeps release evidence in both human-readable and machine-readab
   Machine-readable summary of which domains are published here and which remain intentionally deferred.
 - [`../PUBLIC_PORTABILITY_PROFILE.json`](../PUBLIC_PORTABILITY_PROFILE.json)
   Machine-readable summary of the public portability and archive trust posture.
+- [`reference-pack.md`](reference-pack.md)
+  Human-readable guide to the compact contract-reference layer for enums, gate IDs, and validator flags.
 - [`../capsules/README.md`](../capsules/README.md)
   Human-readable guide to the curated raw law-adjacent capsule source set.
+- [`../references/README.md`](../references/README.md)
+  Human-readable guide to the compact machine-readable contract references.
 - [`../schemas/public-release-metadata.schema.json`](../schemas/public-release-metadata.schema.json)
   JSON Schema for the release-metadata file.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
@@ -115,6 +119,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that a packed artifact installs and runs in fresh CommonJS, ESM, and TypeScript consumer projects.
 - [`../scripts/check-raw-capsules.js`](../scripts/check-raw-capsules.js)
   Repo-local verification that the curated raw capsule exports remain structurally aligned, package-consumable, and law-adjacent rather than drifting into an unbounded vault export.
+- [`../scripts/check-reference-pack.js`](../scripts/check-reference-pack.js)
+  Repo-local verification that the compact contract-reference exports stay aligned to stronger schemas, validator flags, and published gate summaries.
 - [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator request envelope.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
@@ -127,6 +133,10 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal ESM package-consumer recipe for the built capsule projection exports.
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
   Minimal ESM package-consumer recipe for the built validator API exports.
+- [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs)
+  Minimal CommonJS package-consumer recipe for compact contract-reference exports.
+- [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
+  Minimal TypeScript package-consumer recipe for compact contract-reference exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
   Minimal TypeScript package-consumer recipe for the built capsule and validator API exports.
 
@@ -145,6 +155,8 @@ The type-projection layer strengthens consumer ergonomics by giving TypeScript a
 The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer that stays subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree.
+
+The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, and validator option flags without forcing them to parse the larger schemas or prose docs first.
 
 The curated raw capsule layer strengthens that path further by publishing a small, verifier-backed set of stronger law-adjacent source artifacts for confidence-vector semantics, subtype meaning, and version-lineage posture without pretending the whole upstream capsule corpus is public.
 
@@ -231,13 +243,16 @@ When the public surface changes, these files should move together:
 - `PUBLIC_CAPABILITY_MATRIX.json`
 - `PUBLIC_BOUNDARY_MAP.json`
 - `PUBLIC_PORTABILITY_PROFILE.json`
+- `references/README.md`
 - `capsules/README.md`
 - `docs/type-projections.md`
 - `docs/npm-consumption.md`
+- `docs/reference-pack.md`
 - `docs/source-materials.md`
 - `tsconfig.build.json`
 - `scripts/check-package-surface.js`
 - `scripts/check-package-install.js`
+- `scripts/check-reference-pack.js`
 - `scripts/check-raw-capsules.js`
 - `projections/index.ts`
 - `projections/typescript/index.ts`
@@ -250,6 +265,8 @@ When the public surface changes, these files should move together:
 - `examples/client/cjs-package-validate-response.cjs`
 - `examples/client/esm-package-capsule-summary.mjs`
 - `examples/client/esm-package-validate-response.mjs`
+- `examples/client/cjs-package-contract-reference.cjs`
+- `examples/client/ts-package-contract-reference.ts`
 - `examples/client/ts-package-validate-request.ts`
 - `examples/client/ts-build-validate-request.ts`
 - `examples/client/zod-parse-validate-response.ts`

@@ -27,12 +27,13 @@ const typeRecipeFiles = [
 
 const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
+  'cjs-package-contract-reference.cjs',
   'cjs-package-validate-response.cjs',
   'esm-package-capsule-summary.mjs',
   'esm-package-validate-response.mjs'
 ];
 
-const packageTypeRecipeFiles = ['ts-package-validate-request.ts'];
+const packageTypeRecipeFiles = ['ts-package-contract-reference.ts', 'ts-package-validate-request.ts'];
 
 function assert(condition, message) {
   if (!condition) {
@@ -98,6 +99,10 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/typescript',
     '@num1hub/capsule-specs/zod'
   ],
+  'cjs-package-contract-reference.cjs': [
+    '@num1hub/capsule-specs/references/contract-constants.json',
+    '@num1hub/capsule-specs/references/validation-gates.json'
+  ],
   'cjs-package-validate-response.cjs': [
     '@num1hub/capsule-specs/zod/validator-api'
   ],
@@ -116,6 +121,10 @@ const expectedPackageTypeImports = {
   'ts-package-validate-request.ts': [
     '@num1hub/capsule-specs/typescript/capsule',
     '@num1hub/capsule-specs/typescript/validator-api'
+  ],
+  'ts-package-contract-reference.ts': [
+    '@num1hub/capsule-specs/references/contract-constants.json',
+    '@num1hub/capsule-specs/references/validation-gates.json'
   ]
 };
 

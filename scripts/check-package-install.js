@@ -33,6 +33,7 @@ const workspaceRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'capsule-specs-insta
 const packedFilePath = path.join(workspaceRoot, 'tarball.json');
 let tarballPath = null;
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
+const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
 
 try {
   const packOutput = run('npm', ['pack', '--json', '--pack-destination', workspaceRoot], repoRoot);
@@ -60,11 +61,15 @@ try {
       "const { capsuleSchema } = require('@num1hub/capsule-specs/zod');",
       "const { validatePassResponseSchema } = require('@num1hub/capsule-specs/zod/validator-api');",
       "const capsuleSchemaJson = require('@num1hub/capsule-specs/schemas/capsule-schema.json');",
+      "const contractConstants = require('@num1hub/capsule-specs/references/contract-constants.json');",
+      "const validationGates = require('@num1hub/capsule-specs/references/validation-gates.json');",
       "const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');",
       "const note = require('@num1hub/capsule-specs/examples/example-note.capsule.json');",
       "const passResponse = require('@num1hub/capsule-specs/examples/api/validate-response.pass.json');",
       "if (!rootProjection.typescript || !rootProjection.zod) throw new Error('missing root namespaces');",
       "if (capsuleSchemaJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json') throw new Error('unexpected schema id');",
+      "if (contractConstants.relation_types.length !== 9) throw new Error('missing reference constants export');",
+      "if (validationGates.gates.length !== 16) throw new Error('missing validation gate export');",
       "if (rawConfidenceCapsule.metadata.capsule_id !== 'capsule.foundation.capsuleos.confidence-vector.v1') throw new Error('missing raw capsule export');",
       "const parsedNote = capsuleSchema.parse(note);",
       "const parsedResponse = validatePassResponseSchema.parse(passResponse);",
@@ -90,6 +95,8 @@ try {
       "import * as zodProjection from '@num1hub/capsule-specs/zod';",
       "import * as validatorProjection from '@num1hub/capsule-specs/zod/validator-api';",
       "import capsuleSchemaJson from '@num1hub/capsule-specs/schemas/capsule-schema.json' with { type: 'json' };",
+      "import contractConstants from '@num1hub/capsule-specs/references/contract-constants.json' with { type: 'json' };",
+      "import validationGates from '@num1hub/capsule-specs/references/validation-gates.json' with { type: 'json' };",
       "import rawConfidenceCapsule from '@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json' with { type: 'json' };",
       "import note from '@num1hub/capsule-specs/examples/example-note.capsule.json' with { type: 'json' };",
       "import passResponse from '@num1hub/capsule-specs/examples/api/validate-response.pass.json' with { type: 'json' };",
@@ -99,6 +106,8 @@ try {
       "if (!rootNamespace.typescript || !rootNamespace.zod) throw new Error('missing root namespaces');",
       "if (!capsuleSchema || !validatePassResponseSchema) throw new Error('missing zod exports');",
       "if (capsuleSchemaJson.$id !== 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json') throw new Error('unexpected schema id');",
+      "if (contractConstants.relation_types.length !== 9) throw new Error('missing reference constants export');",
+      "if (validationGates.gates.length !== 16) throw new Error('missing validation gate export');",
       "if (rawConfidenceCapsule.metadata.capsule_id !== 'capsule.foundation.capsuleos.confidence-vector.v1') throw new Error('missing raw capsule export');",
       "const parsedNote = capsuleSchema.parse(note);",
       "const parsedResponse = validatePassResponseSchema.parse(passResponse);",
@@ -125,14 +134,15 @@ try {
       noEmit: true,
       skipLibCheck: true
     },
-    include: ['consumer.ts']
+    include: ['consumer.ts', 'reference-consumer.ts']
   });
   run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath], typescriptProject);
   fs.writeFileSync(path.join(typescriptProject, 'consumer.ts'), fs.readFileSync(typescriptConsumerRecipePath, 'utf8'), 'utf8');
+  fs.writeFileSync(path.join(typescriptProject, 'reference-consumer.ts'), fs.readFileSync(typescriptReferenceRecipePath, 'utf8'), 'utf8');
   const repoTsc = path.join(repoRoot, 'node_modules', 'typescript', 'bin', 'tsc');
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
-  console.log('OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule exports');
+  console.log('OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule and reference-pack exports');
 } catch (error) {
   console.error(`FAIL: ${error.message}`);
   process.exitCode = 1;

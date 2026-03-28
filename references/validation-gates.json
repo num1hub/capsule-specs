@@ -1,0 +1,128 @@
+{
+  "version": "0.1.0",
+  "reviewed_at": "2026-03-26",
+  "families": [
+    {
+      "id": "structural",
+      "label": "Structural gates",
+      "gate_ids": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06"
+      ]
+    },
+    {
+      "id": "neuro-semantic",
+      "label": "Neuro and semantic gates",
+      "gate_ids": [
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11"
+      ]
+    },
+    {
+      "id": "topology-confidence",
+      "label": "Topology and confidence gates",
+      "gate_ids": [
+        "G12",
+        "G13",
+        "G14",
+        "G15"
+      ]
+    },
+    {
+      "id": "cryptographic",
+      "label": "Cryptographic gate",
+      "gate_ids": [
+        "G16"
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "id": "G01",
+      "family": "structural",
+      "summary": "exactly five root keys"
+    },
+    {
+      "id": "G02",
+      "family": "structural",
+      "summary": "required subfields present"
+    },
+    {
+      "id": "G03",
+      "family": "structural",
+      "summary": "types, enums, and versions match the canonical contract"
+    },
+    {
+      "id": "G04",
+      "family": "structural",
+      "summary": "provenance coverage is high enough and source metadata is present when required"
+    },
+    {
+      "id": "G05",
+      "family": "structural",
+      "summary": "content type is recognized or at least structurally acceptable"
+    },
+    {
+      "id": "G06",
+      "family": "structural",
+      "summary": "payload integrity rules are satisfied"
+    },
+    {
+      "id": "G07",
+      "family": "neuro-semantic",
+      "summary": "summary length is within the allowed range"
+    },
+    {
+      "id": "G08",
+      "family": "neuro-semantic",
+      "summary": "keywords count is within the allowed range"
+    },
+    {
+      "id": "G09",
+      "family": "neuro-semantic",
+      "summary": "semantic hash format is valid"
+    },
+    {
+      "id": "G10",
+      "family": "neuro-semantic",
+      "summary": "semantic hash parity holds between metadata and neuro layer"
+    },
+    {
+      "id": "G11",
+      "family": "neuro-semantic",
+      "summary": "relation types are canonical"
+    },
+    {
+      "id": "G12",
+      "family": "topology-confidence",
+      "summary": "linked target IDs resolve when known-ID validation is active"
+    },
+    {
+      "id": "G13",
+      "family": "topology-confidence",
+      "summary": "non-draft capsules include at least one outbound link"
+    },
+    {
+      "id": "G14",
+      "family": "topology-confidence",
+      "summary": "long capsules cannot claim unrealistically perfect coherence"
+    },
+    {
+      "id": "G15",
+      "family": "topology-confidence",
+      "summary": "the confidence vector has the right shape and value bounds"
+    },
+    {
+      "id": "G16",
+      "family": "cryptographic",
+      "summary": "`integrity_sha3_512` matches the recomputed SHA3-512 hash over the canonicalized first four roots"
+    }
+  ]
+}

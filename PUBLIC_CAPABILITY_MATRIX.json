@@ -109,6 +109,36 @@
       ]
     },
     {
+      "id": "consume-compact-contract-references",
+      "audience": "tool-builders",
+      "readiness": "ready",
+      "outcome": "Consume canonical enums, validation-gate families, and validator option flags from a compact package-consumable reference layer instead of parsing larger schemas or prose docs for every small tooling need.",
+      "strongest_surfaces": [
+        "docs/reference-pack.md",
+        "references/contract-constants.json",
+        "references/validation-gates.json",
+        "references/README.md"
+      ],
+      "supporting_surfaces": [
+        "docs/integration-guide.md",
+        "docs/npm-consumption.md",
+        "docs/16-gates.md",
+        "schemas/capsule-schema.json",
+        "schemas/neuro-concentrate.schema.json",
+        "schemas/validator-api-envelopes.schema.json",
+        "examples/client/cjs-package-contract-reference.cjs",
+        "examples/client/ts-package-contract-reference.ts",
+        "scripts/check-reference-pack.js"
+      ],
+      "verify_commands": [
+        "npm run check:reference-pack",
+        "npm run check:client-recipes",
+        "npm run check:package-surface",
+        "npm run check:package-install",
+        "npm run check:capability-matrix"
+      ]
+    },
+    {
       "id": "consume-source-level-type-projections",
       "audience": "tool-builders",
       "readiness": "ready",
