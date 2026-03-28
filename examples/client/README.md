@@ -32,6 +32,7 @@ This directory contains minimal consumer-oriented examples for the published val
 - `ts-parse-error-responses.ts`
 - `ts-parse-support-responses.ts`
 - `zod-parse-validate-response.ts`
+- `zod-parse-validate-fail-response.ts`
 - `zod-parse-validate-batch-response.ts`
 - `zod-parse-validate-fix-response.ts`
 - `zod-parse-error-responses.ts`
@@ -97,7 +98,7 @@ This directory contains minimal consumer-oriented examples for the published val
 - They are intentionally small and public-safe.
 - They demonstrate route usage, not deployment-specific infrastructure.
 - The TypeScript recipes demonstrate source-level consumer usage of the published projection layer under `projections/`.
-- The source-level TypeScript and Zod recipes now cover single, batch, and fix `validate` envelopes, request-family parsing/building, typed/parsing paths for the full pass/fail/batch/fix response family, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes.
+- The source-level TypeScript and Zod recipes now cover single, batch, and fix `validate` envelopes, request-family parsing/building, and sample-driven typed/parsing paths for the full published pass/fail/batch/fix response family, plus the published `gates` / `stats` support responses and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes.
 - The package recipes demonstrate CommonJS, ESM, and TypeScript consumption after `npm run build:projections` or from a packed artifact installed into a fresh project.
 - The package recipes also cover request-family parsing and typed single/batch/fix request construction, validator pass/fail/batch/fix response families, compact JSON contract references, validator support responses, shared error envelopes, and raw capsule assets in addition to projection exports.
 - The raw-schema recipes demonstrate direct Ajv validation against published schema files, the archive-bundle portability schema, single-file schema bundles, package-exported schema assets, and intentionally invalid archive, capsule, and validator-envelope fixtures.

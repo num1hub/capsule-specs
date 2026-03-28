@@ -51,6 +51,7 @@ Source-level consumer examples also live under [`../examples/client/`](../exampl
 - [`ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts)
 - [`ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
 - [`zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
+- [`zod-parse-validate-fail-response.ts`](../examples/client/zod-parse-validate-fail-response.ts)
 - [`zod-parse-validate-batch-response.ts`](../examples/client/zod-parse-validate-batch-response.ts)
 - [`zod-parse-validate-fix-response.ts`](../examples/client/zod-parse-validate-fix-response.ts)
 - [`zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)

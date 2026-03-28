@@ -90,6 +90,7 @@ This index maps the highest-signal public surfaces in the repository.
 - [`npm-consumption.md`](npm-consumption.md)
 - [`trust-model.md`](trust-model.md)
 - [`type-projections.md`](type-projections.md)
+- [`../examples/client/zod-parse-validate-fail-response.ts`](../examples/client/zod-parse-validate-fail-response.ts)
 
 ## Core law
 

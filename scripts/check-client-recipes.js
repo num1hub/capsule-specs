@@ -37,6 +37,7 @@ const typeRecipeFiles = [
   'ts-parse-support-responses.ts',
   'zod-parse-error-responses.ts',
   'zod-parse-validate-response.ts',
+  'zod-parse-validate-fail-response.ts',
   'zod-parse-validate-batch-response.ts',
   'zod-parse-validate-fix-response.ts',
   'zod-parse-support-responses.ts'
@@ -178,6 +179,7 @@ const expectedTypeProjectionImports = {
   'ts-parse-support-responses.ts': '../../projections/typescript/validator-api.js',
   'zod-parse-error-responses.ts': '../../projections/zod/validator-api.js',
   'zod-parse-validate-response.ts': '../../projections/zod/validator-api.js',
+  'zod-parse-validate-fail-response.ts': '../../projections/zod/validator-api.js',
   'zod-parse-validate-batch-response.ts': '../../projections/zod/validator-api.js',
   'zod-parse-validate-fix-response.ts': '../../projections/zod/validator-api.js',
   'zod-parse-support-responses.ts': '../../projections/zod/validator-api.js'

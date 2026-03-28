@@ -1809,6 +1809,22 @@
       ]
     },
     {
+      "id": "examples.client.zod-parse-validate-fail-response",
+      "path": "examples/client/zod-parse-validate-fail-response.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
       "id": "examples.client.zod-parse-validate-fix-request",
       "path": "examples/client/zod-parse-validate-fix-request.ts",
       "kind": "client-recipe",

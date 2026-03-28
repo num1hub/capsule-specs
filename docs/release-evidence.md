@@ -174,7 +174,9 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
   Minimal source-level TypeScript recipe for typing the published `gates` and `stats` support-response payloads.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
-  Minimal source-level Zod recipe for parsing a validator response envelope.
+  Minimal source-level Zod recipe for parsing the published pass validator response envelope.
+- [`../examples/client/zod-parse-validate-fail-response.ts`](../examples/client/zod-parse-validate-fail-response.ts)
+  Minimal source-level Zod recipe for parsing the published fail validator response envelope.
 - [`../examples/client/zod-parse-validate-batch-response.ts`](../examples/client/zod-parse-validate-batch-response.ts)
   Minimal source-level Zod recipe for parsing a validator batch response envelope.
 - [`../examples/client/zod-parse-validate-fix-response.ts`](../examples/client/zod-parse-validate-fix-response.ts)
@@ -266,7 +268,7 @@ The API envelope schema and its dedicated verification script strengthen that cl
 
 The type-projection layer strengthens consumer ergonomics by giving TypeScript and Zod users source-level artifacts without asking them to reverse-engineer the public capsule shape from prose or private runtime code.
 
-The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
+The validator API projection layer strengthens that path further by giving tool-builders and integrators a public-safe source-level request/response layer for single, batch, and fix `validate` envelopes, source-level Zod request parsing for those published request samples, sample-driven Zod parsing for the published pass/fail/batch/fix response families, `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes while staying subordinate to the stronger envelope schemas, OpenAPI, curated API examples, and live validator behavior.
 
 The package-consumer layer strengthens that path further by making the maintained projection surface buildable, exportable, dry-run packable, and install-verified in fresh CommonJS, ESM, and TypeScript consumer projects instead of leaving it only as raw source files inside the repository tree, while now covering installed-package request parsing and TypeScript request typing for the published single, batch, and fix families plus the full published validate-response family instead of request-side raw Ajv/typing-only proofs and a positive-pass sample only.
 
@@ -410,6 +412,7 @@ When the public surface changes, these files should move together:
 - `examples/client/ts-build-validate-request.ts`
 - `examples/client/ts-parse-support-responses.ts`
 - `examples/client/zod-parse-validate-response.ts`
+- `examples/client/zod-parse-validate-fail-response.ts`
 - `examples/client/zod-parse-support-responses.ts`
 
 If they drift, the release evidence is incomplete even if the individual docs still read well.

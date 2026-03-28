@@ -41,7 +41,9 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
 - [`../examples/client/ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
   Minimal TypeScript recipe for typing the published `gates` and `stats` support responses through the public projection layer.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
-  Minimal Zod recipe for parsing a validator response envelope through the public projection layer.
+  Minimal Zod recipe for parsing the published pass validator response envelope through the public projection layer.
+- [`../examples/client/zod-parse-validate-fail-response.ts`](../examples/client/zod-parse-validate-fail-response.ts)
+  Minimal Zod recipe for parsing the published fail validator response envelope through the public projection layer.
 - [`../examples/client/zod-parse-validate-batch-response.ts`](../examples/client/zod-parse-validate-batch-response.ts)
   Minimal Zod recipe for parsing a validator batch response envelope through the public projection layer.
 - [`../examples/client/zod-parse-validate-fix-response.ts`](../examples/client/zod-parse-validate-fix-response.ts)
@@ -88,6 +90,7 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - an installed-package TypeScript path for single, batch, and fix validator request-family typing without repo-relative imports
 - an installed-package runtime path for parsing the published single, batch, and fix request families from CommonJS and ESM consumers
 - a source-level path for typed validate-response families that stays aligned to the published pass, fail, batch, and fix samples
+- a source-level Zod path for parsing the published pass, fail, batch, and fix validator response samples instead of mixing published fixtures with synthetic response objects
 - a source-level path for bounded shared error-envelope typing and parsing that stays aligned to the published sample payloads
 - a source-level path for support-response typing and parsing that stays aligned to the published sample payloads
 

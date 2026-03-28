@@ -217,6 +217,7 @@ const requiredIds = [
   'examples.client.ts-parse-error-responses',
   'examples.client.ts-parse-support-responses',
   'examples.client.zod-parse-validate-response',
+  'examples.client.zod-parse-validate-fail-response',
   'examples.client.zod-parse-validate-batch-response',
   'examples.client.zod-parse-validate-fix-response',
   'examples.client.zod-parse-error-responses',

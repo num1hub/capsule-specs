@@ -1,11 +1,14 @@
+import passResponse from "../api/validate-response.pass.json";
 import { validatePassResponseSchema } from "../../projections/zod/validator-api.js";
 
-const candidate = {
-  valid: true,
-  errors: [],
-  warnings: [],
-  computedHash: "eed9fad3b0adac495f2bc898adfb26e49da11672767c6d9002b1f4dfe339159323e626598d61a49c4a5dedf3366a80b391dcb395c8844427eb11682bcd9c1ba8",
-  appliedFixes: []
+export const parsedValidateResponse = validatePassResponseSchema.parse(passResponse);
+
+export const validatePassResponseSummary = {
+  valid: parsedValidateResponse.valid,
+  appliedFixCount: parsedValidateResponse.appliedFixes.length,
+  warningCount: parsedValidateResponse.warnings.length
 };
 
-export const parsedValidateResponse = validatePassResponseSchema.parse(candidate);
+if (!validatePassResponseSummary.valid) {
+  throw new Error("parsed pass response must stay valid");
+}
