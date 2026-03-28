@@ -15,6 +15,12 @@ If you need source-level consumer artifacts instead of raw JSON Schema alone, al
 - [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
 - [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
 
+If you need a cross-language raw-JSON consumer path outside the Node runtime, also inspect:
+
+- [`python-consumption.md`](python-consumption.md)
+- [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
+- [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
+
 ## Covered example files
 
 - [`../examples/api/validate-request.single.json`](../examples/api/validate-request.single.json)
@@ -54,7 +60,7 @@ If you need source-level consumer artifacts instead of raw JSON Schema alone, al
   The current public example surface uses `{ capsule, options }`.
   Policy variants may exist upstream, but the public repository only schema-covers the documented example envelope.
 
-The public repo currently includes concrete examples for the first two request envelopes and for common response shapes. That keeps the reference surface useful without trying to mirror every internal runtime path.
+The public repo currently includes concrete examples for all three published request envelopes and for the bounded response families documented here. That keeps the reference surface useful without trying to mirror every internal runtime path.
 
 The `fix` response sample is intentionally illustrative: it is derived from the published OpenAPI contract and from local validator behavior on the public negative `G16` example, not from a deployed public HTTP trace.
 

@@ -193,6 +193,10 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal Python recipe for preparing or sending the published `POST /api/validate/batch` example envelope.
 - [`../examples/client/python-validate-fix.py`](../examples/client/python-validate-fix.py)
   Minimal Python recipe for preparing or sending the published `POST /api/validate/fix` example envelope.
+- [`../examples/client/python-parse-validate-responses.py`](../examples/client/python-parse-validate-responses.py)
+  Minimal Python recipe for parsing the published pass, fail, batch, and fix validator response families.
+- [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
+  Minimal Python recipe for parsing the published gates, stats, unauthorized, conflict, generic-error, and rate-limit response families.
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
@@ -228,7 +232,7 @@ The invalid-fixture layer strengthens that path further by proving that downstre
 
 The integrity-recipe layer strengthens that path further by proving that published example capsules and validator response envelopes stay aligned to the current public sealing rule instead of treating their `integrity_sha3_512` or `computedHash` fields as unverified folklore.
 
-The Python-consumption layer strengthens that path further by proving the same compact reference, validator-envelope request, and `G16` integrity flows are consumable outside the Node runtime from raw packaged assets, without overclaiming a Python SDK or PyPI distribution.
+The Python-consumption layer strengthens that path further by proving the same compact reference, validator-envelope request/response, and `G16` integrity flows are consumable outside the Node runtime from raw packaged assets, without overclaiming a Python SDK or PyPI distribution.
 
 The curated raw capsule layer strengthens that path further by publishing a small, verifier-backed set of stronger law-adjacent source artifacts for confidence-vector semantics, subtype meaning, and version-lineage posture without pretending the whole upstream capsule corpus is public.
 

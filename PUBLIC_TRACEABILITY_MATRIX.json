@@ -37,7 +37,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, client recipes, and bounded package/extracted-artifact consumer paths that cover CommonJS, ESM, TypeScript, and Python readers without depending on private runtime code.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, envelope schemas, examples, client recipes, and bounded package/extracted-artifact consumer paths that cover CommonJS, ESM, TypeScript, and Python request/response readers without depending on private runtime code.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -49,7 +49,8 @@
         "schemas/validator-api-envelopes.schema.json",
         "examples/client/node-validate-single.mjs",
         "docs/python-consumption.md",
-        "examples/client/python-validate-single.py"
+        "examples/client/python-validate-single.py",
+        "examples/client/python-parse-validate-responses.py"
       ],
       "supporting_surfaces": [
         "docs/route-reference.md",
@@ -58,6 +59,11 @@
         "examples/api/validate-request.batch.json",
         "examples/api/validate-request.fix.json",
         "examples/api/validate-response.pass.json",
+        "examples/api/validate-response.fail.json",
+        "examples/api/validate-response.batch.json",
+        "examples/api/validate-response.fix.sample.json",
+        "examples/api/gates-response.sample.json",
+        "examples/api/stats-response.sample.json",
         "PUBLIC_EXAMPLE_COVERAGE.json",
         "docs/schema-family-reference.md",
         "docs/npm-consumption.md",
@@ -69,6 +75,7 @@
         "examples/client/ts-package-validate-request.ts",
         "examples/client/python-validate-batch.py",
         "examples/client/python-validate-fix.py",
+        "examples/client/python-parse-support-responses.py",
         "scripts/check-python-recipes.js",
         "scripts/check-package-install.js"
       ],

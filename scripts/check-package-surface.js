@@ -193,6 +193,8 @@ for (const relativePath of [
   'examples/client/python-validate-single.py',
   'examples/client/python-validate-batch.py',
   'examples/client/python-validate-fix.py',
+  'examples/client/python-parse-validate-responses.py',
+  'examples/client/python-parse-support-responses.py',
   'examples/client/esm-package-capsule-summary.mjs',
   'examples/client/esm-package-validate-response.mjs',
   'examples/client/ts-package-contract-reference.ts',

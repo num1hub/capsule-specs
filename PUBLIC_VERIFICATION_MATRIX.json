@@ -36,7 +36,7 @@
     },
     {
       "id": "capsule-and-api-example-integrity",
-      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, cross-language Python validator-envelope recipes, and the reproducibility of published G16 integrity seals and computedHash values.",
+      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, cross-language Python validator-envelope request/response recipes, and the reproducibility of published G16 integrity seals and computedHash values.",
       "commands": [
         "npm run check:examples",
         "npm run check:raw-capsules",
@@ -58,6 +58,8 @@
         "examples/client/python-validate-single.py",
         "examples/client/python-validate-batch.py",
         "examples/client/python-validate-fix.py",
+        "examples/client/python-parse-validate-responses.py",
+        "examples/client/python-parse-support-responses.py",
         "references/contract-constants.json"
       ],
       "strongest_surfaces": [
@@ -77,7 +79,8 @@
         "stale computedHash values in validator API examples",
         "package-level integrity recipe claims that only work through repo-local helper state",
         "cross-language Python integrity recipes drifting away from the published G16 rule or extracted package layout",
-        "cross-language Python validator-envelope recipes drifting away from the published API example payloads or extracted package layout"
+        "cross-language Python validator-envelope recipes drifting away from the published API example payloads or extracted package layout",
+        "cross-language Python response-family recipes drifting away from the published API example payloads or extracted package layout"
       ]
     },
     {

@@ -50,7 +50,7 @@
 - intentionally schema-invalid capsule fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
 - intentionally schema-invalid validator-envelope fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
 - integrity-seal recomputation docs, repo-local and package-consumer seal recipes, compact integrity constants, and a dedicated verifier for published `G16` example and API hash correctness
-- cross-language Python consumption docs, Python recipes for compact references, validator-envelope request flows, and public `G16` seal proofs, plus a dedicated verifier for repo-local and extracted packed-artifact execution
+- cross-language Python consumption docs, Python recipes for compact references, validator-envelope request/response flows, and public `G16` seal proofs, plus a dedicated verifier for repo-local and extracted packed-artifact execution
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, error, and stats sample payloads for the validator HTTP surface
 - client recipes and trust-model docs for external consumers

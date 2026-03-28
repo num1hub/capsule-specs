@@ -1150,12 +1150,24 @@
       "/home/n1/codex-workspace/examples/client/python-validate-single.py",
       "/home/n1/codex-workspace/examples/client/python-validate-batch.py",
       "/home/n1/codex-workspace/examples/client/python-validate-fix.py",
+      "/home/n1/codex-workspace/examples/client/python-parse-validate-responses.py",
+      "/home/n1/codex-workspace/examples/client/python-parse-support-responses.py",
       "/home/n1/codex-workspace/examples/api/validate-request.single.json",
       "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
-      "/home/n1/codex-workspace/examples/api/validate-request.fix.json"
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json"
     ],
     "transformation_type": "generated",
-    "notes": "Guide to Python JSON-first consumption of compact references, validator-envelope request flows, and public G16 seal proofs from repo-local files or extracted packed artifacts."
+    "notes": "Guide to Python JSON-first consumption of compact references, validator-envelope request/response flows, and public G16 seal proofs from repo-local files or extracted packed artifacts."
   },
   "docs/quickstart.md": {
     "source_paths": [
@@ -2176,6 +2188,34 @@
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for preparing or sending the published fix validator-envelope example."
   },
+  "examples/client/python-parse-support-responses.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/gates-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for parsing the published support response families for the validator HTTP surface."
+  },
+  "examples/client/python-parse-validate-responses.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fail.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.fix.sample.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/api-envelopes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for parsing the published validate, fail, batch, and fix response examples."
+  },
   "examples/client/python-validate-single.py": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-request.single.json",
@@ -2200,6 +2240,8 @@
       "/home/n1/codex-workspace/examples/client/python-validate-single.py",
       "/home/n1/codex-workspace/examples/client/python-validate-batch.py",
       "/home/n1/codex-workspace/examples/client/python-validate-fix.py",
+      "/home/n1/codex-workspace/examples/client/python-parse-validate-responses.py",
+      "/home/n1/codex-workspace/examples/client/python-parse-support-responses.py",
       "/home/n1/codex-workspace/examples/client/zod-parse-capsule.ts",
       "/home/n1/codex-workspace/examples/client/zod-parse-validate-response.ts",
       "/home/n1/codex-workspace/projections/index.ts",
@@ -5145,10 +5187,12 @@
       "/home/n1/codex-workspace/examples/client/python-validate-single.py",
       "/home/n1/codex-workspace/examples/client/python-validate-batch.py",
       "/home/n1/codex-workspace/examples/client/python-validate-fix.py",
+      "/home/n1/codex-workspace/examples/client/python-parse-validate-responses.py",
+      "/home/n1/codex-workspace/examples/client/python-parse-support-responses.py",
       "/home/n1/codex-workspace/package.json"
     ],
     "transformation_type": "generated",
-    "notes": "Verifier for repo-local and extracted packed-artifact Python recipes that consume compact references, validator-envelope request examples, and public G16 seal proofs."
+    "notes": "Verifier for repo-local and extracted packed-artifact Python recipes that consume compact references, validator-envelope request/response examples, and public G16 seal proofs."
   },
   "scripts/check-raw-capsules.js": {
     "source_paths": [

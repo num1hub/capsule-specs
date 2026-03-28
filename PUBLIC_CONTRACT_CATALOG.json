@@ -1252,6 +1252,36 @@
       ]
     },
     {
+      "id": "examples.client.python-parse-validate-responses",
+      "path": "examples/client/python-parse-validate-responses.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-parse-support-responses",
+      "path": "examples/client/python-parse-support-responses.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.readme",
       "path": "examples/client/README.md",
       "kind": "support-artifact",

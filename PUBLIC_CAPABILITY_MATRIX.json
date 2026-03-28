@@ -85,7 +85,7 @@
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Build a validator-facing client from public OpenAPI, schema-backed envelopes, and copyable Node, TypeScript, Zod, and Python client recipes.",
+      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, and copyable Node, TypeScript, Zod, and Python request/response recipes.",
       "strongest_surfaces": [
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -101,6 +101,8 @@
         "examples/client/python-validate-single.py",
         "examples/client/python-validate-batch.py",
         "examples/client/python-validate-fix.py",
+        "examples/client/python-parse-validate-responses.py",
+        "examples/client/python-parse-support-responses.py",
         "examples/api/validate-request.single.json",
         "examples/api/validate-response.pass.json",
         "docs/schema-family-reference.md"
@@ -1004,7 +1006,7 @@
       "id": "consume-public-assets-from-python",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume compact contract references, published validator-envelope request examples, and public G16 seal proofs from Python using raw JSON assets from either a repo checkout or an extracted packed artifact, without depending on the Node projection layer.",
+      "outcome": "Consume compact contract references, published validator-envelope request/response examples, and public G16 seal proofs from Python using raw JSON assets from either a repo checkout or an extracted packed artifact, without depending on the Node projection layer.",
       "strongest_surfaces": [
         "docs/python-consumption.md",
         "examples/client/python-contract-reference.py",
@@ -1012,6 +1014,8 @@
         "examples/client/python-validate-single.py",
         "examples/client/python-validate-batch.py",
         "examples/client/python-validate-fix.py",
+        "examples/client/python-parse-validate-responses.py",
+        "examples/client/python-parse-support-responses.py",
         "scripts/check-python-recipes.js"
       ],
       "supporting_surfaces": [
@@ -1024,6 +1028,12 @@
         "examples/api/validate-request.single.json",
         "examples/api/validate-request.batch.json",
         "examples/api/validate-request.fix.json",
+        "examples/api/validate-response.pass.json",
+        "examples/api/validate-response.fail.json",
+        "examples/api/validate-response.batch.json",
+        "examples/api/validate-response.fix.sample.json",
+        "examples/api/gates-response.sample.json",
+        "examples/api/stats-response.sample.json",
         "examples/example-note.capsule.json",
         "examples/example-validator-invalid-g16.capsule.json",
         "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json"

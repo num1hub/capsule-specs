@@ -6,11 +6,11 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 317,
-    "manifest_entries": 317
+    "files": 319,
+    "manifest_entries": 319
   },
   "surface_summary": {
-    "catalog_entries": 270,
+    "catalog_entries": 272,
     "example_capsules": 5,
     "api_example_files": 13,
     "markdown_files": 100
@@ -295,7 +295,7 @@
     "The raw-schema recipe layer in docs/schema-validation-recipes.md and examples/client/ is a convenience consumer path and must stay subordinate to the stronger published schemas, OpenAPI, curated examples, and live validator behavior it demonstrates.",
     "The invalid-fixture layer in docs/invalid-capsule-examples.md and examples/invalid/ is a bounded teaching surface for structural rejection testing and must not be mistaken for a complete map of live validator failure classes or private runtime test coverage.",
     "The integrity recipe layer in docs/integrity-recipes.md, examples/client/, and scripts/check-integrity-recipes.js is a public-safe recomputation proof for published G16 hashes and examples, not a full replacement for live validator edge-case behavior outside the published sealing rule.",
-    "The Python recipe layer in docs/python-consumption.md, examples/client/, and scripts/check-python-recipes.js is a bounded raw-asset, validator-envelope, and extracted-artifact consumer path, not a Python SDK or PyPI distribution promise.",
+    "The Python recipe layer in docs/python-consumption.md, examples/client/, and scripts/check-python-recipes.js is a bounded raw-asset, validator-envelope request/response, and extracted-artifact consumer path, not a Python SDK or PyPI distribution promise.",
     "The invalid API-envelope layer in docs/invalid-api-envelope-examples.md and examples/api-invalid/ is a bounded structural teaching surface for schema-level HTTP-envelope rejection, not a complete map of live validator failure classes or deployed route behavior.",
     "single-file schema bundles are convenience projections for easier distribution and code generation, not stronger sources than the canonical raw schemas, OpenAPI, or live validator behavior"
   ]

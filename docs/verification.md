@@ -174,7 +174,7 @@ Serious public changes should not be considered complete until:
 - `docs/invalid-capsule-examples.md`, `examples/invalid/`, the invalid-example Ajv recipes under `examples/client/`, and `scripts/check-invalid-examples.js` stay aligned with the published schema-invalid fixtures and their documented structural rejection paths
 - `docs/invalid-api-envelope-examples.md`, `examples/api-invalid/`, the invalid-envelope Ajv recipes under `examples/client/`, and `scripts/check-invalid-api-examples.js` stay aligned with the published schema-invalid validator-envelope fixtures and their documented structural rejection paths
 - `docs/integrity-recipes.md`, the seal-recomputation recipes under `examples/client/`, and `scripts/check-integrity-recipes.js` stay aligned with the public `G16` rule and the published example/API integrity hashes
-- `docs/python-consumption.md`, the Python recipes under `examples/client/`, and `scripts/check-python-recipes.js` stay aligned with the published compact references, validator-envelope example payloads, public example seals, and extracted packed-artifact layout they claim to support
+- `docs/python-consumption.md`, the Python recipes under `examples/client/`, and `scripts/check-python-recipes.js` stay aligned with the published compact references, validator-envelope request/response payloads, public example seals, and extracted packed-artifact layout they claim to support
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`
 - repo-owned GitHub label and milestone surfaces stay aligned with `.github/labels.json`, `.github/milestones.json`, and `docs/github-operations.md`

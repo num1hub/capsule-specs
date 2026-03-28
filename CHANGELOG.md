@@ -5,6 +5,7 @@
 - added archive-bundle validation recipes for repo-local and installed-package consumers, plus a dedicated verifier and portability-layer sync updates
 - added intentionally schema-invalid archive-bundle fixtures, repo-local and package-consumer Ajv rejection recipes, and verifier-backed portability-layer sync updates
 - expanded the Python consumer layer with repo-local and extracted-package validator-envelope recipes for validate, batch, and fix flows without implying a Python SDK or hosted-service guarantee
+- expanded the Python consumer layer further with repo-local and extracted-package parsing recipes for validator response families and support envelopes
 - added citation metadata, Dependabot update hygiene, repo-owned GitHub label/milestone configs, release-note categorization, and release-identity synchronization to the live GitHub release
 - added repo-local package metadata and a single `npm run verify:repo` entrypoint
 - added release and provenance docs for source materials, FAQ, and release cadence

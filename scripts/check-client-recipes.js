@@ -48,7 +48,9 @@ const pythonRecipeFiles = [
   'python-recompute-integrity-seal.py',
   'python-validate-single.py',
   'python-validate-batch.py',
-  'python-validate-fix.py'
+  'python-validate-fix.py',
+  'python-parse-validate-responses.py',
+  'python-parse-support-responses.py'
 ];
 
 const packageRecipeFiles = [
@@ -265,6 +267,20 @@ const expectedPythonRecipeReferences = {
     'N1HUB_TOKEN',
     '/api/validate/fix',
     'urllib'
+  ],
+  'python-parse-validate-responses.py': [
+    'examples/api/validate-response.pass.json',
+    'examples/api/validate-response.fail.json',
+    'examples/api/validate-response.batch.json',
+    'examples/api/validate-response.fix.sample.json'
+  ],
+  'python-parse-support-responses.py': [
+    'examples/api/gates-response.sample.json',
+    'examples/api/stats-response.sample.json',
+    'examples/api/unauthorized-response.sample.json',
+    'examples/api/conflict-response.sample.json',
+    'examples/api/error-response.sample.json',
+    'examples/api/rate-limit-response.sample.json'
   ]
 };
 

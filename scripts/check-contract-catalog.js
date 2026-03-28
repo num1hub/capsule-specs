@@ -231,6 +231,8 @@ const requiredIds = [
   'examples.client.esm-package-validate-response',
   'examples.client.ts-package-contract-reference',
   'examples.client.ts-package-validate-request',
+  'examples.client.python-parse-validate-responses',
+  'examples.client.python-parse-support-responses',
   'schema.bundle-check',
   'schema.recipe-check',
   'schema.archive-recipe-check',
