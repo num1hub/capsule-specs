@@ -5196,6 +5196,48 @@
     "transformation_type": "generated",
     "notes": "Verifier for public integrity-seal recomputation recipes and example/API hash correctness under the current G16 rule."
   },
+  "docs/python-consumption.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/reference-pack.md",
+      "/home/n1/codex-workspace/docs/integrity-recipes.md",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
+      "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to Python JSON-first consumption of compact references and public G16 seal proofs from repo-local files or extracted packed artifacts."
+  },
+  "examples/client/python-contract-reference.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/references/validation-gates.json",
+      "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
+      "/home/n1/codex-workspace/docs/python-consumption.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files."
+  },
+  "examples/client/python-recompute-integrity-seal.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/examples/example-validator-invalid-g16.capsule.json",
+      "/home/n1/codex-workspace/references/contract-constants.json",
+      "/home/n1/codex-workspace/docs/integrity-recipes.md",
+      "/home/n1/codex-workspace/docs/python-consumption.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for recomputing public integrity seals and demonstrating the intentional G16 repair boundary."
+  },
+  "scripts/check-python-recipes.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/examples/client/python-contract-reference.py",
+      "/home/n1/codex-workspace/examples/client/python-recompute-integrity-seal.py",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for repo-local and extracted packed-artifact Python recipes that consume compact references and public G16 seal proofs."
+  },
   "scripts/lib/integrity.js": {
     "source_paths": [
       "/home/n1/n1hub.com/lib/validator/utils.ts",

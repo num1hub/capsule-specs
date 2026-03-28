@@ -32,6 +32,12 @@ If you need the exact public sealing rule for `integrity_sha3_512`, also inspect
 - [`../examples/client/recompute-integrity-seal.mjs`](../examples/client/recompute-integrity-seal.mjs)
 - [`../references/contract-constants.json`](../references/contract-constants.json)
 
+If you want the same compact references and public `G16` proof path from Python instead of Node or TypeScript, also inspect:
+
+- [`python-consumption.md`](python-consumption.md)
+- [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
+- [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
+
 ## 2. Add source-level projections where helpful
 
 If your toolchain uses TypeScript or Zod directly, also inspect:
@@ -50,6 +56,7 @@ These are convenience projections for consumer ergonomics, not replacements for 
 If you want package-style consumption from a checkout or packed artifact, use the package subpaths documented in [`npm-consumption.md`](npm-consumption.md).
 If you want a fresh-project smoke test instead of a repo-local self-reference, run `npm run check:package-install`.
 That check confirms CommonJS runtime usage, ESM runtime usage, raw-schema Ajv usage, and TypeScript type resolution from an installed tarball.
+For cross-language raw-asset consumption outside the Node runtime, the same tarball can also be unpacked and consumed through the Python recipes documented in [`python-consumption.md`](python-consumption.md).
 If you want a smaller package surface than the full schemas, the package also exports compact JSON references under `@num1hub/capsule-specs/references/*`.
 
 ## 3. Learn the minimal capsule shape

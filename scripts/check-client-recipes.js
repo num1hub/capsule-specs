@@ -35,6 +35,11 @@ const schemaRecipeFiles = [
 
 const integrityRecipeFiles = ['recompute-integrity-seal.mjs', 'esm-package-recompute-integrity-seal.mjs'];
 
+const pythonRecipeFiles = [
+  'python-contract-reference.py',
+  'python-recompute-integrity-seal.py'
+];
+
 const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
   'cjs-package-contract-reference.cjs',
@@ -52,7 +57,7 @@ function assert(condition, message) {
   }
 }
 
-for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles, ...schemaRecipeFiles, ...integrityRecipeFiles, ...packageRecipeFiles, ...packageTypeRecipeFiles]) {
+for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles, ...schemaRecipeFiles, ...integrityRecipeFiles, ...pythonRecipeFiles, ...packageRecipeFiles, ...packageTypeRecipeFiles]) {
   const filePath = path.join(clientDir, fileName);
   assert(fs.existsSync(filePath), `missing client recipe ${fileName}`);
 }
@@ -159,6 +164,20 @@ const expectedIntegrityRecipeImports = {
   ]
 };
 
+const expectedPythonRecipeReferences = {
+  'python-contract-reference.py': [
+    'references/contract-constants.json',
+    'references/validation-gates.json',
+    'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json'
+  ],
+  'python-recompute-integrity-seal.py': [
+    'examples/example-note.capsule.json',
+    'examples/example-validator-invalid-g16.capsule.json',
+    'references/contract-constants.json',
+    'hashlib.sha3_512'
+  ]
+};
+
 for (const [fileName, imports] of Object.entries(expectedSchemaRecipeImports)) {
   const filePath = path.join(clientDir, fileName);
   const content = fs.readFileSync(filePath, 'utf8');
@@ -177,6 +196,13 @@ for (const [fileName, imports] of Object.entries(expectedIntegrityRecipeImports)
   }
   const result = spawnSync(process.execPath, ['--check', filePath], { encoding: 'utf8' });
   assert(result.status === 0, `${fileName} must be syntactically valid: ${result.stderr || result.stdout}`);
+}
+
+for (const [fileName, references] of Object.entries(expectedPythonRecipeReferences)) {
+  const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
+  for (const reference of references) {
+    assert(content.includes(reference), `${fileName} must reference ${reference}`);
+  }
 }
 
 const expectedPackageImports = {
@@ -241,6 +267,7 @@ console.log(
     typeRecipeFiles.length +
     schemaRecipeFiles.length +
     integrityRecipeFiles.length +
+    pythonRecipeFiles.length +
     packageRecipeFiles.length +
     packageTypeRecipeFiles.length
   } client recipe files`

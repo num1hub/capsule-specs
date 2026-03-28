@@ -33,6 +33,11 @@ This directory contains minimal consumer-oriented examples for the published val
 - `recompute-integrity-seal.mjs`
 - `esm-package-recompute-integrity-seal.mjs`
 
+## Python recipes
+
+- `python-contract-reference.py`
+- `python-recompute-integrity-seal.py`
+
 ## Package recipes
 
 - `cjs-package-capsule-summary.cjs`
@@ -53,3 +58,4 @@ This directory contains minimal consumer-oriented examples for the published val
 - The package recipes also cover compact JSON contract references in addition to projection exports and raw capsule assets.
 - The raw-schema recipes demonstrate direct Ajv validation against published schema files, package-exported schema assets, and intentionally invalid schema fixtures.
 - The integrity recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload and how to repair the intentional `G16` teaching example without private runtime helpers.
+- The Python recipes demonstrate non-Node consumption of compact JSON references and public seal proofs from a repo checkout or extracted packed artifact.

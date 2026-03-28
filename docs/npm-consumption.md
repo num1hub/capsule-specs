@@ -13,6 +13,7 @@ The package metadata, subpath exports, and examples are part of the public repo 
 - package exports for intentionally invalid schema fixtures used in structural rejection tests
 - package exports for integrity-rule constants and copyable seal-recomputation recipes
 - package exports for curated raw capsule source files
+- extracted-artifact consumption of packaged JSON assets from Python recipes
 - pack-time inclusion of the built projection layer
 - fresh-project install checks for CommonJS, ESM, and TypeScript consumers
 
@@ -55,6 +56,7 @@ If you are working from a repository checkout rather than an already packed arti
 
 For a dry-run pack check, use `npm run check:package-surface`.
 For a real install smoke test in fresh CommonJS, ESM, and TypeScript projects, use `npm run check:package-install`.
+If you need the same packaged JSON artifacts from Python without package imports, use the extracted-artifact path in [`python-consumption.md`](python-consumption.md).
 
 ## Minimal CommonJS example
 
@@ -117,6 +119,16 @@ A copyable version of this example also lives at [`../examples/client/esm-packag
 
 That recipe proves the installed package exports not only valid schemas and examples, but also the intentionally invalid fixtures under `examples/invalid/` that raw-schema consumers can use for regression tests.
 
+## Cross-language packed-artifact example
+
+The packaged artifact also supports a raw-asset path outside the Node runtime. See:
+
+- [`python-consumption.md`](python-consumption.md)
+- [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
+- [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
+
+Those recipes prove that extracted package contents include enough public JSON assets for Python consumers to read the compact reference pack and recompute public `G16` seals without depending on Node subpath imports or a PyPI distribution.
+
 ## Minimal ESM example
 
 ```js
@@ -173,6 +185,7 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - The TypeScript package recipe is typechecked through the repo-local self-package path map and rechecked from a fresh installed tarball.
 - The package surface does not turn this repository into a complete SDK.
 - The package surface is compatible with raw-schema validators, but those validators still only prove structural contract conformance, not live gate semantics.
+- The Python path uses extracted packaged files and raw JSON assets; it does not expose the Node exports as Python modules or imply a PyPI release.
 - The reference-pack exports are convenience JSON layers for compact tooling use, not stronger replacements for the schemas, raw capsules, or validator/OpenAPI surfaces they summarize.
 - The raw capsule exports are curated reference assets, not a promise that the whole upstream vault is available as a package surface.
 - The package surface is verified through local tarball install, subpath consumption, and TypeScript type-resolution checks, not through an implied npm registry promise.
@@ -187,3 +200,4 @@ const request: ValidateSingleRequest = { capsule, options: { skipG16: true }, au
 - `npm run check:schema-recipes`
 - `npm run check:invalid-examples`
 - `npm run check:integrity-recipes`
+- `npm run check:python-recipes`

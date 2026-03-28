@@ -63,11 +63,13 @@
       "intentionally schema-invalid capsule fixtures for structural rejection testing",
       "pack-ready projection-consumer docs",
       "fresh-project package-install verification across CommonJS, ESM, and TypeScript consumers",
+      "cross-language Python consumer recipe examples for compact references and public G16 seal proofs",
       "repo-local verification for curated raw capsule sources",
       "repo-local verification for compact contract references",
       "repo-local verification for raw JSON Schema consumer recipes",
       "repo-local verification for intentionally schema-invalid capsule fixtures",
-      "public-safe integrity-seal recomputation recipes and verifier-backed example/API hash proofs"
+      "public-safe integrity-seal recomputation recipes and verifier-backed example/API hash proofs",
+      "repo-local verification for cross-language Python consumer recipes"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -77,13 +79,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 284,
-    "markdown_files": 93,
+    "total_files": 288,
+    "markdown_files": 94,
     "schema_files": 34,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 13,
-    "client_recipe_files": 23,
+    "client_recipe_files": 25,
     "workflow_files": 1,
     "issue_templates": 4
   },
@@ -129,7 +131,7 @@
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 47,
+    "repo_local_check_count": 48,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -175,6 +177,7 @@
     "reference_pack": "docs/reference-pack.md",
     "schema_validation_recipes": "docs/schema-validation-recipes.md",
     "invalid_capsule_examples": "docs/invalid-capsule-examples.md",
+    "python_consumption": "docs/python-consumption.md",
     "repo_validation_workflow": "docs/repo-validation-workflow.md",
     "npm_consumption": "docs/npm-consumption.md",
     "integrity_recipes": "docs/integrity-recipes.md"

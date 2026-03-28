@@ -39,6 +39,13 @@ This recipe:
 
 This recipe uses only the installed package exports and compact reference constants. It is the shortest proof that a downstream consumer can recompute public seals from the packaged artifact alone.
 
+## Cross-language Python recipe
+
+- [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
+- [`python-consumption.md`](python-consumption.md)
+
+This recipe proves the same public sealing rule can be reproduced from Python by reading published JSON artifacts directly, both from a repo checkout and from an extracted packed artifact.
+
 ## Related examples
 
 - [`../examples/example-note.capsule.json`](../examples/example-note.capsule.json)
@@ -62,6 +69,7 @@ This recipe surface does not outrank:
 ## Verification
 
 - `npm run check:integrity-recipes`
+- `npm run check:python-recipes`
 - `npm run check:examples`
 - `npm run check:api-examples`
 - `npm run check:package-install`

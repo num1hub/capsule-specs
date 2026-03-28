@@ -83,9 +83,12 @@
       ],
       "strongest_surfaces": [
         "docs/reference-pack.md",
+        "docs/python-consumption.md",
         "references/contract-constants.json",
         "references/validation-gates.json",
-        "scripts/check-reference-pack.js"
+        "scripts/check-reference-pack.js",
+        "examples/client/python-contract-reference.py",
+        "scripts/check-python-recipes.js"
       ],
       "supporting_surfaces": [
         "docs/integration-guide.md",
@@ -96,10 +99,12 @@
         "schemas/validator-api-envelopes.schema.json",
         "examples/client/cjs-package-contract-reference.cjs",
         "examples/client/ts-package-contract-reference.ts",
+        "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
         "scripts/check-package-install.js"
       ],
       "verify_commands": [
         "npm run check:reference-pack",
+        "npm run check:python-recipes",
         "npm run check:client-recipes",
         "npm run check:package-surface",
         "npm run check:package-install",
@@ -777,10 +782,13 @@
       ],
       "strongest_surfaces": [
         "docs/integrity-recipes.md",
+        "docs/python-consumption.md",
         "references/contract-constants.json",
         "examples/client/recompute-integrity-seal.mjs",
         "examples/client/esm-package-recompute-integrity-seal.mjs",
-        "scripts/check-integrity-recipes.js"
+        "examples/client/python-recompute-integrity-seal.py",
+        "scripts/check-integrity-recipes.js",
+        "scripts/check-python-recipes.js"
       ],
       "supporting_surfaces": [
         "docs/5-element-law.md",
@@ -796,6 +804,7 @@
       ],
       "verify_commands": [
         "npm run check:integrity-recipes",
+        "npm run check:python-recipes",
         "npm run check:examples",
         "npm run check:api-examples",
         "npm run check:package-install",

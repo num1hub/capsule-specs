@@ -91,6 +91,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Human-readable guide to intentionally schema-invalid capsule fixtures and their documented structural rejection paths.
 - [`integrity-recipes.md`](integrity-recipes.md)
   Human-readable guide to the public `G16` sealing rule, recomputation recipes, and repair boundary.
+- [`python-consumption.md`](python-consumption.md)
+  Human-readable guide to cross-language Python consumption of compact references and public `G16` seal proofs from a repo checkout or extracted packed artifact.
 - [`../capsules/README.md`](../capsules/README.md)
   Human-readable guide to the curated raw law-adjacent capsule source set.
 - [`../references/README.md`](../references/README.md)
@@ -133,6 +135,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that the published invalid schema fixtures stay rejected for the documented structural reasons.
 - [`../scripts/check-integrity-recipes.js`](../scripts/check-integrity-recipes.js)
   Repo-local verification that the published example/API integrity hashes and seal-recomputation recipes stay aligned to the current public `G16` rule.
+- [`../scripts/check-python-recipes.js`](../scripts/check-python-recipes.js)
+  Repo-local verification that the Python recipes work both from a checkout and from extracted packed artifacts.
 - [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator request envelope.
 - [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts)
@@ -161,6 +165,10 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal repo-local recipe for recomputing `integrity_sha3_512` and repairing the intentional `G16` teaching example without mutating it in place.
 - [`../examples/client/esm-package-recompute-integrity-seal.mjs`](../examples/client/esm-package-recompute-integrity-seal.mjs)
   Minimal package-consumer recipe for recomputing `integrity_sha3_512` from the installed artifact and compact reference constants.
+- [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
+  Minimal Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files.
+- [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
+  Minimal Python recipe for recomputing public `G16` seals from published examples and compact reference constants.
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
@@ -189,6 +197,8 @@ The raw-schema recipe layer strengthens that path further by proving that downst
 The invalid-fixture layer strengthens that path further by proving that downstream consumers can also test documented structural rejection cases instead of seeing only happy-path schema examples or live-validator-only failures.
 
 The integrity-recipe layer strengthens that path further by proving that published example capsules and validator response envelopes stay aligned to the current public sealing rule instead of treating their `integrity_sha3_512` or `computedHash` fields as unverified folklore.
+
+The Python-consumption layer strengthens that path further by proving the same compact reference and `G16` integrity flows are consumable outside the Node runtime from raw packaged assets, without overclaiming a Python SDK or PyPI distribution.
 
 The curated raw capsule layer strengthens that path further by publishing a small, verifier-backed set of stronger law-adjacent source artifacts for confidence-vector semantics, subtype meaning, and version-lineage posture without pretending the whole upstream capsule corpus is public.
 
@@ -280,11 +290,13 @@ When the public surface changes, these files should move together:
 - `docs/type-projections.md`
 - `docs/npm-consumption.md`
 - `docs/reference-pack.md`
+- `docs/python-consumption.md`
 - `docs/source-materials.md`
 - `tsconfig.build.json`
 - `scripts/check-package-surface.js`
 - `scripts/check-package-install.js`
 - `scripts/check-reference-pack.js`
+- `scripts/check-python-recipes.js`
 - `scripts/check-raw-capsules.js`
 - `projections/index.ts`
 - `projections/typescript/index.ts`
@@ -299,6 +311,8 @@ When the public surface changes, these files should move together:
 - `examples/client/esm-package-validate-response.mjs`
 - `examples/client/cjs-package-contract-reference.cjs`
 - `examples/client/ts-package-contract-reference.ts`
+- `examples/client/python-contract-reference.py`
+- `examples/client/python-recompute-integrity-seal.py`
 - `examples/client/ts-package-validate-request.ts`
 - `examples/client/ts-build-validate-request.ts`
 - `examples/client/zod-parse-validate-response.ts`

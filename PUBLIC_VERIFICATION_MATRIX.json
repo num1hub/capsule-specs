@@ -42,6 +42,7 @@
         "npm run check:raw-capsules",
         "npm run check:api-examples",
         "npm run check:integrity-recipes",
+        "npm run check:python-recipes",
         "npm run check:api-schemas"
       ],
       "protects": [
@@ -50,8 +51,10 @@
         "examples/api/",
         "schemas/validator-api-envelopes.schema.json",
         "docs/integrity-recipes.md",
+        "docs/python-consumption.md",
         "examples/client/recompute-integrity-seal.mjs",
         "examples/client/esm-package-recompute-integrity-seal.mjs",
+        "examples/client/python-recompute-integrity-seal.py",
         "references/contract-constants.json"
       ],
       "strongest_surfaces": [
@@ -69,7 +72,8 @@
         "schema/example mismatch",
         "stale G16 integrity seals in published capsule examples",
         "stale computedHash values in validator API examples",
-        "package-level integrity recipe claims that only work through repo-local helper state"
+        "package-level integrity recipe claims that only work through repo-local helper state",
+        "cross-language Python integrity recipes drifting away from the published G16 rule or extracted package layout"
       ]
     },
     {
@@ -77,12 +81,16 @@
       "summary": "Protects compact package-consumable references for enums, gate IDs, and validator option flags without letting them drift from stronger schema and gate surfaces.",
       "commands": [
         "npm run check:reference-pack",
+        "npm run check:python-recipes",
         "npm run check:package-surface",
         "npm run check:package-install"
       ],
       "protects": [
         "references/",
         "docs/reference-pack.md",
+        "docs/python-consumption.md",
+        "examples/client/python-contract-reference.py",
+        "scripts/check-python-recipes.js",
         "package.json"
       ],
       "strongest_surfaces": [
@@ -94,7 +102,8 @@
       "failure_modes_prevented": [
         "compact reference/schema drift",
         "broken reference package exports",
-        "consumer-facing gate-map drift"
+        "consumer-facing gate-map drift",
+        "cross-language raw-asset reference recipes drifting away from packaged JSON exports"
       ]
     },
     {

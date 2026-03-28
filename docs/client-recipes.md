@@ -63,6 +63,16 @@ If you need the public `G16` sealing rule instead of only schema shape, inspect:
 
 These recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload, verify that the positive examples are sealed correctly, and repair the intentional `G16` teaching example without depending on private runtime helpers.
 
+## Python recipes
+
+If you need a cross-language raw-asset consumption path outside the Node runtime, inspect:
+
+- [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
+- [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
+- [`python-consumption.md`](python-consumption.md)
+
+These recipes demonstrate how Python consumers can read compact contract-reference JSON files, inspect curated raw capsule assets, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
+
 ## Package recipes
 
 If you want package-style consumption instead of file-relative source imports, also inspect:
@@ -78,7 +88,7 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
 - [`npm-consumption.md`](npm-consumption.md)
 
-These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports, positive raw-schema Ajv consumption, package-level rejection of intentionally invalid schema fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows.
+These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including the compact reference-pack JSON exports, positive raw-schema Ajv consumption, package-level rejection of intentionally invalid schema fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows. If you need the same public JSON artifacts from Python instead of Node imports, use the extracted-artifact path documented in [`python-consumption.md`](python-consumption.md).
 
 ## Route mapping
 

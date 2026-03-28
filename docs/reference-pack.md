@@ -51,5 +51,7 @@ See also:
 - [`npm-consumption.md`](npm-consumption.md)
 - [`integration-guide.md`](integration-guide.md)
 - [`integrity-recipes.md`](integrity-recipes.md)
+- [`python-consumption.md`](python-consumption.md)
 - [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs)
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
+- [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)

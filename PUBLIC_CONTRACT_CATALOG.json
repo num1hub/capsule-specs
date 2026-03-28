@@ -3625,6 +3625,67 @@
         "npm run check:integrity-recipes",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "docs.python-consumption",
+      "path": "docs/python-consumption.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-contract-reference",
+      "path": "examples/client/python-contract-reference.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-recompute-integrity-seal",
+      "path": "examples/client/python-recompute-integrity-seal.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.python.check",
+      "path": "scripts/check-python-recipes.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
     }
   ]
 }
