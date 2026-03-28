@@ -44,6 +44,7 @@ const typescriptErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-
 const typescriptBatchRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-batch-request.ts');
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 const typescriptFixRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-fix-request.ts');
+const typescriptParseRequestsRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-parse-validate-requests.ts');
 const typescriptValidateResponsesRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-responses.ts');
 const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
 const typescriptSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-support-responses.ts');
@@ -214,12 +215,14 @@ try {
       moduleResolution: 'NodeNext',
       strict: true,
       noEmit: true,
-      skipLibCheck: true
+      skipLibCheck: true,
+      resolveJsonModule: true
     },
     include: [
       'consumer.ts',
       'batch-request-consumer.ts',
       'fix-request-consumer.ts',
+      'parse-request-consumer.ts',
       'error-consumer.ts',
       'reference-consumer.ts',
       'support-consumer.ts',
@@ -236,6 +239,11 @@ try {
   fs.writeFileSync(
     path.join(typescriptProject, 'fix-request-consumer.ts'),
     fs.readFileSync(typescriptFixRequestRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
+    path.join(typescriptProject, 'parse-request-consumer.ts'),
+    fs.readFileSync(typescriptParseRequestsRecipePath, 'utf8'),
     'utf8'
   );
   fs.writeFileSync(path.join(typescriptProject, 'error-consumer.ts'), fs.readFileSync(typescriptErrorRecipePath, 'utf8'), 'utf8');

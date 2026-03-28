@@ -25,6 +25,7 @@ This directory contains minimal consumer-oriented examples for the published val
 - `ts-build-validate-request.ts`
 - `ts-build-validate-batch-request.ts`
 - `ts-build-validate-fix-request.ts`
+- `ts-parse-validate-requests.ts`
 - `zod-parse-validate-request.ts`
 - `zod-parse-validate-batch-request.ts`
 - `zod-parse-validate-fix-request.ts`
@@ -89,6 +90,7 @@ This directory contains minimal consumer-oriented examples for the published val
 - `ts-package-support-responses.ts`
 - `ts-package-validate-responses.ts`
 - `ts-package-validate-request.ts`
+- `ts-package-parse-validate-requests.ts`
 - `ts-package-validate-batch-request.ts`
 - `ts-package-validate-fix-request.ts`
 
@@ -98,9 +100,9 @@ This directory contains minimal consumer-oriented examples for the published val
 - They are intentionally small and public-safe.
 - They demonstrate route usage, not deployment-specific infrastructure.
 - The TypeScript recipes demonstrate source-level consumer usage of the published projection layer under `projections/`.
-- The source-level TypeScript and Zod recipes now cover single, batch, and fix `validate` envelopes, request-family parsing/building, and sample-driven typed/parsing paths for the full published pass/fail/batch/fix response family, plus the published `gates` / `stats` support responses and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes.
+- The source-level TypeScript and Zod recipes now cover single, batch, and fix `validate` envelopes, request-family building plus sample-driven typed/parsing paths, the full published pass/fail/batch/fix response family, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, conflict, and rate-limit error envelopes.
 - The package recipes demonstrate CommonJS, ESM, and TypeScript consumption after `npm run build:projections` or from a packed artifact installed into a fresh project.
-- The package recipes also cover request-family parsing and typed single/batch/fix request construction, validator pass/fail/batch/fix response families, compact JSON contract references, validator support responses, shared error envelopes, and raw capsule assets in addition to projection exports.
+- The package recipes also cover runtime request-family parsing, TypeScript typed reading plus typed single/batch/fix request construction, validator pass/fail/batch/fix response families, compact JSON contract references, validator support responses, shared error envelopes, and raw capsule assets in addition to projection exports.
 - The raw-schema recipes demonstrate direct Ajv validation against published schema files, the archive-bundle portability schema, single-file schema bundles, package-exported schema assets, and intentionally invalid archive, capsule, and validator-envelope fixtures.
 - The integrity recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload and how to repair the intentional `G16` teaching example without private runtime helpers.
 - The shell, Node, and Python live-route recipes together now cover all published validator routes: `validate`, `batch`, `fix`, `gates`, and `stats`.

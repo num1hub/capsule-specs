@@ -66,8 +66,10 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 - [`../projections/typescript/index.ts`](../projections/typescript/index.ts)
 - [`../projections/zod/index.ts`](../projections/zod/index.ts)
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
+- [`../examples/client/ts-package-parse-validate-requests.ts`](../examples/client/ts-package-parse-validate-requests.ts)
 - [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts)
 - [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts)
+- [`../examples/client/ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts)
 - [`../examples/client/zod-parse-validate-request.ts`](../examples/client/zod-parse-validate-request.ts)
 - [`../examples/client/zod-parse-validate-batch-request.ts`](../examples/client/zod-parse-validate-batch-request.ts)
 - [`../examples/client/zod-parse-validate-fix-request.ts`](../examples/client/zod-parse-validate-fix-request.ts)
@@ -92,8 +94,8 @@ If your toolchain uses TypeScript or Zod directly, also inspect:
 - [`../examples/client/zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
 
 These are convenience projections for consumer ergonomics, not replacements for the stronger schema and validator surfaces.
-If you want repo-relative source-level request construction or response parsing instead of package imports, start with the TypeScript request builders plus the Zod single/batch/fix request parsers under [`../examples/client/`](../examples/client/).
-If you need installed-package typed request construction for the published single, batch, and fix validator request families, start with [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts), [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts), and [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts).
+If you want repo-relative source-level request construction or typed reading of the published request samples instead of package imports, start with the TypeScript request builders, [`../examples/client/ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts), and the Zod single/batch/fix request parsers under [`../examples/client/`](../examples/client/).
+If you need installed-package typed request construction and typed reading for the published single, batch, and fix validator request families, start with [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts), [`../examples/client/ts-package-parse-validate-requests.ts`](../examples/client/ts-package-parse-validate-requests.ts), [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts), and [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts).
 If you need installed-package runtime parsing for those published request samples instead of TypeScript-only builders, start with [`../examples/client/cjs-package-validate-request.cjs`](../examples/client/cjs-package-validate-request.cjs) and [`../examples/client/esm-package-validate-request.mjs`](../examples/client/esm-package-validate-request.mjs).
 If you need typed repo-relative handling for the published pass, fail, batch, and fix response families, start with [`../examples/client/ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts).
 If you need repo-relative Zod parsing for that same published pass/fail/batch/fix response family instead of TypeScript-only narrowing, start with [`../examples/client/zod-parse-validate-response.ts`](../examples/client/zod-parse-validate-response.ts), [`../examples/client/zod-parse-validate-fail-response.ts`](../examples/client/zod-parse-validate-fail-response.ts), [`../examples/client/zod-parse-validate-batch-response.ts`](../examples/client/zod-parse-validate-batch-response.ts), and [`../examples/client/zod-parse-validate-fix-response.ts`](../examples/client/zod-parse-validate-fix-response.ts).

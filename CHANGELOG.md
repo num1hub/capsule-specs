@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- added source-level and installed-package TypeScript request-family sample parsers for the published single, batch, and fix validator envelopes, so TypeScript consumers no longer have to choose between construction-only builders and Zod/runtime-only sample parsing on the request side
 - added source-level Zod request-family parsers plus installed-package CommonJS and ESM request-family parsers for the published single, batch, and fix validator request samples, so request-side projection consumers no longer depend only on TypeScript builders or raw Ajv validation
 - made the source-level Zod validate-response path fully sample-driven by switching pass parsing to the published pass sample and adding a dedicated fail-response parser, so full Zod response-family coverage no longer depends on one synthetic positive object
 - expanded the installed-package TypeScript request path to cover the published single, batch, and fix validator request families, so package consumers no longer stop at one request builder while source-level recipes cover the broader envelope set

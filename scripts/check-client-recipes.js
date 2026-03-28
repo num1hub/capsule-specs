@@ -29,6 +29,7 @@ const typeRecipeFiles = [
   'ts-build-validate-request.ts',
   'ts-build-validate-batch-request.ts',
   'ts-build-validate-fix-request.ts',
+  'ts-parse-validate-requests.ts',
   'zod-parse-validate-request.ts',
   'zod-parse-validate-batch-request.ts',
   'zod-parse-validate-fix-request.ts',
@@ -92,6 +93,7 @@ const packageTypeRecipeFiles = [
   'ts-package-contract-reference.ts',
   'ts-package-support-responses.ts',
   'ts-package-validate-responses.ts',
+  'ts-package-parse-validate-requests.ts',
   'ts-package-validate-request.ts',
   'ts-package-validate-batch-request.ts',
   'ts-package-validate-fix-request.ts'
@@ -171,6 +173,7 @@ const expectedTypeProjectionImports = {
   'ts-build-validate-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-batch-request.ts': '../../projections/typescript/validator-api.js',
   'ts-build-validate-fix-request.ts': '../../projections/typescript/validator-api.js',
+  'ts-parse-validate-requests.ts': '../../projections/typescript/validator-api.js',
   'zod-parse-validate-request.ts': '../../projections/zod/validator-api.js',
   'zod-parse-validate-batch-request.ts': '../../projections/zod/validator-api.js',
   'zod-parse-validate-fix-request.ts': '../../projections/zod/validator-api.js',
@@ -476,6 +479,12 @@ const expectedPackageTypeImports = {
   ],
   'ts-package-validate-responses.ts': [
     '@num1hub/capsule-specs/typescript/validator-api'
+  ],
+  'ts-package-parse-validate-requests.ts': [
+    '@num1hub/capsule-specs/typescript/validator-api',
+    '@num1hub/capsule-specs/examples/api/validate-request.single.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.batch.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.fix.json'
   ],
   'ts-package-validate-batch-request.ts': [
     '@num1hub/capsule-specs/typescript/validator-api'

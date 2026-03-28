@@ -28,6 +28,9 @@
       ],
       "@num1hub/capsule-specs/references/*": [
         "./references/*"
+      ],
+      "@num1hub/capsule-specs/examples/*": [
+        "./examples/*"
       ]
     },
     "strict": true,

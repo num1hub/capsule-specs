@@ -85,7 +85,7 @@
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request parsers and typed validate-response readers, bounded shared error-envelope readers, and installed-package request plus validate/support/error-response readers for all published validator routes without depending on private runtime code.",
+      "outcome": "Build and inspect a validator-facing client from public OpenAPI, schema-backed envelopes, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, typed validate-response readers, bounded shared error-envelope readers, and installed-package request plus validate/support/error-response readers for all published validator routes without depending on private runtime code.",
       "strongest_surfaces": [
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -255,7 +255,7 @@
       "id": "consume-source-level-type-projections",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, Zod parsing artifacts, and package exports that are verified from fresh consumer installs for single, batch, and fix validate request flows, full validate response families, bounded shared error envelopes, and support-response payloads instead of reverse-engineering shape from prose alone.",
+      "outcome": "Consume the published capsule and validator API contracts through public-safe TypeScript interfaces, Zod parsing artifacts, and package exports that are verified from fresh consumer installs for single, batch, and fix validate request flows, source-level and installed-package typed request-sample handling, full validate response families, bounded shared error envelopes, and support-response payloads instead of reverse-engineering shape from prose alone.",
       "strongest_surfaces": [
         "docs/type-projections.md",
         "docs/npm-consumption.md",

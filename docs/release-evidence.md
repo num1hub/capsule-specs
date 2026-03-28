@@ -161,6 +161,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal source-level TypeScript recipe for constructing a validator batch request envelope.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator fix request envelope.
+- [`../examples/client/ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts)
+  Minimal source-level TypeScript recipe for typing the published single, batch, and fix validator request samples.
 - [`../examples/client/zod-parse-validate-request.ts`](../examples/client/zod-parse-validate-request.ts)
   Minimal source-level Zod recipe for parsing the published single validator request envelope.
 - [`../examples/client/zod-parse-validate-batch-request.ts`](../examples/client/zod-parse-validate-batch-request.ts)
@@ -251,6 +253,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal TypeScript package-consumer recipe for typed pass, fail, batch, and fix validator response-family handling through installed package exports.
 - [`../examples/client/ts-package-validate-request.ts`](../examples/client/ts-package-validate-request.ts)
   Minimal TypeScript package-consumer recipe for typed single-request construction through the built capsule and validator API exports.
+- [`../examples/client/ts-package-parse-validate-requests.ts`](../examples/client/ts-package-parse-validate-requests.ts)
+  Minimal TypeScript package-consumer recipe for typing the published single, batch, and fix validator request samples through installed package exports.
 - [`../examples/client/ts-package-validate-batch-request.ts`](../examples/client/ts-package-validate-batch-request.ts)
   Minimal TypeScript package-consumer recipe for typed batch-request construction through installed package exports.
 - [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts)
