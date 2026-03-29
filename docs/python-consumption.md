@@ -15,6 +15,8 @@ It is intentionally narrow:
 
 It does not turn this repository into a PyPI package, a Python SDK, or a replacement for the stronger schema, OpenAPI, or live-validator surfaces.
 
+If you want the strongest published HTTP contract directly rather than the compact route pack first, inspect [`../examples/client/python-openapi-reference.py`](../examples/client/python-openapi-reference.py). That recipe reads the packaged `openapi/validate.openapi.json` artifact from a repo checkout or extracted tarball and recovers the published route family, bearer-auth scheme, bounded `stats` query parameter, and response-status coverage without Node imports.
+
 ## Repo checkout recipes
 
 The shortest repo-relative Python examples live under [`../examples/client/`](../examples/client/):

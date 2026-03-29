@@ -545,6 +545,21 @@
       ]
     },
     {
+      "id": "examples.api-forbidden",
+      "path": "examples/api/forbidden-response.sample.json",
+      "kind": "api-example",
+      "stability": "illustrative",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:api-examples",
+        "npm run check:api-schemas",
+        "npm run check:failure-model"
+      ]
+    },
+    {
       "id": "examples.api-invalid.readme",
       "path": "examples/api-invalid/README.md",
       "kind": "example",
@@ -594,21 +609,6 @@
     {
       "id": "examples.api-unauthorized",
       "path": "examples/api/unauthorized-response.sample.json",
-      "kind": "api-example",
-      "stability": "illustrative",
-      "audiences": [
-        "integrators",
-        "reviewers"
-      ],
-      "verify_commands": [
-        "npm run check:api-examples",
-        "npm run check:api-schemas",
-        "npm run check:failure-model"
-      ]
-    },
-    {
-      "id": "examples.api-forbidden",
-      "path": "examples/api/forbidden-response.sample.json",
       "kind": "api-example",
       "stability": "illustrative",
       "audiences": [
@@ -748,8 +748,8 @@
       ]
     },
     {
-      "id": "examples.api.stats-response",
-      "path": "examples/api/stats-response.sample.json",
+      "id": "examples.api.stats-error-response",
+      "path": "examples/api/stats-error-response.sample.json",
       "kind": "api-example",
       "stability": "illustrative",
       "audiences": [
@@ -762,8 +762,8 @@
       ]
     },
     {
-      "id": "examples.api.stats-error-response",
-      "path": "examples/api/stats-error-response.sample.json",
+      "id": "examples.api.stats-response",
+      "path": "examples/api/stats-response.sample.json",
       "kind": "api-example",
       "stability": "illustrative",
       "audiences": [
@@ -1001,6 +1001,21 @@
         "npm run check:package-surface",
         "npm run check:package-install",
         "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.cjs-package-openapi-reference",
+      "path": "examples/client/cjs-package-openapi-reference.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:package-install",
         "npm run check:catalog"
       ]
     },
@@ -1283,6 +1298,21 @@
       ]
     },
     {
+      "id": "examples.client.esm-package-openapi-reference",
+      "path": "examples/client/esm-package-openapi-reference.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.esm-package-recompute-integrity-seal",
       "path": "examples/client/esm-package-recompute-integrity-seal.mjs",
       "kind": "client-recipe",
@@ -1431,21 +1461,6 @@
       ]
     },
     {
-      "id": "examples.client.python-live-validator-client",
-      "path": "examples/client/python-live-validator-client.py",
-      "kind": "client-recipe",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:client-recipes",
-        "npm run check:python-recipes",
-        "npm run check:catalog"
-      ]
-    },
-    {
       "id": "examples.client.python-get-gates",
       "path": "examples/client/python-get-gates.py",
       "kind": "client-recipe",
@@ -1476,6 +1491,51 @@
       ]
     },
     {
+      "id": "examples.client.python-live-validator-client",
+      "path": "examples/client/python-live-validator-client.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-openapi-reference",
+      "path": "examples/client/python-openapi-reference.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-parse-error-responses",
+      "path": "examples/client/python-parse-error-responses.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.python-parse-support-responses",
       "path": "examples/client/python-parse-support-responses.py",
       "kind": "client-recipe",
@@ -1493,21 +1553,6 @@
     {
       "id": "examples.client.python-parse-validate-responses",
       "path": "examples/client/python-parse-validate-responses.py",
-      "kind": "client-recipe",
-      "stability": "maintained",
-      "audiences": [
-        "integrators",
-        "tool-builders"
-      ],
-      "verify_commands": [
-        "npm run check:client-recipes",
-        "npm run check:python-recipes",
-        "npm run check:catalog"
-      ]
-    },
-    {
-      "id": "examples.client.python-parse-error-responses",
-      "path": "examples/client/python-parse-error-responses.py",
       "kind": "client-recipe",
       "stability": "maintained",
       "audiences": [
@@ -1691,6 +1736,21 @@
       ]
     },
     {
+      "id": "examples.client.ts-openapi-route-summary",
+      "path": "examples/client/ts-openapi-route-summary.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.ts-package-contract-reference",
       "path": "examples/client/ts-package-contract-reference.ts",
       "kind": "client-recipe",
@@ -1735,6 +1795,21 @@
         "npm run check:type-projections",
         "npm run check:package-install",
         "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-package-openapi-reference",
+      "path": "examples/client/ts-package-openapi-reference.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:package-install",
         "npm run check:catalog"
       ]
     },

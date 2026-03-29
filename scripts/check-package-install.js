@@ -34,12 +34,14 @@ const packedFilePath = path.join(workspaceRoot, 'tarball.json');
 let tarballPath = null;
 const cjsErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-error-responses.cjs');
 const cjsLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-live-validator-client.cjs');
+const cjsOpenapiRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-openapi-reference.cjs');
 const cjsValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-request.cjs');
 const cjsSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-support-responses.cjs');
 const cjsValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-response.cjs');
 const esmErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-error-responses.mjs');
 const esmReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-contract-reference.mjs');
 const esmLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-live-validator-client.mjs');
+const esmOpenapiRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-openapi-reference.mjs');
 const esmValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-validate-request.mjs');
 const esmSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-support-responses.mjs');
 const esmValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-validate-response.mjs');
@@ -48,6 +50,7 @@ const typescriptBatchRequestRecipePath = path.join(repoRoot, 'examples', 'client
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 const typescriptFixRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-fix-request.ts');
 const typescriptLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-live-validator-client.ts');
+const typescriptOpenapiRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-openapi-reference.ts');
 const typescriptParseRequestsRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-parse-validate-requests.ts');
 const typescriptValidateResponsesRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-responses.ts');
 const typescriptReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-contract-reference.ts');
@@ -122,6 +125,8 @@ try {
     'utf8'
   );
   run(process.execPath, ['live-client-consumer.cjs'], cjsProject);
+  fs.writeFileSync(path.join(cjsProject, 'openapi-consumer.cjs'), fs.readFileSync(cjsOpenapiRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['openapi-consumer.cjs'], cjsProject);
   fs.writeFileSync(
     path.join(cjsProject, 'validate-request-consumer.cjs'),
     fs.readFileSync(cjsValidateRequestRecipePath, 'utf8'),
@@ -186,6 +191,8 @@ try {
   run(process.execPath, ['error-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'live-client-consumer.mjs'), fs.readFileSync(esmLiveClientRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['live-client-consumer.mjs'], esmProject);
+  fs.writeFileSync(path.join(esmProject, 'openapi-consumer.mjs'), fs.readFileSync(esmOpenapiRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['openapi-consumer.mjs'], esmProject);
   fs.writeFileSync(
     path.join(esmProject, 'validate-request-consumer.mjs'),
     fs.readFileSync(esmValidateRequestRecipePath, 'utf8'),
@@ -237,6 +244,7 @@ try {
       'batch-request-consumer.ts',
       'fix-request-consumer.ts',
       'live-client-consumer.ts',
+      'openapi-consumer.ts',
       'parse-request-consumer.ts',
       'error-consumer.ts',
       'reference-consumer.ts',
@@ -262,6 +270,11 @@ try {
     'utf8'
   );
   fs.writeFileSync(
+    path.join(typescriptProject, 'openapi-consumer.ts'),
+    fs.readFileSync(typescriptOpenapiRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
     path.join(typescriptProject, 'parse-request-consumer.ts'),
     fs.readFileSync(typescriptParseRequestsRecipePath, 'utf8'),
     'utf8'
@@ -278,7 +291,7 @@ try {
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, OpenAPI, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- added direct repo/package/Python OpenAPI consumer recipes, so integrators and tool-builders no longer have to jump straight from prose to the raw `validate.openapi.json` artifact without copyable public-safe reading paths
 - added a dedicated `GET /api/validate/stats` `500` example under `examples/api/stats-error-response.sample.json` and wired it through route references, TypeScript route metadata, error-envelope parsers, failure docs, and verifiers, so the public validator surface no longer documents that support-route failure path without concrete sample-backed evidence
 - split the Python response-side consumer path into dedicated validate, error-envelope, and support-response recipes, so cross-language parsing no longer overloads one support script with unrelated bounded error families
 - added a bounded `403 owner role required` API sample and wired it through route metadata, error-envelope recipes, and verifiers, so the published validator surface no longer documents that rejection path without a concrete public-safe example

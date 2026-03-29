@@ -26,6 +26,7 @@ const nodeFiles = [
 const typeRecipeFiles = [
   'ts-capsule-summary.ts',
   'zod-parse-capsule.ts',
+  'ts-openapi-route-summary.ts',
   'ts-envelope-family-reference.ts',
   'ts-route-behavior-reference.ts',
   'ts-build-validate-request.ts',
@@ -67,6 +68,7 @@ const integrityRecipeFiles = ['recompute-integrity-seal.mjs', 'esm-package-recom
 
 const pythonRecipeFiles = [
   'python-contract-reference.py',
+  'python-openapi-reference.py',
   'python-live-validator-client.py',
   'python-recompute-integrity-seal.py',
   'python-validate-single.py',
@@ -82,6 +84,7 @@ const pythonRecipeFiles = [
 const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
   'cjs-package-contract-reference.cjs',
+  'cjs-package-openapi-reference.cjs',
   'cjs-package-error-responses.cjs',
   'cjs-package-live-validator-client.cjs',
   'cjs-package-validate-request.cjs',
@@ -89,6 +92,7 @@ const packageRecipeFiles = [
   'cjs-package-validate-response.cjs',
   'esm-package-capsule-summary.mjs',
   'esm-package-contract-reference.mjs',
+  'esm-package-openapi-reference.mjs',
   'esm-package-error-responses.mjs',
   'esm-package-live-validator-client.mjs',
   'esm-package-validate-request.mjs',
@@ -99,6 +103,7 @@ const packageRecipeFiles = [
 const packageTypeRecipeFiles = [
   'ts-package-error-responses.ts',
   'ts-package-contract-reference.ts',
+  'ts-package-openapi-reference.ts',
   'ts-package-live-validator-client.ts',
   'ts-package-support-responses.ts',
   'ts-package-validate-responses.ts',
@@ -187,6 +192,7 @@ for (const [fileName, route] of Object.entries(expectedNodeRoutes)) {
 const expectedTypeProjectionImports = {
   'ts-capsule-summary.ts': '../../projections/typescript/capsule.js',
   'zod-parse-capsule.ts': '../../projections/zod/capsule.js',
+  'ts-openapi-route-summary.ts': '../../openapi/validate.openapi.json',
   'ts-envelope-family-reference.ts': '../../projections/typescript/validator-envelope-families.js',
   'ts-route-behavior-reference.ts': '../../projections/typescript/validator-routes.js',
   'ts-build-validate-request.ts': '../../projections/typescript/validator-api.js',
@@ -235,6 +241,15 @@ const expectedTypeRouteBehaviorReferences = {
   ]
 };
 
+const expectedTypeOpenApiReferences = {
+  'ts-openapi-route-summary.ts': [
+    '../../openapi/validate.openapi.json',
+    '/api/validate/stats',
+    'bearerAuth',
+    'limit'
+  ]
+};
+
 for (const [fileName, references] of Object.entries(expectedTypeLiveRouteReferences)) {
   const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
   for (const reference of references) {
@@ -244,6 +259,13 @@ for (const [fileName, references] of Object.entries(expectedTypeLiveRouteReferen
 }
 
 for (const [fileName, references] of Object.entries(expectedTypeRouteBehaviorReferences)) {
+  const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
+  for (const reference of references) {
+    assert(content.includes(reference), `${fileName} must reference ${reference}`);
+  }
+}
+
+for (const [fileName, references] of Object.entries(expectedTypeOpenApiReferences)) {
   const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
   for (const reference of references) {
     assert(content.includes(reference), `${fileName} must reference ${reference}`);
@@ -371,6 +393,12 @@ const expectedPythonRecipeReferences = {
     'references/validator-routes.json',
     'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json'
   ],
+  'python-openapi-reference.py': [
+    'openapi/validate.openapi.json',
+    '/api/validate/stats',
+    'bearerAuth',
+    'limit'
+  ],
   'python-live-validator-client.py': [
     'references/validator-routes.json',
     'examples/api/validate-request.single.json',
@@ -487,6 +515,12 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/references/validator-envelope-families.json',
     '@num1hub/capsule-specs/references/validator-routes.json'
   ],
+  'cjs-package-openapi-reference.cjs': [
+    '@num1hub/capsule-specs/openapi/validate.openapi.json',
+    '/api/validate/stats',
+    'bearerAuth',
+    'limit'
+  ],
   'cjs-package-error-responses.cjs': [
     '@num1hub/capsule-specs/zod/validator-api',
     '@num1hub/capsule-specs/examples/api/error-response.sample.json',
@@ -537,6 +571,12 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/references/validator-routes.json',
     '@num1hub/capsule-specs/typescript/validator-envelope-families',
     '@num1hub/capsule-specs/typescript/validator-routes'
+  ],
+  'esm-package-openapi-reference.mjs': [
+    '@num1hub/capsule-specs/openapi/validate.openapi.json',
+    '/api/validate/stats',
+    'bearerAuth',
+    'limit'
   ],
   'esm-package-error-responses.mjs': [
     '@num1hub/capsule-specs/zod/validator-api',
@@ -597,6 +637,12 @@ const expectedPackageTypeImports = {
     '@num1hub/capsule-specs/references/validator-routes.json',
     '@num1hub/capsule-specs/typescript/validator-envelope-families',
     '@num1hub/capsule-specs/typescript/validator-routes'
+  ],
+  'ts-package-openapi-reference.ts': [
+    '@num1hub/capsule-specs/openapi/validate.openapi.json',
+    '/api/validate/stats',
+    'bearerAuth',
+    'limit'
   ],
   'ts-package-live-validator-client.ts': [
     '@num1hub/capsule-specs/typescript/validator-api',

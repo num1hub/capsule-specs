@@ -27,6 +27,18 @@ Use these when you want sample envelopes instead of just schema-level contract d
 - [`../examples/api/`](../examples/api/)
 - [`failure-model.md`](failure-model.md)
 
+## Direct consumer recipes
+
+Use these when you want to read the strongest published route contract directly instead of reconstructing behavior from compact summaries:
+
+- [`../examples/client/ts-openapi-route-summary.ts`](../examples/client/ts-openapi-route-summary.ts)
+- [`../examples/client/cjs-package-openapi-reference.cjs`](../examples/client/cjs-package-openapi-reference.cjs)
+- [`../examples/client/esm-package-openapi-reference.mjs`](../examples/client/esm-package-openapi-reference.mjs)
+- [`../examples/client/ts-package-openapi-reference.ts`](../examples/client/ts-package-openapi-reference.ts)
+- [`../examples/client/python-openapi-reference.py`](../examples/client/python-openapi-reference.py)
+
+These recipes prove that consumers can inspect the published OpenAPI document directly from a repo checkout, a packed package artifact, or an extracted package tree to recover the validator route family, bearer-auth posture, bounded `stats` query metadata, and response-status coverage without depending on private runtime code or immediately dropping to the compact route map first.
+
 ## Important note
 
 The OpenAPI document is a projection artifact from the live validator surface. The validator implementation remains the stronger source of truth for fine-grained runtime behavior.

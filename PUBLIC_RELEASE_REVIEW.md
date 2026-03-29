@@ -138,7 +138,7 @@ Repository-local audit on 2026-03-28:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `367` files / `367` manifest entries
+- manifest coverage: `372` files / `372` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

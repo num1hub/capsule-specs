@@ -6,11 +6,11 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 367,
-    "manifest_entries": 367
+    "files": 372,
+    "manifest_entries": 372
   },
   "surface_summary": {
-    "catalog_entries": 316,
+    "catalog_entries": 321,
     "example_capsules": 5,
     "api_example_files": 15,
     "markdown_files": 100
@@ -297,6 +297,7 @@
     "The integrity recipe layer in docs/integrity-recipes.md, examples/client/, and scripts/check-integrity-recipes.js is a public-safe recomputation proof for published G16 hashes and examples, not a full replacement for live validator edge-case behavior outside the published sealing rule.",
     "The Python recipe layer in docs/python-consumption.md, examples/client/, and scripts/check-python-recipes.js is a bounded raw-asset, validator-envelope request/response, support-route, and extracted-artifact consumer path, not a Python SDK or PyPI distribution promise.",
     "The invalid API-envelope layer in docs/invalid-api-envelope-examples.md and examples/api-invalid/ is a bounded structural teaching surface for schema-level HTTP-envelope rejection, not a complete map of live validator failure classes or deployed route behavior.",
-    "single-file schema bundles are convenience projections for easier distribution and code generation, not stronger sources than the canonical raw schemas, OpenAPI, or live validator behavior"
+    "single-file schema bundles are convenience projections for easier distribution and code generation, not stronger sources than the canonical raw schemas, OpenAPI, or live validator behavior",
+    "The new direct OpenAPI consumer recipes are convenience readers over the stronger published OpenAPI artifact, not replacements for live validator behavior."
   ]
 }

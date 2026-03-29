@@ -112,6 +112,22 @@ console.log(contractConstants.validator.integrity_canonicalization);
 
 Copyable package-consumer versions of that flow also live at [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs), [`../examples/client/esm-package-contract-reference.mjs`](../examples/client/esm-package-contract-reference.mjs), [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts), and [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py).
 
+## Minimal package-level OpenAPI example
+
+Copyable versions of this example also live at [`../examples/client/cjs-package-openapi-reference.cjs`](../examples/client/cjs-package-openapi-reference.cjs), [`../examples/client/esm-package-openapi-reference.mjs`](../examples/client/esm-package-openapi-reference.mjs), [`../examples/client/ts-package-openapi-reference.ts`](../examples/client/ts-package-openapi-reference.ts), and [`../examples/client/python-openapi-reference.py`](../examples/client/python-openapi-reference.py).
+
+```js
+import openapiDocument from "@num1hub/capsule-specs/openapi/validate.openapi.json" with { type: "json" };
+
+const statsRoute = openapiDocument.paths["/api/validate/stats"].get;
+
+console.log(openapiDocument.openapi);
+console.log(Object.keys(openapiDocument.paths));
+console.log(statsRoute.parameters.filter((parameter) => parameter.in === "query").map((parameter) => parameter.name));
+```
+
+These recipes prove that the installed package surface exposes the stronger published OpenAPI document itself, not only compact route summaries or projection helpers. Consumers can recover route keys, bearer-auth posture, bounded `stats` query metadata, and response-status coverage directly from the packaged OpenAPI artifact.
+
 ## Minimal package-level integrity example
 
 A copyable version of this example also lives at [`../examples/client/esm-package-recompute-integrity-seal.mjs`](../examples/client/esm-package-recompute-integrity-seal.mjs).

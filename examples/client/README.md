@@ -22,6 +22,7 @@ This directory contains minimal consumer-oriented examples for the published val
 
 - `ts-capsule-summary.ts`
 - `zod-parse-capsule.ts`
+- `ts-openapi-route-summary.ts`
 - `ts-envelope-family-reference.ts`
 - `ts-route-behavior-reference.ts`
 - `ts-build-validate-request.ts`
@@ -66,6 +67,7 @@ This directory contains minimal consumer-oriented examples for the published val
 ## Python recipes
 
 - `python-contract-reference.py`
+- `python-openapi-reference.py`
 - `python-live-validator-client.py`
 - `python-recompute-integrity-seal.py`
 - `python-validate-single.py`
@@ -81,6 +83,7 @@ This directory contains minimal consumer-oriented examples for the published val
 
 - `cjs-package-capsule-summary.cjs`
 - `cjs-package-contract-reference.cjs`
+- `cjs-package-openapi-reference.cjs`
 - `cjs-package-error-responses.cjs`
 - `cjs-package-live-validator-client.cjs`
 - `cjs-package-validate-request.cjs`
@@ -88,12 +91,14 @@ This directory contains minimal consumer-oriented examples for the published val
 - `cjs-package-validate-response.cjs`
 - `esm-package-capsule-summary.mjs`
 - `esm-package-contract-reference.mjs`
+- `esm-package-openapi-reference.mjs`
 - `esm-package-error-responses.mjs`
 - `esm-package-live-validator-client.mjs`
 - `esm-package-validate-request.mjs`
 - `esm-package-support-responses.mjs`
 - `esm-package-validate-response.mjs`
 - `ts-package-contract-reference.ts`
+- `ts-package-openapi-reference.ts`
 - `ts-package-error-responses.ts`
 - `ts-package-live-validator-client.ts`
 - `ts-package-support-responses.ts`
@@ -108,11 +113,11 @@ This directory contains minimal consumer-oriented examples for the published val
 - These examples assume `N1HUB_BASE_URL` and `N1HUB_TOKEN` are set.
 - They are intentionally small and public-safe.
 - They demonstrate route usage, not deployment-specific infrastructure.
-- The TypeScript recipes demonstrate source-level consumer usage of the published projection layer under `projections/`.
-- The source-level TypeScript and Zod recipes now cover single, batch, and fix `validate` envelopes, request-family building plus sample-driven typed/parsing paths, a compact typed envelope-family reference layer, a compact typed route-behavior reference layer, a typed live-client bridge for all published validator routes backed by shared route constants plus the bounded `stats` query path, the full published pass/fail/batch/fix response family, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample.
+- The TypeScript recipes demonstrate source-level consumer usage of the published projection layer under `projections/` and direct strongest-surface OpenAPI reading from `openapi/validate.openapi.json`.
+- The source-level TypeScript and Zod recipes now cover single, batch, and fix `validate` envelopes, request-family building plus sample-driven typed/parsing paths, a direct OpenAPI route-summary path, a compact typed envelope-family reference layer, a compact typed route-behavior reference layer, a typed live-client bridge for all published validator routes backed by shared route constants plus the bounded `stats` query path, the full published pass/fail/batch/fix response family, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample.
 - The package recipes demonstrate CommonJS, ESM, and TypeScript consumption after `npm run build:projections` or from a packed artifact installed into a fresh project.
-- The package recipes also cover runtime request-family parsing, TypeScript typed reading plus typed single/batch/fix request construction, installed-package CommonJS, ESM, and TypeScript live-client bridges for all published validator routes backed by shared route constants plus the bounded `stats` query path, validator pass/fail/batch/fix response families, compact JSON contract references including the validator envelope-family map and route-behavior summaries, validator support responses, shared error envelopes plus the route-specific stats-computation failure sample, and raw capsule assets in addition to projection exports.
+- The package recipes also cover direct installed-package OpenAPI reading, runtime request-family parsing, TypeScript typed reading plus typed single/batch/fix request construction, installed-package CommonJS, ESM, and TypeScript live-client bridges for all published validator routes backed by shared route constants plus the bounded `stats` query path, validator pass/fail/batch/fix response families, compact JSON contract references including the validator envelope-family map and route-behavior summaries, validator support responses, shared error envelopes plus the route-specific stats-computation failure sample, and raw capsule assets in addition to projection exports.
 - The raw-schema recipes demonstrate direct Ajv validation against published schema files, the archive-bundle portability schema, single-file schema bundles, package-exported schema assets, and intentionally invalid archive, capsule, and validator-envelope fixtures.
 - The integrity recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload and how to repair the intentional `G16` teaching example without private runtime helpers.
 - The shell, Node, and Python live-route recipes together now cover all published validator routes: `validate`, `batch`, `fix`, `gates`, and `stats`, including the bounded `limit` query path on `stats`.
-- The Python recipes demonstrate non-Node consumption of compact JSON references, the published validator envelope-family map, a reusable live-client bridge backed by the published route pack, validator-envelope request flows, validate/error/support response parsing including the route-specific stats-computation failure sample, live support-route reads, and public seal proofs from a repo checkout or extracted packed artifact.
+- The Python recipes demonstrate non-Node consumption of compact JSON references, the strongest-source OpenAPI document, the published validator envelope-family map, a reusable live-client bridge backed by the published route pack, validator-envelope request flows, validate/error/support response parsing including the route-specific stats-computation failure sample, live support-route reads, and public seal proofs from a repo checkout or extracted packed artifact.

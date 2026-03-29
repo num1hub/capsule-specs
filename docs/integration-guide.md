@@ -11,7 +11,7 @@ This guide shows the safest path for building against the public N1Hub specifica
 - inspect [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
 - inspect [`../openapi/validate.openapi.json`](../openapi/validate.openapi.json)
 
-The schema family guide helps you choose the right level first. The schemas and OpenAPI artifacts should then shape your parser, validator client, and payload expectations.
+The schema family guide helps you choose the right level first. The schemas and OpenAPI artifacts should then shape your parser, validator client, and payload expectations. If you want a copyable strongest-source route-reader before generating a client, inspect [`../examples/client/ts-openapi-route-summary.ts`](../examples/client/ts-openapi-route-summary.ts), [`../examples/client/esm-package-openapi-reference.mjs`](../examples/client/esm-package-openapi-reference.mjs), or [`../examples/client/python-openapi-reference.py`](../examples/client/python-openapi-reference.py).
 
 If you need compact enums, gate IDs, or validator option flags for UI pickers, code generators, or CLI hints, also inspect:
 
