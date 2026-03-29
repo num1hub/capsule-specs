@@ -512,6 +512,12 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/typescript',
     '@num1hub/capsule-specs/zod'
   ],
+  'cjs-package-client-recipe-index.cjs': [
+    '@num1hub/capsule-specs/examples/client/recipe-index.json',
+    'package-recipe-navigation',
+    'cjs-package-live-validator-client.cjs',
+    'ts-parse-validate-requests.ts'
+  ],
   'cjs-package-contract-reference.cjs': [
     '@num1hub/capsule-specs/references/contract-constants.json',
     '@num1hub/capsule-specs/references/validation-gates.json',
@@ -575,6 +581,13 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/zod',
     '@num1hub/capsule-specs/examples/example-note.capsule.json'
   ],
+  'esm-package-client-recipe-index.mjs': [
+    '@num1hub/capsule-specs/examples/client/recipe-index.json',
+    'package-recipe-navigation',
+    'openapi-direct-consumption',
+    'docs/openapi.md',
+    'ts-package-live-validator-client.ts'
+  ],
   'esm-package-contract-reference.mjs': [
     '@num1hub/capsule-specs/references/contract-constants.json',
     '@num1hub/capsule-specs/references/validation-gates.json',
@@ -635,6 +648,13 @@ const expectedPackageImports = {
 };
 
 const expectedPackageTypeImports = {
+  'ts-package-client-recipe-index.ts': [
+    '@num1hub/capsule-specs/examples/client/recipe-index.json',
+    'package-recipe-navigation',
+    'source-response-reading',
+    'cjs-package-live-validator-client.cjs',
+    'recompute-integrity-seal.mjs'
+  ],
   'ts-package-validate-request.ts': [
     '@num1hub/capsule-specs/typescript/capsule',
     '@num1hub/capsule-specs/typescript/validator-api'

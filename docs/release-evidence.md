@@ -102,7 +102,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`python-consumption.md`](python-consumption.md)
   Human-readable guide to cross-language Python consumption of compact references and public `G16` seal proofs from a repo checkout or extracted packed artifact.
 - [`../examples/client/recipe-index.json`](../examples/client/recipe-index.json)
-  Machine-readable task and runtime navigator for the published client recipe directory, including runtime-lane starts and task-oriented entrypoints.
+  Machine-readable task and runtime navigator for the published client recipe directory, including runtime-lane starts, task-oriented entrypoints, and the installed-package navigator recipes that consume it.
 - [`openapi-codegen-recipes.md`](openapi-codegen-recipes.md)
   Human-readable guide to repo-local plus CommonJS/ESM/TypeScript installed-package OpenAPI type generation through `openapi-typescript`.
 - [`../capsules/README.md`](../capsules/README.md)

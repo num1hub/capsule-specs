@@ -78,6 +78,7 @@ const pythonRecipeFiles = [
 
 const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
+  'cjs-package-client-recipe-index.cjs',
   'cjs-package-contract-reference.cjs',
   'cjs-package-openapi-codegen.cjs',
   'cjs-package-openapi-reference.cjs',
@@ -87,6 +88,7 @@ const packageRecipeFiles = [
   'cjs-package-support-responses.cjs',
   'cjs-package-validate-response.cjs',
   'esm-package-capsule-summary.mjs',
+  'esm-package-client-recipe-index.mjs',
   'esm-package-contract-reference.mjs',
   'esm-package-openapi-codegen.mjs',
   'esm-package-openapi-reference.mjs',
@@ -98,6 +100,7 @@ const packageRecipeFiles = [
 ];
 
 const packageTypeRecipeFiles = [
+  'ts-package-client-recipe-index.ts',
   'ts-package-error-responses.ts',
   'ts-package-contract-reference.ts',
   'ts-package-openapi-codegen.ts',
@@ -171,7 +174,7 @@ const recipeGroups = [
   {
     id: 'package-runtime',
     title: 'CommonJS and ESM package consumers',
-    description: 'Installed-package runtime readers, live clients, Ajv flows, and OpenAPI consumers.',
+    description: 'Installed-package runtime readers, recipe navigation, live clients, Ajv flows, and OpenAPI consumers.',
     audiences: ['integrators', 'tool-builders'],
     primary_docs: ['docs/npm-consumption.md', 'docs/openapi-codegen-recipes.md'],
     recommended_start: 'cjs-package-live-validator-client.cjs',
@@ -180,7 +183,7 @@ const recipeGroups = [
   {
     id: 'package-typescript',
     title: 'TypeScript package consumers',
-    description: 'Installed-package typed request, response, route, and OpenAPI codegen entrypoints.',
+    description: 'Installed-package typed request, response, route, navigator, and OpenAPI codegen entrypoints.',
     audiences: ['integrators', 'tool-builders'],
     primary_docs: ['docs/npm-consumption.md', 'docs/type-projections.md'],
     recommended_start: 'ts-package-live-validator-client.ts',
@@ -295,6 +298,15 @@ const taskEntrypoints = [
     recommended: 'cjs-package-live-validator-client.cjs',
     alternatives: ['esm-package-live-validator-client.mjs', 'ts-package-live-validator-client.ts'],
     docs: ['docs/npm-consumption.md', 'docs/client-recipes.md', 'docs/integration-guide.md'],
+    runtimes: ['cjs', 'esm', 'typescript']
+  },
+  {
+    id: 'package-recipe-navigation',
+    intent: 'Read the published client-recipe navigator from an installed package before choosing a runtime-specific entrypoint',
+    primary_group: 'package-runtime',
+    recommended: 'cjs-package-client-recipe-index.cjs',
+    alternatives: ['esm-package-client-recipe-index.mjs', 'ts-package-client-recipe-index.ts'],
+    docs: ['docs/npm-consumption.md', 'docs/client-recipes.md'],
     runtimes: ['cjs', 'esm', 'typescript']
   },
   {

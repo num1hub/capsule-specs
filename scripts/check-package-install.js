@@ -33,6 +33,7 @@ const workspaceRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'capsule-specs-insta
 const packedFilePath = path.join(workspaceRoot, 'tarball.json');
 let tarballPath = null;
 const cjsErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-error-responses.cjs');
+const cjsRecipeIndexRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-client-recipe-index.cjs');
 const cjsLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-live-validator-client.cjs');
 const cjsOpenapiCodegenRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-openapi-codegen.cjs');
 const cjsOpenapiRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-openapi-reference.cjs');
@@ -40,6 +41,7 @@ const cjsValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', '
 const cjsSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-support-responses.cjs');
 const cjsValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-response.cjs');
 const esmErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-error-responses.mjs');
+const esmRecipeIndexRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-client-recipe-index.mjs');
 const esmReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-contract-reference.mjs');
 const esmLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-live-validator-client.mjs');
 const esmOpenapiCodegenRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-openapi-codegen.mjs');
@@ -48,6 +50,7 @@ const esmValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', '
 const esmSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-support-responses.mjs');
 const esmValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-validate-response.mjs');
 const typescriptErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-error-responses.ts');
+const typescriptRecipeIndexRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-client-recipe-index.ts');
 const typescriptBatchRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-batch-request.ts');
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 const typescriptFixRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-fix-request.ts');
@@ -122,6 +125,12 @@ try {
   run(process.execPath, ['consumer.cjs'], cjsProject);
   fs.writeFileSync(path.join(cjsProject, 'error-consumer.cjs'), fs.readFileSync(cjsErrorRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['error-consumer.cjs'], cjsProject);
+  fs.writeFileSync(
+    path.join(cjsProject, 'recipe-index-consumer.cjs'),
+    fs.readFileSync(cjsRecipeIndexRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['recipe-index-consumer.cjs'], cjsProject);
   fs.writeFileSync(
     path.join(cjsProject, 'live-client-consumer.cjs'),
     fs.readFileSync(cjsLiveClientRecipePath, 'utf8'),
@@ -198,6 +207,12 @@ try {
     'utf8'
   );
   run(process.execPath, ['consumer.mjs'], esmProject);
+  fs.writeFileSync(
+    path.join(esmProject, 'recipe-index-consumer.mjs'),
+    fs.readFileSync(esmRecipeIndexRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['recipe-index-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'reference-consumer.mjs'), fs.readFileSync(esmReferenceRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['reference-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'error-consumer.mjs'), fs.readFileSync(esmErrorRecipePath, 'utf8'), 'utf8');
@@ -262,6 +277,7 @@ try {
       'consumer.ts',
       'batch-request-consumer.ts',
       'fix-request-consumer.ts',
+      'recipe-index-consumer.ts',
       'live-client-consumer.ts',
       'openapi-codegen-consumer.ts',
       'openapi-consumer.ts',
@@ -286,6 +302,11 @@ try {
   fs.writeFileSync(
     path.join(typescriptProject, 'fix-request-consumer.ts'),
     fs.readFileSync(typescriptFixRequestRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
+    path.join(typescriptProject, 'recipe-index-consumer.ts'),
+    fs.readFileSync(typescriptRecipeIndexRecipePath, 'utf8'),
     'utf8'
   );
   fs.writeFileSync(
@@ -322,7 +343,7 @@ try {
   run(process.execPath, ['dist/openapi-codegen-consumer.js'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, OpenAPI reading and OpenAPI type-generation, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, client-recipe navigator, OpenAPI reading and OpenAPI type-generation, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

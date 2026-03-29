@@ -1157,6 +1157,16 @@
     "transformation_type": "generated",
     "notes": "Guide to the buildable package-export surface for the maintained projection layer, including local tarball install posture and TypeScript package-consumer resolution."
   },
+  "docs/openapi-codegen-recipes.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/examples/client/openapi-generate-validator-types.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-openapi-codegen.mjs",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to repo-local and installed-package OpenAPI code-generation recipes through openapi-typescript."
+  },
   "docs/openapi.md": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/failure-model.md",
@@ -2101,6 +2111,11 @@
     "transformation_type": "generated",
     "notes": "Generic error envelope sample for validator HTTP routes."
   },
+  "examples/api/forbidden-response.sample.json": {
+    "source_paths": [],
+    "transformation_type": "generated",
+    "notes": "Bounded owner-role rejection response example for public negative-path review."
+  },
   "examples/api/gates-response.sample.json": {
     "source_paths": [
       "/home/n1/n1hub.com/data/capsules/capsule.foundation.capsuleos.16-gates.v1.json",
@@ -2129,6 +2144,14 @@
     ],
     "transformation_type": "generated",
     "notes": "Directory guide for validator HTTP request and response examples."
+  },
+  "examples/api/stats-error-response.sample.json": {
+    "source_paths": [
+      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/references/validator-routes.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Bounded stats-computation failure envelope sample for the documented GET /api/validate/stats 500 status."
   },
   "examples/api/stats-response.sample.json": {
     "source_paths": [
@@ -2314,6 +2337,13 @@
     "transformation_type": "generated",
     "notes": "Minimal CommonJS recipe for consuming the built package-export capsule surface."
   },
+  "examples/client/cjs-package-client-recipe-index.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer recipe for the published client-recipe navigator."
+  },
   "examples/client/cjs-package-contract-reference.cjs": {
     "source_paths": [
       "/home/n1/codex-workspace/references/contract-constants.json",
@@ -2348,6 +2378,23 @@
     ],
     "transformation_type": "generated",
     "notes": "Minimal CommonJS package-consumer recipe for a validator live client that covers the published route family through installed package exports."
+  },
+  "examples/client/cjs-package-openapi-codegen.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer recipe for generating TypeScript declarations directly from the packaged OpenAPI contract."
+  },
+  "examples/client/cjs-package-openapi-reference.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer recipe for direct OpenAPI route-contract reading."
   },
   "examples/client/cjs-package-support-responses.cjs": {
     "source_paths": [
@@ -2497,6 +2544,13 @@
     "transformation_type": "generated",
     "notes": "Minimal ESM recipe for consuming the built package-export capsule surface."
   },
+  "examples/client/esm-package-client-recipe-index.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "ESM package-consumer recipe for the published client-recipe navigator."
+  },
   "examples/client/esm-package-contract-reference.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/projections/typescript/validator-envelope-families.ts",
@@ -2534,6 +2588,23 @@
     ],
     "transformation_type": "generated",
     "notes": "Minimal ESM package-consumer recipe for a validator live client that covers the published route family through installed package exports."
+  },
+  "examples/client/esm-package-openapi-codegen.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "ESM package-consumer recipe for generating TypeScript declarations from the packaged OpenAPI contract."
+  },
+  "examples/client/esm-package-openapi-reference.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "ESM package-consumer recipe for direct OpenAPI route-contract reading."
   },
   "examples/client/esm-package-recompute-integrity-seal.mjs": {
     "source_paths": [
@@ -2618,6 +2689,15 @@
     "transformation_type": "generated",
     "notes": "Minimal Node fetch recipe for POST /api/validate."
   },
+  "examples/client/openapi-generate-validator-types.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local recipe for generating TypeScript declarations from the published OpenAPI contract."
+  },
   "examples/client/python-contract-reference.py": {
     "source_paths": [
       "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
@@ -2629,20 +2709,6 @@
     ],
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files."
-  },
-  "examples/client/python-live-validator-client.py": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/api-envelopes.md",
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/docs/route-reference.md",
-      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
-      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
-      "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
-      "/home/n1/codex-workspace/references/validator-routes.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Python recipe for a reusable live-validator client bridge backed by the published route map and request examples."
   },
   "examples/client/python-get-gates.py": {
     "source_paths": [
@@ -2665,6 +2731,43 @@
     ],
     "transformation_type": "generated",
     "notes": "Repo-local Python recipe for reading the published stats support route from sample data or a live validator."
+  },
+  "examples/client/python-live-validator-client.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/docs/route-reference.md",
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.batch.json",
+      "/home/n1/codex-workspace/examples/api/validate-request.fix.json",
+      "/home/n1/codex-workspace/references/validator-routes.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Python recipe for a reusable live-validator client bridge backed by the published route map and request examples."
+  },
+  "examples/client/python-openapi-reference.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Python recipe for reading the published OpenAPI route contract from a repo checkout or extracted packed artifact."
+  },
+  "examples/client/python-parse-error-responses.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/api-envelopes.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/python-consumption.md",
+      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
+      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Public consumer recipe for bounded shared validator error envelopes plus the route-specific stats-computation failure sample."
   },
   "examples/client/python-parse-support-responses.py": {
     "source_paths": [
@@ -2801,6 +2904,15 @@
     "transformation_type": "generated",
     "notes": "Directory guide for live-route, schema, integrity, package, and Python client recipes."
   },
+  "examples/client/recipe-index.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/scripts/lib/client-recipes.js",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/examples/client/README.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable task and runtime navigator for the published client recipes."
+  },
   "examples/client/recompute-integrity-seal.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/integrity-recipes.md",
@@ -2861,6 +2973,21 @@
     "transformation_type": "generated",
     "notes": "Minimal TypeScript consumer recipe for a typed validator live client that covers the published route family through the public projection layer."
   },
+  "examples/client/ts-openapi-route-summary.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Minimal source-level TypeScript recipe for reading the published OpenAPI route contract directly."
+  },
+  "examples/client/ts-package-client-recipe-index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer recipe for the published client-recipe navigator."
+  },
   "examples/client/ts-package-contract-reference.ts": {
     "source_paths": [
       "/home/n1/codex-workspace/projections/typescript/validator-envelope-families.ts",
@@ -2896,6 +3023,23 @@
     ],
     "transformation_type": "generated",
     "notes": "Minimal TypeScript package-consumer recipe for a typed validator live client that covers the published route family through installed package exports."
+  },
+  "examples/client/ts-package-openapi-codegen.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer recipe for generating TypeScript declarations directly from the packaged OpenAPI contract."
+  },
+  "examples/client/ts-package-openapi-reference.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer recipe for direct OpenAPI route-contract reading."
   },
   "examples/client/ts-package-parse-validate-requests.ts": {
     "source_paths": [
@@ -6212,6 +6356,32 @@
     "transformation_type": "generated",
     "notes": "Verifier for the public maintenance model and maintainer-facing workflow docs."
   },
+  "scripts/check-openapi-codegen.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
+      "/home/n1/codex-workspace/docs/openapi.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/generator-readiness.md",
+      "/home/n1/codex-workspace/examples/client/openapi-generate-validator-types.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-openapi-codegen.mjs",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repository-local verifier for repo and installed-package OpenAPI code-generation guidance."
+  },
+  "scripts/check-openapi-coherence.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi.md",
+      "/home/n1/codex-workspace/docs/reference-pack.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/references/validator-envelope-families.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repository-local verifier for OpenAPI coherence across compact validator route and envelope-family references."
+  },
   "scripts/check-ownership-map.js": {
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_CONTRACT_CATALOG.json",
@@ -6775,6 +6945,14 @@
     "transformation_type": "generated",
     "notes": "Verifier for the machine-readable public verification matrix and check-family coverage.; synchronized with audience paths surfaces; synchronized with evidence strength surfaces; synchronized with freshness surfaces; synchronized with evidence-gaps surfaces"
   },
+  "scripts/lib/client-recipes.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/scripts/check-client-recipes.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local registry for client recipe groups, task entrypoints, and verifier-backed navigation metadata."
+  },
   "scripts/lib/integrity.js": {
     "source_paths": [
       "/home/n1/codex-workspace/references/contract-constants.json",
@@ -6867,162 +7045,5 @@
     ],
     "transformation_type": "generated",
     "notes": "Versioning and contract-change policy for the public repository surface."
-  },
-  "examples/api/forbidden-response.sample.json": {
-    "source_paths": [],
-    "transformation_type": "generated",
-    "notes": "Bounded owner-role rejection response example for public negative-path review."
-  },
-  "examples/client/python-parse-error-responses.py": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/api-envelopes.md",
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/examples/api/unauthorized-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/forbidden-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/conflict-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/error-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/rate-limit-response.sample.json",
-      "/home/n1/codex-workspace/examples/api/stats-error-response.sample.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Public consumer recipe for bounded shared validator error envelopes plus the route-specific stats-computation failure sample."
-  },
-  "examples/api/stats-error-response.sample.json": {
-    "source_paths": [
-      "/home/n1/n1hub.com/docs/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/references/validator-routes.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Bounded stats-computation failure envelope sample for the documented GET /api/validate/stats 500 status."
-  },
-  "examples/client/ts-openapi-route-summary.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/openapi.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Minimal source-level TypeScript recipe for reading the published OpenAPI route contract directly."
-  },
-  "examples/client/cjs-package-openapi-reference.cjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "CommonJS package-consumer recipe for direct OpenAPI route-contract reading."
-  },
-  "examples/client/esm-package-openapi-reference.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "ESM package-consumer recipe for direct OpenAPI route-contract reading."
-  },
-  "examples/client/ts-package-openapi-reference.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "TypeScript package-consumer recipe for direct OpenAPI route-contract reading."
-  },
-  "examples/client/python-openapi-reference.py": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/python-consumption.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Python recipe for reading the published OpenAPI route contract from a repo checkout or extracted packed artifact."
-  },
-  "docs/openapi-codegen-recipes.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/examples/client/openapi-generate-validator-types.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-openapi-codegen.mjs",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Guide to repo-local and installed-package OpenAPI code-generation recipes through openapi-typescript."
-  },
-  "examples/client/openapi-generate-validator-types.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local recipe for generating TypeScript declarations from the published OpenAPI contract."
-  },
-  "examples/client/esm-package-openapi-codegen.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "ESM package-consumer recipe for generating TypeScript declarations from the packaged OpenAPI contract."
-  },
-  "scripts/check-openapi-codegen.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
-      "/home/n1/codex-workspace/docs/openapi.md",
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/docs/generator-readiness.md",
-      "/home/n1/codex-workspace/examples/client/openapi-generate-validator-types.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-openapi-codegen.mjs",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repository-local verifier for repo and installed-package OpenAPI code-generation guidance."
-  },
-  "examples/client/cjs-package-openapi-codegen.cjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "CommonJS package-consumer recipe for generating TypeScript declarations directly from the packaged OpenAPI contract."
-  },
-  "examples/client/ts-package-openapi-codegen.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "TypeScript package-consumer recipe for generating TypeScript declarations directly from the packaged OpenAPI contract."
-  },
-  "scripts/check-openapi-coherence.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/openapi.md",
-      "/home/n1/codex-workspace/docs/reference-pack.md",
-      "/home/n1/codex-workspace/openapi/validate.openapi.json",
-      "/home/n1/codex-workspace/references/validator-routes.json",
-      "/home/n1/codex-workspace/references/validator-envelope-families.json",
-      "/home/n1/codex-workspace/package.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repository-local verifier for OpenAPI coherence across compact validator route and envelope-family references."
-  },
-  "examples/client/recipe-index.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/scripts/lib/client-recipes.js",
-      "/home/n1/codex-workspace/docs/client-recipes.md",
-      "/home/n1/codex-workspace/examples/client/README.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Machine-readable task and runtime navigator for the published client recipes."
-  },
-  "scripts/lib/client-recipes.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client/recipe-index.json",
-      "/home/n1/codex-workspace/scripts/check-client-recipes.js"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local registry for client recipe groups, task entrypoints, and verifier-backed navigation metadata."
   }
 }

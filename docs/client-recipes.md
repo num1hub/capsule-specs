@@ -45,7 +45,7 @@ If you want the quickest path instead of reading the whole directory:
 - Read compact references and OpenAPI before writing a client:
   start with [`ts-envelope-family-reference.ts`](../examples/client/ts-envelope-family-reference.ts), [`ts-route-behavior-reference.ts`](../examples/client/ts-route-behavior-reference.ts), and [`ts-openapi-route-summary.ts`](../examples/client/ts-openapi-route-summary.ts)
 - Use installed-package consumers instead of repo-relative imports:
-  start with [`cjs-package-live-validator-client.cjs`](../examples/client/cjs-package-live-validator-client.cjs), [`esm-package-live-validator-client.mjs`](../examples/client/esm-package-live-validator-client.mjs), or [`ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
+  start with [`cjs-package-client-recipe-index.cjs`](../examples/client/cjs-package-client-recipe-index.cjs) if you want the packaged navigator first, then move to [`cjs-package-live-validator-client.cjs`](../examples/client/cjs-package-live-validator-client.cjs), [`esm-package-live-validator-client.mjs`](../examples/client/esm-package-live-validator-client.mjs), or [`ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
 - Use Python as the main cross-language bridge:
   start with [`python-live-validator-client.py`](../examples/client/python-live-validator-client.py), then fan out into the request, response, and contract-reference helpers
 - Recompute the public integrity seal:
@@ -62,7 +62,8 @@ If you already know your runtime, the shortest entry files are:
 - integrity proof: [`recompute-integrity-seal.mjs`](../examples/client/recompute-integrity-seal.mjs)
 - Python: [`python-live-validator-client.py`](../examples/client/python-live-validator-client.py)
 - installed-package CommonJS/ESM: [`cjs-package-live-validator-client.cjs`](../examples/client/cjs-package-live-validator-client.cjs)
-- installed-package TypeScript: [`ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
+- installed-package CommonJS/ESM navigator: [`cjs-package-client-recipe-index.cjs`](../examples/client/cjs-package-client-recipe-index.cjs) and [`esm-package-client-recipe-index.mjs`](../examples/client/esm-package-client-recipe-index.mjs)
+- installed-package TypeScript: [`ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts) and [`ts-package-client-recipe-index.ts`](../examples/client/ts-package-client-recipe-index.ts)
 
 ## cURL recipes
 
@@ -173,6 +174,7 @@ These recipes demonstrate how Python consumers can read compact contract-referen
 If you want package-style consumption instead of file-relative source imports, also inspect:
 
 - [`../examples/client/cjs-package-capsule-summary.cjs`](../examples/client/cjs-package-capsule-summary.cjs)
+- [`../examples/client/cjs-package-client-recipe-index.cjs`](../examples/client/cjs-package-client-recipe-index.cjs)
 - [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs)
 - [`../examples/client/cjs-package-openapi-codegen.cjs`](../examples/client/cjs-package-openapi-codegen.cjs)
 - [`../examples/client/cjs-package-openapi-reference.cjs`](../examples/client/cjs-package-openapi-reference.cjs)
@@ -182,6 +184,7 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/cjs-package-support-responses.cjs`](../examples/client/cjs-package-support-responses.cjs)
 - [`../examples/client/cjs-package-validate-response.cjs`](../examples/client/cjs-package-validate-response.cjs)
 - [`../examples/client/esm-package-capsule-summary.mjs`](../examples/client/esm-package-capsule-summary.mjs)
+- [`../examples/client/esm-package-client-recipe-index.mjs`](../examples/client/esm-package-client-recipe-index.mjs)
 - [`../examples/client/esm-package-contract-reference.mjs`](../examples/client/esm-package-contract-reference.mjs)
 - [`../examples/client/esm-package-openapi-codegen.mjs`](../examples/client/esm-package-openapi-codegen.mjs)
 - [`../examples/client/esm-package-openapi-reference.mjs`](../examples/client/esm-package-openapi-reference.mjs)
@@ -197,6 +200,7 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs)
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
+- [`../examples/client/ts-package-client-recipe-index.ts`](../examples/client/ts-package-client-recipe-index.ts)
 - [`../examples/client/ts-package-openapi-codegen.ts`](../examples/client/ts-package-openapi-codegen.ts)
 - [`../examples/client/ts-package-openapi-reference.ts`](../examples/client/ts-package-openapi-reference.ts)
 - [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
@@ -209,7 +213,7 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/ts-package-validate-fix-request.ts`](../examples/client/ts-package-validate-fix-request.ts)
 - [`npm-consumption.md`](npm-consumption.md)
 
-These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including installed-package direct OpenAPI reading plus installed-package OpenAPI type generation through `openapi-typescript` across CommonJS, ESM, and TypeScript consumer styles, installed-package runtime parsing plus installed-package TypeScript typed construction and typed reading for the published single, batch, and fix validator request families, installed-package CommonJS, ESM, and TypeScript live-client bridges for all published validator routes backed by the shared route projection and the bounded `stats` query path, installed-package typed discovery of the published validator envelope-family map, installed-package parsing and typing for the published pass, fail, batch, and fix validator response families, the compact reference-pack JSON exports, installed-package parsing of `gates` and `stats` support responses, installed-package parsing and typing for the bounded shared generic, unauthorized, forbidden, conflict, rate-limit, and route-specific stats-computation error envelopes, positive raw-schema Ajv consumption, archive-bundle schema validation, bundled single-file schema consumption, package-level rejection of intentionally invalid archive, capsule, and validator-envelope fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows. If you need the same public JSON artifacts from Python instead of Node imports, use the extracted-artifact path documented in [`python-consumption.md`](python-consumption.md).
+These recipes demonstrate the repo-owned package-export layer for CommonJS, ESM, and TypeScript consumers after `npm run build:projections` or from a locally packed artifact, including installed-package direct consumption of the machine-readable client-recipe navigator, installed-package direct OpenAPI reading plus installed-package OpenAPI type generation through `openapi-typescript` across CommonJS, ESM, and TypeScript consumer styles, installed-package runtime parsing plus installed-package TypeScript typed construction and typed reading for the published single, batch, and fix validator request families, installed-package CommonJS, ESM, and TypeScript live-client bridges for all published validator routes backed by the shared route projection and the bounded `stats` query path, installed-package typed discovery of the published validator envelope-family map, installed-package parsing and typing for the published pass, fail, batch, and fix validator response families, the compact reference-pack JSON exports, installed-package parsing of `gates` and `stats` support responses, installed-package parsing and typing for the bounded shared generic, unauthorized, forbidden, conflict, rate-limit, and route-specific stats-computation error envelopes, positive raw-schema Ajv consumption, archive-bundle schema validation, bundled single-file schema consumption, package-level rejection of intentionally invalid archive, capsule, and validator-envelope fixtures through package subpaths, and package-level recomputation of integrity seals for `G16`-sensitive flows. If you need the same public JSON artifacts from Python instead of Node imports, use the extracted-artifact path documented in [`python-consumption.md`](python-consumption.md).
 
 ## Route mapping
 

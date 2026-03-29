@@ -15,6 +15,8 @@ The schema family guide helps you choose the right level first. The schemas and 
 
 If you need the quickest task-oriented map of the consumer snippets before choosing a language or consumption path, inspect [`../examples/client/recipe-index.json`](../examples/client/recipe-index.json) and then jump into [`client-recipes.md`](client-recipes.md). The `task_entrypoints` section is the shortest route from intent to file; the `groups[*].recommended_start` fields are the shortest route from runtime lane to file.
 
+If you need that same navigator from an installed package instead of a repo checkout, start with [`../examples/client/cjs-package-client-recipe-index.cjs`](../examples/client/cjs-package-client-recipe-index.cjs), [`../examples/client/esm-package-client-recipe-index.mjs`](../examples/client/esm-package-client-recipe-index.mjs), or [`../examples/client/ts-package-client-recipe-index.ts`](../examples/client/ts-package-client-recipe-index.ts), then move to [`npm-consumption.md`](npm-consumption.md).
+
 If you need compact enums, gate IDs, or validator option flags for UI pickers, code generators, or CLI hints, also inspect:
 
 - [`reference-pack.md`](reference-pack.md)

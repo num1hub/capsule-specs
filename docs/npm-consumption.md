@@ -112,6 +112,23 @@ console.log(contractConstants.validator.integrity_canonicalization);
 
 Copyable package-consumer versions of that flow also live at [`../examples/client/cjs-package-contract-reference.cjs`](../examples/client/cjs-package-contract-reference.cjs), [`../examples/client/esm-package-contract-reference.mjs`](../examples/client/esm-package-contract-reference.mjs), [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts), and [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py).
 
+## Minimal package-level client-recipe navigator example
+
+Copyable versions of this example also live at [`../examples/client/cjs-package-client-recipe-index.cjs`](../examples/client/cjs-package-client-recipe-index.cjs), [`../examples/client/esm-package-client-recipe-index.mjs`](../examples/client/esm-package-client-recipe-index.mjs), and [`../examples/client/ts-package-client-recipe-index.ts`](../examples/client/ts-package-client-recipe-index.ts).
+
+```js
+import recipeIndex from "@num1hub/capsule-specs/examples/client/recipe-index.json" with { type: "json" };
+
+const packageRuntimeGroup = recipeIndex.groups.find((group) => group.id === "package-runtime");
+const packageNavigatorTask = recipeIndex.task_entrypoints.find((entry) => entry.id === "package-recipe-navigation");
+
+console.log(packageRuntimeGroup.recommended_start);
+console.log(packageNavigatorTask.recommended);
+console.log(packageNavigatorTask.alternatives);
+```
+
+These recipes prove that the installed package surface also carries the published machine-readable navigator for `examples/client/`. Consumers can recover runtime-lane starts, task entrypoints, and cross-runtime alternatives directly from the packed artifact instead of relying on a repo checkout or prose-only guidance.
+
 ## Minimal package-level OpenAPI example
 
 Copyable versions of this example also live at [`../examples/client/cjs-package-openapi-reference.cjs`](../examples/client/cjs-package-openapi-reference.cjs), [`../examples/client/esm-package-openapi-reference.mjs`](../examples/client/esm-package-openapi-reference.mjs), [`../examples/client/ts-package-openapi-reference.ts`](../examples/client/ts-package-openapi-reference.ts), and [`../examples/client/python-openapi-reference.py`](../examples/client/python-openapi-reference.py).

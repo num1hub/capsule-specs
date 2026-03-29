@@ -83,6 +83,7 @@ const validationGates = require('@num1hub/capsule-specs/references/validation-ga
 const validatorEnvelopeFamilies = require('@num1hub/capsule-specs/references/validator-envelope-families.json');
 const validatorRoutes = require('@num1hub/capsule-specs/references/validator-routes.json');
 const rawConfidenceCapsule = require('@num1hub/capsule-specs/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json');
+const recipeIndex = require('@num1hub/capsule-specs/examples/client/recipe-index.json');
 const singleRequestSample = require('@num1hub/capsule-specs/examples/api/validate-request.single.json');
 const batchRequestSample = require('@num1hub/capsule-specs/examples/api/validate-request.batch.json');
 const fixRequestSample = require('@num1hub/capsule-specs/examples/api/validate-request.fix.json');
@@ -186,6 +187,21 @@ assert(Array.isArray(validationGates.gates) && validationGates.gates.length === 
 assert(
   rawConfidenceCapsule.metadata?.capsule_id === 'capsule.foundation.capsuleos.confidence-vector.v1',
   'raw capsule export must expose the curated confidence-vector capsule'
+);
+assert(recipeIndex.directory === 'examples/client', 'package exports must expose the client recipe navigator');
+assert(Array.isArray(recipeIndex.groups) && recipeIndex.groups.length === 8, 'package exports must expose all client recipe groups');
+assert(
+  Array.isArray(recipeIndex.task_entrypoints) && recipeIndex.task_entrypoints.length === 16,
+  'package exports must expose all client recipe task entrypoints'
+);
+assert(
+  recipeIndex.task_entrypoints.find((entry) => entry.id === 'package-recipe-navigation')?.recommended ===
+    'cjs-package-client-recipe-index.cjs',
+  'package exports must expose the package recipe-navigation task'
+);
+assert(
+  recipeIndex.groups.find((group) => group.id === 'package-runtime')?.recommended_start === 'cjs-package-live-validator-client.cjs',
+  'package exports must expose the package-runtime recommended start'
 );
 assert(
   invalidRelationTypeCapsule.metadata?.capsule_id === 'capsule.example.invalid-relation-type.v1',

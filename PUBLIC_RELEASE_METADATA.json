@@ -6,8 +6,8 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 381,
-    "manifest_entries": 381
+    "files": 384,
+    "manifest_entries": 384
   },
   "surface_summary": {
     "catalog_entries": 331,

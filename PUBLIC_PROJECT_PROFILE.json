@@ -52,6 +52,7 @@
       "public-safe TypeScript and Zod projections",
       "source-level consumer recipe examples",
       "machine-readable client-recipe navigation index with runtime lanes, recommended starts, and task entrypoints",
+      "installed-package CommonJS, ESM, and TypeScript client-recipe navigator examples",
       "public-safe TypeScript and Zod validator API projections",
       "source-level validator API consumer recipe examples",
       "schema-family and field-level reference docs",
@@ -102,13 +103,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 381,
+    "total_files": 384,
     "markdown_files": 101,
     "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 15,
-    "client_recipe_files": 90,
+    "client_recipe_files": 93,
     "workflow_files": 1,
     "issue_templates": 4
   },
