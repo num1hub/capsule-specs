@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- added a dedicated OpenAPI coherence verifier and wired it through docs, release evidence, and machine-readable discovery surfaces, so compact validator route and envelope-family summaries no longer rely only on the broader reference-pack check to stay subordinate to the stronger published HTTP contract
 - expanded installed-package OpenAPI code-generation coverage with CommonJS and TypeScript recipes plus fresh-install proof, so generator-backed consumers no longer stop at one ESM-only package path after the strongest published OpenAPI artifact
 - added direct repo-local and installed-package OpenAPI code-generation recipes plus a dedicated verifier, so tool-builders can recover generated TypeScript declarations from the strongest published HTTP contract without jumping straight from prose to ad hoc generator wiring
 - added direct repo/package/Python OpenAPI consumer recipes, so integrators and tool-builders no longer have to jump straight from prose to the raw `validate.openapi.json` artifact without copyable public-safe reading paths

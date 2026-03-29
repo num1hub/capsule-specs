@@ -45,6 +45,8 @@ This pack is a convenience layer. It does not outrank:
 
 If you need full artifact shape, use the schemas. If you need HTTP route semantics, use OpenAPI. If you need law-adjacent source material, use the curated raw capsules.
 
+The compact validator-route and envelope-family layers are also checked directly against the stronger OpenAPI artifact through [`../scripts/check-openapi-coherence.js`](../scripts/check-openapi-coherence.js), so route-family discovery does not drift away from the published HTTP contract.
+
 ## Package subpaths
 
 The package surface exports these files directly:

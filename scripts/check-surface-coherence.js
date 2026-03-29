@@ -31,6 +31,8 @@ for (const entry of catalog.entries) {
 
 const publicIndex = readText('docs/public-contract-index.md');
 const readme = readText('README.md');
+const openapiDoc = readText('docs/openapi.md');
+const referencePackDoc = readText('docs/reference-pack.md');
 const releaseReview = readText('PUBLIC_RELEASE_REVIEW.md');
 const verificationDoc = readText('docs/verification.md');
 const releaseEvidenceDoc = readText('docs/release-evidence.md');
@@ -252,6 +254,7 @@ assert(readme.includes('references/'), 'README.md must mention references/');
 assert(readme.includes('npm run verify:repo'), 'README.md must mention npm run verify:repo');
 assert(readme.includes('npm run check:raw-capsules'), 'README.md must mention npm run check:raw-capsules');
 assert(readme.includes('npm run check:reference-pack'), 'README.md must mention npm run check:reference-pack');
+assert(readme.includes('npm run check:openapi-coherence'), 'README.md must mention npm run check:openapi-coherence');
 assert(readme.includes('npm run check:schema-bundles'), 'README.md must mention npm run check:schema-bundles');
 assert(readme.includes('npm run check:schema-recipes'), 'README.md must mention npm run check:schema-recipes');
 assert(readme.includes('npm run check:archive-recipes'), 'README.md must mention npm run check:archive-recipes');
@@ -265,6 +268,7 @@ assert(releaseReview.includes('check-api-schemas.js'), 'PUBLIC_RELEASE_REVIEW.md
 assert(releaseReview.includes('tsc --noEmit --pretty false'), 'PUBLIC_RELEASE_REVIEW.md must mention the type-projection typecheck command');
 assert(releaseReview.includes('check-raw-capsules.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-raw-capsules.js');
 assert(releaseReview.includes('check-reference-pack.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-reference-pack.js');
+assert(releaseReview.includes('check-openapi-coherence.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-openapi-coherence.js');
 assert(releaseReview.includes('check-schema-bundles.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-schema-bundles.js');
 assert(releaseReview.includes('check-schema-recipes.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-schema-recipes.js');
 assert(releaseReview.includes('check-archive-recipes.js'), 'PUBLIC_RELEASE_REVIEW.md must mention check-archive-recipes.js');
@@ -300,6 +304,7 @@ assert(verificationDoc.includes('check:api-schemas'), 'docs/verification.md must
 assert(verificationDoc.includes('check:type-projections'), 'docs/verification.md must explain check:type-projections');
 assert(verificationDoc.includes('check:raw-capsules'), 'docs/verification.md must explain check:raw-capsules');
 assert(verificationDoc.includes('check:reference-pack'), 'docs/verification.md must explain check:reference-pack');
+assert(verificationDoc.includes('check:openapi-coherence'), 'docs/verification.md must explain check:openapi-coherence');
 assert(verificationDoc.includes('check:schema-bundles'), 'docs/verification.md must explain check:schema-bundles');
 assert(verificationDoc.includes('check:schema-recipes'), 'docs/verification.md must explain check:schema-recipes');
 assert(verificationDoc.includes('check:archive-recipes'), 'docs/verification.md must explain check:archive-recipes');
@@ -347,6 +352,7 @@ assert(releaseEvidenceDoc.includes('integrity-recipes.md'), 'docs/release-eviden
 assert(releaseEvidenceDoc.includes('capsules/README.md'), 'docs/release-evidence.md must mention capsules/README.md');
 assert(releaseEvidenceDoc.includes('references/README.md'), 'docs/release-evidence.md must mention references/README.md');
 assert(releaseEvidenceDoc.includes('check-reference-pack.js'), 'docs/release-evidence.md must mention check-reference-pack.js');
+assert(releaseEvidenceDoc.includes('check-openapi-coherence.js'), 'docs/release-evidence.md must mention check-openapi-coherence.js');
 assert(releaseEvidenceDoc.includes('check-schema-recipes.js'), 'docs/release-evidence.md must mention check-schema-recipes.js');
 assert(releaseEvidenceDoc.includes('check-archive-recipes.js'), 'docs/release-evidence.md must mention check-archive-recipes.js');
 assert(releaseEvidenceDoc.includes('check-invalid-examples.js'), 'docs/release-evidence.md must mention check-invalid-examples.js');
@@ -378,6 +384,8 @@ assert(releaseEvidenceDoc.includes('PUBLIC_LIMITATIONS_REGISTER.json'), 'docs/re
 assert(releaseEvidenceDoc.includes('PUBLIC_EVIDENCE_TIMELINE.json'), 'docs/release-evidence.md must mention PUBLIC_EVIDENCE_TIMELINE.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_REVIEW_SCORECARD.json'), 'docs/release-evidence.md must mention PUBLIC_REVIEW_SCORECARD.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_VERIFICATION_MATRIX.json'), 'docs/release-evidence.md must mention PUBLIC_VERIFICATION_MATRIX.json');
+assert(openapiDoc.includes('check-openapi-coherence.js'), 'docs/openapi.md must mention check-openapi-coherence.js');
+assert(referencePackDoc.includes('check-openapi-coherence.js'), 'docs/reference-pack.md must mention check-openapi-coherence.js');
 assert(releaseEvidenceDoc.includes('PUBLIC_AUDIENCE_PATHS.json'), 'docs/release-evidence.md must mention PUBLIC_AUDIENCE_PATHS.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_EVIDENCE_STRENGTH_MAP.json'), 'docs/release-evidence.md must mention PUBLIC_EVIDENCE_STRENGTH_MAP.json');
 assert(releaseEvidenceDoc.includes('PUBLIC_ADOPTION_READINESS.json'), 'docs/release-evidence.md must mention PUBLIC_ADOPTION_READINESS.json');

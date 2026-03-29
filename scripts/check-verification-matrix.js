@@ -114,6 +114,15 @@ assert(ecosystemLayer, 'verification matrix must define ecosystem-value-and-prog
 assert(ecosystemLayer.commands.includes('npm run check:ecosystem-value'), 'ecosystem-value-and-program-utility row must include npm run check:ecosystem-value');
 assert(ecosystemLayer.protects.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'ecosystem-value-and-program-utility row must protect PUBLIC_ECOSYSTEM_VALUE_MAP.json');
 assert(ecosystemLayer.strongest_surfaces.includes('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'ecosystem-value-and-program-utility row must reference PUBLIC_ECOSYSTEM_VALUE_MAP.json');
+const docsLayer = matrix.checks.find((item) => item.id === 'docs-and-cross-surface-coherence');
+assert(docsLayer, 'verification matrix must define docs-and-cross-surface-coherence row');
+assert(docsLayer.commands.includes('npm run check:openapi-coherence'), 'docs-and-cross-surface-coherence row must include npm run check:openapi-coherence');
+assert(docsLayer.protects.includes('openapi/validate.openapi.json'), 'docs-and-cross-surface-coherence row must protect openapi/validate.openapi.json');
+assert(docsLayer.protects.includes('references/validator-routes.json'), 'docs-and-cross-surface-coherence row must protect references/validator-routes.json');
+assert(docsLayer.protects.includes('references/validator-envelope-families.json'), 'docs-and-cross-surface-coherence row must protect references/validator-envelope-families.json');
+assert(docsLayer.strongest_surfaces.includes('docs/openapi.md'), 'docs-and-cross-surface-coherence row must reference docs/openapi.md');
+assert(docsLayer.strongest_surfaces.includes('docs/reference-pack.md'), 'docs-and-cross-surface-coherence row must reference docs/reference-pack.md');
+assert(docsLayer.failure_modes_prevented.some((item) => item.includes('OpenAPI')), 'docs-and-cross-surface-coherence row must mention OpenAPI drift prevention');
 
 const readme = fs.readFileSync(path.join(repoRoot, 'README.md'), 'utf8');
 const quickstart = fs.readFileSync(path.join(repoRoot, 'QUICKSTART.md'), 'utf8');
@@ -178,6 +187,7 @@ assert(catalogPaths.has('PUBLIC_ECOSYSTEM_VALUE_MAP.json'), 'contract catalog mu
 assert(catalogPaths.has('docs/ecosystem-value.md'), 'contract catalog must include docs/ecosystem-value.md');
 assert(catalogPaths.has('schemas/public-ecosystem-value-map.schema.json'), 'contract catalog must include public-ecosystem-value schema');
 assert(catalogPaths.has('scripts/check-ecosystem-value.js'), 'contract catalog must include ecosystem-value verifier');
+assert(catalogPaths.has('scripts/check-openapi-coherence.js'), 'contract catalog must include OpenAPI coherence verifier');
 assert(catalogPaths.has('PUBLIC_EVIDENCE_GAPS_REGISTER.json'), 'contract catalog must include PUBLIC_EVIDENCE_GAPS_REGISTER.json');
 assert(catalogPaths.has('docs/evidence-gaps.md'), 'contract catalog must include docs/evidence-gaps.md');
 assert(catalogPaths.has('schemas/public-evidence-gaps-register.schema.json'), 'contract catalog must include public-evidence-gaps schema');
@@ -194,6 +204,7 @@ assert(catalogPaths.has('schemas/public-verification-matrix.schema.json'), 'cont
 assert(catalogPaths.has('scripts/check-verification-matrix.js'), 'contract catalog must include verification-matrix verifier');
 
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:verification-matrix'), 'release metadata must include verification-matrix verification');
+assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:openapi-coherence'), 'release metadata must include OpenAPI coherence verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_VERIFICATION_MATRIX.json')), 'release metadata residual risks must mention PUBLIC_VERIFICATION_MATRIX.json');
 assert(releaseMetadata.repo_local_checks.some((check) => check.command === 'npm run check:freshness'), 'release metadata must include freshness verification');
 assert(releaseMetadata.residual_risks.some((risk) => typeof risk === 'string' && risk.includes('PUBLIC_FRESHNESS_MODEL.json')), 'release metadata residual risks must mention PUBLIC_FRESHNESS_MODEL.json');

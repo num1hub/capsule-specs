@@ -426,21 +426,27 @@
     },
     {
       "id": "docs-and-cross-surface-coherence",
-      "summary": "Protects Markdown link integrity and cross-surface coherence across docs, release review, and package scripts.",
+      "summary": "Protects Markdown link integrity and cross-surface coherence across docs, OpenAPI/compact reference layers, release review, and package scripts.",
       "commands": [
         "npm run check:docs",
         "npm run check:surface",
+        "npm run check:openapi-coherence",
         "npm run check:package-surface",
         "npm run check:package-install"
       ],
       "protects": [
         "docs/",
+        "openapi/validate.openapi.json",
+        "references/validator-routes.json",
+        "references/validator-envelope-families.json",
         "PUBLIC_RELEASE_REVIEW.md",
         "package.json",
         "docs/npm-consumption.md"
       ],
       "strongest_surfaces": [
         "docs/public-contract-index.md",
+        "docs/openapi.md",
+        "docs/reference-pack.md",
         "docs/verification.md",
         "PUBLIC_RELEASE_REVIEW.md",
         "docs/npm-consumption.md"
@@ -450,7 +456,8 @@
         "missing cross-links",
         "stale reviewer/release references",
         "broken package-export consumer path",
-        "fresh-install regressions hidden by local workspace state"
+        "fresh-install regressions hidden by local workspace state",
+        "OpenAPI and compact route/envelope summaries drifting apart"
       ]
     },
     {

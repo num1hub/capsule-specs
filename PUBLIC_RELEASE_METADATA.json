@@ -6,11 +6,11 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 378,
-    "manifest_entries": 378
+    "files": 379,
+    "manifest_entries": 379
   },
   "surface_summary": {
-    "catalog_entries": 327,
+    "catalog_entries": 330,
     "example_capsules": 5,
     "api_example_files": 15,
     "markdown_files": 101
@@ -54,6 +54,10 @@
     },
     {
       "command": "npm run check:reference-pack",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:openapi-coherence",
       "status": "pass"
     },
     {
@@ -303,6 +307,7 @@
     "The invalid API-envelope layer in docs/invalid-api-envelope-examples.md and examples/api-invalid/ is a bounded structural teaching surface for schema-level HTTP-envelope rejection, not a complete map of live validator failure classes or deployed route behavior.",
     "single-file schema bundles are convenience projections for easier distribution and code generation, not stronger sources than the canonical raw schemas, OpenAPI, or live validator behavior",
     "The new direct OpenAPI consumer recipes are convenience readers over the stronger published OpenAPI artifact, not replacements for live validator behavior.",
-    "The OpenAPI code-generation recipe layer in docs/openapi-codegen-recipes.md, the repo-local plus CommonJS/ESM/TypeScript package recipes under examples/client/, and scripts/check-openapi-codegen.js is a convenience generator path over the stronger published OpenAPI artifact, not a replacement for OpenAPI or live validator behavior."
+    "The OpenAPI code-generation recipe layer in docs/openapi-codegen-recipes.md, the repo-local plus CommonJS/ESM/TypeScript package recipes under examples/client/, and scripts/check-openapi-codegen.js is a convenience generator path over the stronger published OpenAPI artifact, not a replacement for OpenAPI or live validator behavior.",
+    "The compact validator-route and validator-envelope-family layers plus scripts/check-openapi-coherence.js are convenience discovery surfaces over the stronger published OpenAPI artifact, not replacements for OpenAPI or live validator behavior."
   ]
 }

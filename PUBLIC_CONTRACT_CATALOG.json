@@ -961,6 +961,7 @@
       "verify_commands": [
         "npm run check:docs",
         "npm run check:reference-pack",
+        "npm run check:openapi-coherence",
         "npm run check:catalog"
       ]
     },
@@ -1070,7 +1071,8 @@
         "npm run check:docs",
         "npm run check:api-examples",
         "npm run check:catalog",
-        "npm run check:surface"
+        "npm run check:surface",
+        "npm run check:openapi-coherence"
       ]
     },
     {
@@ -3035,6 +3037,23 @@
       ],
       "verify_commands": [
         "npm run audit:public-surface",
+        "npm run check:openapi-coherence",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "validator.openapi-reference",
+      "path": "docs/openapi.md",
+      "kind": "api-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:openapi-coherence",
         "npm run check:catalog"
       ]
     },
@@ -3723,7 +3742,24 @@
       ],
       "verify_commands": [
         "npm run check:reference-pack",
+        "npm run check:openapi-coherence",
         "npm run check:package-surface",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "reference.validator-envelope-families",
+      "path": "references/validator-envelope-families.json",
+      "kind": "reference-data",
+      "stability": "contract",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:reference-pack",
+        "npm run check:openapi-coherence",
         "npm run check:catalog"
       ]
     },
@@ -4683,6 +4719,21 @@
       ],
       "verify_commands": [
         "npm run check:openapi-codegen",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.openapi-coherence-check",
+      "path": "scripts/check-openapi-coherence.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:openapi-coherence",
         "npm run check:catalog"
       ]
     },

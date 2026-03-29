@@ -49,6 +49,7 @@
 - package-consumer support-response recipes for `gates` and `stats`, plus fresh-install proof that the installed validator projection layer covers support payload parsing as well as `validate` request/response flows
 - compact contract-reference JSON artifacts, their directory guide and human guide, CommonJS/ESM/TypeScript/Python package-consumer recipes, and a repo-local verifier
 - compact validator-envelope-family reference JSON, a shared TypeScript envelope-family projection, their consumer recipes, and repo-local verifier
+- dedicated OpenAPI/compact-reference coherence verification so the validator route and envelope-family summaries stay subordinate to the stronger published HTTP contract
 - single-file bundled schema artifacts, their human guide, package-consumer recipes, and repo-local verifier
 - Ajv-based raw-schema consumer recipes, their human guide, and repo-local verifier
 - intentionally schema-invalid capsule fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
@@ -95,6 +96,7 @@ Repository-local audit on 2026-03-28:
 - `node scripts/check-package-surface.js`: pass
 - `node scripts/check-package-install.js`: pass
 - `node scripts/check-openapi-codegen.js`: pass
+- `node scripts/check-openapi-coherence.js`: pass
 - `node scripts/check-raw-capsules.js`: pass
 - `node scripts/check-reference-pack.js`: pass
 - `node scripts/check-schema-bundles.js`: pass
@@ -169,6 +171,7 @@ Upstream validator checks on 2026-03-26:
 - `docs/integrity-recipes.md`, the seal-recomputation recipes under `examples/client/`, `references/contract-constants.json`, and `scripts/check-integrity-recipes.js` are a bounded public proof of the published `G16` sealing rule and example/API hash correctness, not a full replacement for live validator edge-case behavior
 - `docs/python-consumption.md`, the Python recipes under `examples/client/`, and `scripts/check-python-recipes.js` are a bounded raw-asset and extracted-artifact consumer path for compact references, a reusable validator-route bridge, and public `G16` seal proofs, not a Python SDK or PyPI distribution promise
 - `docs/openapi-codegen-recipes.md`, the repo-local plus CommonJS/ESM/TypeScript package OpenAPI code-generation recipes under `examples/client/`, and `scripts/check-openapi-codegen.js` are a bounded generator-consumer layer over the stronger published OpenAPI artifact, not a promise that generated declarations outrank OpenAPI or live validator behavior
+- `docs/openapi.md`, `docs/reference-pack.md`, `references/validator-routes.json`, `references/validator-envelope-families.json`, and `scripts/check-openapi-coherence.js` are a bounded route-discovery and coherence layer over the stronger published OpenAPI artifact, not a competing HTTP contract or a replacement for live validator behavior
 - `PUBLIC_MAINTENANCE_MODEL.json` is a bounded workflow summary and must stay subordinate to the stronger maintainer docs, community intake surfaces, release docs, and verification evidence it references
 - `PUBLIC_CHANGE_CONTROL_MODEL.json` is a bounded change-control summary and must stay subordinate to the stronger versioning, compatibility, changelog, and release-evidence surfaces it references
 - `PUBLIC_OWNERSHIP_MAP.json` is a bounded ownership-and-authority summary and must stay subordinate to the stronger docs, schemas, provenance, and contract surfaces it references

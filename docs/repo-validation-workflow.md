@@ -62,6 +62,7 @@ Start with:
 ```bash
 npm run check:api-schemas
 npm run check:type-projections
+npm run check:openapi-coherence
 npm run check:package-surface
 npm run check:package-install
 npm run check:catalog
@@ -143,6 +144,8 @@ Common co-movement rules:
 - changed package-export or pack-consumer path:
   review `docs/type-projections.md`, `docs/npm-consumption.md`, `examples/client/README.md`, `PUBLIC_CAPABILITY_MATRIX.json`, and `PUBLIC_TRACEABILITY_MATRIX.json`
   and re-run `npm run check:package-install` after `npm run check:package-surface`
+- changed OpenAPI, compact validator routes, or compact validator envelope-family metadata:
+  review `docs/openapi.md`, `docs/reference-pack.md`, `docs/api-envelopes.md`, `references/validator-routes.json`, `references/validator-envelope-families.json`, and re-run `npm run check:openapi-coherence` plus `npm run check:reference-pack`
 - changed sealing, `integrity_sha3_512`, or validator response `computedHash` examples:
   review `docs/integrity-recipes.md`, `docs/reference-pack.md`, `examples/client/`, `examples/api/`, and re-run `npm run check:integrity-recipes`
 - changed schema-invalid fixture layers for capsules or validator envelopes:

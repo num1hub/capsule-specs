@@ -60,6 +60,7 @@
         "examples/client/ts-openapi-route-summary.ts",
         "openapi/validate.openapi.json",
         "references/validator-routes.json",
+        "references/validator-envelope-families.json",
         "schemas/validator-api-envelopes.schema.json"
       ],
       "supporting_surfaces": [
@@ -135,7 +136,8 @@
         "examples/client/cjs-package-openapi-codegen.cjs",
         "examples/client/ts-package-openapi-codegen.ts",
         "examples/client/esm-package-openapi-codegen.mjs",
-        "scripts/check-openapi-codegen.js"
+        "scripts/check-openapi-codegen.js",
+        "scripts/check-openapi-coherence.js"
       ],
       "verify_commands": [
         "npm run check:api-examples",
@@ -145,7 +147,8 @@
         "npm run check:traceability",
         "npm run check:package-surface",
         "npm run check:package-install",
-        "npm run check:openapi-codegen"
+        "npm run check:openapi-codegen",
+        "npm run check:openapi-coherence"
       ]
     },
     {
@@ -161,6 +164,7 @@
         "references/contract-constants.json",
         "references/validation-gates.json",
         "references/validator-routes.json",
+        "references/validator-envelope-families.json",
         "scripts/check-reference-pack.js",
         "examples/client/python-contract-reference.py",
         "scripts/check-python-recipes.js"
@@ -178,10 +182,12 @@
         "capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",
         "scripts/check-package-install.js",
         "examples/client/ts-route-behavior-reference.ts",
-        "examples/client/esm-package-contract-reference.mjs"
+        "examples/client/esm-package-contract-reference.mjs",
+        "scripts/check-openapi-coherence.js"
       ],
       "verify_commands": [
         "npm run check:reference-pack",
+        "npm run check:openapi-coherence",
         "npm run check:python-recipes",
         "npm run check:client-recipes",
         "npm run check:package-surface",

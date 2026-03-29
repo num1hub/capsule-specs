@@ -143,6 +143,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that the curated raw capsule exports remain structurally aligned, package-consumable, and law-adjacent rather than drifting into an unbounded vault export.
 - [`../scripts/check-reference-pack.js`](../scripts/check-reference-pack.js)
   Repo-local verification that the compact contract-reference exports stay aligned to stronger schemas, validator flags, and published gate summaries.
+- [`../scripts/check-openapi-coherence.js`](../scripts/check-openapi-coherence.js)
+  Repo-local verification that the compact validator-route and validator-envelope-family layers stay aligned to the stronger published OpenAPI contract.
 - [`../scripts/check-schema-bundles.js`](../scripts/check-schema-bundles.js)
   Repo-local verification that the committed single-file bundle schemas, their consumer recipes, and their human guide stay aligned to the stronger raw schema files.
 - [`../scripts/check-schema-recipes.js`](../scripts/check-schema-recipes.js)
@@ -300,6 +302,8 @@ The package-consumer layer strengthens that path further by making the maintaine
 
 The compact reference-pack layer strengthens that path further by giving tool-builders a smaller package-consumable surface for enums, gate IDs, validator option flags, and published validator route behavior summaries without forcing them to parse the larger schemas or prose docs first, now with copyable CommonJS, ESM, TypeScript, and Python consumer paths.
 
+The dedicated OpenAPI coherence gate strengthens that route-discovery path further by checking that `validator-routes.json` and `validator-envelope-families.json` remain subordinate to the stronger `openapi/validate.openapi.json` artifact instead of drifting into a competing HTTP contract.
+
 The schema-bundle layer strengthens that path further by giving code generators, Ajv consumers, and polyglot tooling a single-file schema path that stays subordinate to the stronger raw schema files instead of forcing every downstream consumer to wire the same multi-file `$ref` graph manually.
 
 The raw-schema recipe layer strengthens that path further by proving that downstream consumers can validate public capsules and validator-envelope payloads directly against the published JSON Schemas, both from a repo checkout and from installed package exports, without depending on the projection layer.
@@ -414,6 +418,7 @@ When the public surface changes, these files should move together:
 - `scripts/check-package-surface.js`
 - `scripts/check-package-install.js`
 - `scripts/check-reference-pack.js`
+- `scripts/check-openapi-coherence.js`
 - `scripts/check-python-recipes.js`
 - `scripts/check-raw-capsules.js`
 - `projections/index.ts`

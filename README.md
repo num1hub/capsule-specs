@@ -40,6 +40,7 @@ This repository is that home.
 - [`docs/invalid-archive-bundle-examples.md`](docs/invalid-archive-bundle-examples.md) for intentionally schema-invalid archive-bundle fixtures and their bounded structural rejection reasons
 - [`docs/schema-family-reference.md`](docs/schema-family-reference.md) for choosing the right schema family first
 - [`docs/reference-pack.md`](docs/reference-pack.md) for compact machine-readable enums, gate IDs, validator option flags, and validator route behavior summaries
+- [`docs/openapi.md`](docs/openapi.md) for the strongest published validator HTTP contract and the boundary between OpenAPI and compact route/envelope summaries
 - [`docs/schema-bundles.md`](docs/schema-bundles.md) for single-file bundled schema artifacts when you want less multi-file `$ref` wiring
 - [`docs/schema-validation-recipes.md`](docs/schema-validation-recipes.md) for raw JSON Schema validation with Ajv from a repo checkout or installed package
 - [`docs/invalid-capsule-examples.md`](docs/invalid-capsule-examples.md) for intentionally schema-invalid capsule fixtures and the boundary between raw-schema rejection and validator-only failures
@@ -254,14 +255,15 @@ Maintainer and review policy:
 44. Run `npm run check:package-install` if you want to confirm that the packed artifact installs cleanly into fresh CommonJS, ESM, TypeScript, raw-schema, archive-schema, bundled-schema, invalid-fixture, compact-reference, integrity-recipe, and Python raw-asset consumers.
 45. Run `npm run check:raw-capsules` if you want to confirm the curated raw capsule set stays structurally aligned and package-consumable.
 46. Run `npm run check:reference-pack` if you want to confirm the compact reference pack stays aligned to the stronger schema and gate surfaces.
-47. Run `npm run check:schema-bundles` if you want to confirm the committed single-file bundled schema artifacts and their consumer recipes stay aligned to the stronger raw schema files.
-48. Run `npm run check:schema-recipes` if you want to confirm the Ajv-based raw JSON Schema consumer recipes stay executable and aligned to the published schema exports.
-49. Run `npm run check:archive-recipes` if you want to confirm the archive-bundle validation recipes stay executable and aligned to the published portability/export schema.
-50. Run `npm run check:invalid-archive-examples` if you want to confirm the published schema-invalid archive fixtures keep failing for the documented structural reasons.
-51. Run `npm run check:invalid-examples` if you want to confirm the published schema-invalid capsule fixtures keep failing for the documented structural reasons.
-52. Run `npm run check:invalid-api-examples` if you want to confirm the published schema-invalid validator-envelope fixtures keep failing for the documented structural reasons.
-53. Run `npm run check:integrity-recipes` if you want to confirm the published examples, validator API payloads, and sealing recipes stay aligned to the current public `G16` rule.
-54. Run `npm run check:python-recipes` if you want to confirm the cross-language Python consumer recipes stay aligned to the published compact references, validator-envelope request/response payloads, public example seals, and extracted packed-artifact layout.
+47. Run `npm run check:openapi-coherence` if you want to confirm the compact validator route and envelope-family summaries stay aligned to the stronger published OpenAPI contract.
+48. Run `npm run check:schema-bundles` if you want to confirm the committed single-file bundled schema artifacts and their consumer recipes stay aligned to the stronger raw schema files.
+49. Run `npm run check:schema-recipes` if you want to confirm the Ajv-based raw JSON Schema consumer recipes stay executable and aligned to the published schema exports.
+50. Run `npm run check:archive-recipes` if you want to confirm the archive-bundle validation recipes stay executable and aligned to the published portability/export schema.
+51. Run `npm run check:invalid-archive-examples` if you want to confirm the published schema-invalid archive fixtures keep failing for the documented structural reasons.
+52. Run `npm run check:invalid-examples` if you want to confirm the published schema-invalid capsule fixtures keep failing for the documented structural reasons.
+53. Run `npm run check:invalid-api-examples` if you want to confirm the published schema-invalid validator-envelope fixtures keep failing for the documented structural reasons.
+54. Run `npm run check:integrity-recipes` if you want to confirm the published examples, validator API payloads, and sealing recipes stay aligned to the current public `G16` rule.
+55. Run `npm run check:python-recipes` if you want to confirm the cross-language Python consumer recipes stay aligned to the published compact references, validator-envelope request/response payloads, public example seals, and extracted packed-artifact layout.
 
 ## Source of truth
 

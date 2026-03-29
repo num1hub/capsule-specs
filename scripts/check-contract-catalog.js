@@ -74,6 +74,7 @@ const requiredIds = [
   'repo.versioning',
   'repo.notice',
   'validator.openapi',
+  'validator.openapi-reference',
   'validator.client-recipes',
   'schema.capsule',
   'schema.capsule-bundle',
@@ -91,6 +92,7 @@ const requiredIds = [
   'reference.contract-constants',
   'reference.validation-gates',
   'reference.validator-routes',
+  'reference.validator-envelope-families',
   'reference.check',
   'docs.integrity-recipes',
   'docs.schema-validation-recipes',
@@ -302,7 +304,8 @@ const requiredIds = [
   'examples.api-invalid.validate-request.single.missing-capsule',
   'examples.api-invalid.validate-response.fail.invalid-gate',
   'examples.invalid-api.check',
-  'governance.openapi-codegen-check'
+  'governance.openapi-codegen-check',
+  'governance.openapi-coherence-check'
 ];
 
 for (const requiredId of requiredIds) {

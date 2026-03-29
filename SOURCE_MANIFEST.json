@@ -6995,5 +6995,17 @@
     ],
     "transformation_type": "generated",
     "notes": "TypeScript package-consumer recipe for generating TypeScript declarations directly from the packaged OpenAPI contract."
+  },
+  "scripts/check-openapi-coherence.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi.md",
+      "/home/n1/codex-workspace/docs/reference-pack.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/references/validator-routes.json",
+      "/home/n1/codex-workspace/references/validator-envelope-families.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repository-local verifier for OpenAPI coherence across compact validator route and envelope-family references."
   }
 }

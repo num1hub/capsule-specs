@@ -101,7 +101,7 @@
     ]
   },
   "surface_summary": {
-    "total_files": 378,
+    "total_files": 379,
     "markdown_files": 101,
     "schema_files": 36,
     "raw_capsule_files": 8,
@@ -153,7 +153,7 @@
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 53,
+    "repo_local_check_count": 54,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {

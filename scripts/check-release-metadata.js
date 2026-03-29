@@ -110,6 +110,10 @@ assert(
   'release metadata must include the reference-pack verification check'
 );
 assert(
+  metadata.repo_local_checks.some((check) => check.command === 'npm run check:openapi-coherence'),
+  'release metadata must include the OpenAPI coherence verification check'
+);
+assert(
   metadata.repo_local_checks.some((check) => check.command === 'npm run check:schema-bundles'),
   'release metadata must include the schema-bundles verification check'
 );
