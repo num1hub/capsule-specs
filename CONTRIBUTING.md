@@ -20,6 +20,12 @@ For the public maintainer workflow model, review [`PUBLIC_MAINTENANCE_MODEL.json
 For the public change-control model, review [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) and [`docs/change-control.md`](docs/change-control.md).
 For the bounded contributor/reviewer/integrator entry paths, review [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) and [`docs/audience-paths.md`](docs/audience-paths.md).
 
+## Projection note
+
+Some reviewer and governance summary surfaces may be maintained through maintainer-side capsule projection workflows, especially on the public `dream` branch.
+
+If you propose changes to files such as `PUBLIC_DECISION_LOG.json`, `PUBLIC_EVIDENCE_GAPS_REGISTER.json`, `PUBLIC_LIMITATIONS_REGISTER.json`, `PUBLIC_CAPABILITY_MATRIX.json`, `PUBLIC_ECOSYSTEM_VALUE_MAP.json`, `PUBLIC_PROGRAM_FIT_MAP.json`, `PUBLIC_REVIEW_SCORECARD.json`, or `PUBLIC_AUDIENCE_PATHS.json`, describe the intended semantic change and keep any downstream projected output aligned with the stronger public docs, schemas, examples, and verification surfaces.
+
 ## Required discipline
 
 - explain the boundary you are changing
