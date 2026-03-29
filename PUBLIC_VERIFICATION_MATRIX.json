@@ -36,7 +36,7 @@
     },
     {
       "id": "capsule-and-api-example-integrity",
-      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, repo-local and installed-package OpenAPI code-generation recipes, live client recipes for all published validator routes, the reusable Python validator-route bridge, installed-package support-response recipes for gates and stats, and the reproducibility of published G16 integrity seals and computedHash values.",
+      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, repo-local plus CommonJS/ESM/TypeScript installed-package OpenAPI code-generation recipes, live client recipes for all published validator routes, the reusable Python validator-route bridge, installed-package support-response recipes for gates and stats, and the reproducibility of published G16 integrity seals and computedHash values.",
       "commands": [
         "npm run check:examples",
         "npm run check:raw-capsules",
@@ -79,6 +79,8 @@
         "examples/client/ts-package-support-responses.ts",
         "docs/openapi-codegen-recipes.md",
         "examples/client/openapi-generate-validator-types.mjs",
+        "examples/client/cjs-package-openapi-codegen.cjs",
+        "examples/client/ts-package-openapi-codegen.ts",
         "examples/client/esm-package-openapi-codegen.mjs"
       ],
       "strongest_surfaces": [
@@ -111,7 +113,7 @@
         "installed-package support-response recipes drifting away from the published support payloads or public package exports",
         "missing bounded owner-role rejection evidence for protected validator routes",
         "missing bounded stats-computation failure evidence for published support routes",
-        "repo-local or installed-package OpenAPI code-generation recipes drifting away from the published OpenAPI artifact, route family, packaged input path, or bounded stats query metadata"
+        "repo-local or CommonJS/ESM/TypeScript installed-package OpenAPI code-generation recipes drifting away from the published OpenAPI artifact, route family, packaged input path, or bounded stats query metadata"
       ]
     },
     {

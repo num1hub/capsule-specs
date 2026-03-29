@@ -28,7 +28,9 @@ function run(command, args, cwd) {
 }
 
 const recipePath = path.join(repoRoot, 'examples', 'client', 'openapi-generate-validator-types.mjs');
+const cjsPackageRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-openapi-codegen.cjs');
 const packageRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-openapi-codegen.mjs');
+const tsPackageRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-openapi-codegen.ts');
 const guidePath = path.join(repoRoot, 'docs', 'openapi-codegen-recipes.md');
 const openapiGuidePath = path.join(repoRoot, 'docs', 'openapi.md');
 const clientRecipesPath = path.join(repoRoot, 'docs', 'client-recipes.md');
@@ -38,7 +40,9 @@ const packageJsonPath = path.join(repoRoot, 'package.json');
 
 try {
   assert(fs.existsSync(recipePath), 'missing repo-local OpenAPI codegen recipe');
+  assert(fs.existsSync(cjsPackageRecipePath), 'missing CommonJS package OpenAPI codegen recipe');
   assert(fs.existsSync(packageRecipePath), 'missing installed-package OpenAPI codegen recipe');
+  assert(fs.existsSync(tsPackageRecipePath), 'missing TypeScript package OpenAPI codegen recipe');
   assert(fs.existsSync(guidePath), 'missing OpenAPI codegen guide');
 
   const guide = fs.readFileSync(guidePath, 'utf8');
@@ -51,16 +55,22 @@ try {
   assert(pkg.devDependencies?.['openapi-typescript'], 'package.json must declare openapi-typescript as a devDependency');
   assert(guide.includes('openapi-typescript'), 'OpenAPI codegen guide must mention openapi-typescript');
   assert(guide.includes('openapi-generate-validator-types.mjs'), 'OpenAPI codegen guide must mention the repo-local recipe');
+  assert(guide.includes('cjs-package-openapi-codegen.cjs'), 'OpenAPI codegen guide must mention the CommonJS package recipe');
   assert(guide.includes('esm-package-openapi-codegen.mjs'), 'OpenAPI codegen guide must mention the package recipe');
+  assert(guide.includes('ts-package-openapi-codegen.ts'), 'OpenAPI codegen guide must mention the TypeScript package recipe');
   assert(openapiGuide.includes('openapi-codegen-recipes.md'), 'docs/openapi.md must link to openapi-codegen-recipes.md');
   assert(clientRecipes.includes('openapi-generate-validator-types.mjs'), 'docs/client-recipes.md must mention the repo-local OpenAPI codegen recipe');
+  assert(clientRecipes.includes('cjs-package-openapi-codegen.cjs'), 'docs/client-recipes.md must mention the CommonJS package OpenAPI codegen recipe');
   assert(clientRecipes.includes('esm-package-openapi-codegen.mjs'), 'docs/client-recipes.md must mention the package OpenAPI codegen recipe');
-  assert(npmGuide.includes('esm-package-openapi-codegen.mjs'), 'docs/npm-consumption.md must mention the package OpenAPI codegen recipe');
+  assert(clientRecipes.includes('ts-package-openapi-codegen.ts'), 'docs/client-recipes.md must mention the TypeScript package OpenAPI codegen recipe');
+  assert(npmGuide.includes('cjs-package-openapi-codegen.cjs'), 'docs/npm-consumption.md must mention the CommonJS package OpenAPI codegen recipe');
+  assert(npmGuide.includes('esm-package-openapi-codegen.mjs'), 'docs/npm-consumption.md must mention the ESM package OpenAPI codegen recipe');
+  assert(npmGuide.includes('ts-package-openapi-codegen.ts'), 'docs/npm-consumption.md must mention the TypeScript package OpenAPI codegen recipe');
   assert(generatorReadiness.includes('openapi-codegen-recipes.md'), 'docs/generator-readiness.md must mention the concrete public OpenAPI codegen path');
 
   run(process.execPath, [recipePath], repoRoot);
 
-  console.log('OK: checked OpenAPI codegen guide, 2 codegen recipes, and repo-local openapi-typescript execution');
+  console.log('OK: checked OpenAPI codegen guide, 4 codegen recipes, and repo-local openapi-typescript execution');
 } catch (error) {
   console.error(`FAIL: ${error.message}`);
   process.exitCode = 1;

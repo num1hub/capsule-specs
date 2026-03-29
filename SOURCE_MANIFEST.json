@@ -6977,5 +6977,23 @@
     ],
     "transformation_type": "generated",
     "notes": "Repository-local verifier for repo and installed-package OpenAPI code-generation guidance."
+  },
+  "examples/client/cjs-package-openapi-codegen.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer recipe for generating TypeScript declarations directly from the packaged OpenAPI contract."
+  },
+  "examples/client/ts-package-openapi-codegen.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer recipe for generating TypeScript declarations directly from the packaged OpenAPI contract."
   }
 }

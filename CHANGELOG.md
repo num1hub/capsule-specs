@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- expanded installed-package OpenAPI code-generation coverage with CommonJS and TypeScript recipes plus fresh-install proof, so generator-backed consumers no longer stop at one ESM-only package path after the strongest published OpenAPI artifact
 - added direct repo-local and installed-package OpenAPI code-generation recipes plus a dedicated verifier, so tool-builders can recover generated TypeScript declarations from the strongest published HTTP contract without jumping straight from prose to ad hoc generator wiring
 - added direct repo/package/Python OpenAPI consumer recipes, so integrators and tool-builders no longer have to jump straight from prose to the raw `validate.openapi.json` artifact without copyable public-safe reading paths
 - added a dedicated `GET /api/validate/stats` `500` example under `examples/api/stats-error-response.sample.json` and wired it through route references, TypeScript route metadata, error-envelope parsers, failure docs, and verifiers, so the public validator surface no longer documents that support-route failure path without concrete sample-backed evidence

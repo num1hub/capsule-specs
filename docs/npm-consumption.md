@@ -154,9 +154,9 @@ These recipes prove that the installed package surface does not stop at `validat
 
 ## Minimal package-level OpenAPI codegen example
 
-A copyable version of this example also lives at [`../examples/client/esm-package-openapi-codegen.mjs`](../examples/client/esm-package-openapi-codegen.mjs).
+Copyable versions of this example also live at [`../examples/client/cjs-package-openapi-codegen.cjs`](../examples/client/cjs-package-openapi-codegen.cjs), [`../examples/client/esm-package-openapi-codegen.mjs`](../examples/client/esm-package-openapi-codegen.mjs), and [`../examples/client/ts-package-openapi-codegen.ts`](../examples/client/ts-package-openapi-codegen.ts).
 
-That recipe proves the installed package surface can feed a standard generator directly from `@num1hub/capsule-specs/openapi/validate.openapi.json` and recover the published route family, bounded `stats` query metadata, and response-schema typing through `openapi-typescript`, rather than forcing tool-builders to hand-maintain those declarations or scrape prose docs first.
+These recipes prove the installed package surface can feed a standard generator directly from `@num1hub/capsule-specs/openapi/validate.openapi.json` and recover the published route family, bounded `stats` query metadata, and response-schema typing through `openapi-typescript`, rather than forcing tool-builders to hand-maintain those declarations or scrape prose docs first. They also prove that this path remains usable across CommonJS path resolution, ESM JSON import, and TypeScript `createRequire(...)` package-consumer styles.
 
 ## Minimal package-level error-envelope example
 

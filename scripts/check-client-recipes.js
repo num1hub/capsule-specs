@@ -85,6 +85,7 @@ const pythonRecipeFiles = [
 const packageRecipeFiles = [
   'cjs-package-capsule-summary.cjs',
   'cjs-package-contract-reference.cjs',
+  'cjs-package-openapi-codegen.cjs',
   'cjs-package-openapi-reference.cjs',
   'cjs-package-error-responses.cjs',
   'cjs-package-live-validator-client.cjs',
@@ -105,6 +106,7 @@ const packageRecipeFiles = [
 const packageTypeRecipeFiles = [
   'ts-package-error-responses.ts',
   'ts-package-contract-reference.ts',
+  'ts-package-openapi-codegen.ts',
   'ts-package-openapi-reference.ts',
   'ts-package-live-validator-client.ts',
   'ts-package-support-responses.ts',
@@ -530,6 +532,14 @@ const expectedPackageImports = {
     'bearerAuth',
     'limit'
   ],
+  'cjs-package-openapi-codegen.cjs': [
+    '@num1hub/capsule-specs/openapi/validate.openapi.json',
+    'require.resolve',
+    'openapi-typescript',
+    'ValidateResponse',
+    'RateLimitErrorResponse',
+    'limit?: number;'
+  ],
   'cjs-package-error-responses.cjs': [
     '@num1hub/capsule-specs/zod/validator-api',
     '@num1hub/capsule-specs/examples/api/error-response.sample.json',
@@ -653,6 +663,15 @@ const expectedPackageTypeImports = {
     '@num1hub/capsule-specs/references/validator-routes.json',
     '@num1hub/capsule-specs/typescript/validator-envelope-families',
     '@num1hub/capsule-specs/typescript/validator-routes'
+  ],
+  'ts-package-openapi-codegen.ts': [
+    '@num1hub/capsule-specs/openapi/validate.openapi.json',
+    'createRequire',
+    'require.resolve',
+    'openapi-typescript',
+    'ValidateResponse',
+    'RateLimitErrorResponse',
+    'limit?: number;'
   ],
   'ts-package-openapi-reference.ts': [
     '@num1hub/capsule-specs/openapi/validate.openapi.json',

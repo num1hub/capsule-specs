@@ -90,7 +90,7 @@
       "source-level TypeScript validator route-behavior reference examples",
       "bounded support-route failure examples for documented validator statuses",
       "direct OpenAPI consumer recipe examples across repo, package, and extracted-artifact Python paths",
-      "repo-local and installed-package OpenAPI code-generation recipe examples",
+      "repo-local plus CommonJS/ESM/TypeScript installed-package OpenAPI code-generation recipe examples",
       "repo-local verification for OpenAPI code-generation recipes"
     ],
     "does_not_publish": [
@@ -101,13 +101,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 376,
+    "total_files": 378,
     "markdown_files": 101,
     "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 15,
-    "client_recipe_files": 87,
+    "client_recipe_files": 89,
     "workflow_files": 1,
     "issue_templates": 4
   },

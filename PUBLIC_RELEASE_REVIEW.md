@@ -60,7 +60,7 @@
 - client recipes and trust-model docs for external consumers, including live support-route coverage for `gates` and `stats`
 - expanded curated raw public law-adjacent capsules for confidence-vector semantics, subtype meaning, and version lineage
 - live validator OpenAPI reference
-- repo-local and installed-package OpenAPI code-generation recipes plus a dedicated verifier for generated TypeScript declarations from the strongest published HTTP contract
+- repo-local plus CommonJS/ESM/TypeScript installed-package OpenAPI code-generation recipes plus a dedicated verifier for generated TypeScript declarations from the strongest published HTTP contract
 
 ## Excluded materials
 
@@ -140,7 +140,7 @@ Repository-local audit on 2026-03-28:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `376` files / `376` manifest entries
+- manifest coverage: `378` files / `378` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -168,7 +168,7 @@ Upstream validator checks on 2026-03-26:
 - `docs/invalid-api-envelope-examples.md`, `examples/api-invalid/`, and `scripts/check-invalid-api-examples.js` are a bounded structural-rejection teaching layer for validator HTTP envelopes and must stay subordinate to the stronger published schemas, OpenAPI, validator docs, and live validator behavior they complement
 - `docs/integrity-recipes.md`, the seal-recomputation recipes under `examples/client/`, `references/contract-constants.json`, and `scripts/check-integrity-recipes.js` are a bounded public proof of the published `G16` sealing rule and example/API hash correctness, not a full replacement for live validator edge-case behavior
 - `docs/python-consumption.md`, the Python recipes under `examples/client/`, and `scripts/check-python-recipes.js` are a bounded raw-asset and extracted-artifact consumer path for compact references, a reusable validator-route bridge, and public `G16` seal proofs, not a Python SDK or PyPI distribution promise
-- `docs/openapi-codegen-recipes.md`, the OpenAPI code-generation recipes under `examples/client/`, and `scripts/check-openapi-codegen.js` are a bounded generator-consumer layer over the stronger published OpenAPI artifact, not a promise that generated declarations outrank OpenAPI or live validator behavior
+- `docs/openapi-codegen-recipes.md`, the repo-local plus CommonJS/ESM/TypeScript package OpenAPI code-generation recipes under `examples/client/`, and `scripts/check-openapi-codegen.js` are a bounded generator-consumer layer over the stronger published OpenAPI artifact, not a promise that generated declarations outrank OpenAPI or live validator behavior
 - `PUBLIC_MAINTENANCE_MODEL.json` is a bounded workflow summary and must stay subordinate to the stronger maintainer docs, community intake surfaces, release docs, and verification evidence it references
 - `PUBLIC_CHANGE_CONTROL_MODEL.json` is a bounded change-control summary and must stay subordinate to the stronger versioning, compatibility, changelog, and release-evidence surfaces it references
 - `PUBLIC_OWNERSHIP_MAP.json` is a bounded ownership-and-authority summary and must stay subordinate to the stronger docs, schemas, provenance, and contract surfaces it references

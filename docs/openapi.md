@@ -38,7 +38,7 @@ Use these when you want to read the strongest published route contract directly 
 - [`../examples/client/ts-package-openapi-reference.ts`](../examples/client/ts-package-openapi-reference.ts)
 - [`../examples/client/python-openapi-reference.py`](../examples/client/python-openapi-reference.py)
 
-These recipes prove that consumers can inspect the published OpenAPI document directly from a repo checkout, a packed package artifact, or an extracted package tree to recover the validator route family, bearer-auth posture, bounded `stats` query metadata, and response-status coverage without depending on private runtime code or immediately dropping to the compact route map first. If you want generator-oriented output instead of route inspection, use [`openapi-codegen-recipes.md`](openapi-codegen-recipes.md) for the `openapi-typescript` path.
+These recipes prove that consumers can inspect the published OpenAPI document directly from a repo checkout, a packed package artifact, or an extracted package tree to recover the validator route family, bearer-auth posture, bounded `stats` query metadata, and response-status coverage without depending on private runtime code or immediately dropping to the compact route map first. If you want generator-oriented output instead of route inspection, use [`openapi-codegen-recipes.md`](openapi-codegen-recipes.md) for the `openapi-typescript` path across repo-local, CommonJS, ESM, and TypeScript package-consumer styles.
 
 ## Important note
 

@@ -102,7 +102,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`python-consumption.md`](python-consumption.md)
   Human-readable guide to cross-language Python consumption of compact references and public `G16` seal proofs from a repo checkout or extracted packed artifact.
 - [`openapi-codegen-recipes.md`](openapi-codegen-recipes.md)
-  Human-readable guide to repo-local and installed-package OpenAPI type generation through `openapi-typescript`.
+  Human-readable guide to repo-local plus CommonJS/ESM/TypeScript installed-package OpenAPI type generation through `openapi-typescript`.
 - [`../capsules/README.md`](../capsules/README.md)
   Human-readable guide to the curated raw law-adjacent capsule source set.
 - [`../references/README.md`](../references/README.md)
@@ -406,6 +406,9 @@ When the public surface changes, these files should move together:
 - `docs/reference-pack.md`
 - `docs/python-consumption.md`
 - `docs/openapi-codegen-recipes.md`
+- `examples/client/cjs-package-openapi-codegen.cjs`
+- `examples/client/esm-package-openapi-codegen.mjs`
+- `examples/client/ts-package-openapi-codegen.ts`
 - `docs/source-materials.md`
 - `tsconfig.build.json`
 - `scripts/check-package-surface.js`

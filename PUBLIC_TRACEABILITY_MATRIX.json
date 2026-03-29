@@ -37,7 +37,7 @@
     },
     {
       "id": "validator-api-and-client-contract",
-      "claim": "The public validator HTTP surface is backed by OpenAPI, direct repo/package/Python OpenAPI readers, repo-local and installed-package OpenAPI code-generation recipes, envelope schemas, examples, compact machine-readable route-reference JSON, a reusable Python live-client bridge, shared TypeScript route constants plus route-behavior metadata, full-route client recipes, repo-relative TypeScript request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package CommonJS, ESM, and TypeScript live-client bridges, repo-relative Zod request parsers, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package request plus validate/support/error-response readers that cover single, batch, fix, gates, stats, plus shared generic rejection paths and a bounded support-route failure path without depending on private runtime code.",
+      "claim": "The public validator HTTP surface is backed by OpenAPI, direct repo/package/Python OpenAPI readers, repo-local plus CommonJS/ESM/TypeScript installed-package OpenAPI code-generation recipes, envelope schemas, examples, compact machine-readable route-reference JSON, a reusable Python live-client bridge, shared TypeScript route constants plus route-behavior metadata, full-route client recipes, repo-relative TypeScript request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package CommonJS, ESM, and TypeScript live-client bridges, repo-relative Zod request parsers, repo-relative TypeScript typed response readers, repo-relative Zod response parsers, bounded shared error-envelope consumers, and installed-package request plus validate/support/error-response readers that cover single, batch, fix, gates, stats, plus shared generic rejection paths and a bounded support-route failure path without depending on private runtime code.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -132,6 +132,8 @@
         "scripts/check-python-recipes.js",
         "docs/openapi-codegen-recipes.md",
         "examples/client/openapi-generate-validator-types.mjs",
+        "examples/client/cjs-package-openapi-codegen.cjs",
+        "examples/client/ts-package-openapi-codegen.ts",
         "examples/client/esm-package-openapi-codegen.mjs",
         "scripts/check-openapi-codegen.js"
       ],

@@ -86,7 +86,7 @@
       "id": "build-validator-client-from-public-contracts",
       "audience": "tool-builders",
       "readiness": "ready",
-      "outcome": "Build and inspect a validator-facing client from public OpenAPI, direct repo/package/Python OpenAPI readers, repo-local and installed-package OpenAPI code-generation recipes, schema-backed envelopes, compact machine-readable route-reference JSON, a reusable Python live-client bridge backed by the same route pack, shared TypeScript validator-route constants plus route-behavior metadata, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package CommonJS, ESM, and TypeScript live-client bridges for all published validator routes, typed validate-response readers, bounded shared plus route-specific error-envelope readers, and installed-package request plus validate/support/error-response readers without depending on private runtime code.",
+      "outcome": "Build and inspect a validator-facing client from public OpenAPI, direct repo/package/Python OpenAPI readers, repo-local plus CommonJS/ESM/TypeScript installed-package OpenAPI code-generation recipes, schema-backed envelopes, compact machine-readable route-reference JSON, a reusable Python live-client bridge backed by the same route pack, shared TypeScript validator-route constants plus route-behavior metadata, copyable route recipes, source-level TypeScript/Zod validator-envelope recipes, source-level request builders plus typed request readers, repo-relative TypeScript live-client bridges plus installed-package CommonJS, ESM, and TypeScript live-client bridges for all published validator routes, typed validate-response readers, bounded shared plus route-specific error-envelope readers, and installed-package request plus validate/support/error-response readers without depending on private runtime code.",
       "strongest_surfaces": [
         "openapi/validate.openapi.json",
         "schemas/validator-api-envelopes.schema.json",
@@ -162,6 +162,8 @@
         "references/validator-routes.json",
         "docs/openapi-codegen-recipes.md",
         "examples/client/openapi-generate-validator-types.mjs",
+        "examples/client/cjs-package-openapi-codegen.cjs",
+        "examples/client/ts-package-openapi-codegen.ts",
         "examples/client/esm-package-openapi-codegen.mjs",
         "scripts/check-openapi-codegen.js"
       ],

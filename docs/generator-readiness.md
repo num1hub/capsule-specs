@@ -30,7 +30,7 @@ The upstream vault treats `capsule.contract.generator-projection-index.v1` as th
 - boundary posture in [`domain-boundaries.md`](domain-boundaries.md) and [`../PUBLIC_BOUNDARY_MAP.json`](../PUBLIC_BOUNDARY_MAP.json)
 - current public artifact discovery in [`../PUBLIC_CONTRACT_CATALOG.json`](../PUBLIC_CONTRACT_CATALOG.json)
 - schema, OpenAPI, examples, client recipes, and release evidence that external consumers can review today
-- a concrete public OpenAPI code-generation path in [`openapi-codegen-recipes.md`](openapi-codegen-recipes.md) for tool-builders who want generated TypeScript declarations from the strongest published HTTP contract
+- a concrete public OpenAPI code-generation path in [`openapi-codegen-recipes.md`](openapi-codegen-recipes.md) for tool-builders who want generated TypeScript declarations from the strongest published HTTP contract across repo-local plus CommonJS, ESM, and TypeScript package-consumer styles
 
 ## What this public repo does not expose
 

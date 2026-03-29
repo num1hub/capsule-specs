@@ -27,16 +27,25 @@ That recipe:
   - the bounded `limit` query parameter on `GET /api/validate/stats`
   - generated references to `ValidateResponse` and `RateLimitErrorResponse`
 
-## Installed-package recipe
+## Installed-package recipes
 
-Use [`../examples/client/esm-package-openapi-codegen.mjs`](../examples/client/esm-package-openapi-codegen.mjs) when you want the same path from an installed or packed artifact.
+Use these when you want the same path from an installed or packed artifact:
 
-That recipe:
+- [`../examples/client/cjs-package-openapi-codegen.cjs`](../examples/client/cjs-package-openapi-codegen.cjs)
+- [`../examples/client/esm-package-openapi-codegen.mjs`](../examples/client/esm-package-openapi-codegen.mjs)
+- [`../examples/client/ts-package-openapi-codegen.ts`](../examples/client/ts-package-openapi-codegen.ts)
 
-- imports `@num1hub/capsule-specs/openapi/validate.openapi.json`
-- writes the packaged OpenAPI document to a temporary file
-- runs `openapi-typescript` from the consumer project
-- asserts that generated output still covers the published validator route family and bounded `stats` query path
+Together these recipes prove three public-safe package-consumer patterns:
+
+- CommonJS can resolve the packaged OpenAPI path directly with `require.resolve(...)`
+- ESM can import the packaged OpenAPI JSON and feed it into `openapi-typescript`
+- TypeScript can resolve the packaged OpenAPI path with `createRequire(import.meta.url)` and still keep the generator wiring copyable and typed
+
+All three installed-package recipes assert that generated output still covers:
+
+- all 5 published validator routes
+- the bounded `limit` query parameter on `GET /api/validate/stats`
+- generated references to `ValidateResponse` and `RateLimitErrorResponse`
 
 ## Verification
 

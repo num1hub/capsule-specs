@@ -46,7 +46,7 @@ This repository is that home.
 - [`docs/invalid-api-envelope-examples.md`](docs/invalid-api-envelope-examples.md) for intentionally schema-invalid validator API envelopes and the boundary between raw-schema rejection and structurally valid negative API payloads
 - [`docs/integrity-recipes.md`](docs/integrity-recipes.md) for recomputing `integrity_sha3_512`, verifying sealed examples, and repairing the intentional `G16` teaching example
 - [`docs/python-consumption.md`](docs/python-consumption.md) for cross-language Python consumption of compact references, validator-envelope request/response flows, and public `G16` seal proofs from a repo checkout or extracted packed artifact
-- [`docs/openapi-codegen-recipes.md`](docs/openapi-codegen-recipes.md) for direct `openapi-typescript` generation from the strongest published OpenAPI contract
+- [`docs/openapi-codegen-recipes.md`](docs/openapi-codegen-recipes.md) for direct `openapi-typescript` generation from the strongest published OpenAPI contract across repo-local plus package-level CommonJS, ESM, and TypeScript consumer paths
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/type-projections.md`](docs/type-projections.md) for the public-safe TypeScript and Zod projection layer
 - [`docs/npm-consumption.md`](docs/npm-consumption.md) for the buildable package surface, local tarball install path, and subpath entrypoints

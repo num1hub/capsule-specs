@@ -34,6 +34,7 @@ const packedFilePath = path.join(workspaceRoot, 'tarball.json');
 let tarballPath = null;
 const cjsErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-error-responses.cjs');
 const cjsLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-live-validator-client.cjs');
+const cjsOpenapiCodegenRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-openapi-codegen.cjs');
 const cjsOpenapiRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-openapi-reference.cjs');
 const cjsValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-request.cjs');
 const cjsSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-support-responses.cjs');
@@ -51,6 +52,7 @@ const typescriptBatchRequestRecipePath = path.join(repoRoot, 'examples', 'client
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
 const typescriptFixRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-fix-request.ts');
 const typescriptLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-live-validator-client.ts');
+const typescriptOpenapiCodegenRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-openapi-codegen.ts');
 const typescriptOpenapiRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-openapi-reference.ts');
 const typescriptParseRequestsRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-parse-validate-requests.ts');
 const typescriptValidateResponsesRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-responses.ts');
@@ -92,7 +94,7 @@ try {
     name: 'capsule-specs-consumer-cjs',
     private: true
   });
-  run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath], cjsProject);
+  run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'openapi-typescript'], cjsProject);
   fs.writeFileSync(
     path.join(cjsProject, 'consumer.cjs'),
     [
@@ -128,6 +130,12 @@ try {
   run(process.execPath, ['live-client-consumer.cjs'], cjsProject);
   fs.writeFileSync(path.join(cjsProject, 'openapi-consumer.cjs'), fs.readFileSync(cjsOpenapiRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['openapi-consumer.cjs'], cjsProject);
+  fs.writeFileSync(
+    path.join(cjsProject, 'openapi-codegen-consumer.cjs'),
+    fs.readFileSync(cjsOpenapiCodegenRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['openapi-codegen-consumer.cjs'], cjsProject);
   fs.writeFileSync(
     path.join(cjsProject, 'validate-request-consumer.cjs'),
     fs.readFileSync(cjsValidateRequestRecipePath, 'utf8'),
@@ -255,6 +263,7 @@ try {
       'batch-request-consumer.ts',
       'fix-request-consumer.ts',
       'live-client-consumer.ts',
+      'openapi-codegen-consumer.ts',
       'openapi-consumer.ts',
       'parse-request-consumer.ts',
       'error-consumer.ts',
@@ -263,7 +272,11 @@ try {
       'validate-response-consumer.ts'
     ]
   });
-  run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath], typescriptProject);
+  run(
+    'npm',
+    ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'openapi-typescript', '@types/node'],
+    typescriptProject
+  );
   fs.writeFileSync(path.join(typescriptProject, 'consumer.ts'), fs.readFileSync(typescriptConsumerRecipePath, 'utf8'), 'utf8');
   fs.writeFileSync(
     path.join(typescriptProject, 'batch-request-consumer.ts'),
@@ -278,6 +291,11 @@ try {
   fs.writeFileSync(
     path.join(typescriptProject, 'live-client-consumer.ts'),
     fs.readFileSync(typescriptLiveClientRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
+    path.join(typescriptProject, 'openapi-codegen-consumer.ts'),
+    fs.readFileSync(typescriptOpenapiCodegenRecipePath, 'utf8'),
     'utf8'
   );
   fs.writeFileSync(
@@ -300,6 +318,8 @@ try {
   );
   const repoTsc = path.join(repoRoot, 'node_modules', 'typescript', 'bin', 'tsc');
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
+  run(process.execPath, [repoTsc, '--project', 'tsconfig.json', '--noEmit', 'false', '--outDir', 'dist'], typescriptProject);
+  run(process.execPath, ['dist/openapi-codegen-consumer.js'], typescriptProject);
 
   console.log(
     'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, OpenAPI reading and OpenAPI type-generation, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
