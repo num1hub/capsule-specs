@@ -63,6 +63,13 @@ Today that projection-active summary set includes:
 - `PUBLIC_UPDATE_COHERENCE_MAP.json`
 - `PUBLIC_ADOPTION_READINESS.json`
 - `PUBLIC_FRESHNESS_MODEL.json`
+- `PUBLIC_MAINTENANCE_MODEL.json`
+- `PUBLIC_CHANGE_CONTROL_MODEL.json`
+- `PUBLIC_OWNERSHIP_MAP.json`
+- `PUBLIC_BOUNDARY_MAP.json`
+- `PUBLIC_PORTABILITY_PROFILE.json`
+- `PUBLIC_PUBLICATION_READINESS.json`
+- `PUBLIC_FAILURE_MODEL.json`
 
 Treat those files as public outputs whose semantic changes must stay aligned with the stronger public docs, schemas, examples, release evidence, and verification surfaces.
 
