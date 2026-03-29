@@ -27,6 +27,7 @@ const typeRecipeFiles = [
   'ts-capsule-summary.ts',
   'zod-parse-capsule.ts',
   'ts-openapi-route-summary.ts',
+  'openapi-generate-validator-types.mjs',
   'ts-envelope-family-reference.ts',
   'ts-route-behavior-reference.ts',
   'ts-build-validate-request.ts',
@@ -92,6 +93,7 @@ const packageRecipeFiles = [
   'cjs-package-validate-response.cjs',
   'esm-package-capsule-summary.mjs',
   'esm-package-contract-reference.mjs',
+  'esm-package-openapi-codegen.mjs',
   'esm-package-openapi-reference.mjs',
   'esm-package-error-responses.mjs',
   'esm-package-live-validator-client.mjs',
@@ -247,6 +249,13 @@ const expectedTypeOpenApiReferences = {
     '/api/validate/stats',
     'bearerAuth',
     'limit'
+  ],
+  'openapi-generate-validator-types.mjs': [
+    'path.join(repoRoot, "openapi", "validate.openapi.json")',
+    'openapi-typescript',
+    'ValidateResponse',
+    'RateLimitErrorResponse',
+    'limit?: number;'
   ]
 };
 
@@ -577,6 +586,13 @@ const expectedPackageImports = {
     '/api/validate/stats',
     'bearerAuth',
     'limit'
+  ],
+  'esm-package-openapi-codegen.mjs': [
+    '@num1hub/capsule-specs/openapi/validate.openapi.json',
+    'openapi-typescript',
+    'ValidateResponse',
+    'RateLimitErrorResponse',
+    'limit?: number;'
   ],
   'esm-package-error-responses.mjs': [
     '@num1hub/capsule-specs/zod/validator-api',

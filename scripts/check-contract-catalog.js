@@ -120,6 +120,7 @@ const requiredIds = [
   'governance.projection-doctrine',
   'governance.domain-boundaries',
   'governance.generator-readiness',
+  'docs.openapi-codegen-recipes',
   'governance.portability-doc',
   'governance.archive-bundles-doc',
   'docs.archive-validation-recipes',
@@ -231,6 +232,7 @@ const requiredIds = [
   'examples.client.zod-parse-support-responses',
   'examples.client.cjs-package-capsule-summary',
   'examples.client.cjs-package-openapi-reference',
+  'examples.client.openapi-generate-validator-types',
   'examples.client.ajv-validate-capsule',
   'examples.client.ajv-validate-validator-envelope',
   'examples.client.ajv-validate-archive-bundle',
@@ -253,6 +255,7 @@ const requiredIds = [
   'examples.client.esm-package-ajv-reject-invalid-validator-envelopes',
   'examples.client.esm-package-recompute-integrity-seal',
   'examples.client.esm-package-capsule-summary',
+  'examples.client.esm-package-openapi-codegen',
   'examples.client.esm-package-openapi-reference',
   'examples.client.esm-package-error-responses',
   'examples.client.esm-package-validate-request',
@@ -296,7 +299,8 @@ const requiredIds = [
   'examples.api-invalid.readme',
   'examples.api-invalid.validate-request.single.missing-capsule',
   'examples.api-invalid.validate-response.fail.invalid-gate',
-  'examples.invalid-api.check'
+  'examples.invalid-api.check',
+  'governance.openapi-codegen-check'
 ];
 
 for (const requiredId of requiredIds) {

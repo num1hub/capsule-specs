@@ -6935,5 +6935,47 @@
     ],
     "transformation_type": "generated",
     "notes": "Python recipe for reading the published OpenAPI route contract from a repo checkout or extracted packed artifact."
+  },
+  "docs/openapi-codegen-recipes.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/examples/client/openapi-generate-validator-types.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-openapi-codegen.mjs",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to repo-local and installed-package OpenAPI code-generation recipes through openapi-typescript."
+  },
+  "examples/client/openapi-generate-validator-types.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local recipe for generating TypeScript declarations from the published OpenAPI contract."
+  },
+  "examples/client/esm-package-openapi-codegen.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
+      "/home/n1/codex-workspace/openapi/validate.openapi.json",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "ESM package-consumer recipe for generating TypeScript declarations from the packaged OpenAPI contract."
+  },
+  "scripts/check-openapi-codegen.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/openapi-codegen-recipes.md",
+      "/home/n1/codex-workspace/docs/openapi.md",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/generator-readiness.md",
+      "/home/n1/codex-workspace/examples/client/openapi-generate-validator-types.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-openapi-codegen.mjs",
+      "/home/n1/codex-workspace/package.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repository-local verifier for repo and installed-package OpenAPI code-generation guidance."
   }
 }

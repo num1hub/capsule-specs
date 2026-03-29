@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 372,
-    "manifest_entries": 372
+    "files": 376,
+    "manifest_entries": 376
   },
   "surface_summary": {
-    "catalog_entries": 321,
+    "catalog_entries": 325,
     "example_capsules": 5,
     "api_example_files": 15,
-    "markdown_files": 100
+    "markdown_files": 101
   },
   "repo_local_checks": [
     {
@@ -42,6 +42,10 @@
     },
     {
       "command": "npm run check:package-install",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:openapi-codegen",
       "status": "pass"
     },
     {
@@ -298,6 +302,7 @@
     "The Python recipe layer in docs/python-consumption.md, examples/client/, and scripts/check-python-recipes.js is a bounded raw-asset, validator-envelope request/response, support-route, and extracted-artifact consumer path, not a Python SDK or PyPI distribution promise.",
     "The invalid API-envelope layer in docs/invalid-api-envelope-examples.md and examples/api-invalid/ is a bounded structural teaching surface for schema-level HTTP-envelope rejection, not a complete map of live validator failure classes or deployed route behavior.",
     "single-file schema bundles are convenience projections for easier distribution and code generation, not stronger sources than the canonical raw schemas, OpenAPI, or live validator behavior",
-    "The new direct OpenAPI consumer recipes are convenience readers over the stronger published OpenAPI artifact, not replacements for live validator behavior."
+    "The new direct OpenAPI consumer recipes are convenience readers over the stronger published OpenAPI artifact, not replacements for live validator behavior.",
+    "The OpenAPI code-generation recipe layer in docs/openapi-codegen-recipes.md, examples/client/, and scripts/check-openapi-codegen.js is a convenience generator path over the stronger published OpenAPI artifact, not a replacement for OpenAPI or live validator behavior."
   ]
 }

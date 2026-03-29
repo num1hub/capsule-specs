@@ -41,6 +41,7 @@ const cjsValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 
 const esmErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-error-responses.mjs');
 const esmReferenceRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-contract-reference.mjs');
 const esmLiveClientRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-live-validator-client.mjs');
+const esmOpenapiCodegenRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-openapi-codegen.mjs');
 const esmOpenapiRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-openapi-reference.mjs');
 const esmValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-validate-request.mjs');
 const esmSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-support-responses.mjs');
@@ -149,7 +150,11 @@ try {
     private: true,
     type: 'module'
   });
-  run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'ajv', 'ajv-formats'], esmProject);
+  run(
+    'npm',
+    ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'ajv', 'ajv-formats', 'openapi-typescript'],
+    esmProject
+  );
   fs.writeFileSync(
     path.join(esmProject, 'consumer.mjs'),
     [
@@ -193,6 +198,12 @@ try {
   run(process.execPath, ['live-client-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'openapi-consumer.mjs'), fs.readFileSync(esmOpenapiRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['openapi-consumer.mjs'], esmProject);
+  fs.writeFileSync(
+    path.join(esmProject, 'openapi-codegen-consumer.mjs'),
+    fs.readFileSync(esmOpenapiCodegenRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['openapi-codegen-consumer.mjs'], esmProject);
   fs.writeFileSync(
     path.join(esmProject, 'validate-request-consumer.mjs'),
     fs.readFileSync(esmValidateRequestRecipePath, 'utf8'),
@@ -291,7 +302,7 @@ try {
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, OpenAPI, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, OpenAPI reading and OpenAPI type-generation, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

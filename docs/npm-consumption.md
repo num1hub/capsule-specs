@@ -152,6 +152,12 @@ console.log(statsResponseSchema.parse(statsResponse).passRate);
 
 These recipes prove that the installed package surface does not stop at `validate` request/response flows. It also carries the published `gates` and `stats` support-response payloads plus the public Zod and TypeScript validator-envelope projections needed to inspect those support routes without guessing shape from prose.
 
+## Minimal package-level OpenAPI codegen example
+
+A copyable version of this example also lives at [`../examples/client/esm-package-openapi-codegen.mjs`](../examples/client/esm-package-openapi-codegen.mjs).
+
+That recipe proves the installed package surface can feed a standard generator directly from `@num1hub/capsule-specs/openapi/validate.openapi.json` and recover the published route family, bounded `stats` query metadata, and response-schema typing through `openapi-typescript`, rather than forcing tool-builders to hand-maintain those declarations or scrape prose docs first.
+
 ## Minimal package-level error-envelope example
 
 Copyable versions of this example also live at [`../examples/client/cjs-package-error-responses.cjs`](../examples/client/cjs-package-error-responses.cjs), [`../examples/client/esm-package-error-responses.mjs`](../examples/client/esm-package-error-responses.mjs), and [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts).

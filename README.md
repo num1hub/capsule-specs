@@ -46,6 +46,7 @@ This repository is that home.
 - [`docs/invalid-api-envelope-examples.md`](docs/invalid-api-envelope-examples.md) for intentionally schema-invalid validator API envelopes and the boundary between raw-schema rejection and structurally valid negative API payloads
 - [`docs/integrity-recipes.md`](docs/integrity-recipes.md) for recomputing `integrity_sha3_512`, verifying sealed examples, and repairing the intentional `G16` teaching example
 - [`docs/python-consumption.md`](docs/python-consumption.md) for cross-language Python consumption of compact references, validator-envelope request/response flows, and public `G16` seal proofs from a repo checkout or extracted packed artifact
+- [`docs/openapi-codegen-recipes.md`](docs/openapi-codegen-recipes.md) for direct `openapi-typescript` generation from the strongest published OpenAPI contract
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/type-projections.md`](docs/type-projections.md) for the public-safe TypeScript and Zod projection layer
 - [`docs/npm-consumption.md`](docs/npm-consumption.md) for the buildable package surface, local tarball install path, and subpath entrypoints
@@ -183,6 +184,7 @@ The repository is structured to look like a serious OSS-maintained surface rathe
 - a fresh-project tarball-install verification path for CommonJS, ESM, and TypeScript package consumers
 - package-consumer support-response recipes for installed `gates` and `stats` payload parsing across CommonJS, ESM, and TypeScript flows
 - a cross-language Python consumer path for compact references, published validator route flows, and public `G16` seal proofs from repo-local files or extracted packed artifacts
+- direct repo-local and installed-package OpenAPI code-generation recipes for tool-builders who want generated TypeScript declarations from the strongest published HTTP contract
 - curated raw capsule source assets with repo-local contract checks and package subpath exports
 - a repo-local audit script under [`scripts/audit-public-surface.js`](scripts/audit-public-surface.js)
 - API payload examples under [`examples/api/`](examples/api/)

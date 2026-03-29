@@ -4888,6 +4888,66 @@
         "npm run check:docs",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "docs.openapi-codegen-recipes",
+      "path": "docs/openapi-codegen-recipes.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:openapi-codegen",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.openapi-generate-validator-types",
+      "path": "examples/client/openapi-generate-validator-types.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:openapi-codegen",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-openapi-codegen",
+      "path": "examples/client/esm-package-openapi-codegen.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "governance.openapi-codegen-check",
+      "path": "scripts/check-openapi-codegen.js",
+      "kind": "verification-doc",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:openapi-codegen",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

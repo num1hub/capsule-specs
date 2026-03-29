@@ -36,7 +36,7 @@
     },
     {
       "id": "capsule-and-api-example-integrity",
-      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, live client recipes for all published validator routes, the reusable Python validator-route bridge, installed-package support-response recipes for gates and stats, and the reproducibility of published G16 integrity seals and computedHash values.",
+      "summary": "Protects public-safe examples, curated raw capsules, API payload examples, repo-local and installed-package OpenAPI code-generation recipes, live client recipes for all published validator routes, the reusable Python validator-route bridge, installed-package support-response recipes for gates and stats, and the reproducibility of published G16 integrity seals and computedHash values.",
       "commands": [
         "npm run check:examples",
         "npm run check:raw-capsules",
@@ -44,7 +44,8 @@
         "npm run check:integrity-recipes",
         "npm run check:python-recipes",
         "npm run check:api-schemas",
-        "npm run check:client-recipes"
+        "npm run check:client-recipes",
+        "npm run check:openapi-codegen"
       ],
       "protects": [
         "examples/",
@@ -75,7 +76,10 @@
         "examples/client/cjs-package-support-responses.cjs",
         "examples/client/cjs-package-live-validator-client.cjs",
         "examples/client/esm-package-support-responses.mjs",
-        "examples/client/ts-package-support-responses.ts"
+        "examples/client/ts-package-support-responses.ts",
+        "docs/openapi-codegen-recipes.md",
+        "examples/client/openapi-generate-validator-types.mjs",
+        "examples/client/esm-package-openapi-codegen.mjs"
       ],
       "strongest_surfaces": [
         "examples/example-project-hub.capsule.json",
@@ -85,7 +89,8 @@
         "scripts/check-integrity-recipes.js",
         "examples/api/validate-response.pass.json",
         "examples/api/forbidden-response.sample.json",
-        "examples/api/stats-error-response.sample.json"
+        "examples/api/stats-error-response.sample.json",
+        "openapi/validate.openapi.json"
       ],
       "failure_modes_prevented": [
         "broken example semantics",
@@ -105,7 +110,8 @@
         "Node fix-route client recipes drifting away from the published validator HTTP surface",
         "installed-package support-response recipes drifting away from the published support payloads or public package exports",
         "missing bounded owner-role rejection evidence for protected validator routes",
-        "missing bounded stats-computation failure evidence for published support routes"
+        "missing bounded stats-computation failure evidence for published support routes",
+        "repo-local or installed-package OpenAPI code-generation recipes drifting away from the published OpenAPI artifact, route family, packaged input path, or bounded stats query metadata"
       ]
     },
     {
