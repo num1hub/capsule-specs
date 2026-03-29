@@ -7007,5 +7007,22 @@
     ],
     "transformation_type": "generated",
     "notes": "Repository-local verifier for OpenAPI coherence across compact validator route and envelope-family references."
+  },
+  "examples/client/recipe-index.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/scripts/lib/client-recipes.js",
+      "/home/n1/codex-workspace/docs/client-recipes.md",
+      "/home/n1/codex-workspace/examples/client/README.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Machine-readable task and runtime navigator for the published client recipes."
+  },
+  "scripts/lib/client-recipes.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/scripts/check-client-recipes.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local registry for client recipe groups, task entrypoints, and verifier-backed navigation metadata."
   }
 }

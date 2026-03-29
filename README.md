@@ -51,7 +51,7 @@ This repository is that home.
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/type-projections.md`](docs/type-projections.md) for the public-safe TypeScript and Zod projection layer
 - [`docs/npm-consumption.md`](docs/npm-consumption.md) for the buildable package surface, local tarball install path, and subpath entrypoints
-- [`docs/schema-bundles.md`](docs/schema-bundles.md) for single-file capsule and validator-envelope bundle schemas from both repo and package exports
+- [`examples/client/recipe-index.json`](examples/client/recipe-index.json) for the machine-readable runtime-lane and task navigator across the published client recipes
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
 - [`docs/example-coverage.md`](docs/example-coverage.md) for the bounded map of what the public examples actually cover
 - [`docs/maintainer-operations.md`](docs/maintainer-operations.md) for the bounded maintainer workflow and release posture

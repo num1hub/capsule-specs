@@ -59,7 +59,7 @@ This executes all repository-local checks in the expected order.
 - `npm run check:boundary-map`
   Verifies `PUBLIC_BOUNDARY_MAP.json`, the new projection/boundary docs, and their contract-catalog coverage.
 - `npm run check:client-recipes`
-  Verifies curl and Node consumer snippets, full published validator-route targeting, env-var assumptions, and Node syntax.
+  Verifies the published client-recipe navigator, group ownership and `recommended_start` entrypoints, task-to-runtime and task-to-doc wiring, curl and Node consumer snippets, full published validator-route targeting, env-var assumptions, and Node syntax.
 - `npm run check:community-health`
   Verifies contributor-facing docs, issue templates, support/security alignment, and intake-surface references.
 - `npm run check:github-operations`

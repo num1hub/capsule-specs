@@ -2,6 +2,29 @@
 
 This directory contains minimal consumer-oriented examples for the published validator HTTP surface.
 
+If you do not know which file to open first, start with `recipe-index.json`. It is the machine-readable navigator for this directory and groups every non-Markdown artifact by runtime, consumption path, and common integration task.
+
+Use `groups[*].recommended_start` when you already know the runtime lane you want. Use `task_entrypoints[*]` when you know the job to do but not yet the best file to open.
+
+## Fast starts
+
+- Live `POST /api/validate`: `curl-validate-single.sh`
+- Live `POST /api/validate/batch`: `curl-validate-batch.sh`
+- Live `POST /api/validate/fix`: `curl-validate-fix.sh`
+- Live `GET /api/validate/gates` and `GET /api/validate/stats`: `curl-get-gates.sh` and `curl-get-stats.sh`
+- Node live-client lane: `node-validate-single.mjs`
+- Source-level request reading: `ts-parse-validate-requests.ts`
+- Source-level response reading: `ts-parse-validate-responses.ts`
+- Compact reference discovery: `ts-envelope-family-reference.ts`
+- Direct OpenAPI reading and codegen: `ts-openapi-route-summary.ts` and `openapi-generate-validator-types.mjs`
+- Raw-schema validation and rejection: `ajv-validate-capsule.mjs` and `ajv-reject-invalid-capsules.mjs`
+- Python full-route bridge: `python-live-validator-client.py`
+- Installed-package runtime lane: `cjs-package-live-validator-client.cjs`
+- Installed-package TypeScript lane: `ts-package-live-validator-client.ts`
+- Integrity proof: `recompute-integrity-seal.mjs`
+
+## Full inventory
+
 ## Shell recipes
 
 - `curl-validate-single.sh`

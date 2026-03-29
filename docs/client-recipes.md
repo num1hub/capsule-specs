@@ -11,6 +11,59 @@ The example client snippets assume these environment variables:
 - `N1HUB_TOKEN`
   Bearer token for the validator HTTP surface
 
+## Quick navigator
+
+If you are starting cold and do not yet know which snippet family to open first, inspect [`../examples/client/recipe-index.json`](../examples/client/recipe-index.json).
+
+That file is the machine-readable map for this directory. It groups every non-Markdown client artifact by runtime and consumption path, and it also provides task-oriented entrypoints such as:
+
+- live validator calls for `validate`, `batch`, `fix`, `gates`, and `stats`
+- source-level request and response readers
+- raw-schema Ajv validation and structural rejection checks
+- compact-reference and OpenAPI discovery
+- installed-package runtime and TypeScript entrypoints
+- public `G16` integrity proof flows
+
+The `groups[*].recommended_start` field gives the shortest human-safe file to open for each runtime lane. The `task_entrypoints[*]` section then maps common intents to one recommended file, cross-runtime alternatives, and the supporting docs that explain the surrounding contract.
+
+## Fast starts
+
+If you want the quickest path instead of reading the whole directory:
+
+- Send one capsule to the live validator:
+  start with [`curl-validate-single.sh`](../examples/client/curl-validate-single.sh), then use [`node-validate-single.mjs`](../examples/client/node-validate-single.mjs), [`python-validate-single.py`](../examples/client/python-validate-single.py), or [`ts-live-validator-client.ts`](../examples/client/ts-live-validator-client.ts) if you need a different runtime
+- Send a batch or fix payload:
+  start with [`curl-validate-batch.sh`](../examples/client/curl-validate-batch.sh) or [`curl-validate-fix.sh`](../examples/client/curl-validate-fix.sh), then move to the Node, Python, or TypeScript alternatives listed in `recipe-index.json`
+- Call the support routes:
+  start with [`curl-get-gates.sh`](../examples/client/curl-get-gates.sh) and [`curl-get-stats.sh`](../examples/client/curl-get-stats.sh) for the shortest live route proof, including the bounded `limit` query path on `stats`
+- Read published request families from source-level projections:
+  start with [`ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts) or the Zod request parsers
+- Read published response, error, and support families from source-level projections:
+  start with [`ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts), then inspect [`ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts) and [`ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
+- Validate or reject assets directly against raw schemas:
+  start with [`ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs) for positive validation and [`ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs) for structural rejection
+- Read compact references and OpenAPI before writing a client:
+  start with [`ts-envelope-family-reference.ts`](../examples/client/ts-envelope-family-reference.ts), [`ts-route-behavior-reference.ts`](../examples/client/ts-route-behavior-reference.ts), and [`ts-openapi-route-summary.ts`](../examples/client/ts-openapi-route-summary.ts)
+- Use installed-package consumers instead of repo-relative imports:
+  start with [`cjs-package-live-validator-client.cjs`](../examples/client/cjs-package-live-validator-client.cjs), [`esm-package-live-validator-client.mjs`](../examples/client/esm-package-live-validator-client.mjs), or [`ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
+- Use Python as the main cross-language bridge:
+  start with [`python-live-validator-client.py`](../examples/client/python-live-validator-client.py), then fan out into the request, response, and contract-reference helpers
+- Recompute the public integrity seal:
+  start with [`recompute-integrity-seal.mjs`](../examples/client/recompute-integrity-seal.mjs) or [`python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
+
+## Runtime lanes
+
+If you already know your runtime, the shortest entry files are:
+
+- shell: [`curl-validate-single.sh`](../examples/client/curl-validate-single.sh)
+- Node: [`node-validate-single.mjs`](../examples/client/node-validate-single.mjs)
+- source-level TypeScript/Zod: [`ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts)
+- raw-schema Ajv: [`ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
+- integrity proof: [`recompute-integrity-seal.mjs`](../examples/client/recompute-integrity-seal.mjs)
+- Python: [`python-live-validator-client.py`](../examples/client/python-live-validator-client.py)
+- installed-package CommonJS/ESM: [`cjs-package-live-validator-client.cjs`](../examples/client/cjs-package-live-validator-client.cjs)
+- installed-package TypeScript: [`ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
+
 ## cURL recipes
 
 Ready-to-read examples live under [`../examples/client/`](../examples/client/):

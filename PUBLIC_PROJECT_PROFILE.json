@@ -1,6 +1,6 @@
 {
   "profile_version": "0.1.0",
-  "reviewed_at": "2026-03-28",
+  "reviewed_at": "2026-03-29",
   "repository_identity": {
     "owner": "num1hub",
     "name": "capsule-specs",
@@ -51,6 +51,7 @@
       "machine-readable repository-identity summaries",
       "public-safe TypeScript and Zod projections",
       "source-level consumer recipe examples",
+      "machine-readable client-recipe navigation index with runtime lanes, recommended starts, and task entrypoints",
       "public-safe TypeScript and Zod validator API projections",
       "source-level validator API consumer recipe examples",
       "schema-family and field-level reference docs",
@@ -101,13 +102,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 379,
+    "total_files": 381,
     "markdown_files": 101,
     "schema_files": 36,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 15,
-    "client_recipe_files": 89,
+    "client_recipe_files": 90,
     "workflow_files": 1,
     "issue_templates": 4
   },
@@ -206,7 +207,8 @@
     "invalid_api_envelope_examples": "docs/invalid-api-envelope-examples.md",
     "schema_bundles": "docs/schema-bundles.md",
     "archive_validation_recipes": "docs/archive-validation-recipes.md",
-    "invalid_archive_bundle_examples": "docs/invalid-archive-bundle-examples.md"
+    "invalid_archive_bundle_examples": "docs/invalid-archive-bundle-examples.md",
+    "client_recipe_index": "examples/client/recipe-index.json"
   },
   "program_readiness": {
     "maintainer_owned": true,

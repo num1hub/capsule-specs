@@ -3,119 +3,22 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const {
+  shellFiles,
+  nodeFiles,
+  typeRecipeFiles,
+  schemaRecipeFiles,
+  integrityRecipeFiles,
+  pythonRecipeFiles,
+  packageRecipeFiles,
+  packageTypeRecipeFiles,
+  supportedTaskRuntimes,
+  allIndexedRecipeFiles,
+  recipeIndex
+} = require('./lib/client-recipes');
 
 const repoRoot = path.resolve(__dirname, '..');
 const clientDir = path.join(repoRoot, 'examples', 'client');
-
-const shellFiles = [
-  'curl-validate-single.sh',
-  'curl-validate-batch.sh',
-  'curl-validate-fix.sh',
-  'curl-get-gates.sh',
-  'curl-get-stats.sh'
-];
-
-const nodeFiles = [
-  'node-validate-single.mjs',
-  'node-validate-batch.mjs',
-  'node-validate-fix.mjs',
-  'node-get-gates.mjs',
-  'node-get-stats.mjs'
-];
-
-const typeRecipeFiles = [
-  'ts-capsule-summary.ts',
-  'zod-parse-capsule.ts',
-  'ts-openapi-route-summary.ts',
-  'openapi-generate-validator-types.mjs',
-  'ts-envelope-family-reference.ts',
-  'ts-route-behavior-reference.ts',
-  'ts-build-validate-request.ts',
-  'ts-build-validate-batch-request.ts',
-  'ts-build-validate-fix-request.ts',
-  'ts-live-validator-client.ts',
-  'ts-parse-validate-requests.ts',
-  'zod-parse-validate-request.ts',
-  'zod-parse-validate-batch-request.ts',
-  'zod-parse-validate-fix-request.ts',
-  'ts-parse-validate-responses.ts',
-  'ts-parse-error-responses.ts',
-  'ts-parse-support-responses.ts',
-  'zod-parse-error-responses.ts',
-  'zod-parse-validate-response.ts',
-  'zod-parse-validate-fail-response.ts',
-  'zod-parse-validate-batch-response.ts',
-  'zod-parse-validate-fix-response.ts',
-  'zod-parse-support-responses.ts'
-];
-
-const schemaRecipeFiles = [
-  'ajv-validate-capsule.mjs',
-  'ajv-validate-validator-envelope.mjs',
-  'ajv-validate-archive-bundle.mjs',
-  'ajv-validate-schema-bundles.mjs',
-  'ajv-reject-invalid-archive-bundles.mjs',
-  'ajv-reject-invalid-capsules.mjs',
-  'ajv-reject-invalid-validator-envelopes.mjs',
-  'esm-package-ajv-validate-contracts.mjs',
-  'esm-package-ajv-validate-archive-bundle.mjs',
-  'esm-package-ajv-validate-schema-bundles.mjs',
-  'esm-package-ajv-reject-invalid-archive-bundles.mjs',
-  'esm-package-ajv-reject-invalid-capsules.mjs',
-  'esm-package-ajv-reject-invalid-validator-envelopes.mjs'
-];
-
-const integrityRecipeFiles = ['recompute-integrity-seal.mjs', 'esm-package-recompute-integrity-seal.mjs'];
-
-const pythonRecipeFiles = [
-  'python-contract-reference.py',
-  'python-openapi-reference.py',
-  'python-live-validator-client.py',
-  'python-recompute-integrity-seal.py',
-  'python-validate-single.py',
-  'python-validate-batch.py',
-  'python-validate-fix.py',
-  'python-get-gates.py',
-  'python-get-stats.py',
-  'python-parse-validate-responses.py',
-  'python-parse-error-responses.py',
-  'python-parse-support-responses.py'
-];
-
-const packageRecipeFiles = [
-  'cjs-package-capsule-summary.cjs',
-  'cjs-package-contract-reference.cjs',
-  'cjs-package-openapi-codegen.cjs',
-  'cjs-package-openapi-reference.cjs',
-  'cjs-package-error-responses.cjs',
-  'cjs-package-live-validator-client.cjs',
-  'cjs-package-validate-request.cjs',
-  'cjs-package-support-responses.cjs',
-  'cjs-package-validate-response.cjs',
-  'esm-package-capsule-summary.mjs',
-  'esm-package-contract-reference.mjs',
-  'esm-package-openapi-codegen.mjs',
-  'esm-package-openapi-reference.mjs',
-  'esm-package-error-responses.mjs',
-  'esm-package-live-validator-client.mjs',
-  'esm-package-validate-request.mjs',
-  'esm-package-support-responses.mjs',
-  'esm-package-validate-response.mjs'
-];
-
-const packageTypeRecipeFiles = [
-  'ts-package-error-responses.ts',
-  'ts-package-contract-reference.ts',
-  'ts-package-openapi-codegen.ts',
-  'ts-package-openapi-reference.ts',
-  'ts-package-live-validator-client.ts',
-  'ts-package-support-responses.ts',
-  'ts-package-validate-responses.ts',
-  'ts-package-parse-validate-requests.ts',
-  'ts-package-validate-request.ts',
-  'ts-package-validate-batch-request.ts',
-  'ts-package-validate-fix-request.ts'
-];
 
 function assert(condition, message) {
   if (!condition) {
@@ -123,6 +26,95 @@ function assert(condition, message) {
     process.exitCode = 1;
   }
 }
+
+const committedRecipeIndex = JSON.parse(fs.readFileSync(path.join(clientDir, 'recipe-index.json'), 'utf8'));
+const actualClientArtifacts = fs
+  .readdirSync(clientDir)
+  .filter((name) => !name.endsWith('.md') && name !== 'recipe-index.json')
+  .sort();
+const clientReadme = fs.readFileSync(path.join(clientDir, 'README.md'), 'utf8');
+const clientRecipesDoc = fs.readFileSync(path.join(repoRoot, 'docs', 'client-recipes.md'), 'utf8');
+const integrationGuide = fs.readFileSync(path.join(repoRoot, 'docs', 'integration-guide.md'), 'utf8');
+const supportedRuntimeNames = new Set(supportedTaskRuntimes);
+
+assert(
+  JSON.stringify(committedRecipeIndex) === JSON.stringify(recipeIndex),
+  'examples/client/recipe-index.json must stay aligned with scripts/lib/client-recipes.js'
+);
+assert(
+  JSON.stringify(actualClientArtifacts) === JSON.stringify(allIndexedRecipeFiles),
+  'scripts/lib/client-recipes.js must cover every non-Markdown client artifact'
+);
+assert(
+  committedRecipeIndex.version === recipeIndex.version,
+  'examples/client/recipe-index.json version must match the shared client recipe registry'
+);
+assert(
+  committedRecipeIndex.directory === 'examples/client',
+  'examples/client/recipe-index.json must declare the examples/client directory'
+);
+assert(clientReadme.includes('recipe-index.json'), 'examples/client/README.md must mention recipe-index.json');
+assert(clientRecipesDoc.includes('recipe-index.json'), 'docs/client-recipes.md must mention recipe-index.json');
+assert(integrationGuide.includes('recipe-index.json'), 'docs/integration-guide.md must mention recipe-index.json');
+
+const indexedRecipeNames = new Set(allIndexedRecipeFiles);
+const groupIds = new Set();
+const groupedRecipeOwnership = new Map();
+for (const group of committedRecipeIndex.groups || []) {
+  assert(typeof group.id === 'string' && group.id.length > 0, 'every recipe-index group must have an id');
+  assert(!groupIds.has(group.id), `duplicate recipe-index group id ${group.id}`);
+  groupIds.add(group.id);
+  assert(typeof group.title === 'string' && group.title.length > 0, `recipe-index group ${group.id} must have a title`);
+  assert(typeof group.description === 'string' && group.description.length > 0, `recipe-index group ${group.id} must have a description`);
+  assert(Array.isArray(group.audiences) && group.audiences.length > 0, `recipe-index group ${group.id} must list audiences`);
+  assert(Array.isArray(group.files) && group.files.length > 0, `recipe-index group ${group.id} must list files`);
+  assert(Array.isArray(group.primary_docs) && group.primary_docs.length > 0, `recipe-index group ${group.id} must list primary docs`);
+  assert(typeof group.recommended_start === 'string' && group.recommended_start.length > 0, `recipe-index group ${group.id} must define recommended_start`);
+  for (const docPath of group.primary_docs) {
+    assert(fs.existsSync(path.join(repoRoot, docPath)), `recipe-index group ${group.id} references missing doc ${docPath}`);
+  }
+  for (const fileName of group.files) {
+    assert(indexedRecipeNames.has(fileName), `recipe-index group ${group.id} references non-indexed file ${fileName}`);
+    assert(!groupedRecipeOwnership.has(fileName), `recipe-index file ${fileName} must belong to exactly one group`);
+    groupedRecipeOwnership.set(fileName, group.id);
+  }
+  assert(group.files.includes(group.recommended_start), `recipe-index group ${group.id} recommended_start must be owned by that group`);
+}
+
+const taskIds = new Set();
+const tasksById = new Map();
+for (const entry of committedRecipeIndex.task_entrypoints || []) {
+  assert(typeof entry.id === 'string' && entry.id.length > 0, 'every recipe-index task entrypoint must have an id');
+  assert(!taskIds.has(entry.id), `duplicate recipe-index task id ${entry.id}`);
+  taskIds.add(entry.id);
+  tasksById.set(entry.id, entry);
+  assert(typeof entry.intent === 'string' && entry.intent.length > 0, `recipe-index task ${entry.id} must describe its intent`);
+  assert(typeof entry.primary_group === 'string' && groupIds.has(entry.primary_group), `recipe-index task ${entry.id} must reference a known primary_group`);
+  assert(indexedRecipeNames.has(entry.recommended), `recipe-index task ${entry.id} recommends unknown file ${entry.recommended}`);
+  assert(groupedRecipeOwnership.get(entry.recommended) === entry.primary_group, `recipe-index task ${entry.id} recommended file must be owned by its primary_group`);
+  assert(Array.isArray(entry.alternatives), `recipe-index task ${entry.id} must list alternatives`);
+  for (const fileName of entry.alternatives) {
+    assert(indexedRecipeNames.has(fileName), `recipe-index task ${entry.id} alternative is not indexed: ${fileName}`);
+  }
+  assert(Array.isArray(entry.docs) && entry.docs.length > 0, `recipe-index task ${entry.id} must list supporting docs`);
+  for (const docPath of entry.docs) {
+    assert(fs.existsSync(path.join(repoRoot, docPath)), `recipe-index task ${entry.id} references missing doc ${docPath}`);
+  }
+  assert(Array.isArray(entry.runtimes) && entry.runtimes.length > 0, `recipe-index task ${entry.id} must list runtimes`);
+  for (const runtimeName of entry.runtimes) {
+    assert(supportedRuntimeNames.has(runtimeName), `recipe-index task ${entry.id} references unsupported runtime ${runtimeName}`);
+  }
+}
+
+for (const group of committedRecipeIndex.groups || []) {
+  const groupTaskCount = [...taskIds].filter((taskId) => tasksById.get(taskId)?.primary_group === group.id).length;
+  assert(groupTaskCount >= 1, `recipe-index group ${group.id} must own at least one task entrypoint`);
+}
+
+assert(
+  JSON.stringify([...groupedRecipeOwnership.keys()].sort()) === JSON.stringify(allIndexedRecipeFiles),
+  'recipe-index groups must cover every indexed client recipe file exactly once'
+);
 
 for (const fileName of [...shellFiles, ...nodeFiles, ...typeRecipeFiles, ...schemaRecipeFiles, ...integrityRecipeFiles, ...pythonRecipeFiles, ...packageRecipeFiles, ...packageTypeRecipeFiles]) {
   const filePath = path.join(clientDir, fileName);
@@ -754,5 +746,5 @@ console.log(
     pythonRecipeFiles.length +
     packageRecipeFiles.length +
     packageTypeRecipeFiles.length
-  } client recipe files`
+  } client recipe files, ${committedRecipeIndex.groups.length} recipe groups, and ${committedRecipeIndex.task_entrypoints.length} task entrypoints`
 );

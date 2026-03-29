@@ -1,0 +1,541 @@
+{
+  "version": "0.1.0",
+  "directory": "examples/client",
+  "purpose": "Machine-readable navigator for public client recipes grouped by task, runtime, and consumption path.",
+  "groups": [
+    {
+      "id": "shell-live-validator",
+      "title": "cURL live validator routes",
+      "description": "Minimal shell entrypoints for the published validator HTTP routes with bearer auth.",
+      "audiences": [
+        "integrators",
+        "contributors"
+      ],
+      "primary_docs": [
+        "docs/client-recipes.md",
+        "docs/route-reference.md"
+      ],
+      "recommended_start": "curl-validate-single.sh",
+      "files": [
+        "curl-validate-single.sh",
+        "curl-validate-batch.sh",
+        "curl-validate-fix.sh",
+        "curl-get-gates.sh",
+        "curl-get-stats.sh"
+      ]
+    },
+    {
+      "id": "node-live-validator",
+      "title": "Node live validator routes",
+      "description": "Small fetch-based runtime clients for the published validator routes.",
+      "audiences": [
+        "integrators",
+        "contributors"
+      ],
+      "primary_docs": [
+        "docs/client-recipes.md",
+        "docs/integration-guide.md"
+      ],
+      "recommended_start": "node-validate-single.mjs",
+      "files": [
+        "node-validate-single.mjs",
+        "node-validate-batch.mjs",
+        "node-validate-fix.mjs",
+        "node-get-gates.mjs",
+        "node-get-stats.mjs"
+      ]
+    },
+    {
+      "id": "source-level-types",
+      "title": "Source-level TypeScript and Zod",
+      "description": "Repo-relative typed readers, request builders, route summaries, and response parsers.",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "primary_docs": [
+        "docs/type-projections.md",
+        "docs/client-recipes.md"
+      ],
+      "recommended_start": "ts-parse-validate-requests.ts",
+      "files": [
+        "ts-capsule-summary.ts",
+        "zod-parse-capsule.ts",
+        "ts-openapi-route-summary.ts",
+        "openapi-generate-validator-types.mjs",
+        "ts-envelope-family-reference.ts",
+        "ts-route-behavior-reference.ts",
+        "ts-build-validate-request.ts",
+        "ts-build-validate-batch-request.ts",
+        "ts-build-validate-fix-request.ts",
+        "ts-live-validator-client.ts",
+        "ts-parse-validate-requests.ts",
+        "zod-parse-validate-request.ts",
+        "zod-parse-validate-batch-request.ts",
+        "zod-parse-validate-fix-request.ts",
+        "ts-parse-validate-responses.ts",
+        "ts-parse-error-responses.ts",
+        "ts-parse-support-responses.ts",
+        "zod-parse-error-responses.ts",
+        "zod-parse-validate-response.ts",
+        "zod-parse-validate-fail-response.ts",
+        "zod-parse-validate-batch-response.ts",
+        "zod-parse-validate-fix-response.ts",
+        "zod-parse-support-responses.ts"
+      ]
+    },
+    {
+      "id": "raw-schema-ajv",
+      "title": "Raw schema and bundle Ajv recipes",
+      "description": "Repo-local and package-level Ajv consumers for positive validation and structural rejection.",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "primary_docs": [
+        "docs/schema-validation-recipes.md",
+        "docs/archive-validation-recipes.md"
+      ],
+      "recommended_start": "ajv-validate-capsule.mjs",
+      "files": [
+        "ajv-validate-capsule.mjs",
+        "ajv-validate-validator-envelope.mjs",
+        "ajv-validate-archive-bundle.mjs",
+        "ajv-validate-schema-bundles.mjs",
+        "ajv-reject-invalid-archive-bundles.mjs",
+        "ajv-reject-invalid-capsules.mjs",
+        "ajv-reject-invalid-validator-envelopes.mjs",
+        "esm-package-ajv-validate-contracts.mjs",
+        "esm-package-ajv-validate-archive-bundle.mjs",
+        "esm-package-ajv-validate-schema-bundles.mjs",
+        "esm-package-ajv-reject-invalid-archive-bundles.mjs",
+        "esm-package-ajv-reject-invalid-capsules.mjs",
+        "esm-package-ajv-reject-invalid-validator-envelopes.mjs"
+      ]
+    },
+    {
+      "id": "integrity-recipes",
+      "title": "Integrity seal recipes",
+      "description": "Public G16 recomputation and teaching-example repair flows.",
+      "audiences": [
+        "integrators",
+        "reviewers"
+      ],
+      "primary_docs": [
+        "docs/integrity-recipes.md"
+      ],
+      "recommended_start": "recompute-integrity-seal.mjs",
+      "files": [
+        "recompute-integrity-seal.mjs",
+        "esm-package-recompute-integrity-seal.mjs"
+      ]
+    },
+    {
+      "id": "python-consumers",
+      "title": "Python consumers",
+      "description": "Cross-language readers, parsers, and live validator flows from repo and packed artifacts.",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "primary_docs": [
+        "docs/python-consumption.md",
+        "docs/client-recipes.md"
+      ],
+      "recommended_start": "python-live-validator-client.py",
+      "files": [
+        "python-contract-reference.py",
+        "python-openapi-reference.py",
+        "python-live-validator-client.py",
+        "python-recompute-integrity-seal.py",
+        "python-validate-single.py",
+        "python-validate-batch.py",
+        "python-validate-fix.py",
+        "python-get-gates.py",
+        "python-get-stats.py",
+        "python-parse-validate-responses.py",
+        "python-parse-error-responses.py",
+        "python-parse-support-responses.py"
+      ]
+    },
+    {
+      "id": "package-runtime",
+      "title": "CommonJS and ESM package consumers",
+      "description": "Installed-package runtime readers, live clients, Ajv flows, and OpenAPI consumers.",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "primary_docs": [
+        "docs/npm-consumption.md",
+        "docs/openapi-codegen-recipes.md"
+      ],
+      "recommended_start": "cjs-package-live-validator-client.cjs",
+      "files": [
+        "cjs-package-capsule-summary.cjs",
+        "cjs-package-contract-reference.cjs",
+        "cjs-package-openapi-codegen.cjs",
+        "cjs-package-openapi-reference.cjs",
+        "cjs-package-error-responses.cjs",
+        "cjs-package-live-validator-client.cjs",
+        "cjs-package-validate-request.cjs",
+        "cjs-package-support-responses.cjs",
+        "cjs-package-validate-response.cjs",
+        "esm-package-capsule-summary.mjs",
+        "esm-package-contract-reference.mjs",
+        "esm-package-openapi-codegen.mjs",
+        "esm-package-openapi-reference.mjs",
+        "esm-package-error-responses.mjs",
+        "esm-package-live-validator-client.mjs",
+        "esm-package-validate-request.mjs",
+        "esm-package-support-responses.mjs",
+        "esm-package-validate-response.mjs"
+      ]
+    },
+    {
+      "id": "package-typescript",
+      "title": "TypeScript package consumers",
+      "description": "Installed-package typed request, response, route, and OpenAPI codegen entrypoints.",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "primary_docs": [
+        "docs/npm-consumption.md",
+        "docs/type-projections.md"
+      ],
+      "recommended_start": "ts-package-live-validator-client.ts",
+      "files": [
+        "ts-package-error-responses.ts",
+        "ts-package-contract-reference.ts",
+        "ts-package-openapi-codegen.ts",
+        "ts-package-openapi-reference.ts",
+        "ts-package-live-validator-client.ts",
+        "ts-package-support-responses.ts",
+        "ts-package-validate-responses.ts",
+        "ts-package-parse-validate-requests.ts",
+        "ts-package-validate-request.ts",
+        "ts-package-validate-batch-request.ts",
+        "ts-package-validate-fix-request.ts"
+      ]
+    }
+  ],
+  "task_entrypoints": [
+    {
+      "id": "live-validate-single",
+      "intent": "Send one capsule to POST /api/validate",
+      "primary_group": "shell-live-validator",
+      "recommended": "curl-validate-single.sh",
+      "alternatives": [
+        "node-validate-single.mjs",
+        "python-validate-single.py",
+        "ts-live-validator-client.ts"
+      ],
+      "docs": [
+        "docs/client-recipes.md",
+        "docs/route-reference.md",
+        "docs/integration-guide.md"
+      ],
+      "runtimes": [
+        "shell",
+        "node",
+        "python",
+        "typescript"
+      ]
+    },
+    {
+      "id": "live-validate-batch",
+      "intent": "Send a batch payload to POST /api/validate/batch",
+      "primary_group": "shell-live-validator",
+      "recommended": "curl-validate-batch.sh",
+      "alternatives": [
+        "node-validate-batch.mjs",
+        "python-validate-batch.py",
+        "ts-live-validator-client.ts"
+      ],
+      "docs": [
+        "docs/client-recipes.md",
+        "docs/route-reference.md",
+        "docs/integration-guide.md"
+      ],
+      "runtimes": [
+        "shell",
+        "node",
+        "python",
+        "typescript"
+      ]
+    },
+    {
+      "id": "live-validate-fix",
+      "intent": "Send a fix payload to POST /api/validate/fix",
+      "primary_group": "shell-live-validator",
+      "recommended": "curl-validate-fix.sh",
+      "alternatives": [
+        "node-validate-fix.mjs",
+        "python-validate-fix.py",
+        "ts-live-validator-client.ts"
+      ],
+      "docs": [
+        "docs/client-recipes.md",
+        "docs/route-reference.md",
+        "docs/integration-guide.md"
+      ],
+      "runtimes": [
+        "shell",
+        "node",
+        "python",
+        "typescript"
+      ]
+    },
+    {
+      "id": "live-support-routes",
+      "intent": "Call the published gates and stats support routes",
+      "primary_group": "shell-live-validator",
+      "recommended": "curl-get-gates.sh",
+      "alternatives": [
+        "node-get-gates.mjs",
+        "python-get-gates.py",
+        "curl-get-stats.sh",
+        "node-get-stats.mjs",
+        "python-get-stats.py"
+      ],
+      "docs": [
+        "docs/client-recipes.md",
+        "docs/route-reference.md",
+        "docs/integration-guide.md"
+      ],
+      "runtimes": [
+        "shell",
+        "node",
+        "python"
+      ]
+    },
+    {
+      "id": "node-live-clients",
+      "intent": "Use small Node fetch clients for the published validator routes without package installation",
+      "primary_group": "node-live-validator",
+      "recommended": "node-validate-single.mjs",
+      "alternatives": [
+        "node-validate-batch.mjs",
+        "node-validate-fix.mjs",
+        "node-get-gates.mjs",
+        "node-get-stats.mjs"
+      ],
+      "docs": [
+        "docs/client-recipes.md",
+        "docs/integration-guide.md"
+      ],
+      "runtimes": [
+        "node"
+      ]
+    },
+    {
+      "id": "source-request-reading",
+      "intent": "Read or type published validator request samples from source-level projections",
+      "primary_group": "source-level-types",
+      "recommended": "ts-parse-validate-requests.ts",
+      "alternatives": [
+        "zod-parse-validate-request.ts",
+        "zod-parse-validate-batch-request.ts",
+        "zod-parse-validate-fix-request.ts"
+      ],
+      "docs": [
+        "docs/client-recipes.md",
+        "docs/type-projections.md",
+        "docs/api-envelopes.md"
+      ],
+      "runtimes": [
+        "typescript",
+        "zod"
+      ]
+    },
+    {
+      "id": "source-response-reading",
+      "intent": "Read published validate, error, and support responses from source-level projections",
+      "primary_group": "source-level-types",
+      "recommended": "ts-parse-validate-responses.ts",
+      "alternatives": [
+        "ts-parse-error-responses.ts",
+        "ts-parse-support-responses.ts",
+        "zod-parse-validate-response.ts",
+        "zod-parse-error-responses.ts"
+      ],
+      "docs": [
+        "docs/client-recipes.md",
+        "docs/type-projections.md",
+        "docs/api-envelopes.md"
+      ],
+      "runtimes": [
+        "typescript",
+        "zod"
+      ]
+    },
+    {
+      "id": "raw-schema-validation",
+      "intent": "Validate published assets directly against JSON Schema with Ajv",
+      "primary_group": "raw-schema-ajv",
+      "recommended": "ajv-validate-capsule.mjs",
+      "alternatives": [
+        "ajv-validate-validator-envelope.mjs",
+        "ajv-validate-archive-bundle.mjs",
+        "ajv-validate-schema-bundles.mjs"
+      ],
+      "docs": [
+        "docs/client-recipes.md",
+        "docs/schema-validation-recipes.md",
+        "docs/archive-validation-recipes.md"
+      ],
+      "runtimes": [
+        "ajv",
+        "esm"
+      ]
+    },
+    {
+      "id": "raw-schema-rejection",
+      "intent": "Confirm intentionally invalid published fixtures are rejected for structural reasons",
+      "primary_group": "raw-schema-ajv",
+      "recommended": "ajv-reject-invalid-capsules.mjs",
+      "alternatives": [
+        "ajv-reject-invalid-validator-envelopes.mjs",
+        "ajv-reject-invalid-archive-bundles.mjs"
+      ],
+      "docs": [
+        "docs/client-recipes.md",
+        "docs/invalid-capsule-examples.md",
+        "docs/invalid-api-envelope-examples.md",
+        "docs/invalid-archive-bundle-examples.md"
+      ],
+      "runtimes": [
+        "ajv",
+        "esm"
+      ]
+    },
+    {
+      "id": "compact-reference-discovery",
+      "intent": "Read compact contract constants, route behavior, and envelope families before deeper integration",
+      "primary_group": "source-level-types",
+      "recommended": "ts-envelope-family-reference.ts",
+      "alternatives": [
+        "ts-route-behavior-reference.ts",
+        "python-contract-reference.py",
+        "cjs-package-contract-reference.cjs",
+        "esm-package-contract-reference.mjs",
+        "ts-package-contract-reference.ts"
+      ],
+      "docs": [
+        "docs/reference-pack.md",
+        "docs/client-recipes.md"
+      ],
+      "runtimes": [
+        "typescript",
+        "python",
+        "cjs",
+        "esm"
+      ]
+    },
+    {
+      "id": "openapi-direct-consumption",
+      "intent": "Read the strongest published HTTP contract or generate TypeScript declarations from it",
+      "primary_group": "source-level-types",
+      "recommended": "ts-openapi-route-summary.ts",
+      "alternatives": [
+        "python-openapi-reference.py",
+        "esm-package-openapi-reference.mjs",
+        "openapi-generate-validator-types.mjs",
+        "ts-package-openapi-codegen.ts"
+      ],
+      "docs": [
+        "docs/openapi.md",
+        "docs/openapi-codegen-recipes.md",
+        "docs/client-recipes.md"
+      ],
+      "runtimes": [
+        "typescript",
+        "python",
+        "esm",
+        "node"
+      ]
+    },
+    {
+      "id": "package-live-clients",
+      "intent": "Use installed-package live validator clients instead of repo-relative imports",
+      "primary_group": "package-runtime",
+      "recommended": "cjs-package-live-validator-client.cjs",
+      "alternatives": [
+        "esm-package-live-validator-client.mjs",
+        "ts-package-live-validator-client.ts"
+      ],
+      "docs": [
+        "docs/npm-consumption.md",
+        "docs/client-recipes.md",
+        "docs/integration-guide.md"
+      ],
+      "runtimes": [
+        "cjs",
+        "esm",
+        "typescript"
+      ]
+    },
+    {
+      "id": "package-typescript-flows",
+      "intent": "Use installed-package TypeScript request, response, and OpenAPI entrypoints from one typed lane",
+      "primary_group": "package-typescript",
+      "recommended": "ts-package-live-validator-client.ts",
+      "alternatives": [
+        "ts-package-validate-request.ts",
+        "ts-package-validate-batch-request.ts",
+        "ts-package-validate-fix-request.ts",
+        "ts-package-validate-responses.ts",
+        "ts-package-openapi-codegen.ts"
+      ],
+      "docs": [
+        "docs/npm-consumption.md",
+        "docs/type-projections.md",
+        "docs/client-recipes.md"
+      ],
+      "runtimes": [
+        "typescript"
+      ]
+    },
+    {
+      "id": "python-live-and-parsing",
+      "intent": "Use Python for compact references, live routes, and response-side parsing without Node imports",
+      "primary_group": "python-consumers",
+      "recommended": "python-live-validator-client.py",
+      "alternatives": [
+        "python-contract-reference.py",
+        "python-openapi-reference.py",
+        "python-parse-validate-responses.py",
+        "python-parse-error-responses.py",
+        "python-parse-support-responses.py"
+      ],
+      "docs": [
+        "docs/python-consumption.md",
+        "docs/client-recipes.md",
+        "docs/integration-guide.md"
+      ],
+      "runtimes": [
+        "python"
+      ]
+    },
+    {
+      "id": "integrity-proof",
+      "intent": "Recompute published integrity hashes and inspect the public G16 seal boundary",
+      "primary_group": "integrity-recipes",
+      "recommended": "recompute-integrity-seal.mjs",
+      "alternatives": [
+        "python-recompute-integrity-seal.py",
+        "esm-package-recompute-integrity-seal.mjs"
+      ],
+      "docs": [
+        "docs/integrity-recipes.md",
+        "docs/client-recipes.md"
+      ],
+      "runtimes": [
+        "node",
+        "python",
+        "esm"
+      ]
+    }
+  ]
+}

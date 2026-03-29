@@ -140,6 +140,7 @@ const expectedPublicIndexLinks = [
   '../references/contract-constants.json',
   '../references/validation-gates.json',
   '../examples/client/ajv-validate-capsule.mjs',
+  '../examples/client/recipe-index.json',
   '../examples/client/ajv-validate-validator-envelope.mjs',
   '../examples/client/ajv-validate-archive-bundle.mjs',
   '../examples/client/ajv-validate-schema-bundles.mjs',
@@ -235,6 +236,7 @@ assert(readme.includes('docs/ecosystem-value.md'), 'README.md must mention docs/
 assert(readme.includes('docs/evidence-gaps.md'), 'README.md must mention docs/evidence-gaps.md');
 assert(readme.includes('docs/community-health.md'), 'README.md must mention docs/community-health.md');
 assert(readme.includes('docs/reviewer-guide.md'), 'README.md must mention docs/reviewer-guide.md');
+assert(readme.includes('examples/client/recipe-index.json'), 'README.md must mention examples/client/recipe-index.json');
 assert(readme.includes('docs/reference-pack.md'), 'README.md must mention docs/reference-pack.md');
 assert(readme.includes('docs/schema-bundles.md'), 'README.md must mention docs/schema-bundles.md');
 assert(readme.includes('docs/schema-validation-recipes.md'), 'README.md must mention docs/schema-validation-recipes.md');

@@ -1,16 +1,16 @@
 {
   "version": "0.1.0",
   "catalog_version": "0.1.0",
-  "reviewed_at": "2026-03-28",
+  "reviewed_at": "2026-03-29",
   "license": "Apache-2.0",
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 379,
-    "manifest_entries": 379
+    "files": 381,
+    "manifest_entries": 381
   },
   "surface_summary": {
-    "catalog_entries": 330,
+    "catalog_entries": 331,
     "example_capsules": 5,
     "api_example_files": 15,
     "markdown_files": 101

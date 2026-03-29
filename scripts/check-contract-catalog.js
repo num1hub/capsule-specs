@@ -214,6 +214,7 @@ const requiredIds = [
   'capsules.raw-check',
   'examples.client.ts-capsule-summary',
   'examples.client.ts-openapi-route-summary',
+  'examples.client.recipe-index',
   'examples.client.zod-parse-capsule',
   'examples.client.ts-build-validate-request',
   'examples.client.ts-build-validate-batch-request',

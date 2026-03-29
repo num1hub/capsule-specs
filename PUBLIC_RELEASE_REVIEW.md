@@ -49,6 +49,7 @@
 - package-consumer support-response recipes for `gates` and `stats`, plus fresh-install proof that the installed validator projection layer covers support payload parsing as well as `validate` request/response flows
 - compact contract-reference JSON artifacts, their directory guide and human guide, CommonJS/ESM/TypeScript/Python package-consumer recipes, and a repo-local verifier
 - compact validator-envelope-family reference JSON, a shared TypeScript envelope-family projection, their consumer recipes, and repo-local verifier
+- machine-readable client recipe index for runtime-lane starts plus task-oriented discovery across the published consumer snippets, with verifier-backed coverage for group ownership, task wiring, and non-Markdown artifact indexing
 - dedicated OpenAPI/compact-reference coherence verification so the validator route and envelope-family summaries stay subordinate to the stronger published HTTP contract
 - single-file bundled schema artifacts, their human guide, package-consumer recipes, and repo-local verifier
 - Ajv-based raw-schema consumer recipes, their human guide, and repo-local verifier
@@ -58,7 +59,7 @@
 - cross-language Python consumption docs, Python recipes for compact references, a reusable full-route live-validator bridge, validator-envelope request flows, dedicated validate/error/support response parsing including the route-specific stats-computation failure sample, and public `G16` seal proofs, plus a dedicated verifier for repo-local and extracted packed-artifact execution
 - synthetic example capsules, a linked graph example, and a known-ID catalog
 - API request, response, bounded owner-role failure, bounded stats-computation failure, shared error, and stats sample payloads for the validator HTTP surface
-- client recipes and trust-model docs for external consumers, including live support-route coverage for `gates` and `stats`
+- client recipes, a machine-readable recipe navigator, and trust-model docs for external consumers, including live support-route coverage for `gates` and `stats`
 - expanded curated raw public law-adjacent capsules for confidence-vector semantics, subtype meaning, and version lineage
 - live validator OpenAPI reference
 - repo-local plus CommonJS/ESM/TypeScript installed-package OpenAPI code-generation recipes plus a dedicated verifier for generated TypeScript declarations from the strongest published HTTP contract
@@ -86,7 +87,7 @@ Validated with the live validator from `/home/n1/n1hub.com` on 2026-03-26:
 - `examples/example-validator-valid.capsule.json`: pass
 - `examples/example-validator-invalid-g16.capsule.json`: expected fail on `G16`
 
-Repository-local audit on 2026-03-28:
+Repository-local audit on 2026-03-29:
 
 - `node scripts/audit-public-surface.js`: pass
 - `node scripts/check-example-contracts.js`: pass
@@ -142,7 +143,7 @@ Repository-local audit on 2026-03-28:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `378` files / `378` manifest entries
+- manifest coverage: `381` files / `381` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
