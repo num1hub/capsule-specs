@@ -2,7 +2,7 @@
 
 This directory contains minimal consumer-oriented examples for the published validator HTTP surface.
 
-If you do not know which file to open first, start with `recipe-index.json`. It is the machine-readable navigator for this directory and groups every non-Markdown artifact by runtime, consumption path, and common integration task.
+If you do not know which file to open first, start with `recipe-index.json`. It is the machine-readable navigator for this directory and groups every non-Markdown artifact by runtime, consumption path, and common integration task. If you need to validate that navigator before using it, pair it with `../../schemas/client-recipe-index.schema.json` or the Ajv recipes in this directory.
 
 Use `groups[*].recommended_start` when you already know the runtime lane you want. Use `task_entrypoints[*]` when you know the job to do but not yet the best file to open.
 
@@ -18,7 +18,7 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 - Source-level response reading: `ts-parse-validate-responses.ts`
 - Compact reference discovery: `ts-envelope-family-reference.ts`
 - Direct OpenAPI reading and codegen: `ts-openapi-route-summary.ts` and `openapi-generate-validator-types.mjs`
-- Raw-schema validation and rejection: `ajv-validate-capsule.mjs` and `ajv-reject-invalid-capsules.mjs`
+- Raw-schema validation and rejection: `ajv-validate-capsule.mjs`, `ajv-validate-client-recipe-index.mjs`, and `ajv-reject-invalid-capsules.mjs`
 - Python full-route bridge: `python-live-validator-client.py`
 - Python navigator lane: `python-client-recipe-index.py`
 - Installed-package runtime lane: `cjs-package-live-validator-client.cjs`
@@ -74,6 +74,7 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 ## Raw schema recipes
 
 - `ajv-validate-capsule.mjs`
+- `ajv-validate-client-recipe-index.mjs`
 - `ajv-validate-validator-envelope.mjs`
 - `ajv-validate-archive-bundle.mjs`
 - `ajv-validate-schema-bundles.mjs`
@@ -82,6 +83,7 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 - `ajv-reject-invalid-validator-envelopes.mjs`
 - `esm-package-ajv-validate-contracts.mjs`
 - `esm-package-ajv-validate-archive-bundle.mjs`
+- `esm-package-ajv-validate-client-recipe-index.mjs`
 - `esm-package-ajv-validate-schema-bundles.mjs`
 - `esm-package-ajv-reject-invalid-archive-bundles.mjs`
 - `esm-package-ajv-reject-invalid-capsules.mjs`
@@ -153,7 +155,7 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 - The package recipes demonstrate CommonJS, ESM, and TypeScript consumption after `npm run build:projections` or from a packed artifact installed into a fresh project.
 - The package recipes and the source-level TypeScript navigator include direct consumption of `examples/client/recipe-index.json`, so installed-package and typed repo-local consumers can recover runtime-lane starts and task entrypoints without first reading the repo checkout.
 - The package recipes also cover direct installed-package OpenAPI reading and OpenAPI type generation across CommonJS, ESM, and TypeScript consumer styles, runtime request-family parsing, TypeScript typed reading plus typed single/batch/fix request construction, installed-package CommonJS, ESM, and TypeScript live-client bridges for all published validator routes backed by shared route constants plus the bounded `stats` query path, validator pass/fail/batch/fix response families, compact JSON contract references including the validator envelope-family map and route-behavior summaries, validator support responses, shared error envelopes plus the route-specific stats-computation failure sample, and raw capsule assets in addition to projection exports.
-- The raw-schema recipes demonstrate direct Ajv validation against published schema files, the archive-bundle portability schema, single-file schema bundles, package-exported schema assets, and intentionally invalid archive, capsule, and validator-envelope fixtures.
+- The raw-schema recipes demonstrate direct Ajv validation against published schema files, the client-recipe navigator schema, the archive-bundle portability schema, single-file schema bundles, package-exported schema assets, and intentionally invalid archive, capsule, and validator-envelope fixtures.
 - The integrity recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload and how to repair the intentional `G16` teaching example without private runtime helpers.
 - The shell, Node, and Python live-route recipes together now cover all published validator routes: `validate`, `batch`, `fix`, `gates`, and `stats`, including the bounded `limit` query path on `stats`.
 - The Python recipes demonstrate non-Node consumption of the published client-recipe navigator, compact JSON references, the strongest-source OpenAPI document, the published validator envelope-family map, a reusable live-client bridge backed by the published route pack, validator-envelope request flows, validate/error/support response parsing including the route-specific stats-computation failure sample, live support-route reads, and public seal proofs from a repo checkout or extracted packed artifact.

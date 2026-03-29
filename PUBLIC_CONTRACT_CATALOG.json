@@ -5135,6 +5135,51 @@
         "npm run check:package-install",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "schema.client-recipe-index",
+      "path": "schemas/client-recipe-index.schema.json",
+      "kind": "schema",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "contributors"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ajv-validate-client-recipe-index",
+      "path": "examples/client/ajv-validate-client-recipe-index.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-ajv-validate-client-recipe-index",
+      "path": "examples/client/esm-package-ajv-validate-client-recipe-index.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

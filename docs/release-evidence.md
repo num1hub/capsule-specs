@@ -103,6 +103,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Human-readable guide to cross-language Python consumption of the client-recipe navigator, compact references, and public `G16` seal proofs from a repo checkout or extracted packed artifact.
 - [`../examples/client/recipe-index.json`](../examples/client/recipe-index.json)
   Machine-readable task and runtime navigator for the published client recipe directory, including runtime-lane starts, task-oriented entrypoints, and the installed-package navigator recipes that consume it.
+- [`../schemas/client-recipe-index.schema.json`](../schemas/client-recipe-index.schema.json)
+  JSON Schema for the published client-recipe navigator itself.
 - [`openapi-codegen-recipes.md`](openapi-codegen-recipes.md)
   Human-readable guide to repo-local plus CommonJS/ESM/TypeScript installed-package OpenAPI type generation through `openapi-typescript`.
 - [`../capsules/README.md`](../capsules/README.md)
@@ -167,6 +169,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal source-level TypeScript recipe for constructing a validator request envelope.
 - [`../examples/client/ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts)
   Minimal source-level TypeScript recipe for typing the published client-recipe navigator through the shared client-navigator projection.
+- [`../examples/client/ajv-validate-client-recipe-index.mjs`](../examples/client/ajv-validate-client-recipe-index.mjs)
+  Minimal repo-local Ajv recipe for validating the published client-recipe navigator against its bounded schema.
 - [`../examples/client/ts-build-validate-batch-request.ts`](../examples/client/ts-build-validate-batch-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator batch request envelope.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
@@ -239,6 +243,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal repo-local Ajv recipe for rejecting intentionally invalid capsule fixtures against the published capsule schema.
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
   Minimal package-consumer Ajv recipe for validating installed schema exports and packaged example payloads.
+- [`../examples/client/esm-package-ajv-validate-client-recipe-index.mjs`](../examples/client/esm-package-ajv-validate-client-recipe-index.mjs)
+  Minimal package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema.
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
   Minimal package-consumer Ajv recipe for rejecting installed invalid schema fixtures from package exports.
 - [`../examples/client/recompute-integrity-seal.mjs`](../examples/client/recompute-integrity-seal.mjs)

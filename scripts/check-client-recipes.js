@@ -302,6 +302,11 @@ const expectedSchemaRecipeImports = {
     '../../schemas/neuro-concentrate.schema.json',
     '../example-note.capsule.json'
   ],
+  'ajv-validate-client-recipe-index.mjs': [
+    'ajv/dist/2020.js',
+    '../../schemas/client-recipe-index.schema.json',
+    './recipe-index.json'
+  ],
   'ajv-validate-validator-envelope.mjs': [
     'ajv/dist/2020.js',
     '../../schemas/capsule-schema.json',
@@ -360,6 +365,11 @@ const expectedSchemaRecipeImports = {
     'ajv-formats',
     '@num1hub/capsule-specs/schemas/archive-bundle.schema.json',
     '@num1hub/capsule-specs/examples/archive/archive-bundle.sample.json'
+  ],
+  'esm-package-ajv-validate-client-recipe-index.mjs': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client/recipe-index.json'
   ],
   'esm-package-ajv-validate-schema-bundles.mjs': [
     'ajv/dist/2020.js',

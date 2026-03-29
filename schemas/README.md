@@ -18,6 +18,8 @@ Start with [`../docs/schema-family-reference.md`](../docs/schema-family-referenc
   Single-file bundle variant of the validator request and response envelope schema.
 - `archive-bundle.schema.json`
   JSON Schema for the public archive-bundle portability contract.
+- `client-recipe-index.schema.json`
+  JSON Schema for the machine-readable client-recipe navigator under `examples/client/recipe-index.json`.
 
 ## Repository and review summary schemas
 

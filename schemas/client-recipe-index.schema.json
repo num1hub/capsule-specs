@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/num1hub/capsule-specs/schemas/client-recipe-index.schema.json",
+  "title": "Client Recipe Index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "directory",
+    "purpose",
+    "groups",
+    "task_entrypoints"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "directory": {
+      "const": "examples/client"
+    },
+    "purpose": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "groups": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/group"
+      }
+    },
+    "task_entrypoints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/taskEntrypoint"
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "docPath": {
+      "type": "string",
+      "pattern": "^docs\\/.+\\.md$"
+    },
+    "recipeFileName": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+\\.(?:sh|mjs|cjs|ts|py)$"
+    },
+    "audience": {
+      "type": "string",
+      "enum": [
+        "integrators",
+        "contributors",
+        "tool-builders",
+        "reviewers",
+        "maintainers"
+      ]
+    },
+    "runtime": {
+      "type": "string",
+      "enum": [
+        "shell",
+        "node",
+        "typescript",
+        "zod",
+        "ajv",
+        "python",
+        "cjs",
+        "esm"
+      ]
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "description",
+        "audiences",
+        "primary_docs",
+        "recommended_start",
+        "files"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "description": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "audiences": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/audience"
+          }
+        },
+        "primary_docs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/docPath"
+          }
+        },
+        "recommended_start": {
+          "$ref": "#/$defs/recipeFileName"
+        },
+        "files": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/recipeFileName"
+          }
+        }
+      }
+    },
+    "taskEntrypoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "intent",
+        "primary_group",
+        "recommended",
+        "alternatives",
+        "docs",
+        "runtimes"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "intent": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "primary_group": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "recommended": {
+          "$ref": "#/$defs/recipeFileName"
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recipeFileName"
+          }
+        },
+        "docs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/docPath"
+          }
+        },
+        "runtimes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/runtime"
+          }
+        }
+      }
+    }
+  }
+}

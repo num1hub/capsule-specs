@@ -41,7 +41,7 @@ This executes all repository-local checks in the expected order.
 - `npm run check:schema-bundles`
   Verifies the committed single-file schema bundle artifacts, their human guide, and the repo-local bundled-schema Ajv recipe.
 - `npm run check:schema-recipes`
-  Verifies the Ajv-based raw-schema consumer recipes, including repo-local execution and package-consumer recipe syntax.
+  Verifies the Ajv-based raw-schema consumer recipes, including repo-local execution and package-consumer recipe syntax for capsule, validator-envelope, archive, bundled-schema, invalid-fixture, and client-recipe navigator contracts.
 - `npm run check:archive-recipes`
   Verifies the archive-bundle Ajv recipes, their human guide, and the repo-local archive-schema execution path.
 - `npm run check:invalid-archive-examples`

@@ -88,7 +88,7 @@
     {
       "id": "raw-schema-ajv",
       "title": "Raw schema and bundle Ajv recipes",
-      "description": "Repo-local and package-level Ajv consumers for positive validation and structural rejection.",
+      "description": "Repo-local and package-level Ajv consumers for positive validation and structural rejection across the published JSON contracts.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -102,12 +102,14 @@
         "ajv-validate-capsule.mjs",
         "ajv-validate-validator-envelope.mjs",
         "ajv-validate-archive-bundle.mjs",
+        "ajv-validate-client-recipe-index.mjs",
         "ajv-validate-schema-bundles.mjs",
         "ajv-reject-invalid-archive-bundles.mjs",
         "ajv-reject-invalid-capsules.mjs",
         "ajv-reject-invalid-validator-envelopes.mjs",
         "esm-package-ajv-validate-contracts.mjs",
         "esm-package-ajv-validate-archive-bundle.mjs",
+        "esm-package-ajv-validate-client-recipe-index.mjs",
         "esm-package-ajv-validate-schema-bundles.mjs",
         "esm-package-ajv-reject-invalid-archive-bundles.mjs",
         "esm-package-ajv-reject-invalid-capsules.mjs",

@@ -51,7 +51,7 @@ This repository is that home.
 - [`docs/schema-reference.md`](docs/schema-reference.md) for field-level reference
 - [`docs/type-projections.md`](docs/type-projections.md) for the public-safe TypeScript and Zod projection layer
 - [`docs/npm-consumption.md`](docs/npm-consumption.md) for the buildable package surface, local tarball install path, and subpath entrypoints
-- [`examples/client/recipe-index.json`](examples/client/recipe-index.json) for the machine-readable runtime-lane and task navigator across the published client recipes, plus [`examples/client/ts-client-recipe-index.ts`](examples/client/ts-client-recipe-index.ts) if you want the same navigator through a source-level TypeScript projection
+- [`examples/client/recipe-index.json`](examples/client/recipe-index.json) for the machine-readable runtime-lane and task navigator across the published client recipes, [`schemas/client-recipe-index.schema.json`](schemas/client-recipe-index.schema.json) if you want that navigator as a bounded JSON Schema contract, and [`examples/client/ts-client-recipe-index.ts`](examples/client/ts-client-recipe-index.ts) if you want the same navigator through a source-level TypeScript projection
 - [`docs/api-envelopes.md`](docs/api-envelopes.md) for concrete validator request and response shapes
 - [`docs/example-coverage.md`](docs/example-coverage.md) for the bounded map of what the public examples actually cover
 - [`docs/maintainer-operations.md`](docs/maintainer-operations.md) for the bounded maintainer workflow and release posture

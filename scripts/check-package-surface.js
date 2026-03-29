@@ -77,6 +77,7 @@ const zodProjection = require('@num1hub/capsule-specs/zod');
 const validatorZod = require('@num1hub/capsule-specs/zod/validator-api');
 const capsuleSchemaJson = require('@num1hub/capsule-specs/schemas/capsule-schema.json');
 const archiveBundleSchemaJson = require('@num1hub/capsule-specs/schemas/archive-bundle.schema.json');
+const clientRecipeIndexSchemaJson = require('@num1hub/capsule-specs/schemas/client-recipe-index.schema.json');
 const capsuleBundleJson = require('@num1hub/capsule-specs/schemas/capsule-schema.bundle.json');
 const neuroSchemaJson = require('@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json');
 const validatorSchemaJson = require('@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json');
@@ -172,6 +173,10 @@ assert(typeof validatorZod.gatesResponseSchema?.parse === 'function', 'validator
 assert(typeof validatorZod.statsResponseSchema?.parse === 'function', 'validator zod export must expose statsResponseSchema.parse');
 assert(capsuleSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.json', 'capsule schema export must expose the public schema JSON');
 assert(archiveBundleSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/archive-bundle.schema.json', 'archive-bundle schema export must expose the public schema JSON');
+assert(
+  clientRecipeIndexSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+  'client-recipe-index schema export must expose the public schema JSON'
+);
 assert(capsuleBundleJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/capsule-schema.bundle.json', 'capsule bundle export must expose the public bundled schema JSON');
 assert(neuroSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/neuro-concentrate.schema.json', 'neuro schema export must expose the public schema JSON');
 assert(validatorSchemaJson.$id === 'https://github.com/num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json', 'validator schema export must expose the public schema JSON');
@@ -360,6 +365,7 @@ for (const relativePath of [
   'docs/python-consumption.md',
   'schemas/capsule-schema.json',
   'schemas/archive-bundle.schema.json',
+  'schemas/client-recipe-index.schema.json',
   'schemas/capsule-schema.bundle.json',
   'schemas/neuro-concentrate.schema.json',
   'schemas/validator-api-envelopes.schema.json',
@@ -373,6 +379,7 @@ for (const relativePath of [
   'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json',
   'docs/reference-pack.md',
   'examples/client/ajv-validate-capsule.mjs',
+  'examples/client/ajv-validate-client-recipe-index.mjs',
   'examples/client/ajv-validate-validator-envelope.mjs',
   'examples/client/ajv-validate-archive-bundle.mjs',
   'examples/client/ajv-validate-schema-bundles.mjs',
@@ -390,6 +397,7 @@ for (const relativePath of [
   'examples/client/esm-package-contract-reference.mjs',
   'examples/client/esm-package-ajv-validate-contracts.mjs',
   'examples/client/esm-package-ajv-validate-archive-bundle.mjs',
+  'examples/client/esm-package-ajv-validate-client-recipe-index.mjs',
   'examples/client/esm-package-ajv-validate-schema-bundles.mjs',
   'examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs',
   'examples/client/esm-package-ajv-reject-invalid-capsules.mjs',

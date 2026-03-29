@@ -52,6 +52,7 @@
       "public-safe TypeScript and Zod projections",
       "source-level consumer recipe examples",
       "machine-readable client-recipe navigation index with runtime lanes, recommended starts, and task entrypoints",
+      "JSON Schema for the machine-readable client-recipe navigator",
       "public-safe TypeScript projection for the published client-recipe navigator ids, counts, and typed JSON shape",
       "installed-package CommonJS, ESM, and TypeScript client-recipe navigator examples",
       "public-safe TypeScript and Zod validator API projections",
@@ -64,6 +65,7 @@
       "package-level compact reference consumer recipe examples",
       "public-safe TypeScript validator route constants",
       "raw JSON Schema consumer recipes for capsule and validator-envelope validation",
+      "repo-local plus installed-package Ajv recipes for validating the client-recipe navigator contract",
       "intentionally schema-invalid capsule fixtures for structural rejection testing",
       "pack-ready projection-consumer docs",
       "fresh-project package-install verification across CommonJS, ESM, and TypeScript consumers",
@@ -104,13 +106,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 387,
+    "total_files": 390,
     "markdown_files": 101,
-    "schema_files": 36,
+    "schema_files": 37,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 15,
-    "client_recipe_files": 95,
+    "client_recipe_files": 97,
     "workflow_files": 1,
     "issue_templates": 4
   },

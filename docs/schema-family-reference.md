@@ -127,6 +127,26 @@ Choose this family when you are building:
 - contract catalogs
 - maintainer-facing dashboards for the public repo
 
+## Family 5: client recipe navigation contract
+
+Use this family when you need a bounded machine-readable map of the published consumer snippets rather than the capsule, validator, or archive payload contracts themselves.
+
+- [`../examples/client/recipe-index.json`](../examples/client/recipe-index.json)
+  Machine-readable runtime-lane and task-entrypoint navigator for the published client recipes.
+- [`../schemas/client-recipe-index.schema.json`](../schemas/client-recipe-index.schema.json)
+  JSON Schema for the published client-recipe navigator itself.
+- [`client-recipes.md`](client-recipes.md)
+  Human-readable guide to the same runtime lanes, task entrypoints, and example families.
+- [`../projections/typescript/client-recipe-index.ts`](../projections/typescript/client-recipe-index.ts)
+  Source-level TypeScript projection for the navigator ids, counts, and typed JSON shape.
+
+Choose this family when you are building:
+
+- tooling that chooses the right public recipe automatically
+- IDE or UI affordances that surface recommended starts per runtime lane
+- docs automation that needs a bounded contract for snippet discovery
+- package or repo consumers that want to validate recipe discovery before execution
+
 ## Which family is strongest for what
 
 - Use `capsule-schema.json` when the question is about capsule outer shape.
@@ -136,6 +156,7 @@ Choose this family when you are building:
 - Use `validator-api-envelopes.bundle.json` when you need the same public validator request or response object shape as a single-file schema artifact.
 - Use `validate.openapi.json` when the question is about routes, methods, or HTTP-level transport semantics.
 - Use `archive-bundle.schema.json` when the question is about portability/export bundle shape.
+- Use `client-recipe-index.schema.json` when the question is about the bounded shape of the published client-recipe navigator.
 - Use the `public-*.schema.json` family when the question is about this repository's own machine-readable review, release, provenance, or governance summaries.
 
 ## What not to do
@@ -143,4 +164,5 @@ Choose this family when you are building:
 - Do not start from prose if you already know you need a machine-readable contract.
 - Do not treat the TypeScript or Zod projections as stronger than the JSON Schema files.
 - Do not use repo-governance schemas when what you really need is capsule or validator transport shape.
+- Do not use the client-recipe navigator schema as proof of validator runtime behavior; it only describes snippet discovery and task routing.
 - Do not use the public schemas as proof of private runtime behavior that is intentionally out of scope here.

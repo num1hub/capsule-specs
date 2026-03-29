@@ -13,6 +13,7 @@ Use this path when you want:
 - validating capsule shape against [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
 - validating request and response envelopes against [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
 - validating archive portability payloads against [`../schemas/archive-bundle.schema.json`](../schemas/archive-bundle.schema.json)
+- validating the client-recipe navigator itself against [`../schemas/client-recipe-index.schema.json`](../schemas/client-recipe-index.schema.json)
 - wiring raw-schema tooling with a mainstream JSON Schema validator such as Ajv
 - consuming the same schema artifacts either from a repo checkout or from package exports
 
@@ -33,6 +34,7 @@ For those semantics, the live validator, OpenAPI surface, and validator-facing d
 Start with these copyable examples:
 
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
+- [`../examples/client/ajv-validate-client-recipe-index.mjs`](../examples/client/ajv-validate-client-recipe-index.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
 - [`../examples/client/ajv-validate-archive-bundle.mjs`](../examples/client/ajv-validate-archive-bundle.mjs)
 - [`../examples/client/ajv-validate-schema-bundles.mjs`](../examples/client/ajv-validate-schema-bundles.mjs)
@@ -43,6 +45,7 @@ Start with these copyable examples:
 They validate:
 
 - a public example capsule against the capsule and neuro-concentrate schemas
+- the published client-recipe navigator against its own JSON Schema contract
 - validator request/response payloads against the validator envelope schema bundle
 - the published archive-bundle sample against the public portability/export schema with `Ajv2020 + ajv-formats`
 - the same capsule and validator-envelope payloads against single-file schema bundles when you want fewer imports and no manual multi-file `addSchema` choreography
@@ -54,6 +57,7 @@ Run them from a repo checkout after `npm install`:
 
 ```bash
 node examples/client/ajv-validate-capsule.mjs
+node examples/client/ajv-validate-client-recipe-index.mjs
 node examples/client/ajv-validate-validator-envelope.mjs
 node examples/client/ajv-validate-archive-bundle.mjs
 node examples/client/ajv-validate-schema-bundles.mjs
@@ -70,6 +74,7 @@ If you want the same raw-schema path from an installed tarball or future package
 
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
 - [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs)
+- [`../examples/client/esm-package-ajv-validate-client-recipe-index.mjs`](../examples/client/esm-package-ajv-validate-client-recipe-index.mjs)
 - [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs`](../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
@@ -81,6 +86,7 @@ That recipe consumes:
 - `@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json`
 - `@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json`
 - `@num1hub/capsule-specs/schemas/archive-bundle.schema.json`
+- `@num1hub/capsule-specs/schemas/client-recipe-index.schema.json`
 - `@num1hub/capsule-specs/schemas/capsule-schema.bundle.json`
 - `@num1hub/capsule-specs/schemas/validator-api-envelopes.bundle.json`
 - public example capsule and API payload files from package exports

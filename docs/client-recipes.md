@@ -26,6 +26,8 @@ That file is the machine-readable map for this directory. It groups every non-Ma
 
 The `groups[*].recommended_start` field gives the shortest human-safe file to open for each runtime lane. The `task_entrypoints[*]` section then maps common intents to one recommended file, cross-runtime alternatives, and the supporting docs that explain the surrounding contract.
 
+If you need the navigator itself as a bounded machine-readable contract instead of trusting prose or ad hoc object assumptions, pair [`../examples/client/recipe-index.json`](../examples/client/recipe-index.json) with [`../schemas/client-recipe-index.schema.json`](../schemas/client-recipe-index.schema.json), [`../examples/client/ajv-validate-client-recipe-index.mjs`](../examples/client/ajv-validate-client-recipe-index.mjs), or [`../examples/client/esm-package-ajv-validate-client-recipe-index.mjs`](../examples/client/esm-package-ajv-validate-client-recipe-index.mjs).
+
 ## Fast starts
 
 If you want the quickest path instead of reading the whole directory:
@@ -43,7 +45,7 @@ If you want the quickest path instead of reading the whole directory:
 - Read published response, error, and support families from source-level projections:
   start with [`ts-parse-validate-responses.ts`](../examples/client/ts-parse-validate-responses.ts), then inspect [`ts-parse-error-responses.ts`](../examples/client/ts-parse-error-responses.ts) and [`ts-parse-support-responses.ts`](../examples/client/ts-parse-support-responses.ts)
 - Validate or reject assets directly against raw schemas:
-  start with [`ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs) for positive validation and [`ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs) for structural rejection
+  start with [`ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs) for capsule validation, [`ajv-validate-client-recipe-index.mjs`](../examples/client/ajv-validate-client-recipe-index.mjs) for navigator validation, and [`ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs) for structural rejection
 - Read compact references and OpenAPI before writing a client:
   start with [`ts-envelope-family-reference.ts`](../examples/client/ts-envelope-family-reference.ts), [`ts-route-behavior-reference.ts`](../examples/client/ts-route-behavior-reference.ts), and [`ts-openapi-route-summary.ts`](../examples/client/ts-openapi-route-summary.ts)
 - Use installed-package consumers instead of repo-relative imports:
@@ -128,6 +130,7 @@ These recipes demonstrate how to consume the published projection layer under [`
 If you want direct structural validation against the published schemas, inspect:
 
 - [`../examples/client/ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
+- [`../examples/client/ajv-validate-client-recipe-index.mjs`](../examples/client/ajv-validate-client-recipe-index.mjs)
 - [`../examples/client/ajv-validate-validator-envelope.mjs`](../examples/client/ajv-validate-validator-envelope.mjs)
 - [`../examples/client/ajv-validate-archive-bundle.mjs`](../examples/client/ajv-validate-archive-bundle.mjs)
 - [`../examples/client/ajv-validate-schema-bundles.mjs`](../examples/client/ajv-validate-schema-bundles.mjs)
@@ -141,7 +144,7 @@ If you want direct structural validation against the published schemas, inspect:
 - [`invalid-capsule-examples.md`](invalid-capsule-examples.md)
 - [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
 
-These recipes demonstrate how to validate public examples against the raw JSON Schema layer with Ajv, how to validate the archive-bundle portability sample against its published export/replay contract, how to consume the same contracts as single-file schema bundles, and how to confirm that intentionally invalid archive, capsule, and validator-envelope fixtures are rejected for the documented structural reasons, without relying on the projection layer or live validator API calls.
+These recipes demonstrate how to validate public examples against the raw JSON Schema layer with Ajv, how to validate the client-recipe navigator against its bounded schema contract, how to validate the archive-bundle portability sample against its published export/replay contract, how to consume the same contracts as single-file schema bundles, and how to confirm that intentionally invalid archive, capsule, and validator-envelope fixtures are rejected for the documented structural reasons, without relying on the projection layer or live validator API calls.
 
 ## Integrity recipes
 
@@ -199,6 +202,7 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/esm-package-support-responses.mjs`](../examples/client/esm-package-support-responses.mjs)
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
 - [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs)
+- [`../examples/client/esm-package-ajv-validate-client-recipe-index.mjs`](../examples/client/esm-package-ajv-validate-client-recipe-index.mjs)
 - [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs`](../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)

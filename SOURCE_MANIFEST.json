@@ -2305,6 +2305,15 @@
     "transformation_type": "generated",
     "notes": "Repo-local Ajv recipe for validating a public capsule against the published capsule schema."
   },
+  "examples/client/ajv-validate-client-recipe-index.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for validating the published client-recipe navigator against its bounded schema."
+  },
   "examples/client/ajv-validate-schema-bundles.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-request.single.json",
@@ -2522,6 +2531,15 @@
     ],
     "transformation_type": "generated",
     "notes": "Package-consumer Ajv recipe for validating installed schema exports and packaged public examples."
+  },
+  "examples/client/esm-package-ajv-validate-client-recipe-index.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema."
   },
   "examples/client/esm-package-ajv-validate-schema-bundles.mjs": {
     "source_paths": [
@@ -5419,6 +5437,15 @@
     ],
     "transformation_type": "derived",
     "notes": "JSON Schema projection of the public archive-bundle contract."
+  },
+  "schemas/client-recipe-index.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/scripts/lib/client-recipes.js",
+      "/home/n1/codex-workspace/docs/client-recipes.md"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public JSON Schema for the machine-readable client-recipe navigator."
   },
   "schemas/capsule-schema.bundle.json": {
     "source_paths": [
