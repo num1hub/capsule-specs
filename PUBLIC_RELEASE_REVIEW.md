@@ -41,6 +41,7 @@
 - machine-readable evidence-gaps register in `PUBLIC_EVIDENCE_GAPS_REGISTER.json` plus a bounded still-open-proof and review-needs guide
 - machine-readable program-fit map in `PUBLIC_PROGRAM_FIT_MAP.json` plus a bounded reviewer/program-credibility guide
 - machine-readable publication-readiness map in `PUBLIC_PUBLICATION_READINESS.json` plus a bounded publication-state and public-release safety guide
+- 22 machine-readable reviewer, trust, governance, and publication-safety summaries now proven as public tracked outputs generated through a bounded maintainer-side projection loop on the public `dream` branch
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
 - public-safe TypeScript and Zod projection files for capsule, client-recipe navigator, and validator API contracts, bundle entrypoints, package-surface build config, package-surface verification, fresh-install verification, and both source-level and package-level CommonJS, ESM, and TypeScript consumer recipe examples

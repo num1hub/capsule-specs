@@ -2,7 +2,7 @@
 
 This roadmap describes the delivered and next useful waves for the public N1Hub specification surface.
 
-Wave 2 and Wave 3 are already delivered. Wave 4 is the next deliberate expansion layer.
+Wave 2, Wave 3, and Wave 4 are delivered. The next deliberate move is a controlled collapse path from the public `dream` branch into the stable public `main` branch.
 
 ## Wave 1: Public foundation
 
@@ -36,7 +36,7 @@ Wave 2 and Wave 3 are already delivered. Wave 4 is the next deliberate expansion
 
 ## Wave 4: Broader open-core references
 
-- machine-readable governance, boundary, failure, and publication-readiness models are transitioning to capsule-backed projection on the public `dream` branch while remaining human-readable public JSON outputs in the tracked repo
+- machine-readable governance, boundary, failure, and publication-readiness models are now delivered through capsule-backed projection on the public `dream` branch while remaining human-readable public JSON outputs in the tracked repo
 - expand the curated raw capsule set
   Started through the law-adjacent raw capsule additions under [`capsules/`](capsules/) and the guarded repo-local verifier in [`scripts/check-raw-capsules.js`](scripts/check-raw-capsules.js).
 - publish more contract families when they are ready for a stable public boundary
