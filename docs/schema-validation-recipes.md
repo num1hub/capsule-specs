@@ -71,10 +71,12 @@ node examples/client/ajv-reject-invalid-validator-envelopes.mjs
 
 For the underlying invalid fixtures and their intended failure reasons, see [`invalid-archive-bundle-examples.md`](invalid-archive-bundle-examples.md), [`invalid-client-recipe-index-examples.md`](invalid-client-recipe-index-examples.md), [`invalid-capsule-examples.md`](invalid-capsule-examples.md), [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md), [`../examples/archive-invalid/README.md`](../examples/archive-invalid/README.md), [`../examples/client-invalid/README.md`](../examples/client-invalid/README.md), [`../examples/invalid/README.md`](../examples/invalid/README.md), and [`../examples/api-invalid/README.md`](../examples/api-invalid/README.md).
 
-## Package-consumer Ajv recipe
+## Package-consumer Ajv recipes
 
 If you want the same raw-schema path from an installed tarball or future package distribution, use:
 
+- [`../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs`](../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs)
+- [`../examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs`](../examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs)
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
 - [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs)
 - [`../examples/client/esm-package-ajv-validate-client-recipe-index.mjs`](../examples/client/esm-package-ajv-validate-client-recipe-index.mjs)
@@ -83,8 +85,10 @@ If you want the same raw-schema path from an installed tarball or future package
 - [`../examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs`](../examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs)
+- [`../examples/client/ts-package-ajv-validate-client-recipe-index.ts`](../examples/client/ts-package-ajv-validate-client-recipe-index.ts)
+- [`../examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts`](../examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts)
 
-That recipe consumes:
+Those recipes consume:
 
 - `@num1hub/capsule-specs/schemas/capsule-schema.json`
 - `@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json`
@@ -97,6 +101,8 @@ That recipe consumes:
 - the public archive-bundle sample from package exports
 - intentionally invalid archive-bundle fixtures from package exports
 - intentionally invalid client-recipe navigator fixtures from package exports
+
+The navigator-specific package recipes now prove that this raw-schema path remains copyable across CommonJS, ESM, and TypeScript package-consumer styles instead of stopping at one ESM-only example.
 
 The fresh-install proof for that path lives in [`../scripts/check-package-install.js`](../scripts/check-package-install.js).
 

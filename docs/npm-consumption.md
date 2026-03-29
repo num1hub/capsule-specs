@@ -255,6 +255,12 @@ if (!validateCapsule(note)) {
 }
 ```
 
+## Minimal package-level client-recipe navigator schema examples
+
+Copyable versions of this example also live at [`../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs`](../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs), [`../examples/client/esm-package-ajv-validate-client-recipe-index.mjs`](../examples/client/esm-package-ajv-validate-client-recipe-index.mjs), and [`../examples/client/ts-package-ajv-validate-client-recipe-index.ts`](../examples/client/ts-package-ajv-validate-client-recipe-index.ts).
+
+Those recipes prove the installed package exports the bounded client-recipe navigator contract in a form that stays consumable through CommonJS, ESM, and TypeScript Ajv flows instead of leaving schema-backed recipe discovery as an ESM-only path.
+
 ## Minimal package-level bundled-schema example
 
 A copyable version of this example also lives at [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs).
@@ -272,6 +278,12 @@ That recipe proves the installed package exports the published archive-bundle sc
 A copyable version of this example also lives at [`../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs`](../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs).
 
 That recipe proves the installed package exports intentionally invalid archive fixtures under `examples/archive-invalid/` so portability consumers can keep schema-level rejection tests next to the positive archive sample instead of inventing their own negative fixtures first.
+
+## Minimal package-level invalid client-recipe navigator example
+
+Copyable versions of this example also live at [`../examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs`](../examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs), [`../examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs`](../examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs), and [`../examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts`](../examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts).
+
+Those recipes prove the installed package exports intentionally invalid client-recipe navigator fixtures under `examples/client-invalid/` so schema-level regression checks for the navigator contract remain copyable across CommonJS, ESM, and TypeScript consumer styles.
 
 ## Minimal package-level Ajv negative example
 

@@ -357,6 +357,17 @@ const expectedSchemaRecipeImports = {
     '../api-invalid/validate-request.single.missing-capsule.json',
     '../api-invalid/validate-response.fail.invalid-gate.json'
   ],
+  'cjs-package-ajv-validate-client-recipe-index.cjs': [
+    'ajv/dist/2020',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client/recipe-index.json'
+  ],
+  'cjs-package-ajv-reject-invalid-client-recipe-index.cjs': [
+    'ajv/dist/2020',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.missing-files.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.invalid-runtime.json'
+  ],
   'esm-package-ajv-validate-contracts.mjs': [
     'ajv/dist/2020.js',
     '@num1hub/capsule-specs/schemas/capsule-schema.json',
@@ -712,6 +723,17 @@ const expectedPackageTypeImports = {
     'cjs-package-live-validator-client.cjs',
     'ts-client-recipe-index.ts',
     'recompute-integrity-seal.mjs'
+  ],
+  'ts-package-ajv-validate-client-recipe-index.ts': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client/recipe-index.json'
+  ],
+  'ts-package-ajv-reject-invalid-client-recipe-index.ts': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.missing-files.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.invalid-runtime.json'
   ],
   'ts-package-validate-request.ts': [
     '@num1hub/capsule-specs/typescript/capsule',

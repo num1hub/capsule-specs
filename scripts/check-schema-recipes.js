@@ -19,7 +19,9 @@ const repoLocalRecipes = [
   'ajv-reject-invalid-validator-envelopes.mjs'
 ];
 
-const packageRecipes = [
+const packageRuntimeRecipes = [
+  'cjs-package-ajv-validate-client-recipe-index.cjs',
+  'cjs-package-ajv-reject-invalid-client-recipe-index.cjs',
   'esm-package-ajv-validate-contracts.mjs',
   'esm-package-ajv-validate-archive-bundle.mjs',
   'esm-package-ajv-validate-client-recipe-index.mjs',
@@ -30,6 +32,13 @@ const packageRecipes = [
   'esm-package-ajv-reject-invalid-validator-envelopes.mjs'
 ];
 
+const packageTypeRecipes = [
+  'ts-package-ajv-validate-client-recipe-index.ts',
+  'ts-package-ajv-reject-invalid-client-recipe-index.ts'
+];
+
+const repoTsc = path.join(repoRoot, 'node_modules', 'typescript', 'bin', 'tsc');
+
 function assert(condition, message) {
   if (!condition) {
     console.error(`FAIL: ${message}`);
@@ -37,7 +46,32 @@ function assert(condition, message) {
   }
 }
 
-for (const fileName of [...repoLocalRecipes, ...packageRecipes]) {
+function checkTypeScriptRecipe(filePath, label) {
+  const result = spawnSync(
+    process.execPath,
+    [
+      repoTsc,
+      '--noEmit',
+      '--pretty',
+      'false',
+      '--target',
+      'ES2022',
+      '--module',
+      'ESNext',
+      '--moduleResolution',
+      'Bundler',
+      '--resolveJsonModule',
+      '--skipLibCheck',
+      '--types',
+      'node',
+      filePath
+    ],
+    { cwd: repoRoot, encoding: 'utf8' }
+  );
+  assert(result.status === 0, `${label} must typecheck: ${result.stderr || result.stdout}`);
+}
+
+for (const fileName of [...repoLocalRecipes, ...packageRuntimeRecipes, ...packageTypeRecipes]) {
   assert(fs.existsSync(path.join(clientDir, fileName)), `missing schema recipe ${fileName}`);
 }
 
@@ -54,7 +88,18 @@ for (const fileName of repoLocalRecipes) {
   assert(execResult.status === 0, `${fileName} must execute successfully: ${execResult.stderr || execResult.stdout}`);
 }
 
-const expectedPackageImports = {
+const expectedPackageRuntimeImports = {
+  'cjs-package-ajv-validate-client-recipe-index.cjs': [
+    'ajv/dist/2020',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client/recipe-index.json'
+  ],
+  'cjs-package-ajv-reject-invalid-client-recipe-index.cjs': [
+    'ajv/dist/2020',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.missing-files.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.invalid-runtime.json'
+  ],
   'esm-package-ajv-validate-contracts.mjs': [
     'ajv/dist/2020.js',
     '@num1hub/capsule-specs/schemas/capsule-schema.json',
@@ -113,10 +158,24 @@ const expectedPackageImports = {
   ]
 };
 
-for (const fileName of packageRecipes) {
+const expectedPackageTypeImports = {
+  'ts-package-ajv-validate-client-recipe-index.ts': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client/recipe-index.json'
+  ],
+  'ts-package-ajv-reject-invalid-client-recipe-index.ts': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.missing-files.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.invalid-runtime.json'
+  ]
+};
+
+for (const fileName of packageRuntimeRecipes) {
   const recipePath = path.join(clientDir, fileName);
   const content = fs.readFileSync(recipePath, 'utf8');
-  for (const importPath of expectedPackageImports[fileName]) {
+  for (const importPath of expectedPackageRuntimeImports[fileName]) {
     assert(content.includes(importPath), `${fileName} must import ${importPath}`);
   }
   const syntaxResult = spawnSync(process.execPath, ['--check', recipePath], { encoding: 'utf8' });
@@ -126,8 +185,19 @@ for (const fileName of packageRecipes) {
   );
 }
 
+for (const fileName of packageTypeRecipes) {
+  const recipePath = path.join(clientDir, fileName);
+  const content = fs.readFileSync(recipePath, 'utf8');
+  for (const importPath of expectedPackageTypeImports[fileName]) {
+    assert(content.includes(importPath), `${fileName} must import ${importPath}`);
+  }
+  checkTypeScriptRecipe(recipePath, fileName);
+}
+
 if (process.exitCode) {
   process.exit(process.exitCode);
 }
 
-console.log(`OK: checked ${repoLocalRecipes.length} repo-local Ajv schema recipes and ${packageRecipes.length} package-consumer schema recipes`);
+console.log(
+  `OK: checked ${repoLocalRecipes.length} repo-local Ajv schema recipes, ${packageRuntimeRecipes.length} installed-package runtime Ajv recipes, and ${packageTypeRecipes.length} installed-package TypeScript Ajv recipes`
+);

@@ -5169,8 +5169,38 @@
       ]
     },
     {
+      "id": "examples.client.cjs-package-ajv-validate-client-recipe-index",
+      "path": "examples/client/cjs-package-ajv-validate-client-recipe-index.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.esm-package-ajv-validate-client-recipe-index",
       "path": "examples/client/esm-package-ajv-validate-client-recipe-index.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-package-ajv-validate-client-recipe-index",
+      "path": "examples/client/ts-package-ajv-validate-client-recipe-index.ts",
       "kind": "client-recipe",
       "stability": "maintained",
       "audiences": [
@@ -5216,8 +5246,40 @@
       ]
     },
     {
+      "id": "examples.client.cjs-package-ajv-reject-invalid-client-recipe-index",
+      "path": "examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:invalid-client-recipe-index-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.esm-package-ajv-reject-invalid-client-recipe-index",
       "path": "examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:invalid-client-recipe-index-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-package-ajv-reject-invalid-client-recipe-index",
+      "path": "examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts",
       "kind": "client-recipe",
       "stability": "maintained",
       "audiences": [

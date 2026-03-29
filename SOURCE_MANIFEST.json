@@ -7165,5 +7165,47 @@
     ],
     "transformation_type": "generated",
     "notes": "Verifier for intentionally schema-invalid client-recipe navigator fixtures and their documented rejection paths."
+  },
+  "examples/client/cjs-package-ajv-validate-client-recipe-index.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema."
+  },
+  "examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
+  },
+  "examples/client/ts-package-ajv-validate-client-recipe-index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema."
+  },
+  "examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
   }
 }

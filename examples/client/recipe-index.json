@@ -88,7 +88,7 @@
     {
       "id": "raw-schema-ajv",
       "title": "Raw schema and bundle Ajv recipes",
-      "description": "Repo-local and package-level Ajv consumers for positive validation and structural rejection across the published JSON contracts.",
+      "description": "Repo-local and installed-package CommonJS, ESM, plus TypeScript Ajv consumers for positive validation and structural rejection across the published JSON contracts.",
       "audiences": [
         "integrators",
         "tool-builders"
@@ -108,6 +108,8 @@
         "ajv-reject-invalid-client-recipe-index.mjs",
         "ajv-reject-invalid-capsules.mjs",
         "ajv-reject-invalid-validator-envelopes.mjs",
+        "cjs-package-ajv-validate-client-recipe-index.cjs",
+        "cjs-package-ajv-reject-invalid-client-recipe-index.cjs",
         "esm-package-ajv-validate-contracts.mjs",
         "esm-package-ajv-validate-archive-bundle.mjs",
         "esm-package-ajv-validate-client-recipe-index.mjs",
@@ -115,7 +117,9 @@
         "esm-package-ajv-reject-invalid-archive-bundles.mjs",
         "esm-package-ajv-reject-invalid-client-recipe-index.mjs",
         "esm-package-ajv-reject-invalid-capsules.mjs",
-        "esm-package-ajv-reject-invalid-validator-envelopes.mjs"
+        "esm-package-ajv-reject-invalid-validator-envelopes.mjs",
+        "ts-package-ajv-validate-client-recipe-index.ts",
+        "ts-package-ajv-reject-invalid-client-recipe-index.ts"
       ]
     },
     {
@@ -406,7 +410,10 @@
       "alternatives": [
         "ajv-validate-validator-envelope.mjs",
         "ajv-validate-archive-bundle.mjs",
-        "ajv-validate-schema-bundles.mjs"
+        "ajv-validate-schema-bundles.mjs",
+        "cjs-package-ajv-validate-client-recipe-index.cjs",
+        "esm-package-ajv-validate-client-recipe-index.mjs",
+        "ts-package-ajv-validate-client-recipe-index.ts"
       ],
       "docs": [
         "docs/client-recipes.md",
@@ -415,7 +422,9 @@
       ],
       "runtimes": [
         "ajv",
-        "esm"
+        "cjs",
+        "esm",
+        "typescript"
       ]
     },
     {
@@ -426,7 +435,10 @@
       "alternatives": [
         "ajv-reject-invalid-validator-envelopes.mjs",
         "ajv-reject-invalid-archive-bundles.mjs",
-        "ajv-reject-invalid-client-recipe-index.mjs"
+        "ajv-reject-invalid-client-recipe-index.mjs",
+        "cjs-package-ajv-reject-invalid-client-recipe-index.cjs",
+        "esm-package-ajv-reject-invalid-client-recipe-index.mjs",
+        "ts-package-ajv-reject-invalid-client-recipe-index.ts"
       ],
       "docs": [
         "docs/client-recipes.md",
@@ -437,7 +449,9 @@
       ],
       "runtimes": [
         "ajv",
-        "esm"
+        "cjs",
+        "esm",
+        "typescript"
       ]
     },
     {
