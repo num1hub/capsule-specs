@@ -43,6 +43,18 @@ const cjsValidateClientRecipeIndexSchemaRecipePath = path.join(
   'client',
   'cjs-package-ajv-validate-client-recipe-index.cjs'
 );
+const cjsValidateArchiveRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'cjs-package-ajv-validate-archive-bundle.cjs'
+);
+const cjsValidateBundlesRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'cjs-package-ajv-validate-schema-bundles.cjs'
+);
 const cjsValidateContractsRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-ajv-validate-contracts.cjs');
 const cjsInvalidClientRecipeIndexRecipePath = path.join(
   repoRoot,
@@ -50,7 +62,19 @@ const cjsInvalidClientRecipeIndexRecipePath = path.join(
   'client',
   'cjs-package-ajv-reject-invalid-client-recipe-index.cjs'
 );
+const cjsInvalidArchiveRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'cjs-package-ajv-reject-invalid-archive-bundles.cjs'
+);
 const cjsInvalidCapsulesRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-ajv-reject-invalid-capsules.cjs');
+const cjsInvalidApiRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'cjs-package-ajv-reject-invalid-validator-envelopes.cjs'
+);
 const cjsValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-request.cjs');
 const cjsSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-support-responses.cjs');
 const cjsValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-response.cjs');
@@ -71,6 +95,18 @@ const typescriptValidateClientRecipeIndexSchemaRecipePath = path.join(
   'client',
   'ts-package-ajv-validate-client-recipe-index.ts'
 );
+const typescriptValidateArchiveRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'ts-package-ajv-validate-archive-bundle.ts'
+);
+const typescriptValidateBundlesRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'ts-package-ajv-validate-schema-bundles.ts'
+);
 const typescriptValidateContractsRecipePath = path.join(
   repoRoot,
   'examples',
@@ -83,11 +119,23 @@ const typescriptInvalidClientRecipeIndexRecipePath = path.join(
   'client',
   'ts-package-ajv-reject-invalid-client-recipe-index.ts'
 );
+const typescriptInvalidArchiveRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'ts-package-ajv-reject-invalid-archive-bundles.ts'
+);
 const typescriptInvalidCapsulesRecipePath = path.join(
   repoRoot,
   'examples',
   'client',
   'ts-package-ajv-reject-invalid-capsules.ts'
+);
+const typescriptInvalidApiRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'ts-package-ajv-reject-invalid-validator-envelopes.ts'
 );
 const typescriptBatchRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-batch-request.ts');
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
@@ -147,7 +195,11 @@ try {
     name: 'capsule-specs-consumer-cjs',
     private: true
   });
-  run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'ajv', 'openapi-typescript'], cjsProject);
+  run(
+    'npm',
+    ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'ajv', 'ajv-formats', 'openapi-typescript'],
+    cjsProject
+  );
   fs.writeFileSync(
     path.join(cjsProject, 'consumer.cjs'),
     [
@@ -214,17 +266,37 @@ try {
   );
   run(process.execPath, ['validate-contracts-consumer.cjs'], cjsProject);
   fs.writeFileSync(
+    path.join(cjsProject, 'validate-archive-consumer.cjs'),
+    fs.readFileSync(cjsValidateArchiveRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['validate-archive-consumer.cjs'], cjsProject);
+  fs.writeFileSync(
+    path.join(cjsProject, 'validate-bundles-consumer.cjs'),
+    fs.readFileSync(cjsValidateBundlesRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['validate-bundles-consumer.cjs'], cjsProject);
+  fs.writeFileSync(
     path.join(cjsProject, 'invalid-client-recipe-index-consumer.cjs'),
     fs.readFileSync(cjsInvalidClientRecipeIndexRecipePath, 'utf8'),
     'utf8'
   );
   run(process.execPath, ['invalid-client-recipe-index-consumer.cjs'], cjsProject);
   fs.writeFileSync(
+    path.join(cjsProject, 'invalid-archive-consumer.cjs'),
+    fs.readFileSync(cjsInvalidArchiveRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['invalid-archive-consumer.cjs'], cjsProject);
+  fs.writeFileSync(
     path.join(cjsProject, 'invalid-capsules-consumer.cjs'),
     fs.readFileSync(cjsInvalidCapsulesRecipePath, 'utf8'),
     'utf8'
   );
   run(process.execPath, ['invalid-capsules-consumer.cjs'], cjsProject);
+  fs.writeFileSync(path.join(cjsProject, 'invalid-api-consumer.cjs'), fs.readFileSync(cjsInvalidApiRecipePath, 'utf8'), 'utf8');
+  run(process.execPath, ['invalid-api-consumer.cjs'], cjsProject);
   fs.writeFileSync(
     path.join(cjsProject, 'validate-response-consumer.cjs'),
     fs.readFileSync(cjsValidateResponseRecipePath, 'utf8'),
@@ -365,9 +437,13 @@ try {
       'fix-request-consumer.ts',
       'recipe-index-consumer.ts',
       'validate-client-recipe-index-consumer.ts',
+      'validate-archive-consumer.ts',
+      'validate-bundles-consumer.ts',
       'validate-contracts-consumer.ts',
       'invalid-client-recipe-index-consumer.ts',
+      'invalid-archive-consumer.ts',
       'invalid-capsules-consumer.ts',
+      'invalid-api-consumer.ts',
       'live-client-consumer.ts',
       'openapi-codegen-consumer.ts',
       'openapi-consumer.ts',
@@ -380,7 +456,7 @@ try {
   });
   run(
     'npm',
-    ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'ajv', 'openapi-typescript', '@types/node'],
+    ['install', '--ignore-scripts', '--no-audit', '--no-fund', tarballPath, 'ajv', 'ajv-formats', 'openapi-typescript', '@types/node'],
     typescriptProject
   );
   fs.writeFileSync(path.join(typescriptProject, 'consumer.ts'), fs.readFileSync(typescriptConsumerRecipePath, 'utf8'), 'utf8');
@@ -405,6 +481,16 @@ try {
     'utf8'
   );
   fs.writeFileSync(
+    path.join(typescriptProject, 'validate-archive-consumer.ts'),
+    fs.readFileSync(typescriptValidateArchiveRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
+    path.join(typescriptProject, 'validate-bundles-consumer.ts'),
+    fs.readFileSync(typescriptValidateBundlesRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
     path.join(typescriptProject, 'validate-contracts-consumer.ts'),
     fs.readFileSync(typescriptValidateContractsRecipePath, 'utf8'),
     'utf8'
@@ -415,8 +501,18 @@ try {
     'utf8'
   );
   fs.writeFileSync(
+    path.join(typescriptProject, 'invalid-archive-consumer.ts'),
+    fs.readFileSync(typescriptInvalidArchiveRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
     path.join(typescriptProject, 'invalid-capsules-consumer.ts'),
     fs.readFileSync(typescriptInvalidCapsulesRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
+    path.join(typescriptProject, 'invalid-api-consumer.ts'),
+    fs.readFileSync(typescriptInvalidApiRecipePath, 'utf8'),
     'utf8'
   );
   fs.writeFileSync(
@@ -451,13 +547,17 @@ try {
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json', '--noEmit', 'false', '--outDir', 'dist'], typescriptProject);
   run(process.execPath, ['dist/validate-client-recipe-index-consumer.js'], typescriptProject);
+  run(process.execPath, ['dist/validate-archive-consumer.js'], typescriptProject);
+  run(process.execPath, ['dist/validate-bundles-consumer.js'], typescriptProject);
   run(process.execPath, ['dist/validate-contracts-consumer.js'], typescriptProject);
   run(process.execPath, ['dist/invalid-client-recipe-index-consumer.js'], typescriptProject);
+  run(process.execPath, ['dist/invalid-archive-consumer.js'], typescriptProject);
   run(process.execPath, ['dist/invalid-capsules-consumer.js'], typescriptProject);
+  run(process.execPath, ['dist/invalid-api-consumer.js'], typescriptProject);
   run(process.execPath, ['dist/openapi-codegen-consumer.js'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, client-recipe navigator, OpenAPI reading and OpenAPI type-generation, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, client-recipe-index, archive, and bundled schema exports, invalid archive, capsule, API, and client-recipe-index schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, client-recipe navigator, OpenAPI reading and OpenAPI type-generation, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, client-recipe-index, and bundled schema exports, invalid archive, capsule, API, and client-recipe-index schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

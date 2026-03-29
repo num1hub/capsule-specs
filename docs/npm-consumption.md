@@ -263,19 +263,19 @@ Those recipes prove the installed package exports the bounded client-recipe navi
 
 ## Minimal package-level bundled-schema example
 
-A copyable version of this example also lives at [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs).
+Copyable versions of this example also live at [`../examples/client/cjs-package-ajv-validate-schema-bundles.cjs`](../examples/client/cjs-package-ajv-validate-schema-bundles.cjs), [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs), and [`../examples/client/ts-package-ajv-validate-schema-bundles.ts`](../examples/client/ts-package-ajv-validate-schema-bundles.ts).
 
-That recipe proves the installed package exports single-file schema bundle artifacts for both capsule validation and validator-envelope validation, so downstream consumers do not need to wire multi-file `$ref` graphs manually.
+Those recipes prove the installed package exports single-file schema bundle artifacts for both capsule validation and validator-envelope validation, so downstream consumers do not need to wire multi-file `$ref` graphs manually and can stay on CommonJS, ESM, or TypeScript without changing the contract path.
 
 ## Minimal package-level archive-schema example
 
-A copyable version of this example also lives at [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs).
+Copyable versions of this example also live at [`../examples/client/cjs-package-ajv-validate-archive-bundle.cjs`](../examples/client/cjs-package-ajv-validate-archive-bundle.cjs), [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs), and [`../examples/client/ts-package-ajv-validate-archive-bundle.ts`](../examples/client/ts-package-ajv-validate-archive-bundle.ts).
 
-That recipe proves the installed package exports the published archive-bundle schema and sample payload, so portability consumers can validate export/replay contract shape without reaching into private runtime code or a hosted service. Use `ajv/dist/2020.js` together with `ajv-formats` when consuming that path because the archive schema includes `date-time` fields.
+Those recipes prove the installed package exports the published archive-bundle schema and sample payload, so portability consumers can validate export/replay contract shape without reaching into private runtime code or a hosted service. Use `ajv/dist/2020` or `ajv/dist/2020.js` together with `ajv-formats` when consuming that path because the archive schema includes `date-time` fields.
 
 ## Minimal package-level invalid archive example
 
-A copyable version of this example also lives at [`../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs`](../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs).
+Copyable versions of this example also live at [`../examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs`](../examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs), [`../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs`](../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs), and [`../examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts`](../examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts).
 
 That recipe proves the installed package exports intentionally invalid archive fixtures under `examples/archive-invalid/` so portability consumers can keep schema-level rejection tests next to the positive archive sample instead of inventing their own negative fixtures first.
 
@@ -291,9 +291,9 @@ Copyable versions of this example also live at [`../examples/client/cjs-package-
 
 That recipe proves the installed package exports not only valid schemas and examples, but also the intentionally invalid capsule fixtures under `examples/invalid/` that raw-schema consumers can use for regression tests.
 
-A package-level validator-envelope variant also lives at [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs).
+Package-level validator-envelope variants also live at [`../examples/client/cjs-package-ajv-reject-invalid-validator-envelopes.cjs`](../examples/client/cjs-package-ajv-reject-invalid-validator-envelopes.cjs), [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs), and [`../examples/client/ts-package-ajv-reject-invalid-validator-envelopes.ts`](../examples/client/ts-package-ajv-reject-invalid-validator-envelopes.ts).
 
-That recipe proves the installed package exports intentionally invalid validator-envelope fixtures under `examples/api-invalid/` for raw-schema regression tests at the HTTP-contract layer.
+Those recipes prove the installed package exports intentionally invalid validator-envelope fixtures under `examples/api-invalid/` for raw-schema regression tests at the HTTP-contract layer across CommonJS, ESM, and TypeScript consumer styles.
 
 ## Cross-language packed-artifact example
 

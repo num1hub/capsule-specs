@@ -43,7 +43,9 @@ That recipe validates the published archive-bundle sample directly against the p
 
 If you want the same path from an installed tarball or future package distribution, use:
 
+- [`../examples/client/cjs-package-ajv-validate-archive-bundle.cjs`](../examples/client/cjs-package-ajv-validate-archive-bundle.cjs)
 - [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs)
+- [`../examples/client/ts-package-ajv-validate-archive-bundle.ts`](../examples/client/ts-package-ajv-validate-archive-bundle.ts)
 
 Install `ajv` and `ajv-formats` in the consumer project before running it.
 

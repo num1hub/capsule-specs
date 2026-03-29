@@ -10,7 +10,11 @@ const capsuleBundlePath = path.join(repoRoot, 'schemas', 'capsule-schema.bundle.
 const validatorBundlePath = path.join(repoRoot, 'schemas', 'validator-api-envelopes.bundle.json');
 const docsPath = path.join(repoRoot, 'docs', 'schema-bundles.md');
 const repoRecipePath = path.join(repoRoot, 'examples', 'client', 'ajv-validate-schema-bundles.mjs');
-const packageRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-schema-bundles.mjs');
+const packageRecipePaths = [
+  path.join(repoRoot, 'examples', 'client', 'cjs-package-ajv-validate-schema-bundles.cjs'),
+  path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-schema-bundles.mjs'),
+  path.join(repoRoot, 'examples', 'client', 'ts-package-ajv-validate-schema-bundles.ts')
+];
 
 function readJson(relativePath) {
   return JSON.parse(fs.readFileSync(path.join(repoRoot, relativePath), 'utf8'));
@@ -37,7 +41,9 @@ assert(fs.existsSync(capsuleBundlePath), 'missing schemas/capsule-schema.bundle.
 assert(fs.existsSync(validatorBundlePath), 'missing schemas/validator-api-envelopes.bundle.json');
 assert(fs.existsSync(docsPath), 'missing docs/schema-bundles.md');
 assert(fs.existsSync(repoRecipePath), 'missing repo-local schema bundle recipe');
-assert(fs.existsSync(packageRecipePath), 'missing package schema bundle recipe');
+for (const recipePath of packageRecipePaths) {
+  assert(fs.existsSync(recipePath), `missing ${path.relative(repoRoot, recipePath)}`);
+}
 
 assert(
   JSON.stringify(actualCapsuleBundle) === JSON.stringify(expectedCapsuleBundle),
@@ -55,13 +61,21 @@ assert(
 );
 assert(docs.includes('ajv-validate-schema-bundles.mjs'), 'docs/schema-bundles.md must mention ajv-validate-schema-bundles.mjs');
 assert(
+  docs.includes('cjs-package-ajv-validate-schema-bundles.cjs'),
+  'docs/schema-bundles.md must mention cjs-package-ajv-validate-schema-bundles.cjs'
+);
+assert(
   docs.includes('esm-package-ajv-validate-schema-bundles.mjs'),
   'docs/schema-bundles.md must mention esm-package-ajv-validate-schema-bundles.mjs'
+);
+assert(
+  docs.includes('ts-package-ajv-validate-schema-bundles.ts'),
+  'docs/schema-bundles.md must mention ts-package-ajv-validate-schema-bundles.ts'
 );
 assert(docs.includes('single-file'), 'docs/schema-bundles.md must describe single-file schema consumption');
 assert(docs.includes('raw schema'), 'docs/schema-bundles.md must contrast bundle schemas with raw schemas');
 
-for (const filePath of [repoRecipePath, packageRecipePath]) {
+for (const filePath of [repoRecipePath, ...packageRecipePaths]) {
   const syntaxResult = spawnSync(process.execPath, ['--check', filePath], { encoding: 'utf8' });
   assert(
     syntaxResult.status === 0,

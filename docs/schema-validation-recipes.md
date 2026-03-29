@@ -76,6 +76,10 @@ For the underlying invalid fixtures and their intended failure reasons, see [`in
 If you want the same raw-schema path from an installed tarball or future package distribution, use:
 
 - [`../examples/client/cjs-package-ajv-validate-contracts.cjs`](../examples/client/cjs-package-ajv-validate-contracts.cjs)
+- [`../examples/client/cjs-package-ajv-validate-archive-bundle.cjs`](../examples/client/cjs-package-ajv-validate-archive-bundle.cjs)
+- [`../examples/client/cjs-package-ajv-validate-schema-bundles.cjs`](../examples/client/cjs-package-ajv-validate-schema-bundles.cjs)
+- [`../examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs`](../examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs)
+- [`../examples/client/cjs-package-ajv-reject-invalid-validator-envelopes.cjs`](../examples/client/cjs-package-ajv-reject-invalid-validator-envelopes.cjs)
 - [`../examples/client/cjs-package-ajv-reject-invalid-capsules.cjs`](../examples/client/cjs-package-ajv-reject-invalid-capsules.cjs)
 - [`../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs`](../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs)
 - [`../examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs`](../examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs)
@@ -88,6 +92,10 @@ If you want the same raw-schema path from an installed tarball or future package
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs)
 - [`../examples/client/ts-package-ajv-validate-contracts.ts`](../examples/client/ts-package-ajv-validate-contracts.ts)
+- [`../examples/client/ts-package-ajv-validate-archive-bundle.ts`](../examples/client/ts-package-ajv-validate-archive-bundle.ts)
+- [`../examples/client/ts-package-ajv-validate-schema-bundles.ts`](../examples/client/ts-package-ajv-validate-schema-bundles.ts)
+- [`../examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts`](../examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts)
+- [`../examples/client/ts-package-ajv-reject-invalid-validator-envelopes.ts`](../examples/client/ts-package-ajv-reject-invalid-validator-envelopes.ts)
 - [`../examples/client/ts-package-ajv-reject-invalid-capsules.ts`](../examples/client/ts-package-ajv-reject-invalid-capsules.ts)
 - [`../examples/client/ts-package-ajv-validate-client-recipe-index.ts`](../examples/client/ts-package-ajv-validate-client-recipe-index.ts)
 - [`../examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts`](../examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts)
@@ -106,7 +114,7 @@ Those recipes consume:
 - intentionally invalid archive-bundle fixtures from package exports
 - intentionally invalid client-recipe navigator fixtures from package exports
 
-The navigator-specific package recipes now prove that this raw-schema path remains copyable across CommonJS, ESM, and TypeScript package-consumer styles instead of stopping at one ESM-only example.
+The package Ajv layer now stays symmetric across CommonJS, ESM, and TypeScript for contract validation, archive validation, bundled-schema validation, invalid archive rejection, invalid validator-envelope rejection, and navigator validation/rejection instead of leaving the archive and HTTP-negative lanes ESM-only.
 
 The fresh-install proof for that path lives in [`../scripts/check-package-install.js`](../scripts/check-package-install.js).
 

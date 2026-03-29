@@ -13,9 +13,13 @@ If you need an executable structural validation path instead of prose alone, als
 - [`archive-validation-recipes.md`](archive-validation-recipes.md)
 - [`invalid-archive-bundle-examples.md`](invalid-archive-bundle-examples.md)
 - [`../examples/client/ajv-validate-archive-bundle.mjs`](../examples/client/ajv-validate-archive-bundle.mjs)
+- [`../examples/client/cjs-package-ajv-validate-archive-bundle.cjs`](../examples/client/cjs-package-ajv-validate-archive-bundle.cjs)
 - [`../examples/client/esm-package-ajv-validate-archive-bundle.mjs`](../examples/client/esm-package-ajv-validate-archive-bundle.mjs)
+- [`../examples/client/ts-package-ajv-validate-archive-bundle.ts`](../examples/client/ts-package-ajv-validate-archive-bundle.ts)
 - [`../examples/client/ajv-reject-invalid-archive-bundles.mjs`](../examples/client/ajv-reject-invalid-archive-bundles.mjs)
+- [`../examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs`](../examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs`](../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs)
+- [`../examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts`](../examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts)
 
 ## Key fields
 

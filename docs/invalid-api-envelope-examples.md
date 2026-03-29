@@ -38,7 +38,9 @@ This distinction matters when you are deciding whether you need:
 ## Copyable Ajv recipes
 
 - [`../examples/client/ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/ajv-reject-invalid-validator-envelopes.mjs)
+- [`../examples/client/cjs-package-ajv-reject-invalid-validator-envelopes.cjs`](../examples/client/cjs-package-ajv-reject-invalid-validator-envelopes.cjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs)
+- [`../examples/client/ts-package-ajv-reject-invalid-validator-envelopes.ts`](../examples/client/ts-package-ajv-reject-invalid-validator-envelopes.ts)
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
 - [`api-envelopes.md`](api-envelopes.md)
 

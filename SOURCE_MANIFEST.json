@@ -2382,6 +2382,16 @@
     "transformation_type": "generated",
     "notes": "Repo-local Ajv recipe for validating public validator-envelope payloads against the published schema bundle."
   },
+  "examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-content-class.json",
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-created-at.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer Ajv recipe for rejecting intentionally invalid archive-bundle fixtures from installed package exports."
+  },
   "examples/client/cjs-package-ajv-reject-invalid-capsules.cjs": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
@@ -2403,6 +2413,27 @@
     ],
     "transformation_type": "generated",
     "notes": "CommonJS package-consumer Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
+  },
+  "examples/client/cjs-package-ajv-reject-invalid-validator-envelopes.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer Ajv recipe for rejecting installed invalid validator-envelope fixtures."
+  },
+  "examples/client/cjs-package-ajv-validate-archive-bundle.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer Ajv recipe for validating the published archive-bundle sample from installed package exports."
   },
   "examples/client/cjs-package-ajv-validate-client-recipe-index.cjs": {
     "source_paths": [
@@ -2426,6 +2457,18 @@
     ],
     "transformation_type": "generated",
     "notes": "CommonJS package-consumer Ajv recipe for validating installed schema exports and packaged public examples."
+  },
+  "examples/client/cjs-package-ajv-validate-schema-bundles.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.bundle.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.bundle.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer Ajv recipe for single-file bundled schema consumption."
   },
   "examples/client/cjs-package-capsule-summary.cjs": {
     "source_paths": [
@@ -3116,6 +3159,16 @@
     "transformation_type": "generated",
     "notes": "Minimal source-level TypeScript recipe for reading the published OpenAPI route contract directly."
   },
+  "examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-content-class.json",
+      "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-created-at.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer Ajv recipe for rejecting intentionally invalid archive-bundle fixtures from installed package exports."
+  },
   "examples/client/ts-package-ajv-reject-invalid-capsules.ts": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
@@ -3137,6 +3190,27 @@
     ],
     "transformation_type": "generated",
     "notes": "TypeScript package-consumer Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
+  },
+  "examples/client/ts-package-ajv-reject-invalid-validator-envelopes.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
+      "/home/n1/codex-workspace/examples/api-invalid/validate-response.fail.invalid-gate.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer Ajv recipe for rejecting installed invalid validator-envelope fixtures."
+  },
+  "examples/client/ts-package-ajv-validate-archive-bundle.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer Ajv recipe for validating the published archive-bundle sample from installed package exports."
   },
   "examples/client/ts-package-ajv-validate-client-recipe-index.ts": {
     "source_paths": [
@@ -3160,6 +3234,18 @@
     ],
     "transformation_type": "generated",
     "notes": "TypeScript package-consumer Ajv recipe for validating installed schema exports and packaged public examples."
+  },
+  "examples/client/ts-package-ajv-validate-schema-bundles.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.bundle.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.bundle.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer Ajv recipe for single-file bundled schema consumption."
   },
   "examples/client/ts-package-client-recipe-index.ts": {
     "source_paths": [

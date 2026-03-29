@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "reviewed_at": "2026-03-28",
+  "reviewed_at": "2026-03-29",
   "purpose": "Provide a bounded machine-readable map from verification command families to the public surfaces and failure classes they protect.",
   "checks": [
     {
@@ -193,7 +193,15 @@
         "examples/client/cjs-package-ajv-validate-contracts.cjs",
         "examples/client/cjs-package-ajv-reject-invalid-capsules.cjs",
         "examples/client/ts-package-ajv-validate-contracts.ts",
-        "examples/client/ts-package-ajv-reject-invalid-capsules.ts"
+        "examples/client/ts-package-ajv-reject-invalid-capsules.ts",
+        "examples/client/cjs-package-ajv-validate-archive-bundle.cjs",
+        "examples/client/cjs-package-ajv-validate-schema-bundles.cjs",
+        "examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs",
+        "examples/client/cjs-package-ajv-reject-invalid-validator-envelopes.cjs",
+        "examples/client/ts-package-ajv-validate-archive-bundle.ts",
+        "examples/client/ts-package-ajv-validate-schema-bundles.ts",
+        "examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts",
+        "examples/client/ts-package-ajv-reject-invalid-validator-envelopes.ts"
       ],
       "strongest_surfaces": [
         "scripts/check-schema-recipes.js",

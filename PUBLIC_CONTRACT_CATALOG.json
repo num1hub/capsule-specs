@@ -1051,6 +1051,22 @@
       ]
     },
     {
+      "id": "examples.client.cjs-package-ajv-reject-invalid-archive-bundles",
+      "path": "examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:invalid-archive-examples",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.cjs-package-ajv-reject-invalid-capsules",
       "path": "examples/client/cjs-package-ajv-reject-invalid-capsules.cjs",
       "kind": "client-recipe",
@@ -1083,6 +1099,37 @@
       ]
     },
     {
+      "id": "examples.client.cjs-package-ajv-reject-invalid-validator-envelopes",
+      "path": "examples/client/cjs-package-ajv-reject-invalid-validator-envelopes.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:invalid-api-examples",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.cjs-package-ajv-validate-archive-bundle",
+      "path": "examples/client/cjs-package-ajv-validate-archive-bundle.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:archive-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.cjs-package-ajv-validate-client-recipe-index",
       "path": "examples/client/cjs-package-ajv-validate-client-recipe-index.cjs",
       "kind": "client-recipe",
@@ -1108,6 +1155,21 @@
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.cjs-package-ajv-validate-schema-bundles",
+      "path": "examples/client/cjs-package-ajv-validate-schema-bundles.cjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-bundles",
         "npm run check:package-install",
         "npm run check:catalog"
       ]
@@ -2073,6 +2135,22 @@
       ]
     },
     {
+      "id": "examples.client.ts-package-ajv-reject-invalid-archive-bundles",
+      "path": "examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:invalid-archive-examples",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.ts-package-ajv-reject-invalid-capsules",
       "path": "examples/client/ts-package-ajv-reject-invalid-capsules.ts",
       "kind": "client-recipe",
@@ -2105,6 +2183,37 @@
       ]
     },
     {
+      "id": "examples.client.ts-package-ajv-reject-invalid-validator-envelopes",
+      "path": "examples/client/ts-package-ajv-reject-invalid-validator-envelopes.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:invalid-api-examples",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-package-ajv-validate-archive-bundle",
+      "path": "examples/client/ts-package-ajv-validate-archive-bundle.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:archive-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.ts-package-ajv-validate-client-recipe-index",
       "path": "examples/client/ts-package-ajv-validate-client-recipe-index.ts",
       "kind": "client-recipe",
@@ -2130,6 +2239,21 @@
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-package-ajv-validate-schema-bundles",
+      "path": "examples/client/ts-package-ajv-validate-schema-bundles.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-bundles",
         "npm run check:package-install",
         "npm run check:catalog"
       ]

@@ -12,7 +12,11 @@ const schemaPath = path.join(repoRoot, 'schemas', 'archive-bundle.schema.json');
 const docsPath = path.join(repoRoot, 'docs', 'invalid-archive-bundle-examples.md');
 const readmePath = path.join(invalidDir, 'README.md');
 const repoRecipePath = path.join(repoRoot, 'examples', 'client', 'ajv-reject-invalid-archive-bundles.mjs');
-const packageRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-reject-invalid-archive-bundles.mjs');
+const packageRecipePaths = [
+  path.join(repoRoot, 'examples', 'client', 'cjs-package-ajv-reject-invalid-archive-bundles.cjs'),
+  path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-reject-invalid-archive-bundles.mjs'),
+  path.join(repoRoot, 'examples', 'client', 'ts-package-ajv-reject-invalid-archive-bundles.ts')
+];
 
 const fixtures = [
   {
@@ -43,7 +47,9 @@ const validateArchiveBundle = ajv.compile(archiveSchema);
 assert(fs.existsSync(docsPath), 'missing docs/invalid-archive-bundle-examples.md');
 assert(fs.existsSync(readmePath), 'missing examples/archive-invalid/README.md');
 assert(fs.existsSync(repoRecipePath), 'missing repo-local invalid archive recipe');
-assert(fs.existsSync(packageRecipePath), 'missing package invalid archive recipe');
+for (const recipePath of packageRecipePaths) {
+  assert(fs.existsSync(recipePath), `missing ${path.relative(repoRoot, recipePath)}`);
+}
 
 for (const fixture of fixtures) {
   const absolutePath = path.join(repoRoot, fixture.path);
@@ -68,7 +74,11 @@ assert(
   'examples/archive-invalid/README.md must distinguish invalid archive fixtures from the valid archive sample'
 );
 
-for (const recipePath of [repoRecipePath, packageRecipePath]) {
+assert(docs.includes('cjs-package-ajv-reject-invalid-archive-bundles.cjs'), 'docs/invalid-archive-bundle-examples.md must mention cjs-package-ajv-reject-invalid-archive-bundles.cjs');
+assert(docs.includes('esm-package-ajv-reject-invalid-archive-bundles.mjs'), 'docs/invalid-archive-bundle-examples.md must mention esm-package-ajv-reject-invalid-archive-bundles.mjs');
+assert(docs.includes('ts-package-ajv-reject-invalid-archive-bundles.ts'), 'docs/invalid-archive-bundle-examples.md must mention ts-package-ajv-reject-invalid-archive-bundles.ts');
+
+for (const recipePath of [repoRecipePath, ...packageRecipePaths]) {
   const syntaxResult = spawnSync(process.execPath, ['--check', recipePath], { encoding: 'utf8' });
   assert(
     syntaxResult.status === 0,

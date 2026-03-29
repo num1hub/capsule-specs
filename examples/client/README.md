@@ -84,6 +84,10 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 - `ajv-reject-invalid-capsules.mjs`
 - `ajv-reject-invalid-validator-envelopes.mjs`
 - `cjs-package-ajv-validate-contracts.cjs`
+- `cjs-package-ajv-validate-archive-bundle.cjs`
+- `cjs-package-ajv-validate-schema-bundles.cjs`
+- `cjs-package-ajv-reject-invalid-archive-bundles.cjs`
+- `cjs-package-ajv-reject-invalid-validator-envelopes.cjs`
 - `cjs-package-ajv-reject-invalid-capsules.cjs`
 - `cjs-package-ajv-validate-client-recipe-index.cjs`
 - `cjs-package-ajv-reject-invalid-client-recipe-index.cjs`
@@ -96,6 +100,10 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 - `esm-package-ajv-reject-invalid-capsules.mjs`
 - `esm-package-ajv-reject-invalid-validator-envelopes.mjs`
 - `ts-package-ajv-validate-contracts.ts`
+- `ts-package-ajv-validate-archive-bundle.ts`
+- `ts-package-ajv-validate-schema-bundles.ts`
+- `ts-package-ajv-reject-invalid-archive-bundles.ts`
+- `ts-package-ajv-reject-invalid-validator-envelopes.ts`
 - `ts-package-ajv-reject-invalid-capsules.ts`
 - `ts-package-ajv-validate-client-recipe-index.ts`
 - `ts-package-ajv-reject-invalid-client-recipe-index.ts`

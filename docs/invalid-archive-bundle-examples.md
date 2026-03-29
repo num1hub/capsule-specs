@@ -38,7 +38,9 @@ This distinction matters when you are deciding whether you need:
 ## Copyable Ajv recipes
 
 - [`../examples/client/ajv-reject-invalid-archive-bundles.mjs`](../examples/client/ajv-reject-invalid-archive-bundles.mjs)
+- [`../examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs`](../examples/client/cjs-package-ajv-reject-invalid-archive-bundles.cjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs`](../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs)
+- [`../examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts`](../examples/client/ts-package-ajv-reject-invalid-archive-bundles.ts)
 - [`archive-validation-recipes.md`](archive-validation-recipes.md)
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
 

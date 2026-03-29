@@ -41,7 +41,9 @@ That recipe validates:
 
 If you want the same single-file path from an installed tarball or future registry publication, use:
 
+- [`../examples/client/cjs-package-ajv-validate-schema-bundles.cjs`](../examples/client/cjs-package-ajv-validate-schema-bundles.cjs)
 - [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs)
+- [`../examples/client/ts-package-ajv-validate-schema-bundles.ts`](../examples/client/ts-package-ajv-validate-schema-bundles.ts)
 - [`npm-consumption.md`](npm-consumption.md)
 
 That recipe consumes:
