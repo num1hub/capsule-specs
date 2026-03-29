@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "reviewed_at": "2026-03-26",
   "global_rules": [
     "Repository files are public projections; upstream capsules and live validator artifacts remain stronger sources of truth.",

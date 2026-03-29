@@ -1,7 +1,7 @@
 # N1Hub Capsule Specs
 
 [![Verify Public Surface](https://github.com/num1hub/capsule-specs/actions/workflows/audit-public-surface.yml/badge.svg)](https://github.com/num1hub/capsule-specs/actions/workflows/audit-public-surface.yml)
-[Release v0.1.0](https://github.com/num1hub/capsule-specs/releases/tag/v0.1.0)
+[Releases](https://github.com/num1hub/capsule-specs/releases)
 [License Apache-2.0](LICENSE)
 [Open Issues](https://github.com/num1hub/capsule-specs/issues)
 [CITATION.cff](CITATION.cff)

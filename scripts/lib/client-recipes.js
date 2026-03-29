@@ -419,7 +419,7 @@ const taskEntrypoints = [
 const allIndexedRecipeFiles = [...new Set(recipeGroups.flatMap((group) => group.files))].sort();
 
 const recipeIndex = {
-  version: '0.1.0',
+  version: '0.2.0',
   directory: 'examples/client',
   purpose: 'Machine-readable navigator for public client recipes grouped by task, runtime, and consumption path.',
   groups: recipeGroups.map((group) => ({

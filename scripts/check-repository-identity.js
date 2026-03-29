@@ -96,10 +96,13 @@ assert(identity.package?.name === pkg.name, 'repository identity package name mu
 assert(identity.package?.version === pkg.version, 'repository identity package version must match package.json');
 assert(identity.package?.license === pkg.license, 'repository identity package license must match package.json');
 
-assert(identity.release?.latest_tag === 'v0.1.0', 'repository identity latest_tag must be v0.1.0');
 assert(
-  identity.release?.latest_release_url === `${canonicalRepoUrl}/releases/tag/v0.1.0`,
-  'repository identity latest_release_url must match the published release URL'
+  typeof identity.release?.latest_tag === 'string' && /^v\d+\.\d+\.\d+$/.test(identity.release.latest_tag),
+  'repository identity latest_tag must be a SemVer-style release tag'
+);
+assert(
+  identity.release?.latest_release_url === `${canonicalRepoUrl}/releases/tag/${identity.release.latest_tag}`,
+  'repository identity latest_release_url must match the published release URL for latest_tag'
 );
 
 assert(pkg.repository?.url === canonicalGitUrl, 'package.json repository.url must match canonical git URL');

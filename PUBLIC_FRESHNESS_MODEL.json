@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "reviewed_at": "2026-03-26",
   "purpose": "Publish a bounded machine-readable map of which public surfaces become stale under which triggers so reviewers and maintainers can assess summary freshness without inferring it from raw git history alone.",
   "surfaces": [

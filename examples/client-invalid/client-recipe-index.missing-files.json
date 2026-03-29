@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "directory": "examples/client",
   "purpose": "Invalid client-recipe navigator fixture missing the required files field.",
   "groups": [
