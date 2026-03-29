@@ -24,7 +24,7 @@ For the bounded contributor/reviewer/integrator entry paths, review [`PUBLIC_AUD
 
 Some reviewer and governance summary surfaces may be maintained through maintainer-side capsule projection workflows, especially on the public `dream` branch.
 
-If you propose changes to files such as `PUBLIC_DECISION_LOG.json`, `PUBLIC_EVIDENCE_GAPS_REGISTER.json`, `PUBLIC_LIMITATIONS_REGISTER.json`, `PUBLIC_CAPABILITY_MATRIX.json`, `PUBLIC_ECOSYSTEM_VALUE_MAP.json`, `PUBLIC_PROGRAM_FIT_MAP.json`, `PUBLIC_REVIEW_SCORECARD.json`, or `PUBLIC_AUDIENCE_PATHS.json`, describe the intended semantic change and keep any downstream projected output aligned with the stronger public docs, schemas, examples, and verification surfaces.
+If you propose changes to files such as `PUBLIC_DECISION_LOG.json`, `PUBLIC_EVIDENCE_GAPS_REGISTER.json`, `PUBLIC_LIMITATIONS_REGISTER.json`, `PUBLIC_CAPABILITY_MATRIX.json`, `PUBLIC_ECOSYSTEM_VALUE_MAP.json`, `PUBLIC_PROGRAM_FIT_MAP.json`, `PUBLIC_REVIEW_SCORECARD.json`, `PUBLIC_AUDIENCE_PATHS.json`, `PUBLIC_ASSURANCE_CASE.json`, `PUBLIC_DEPENDENCY_GRAPH.json`, `PUBLIC_TRACEABILITY_MATRIX.json`, `PUBLIC_EVIDENCE_STRENGTH_MAP.json`, `PUBLIC_UPDATE_COHERENCE_MAP.json`, `PUBLIC_ADOPTION_READINESS.json`, or `PUBLIC_FRESHNESS_MODEL.json`, describe the intended semantic change and keep any downstream projected output aligned with the stronger public docs, schemas, examples, and verification surfaces.
 
 ## Required discipline
 

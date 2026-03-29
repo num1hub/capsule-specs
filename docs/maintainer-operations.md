@@ -56,6 +56,13 @@ Today that projection-active summary set includes:
 - `PUBLIC_PROGRAM_FIT_MAP.json`
 - `PUBLIC_REVIEW_SCORECARD.json`
 - `PUBLIC_AUDIENCE_PATHS.json`
+- `PUBLIC_ASSURANCE_CASE.json`
+- `PUBLIC_DEPENDENCY_GRAPH.json`
+- `PUBLIC_TRACEABILITY_MATRIX.json`
+- `PUBLIC_EVIDENCE_STRENGTH_MAP.json`
+- `PUBLIC_UPDATE_COHERENCE_MAP.json`
+- `PUBLIC_ADOPTION_READINESS.json`
+- `PUBLIC_FRESHNESS_MODEL.json`
 
 Treat those files as public outputs whose semantic changes must stay aligned with the stronger public docs, schemas, examples, release evidence, and verification surfaces.
 
