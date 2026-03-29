@@ -100,7 +100,7 @@ This repository keeps release evidence in both human-readable and machine-readab
 - [`integrity-recipes.md`](integrity-recipes.md)
   Human-readable guide to the public `G16` sealing rule, recomputation recipes, and repair boundary.
 - [`python-consumption.md`](python-consumption.md)
-  Human-readable guide to cross-language Python consumption of compact references and public `G16` seal proofs from a repo checkout or extracted packed artifact.
+  Human-readable guide to cross-language Python consumption of the client-recipe navigator, compact references, and public `G16` seal proofs from a repo checkout or extracted packed artifact.
 - [`../examples/client/recipe-index.json`](../examples/client/recipe-index.json)
   Machine-readable task and runtime navigator for the published client recipe directory, including runtime-lane starts, task-oriented entrypoints, and the installed-package navigator recipes that consume it.
 - [`openapi-codegen-recipes.md`](openapi-codegen-recipes.md)
@@ -243,6 +243,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal package-consumer recipe for recomputing `integrity_sha3_512` from the installed artifact and compact reference constants.
 - [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
   Minimal Python recipe for reading compact contract references and a curated raw capsule asset from published JSON files.
+- [`../examples/client/python-client-recipe-index.py`](../examples/client/python-client-recipe-index.py)
+  Minimal Python recipe for reading the published client-recipe navigator from a repo checkout or extracted packed artifact before selecting a runtime lane.
 - [`../examples/client/python-live-validator-client.py`](../examples/client/python-live-validator-client.py)
   Minimal reusable Python client bridge for the full published validator route family, backed by the compact route pack and bounded stats-query metadata.
 - [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)

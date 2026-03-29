@@ -2698,6 +2698,13 @@
     "transformation_type": "generated",
     "notes": "Repo-local recipe for generating TypeScript declarations from the published OpenAPI contract."
   },
+  "examples/client/python-client-recipe-index.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Python repo-checkout and packed-artifact recipe for the published client-recipe navigator."
+  },
   "examples/client/python-contract-reference.py": {
     "source_paths": [
       "/home/n1/codex-workspace/capsules/capsule.foundation.capsuleos.confidence-vector.v1.json",

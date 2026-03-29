@@ -4,6 +4,7 @@ This page describes the public JSON-first consumption path for Python users.
 
 It is intentionally narrow:
 
+- read the published client-recipe navigator before choosing a Python or cross-language entrypoint
 - read compact reference JSON artifacts
 - read the compact validator envelope-family map
 - build validator-envelope requests for `validate`, `batch`, and `fix` flows from the published example payloads
@@ -21,6 +22,7 @@ If you want the strongest published HTTP contract directly rather than the compa
 
 The shortest repo-relative Python examples live under [`../examples/client/`](../examples/client/):
 
+- [`../examples/client/python-client-recipe-index.py`](../examples/client/python-client-recipe-index.py)
 - [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
 - [`../examples/client/python-live-validator-client.py`](../examples/client/python-live-validator-client.py)
 - [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
@@ -36,6 +38,7 @@ The shortest repo-relative Python examples live under [`../examples/client/`](..
 Run them from a checkout with:
 
 ```bash
+python3 examples/client/python-client-recipe-index.py
 python3 examples/client/python-contract-reference.py
 python3 examples/client/python-live-validator-client.py
 python3 examples/client/python-recompute-integrity-seal.py
@@ -49,10 +52,11 @@ python3 examples/client/python-parse-error-responses.py
 python3 examples/client/python-parse-support-responses.py
 ```
 
-The first recipe reads the compact contract-reference JSON exports.
+The first recipe reads the published client-recipe navigator and recovers the Python and package runtime starts plus the dedicated Python and installed-package navigation tasks.
+The second recipe reads the compact contract-reference JSON exports.
 That includes the compact validator envelope-family map in addition to the root constants, gate map, route map, and curated confidence-vector capsule.
-The second recipe turns the published route map plus request examples into one reusable Python live-validator bridge for `validate`, `batch`, `fix`, `gates`, and `stats`, defaulting to a dry-run summary and switching to live HTTP calls when `N1HUB_BASE_URL` and `N1HUB_TOKEN` are set.
-The third recipe recomputes `integrity_sha3_512` over the published four-root payload, verifies the positive note example, and computes the repaired hash for the intentional `G16` teaching example.
+The third recipe turns the published route map plus request examples into one reusable Python live-validator bridge for `validate`, `batch`, `fix`, `gates`, and `stats`, defaulting to a dry-run summary and switching to live HTTP calls when `N1HUB_BASE_URL` and `N1HUB_TOKEN` are set.
+The fourth recipe recomputes `integrity_sha3_512` over the published four-root payload, verifies the positive note example, and computes the repaired hash for the intentional `G16` teaching example.
 The validator-envelope request recipes load the published `validate`, `batch`, and `fix` request examples, print dry-run summaries by default, and can send those envelopes to a live validator when `N1HUB_BASE_URL` and `N1HUB_TOKEN` are set.
 The support-route recipes read the published `gates` and `stats` samples by default and switch to live HTTP requests against the same routes when `N1HUB_BASE_URL` and `N1HUB_TOKEN` are set. `python-get-stats.py` also accepts `N1HUB_STATS_LIMIT` for the bounded published `GET /api/validate/stats?limit=...` path.
 The response-parsing recipes load the published pass/fail/batch/fix, bounded shared plus route-specific error-envelope, and support-response examples so Python consumers can inspect bounded response families without guessing field layout from prose alone.
@@ -68,6 +72,7 @@ Example flow:
 npm pack
 mkdir -p packed-artifact
 tar -xzf num1hub-capsule-specs-0.1.0.tgz -C packed-artifact
+python3 packed-artifact/package/examples/client/python-client-recipe-index.py
 python3 packed-artifact/package/examples/client/python-contract-reference.py
 python3 packed-artifact/package/examples/client/python-live-validator-client.py
 python3 packed-artifact/package/examples/client/python-recompute-integrity-seal.py
@@ -86,6 +91,7 @@ Those scripts resolve the package root from their own location, so they still wo
 ## What this proves
 
 - Python consumers can read `references/contract-constants.json`, `references/validation-gates.json`, and `references/validator-envelope-families.json` directly.
+- Python consumers can read `examples/client/recipe-index.json` directly from a repo checkout or extracted packed artifact and recover runtime-lane starts plus task entrypoints without Node imports.
 - Python consumers can discover the published validator request families, response families, and shared definitions without scraping schema defs by hand.
 - Python consumers can use `references/validator-routes.json` plus the published request examples to build one reusable live client for all published validator routes instead of stitching five separate scripts together.
 - Python consumers can load the published validator-envelope request examples for `POST /api/validate`, `POST /api/validate/batch`, and `POST /api/validate/fix` without inferring request shape from prose alone.

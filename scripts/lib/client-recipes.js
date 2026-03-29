@@ -62,6 +62,7 @@ const integrityRecipeFiles = [
 ];
 
 const pythonRecipeFiles = [
+  'python-client-recipe-index.py',
   'python-contract-reference.py',
   'python-openapi-reference.py',
   'python-live-validator-client.py',
@@ -317,6 +318,15 @@ const taskEntrypoints = [
     alternatives: ['ts-package-validate-request.ts', 'ts-package-validate-batch-request.ts', 'ts-package-validate-fix-request.ts', 'ts-package-validate-responses.ts', 'ts-package-openapi-codegen.ts'],
     docs: ['docs/npm-consumption.md', 'docs/type-projections.md', 'docs/client-recipes.md'],
     runtimes: ['typescript']
+  },
+  {
+    id: 'python-recipe-navigation',
+    intent: 'Read the published client-recipe navigator from Python before choosing a repo-relative or extracted-artifact entrypoint',
+    primary_group: 'python-consumers',
+    recommended: 'python-client-recipe-index.py',
+    alternatives: ['python-live-validator-client.py', 'python-contract-reference.py', 'python-openapi-reference.py'],
+    docs: ['docs/python-consumption.md', 'docs/client-recipes.md', 'docs/integration-guide.md'],
+    runtimes: ['python']
   },
   {
     id: 'python-live-and-parsing',

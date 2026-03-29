@@ -34,6 +34,7 @@ function assert(condition, message) {
 }
 
 const recipeRelativePaths = [
+  'examples/client/python-client-recipe-index.py',
   'examples/client/python-contract-reference.py',
   'examples/client/python-openapi-reference.py',
   'examples/client/python-live-validator-client.py',

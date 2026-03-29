@@ -144,6 +144,7 @@
       ],
       "recommended_start": "python-live-validator-client.py",
       "files": [
+        "python-client-recipe-index.py",
         "python-contract-reference.py",
         "python-openapi-reference.py",
         "python-live-validator-client.py",
@@ -517,6 +518,25 @@
       ],
       "runtimes": [
         "typescript"
+      ]
+    },
+    {
+      "id": "python-recipe-navigation",
+      "intent": "Read the published client-recipe navigator from Python before choosing a repo-relative or extracted-artifact entrypoint",
+      "primary_group": "python-consumers",
+      "recommended": "python-client-recipe-index.py",
+      "alternatives": [
+        "python-live-validator-client.py",
+        "python-contract-reference.py",
+        "python-openapi-reference.py"
+      ],
+      "docs": [
+        "docs/python-consumption.md",
+        "docs/client-recipes.md",
+        "docs/integration-guide.md"
+      ],
+      "runtimes": [
+        "python"
       ]
     },
     {

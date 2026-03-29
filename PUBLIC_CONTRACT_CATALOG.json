@@ -5044,6 +5044,21 @@
         "npm run check:client-recipes",
         "npm run check:catalog"
       ]
+    },
+    {
+      "id": "examples.client.python-client-recipe-index",
+      "path": "examples/client/python-client-recipe-index.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
+        "npm run check:catalog"
+      ]
     }
   ]
 }

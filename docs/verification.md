@@ -53,7 +53,7 @@ This executes all repository-local checks in the expected order.
 - `npm run check:integrity-recipes`
   Verifies the public sealing-rule recipes, recomputed example/API hashes, and the repair boundary for the intentional `G16` teaching example.
 - `npm run check:python-recipes`
-  Verifies the cross-language Python recipes for compact references, validator-envelope request flows, live support-route reads, validate/error/support response parsing including the route-specific stats-computation failure sample, and public `G16` seal proofs, including execution from both a repo checkout and an extracted packed artifact.
+  Verifies the cross-language Python recipes for the published client-recipe navigator, compact references, validator-envelope request flows, live support-route reads, validate/error/support response parsing including the route-specific stats-computation failure sample, and public `G16` seal proofs, including execution from both a repo checkout and an extracted packed artifact.
 - `npm run check:example-coverage`
   Verifies `PUBLIC_EXAMPLE_COVERAGE.json`, capsule/API example coverage links, and surrounding example docs.
 - `npm run check:boundary-map`
@@ -180,7 +180,7 @@ Serious public changes should not be considered complete until:
 - `docs/invalid-capsule-examples.md`, `examples/invalid/`, the invalid-example Ajv recipes under `examples/client/`, and `scripts/check-invalid-examples.js` stay aligned with the published schema-invalid fixtures and their documented structural rejection paths
 - `docs/invalid-api-envelope-examples.md`, `examples/api-invalid/`, the invalid-envelope Ajv recipes under `examples/client/`, and `scripts/check-invalid-api-examples.js` stay aligned with the published schema-invalid validator-envelope fixtures and their documented structural rejection paths
 - `docs/integrity-recipes.md`, the seal-recomputation recipes under `examples/client/`, and `scripts/check-integrity-recipes.js` stay aligned with the public `G16` rule and the published example/API integrity hashes
-- `docs/python-consumption.md`, the Python recipes under `examples/client/`, and `scripts/check-python-recipes.js` stay aligned with the published compact references, validator-envelope request/response payloads, public example seals, and extracted packed-artifact layout they claim to support
+- `docs/python-consumption.md`, the Python recipes under `examples/client/`, and `scripts/check-python-recipes.js` stay aligned with the published client-recipe navigator, compact references, validator-envelope request/response payloads, public example seals, and extracted packed-artifact layout they claim to support
 - API examples stay aligned with `schemas/validator-api-envelopes.schema.json`
 - contributor-facing intake surfaces stay aligned with `docs/community-health.md`
 - repo-owned GitHub label and milestone surfaces stay aligned with `.github/labels.json`, `.github/milestones.json`, and `docs/github-operations.md`

@@ -17,6 +17,8 @@ If you need the quickest task-oriented map of the consumer snippets before choos
 
 If you need that same navigator from an installed package instead of a repo checkout, start with [`../examples/client/cjs-package-client-recipe-index.cjs`](../examples/client/cjs-package-client-recipe-index.cjs), [`../examples/client/esm-package-client-recipe-index.mjs`](../examples/client/esm-package-client-recipe-index.mjs), or [`../examples/client/ts-package-client-recipe-index.ts`](../examples/client/ts-package-client-recipe-index.ts), then move to [`npm-consumption.md`](npm-consumption.md).
 
+If you need the same navigator from Python instead of Node imports, start with [`../examples/client/python-client-recipe-index.py`](../examples/client/python-client-recipe-index.py), then move into [`python-consumption.md`](python-consumption.md).
+
 If you need compact enums, gate IDs, or validator option flags for UI pickers, code generators, or CLI hints, also inspect:
 
 - [`reference-pack.md`](reference-pack.md)

@@ -389,6 +389,13 @@ const expectedIntegrityRecipeImports = {
 };
 
 const expectedPythonRecipeReferences = {
+  'python-client-recipe-index.py': [
+    'examples/client/recipe-index.json',
+    'python-recipe-navigation',
+    'package-recipe-navigation',
+    'python-consumers',
+    'package-runtime'
+  ],
   'python-contract-reference.py': [
     'references/contract-constants.json',
     'references/validation-gates.json',

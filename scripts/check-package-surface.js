@@ -191,7 +191,7 @@ assert(
 assert(recipeIndex.directory === 'examples/client', 'package exports must expose the client recipe navigator');
 assert(Array.isArray(recipeIndex.groups) && recipeIndex.groups.length === 8, 'package exports must expose all client recipe groups');
 assert(
-  Array.isArray(recipeIndex.task_entrypoints) && recipeIndex.task_entrypoints.length === 16,
+  Array.isArray(recipeIndex.task_entrypoints) && recipeIndex.task_entrypoints.length === 17,
   'package exports must expose all client recipe task entrypoints'
 );
 assert(
@@ -202,6 +202,11 @@ assert(
 assert(
   recipeIndex.groups.find((group) => group.id === 'package-runtime')?.recommended_start === 'cjs-package-live-validator-client.cjs',
   'package exports must expose the package-runtime recommended start'
+);
+assert(
+  recipeIndex.task_entrypoints.find((entry) => entry.id === 'python-recipe-navigation')?.recommended ===
+    'python-client-recipe-index.py',
+  'package exports must expose the Python recipe-navigation task'
 );
 assert(
   invalidRelationTypeCapsule.metadata?.capsule_id === 'capsule.example.invalid-relation-type.v1',

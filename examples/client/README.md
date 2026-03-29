@@ -19,6 +19,7 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 - Direct OpenAPI reading and codegen: `ts-openapi-route-summary.ts` and `openapi-generate-validator-types.mjs`
 - Raw-schema validation and rejection: `ajv-validate-capsule.mjs` and `ajv-reject-invalid-capsules.mjs`
 - Python full-route bridge: `python-live-validator-client.py`
+- Python navigator lane: `python-client-recipe-index.py`
 - Installed-package runtime lane: `cjs-package-live-validator-client.cjs`
 - Installed-package navigator lane: `cjs-package-client-recipe-index.cjs`
 - Installed-package TypeScript lane: `ts-package-live-validator-client.ts`
@@ -91,6 +92,7 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 
 ## Python recipes
 
+- `python-client-recipe-index.py`
 - `python-contract-reference.py`
 - `python-openapi-reference.py`
 - `python-live-validator-client.py`
@@ -152,4 +154,4 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 - The raw-schema recipes demonstrate direct Ajv validation against published schema files, the archive-bundle portability schema, single-file schema bundles, package-exported schema assets, and intentionally invalid archive, capsule, and validator-envelope fixtures.
 - The integrity recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload and how to repair the intentional `G16` teaching example without private runtime helpers.
 - The shell, Node, and Python live-route recipes together now cover all published validator routes: `validate`, `batch`, `fix`, `gates`, and `stats`, including the bounded `limit` query path on `stats`.
-- The Python recipes demonstrate non-Node consumption of compact JSON references, the strongest-source OpenAPI document, the published validator envelope-family map, a reusable live-client bridge backed by the published route pack, validator-envelope request flows, validate/error/support response parsing including the route-specific stats-computation failure sample, live support-route reads, and public seal proofs from a repo checkout or extracted packed artifact.
+- The Python recipes demonstrate non-Node consumption of the published client-recipe navigator, compact JSON references, the strongest-source OpenAPI document, the published validator envelope-family map, a reusable live-client bridge backed by the published route pack, validator-envelope request flows, validate/error/support response parsing including the route-specific stats-computation failure sample, live support-route reads, and public seal proofs from a repo checkout or extracted packed artifact.
