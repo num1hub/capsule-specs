@@ -14,6 +14,7 @@ const repoLocalRecipes = [
   'ajv-validate-client-recipe-index.mjs',
   'ajv-validate-schema-bundles.mjs',
   'ajv-reject-invalid-archive-bundles.mjs',
+  'ajv-reject-invalid-client-recipe-index.mjs',
   'ajv-reject-invalid-capsules.mjs',
   'ajv-reject-invalid-validator-envelopes.mjs'
 ];
@@ -24,6 +25,7 @@ const packageRecipes = [
   'esm-package-ajv-validate-client-recipe-index.mjs',
   'esm-package-ajv-validate-schema-bundles.mjs',
   'esm-package-ajv-reject-invalid-archive-bundles.mjs',
+  'esm-package-ajv-reject-invalid-client-recipe-index.mjs',
   'esm-package-ajv-reject-invalid-capsules.mjs',
   'esm-package-ajv-reject-invalid-validator-envelopes.mjs'
 ];
@@ -79,6 +81,12 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/schemas/archive-bundle.schema.json',
     '@num1hub/capsule-specs/examples/archive-invalid/archive-bundle.invalid-created-at.json',
     '@num1hub/capsule-specs/examples/archive-invalid/archive-bundle.invalid-content-class.json'
+  ],
+  'esm-package-ajv-reject-invalid-client-recipe-index.mjs': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.missing-files.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.invalid-runtime.json'
   ],
   'esm-package-ajv-validate-schema-bundles.mjs': [
     'ajv/dist/2020.js',

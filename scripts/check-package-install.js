@@ -69,6 +69,12 @@ const packageClientRecipeIndexSchemaRecipePath = path.join(
   'client',
   'esm-package-ajv-validate-client-recipe-index.mjs'
 );
+const packageInvalidClientRecipeIndexRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'esm-package-ajv-reject-invalid-client-recipe-index.mjs'
+);
 const packageBundleRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-ajv-validate-schema-bundles.mjs');
 const packageInvalidArchiveRecipePath = path.join(
   repoRoot,
@@ -257,6 +263,12 @@ try {
     'utf8'
   );
   run(process.execPath, ['client-recipe-index-schema-consumer.mjs'], esmProject);
+  fs.writeFileSync(
+    path.join(esmProject, 'invalid-client-recipe-index-consumer.mjs'),
+    fs.readFileSync(packageInvalidClientRecipeIndexRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['invalid-client-recipe-index-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'invalid-archive-consumer.mjs'), fs.readFileSync(packageInvalidArchiveRecipePath, 'utf8'), 'utf8');
   run(process.execPath, ['invalid-archive-consumer.mjs'], esmProject);
   fs.writeFileSync(path.join(esmProject, 'bundle-schema-consumer.mjs'), fs.readFileSync(packageBundleRecipePath, 'utf8'), 'utf8');
@@ -355,7 +367,7 @@ try {
   run(process.execPath, ['dist/openapi-codegen-consumer.js'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, client-recipe navigator, OpenAPI reading and OpenAPI type-generation, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, client-recipe-index, archive, and bundled schema exports, invalid archive, capsule, and API schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, client-recipe navigator, OpenAPI reading and OpenAPI type-generation, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, client-recipe-index, archive, and bundled schema exports, invalid archive, capsule, API, and client-recipe-index schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

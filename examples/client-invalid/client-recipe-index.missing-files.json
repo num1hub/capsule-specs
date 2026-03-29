@@ -1,0 +1,37 @@
+{
+  "version": "0.1.0",
+  "directory": "examples/client",
+  "purpose": "Invalid client-recipe navigator fixture missing the required files field.",
+  "groups": [
+    {
+      "id": "raw-schema-ajv",
+      "title": "Raw schema and bundle Ajv recipes",
+      "description": "Invalid fixture missing the required files field on a group definition.",
+      "audiences": [
+        "integrators"
+      ],
+      "primary_docs": [
+        "docs/schema-validation-recipes.md"
+      ],
+      "recommended_start": "ajv-validate-client-recipe-index.mjs"
+    }
+  ],
+  "task_entrypoints": [
+    {
+      "id": "raw-schema-validation",
+      "intent": "Validate published assets directly against JSON Schema with Ajv.",
+      "primary_group": "raw-schema-ajv",
+      "recommended": "ajv-validate-client-recipe-index.mjs",
+      "alternatives": [
+        "ajv-validate-capsule.mjs"
+      ],
+      "docs": [
+        "docs/schema-validation-recipes.md"
+      ],
+      "runtimes": [
+        "ajv",
+        "esm"
+      ]
+    }
+  ]
+}

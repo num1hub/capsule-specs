@@ -48,6 +48,7 @@ const schemaRecipeFiles = [
   'ajv-validate-client-recipe-index.mjs',
   'ajv-validate-schema-bundles.mjs',
   'ajv-reject-invalid-archive-bundles.mjs',
+  'ajv-reject-invalid-client-recipe-index.mjs',
   'ajv-reject-invalid-capsules.mjs',
   'ajv-reject-invalid-validator-envelopes.mjs',
   'esm-package-ajv-validate-contracts.mjs',
@@ -55,6 +56,7 @@ const schemaRecipeFiles = [
   'esm-package-ajv-validate-client-recipe-index.mjs',
   'esm-package-ajv-validate-schema-bundles.mjs',
   'esm-package-ajv-reject-invalid-archive-bundles.mjs',
+  'esm-package-ajv-reject-invalid-client-recipe-index.mjs',
   'esm-package-ajv-reject-invalid-capsules.mjs',
   'esm-package-ajv-reject-invalid-validator-envelopes.mjs'
 ];
@@ -282,8 +284,18 @@ const taskEntrypoints = [
     intent: 'Confirm intentionally invalid published fixtures are rejected for structural reasons',
     primary_group: 'raw-schema-ajv',
     recommended: 'ajv-reject-invalid-capsules.mjs',
-    alternatives: ['ajv-reject-invalid-validator-envelopes.mjs', 'ajv-reject-invalid-archive-bundles.mjs'],
-    docs: ['docs/client-recipes.md', 'docs/invalid-capsule-examples.md', 'docs/invalid-api-envelope-examples.md', 'docs/invalid-archive-bundle-examples.md'],
+    alternatives: [
+      'ajv-reject-invalid-validator-envelopes.mjs',
+      'ajv-reject-invalid-archive-bundles.mjs',
+      'ajv-reject-invalid-client-recipe-index.mjs'
+    ],
+    docs: [
+      'docs/client-recipes.md',
+      'docs/invalid-capsule-examples.md',
+      'docs/invalid-api-envelope-examples.md',
+      'docs/invalid-archive-bundle-examples.md',
+      'docs/invalid-client-recipe-index-examples.md'
+    ],
     runtimes: ['ajv', 'esm']
   },
   {

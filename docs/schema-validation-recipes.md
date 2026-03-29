@@ -39,6 +39,7 @@ Start with these copyable examples:
 - [`../examples/client/ajv-validate-archive-bundle.mjs`](../examples/client/ajv-validate-archive-bundle.mjs)
 - [`../examples/client/ajv-validate-schema-bundles.mjs`](../examples/client/ajv-validate-schema-bundles.mjs)
 - [`../examples/client/ajv-reject-invalid-archive-bundles.mjs`](../examples/client/ajv-reject-invalid-archive-bundles.mjs)
+- [`../examples/client/ajv-reject-invalid-client-recipe-index.mjs`](../examples/client/ajv-reject-invalid-client-recipe-index.mjs)
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/ajv-reject-invalid-validator-envelopes.mjs)
 
@@ -50,6 +51,7 @@ They validate:
 - the published archive-bundle sample against the public portability/export schema with `Ajv2020 + ajv-formats`
 - the same capsule and validator-envelope payloads against single-file schema bundles when you want fewer imports and no manual multi-file `addSchema` choreography
 - intentionally invalid archive-bundle fixtures against their documented structural rejection rules
+- intentionally invalid client-recipe navigator fixtures against their documented structural rejection rules
 - intentionally invalid capsule fixtures against their documented structural rejection rules
 - intentionally invalid validator-envelope fixtures against their documented structural rejection rules
 
@@ -62,11 +64,12 @@ node examples/client/ajv-validate-validator-envelope.mjs
 node examples/client/ajv-validate-archive-bundle.mjs
 node examples/client/ajv-validate-schema-bundles.mjs
 node examples/client/ajv-reject-invalid-archive-bundles.mjs
+node examples/client/ajv-reject-invalid-client-recipe-index.mjs
 node examples/client/ajv-reject-invalid-capsules.mjs
 node examples/client/ajv-reject-invalid-validator-envelopes.mjs
 ```
 
-For the underlying invalid fixtures and their intended failure reasons, see [`invalid-archive-bundle-examples.md`](invalid-archive-bundle-examples.md), [`invalid-capsule-examples.md`](invalid-capsule-examples.md), [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md), [`../examples/archive-invalid/README.md`](../examples/archive-invalid/README.md), [`../examples/invalid/README.md`](../examples/invalid/README.md), and [`../examples/api-invalid/README.md`](../examples/api-invalid/README.md).
+For the underlying invalid fixtures and their intended failure reasons, see [`invalid-archive-bundle-examples.md`](invalid-archive-bundle-examples.md), [`invalid-client-recipe-index-examples.md`](invalid-client-recipe-index-examples.md), [`invalid-capsule-examples.md`](invalid-capsule-examples.md), [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md), [`../examples/archive-invalid/README.md`](../examples/archive-invalid/README.md), [`../examples/client-invalid/README.md`](../examples/client-invalid/README.md), [`../examples/invalid/README.md`](../examples/invalid/README.md), and [`../examples/api-invalid/README.md`](../examples/api-invalid/README.md).
 
 ## Package-consumer Ajv recipe
 
@@ -77,6 +80,7 @@ If you want the same raw-schema path from an installed tarball or future package
 - [`../examples/client/esm-package-ajv-validate-client-recipe-index.mjs`](../examples/client/esm-package-ajv-validate-client-recipe-index.mjs)
 - [`../examples/client/esm-package-ajv-validate-schema-bundles.mjs`](../examples/client/esm-package-ajv-validate-schema-bundles.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs`](../examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs)
+- [`../examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs`](../examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs)
 
@@ -92,6 +96,7 @@ That recipe consumes:
 - public example capsule and API payload files from package exports
 - the public archive-bundle sample from package exports
 - intentionally invalid archive-bundle fixtures from package exports
+- intentionally invalid client-recipe navigator fixtures from package exports
 
 The fresh-install proof for that path lives in [`../scripts/check-package-install.js`](../scripts/check-package-install.js).
 
@@ -109,6 +114,7 @@ The fresh-install proof for that path lives in [`../scripts/check-package-instal
 - `npm run check:schema-recipes`
 - `npm run check:archive-recipes`
 - `npm run check:invalid-archive-examples`
+- `npm run check:invalid-client-recipe-index-examples`
 - `npm run check:invalid-examples`
 - `npm run check:invalid-api-examples`
 - `npm run check:package-install`

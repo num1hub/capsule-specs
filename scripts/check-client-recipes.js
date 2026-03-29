@@ -307,6 +307,12 @@ const expectedSchemaRecipeImports = {
     '../../schemas/client-recipe-index.schema.json',
     './recipe-index.json'
   ],
+  'ajv-reject-invalid-client-recipe-index.mjs': [
+    'ajv/dist/2020.js',
+    '../../schemas/client-recipe-index.schema.json',
+    '../client-invalid/client-recipe-index.missing-files.json',
+    '../client-invalid/client-recipe-index.invalid-runtime.json'
+  ],
   'ajv-validate-validator-envelope.mjs': [
     'ajv/dist/2020.js',
     '../../schemas/capsule-schema.json',
@@ -370,6 +376,12 @@ const expectedSchemaRecipeImports = {
     'ajv/dist/2020.js',
     '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
     '@num1hub/capsule-specs/examples/client/recipe-index.json'
+  ],
+  'esm-package-ajv-reject-invalid-client-recipe-index.mjs': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.missing-files.json',
+    '@num1hub/capsule-specs/examples/client-invalid/client-recipe-index.invalid-runtime.json'
   ],
   'esm-package-ajv-validate-schema-bundles.mjs': [
     'ajv/dist/2020.js',

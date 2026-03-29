@@ -357,6 +357,7 @@ for (const relativePath of [
   'docs/npm-consumption.md',
   'docs/archive-validation-recipes.md',
   'docs/invalid-archive-bundle-examples.md',
+  'docs/invalid-client-recipe-index-examples.md',
   'docs/schema-bundles.md',
   'docs/schema-validation-recipes.md',
   'docs/invalid-capsule-examples.md',
@@ -384,6 +385,7 @@ for (const relativePath of [
   'examples/client/ajv-validate-archive-bundle.mjs',
   'examples/client/ajv-validate-schema-bundles.mjs',
   'examples/client/ajv-reject-invalid-archive-bundles.mjs',
+  'examples/client/ajv-reject-invalid-client-recipe-index.mjs',
   'examples/client/ajv-reject-invalid-capsules.mjs',
   'examples/client/ajv-reject-invalid-validator-envelopes.mjs',
   'examples/client/cjs-package-contract-reference.cjs',
@@ -400,6 +402,7 @@ for (const relativePath of [
   'examples/client/esm-package-ajv-validate-client-recipe-index.mjs',
   'examples/client/esm-package-ajv-validate-schema-bundles.mjs',
   'examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs',
+  'examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs',
   'examples/client/esm-package-ajv-reject-invalid-capsules.mjs',
   'examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs',
   'examples/client/esm-package-live-validator-client.mjs',
@@ -457,7 +460,10 @@ for (const relativePath of [
   'examples/api-invalid/validate-response.fail.invalid-gate.json',
   'examples/archive-invalid/README.md',
   'examples/archive-invalid/archive-bundle.invalid-created-at.json',
-  'examples/archive-invalid/archive-bundle.invalid-content-class.json'
+  'examples/archive-invalid/archive-bundle.invalid-content-class.json',
+  'examples/client-invalid/README.md',
+  'examples/client-invalid/client-recipe-index.missing-files.json',
+  'examples/client-invalid/client-recipe-index.invalid-runtime.json'
 ]) {
   assert(packedFiles.has(relativePath), `npm pack surface must include ${relativePath}`);
 }

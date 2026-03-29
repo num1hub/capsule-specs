@@ -6,14 +6,14 @@
   "notice_file": "NOTICE",
   "stability_phase": "0.x",
   "manifest_coverage": {
-    "files": 390,
-    "manifest_entries": 390
+    "files": 397,
+    "manifest_entries": 397
   },
   "surface_summary": {
-    "catalog_entries": 340,
+    "catalog_entries": 347,
     "example_capsules": 5,
     "api_example_files": 15,
-    "markdown_files": 101
+    "markdown_files": 103
   },
   "repo_local_checks": [
     {
@@ -230,6 +230,10 @@
     },
     {
       "command": "npm run check:release",
+      "status": "pass"
+    },
+    {
+      "command": "npm run check:invalid-client-recipe-index-examples",
       "status": "pass"
     }
   ],

@@ -49,12 +49,13 @@
 - package-consumer support-response recipes for `gates` and `stats`, plus fresh-install proof that the installed validator projection layer covers support payload parsing as well as `validate` request/response flows
 - compact contract-reference JSON artifacts, their directory guide and human guide, CommonJS/ESM/TypeScript/Python package-consumer recipes, and a repo-local verifier
 - compact validator-envelope-family reference JSON, a shared TypeScript envelope-family projection, their consumer recipes, and repo-local verifier
-- machine-readable client recipe index for runtime-lane starts plus task-oriented discovery across the published consumer snippets, a bounded JSON Schema for that navigator, a shared TypeScript client-navigator projection, verifier-backed coverage for group ownership and task wiring, repo-local plus installed-package Ajv navigator validation recipes, and repo-local plus installed-package CommonJS/ESM/TypeScript navigator consumers
+- machine-readable client recipe index for runtime-lane starts plus task-oriented discovery across the published consumer snippets, a bounded JSON Schema for that navigator, a shared TypeScript client-navigator projection, verifier-backed coverage for group ownership and task wiring, repo-local plus installed-package Ajv navigator validation recipes, intentionally schema-invalid navigator fixtures with dedicated rejection recipes, and repo-local plus installed-package CommonJS/ESM/TypeScript navigator consumers
 - dedicated OpenAPI/compact-reference coherence verification so the validator route and envelope-family summaries stay subordinate to the stronger published HTTP contract
 - single-file bundled schema artifacts, their human guide, package-consumer recipes, and repo-local verifier
 - Ajv-based raw-schema consumer recipes, their human guide, and repo-local verifier
 - intentionally schema-invalid capsule fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
 - intentionally schema-invalid validator-envelope fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
+- intentionally schema-invalid client-recipe navigator fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
 - integrity-seal recomputation docs, repo-local and package-consumer seal recipes, compact integrity constants, and a dedicated verifier for published `G16` example and API hash correctness
 - cross-language Python consumption docs, Python recipes for client-recipe navigation, compact references, a reusable full-route live-validator bridge, validator-envelope request flows, dedicated validate/error/support response parsing including the route-specific stats-computation failure sample, and public `G16` seal proofs, plus a dedicated verifier for repo-local and extracted packed-artifact execution
 - synthetic example capsules, a linked graph example, and a known-ID catalog
@@ -106,6 +107,7 @@ Repository-local audit on 2026-03-29:
 - `node scripts/check-invalid-archive-examples.js`: pass
 - `node scripts/check-invalid-examples.js`: pass
 - `node scripts/check-invalid-api-examples.js`: pass
+- `node scripts/check-invalid-client-recipe-index-examples.js`: pass
 - `node scripts/check-integrity-recipes.js`: pass
 - `node scripts/check-python-recipes.js`: pass
 - `node scripts/check-example-coverage.js`: pass
@@ -143,7 +145,7 @@ Repository-local audit on 2026-03-29:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `390` files / `390` manifest entries
+- manifest coverage: `397` files / `397` manifest entries
 
 Upstream validator checks on 2026-03-26:
 
@@ -169,6 +171,7 @@ Upstream validator checks on 2026-03-26:
 - `PUBLIC_EXAMPLE_COVERAGE.json` is a curated fixture-coverage summary and must stay subordinate to the stronger example files, route docs, and validator-backed checks it references
 - `docs/invalid-capsule-examples.md`, `examples/invalid/`, and `scripts/check-invalid-examples.js` are a bounded structural-rejection teaching layer and must stay subordinate to the stronger published schemas, validator docs, and live validator behavior they complement
 - `docs/invalid-api-envelope-examples.md`, `examples/api-invalid/`, and `scripts/check-invalid-api-examples.js` are a bounded structural-rejection teaching layer for validator HTTP envelopes and must stay subordinate to the stronger published schemas, OpenAPI, validator docs, and live validator behavior they complement
+- `docs/invalid-client-recipe-index-examples.md`, `examples/client-invalid/`, and `scripts/check-invalid-client-recipe-index-examples.js` are a bounded structural-rejection teaching layer for the machine-readable client-recipe navigator and must stay subordinate to the stronger published navigator JSON, navigator schema, client-recipe docs, and verifier-backed task wiring they complement
 - `docs/integrity-recipes.md`, the seal-recomputation recipes under `examples/client/`, `references/contract-constants.json`, and `scripts/check-integrity-recipes.js` are a bounded public proof of the published `G16` sealing rule and example/API hash correctness, not a full replacement for live validator edge-case behavior
 - `docs/python-consumption.md`, the Python recipes under `examples/client/`, and `scripts/check-python-recipes.js` are a bounded raw-asset and extracted-artifact consumer path for compact references, a reusable validator-route bridge, and public `G16` seal proofs, not a Python SDK or PyPI distribution promise
 - `docs/openapi-codegen-recipes.md`, the repo-local plus CommonJS/ESM/TypeScript package OpenAPI code-generation recipes under `examples/client/`, and `scripts/check-openapi-codegen.js` are a bounded generator-consumer layer over the stronger published OpenAPI artifact, not a promise that generated declarations outrank OpenAPI or live validator behavior

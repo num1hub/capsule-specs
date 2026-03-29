@@ -97,6 +97,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Human-readable guide to intentionally schema-invalid capsule fixtures and their documented structural rejection paths.
 - [`invalid-api-envelope-examples.md`](invalid-api-envelope-examples.md)
   Human-readable guide to intentionally schema-invalid validator-envelope fixtures and their documented structural rejection paths.
+- [`invalid-client-recipe-index-examples.md`](invalid-client-recipe-index-examples.md)
+  Human-readable guide to intentionally schema-invalid client-recipe navigator fixtures and their documented structural rejection paths.
 - [`integrity-recipes.md`](integrity-recipes.md)
   Human-readable guide to the public `G16` sealing rule, recomputation recipes, and repair boundary.
 - [`python-consumption.md`](python-consumption.md)
@@ -161,6 +163,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that the published invalid schema fixtures stay rejected for the documented structural reasons.
 - [`../scripts/check-invalid-api-examples.js`](../scripts/check-invalid-api-examples.js)
   Repo-local verification that intentionally invalid validator-envelope fixtures stay rejected for the documented structural reasons.
+- [`../scripts/check-invalid-client-recipe-index-examples.js`](../scripts/check-invalid-client-recipe-index-examples.js)
+  Repo-local verification that intentionally invalid client-recipe navigator fixtures stay rejected for the documented structural reasons.
 - [`../scripts/check-integrity-recipes.js`](../scripts/check-integrity-recipes.js)
   Repo-local verification that the published example/API integrity hashes and seal-recomputation recipes stay aligned to the current public `G16` rule.
 - [`../scripts/check-python-recipes.js`](../scripts/check-python-recipes.js)
@@ -171,6 +175,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal source-level TypeScript recipe for typing the published client-recipe navigator through the shared client-navigator projection.
 - [`../examples/client/ajv-validate-client-recipe-index.mjs`](../examples/client/ajv-validate-client-recipe-index.mjs)
   Minimal repo-local Ajv recipe for validating the published client-recipe navigator against its bounded schema.
+- [`../examples/client/ajv-reject-invalid-client-recipe-index.mjs`](../examples/client/ajv-reject-invalid-client-recipe-index.mjs)
+  Minimal repo-local Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures for the documented structural reasons.
 - [`../examples/client/ts-build-validate-batch-request.ts`](../examples/client/ts-build-validate-batch-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator batch request envelope.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)

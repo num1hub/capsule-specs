@@ -197,7 +197,7 @@
     },
     {
       "id": "raw-json-schema-consumer-path",
-      "claim": "The public surface supports direct raw-schema and single-file bundled-schema validation of capsules, validator-envelope payloads, and archive-bundle payloads through Ajv-based recipes from both a repo checkout and an installed package, including explicit schema-invalid archive, capsule, and validator-envelope fixtures, without forcing consumers onto the projection layer.",
+      "claim": "The public surface supports direct raw-schema and single-file bundled-schema validation of capsules, the client-recipe navigator, validator-envelope payloads, and archive-bundle payloads through Ajv-based recipes from both a repo checkout and an installed package, including explicit schema-invalid archive, client-recipe navigator, capsule, and validator-envelope fixtures, without forcing consumers onto the projection layer.",
       "audiences": [
         "integrators",
         "tool-builders",
@@ -214,7 +214,8 @@
         "schemas/validator-api-envelopes.bundle.json",
         "scripts/check-schema-recipes.js",
         "docs/invalid-api-envelope-examples.md",
-        "docs/invalid-archive-bundle-examples.md"
+        "docs/invalid-archive-bundle-examples.md",
+        "docs/invalid-client-recipe-index-examples.md"
       ],
       "supporting_surfaces": [
         "docs/integration-guide.md",
@@ -244,7 +245,13 @@
         "examples/archive-invalid/archive-bundle.invalid-created-at.json",
         "examples/archive-invalid/archive-bundle.invalid-content-class.json",
         "scripts/check-archive-recipes.js",
-        "scripts/check-invalid-archive-examples.js"
+        "scripts/check-invalid-archive-examples.js",
+        "examples/client/ajv-validate-client-recipe-index.mjs",
+        "examples/client/ajv-reject-invalid-client-recipe-index.mjs",
+        "examples/client/esm-package-ajv-validate-client-recipe-index.mjs",
+        "examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs",
+        "examples/client-invalid/README.md",
+        "scripts/check-invalid-client-recipe-index-examples.js"
       ],
       "verify_commands": [
         "npm run check:schema-recipes",
@@ -254,7 +261,8 @@
         "npm run check:traceability",
         "npm run check:invalid-api-examples",
         "npm run check:archive-recipes",
-        "npm run check:invalid-archive-examples"
+        "npm run check:invalid-archive-examples",
+        "npm run check:invalid-client-recipe-index-examples"
       ]
     },
     {

@@ -11,7 +11,7 @@ This is the right workflow for:
 - docs and index changes
 - schema commentary and schema-family docs
 - example and API-payload refinements
-- schema-invalid capsule or validator-envelope fixture refinements
+- schema-invalid capsule, client-recipe navigator, or validator-envelope fixture refinements
 - public-safe TypeScript or Zod projection updates
 - package-export, build, or pack-surface updates for the published projection layer
 - community-health and GitHub-surface maintenance
@@ -148,8 +148,8 @@ Common co-movement rules:
   review `docs/openapi.md`, `docs/reference-pack.md`, `docs/api-envelopes.md`, `references/validator-routes.json`, `references/validator-envelope-families.json`, and re-run `npm run check:openapi-coherence` plus `npm run check:reference-pack`
 - changed sealing, `integrity_sha3_512`, or validator response `computedHash` examples:
   review `docs/integrity-recipes.md`, `docs/reference-pack.md`, `examples/client/`, `examples/api/`, and re-run `npm run check:integrity-recipes`
-- changed schema-invalid fixture layers for capsules or validator envelopes:
-  review `docs/schema-validation-recipes.md`, `docs/invalid-capsule-examples.md`, `docs/invalid-api-envelope-examples.md`, `examples/invalid/`, `examples/api-invalid/`, and re-run `npm run check:invalid-examples`, `npm run check:invalid-api-examples`, and `npm run check:schema-recipes`
+- changed schema-invalid fixture layers for capsules, the client-recipe navigator, or validator envelopes:
+  review `docs/schema-validation-recipes.md`, `docs/invalid-capsule-examples.md`, `docs/invalid-client-recipe-index-examples.md`, `docs/invalid-api-envelope-examples.md`, `examples/invalid/`, `examples/client-invalid/`, `examples/api-invalid/`, and re-run `npm run check:invalid-examples`, `npm run check:invalid-client-recipe-index-examples`, `npm run check:invalid-api-examples`, and `npm run check:schema-recipes`
 
 ## Step 3: Re-run the narrow checks
 

@@ -489,6 +489,7 @@
       "verify_commands": [
         "npm run check:docs",
         "npm run check:client-recipes",
+        "npm run check:invalid-client-recipe-index-examples",
         "npm run check:catalog",
         "npm run check:surface"
       ]
@@ -1137,6 +1138,7 @@
       "verify_commands": [
         "npm run check:docs",
         "npm run check:schema-recipes",
+        "npm run check:invalid-client-recipe-index-examples",
         "npm run check:catalog"
       ]
     },
@@ -5178,6 +5180,114 @@
       "verify_commands": [
         "npm run check:schema-recipes",
         "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "docs.invalid-client-recipe-index-examples",
+      "path": "docs/invalid-client-recipe-index-examples.md",
+      "kind": "integration-doc",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:docs",
+        "npm run check:invalid-client-recipe-index-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ajv-reject-invalid-client-recipe-index",
+      "path": "examples/client/ajv-reject-invalid-client-recipe-index.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:schema-recipes",
+        "npm run check:invalid-client-recipe-index-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.esm-package-ajv-reject-invalid-client-recipe-index",
+      "path": "examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:schema-recipes",
+        "npm run check:package-install",
+        "npm run check:invalid-client-recipe-index-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client-invalid.readme",
+      "path": "examples/client-invalid/README.md",
+      "kind": "example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-client-recipe-index-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client-invalid.missing-files",
+      "path": "examples/client-invalid/client-recipe-index.missing-files.json",
+      "kind": "example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-client-recipe-index-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client-invalid.invalid-runtime",
+      "path": "examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "kind": "example",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders",
+        "reviewers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-client-recipe-index-examples",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.invalid-client-recipe-index.check",
+      "path": "scripts/check-invalid-client-recipe-index-examples.js",
+      "kind": "support-artifact",
+      "stability": "maintained",
+      "audiences": [
+        "contributors",
+        "reviewers",
+        "maintainers"
+      ],
+      "verify_commands": [
+        "npm run check:invalid-client-recipe-index-examples",
         "npm run check:catalog"
       ]
     }

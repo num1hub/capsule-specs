@@ -7095,5 +7095,75 @@
     ],
     "transformation_type": "generated",
     "notes": "Versioning and contract-change policy for the public repository surface."
+  },
+  "docs/invalid-client-recipe-index-examples.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/examples/client-invalid/README.md",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to intentionally schema-invalid client-recipe navigator fixtures and their structural rejection boundaries."
+  },
+  "examples/client-invalid/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-client-recipe-index-examples.md",
+      "/home/n1/codex-workspace/examples/client/README.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for intentionally schema-invalid client-recipe navigator fixtures."
+  },
+  "examples/client-invalid/client-recipe-index.missing-files.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema-invalid client-recipe navigator fixture missing the required group files field."
+  },
+  "examples/client-invalid/client-recipe-index.invalid-runtime.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema-invalid client-recipe navigator fixture with a non-canonical runtime enum value."
+  },
+  "examples/client/ajv-reject-invalid-client-recipe-index.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
+      "/home/n1/codex-workspace/docs/invalid-client-recipe-index-examples.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
+  },
+  "examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Installed-package Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
+  },
+  "scripts/check-invalid-client-recipe-index-examples.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-client-recipe-index-examples.md",
+      "/home/n1/codex-workspace/examples/client-invalid/README.md",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-client-recipe-index.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for intentionally schema-invalid client-recipe navigator fixtures and their documented rejection paths."
   }
 }

@@ -148,7 +148,7 @@
     },
     {
       "id": "raw-schema-consumer-recipes",
-      "summary": "Protects Ajv-based raw-schema, archive-schema, and bundled-schema consumer recipes so direct capsule, validator-envelope, and archive-bundle validation, including structural rejection of intentionally invalid archive, capsule, and API-envelope fixtures, stays executable from both repo-relative files and installed package exports.",
+      "summary": "Protects Ajv-based raw-schema, client-recipe navigator, archive-schema, and bundled-schema consumer recipes so direct capsule, client-recipe navigator, validator-envelope, and archive-bundle validation, including structural rejection of intentionally invalid archive, client-recipe navigator, capsule, and API-envelope fixtures, stays executable from both repo-relative files and installed package exports.",
       "commands": [
         "npm run check:schema-recipes",
         "npm run check:archive-recipes",
@@ -157,7 +157,8 @@
         "npm run check:invalid-examples",
         "npm run check:package-install",
         "npm run check:api-schemas",
-        "npm run check:invalid-api-examples"
+        "npm run check:invalid-api-examples",
+        "npm run check:invalid-client-recipe-index-examples"
       ],
       "protects": [
         "docs/schema-validation-recipes.md",
@@ -183,7 +184,12 @@
         "docs/invalid-archive-bundle-examples.md",
         "examples/client/ajv-reject-invalid-archive-bundles.mjs",
         "examples/client/esm-package-ajv-reject-invalid-archive-bundles.mjs",
-        "examples/archive-invalid/"
+        "examples/archive-invalid/",
+        "docs/invalid-client-recipe-index-examples.md",
+        "examples/client/ajv-validate-client-recipe-index.mjs",
+        "examples/client/ajv-reject-invalid-client-recipe-index.mjs",
+        "examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs",
+        "examples/client-invalid/"
       ],
       "strongest_surfaces": [
         "scripts/check-schema-recipes.js",
@@ -202,7 +208,9 @@
         "schemas/archive-bundle.schema.json",
         "examples/archive/archive-bundle.sample.json",
         "docs/invalid-archive-bundle-examples.md",
-        "scripts/check-invalid-archive-examples.js"
+        "scripts/check-invalid-archive-examples.js",
+        "schemas/client-recipe-index.schema.json",
+        "scripts/check-invalid-client-recipe-index-examples.js"
       ],
       "failure_modes_prevented": [
         "broken raw-schema consumer recipes",
@@ -215,7 +223,9 @@
         "broken archive-bundle validation recipes",
         "archive portability sample drifting away from the published archive schema",
         "invalid archive fixtures that unexpectedly pass structural validation",
-        "archive negative-path teaching drift between docs, fixtures, and rejection recipes"
+        "archive negative-path teaching drift between docs, fixtures, and rejection recipes",
+        "invalid client-recipe navigator fixtures that unexpectedly pass structural validation",
+        "client-recipe navigator negative-path teaching drift between docs, fixtures, and rejection recipes"
       ]
     },
     {

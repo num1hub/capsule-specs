@@ -50,6 +50,8 @@ This executes all repository-local checks in the expected order.
   Verifies the intentionally schema-invalid capsule fixtures, their documented failure reasons, and the invalid-example recipe layer.
 - `npm run check:invalid-api-examples`
   Verifies the intentionally schema-invalid validator-envelope fixtures, their documented failure reasons, and the invalid-envelope recipe layer.
+- `npm run check:invalid-client-recipe-index-examples`
+  Verifies the intentionally schema-invalid client-recipe navigator fixtures, their documented failure reasons, and the invalid navigator recipe layer.
 - `npm run check:integrity-recipes`
   Verifies the public sealing-rule recipes, recomputed example/API hashes, and the repair boundary for the intentional `G16` teaching example.
 - `npm run check:python-recipes`
@@ -177,6 +179,7 @@ Serious public changes should not be considered complete until:
 - `docs/schema-validation-recipes.md`, the Ajv-based schema recipes under `examples/client/`, and `scripts/check-schema-recipes.js` stay aligned with the published schema exports and example payloads they validate
 - `docs/archive-validation-recipes.md`, the archive-bundle Ajv recipes under `examples/client/`, and `scripts/check-archive-recipes.js` stay aligned with the published archive schema and example payload they validate
 - `docs/invalid-archive-bundle-examples.md`, `examples/archive-invalid/`, the invalid-archive Ajv recipes under `examples/client/`, and `scripts/check-invalid-archive-examples.js` stay aligned with the published schema-invalid archive fixtures and their documented structural rejection paths
+- `docs/invalid-client-recipe-index-examples.md`, `examples/client-invalid/`, the invalid navigator Ajv recipes under `examples/client/`, and `scripts/check-invalid-client-recipe-index-examples.js` stay aligned with the published schema-invalid client-recipe navigator fixtures and their documented structural rejection paths
 - `docs/invalid-capsule-examples.md`, `examples/invalid/`, the invalid-example Ajv recipes under `examples/client/`, and `scripts/check-invalid-examples.js` stay aligned with the published schema-invalid fixtures and their documented structural rejection paths
 - `docs/invalid-api-envelope-examples.md`, `examples/api-invalid/`, the invalid-envelope Ajv recipes under `examples/client/`, and `scripts/check-invalid-api-examples.js` stay aligned with the published schema-invalid validator-envelope fixtures and their documented structural rejection paths
 - `docs/integrity-recipes.md`, the seal-recomputation recipes under `examples/client/`, and `scripts/check-integrity-recipes.js` stay aligned with the public `G16` rule and the published example/API integrity hashes

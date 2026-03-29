@@ -96,7 +96,9 @@
       "bounded support-route failure examples for documented validator statuses",
       "direct OpenAPI consumer recipe examples across repo, package, and extracted-artifact Python paths",
       "repo-local plus CommonJS/ESM/TypeScript installed-package OpenAPI code-generation recipe examples",
-      "repo-local verification for OpenAPI code-generation recipes"
+      "repo-local verification for OpenAPI code-generation recipes",
+      "intentionally schema-invalid client-recipe navigator fixtures for structural rejection testing",
+      "repo-local verification for intentionally schema-invalid client-recipe navigator fixtures"
     ],
     "does_not_publish": [
       "private vault contents",
@@ -106,13 +108,13 @@
     ]
   },
   "surface_summary": {
-    "total_files": 390,
-    "markdown_files": 101,
+    "total_files": 397,
+    "markdown_files": 103,
     "schema_files": 37,
     "raw_capsule_files": 8,
     "example_capsules": 5,
     "api_example_files": 15,
-    "client_recipe_files": 97,
+    "client_recipe_files": 99,
     "workflow_files": 1,
     "issue_templates": 4
   },
@@ -158,7 +160,7 @@
   },
   "verification_summary": {
     "entrypoint": "npm run verify:repo",
-    "repo_local_check_count": 54,
+    "repo_local_check_count": 55,
     "upstream_validator_check_count": 5
   },
   "reviewer_shortcuts": {
@@ -212,7 +214,8 @@
     "schema_bundles": "docs/schema-bundles.md",
     "archive_validation_recipes": "docs/archive-validation-recipes.md",
     "invalid_archive_bundle_examples": "docs/invalid-archive-bundle-examples.md",
-    "client_recipe_index": "examples/client/recipe-index.json"
+    "client_recipe_index": "examples/client/recipe-index.json",
+    "invalid_client_recipe_index_examples": "docs/invalid-client-recipe-index-examples.md"
   },
   "program_readiness": {
     "maintainer_owned": true,
