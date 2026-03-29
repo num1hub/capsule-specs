@@ -20,6 +20,8 @@ const repoLocalRecipes = [
 ];
 
 const packageRuntimeRecipes = [
+  'cjs-package-ajv-validate-contracts.cjs',
+  'cjs-package-ajv-reject-invalid-capsules.cjs',
   'cjs-package-ajv-validate-client-recipe-index.cjs',
   'cjs-package-ajv-reject-invalid-client-recipe-index.cjs',
   'esm-package-ajv-validate-contracts.mjs',
@@ -33,6 +35,8 @@ const packageRuntimeRecipes = [
 ];
 
 const packageTypeRecipes = [
+  'ts-package-ajv-validate-contracts.ts',
+  'ts-package-ajv-reject-invalid-capsules.ts',
   'ts-package-ajv-validate-client-recipe-index.ts',
   'ts-package-ajv-reject-invalid-client-recipe-index.ts'
 ];
@@ -89,6 +93,22 @@ for (const fileName of repoLocalRecipes) {
 }
 
 const expectedPackageRuntimeImports = {
+  'cjs-package-ajv-validate-contracts.cjs': [
+    'ajv/dist/2020',
+    '@num1hub/capsule-specs/schemas/capsule-schema.json',
+    '@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json',
+    '@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json',
+    '@num1hub/capsule-specs/examples/example-note.capsule.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.single.json',
+    '@num1hub/capsule-specs/examples/api/validate-response.pass.json'
+  ],
+  'cjs-package-ajv-reject-invalid-capsules.cjs': [
+    'ajv/dist/2020',
+    '@num1hub/capsule-specs/schemas/capsule-schema.json',
+    '@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json',
+    '@num1hub/capsule-specs/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json',
+    '@num1hub/capsule-specs/examples/invalid/example-invalid-relation-type.capsule.json'
+  ],
   'cjs-package-ajv-validate-client-recipe-index.cjs': [
     'ajv/dist/2020',
     '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',
@@ -159,6 +179,22 @@ const expectedPackageRuntimeImports = {
 };
 
 const expectedPackageTypeImports = {
+  'ts-package-ajv-validate-contracts.ts': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/capsule-schema.json',
+    '@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json',
+    '@num1hub/capsule-specs/schemas/validator-api-envelopes.schema.json',
+    '@num1hub/capsule-specs/examples/example-note.capsule.json',
+    '@num1hub/capsule-specs/examples/api/validate-request.single.json',
+    '@num1hub/capsule-specs/examples/api/validate-response.pass.json'
+  ],
+  'ts-package-ajv-reject-invalid-capsules.ts': [
+    'ajv/dist/2020.js',
+    '@num1hub/capsule-specs/schemas/capsule-schema.json',
+    '@num1hub/capsule-specs/schemas/neuro-concentrate.schema.json',
+    '@num1hub/capsule-specs/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json',
+    '@num1hub/capsule-specs/examples/invalid/example-invalid-relation-type.capsule.json'
+  ],
   'ts-package-ajv-validate-client-recipe-index.ts': [
     'ajv/dist/2020.js',
     '@num1hub/capsule-specs/schemas/client-recipe-index.schema.json',

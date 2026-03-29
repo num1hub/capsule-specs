@@ -40,7 +40,9 @@ This distinction matters when you are deciding whether you need:
 ## Copyable Ajv recipes
 
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
+- [`../examples/client/cjs-package-ajv-reject-invalid-capsules.cjs`](../examples/client/cjs-package-ajv-reject-invalid-capsules.cjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
+- [`../examples/client/ts-package-ajv-reject-invalid-capsules.ts`](../examples/client/ts-package-ajv-reject-invalid-capsules.ts)
 - [`schema-validation-recipes.md`](schema-validation-recipes.md)
 - [`integrity-recipes.md`](integrity-recipes.md)
 

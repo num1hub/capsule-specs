@@ -238,7 +238,7 @@ These recipes prove that the installed package surface covers the published sing
 
 ## Minimal package-level Ajv schema example
 
-A copyable version of this example also lives at [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs).
+Copyable versions of this example also live at [`../examples/client/cjs-package-ajv-validate-contracts.cjs`](../examples/client/cjs-package-ajv-validate-contracts.cjs), [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs), and [`../examples/client/ts-package-ajv-validate-contracts.ts`](../examples/client/ts-package-ajv-validate-contracts.ts).
 
 ```js
 import Ajv2020 from "ajv/dist/2020.js";
@@ -287,7 +287,7 @@ Those recipes prove the installed package exports intentionally invalid client-r
 
 ## Minimal package-level Ajv negative example
 
-A copyable version of this example also lives at [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs).
+Copyable versions of this example also live at [`../examples/client/cjs-package-ajv-reject-invalid-capsules.cjs`](../examples/client/cjs-package-ajv-reject-invalid-capsules.cjs), [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs), and [`../examples/client/ts-package-ajv-reject-invalid-capsules.ts`](../examples/client/ts-package-ajv-reject-invalid-capsules.ts).
 
 That recipe proves the installed package exports not only valid schemas and examples, but also the intentionally invalid capsule fixtures under `examples/invalid/` that raw-schema consumers can use for regression tests.
 

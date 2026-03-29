@@ -43,12 +43,14 @@ const cjsValidateClientRecipeIndexSchemaRecipePath = path.join(
   'client',
   'cjs-package-ajv-validate-client-recipe-index.cjs'
 );
+const cjsValidateContractsRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-ajv-validate-contracts.cjs');
 const cjsInvalidClientRecipeIndexRecipePath = path.join(
   repoRoot,
   'examples',
   'client',
   'cjs-package-ajv-reject-invalid-client-recipe-index.cjs'
 );
+const cjsInvalidCapsulesRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-ajv-reject-invalid-capsules.cjs');
 const cjsValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-request.cjs');
 const cjsSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-support-responses.cjs');
 const cjsValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'cjs-package-validate-response.cjs');
@@ -69,11 +71,23 @@ const typescriptValidateClientRecipeIndexSchemaRecipePath = path.join(
   'client',
   'ts-package-ajv-validate-client-recipe-index.ts'
 );
+const typescriptValidateContractsRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'ts-package-ajv-validate-contracts.ts'
+);
 const typescriptInvalidClientRecipeIndexRecipePath = path.join(
   repoRoot,
   'examples',
   'client',
   'ts-package-ajv-reject-invalid-client-recipe-index.ts'
+);
+const typescriptInvalidCapsulesRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'ts-package-ajv-reject-invalid-capsules.ts'
 );
 const typescriptBatchRequestRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-batch-request.ts');
 const typescriptConsumerRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-validate-request.ts');
@@ -194,11 +208,23 @@ try {
   );
   run(process.execPath, ['validate-client-recipe-index-consumer.cjs'], cjsProject);
   fs.writeFileSync(
+    path.join(cjsProject, 'validate-contracts-consumer.cjs'),
+    fs.readFileSync(cjsValidateContractsRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['validate-contracts-consumer.cjs'], cjsProject);
+  fs.writeFileSync(
     path.join(cjsProject, 'invalid-client-recipe-index-consumer.cjs'),
     fs.readFileSync(cjsInvalidClientRecipeIndexRecipePath, 'utf8'),
     'utf8'
   );
   run(process.execPath, ['invalid-client-recipe-index-consumer.cjs'], cjsProject);
+  fs.writeFileSync(
+    path.join(cjsProject, 'invalid-capsules-consumer.cjs'),
+    fs.readFileSync(cjsInvalidCapsulesRecipePath, 'utf8'),
+    'utf8'
+  );
+  run(process.execPath, ['invalid-capsules-consumer.cjs'], cjsProject);
   fs.writeFileSync(
     path.join(cjsProject, 'validate-response-consumer.cjs'),
     fs.readFileSync(cjsValidateResponseRecipePath, 'utf8'),
@@ -339,7 +365,9 @@ try {
       'fix-request-consumer.ts',
       'recipe-index-consumer.ts',
       'validate-client-recipe-index-consumer.ts',
+      'validate-contracts-consumer.ts',
       'invalid-client-recipe-index-consumer.ts',
+      'invalid-capsules-consumer.ts',
       'live-client-consumer.ts',
       'openapi-codegen-consumer.ts',
       'openapi-consumer.ts',
@@ -377,8 +405,18 @@ try {
     'utf8'
   );
   fs.writeFileSync(
+    path.join(typescriptProject, 'validate-contracts-consumer.ts'),
+    fs.readFileSync(typescriptValidateContractsRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
     path.join(typescriptProject, 'invalid-client-recipe-index-consumer.ts'),
     fs.readFileSync(typescriptInvalidClientRecipeIndexRecipePath, 'utf8'),
+    'utf8'
+  );
+  fs.writeFileSync(
+    path.join(typescriptProject, 'invalid-capsules-consumer.ts'),
+    fs.readFileSync(typescriptInvalidCapsulesRecipePath, 'utf8'),
     'utf8'
   );
   fs.writeFileSync(
@@ -413,7 +451,9 @@ try {
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json', '--noEmit', 'false', '--outDir', 'dist'], typescriptProject);
   run(process.execPath, ['dist/validate-client-recipe-index-consumer.js'], typescriptProject);
+  run(process.execPath, ['dist/validate-contracts-consumer.js'], typescriptProject);
   run(process.execPath, ['dist/invalid-client-recipe-index-consumer.js'], typescriptProject);
+  run(process.execPath, ['dist/invalid-capsules-consumer.js'], typescriptProject);
   run(process.execPath, ['dist/openapi-codegen-consumer.js'], typescriptProject);
 
   console.log(

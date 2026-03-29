@@ -247,12 +247,20 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal repo-local Ajv recipe for validating public validator request/response payloads against the envelope schema bundle.
 - [`../examples/client/ajv-reject-invalid-capsules.mjs`](../examples/client/ajv-reject-invalid-capsules.mjs)
   Minimal repo-local Ajv recipe for rejecting intentionally invalid capsule fixtures against the published capsule schema.
+- [`../examples/client/cjs-package-ajv-validate-contracts.cjs`](../examples/client/cjs-package-ajv-validate-contracts.cjs)
+  Minimal CommonJS package-consumer Ajv recipe for validating installed schema exports and packaged example payloads.
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
-  Minimal package-consumer Ajv recipe for validating installed schema exports and packaged example payloads.
+  Minimal ESM package-consumer Ajv recipe for validating installed schema exports and packaged example payloads.
 - [`../examples/client/esm-package-ajv-validate-client-recipe-index.mjs`](../examples/client/esm-package-ajv-validate-client-recipe-index.mjs)
   Minimal package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema.
+- [`../examples/client/ts-package-ajv-validate-contracts.ts`](../examples/client/ts-package-ajv-validate-contracts.ts)
+  Minimal TypeScript package-consumer Ajv recipe for validating installed schema exports and packaged example payloads.
+- [`../examples/client/cjs-package-ajv-reject-invalid-capsules.cjs`](../examples/client/cjs-package-ajv-reject-invalid-capsules.cjs)
+  Minimal CommonJS package-consumer Ajv recipe for rejecting installed invalid schema fixtures from package exports.
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
-  Minimal package-consumer Ajv recipe for rejecting installed invalid schema fixtures from package exports.
+  Minimal ESM package-consumer Ajv recipe for rejecting installed invalid schema fixtures from package exports.
+- [`../examples/client/ts-package-ajv-reject-invalid-capsules.ts`](../examples/client/ts-package-ajv-reject-invalid-capsules.ts)
+  Minimal TypeScript package-consumer Ajv recipe for rejecting installed invalid schema fixtures from package exports.
 - [`../examples/client/recompute-integrity-seal.mjs`](../examples/client/recompute-integrity-seal.mjs)
   Minimal repo-local recipe for recomputing `integrity_sha3_512` and repairing the intentional `G16` teaching example without mutating it in place.
 - [`../examples/client/esm-package-recompute-integrity-seal.mjs`](../examples/client/esm-package-recompute-integrity-seal.mjs)

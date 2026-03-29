@@ -51,6 +51,8 @@ const schemaRecipeFiles = [
   'ajv-reject-invalid-client-recipe-index.mjs',
   'ajv-reject-invalid-capsules.mjs',
   'ajv-reject-invalid-validator-envelopes.mjs',
+  'cjs-package-ajv-validate-contracts.cjs',
+  'cjs-package-ajv-reject-invalid-capsules.cjs',
   'cjs-package-ajv-validate-client-recipe-index.cjs',
   'cjs-package-ajv-reject-invalid-client-recipe-index.cjs',
   'esm-package-ajv-validate-contracts.mjs',
@@ -61,6 +63,8 @@ const schemaRecipeFiles = [
   'esm-package-ajv-reject-invalid-client-recipe-index.mjs',
   'esm-package-ajv-reject-invalid-capsules.mjs',
   'esm-package-ajv-reject-invalid-validator-envelopes.mjs',
+  'ts-package-ajv-validate-contracts.ts',
+  'ts-package-ajv-reject-invalid-capsules.ts',
   'ts-package-ajv-validate-client-recipe-index.ts',
   'ts-package-ajv-reject-invalid-client-recipe-index.ts'
 ];
@@ -280,6 +284,9 @@ const taskEntrypoints = [
     primary_group: 'raw-schema-ajv',
     recommended: 'ajv-validate-capsule.mjs',
     alternatives: [
+      'cjs-package-ajv-validate-contracts.cjs',
+      'esm-package-ajv-validate-contracts.mjs',
+      'ts-package-ajv-validate-contracts.ts',
       'ajv-validate-validator-envelope.mjs',
       'ajv-validate-archive-bundle.mjs',
       'ajv-validate-schema-bundles.mjs',
@@ -296,6 +303,9 @@ const taskEntrypoints = [
     primary_group: 'raw-schema-ajv',
     recommended: 'ajv-reject-invalid-capsules.mjs',
     alternatives: [
+      'cjs-package-ajv-reject-invalid-capsules.cjs',
+      'esm-package-ajv-reject-invalid-capsules.mjs',
+      'ts-package-ajv-reject-invalid-capsules.ts',
       'ajv-reject-invalid-validator-envelopes.mjs',
       'ajv-reject-invalid-archive-bundles.mjs',
       'ajv-reject-invalid-client-recipe-index.mjs',

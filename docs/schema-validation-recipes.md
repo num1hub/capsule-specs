@@ -75,6 +75,8 @@ For the underlying invalid fixtures and their intended failure reasons, see [`in
 
 If you want the same raw-schema path from an installed tarball or future package distribution, use:
 
+- [`../examples/client/cjs-package-ajv-validate-contracts.cjs`](../examples/client/cjs-package-ajv-validate-contracts.cjs)
+- [`../examples/client/cjs-package-ajv-reject-invalid-capsules.cjs`](../examples/client/cjs-package-ajv-reject-invalid-capsules.cjs)
 - [`../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs`](../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs)
 - [`../examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs`](../examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs)
 - [`../examples/client/esm-package-ajv-validate-contracts.mjs`](../examples/client/esm-package-ajv-validate-contracts.mjs)
@@ -85,6 +87,8 @@ If you want the same raw-schema path from an installed tarball or future package
 - [`../examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs`](../examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-capsules.mjs`](../examples/client/esm-package-ajv-reject-invalid-capsules.mjs)
 - [`../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs`](../examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs)
+- [`../examples/client/ts-package-ajv-validate-contracts.ts`](../examples/client/ts-package-ajv-validate-contracts.ts)
+- [`../examples/client/ts-package-ajv-reject-invalid-capsules.ts`](../examples/client/ts-package-ajv-reject-invalid-capsules.ts)
 - [`../examples/client/ts-package-ajv-validate-client-recipe-index.ts`](../examples/client/ts-package-ajv-validate-client-recipe-index.ts)
 - [`../examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts`](../examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts)
 

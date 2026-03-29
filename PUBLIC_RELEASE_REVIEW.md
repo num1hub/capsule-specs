@@ -52,7 +52,7 @@
 - machine-readable client recipe index for runtime-lane starts plus task-oriented discovery across the published consumer snippets, a bounded JSON Schema for that navigator, a shared TypeScript client-navigator projection, verifier-backed coverage for group ownership and task wiring, repo-local plus installed-package CommonJS/ESM/TypeScript Ajv navigator validation and rejection recipes, intentionally schema-invalid navigator fixtures with dedicated rejection recipes, and repo-local plus installed-package CommonJS/ESM/TypeScript navigator consumers
 - dedicated OpenAPI/compact-reference coherence verification so the validator route and envelope-family summaries stay subordinate to the stronger published HTTP contract
 - single-file bundled schema artifacts, their human guide, package-consumer recipes, and repo-local verifier
-- Ajv-based raw-schema consumer recipes, their human guide, and repo-local verifier
+- Ajv-based raw-schema consumer recipes, including CommonJS/ESM/TypeScript installed-package contract-validation and invalid-capsule rejection flows, their human guide, and repo-local verifier
 - intentionally schema-invalid capsule fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
 - intentionally schema-invalid validator-envelope fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
 - intentionally schema-invalid client-recipe navigator fixtures, their human guide, package-consumer rejection recipes, and repo-local verifier
@@ -145,7 +145,7 @@ Repository-local audit on 2026-03-29:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `401` files / `401` manifest entries
+- manifest coverage: `405` files / `405` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

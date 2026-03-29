@@ -280,7 +280,11 @@
         "examples/client-invalid/README.md",
         "examples/client-invalid/client-recipe-index.missing-files.json",
         "examples/client-invalid/client-recipe-index.invalid-runtime.json",
-        "scripts/check-invalid-client-recipe-index-examples.js"
+        "scripts/check-invalid-client-recipe-index-examples.js",
+        "examples/client/cjs-package-ajv-validate-contracts.cjs",
+        "examples/client/cjs-package-ajv-reject-invalid-capsules.cjs",
+        "examples/client/ts-package-ajv-validate-contracts.ts",
+        "examples/client/ts-package-ajv-reject-invalid-capsules.ts"
       ],
       "verify_commands": [
         "npm run check:schema-recipes",

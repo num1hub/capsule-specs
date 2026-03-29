@@ -1072,6 +1072,17 @@
     "transformation_type": "generated",
     "notes": "Guide to intentionally schema-invalid capsule fixtures and their structural rejection boundaries."
   },
+  "docs/invalid-client-recipe-index-examples.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/examples/client-invalid/README.md",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Guide to intentionally schema-invalid client-recipe navigator fixtures and their structural rejection boundaries."
+  },
   "docs/limitations-register.md": {
     "source_paths": [
       "/home/n1/codex-workspace/PUBLIC_ASSURANCE_CASE.json",
@@ -2258,6 +2269,30 @@
     "transformation_type": "generated",
     "notes": "Directory guide for archive portability examples."
   },
+  "examples/client-invalid/client-recipe-index.invalid-runtime.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema-invalid client-recipe navigator fixture with a non-canonical runtime enum value."
+  },
+  "examples/client-invalid/client-recipe-index.missing-files.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Schema-invalid client-recipe navigator fixture missing the required group files field."
+  },
+  "examples/client-invalid/README.md": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-client-recipe-index-examples.md",
+      "/home/n1/codex-workspace/examples/client/README.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Directory guide for intentionally schema-invalid client-recipe navigator fixtures."
+  },
   "examples/client/ajv-reject-invalid-archive-bundles.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/archive-invalid/archive-bundle.invalid-content-class.json",
@@ -2276,6 +2311,17 @@
     ],
     "transformation_type": "generated",
     "notes": "Repo-local Ajv recipe for rejecting intentionally invalid capsule fixtures against the published schema."
+  },
+  "examples/client/ajv-reject-invalid-client-recipe-index.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
+      "/home/n1/codex-workspace/docs/invalid-client-recipe-index-examples.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Repo-local Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
   },
   "examples/client/ajv-reject-invalid-validator-envelopes.mjs": {
     "source_paths": [
@@ -2335,6 +2381,51 @@
     ],
     "transformation_type": "generated",
     "notes": "Repo-local Ajv recipe for validating public validator-envelope payloads against the published schema bundle."
+  },
+  "examples/client/cjs-package-ajv-reject-invalid-capsules.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer Ajv recipe for rejecting installed invalid schema fixtures."
+  },
+  "examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
+  },
+  "examples/client/cjs-package-ajv-validate-client-recipe-index.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema."
+  },
+  "examples/client/cjs-package-ajv-validate-contracts.cjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "CommonJS package-consumer Ajv recipe for validating installed schema exports and packaged public examples."
   },
   "examples/client/cjs-package-capsule-summary.cjs": {
     "source_paths": [
@@ -2498,6 +2589,17 @@
     "transformation_type": "generated",
     "notes": "Package-consumer Ajv recipe for rejecting installed invalid schema fixtures."
   },
+  "examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Installed-package Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
+  },
   "examples/client/esm-package-ajv-reject-invalid-validator-envelopes.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api-invalid/validate-request.single.missing-capsule.json",
@@ -2519,6 +2621,15 @@
     "transformation_type": "generated",
     "notes": "Package-consumer Ajv recipe for validating the published archive-bundle sample from installed package exports."
   },
+  "examples/client/esm-package-ajv-validate-client-recipe-index.mjs": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "Package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema."
+  },
   "examples/client/esm-package-ajv-validate-contracts.mjs": {
     "source_paths": [
       "/home/n1/codex-workspace/examples/api/validate-request.single.json",
@@ -2531,15 +2642,6 @@
     ],
     "transformation_type": "generated",
     "notes": "Package-consumer Ajv recipe for validating installed schema exports and packaged public examples."
-  },
-  "examples/client/esm-package-ajv-validate-client-recipe-index.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client/recipe-index.json",
-      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
-      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema."
   },
   "examples/client/esm-package-ajv-validate-schema-bundles.mjs": {
     "source_paths": [
@@ -3013,6 +3115,51 @@
     ],
     "transformation_type": "generated",
     "notes": "Minimal source-level TypeScript recipe for reading the published OpenAPI route contract directly."
+  },
+  "examples/client/ts-package-ajv-reject-invalid-capsules.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-missing-neuro-concentrate.capsule.json",
+      "/home/n1/codex-workspace/examples/invalid/example-invalid-relation-type.capsule.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer Ajv recipe for rejecting installed invalid schema fixtures."
+  },
+  "examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
+  },
+  "examples/client/ts-package-ajv-validate-client-recipe-index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
+      "/home/n1/codex-workspace/docs/npm-consumption.md",
+      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema."
+  },
+  "examples/client/ts-package-ajv-validate-contracts.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/api/validate-request.single.json",
+      "/home/n1/codex-workspace/examples/api/validate-response.pass.json",
+      "/home/n1/codex-workspace/examples/example-note.capsule.json",
+      "/home/n1/codex-workspace/package.json",
+      "/home/n1/codex-workspace/schemas/capsule-schema.json",
+      "/home/n1/codex-workspace/schemas/neuro-concentrate.schema.json",
+      "/home/n1/codex-workspace/schemas/validator-api-envelopes.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer Ajv recipe for validating installed schema exports and packaged public examples."
   },
   "examples/client/ts-package-client-recipe-index.ts": {
     "source_paths": [
@@ -5438,15 +5585,6 @@
     "transformation_type": "derived",
     "notes": "JSON Schema projection of the public archive-bundle contract."
   },
-  "schemas/client-recipe-index.schema.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client/recipe-index.json",
-      "/home/n1/codex-workspace/scripts/lib/client-recipes.js",
-      "/home/n1/codex-workspace/docs/client-recipes.md"
-    ],
-    "transformation_type": "derived",
-    "notes": "Public JSON Schema for the machine-readable client-recipe navigator."
-  },
   "schemas/capsule-schema.bundle.json": {
     "source_paths": [
       "/home/n1/codex-workspace/schemas/capsule-schema.json",
@@ -5464,6 +5602,15 @@
     ],
     "transformation_type": "derived",
     "notes": "Public JSON Schema aligned to the five-element validator contract."
+  },
+  "schemas/client-recipe-index.schema.json": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/scripts/lib/client-recipes.js",
+      "/home/n1/codex-workspace/docs/client-recipes.md"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public JSON Schema for the machine-readable client-recipe navigator."
   },
   "schemas/neuro-concentrate.schema.json": {
     "source_paths": [
@@ -6367,6 +6514,19 @@
     "transformation_type": "generated",
     "notes": "Verifier for intentionally schema-invalid archive-bundle fixtures and their rejection recipes."
   },
+  "scripts/check-invalid-client-recipe-index-examples.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/docs/invalid-client-recipe-index-examples.md",
+      "/home/n1/codex-workspace/examples/client-invalid/README.md",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
+      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
+      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-client-recipe-index.mjs",
+      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Verifier for intentionally schema-invalid client-recipe navigator fixtures and their documented rejection paths."
+  },
   "scripts/check-invalid-examples.js": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/invalid-capsule-examples.md",
@@ -7095,117 +7255,5 @@
     ],
     "transformation_type": "generated",
     "notes": "Versioning and contract-change policy for the public repository surface."
-  },
-  "docs/invalid-client-recipe-index-examples.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
-      "/home/n1/codex-workspace/examples/client/recipe-index.json",
-      "/home/n1/codex-workspace/examples/client-invalid/README.md",
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Guide to intentionally schema-invalid client-recipe navigator fixtures and their structural rejection boundaries."
-  },
-  "examples/client-invalid/README.md": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/invalid-client-recipe-index-examples.md",
-      "/home/n1/codex-workspace/examples/client/README.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Directory guide for intentionally schema-invalid client-recipe navigator fixtures."
-  },
-  "examples/client-invalid/client-recipe-index.missing-files.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client/recipe-index.json",
-      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Schema-invalid client-recipe navigator fixture missing the required group files field."
-  },
-  "examples/client-invalid/client-recipe-index.invalid-runtime.json": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client/recipe-index.json",
-      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Schema-invalid client-recipe navigator fixture with a non-canonical runtime enum value."
-  },
-  "examples/client/ajv-reject-invalid-client-recipe-index.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
-      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
-      "/home/n1/codex-workspace/docs/schema-validation-recipes.md",
-      "/home/n1/codex-workspace/docs/invalid-client-recipe-index-examples.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Repo-local Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
-  },
-  "examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
-      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "Installed-package Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
-  },
-  "scripts/check-invalid-client-recipe-index-examples.js": {
-    "source_paths": [
-      "/home/n1/codex-workspace/docs/invalid-client-recipe-index-examples.md",
-      "/home/n1/codex-workspace/examples/client-invalid/README.md",
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
-      "/home/n1/codex-workspace/examples/client/ajv-reject-invalid-client-recipe-index.mjs",
-      "/home/n1/codex-workspace/examples/client/esm-package-ajv-reject-invalid-client-recipe-index.mjs",
-      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json"
-    ],
-    "transformation_type": "generated",
-    "notes": "Verifier for intentionally schema-invalid client-recipe navigator fixtures and their documented rejection paths."
-  },
-  "examples/client/cjs-package-ajv-validate-client-recipe-index.cjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client/recipe-index.json",
-      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "CommonJS package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema."
-  },
-  "examples/client/cjs-package-ajv-reject-invalid-client-recipe-index.cjs": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
-      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "CommonJS package-consumer Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
-  },
-  "examples/client/ts-package-ajv-validate-client-recipe-index.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client/recipe-index.json",
-      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "TypeScript package-consumer Ajv recipe for validating the installed client-recipe navigator export against its bounded schema."
-  },
-  "examples/client/ts-package-ajv-reject-invalid-client-recipe-index.ts": {
-    "source_paths": [
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.missing-files.json",
-      "/home/n1/codex-workspace/examples/client-invalid/client-recipe-index.invalid-runtime.json",
-      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json",
-      "/home/n1/codex-workspace/docs/npm-consumption.md",
-      "/home/n1/codex-workspace/docs/schema-validation-recipes.md"
-    ],
-    "transformation_type": "generated",
-    "notes": "TypeScript package-consumer Ajv recipe for rejecting intentionally schema-invalid client-recipe navigator fixtures."
   }
 }
