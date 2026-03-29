@@ -13,6 +13,7 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 - Live `POST /api/validate/fix`: `curl-validate-fix.sh`
 - Live `GET /api/validate/gates` and `GET /api/validate/stats`: `curl-get-gates.sh` and `curl-get-stats.sh`
 - Node live-client lane: `node-validate-single.mjs`
+- Source-level TypeScript navigator lane: `ts-client-recipe-index.ts`
 - Source-level request reading: `ts-parse-validate-requests.ts`
 - Source-level response reading: `ts-parse-validate-responses.ts`
 - Compact reference discovery: `ts-envelope-family-reference.ts`
@@ -45,6 +46,7 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 
 ## Type-level recipes
 
+- `ts-client-recipe-index.ts`
 - `ts-capsule-summary.ts`
 - `zod-parse-capsule.ts`
 - `ts-openapi-route-summary.ts`
@@ -147,9 +149,9 @@ Use `groups[*].recommended_start` when you already know the runtime lane you wan
 - They are intentionally small and public-safe.
 - They demonstrate route usage, not deployment-specific infrastructure.
 - The TypeScript recipes demonstrate source-level consumer usage of the published projection layer under `projections/`, direct strongest-surface OpenAPI reading from `openapi/validate.openapi.json`, and repo-local OpenAPI type generation through `openapi-typescript`.
-- The source-level TypeScript and Zod recipes now cover single, batch, and fix `validate` envelopes, request-family building plus sample-driven typed/parsing paths, a direct OpenAPI route-summary path, a direct OpenAPI code-generation path, a compact typed envelope-family reference layer, a compact typed route-behavior reference layer, a typed live-client bridge for all published validator routes backed by shared route constants plus the bounded `stats` query path, the full published pass/fail/batch/fix response family, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample.
+- The source-level TypeScript and Zod recipes now cover the published client-recipe navigator as typed contract data, single, batch, and fix `validate` envelopes, request-family building plus sample-driven typed/parsing paths, a direct OpenAPI route-summary path, a direct OpenAPI code-generation path, a compact typed envelope-family reference layer, a compact typed route-behavior reference layer, a typed live-client bridge for all published validator routes backed by shared route constants plus the bounded `stats` query path, the full published pass/fail/batch/fix response family, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample.
 - The package recipes demonstrate CommonJS, ESM, and TypeScript consumption after `npm run build:projections` or from a packed artifact installed into a fresh project.
-- The package recipes also include direct consumption of `examples/client/recipe-index.json`, so installed-package consumers can recover runtime-lane starts and task entrypoints without first reading the repo checkout.
+- The package recipes and the source-level TypeScript navigator include direct consumption of `examples/client/recipe-index.json`, so installed-package and typed repo-local consumers can recover runtime-lane starts and task entrypoints without first reading the repo checkout.
 - The package recipes also cover direct installed-package OpenAPI reading and OpenAPI type generation across CommonJS, ESM, and TypeScript consumer styles, runtime request-family parsing, TypeScript typed reading plus typed single/batch/fix request construction, installed-package CommonJS, ESM, and TypeScript live-client bridges for all published validator routes backed by shared route constants plus the bounded `stats` query path, validator pass/fail/batch/fix response families, compact JSON contract references including the validator envelope-family map and route-behavior summaries, validator support responses, shared error envelopes plus the route-specific stats-computation failure sample, and raw capsule assets in addition to projection exports.
 - The raw-schema recipes demonstrate direct Ajv validation against published schema files, the archive-bundle portability schema, single-file schema bundles, package-exported schema assets, and intentionally invalid archive, capsule, and validator-envelope fixtures.
 - The integrity recipes demonstrate how to recompute `integrity_sha3_512` over the published four-root payload and how to repair the intentional `G16` teaching example without private runtime helpers.

@@ -30,6 +30,11 @@
       "require": "./dist/projections/typescript/capsule.js",
       "default": "./dist/projections/typescript/capsule.js"
     },
+    "./typescript/client-recipe-index": {
+      "types": "./dist/projections/typescript/client-recipe-index.d.ts",
+      "require": "./dist/projections/typescript/client-recipe-index.js",
+      "default": "./dist/projections/typescript/client-recipe-index.js"
+    },
     "./typescript/validator-envelope-families": {
       "types": "./dist/projections/typescript/validator-envelope-families.d.ts",
       "require": "./dist/projections/typescript/validator-envelope-families.js",

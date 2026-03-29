@@ -25,7 +25,7 @@ This executes all repository-local checks in the expected order.
 - `npm run check:api-schemas`
   Validates the published API example payloads against `schemas/validator-api-envelopes.schema.json`.
 - `npm run check:type-projections`
-  Typechecks the published TypeScript and Zod projection layer plus the source-level and package-style TypeScript consumer recipe examples that depend on it.
+  Typechecks the published TypeScript and Zod projection layer, including the client-recipe navigator projection, plus the source-level and package-style TypeScript consumer recipe examples that depend on it.
 - `npm run check:package-surface`
   Builds the projection layer, validates package exports, and dry-runs the pack surface.
 - `npm run check:package-install`
@@ -59,7 +59,7 @@ This executes all repository-local checks in the expected order.
 - `npm run check:boundary-map`
   Verifies `PUBLIC_BOUNDARY_MAP.json`, the new projection/boundary docs, and their contract-catalog coverage.
 - `npm run check:client-recipes`
-  Verifies the published client-recipe navigator, group ownership and `recommended_start` entrypoints, task-to-runtime and task-to-doc wiring, curl and Node consumer snippets, full published validator-route targeting, env-var assumptions, and Node syntax.
+  Verifies the published client-recipe navigator, group ownership and `recommended_start` entrypoints, task-to-runtime and task-to-doc wiring, the source-level TypeScript navigator path, curl and Node consumer snippets, full published validator-route targeting, env-var assumptions, and Node syntax.
 - `npm run check:community-health`
   Verifies contributor-facing docs, issue templates, support/security alignment, and intake-surface references.
 - `npm run check:github-operations`
@@ -140,7 +140,7 @@ Serious public changes should not be considered complete until:
 - `npm run verify:repo` passes
 - changed examples or contracts are rechecked against the live validator where applicable
 - `CHANGELOG.md`, `PUBLIC_RELEASE_REVIEW.md`, `PUBLIC_RELEASE_METADATA.json`, and `PUBLIC_CONTRACT_CATALOG.json` stay aligned
-- `projections/`, `docs/type-projections.md`, and the source-level client recipe examples stay aligned with `schemas/capsule-schema.json`, `schemas/validator-api-envelopes.schema.json`, and the validator API example surfaces
+- `projections/`, `docs/type-projections.md`, and the source-level client recipe examples stay aligned with `schemas/capsule-schema.json`, `schemas/validator-api-envelopes.schema.json`, `examples/client/recipe-index.json`, and the validator API example surfaces
 - `docs/npm-consumption.md`, `tsconfig.build.json`, `package.json`, `dist/`, `scripts/check-package-install.js`, and the package-based client recipes stay aligned with the maintained projection source files and the intended package-export surface
 - `docs/openapi-codegen-recipes.md`, the repo-local plus CommonJS/ESM/TypeScript package OpenAPI code-generation recipes under `examples/client/`, and `scripts/check-openapi-codegen.js` stay aligned with the stronger published OpenAPI artifact and the intended generator-consumer path
 - `docs/openapi.md`, `docs/reference-pack.md`, `openapi/validate.openapi.json`, `references/validator-routes.json`, `references/validator-envelope-families.json`, and `scripts/check-openapi-coherence.js` stay aligned so the compact HTTP discovery layers remain subordinate to the stronger published OpenAPI contract

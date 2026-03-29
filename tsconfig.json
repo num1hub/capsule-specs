@@ -14,6 +14,9 @@
       "@num1hub/capsule-specs/typescript/capsule": [
         "./projections/typescript/capsule.ts"
       ],
+      "@num1hub/capsule-specs/typescript/client-recipe-index": [
+        "./projections/typescript/client-recipe-index.ts"
+      ],
       "@num1hub/capsule-specs/typescript/validator-envelope-families": [
         "./projections/typescript/validator-envelope-families.ts"
       ],

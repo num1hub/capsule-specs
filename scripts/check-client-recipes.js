@@ -186,6 +186,7 @@ for (const [fileName, route] of Object.entries(expectedNodeRoutes)) {
 }
 
 const expectedTypeProjectionImports = {
+  'ts-client-recipe-index.ts': '../../projections/typescript/client-recipe-index.js',
   'ts-capsule-summary.ts': '../../projections/typescript/capsule.js',
   'zod-parse-capsule.ts': '../../projections/zod/capsule.js',
   'ts-openapi-route-summary.ts': '../../openapi/validate.openapi.json',
@@ -211,10 +212,29 @@ const expectedTypeProjectionImports = {
   'zod-parse-support-responses.ts': '../../projections/zod/validator-api.js'
 };
 
+const expectedTypeRecipeReferences = {
+  'ts-client-recipe-index.ts': [
+    './recipe-index.json',
+    'publishedClientRecipeGroupIds',
+    'publishedClientRecipeTaskIds',
+    'publishedClientRecipeIndexCounts',
+    'source-recipe-navigation',
+    'live-validate-single',
+    'ts-live-validator-client.ts'
+  ]
+};
+
 for (const [entryName, projectionImport] of Object.entries(expectedTypeProjectionImports)) {
   const fileName = entryName.split('#')[0];
   const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
   assert(content.includes(projectionImport), `${fileName} must import ${projectionImport}`);
+}
+
+for (const [fileName, references] of Object.entries(expectedTypeRecipeReferences)) {
+  const content = fs.readFileSync(path.join(clientDir, fileName), 'utf8');
+  for (const reference of references) {
+    assert(content.includes(reference), `${fileName} must reference ${reference}`);
+  }
 }
 
 const expectedTypeLiveRouteReferences = {
@@ -393,6 +413,8 @@ const expectedPythonRecipeReferences = {
     'examples/client/recipe-index.json',
     'python-recipe-navigation',
     'package-recipe-navigation',
+    'source-recipe-navigation',
+    'source-level-types',
     'python-consumers',
     'package-runtime'
   ],
@@ -523,7 +545,7 @@ const expectedPackageImports = {
     '@num1hub/capsule-specs/examples/client/recipe-index.json',
     'package-recipe-navigation',
     'cjs-package-live-validator-client.cjs',
-    'ts-parse-validate-requests.ts'
+    'ts-client-recipe-index.ts'
   ],
   'cjs-package-contract-reference.cjs': [
     '@num1hub/capsule-specs/references/contract-constants.json',
@@ -591,9 +613,11 @@ const expectedPackageImports = {
   'esm-package-client-recipe-index.mjs': [
     '@num1hub/capsule-specs/examples/client/recipe-index.json',
     'package-recipe-navigation',
+    'source-recipe-navigation',
     'openapi-direct-consumption',
     'docs/openapi.md',
-    'ts-package-live-validator-client.ts'
+    'ts-package-live-validator-client.ts',
+    'ts-client-recipe-index.ts'
   ],
   'esm-package-contract-reference.mjs': [
     '@num1hub/capsule-specs/references/contract-constants.json',
@@ -657,9 +681,14 @@ const expectedPackageImports = {
 const expectedPackageTypeImports = {
   'ts-package-client-recipe-index.ts': [
     '@num1hub/capsule-specs/examples/client/recipe-index.json',
+    '@num1hub/capsule-specs/typescript/client-recipe-index',
+    'publishedClientRecipeGroupIds',
+    'publishedClientRecipeIndexCounts',
     'package-recipe-navigation',
+    'source-recipe-navigation',
     'source-response-reading',
     'cjs-package-live-validator-client.cjs',
+    'ts-client-recipe-index.ts',
     'recompute-integrity-seal.mjs'
   ],
   'ts-package-validate-request.ts': [

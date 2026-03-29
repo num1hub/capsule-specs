@@ -15,6 +15,8 @@ The schema family guide helps you choose the right level first. The schemas and 
 
 If you need the quickest task-oriented map of the consumer snippets before choosing a language or consumption path, inspect [`../examples/client/recipe-index.json`](../examples/client/recipe-index.json) and then jump into [`client-recipes.md`](client-recipes.md). The `task_entrypoints` section is the shortest route from intent to file; the `groups[*].recommended_start` fields are the shortest route from runtime lane to file.
 
+If you want that same navigator through one maintained source-level TypeScript projection instead of raw JSON alone, start with [`../examples/client/ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts) and then move into [`type-projections.md`](type-projections.md).
+
 If you need that same navigator from an installed package instead of a repo checkout, start with [`../examples/client/cjs-package-client-recipe-index.cjs`](../examples/client/cjs-package-client-recipe-index.cjs), [`../examples/client/esm-package-client-recipe-index.mjs`](../examples/client/esm-package-client-recipe-index.mjs), or [`../examples/client/ts-package-client-recipe-index.ts`](../examples/client/ts-package-client-recipe-index.ts), then move to [`npm-consumption.md`](npm-consumption.md).
 
 If you need the same navigator from Python instead of Node imports, start with [`../examples/client/python-client-recipe-index.py`](../examples/client/python-client-recipe-index.py), then move into [`python-consumption.md`](python-consumption.md).

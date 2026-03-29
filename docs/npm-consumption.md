@@ -45,6 +45,7 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/zod`
   Public-safe Zod projection bundle.
 - `@num1hub/capsule-specs/typescript/capsule`
+- `@num1hub/capsule-specs/typescript/client-recipe-index`
 - `@num1hub/capsule-specs/typescript/validator-envelope-families`
 - `@num1hub/capsule-specs/typescript/validator-routes`
 - `@num1hub/capsule-specs/typescript/validator-api`
@@ -118,6 +119,7 @@ Copyable versions of this example also live at [`../examples/client/cjs-package-
 
 ```js
 import recipeIndex from "@num1hub/capsule-specs/examples/client/recipe-index.json" with { type: "json" };
+import { publishedClientRecipeIndexCounts } from "@num1hub/capsule-specs/typescript/client-recipe-index";
 
 const packageRuntimeGroup = recipeIndex.groups.find((group) => group.id === "package-runtime");
 const packageNavigatorTask = recipeIndex.task_entrypoints.find((entry) => entry.id === "package-recipe-navigation");
@@ -125,9 +127,10 @@ const packageNavigatorTask = recipeIndex.task_entrypoints.find((entry) => entry.
 console.log(packageRuntimeGroup.recommended_start);
 console.log(packageNavigatorTask.recommended);
 console.log(packageNavigatorTask.alternatives);
+console.log(publishedClientRecipeIndexCounts.taskEntrypoints);
 ```
 
-These recipes prove that the installed package surface also carries the published machine-readable navigator for `examples/client/`. Consumers can recover runtime-lane starts, task entrypoints, and cross-runtime alternatives directly from the packed artifact instead of relying on a repo checkout or prose-only guidance.
+These recipes prove that the installed package surface also carries the published machine-readable navigator for `examples/client/` plus a maintained TypeScript projection for its bounded ids and counts. Consumers can recover runtime-lane starts, task entrypoints, and cross-runtime alternatives directly from the packed artifact instead of relying on a repo checkout or prose-only guidance.
 
 ## Minimal package-level OpenAPI example
 

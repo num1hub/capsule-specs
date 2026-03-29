@@ -1,27 +1,20 @@
 import recipeIndex from "@num1hub/capsule-specs/examples/client/recipe-index.json" with { type: "json" };
+import {
+  publishedClientRecipeGroupIds,
+  publishedClientRecipeIndexCounts,
+  publishedClientRecipeIndexDirectory,
+  type PublishedClientRecipeIndex
+} from "@num1hub/capsule-specs/typescript/client-recipe-index";
 
-type RecipeGroup = {
-  id: string;
-  recommended_start: string;
-  files: string[];
-};
-
-type RecipeTask = {
-  id: string;
-  primary_group: string;
-  recommended: string;
-  alternatives: string[];
-  docs: string[];
-  runtimes: string[];
-};
-
-const groups = recipeIndex.groups as RecipeGroup[];
-const tasks = recipeIndex.task_entrypoints as RecipeTask[];
+const typedRecipeIndex = recipeIndex as PublishedClientRecipeIndex;
+const groups = typedRecipeIndex.groups;
+const tasks = typedRecipeIndex.task_entrypoints;
 const runtimeStarts = Object.fromEntries(groups.map((group) => [group.id, group.recommended_start]));
 const packageNavigationTask = tasks.find((entry) => entry.id === "package-recipe-navigation");
 const responseReadingTask = tasks.find((entry) => entry.id === "source-response-reading");
+const sourceNavigationTask = tasks.find((entry) => entry.id === "source-recipe-navigation");
 
-if (recipeIndex.directory !== "examples/client") {
+if (typedRecipeIndex.directory !== publishedClientRecipeIndexDirectory) {
   throw new Error("unexpected recipe-index directory");
 }
 
@@ -41,11 +34,32 @@ if (runtimeStarts["integrity-recipes"] !== "recompute-integrity-seal.mjs") {
   throw new Error("unexpected integrity recommended start");
 }
 
+if (runtimeStarts["source-level-types"] !== "ts-client-recipe-index.ts") {
+  throw new Error("unexpected source-level recommended start");
+}
+
+if (typedRecipeIndex.groups.length !== publishedClientRecipeIndexCounts.groups) {
+  throw new Error("unexpected group count");
+}
+
+if (typedRecipeIndex.task_entrypoints.length !== publishedClientRecipeIndexCounts.taskEntrypoints) {
+  throw new Error("unexpected task count");
+}
+
+if (!publishedClientRecipeGroupIds.includes("python-consumers")) {
+  throw new Error("typed client-recipe projection lost python-consumers");
+}
+
+if (!sourceNavigationTask || sourceNavigationTask.recommended !== "ts-client-recipe-index.ts") {
+  throw new Error("typed client-recipe projection lost source navigator task");
+}
+
 export const packageNavigatorSummary = {
-  version: recipeIndex.version,
+  version: typedRecipeIndex.version,
   groupCount: groups.length,
   taskCount: tasks.length,
   packageRuntimeStart: runtimeStarts["package-runtime"],
+  sourceLevelStart: runtimeStarts["source-level-types"],
   integrityStart: runtimeStarts["integrity-recipes"],
   packageNavigationAlternatives: packageNavigationTask.alternatives.length,
   responseReadingRuntimes: responseReadingTask.runtimes

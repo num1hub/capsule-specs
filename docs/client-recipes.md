@@ -36,6 +36,8 @@ If you want the quickest path instead of reading the whole directory:
   start with [`curl-validate-batch.sh`](../examples/client/curl-validate-batch.sh) or [`curl-validate-fix.sh`](../examples/client/curl-validate-fix.sh), then move to the Node, Python, or TypeScript alternatives listed in `recipe-index.json`
 - Call the support routes:
   start with [`curl-get-gates.sh`](../examples/client/curl-get-gates.sh) and [`curl-get-stats.sh`](../examples/client/curl-get-stats.sh) for the shortest live route proof, including the bounded `limit` query path on `stats`
+- Read the published client-recipe navigator from source-level TypeScript:
+  start with [`ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts), then move to the request, response, route, or OpenAPI recipes it points toward
 - Read published request families from source-level projections:
   start with [`ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts) or the Zod request parsers
 - Read published response, error, and support families from source-level projections:
@@ -57,7 +59,7 @@ If you already know your runtime, the shortest entry files are:
 
 - shell: [`curl-validate-single.sh`](../examples/client/curl-validate-single.sh)
 - Node: [`node-validate-single.mjs`](../examples/client/node-validate-single.mjs)
-- source-level TypeScript/Zod: [`ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts)
+- source-level TypeScript/Zod: [`ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts)
 - raw-schema Ajv: [`ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - integrity proof: [`recompute-integrity-seal.mjs`](../examples/client/recompute-integrity-seal.mjs)
 - Python: [`python-live-validator-client.py`](../examples/client/python-live-validator-client.py)
@@ -94,6 +96,7 @@ They are intentionally small and avoid framework assumptions while covering all 
 
 Source-level consumer examples also live under [`../examples/client/`](../examples/client/):
 
+- [`ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts)
 - [`ts-capsule-summary.ts`](../examples/client/ts-capsule-summary.ts)
 - [`zod-parse-capsule.ts`](../examples/client/zod-parse-capsule.ts)
 - [`ts-openapi-route-summary.ts`](../examples/client/ts-openapi-route-summary.ts)
@@ -118,7 +121,7 @@ Source-level consumer examples also live under [`../examples/client/`](../exampl
 - [`zod-parse-error-responses.ts`](../examples/client/zod-parse-error-responses.ts)
 - [`zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
 
-These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema, and how to inspect or generate from the strongest published OpenAPI route surface directly when compact summaries are too lossy. Together they cover single, batch, and fix `validate` request families, source-level TypeScript builders plus source-level typed reading of the published request samples, a direct OpenAPI route-summary path, a repo-local OpenAPI code-generation path through `openapi-typescript`, a typed live-client bridge for all published validator routes backed by the shared route projection and the bounded `stats` query path, a typed validator envelope-family discovery path backed by the shared envelope-family projection, a typed validator route-behavior discovery path backed by the shared route projection and compact route pack, typed/parsing paths for the published pass, fail, batch, and fix response families, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes.
+These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema, and how to inspect or generate from the strongest published OpenAPI route surface directly when compact summaries are too lossy. Together they cover the published client-recipe navigator as typed contract data, single, batch, and fix `validate` request families, source-level TypeScript builders plus source-level typed reading of the published request samples, a direct OpenAPI route-summary path, a repo-local OpenAPI code-generation path through `openapi-typescript`, a typed live-client bridge for all published validator routes backed by the shared route projection and the bounded `stats` query path, a typed validator envelope-family discovery path backed by the shared envelope-family projection, a typed validator route-behavior discovery path backed by the shared route projection and compact route pack, typed/parsing paths for the published pass, fail, batch, and fix response families, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes.
 
 ## Raw JSON Schema recipes
 

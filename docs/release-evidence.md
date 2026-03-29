@@ -123,6 +123,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Human-readable guide to the package-export and pack-ready consumer layer.
 - [`../projections/typescript/capsule.ts`](../projections/typescript/capsule.ts)
   Public-safe TypeScript projection for the capsule outer contract.
+- [`../projections/typescript/client-recipe-index.ts`](../projections/typescript/client-recipe-index.ts)
+  Public-safe TypeScript projection for the published client-recipe navigator ids, counts, and typed JSON shape.
 - [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
   Public-safe TypeScript projection for validator request and response envelopes.
 - [`../projections/typescript/index.ts`](../projections/typescript/index.ts)
@@ -163,6 +165,8 @@ This repository keeps release evidence in both human-readable and machine-readab
   Repo-local verification that the Python recipes work both from a checkout and from extracted packed artifacts.
 - [`../examples/client/ts-build-validate-request.ts`](../examples/client/ts-build-validate-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator request envelope.
+- [`../examples/client/ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts)
+  Minimal source-level TypeScript recipe for typing the published client-recipe navigator through the shared client-navigator projection.
 - [`../examples/client/ts-build-validate-batch-request.ts`](../examples/client/ts-build-validate-batch-request.ts)
   Minimal source-level TypeScript recipe for constructing a validator batch request envelope.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
@@ -267,8 +271,14 @@ This repository keeps release evidence in both human-readable and machine-readab
   Minimal Python recipe for parsing the published generic, unauthorized, forbidden, conflict, and rate-limit error envelopes plus the route-specific stats-computation failure sample.
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
   Minimal Python recipe for parsing the published `gates` and `stats` support-response families.
+- [`../examples/client/cjs-package-client-recipe-index.cjs`](../examples/client/cjs-package-client-recipe-index.cjs)
+  Minimal CommonJS package-consumer recipe for reading the published client-recipe navigator from installed JSON assets.
+- [`../examples/client/esm-package-client-recipe-index.mjs`](../examples/client/esm-package-client-recipe-index.mjs)
+  Minimal ESM package-consumer recipe for reading the published client-recipe navigator from installed JSON assets.
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
   Minimal TypeScript package-consumer recipe for compact contract-reference exports.
+- [`../examples/client/ts-package-client-recipe-index.ts`](../examples/client/ts-package-client-recipe-index.ts)
+  Minimal TypeScript package-consumer recipe for typing the published client-recipe navigator through the shared package projection and installed JSON asset.
 - [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)
   Minimal TypeScript package-consumer recipe for sample-driven typed generic, unauthorized, forbidden, conflict, and rate-limit error-envelope handling plus the route-specific stats-computation failure sample through installed package exports.
 - [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)

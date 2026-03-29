@@ -15,6 +15,7 @@ const nodeFiles = [
 ];
 
 const typeRecipeFiles = [
+  'ts-client-recipe-index.ts',
   'ts-capsule-summary.ts',
   'zod-parse-capsule.ts',
   'ts-openapi-route-summary.ts',
@@ -139,10 +140,10 @@ const recipeGroups = [
   {
     id: 'source-level-types',
     title: 'Source-level TypeScript and Zod',
-    description: 'Repo-relative typed readers, request builders, route summaries, and response parsers.',
+    description: 'Repo-relative typed navigators, readers, request builders, route summaries, and response parsers.',
     audiences: ['integrators', 'tool-builders'],
     primary_docs: ['docs/type-projections.md', 'docs/client-recipes.md'],
-    recommended_start: 'ts-parse-validate-requests.ts',
+    recommended_start: 'ts-client-recipe-index.ts',
     files: typeRecipeFiles
   },
   {
@@ -237,6 +238,15 @@ const taskEntrypoints = [
     alternatives: ['node-validate-batch.mjs', 'node-validate-fix.mjs', 'node-get-gates.mjs', 'node-get-stats.mjs'],
     docs: ['docs/client-recipes.md', 'docs/integration-guide.md'],
     runtimes: ['node']
+  },
+  {
+    id: 'source-recipe-navigation',
+    intent: 'Read the published client-recipe navigator through the source-level TypeScript projection before choosing a repo-relative snippet',
+    primary_group: 'source-level-types',
+    recommended: 'ts-client-recipe-index.ts',
+    alternatives: ['ts-parse-validate-requests.ts', 'ts-live-validator-client.ts', 'ts-route-behavior-reference.ts'],
+    docs: ['docs/client-recipes.md', 'docs/type-projections.md', 'docs/integration-guide.md'],
+    runtimes: ['typescript']
   },
   {
     id: 'source-request-reading',

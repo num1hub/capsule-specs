@@ -20,7 +20,7 @@ if (runtimeStarts["package-runtime"] !== "cjs-package-live-validator-client.cjs"
   throw new Error("unexpected package-runtime recommended start");
 }
 
-if (runtimeStarts["source-level-types"] !== "ts-parse-validate-requests.ts") {
+if (runtimeStarts["source-level-types"] !== "ts-client-recipe-index.ts") {
   throw new Error("unexpected source-level recommended start");
 }
 

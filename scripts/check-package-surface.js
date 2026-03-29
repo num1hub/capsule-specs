@@ -23,6 +23,7 @@ const requiredExports = [
   '.',
   './typescript',
   './typescript/capsule',
+  './typescript/client-recipe-index',
   './typescript/validator-envelope-families',
   './typescript/validator-routes',
   './typescript/validator-api',
@@ -51,6 +52,8 @@ const requiredBuiltFiles = [
   'dist/projections/typescript/index.js',
   'dist/projections/typescript/index.d.ts',
   'dist/projections/typescript/capsule.js',
+  'dist/projections/typescript/client-recipe-index.js',
+  'dist/projections/typescript/client-recipe-index.d.ts',
   'dist/projections/typescript/validator-envelope-families.js',
   'dist/projections/typescript/validator-envelope-families.d.ts',
   'dist/projections/typescript/validator-routes.js',
@@ -68,6 +71,7 @@ for (const relativePath of requiredBuiltFiles) {
 
 const rootExports = require('@num1hub/capsule-specs');
 const typescriptProjection = require('@num1hub/capsule-specs/typescript');
+const clientRecipeIndexProjection = require('@num1hub/capsule-specs/typescript/client-recipe-index');
 const validatorEnvelopeProjection = require('@num1hub/capsule-specs/typescript/validator-envelope-families');
 const zodProjection = require('@num1hub/capsule-specs/zod');
 const validatorZod = require('@num1hub/capsule-specs/zod/validator-api');
@@ -108,6 +112,24 @@ const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsul
 
 assert(rootExports && rootExports.typescript && rootExports.zod, 'root package export must expose typescript and zod namespaces');
 assert(Array.isArray(typescriptProjection.CAPSULE_TYPES), 'typescript export must expose CAPSULE_TYPES');
+assert(
+  Array.isArray(typescriptProjection.publishedClientRecipeGroupIds) &&
+    typescriptProjection.publishedClientRecipeGroupIds.length === 8,
+  'typescript export must expose client recipe group ids'
+);
+assert(
+  Array.isArray(typescriptProjection.publishedClientRecipeTaskIds) &&
+    typescriptProjection.publishedClientRecipeTaskIds.length === 18,
+  'typescript export must expose client recipe task ids'
+);
+assert(
+  clientRecipeIndexProjection.publishedClientRecipeIndexDirectory === 'examples/client',
+  'typescript client-recipe-index export must expose the navigator directory'
+);
+assert(
+  clientRecipeIndexProjection.publishedClientRecipeIndexCounts?.taskEntrypoints === 18,
+  'typescript client-recipe-index export must expose navigator task counts'
+);
 assert(
   typescriptProjection.publishedValidatorEnvelopeFamilyCounts?.requests === 3,
   'typescript export must expose validator envelope family counts'
@@ -191,7 +213,7 @@ assert(
 assert(recipeIndex.directory === 'examples/client', 'package exports must expose the client recipe navigator');
 assert(Array.isArray(recipeIndex.groups) && recipeIndex.groups.length === 8, 'package exports must expose all client recipe groups');
 assert(
-  Array.isArray(recipeIndex.task_entrypoints) && recipeIndex.task_entrypoints.length === 17,
+  Array.isArray(recipeIndex.task_entrypoints) && recipeIndex.task_entrypoints.length === 18,
   'package exports must expose all client recipe task entrypoints'
 );
 assert(
@@ -207,6 +229,15 @@ assert(
   recipeIndex.task_entrypoints.find((entry) => entry.id === 'python-recipe-navigation')?.recommended ===
     'python-client-recipe-index.py',
   'package exports must expose the Python recipe-navigation task'
+);
+assert(
+  recipeIndex.task_entrypoints.find((entry) => entry.id === 'source-recipe-navigation')?.recommended ===
+    'ts-client-recipe-index.ts',
+  'package exports must expose the source recipe-navigation task'
+);
+assert(
+  recipeIndex.groups.find((group) => group.id === 'source-level-types')?.recommended_start === 'ts-client-recipe-index.ts',
+  'package exports must expose the source-level TypeScript navigator start'
 );
 assert(
   invalidRelationTypeCapsule.metadata?.capsule_id === 'capsule.example.invalid-relation-type.v1',
@@ -316,6 +347,7 @@ const packedFiles = new Set((packOutput[0]?.files || []).map((entry) => entry.pa
 for (const relativePath of [
   'dist/projections/index.js',
   'dist/projections/typescript/capsule.js',
+  'dist/projections/typescript/client-recipe-index.js',
   'dist/projections/zod/validator-api.js',
   'docs/npm-consumption.md',
   'docs/archive-validation-recipes.md',
@@ -337,6 +369,7 @@ for (const relativePath of [
   'references/validation-gates.json',
   'references/validator-envelope-families.json',
   'references/validator-routes.json',
+  'projections/typescript/client-recipe-index.ts',
   'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json',
   'docs/reference-pack.md',
   'examples/client/ajv-validate-capsule.mjs',
@@ -348,6 +381,7 @@ for (const relativePath of [
   'examples/client/ajv-reject-invalid-validator-envelopes.mjs',
   'examples/client/cjs-package-contract-reference.cjs',
   'examples/client/cjs-package-error-responses.cjs',
+  'examples/client/cjs-package-client-recipe-index.cjs',
   'examples/client/cjs-package-live-validator-client.cjs',
   'examples/client/cjs-package-openapi-codegen.cjs',
   'examples/client/cjs-package-openapi-reference.cjs',
@@ -380,6 +414,7 @@ for (const relativePath of [
   'examples/client/python-parse-support-responses.py',
   'examples/api/stats-error-response.sample.json',
   'examples/client/esm-package-capsule-summary.mjs',
+  'examples/client/esm-package-client-recipe-index.mjs',
   'examples/client/esm-package-support-responses.mjs',
   'examples/client/esm-package-validate-response.mjs',
   'examples/client/zod-parse-validate-response.ts',
@@ -389,12 +424,14 @@ for (const relativePath of [
   'examples/client/zod-parse-validate-request.ts',
   'examples/client/zod-parse-validate-batch-request.ts',
   'examples/client/zod-parse-validate-fix-request.ts',
+  'examples/client/ts-client-recipe-index.ts',
   'examples/client/ts-parse-validate-requests.ts',
   'examples/client/ts-live-validator-client.ts',
   'examples/client/ts-package-contract-reference.ts',
   'examples/client/ts-envelope-family-reference.ts',
   'examples/client/ts-route-behavior-reference.ts',
   'examples/client/ts-package-error-responses.ts',
+  'examples/client/ts-package-client-recipe-index.ts',
   'examples/client/ts-package-live-validator-client.ts',
   'examples/client/ts-package-openapi-codegen.ts',
   'examples/client/ts-package-openapi-reference.ts',

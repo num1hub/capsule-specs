@@ -2959,6 +2959,14 @@
     "transformation_type": "generated",
     "notes": "Minimal TypeScript consumer recipe for the published capsule projection layer."
   },
+  "examples/client/ts-client-recipe-index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/projections/typescript/client-recipe-index.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Source-level TypeScript recipe for the published client-recipe navigator through the shared client-navigator projection."
+  },
   "examples/client/ts-envelope-family-reference.ts": {
     "source_paths": [
       "/home/n1/codex-workspace/docs/reference-pack.md",
@@ -2990,10 +2998,11 @@
   },
   "examples/client/ts-package-client-recipe-index.ts": {
     "source_paths": [
-      "/home/n1/codex-workspace/examples/client/recipe-index.json"
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/projections/typescript/client-recipe-index.ts"
     ],
     "transformation_type": "generated",
-    "notes": "TypeScript package-consumer recipe for the published client-recipe navigator."
+    "notes": "TypeScript package-consumer recipe for the published client-recipe navigator through the shared package projection."
   },
   "examples/client/ts-package-contract-reference.ts": {
     "source_paths": [
@@ -3543,6 +3552,13 @@
     ],
     "transformation_type": "derived",
     "notes": "Public-safe TypeScript projection for the capsule outer contract."
+  },
+  "projections/typescript/client-recipe-index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json"
+    ],
+    "transformation_type": "projection",
+    "notes": "Public-safe TypeScript projection for the published client-recipe navigator ids, counts, and typed JSON shape."
   },
   "projections/typescript/index.ts": {
     "source_paths": [

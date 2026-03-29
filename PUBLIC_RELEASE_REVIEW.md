@@ -43,13 +43,13 @@
 - machine-readable publication-readiness map in `PUBLIC_PUBLICATION_READINESS.json` plus a bounded publication-state and public-release safety guide
 - machine-readable capability matrix in `PUBLIC_CAPABILITY_MATRIX.json` plus a capability guide
 - machine-readable schemas, including validator API envelope coverage
-- public-safe TypeScript and Zod projection files for capsule and validator API contracts, bundle entrypoints, package-surface build config, package-surface verification, fresh-install verification, and both source-level and package-level CommonJS, ESM, and TypeScript consumer recipe examples
+- public-safe TypeScript and Zod projection files for capsule, client-recipe navigator, and validator API contracts, bundle entrypoints, package-surface build config, package-surface verification, fresh-install verification, and both source-level and package-level CommonJS, ESM, and TypeScript consumer recipe examples
 - source-level and installed-package TypeScript request-sample readers for the published single, batch, and fix validator envelopes, so request-side TypeScript consumers are no longer construction-only
 - compact validator-route reference JSON with auth/query/status metadata, a shared TypeScript validator-route projection, a source-level TypeScript route-behavior reference recipe, and installed-package CommonJS, ESM, plus TypeScript live-client recipes for the published `validate`, `batch`, `fix`, `gates`, and `stats` validator routes, so package-backed route usage no longer stops at static sample parsing or language-specific live recipes
 - package-consumer support-response recipes for `gates` and `stats`, plus fresh-install proof that the installed validator projection layer covers support payload parsing as well as `validate` request/response flows
 - compact contract-reference JSON artifacts, their directory guide and human guide, CommonJS/ESM/TypeScript/Python package-consumer recipes, and a repo-local verifier
 - compact validator-envelope-family reference JSON, a shared TypeScript envelope-family projection, their consumer recipes, and repo-local verifier
-- machine-readable client recipe index for runtime-lane starts plus task-oriented discovery across the published consumer snippets, with verifier-backed coverage for group ownership, task wiring, non-Markdown artifact indexing, and installed-package CommonJS/ESM/TypeScript navigator consumers
+- machine-readable client recipe index for runtime-lane starts plus task-oriented discovery across the published consumer snippets, a shared TypeScript client-navigator projection, verifier-backed coverage for group ownership and task wiring, and repo-local plus installed-package CommonJS/ESM/TypeScript navigator consumers
 - dedicated OpenAPI/compact-reference coherence verification so the validator route and envelope-family summaries stay subordinate to the stronger published HTTP contract
 - single-file bundled schema artifacts, their human guide, package-consumer recipes, and repo-local verifier
 - Ajv-based raw-schema consumer recipes, their human guide, and repo-local verifier
@@ -143,7 +143,7 @@ Repository-local audit on 2026-03-29:
 - `node scripts/check-contract-catalog.js`: pass
 - `node scripts/check-surface-coherence.js`: pass
 - `node scripts/check-release-metadata.js`: pass
-- manifest coverage: `385` files / `385` manifest entries
+- manifest coverage: `387` files / `387` manifest entries
 
 Upstream validator checks on 2026-03-26:
 

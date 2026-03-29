@@ -19,16 +19,20 @@ if recipe_index["directory"] != "examples/client":
 if len(recipe_index["groups"]) != 8:
     raise ValueError("recipe-index group count drifted")
 
-if len(recipe_index["task_entrypoints"]) != 17:
+if len(recipe_index["task_entrypoints"]) != 18:
     raise ValueError("recipe-index task count drifted")
 
 python_group = next(group for group in recipe_index["groups"] if group["id"] == "python-consumers")
 package_group = next(group for group in recipe_index["groups"] if group["id"] == "package-runtime")
+source_group = next(group for group in recipe_index["groups"] if group["id"] == "source-level-types")
 python_navigation_task = next(
     entry for entry in recipe_index["task_entrypoints"] if entry["id"] == "python-recipe-navigation"
 )
 package_navigation_task = next(
     entry for entry in recipe_index["task_entrypoints"] if entry["id"] == "package-recipe-navigation"
+)
+source_navigation_task = next(
+    entry for entry in recipe_index["task_entrypoints"] if entry["id"] == "source-recipe-navigation"
 )
 
 if python_navigation_task["recommended"] != "python-client-recipe-index.py":
@@ -40,14 +44,19 @@ if "docs/python-consumption.md" not in python_navigation_task["docs"]:
 if "python" not in python_navigation_task["runtimes"]:
     raise ValueError("python navigator runtimes drifted")
 
+if source_navigation_task["recommended"] != "ts-client-recipe-index.ts":
+    raise ValueError("source navigator task drifted")
+
 summary = {
     "version": recipe_index["version"],
     "groupCount": len(recipe_index["groups"]),
     "taskCount": len(recipe_index["task_entrypoints"]),
     "pythonRecommendedStart": python_group["recommended_start"],
+    "sourceRecommendedStart": source_group["recommended_start"],
     "packageRecommendedStart": package_group["recommended_start"],
     "pythonNavigatorRecommended": python_navigation_task["recommended"],
     "pythonNavigatorAlternativeCount": len(python_navigation_task["alternatives"]),
+    "sourceNavigatorRecommended": source_navigation_task["recommended"],
     "packageNavigatorRecommended": package_navigation_task["recommended"],
 }
 
