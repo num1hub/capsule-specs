@@ -18,6 +18,11 @@ The machine-readable form lives in [`../PUBLIC_EVIDENCE_STRENGTH_MAP.json`](../P
 
 This layer makes that hierarchy explicit and machine-readable instead of leaving readers to infer authority from filenames, format, or maintainer habit.
 
+In practice this supports a two-layer workflow:
+
+- humans can start from concentrated summaries and role-specific docs
+- agents should climb toward stronger machine-readable and contract-level surfaces before answering with confidence
+
 ## Relationship to other public surfaces
 
 - [`../PUBLIC_OWNERSHIP_MAP.json`](../PUBLIC_OWNERSHIP_MAP.json)

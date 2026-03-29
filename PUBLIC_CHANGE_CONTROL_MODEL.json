@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "reviewed_at": "2026-03-26",
+  "reviewed_at": "2026-03-29",
   "stability_phase": "0.x",
   "change_classes": [
     {
@@ -140,7 +140,8 @@
   ],
   "non_claims": [
     "This file does not promise indefinite backward compatibility for all public artifacts while the repository remains in 0.x.",
-    "This file does not expose private migration tooling or internal rollout procedures from the upstream N1Hub runtime."
+    "This file does not expose private migration tooling or internal rollout procedures from the upstream N1Hub runtime.",
+    "This file does not treat the public dream branch as a waiver for review, coherence, or verification rules."
   ],
   "review_commands": [
     "npm run check:change-control",

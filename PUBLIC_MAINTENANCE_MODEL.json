@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "reviewed_at": "2026-03-26",
+  "reviewed_at": "2026-03-29",
   "primary_maintainer": "egor-n1",
   "supported_channels": [
     "GitHub issues for public bugs, docs gaps, integration questions, and contract change proposals.",
@@ -120,6 +120,8 @@
   "operating_rules": [
     "Keep the public boundary intentional and do not widen scope by accident.",
     "Prefer small, reviewable changes over oversized public dumps.",
+    "Treat main as the stable public branch and dream as the public exploration branch for larger still-public work.",
+    "Do not treat dream as a private vault or as a bypass around public-boundary, provenance, or verification rules.",
     "Keep SOURCE_MANIFEST.json and PUBLIC_CONTRACT_CATALOG.json aligned with new or changed public artifacts.",
     "Require explicit verification evidence when schemas, examples, OpenAPI, or release surfaces change.",
     "Route trust-sensitive disclosures through SECURITY.md instead of public issue intake.",
@@ -140,7 +142,8 @@
   ],
   "non_claims": [
     "This file does not promise a guaranteed response-time SLA for public issues or pull requests.",
-    "This file does not expose private internal workflow details from the upstream N1Hub runtime."
+    "This file does not expose private internal workflow details from the upstream N1Hub runtime.",
+    "This file does not treat the public dream branch as a private maintainer surface."
   ],
   "review_commands": [
     "npm run check:maintenance-model",

@@ -2,36 +2,13 @@
 
 const fs = require('fs');
 const path = require('path');
+const { listRepoFiles } = require('./lib/repo-files');
 
 const repoRoot = path.resolve(__dirname, '..');
 const manifestPath = path.join(repoRoot, 'SOURCE_MANIFEST.json');
 const metadataPath = path.join(repoRoot, 'PUBLIC_RELEASE_METADATA.json');
 const packagePath = path.join(repoRoot, 'package.json');
 const catalogPath = path.join(repoRoot, 'PUBLIC_CONTRACT_CATALOG.json');
-
-const ignoredPrefixes = ['.git/', 'node_modules/', 'dist/'];
-const ignoredFiles = new Set(['.codexignore']);
-
-function shouldIgnore(relativePath) {
-  if (ignoredFiles.has(relativePath)) return true;
-  return ignoredPrefixes.some((prefix) => relativePath.startsWith(prefix));
-}
-
-function walk(dir) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  const files = [];
-  for (const entry of entries) {
-    const absolutePath = path.join(dir, entry.name);
-    const relativePath = path.relative(repoRoot, absolutePath).replaceAll(path.sep, '/');
-    if (shouldIgnore(relativePath)) continue;
-    if (entry.isDirectory()) {
-      files.push(...walk(absolutePath));
-    } else {
-      files.push(relativePath);
-    }
-  }
-  return files;
-}
 
 function assert(condition, message) {
   if (!condition) {
@@ -45,7 +22,7 @@ const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
 const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
 const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
 
-const files = walk(repoRoot).sort();
+const files = listRepoFiles(repoRoot);
 const packageScripts = new Set(Object.keys(pkg.scripts || {}).map((name) => `npm run ${name}`));
 const topLevelExampleCapsules = fs
   .readdirSync(path.join(repoRoot, 'examples'))

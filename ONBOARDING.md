@@ -7,7 +7,13 @@ Welcome to the public N1Hub specification surface.
 - Read [`README.md`](README.md) for the repository map.
 - Read [`QUICKSTART.md`](QUICKSTART.md) if you need the shortest entry path.
 - Read [`docs/audience-paths.md`](docs/audience-paths.md) if you want the bounded role-specific path before diving deeper.
+- Inspect [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) if you want the same contributor, reviewer, integrator, tool-builder, and maintainer lanes in machine-readable form.
 - Read [`docs/repository-scope.md`](docs/repository-scope.md) to understand what is intentionally excluded.
+
+If you are here to contribute code or docs directly, continue with this file.
+If you are actually here to review, integrate, or build tooling against the public surface, jump to
+the narrower lane from [`docs/audience-paths.md`](docs/audience-paths.md) instead of staying on the
+contributor path by default.
 
 ## Step 2: Understand the rules
 
@@ -43,6 +49,9 @@ Welcome to the public N1Hub specification surface.
 
 - Use small pull requests for docs, examples, schema corrections, and public-surface improvements.
 - Open an issue first when a change would alter the capsule law, validator semantics, or public repository scope.
+- Treat `main` as the stable public branch and `dream` as the public exploration branch for larger still-public work.
+- Collapse proven `dream` work into smaller reviewable slices before landing it in `main`.
+- Do not use either public branch for private operator material, local vault content, or maintainer-only exports.
 - Run `npm run verify:repo` and refresh [`PUBLIC_RELEASE_REVIEW.md`](PUBLIC_RELEASE_REVIEW.md) before proposing a release-facing change.
 - Use [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md) for the narrow command packet that matches the change class before running the full repo pass.
 - Read [`docs/verification.md`](docs/verification.md) if you need to interpret a failing repo-local check.

@@ -7259,6 +7259,17 @@
     "transformation_type": "derived",
     "notes": "Repo-local helper for the public G16 sealing rule derived from validator-owned integrity semantics and compact reference constants."
   },
+  "scripts/lib/repo-files.js": {
+    "source_paths": [
+      "/home/n1/codex-workspace/.gitignore",
+      "/home/n1/codex-workspace/scripts/audit-public-surface.js",
+      "/home/n1/codex-workspace/scripts/check-doc-links.js",
+      "/home/n1/codex-workspace/scripts/check-project-profile.js",
+      "/home/n1/codex-workspace/scripts/check-release-metadata.js"
+    ],
+    "transformation_type": "generated",
+    "notes": "Shared helper for enumerating the tracked public surface while respecting gitignored local maintainer-only files inside the one-folder workspace."
+  },
   "scripts/lib/schema-bundles.js": {
     "source_paths": [
       "/home/n1/codex-workspace/schemas/capsule-schema.json",

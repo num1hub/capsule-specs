@@ -18,6 +18,7 @@ The bounded co-movement map for reviewer, release, contract, and teaching surfac
 - update docs, schemas, examples, catalog, and release evidence together when contract meaning changes
 - mark deprecations in human-readable and machine-readable surfaces before removing public artifacts when feasible
 - avoid casual drift in examples, route semantics, and schema-backed envelopes
+- treat `dream` as a public exploration branch, not as an exemption from review, coherence, or verification rules
 - keep `VERSIONING.md`, `docs/compatibility.md`, and release evidence aligned with the real public posture
 
 ## Important boundary

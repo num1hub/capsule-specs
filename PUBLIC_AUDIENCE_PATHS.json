@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "reviewed_at": "2026-03-28",
+  "reviewed_at": "2026-03-29",
   "purpose": "Publish bounded entry paths for the main public audiences so reviewers, integrators, contributors, tool-builders, and maintainers can follow the right surfaces without guessing from folder layout alone.",
   "audiences": [
     {
@@ -253,7 +253,7 @@
     },
     {
       "id": "maintainers",
-      "summary": "Use this path when keeping reviewer, release, and audience-facing surfaces synchronized as the public repo evolves.",
+      "summary": "Use this path when keeping reviewer, release, and audience-facing surfaces synchronized as the public repo evolves across the stable main branch and the public exploration dream branch.",
       "starting_points": [
         "MAINTAINERS.md",
         "GOVERNANCE.md",
@@ -295,6 +295,7 @@
       "completion_signals": [
         "can explain which public role paths must be refreshed when the repo grows",
         "can identify which summary layers must move with release evidence",
+        "can explain when larger still-public work belongs on dream before it is collapsed into smaller reviewable changes for main",
         "can keep reviewer shortcuts aligned with the real public artifact set",
         "can keep cross-language Python consumer claims aligned with packaged assets, compact references, and public G16 proof surfaces",
         "can keep the invalid validator-envelope teaching layer aligned with schema recipes, package-install proof, and structurally valid negative API examples",

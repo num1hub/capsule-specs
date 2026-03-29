@@ -13,6 +13,12 @@
 - keep [`PUBLIC_MAINTENANCE_MODEL.json`](PUBLIC_MAINTENANCE_MODEL.json) aligned with the actual public maintainer workflow
 - keep [`PUBLIC_CHANGE_CONTROL_MODEL.json`](PUBLIC_CHANGE_CONTROL_MODEL.json) aligned with the actual public change and deprecation posture
 
+## Public branch model
+
+- `main` is the stable public branch.
+- `dream` is the public exploration branch for larger still-public work before it is collapsed into smaller reviewable changes for `main`.
+- Neither public branch is a private maintainer surface.
+
 ## Contact model
 
 - public bugs and docs issues: GitHub issues

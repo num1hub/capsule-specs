@@ -2,24 +2,10 @@
 
 const fs = require('fs');
 const path = require('path');
+const { listMarkdownFiles } = require('./lib/repo-files');
 
 const repoRoot = path.resolve(__dirname, '..');
-const markdownFiles = [];
-
-function walk(dir) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const absolutePath = path.join(dir, entry.name);
-    const relativePath = path.relative(repoRoot, absolutePath).replaceAll(path.sep, '/');
-    if (relativePath.startsWith('.git/') || relativePath.startsWith('node_modules/')) continue;
-    if (entry.isDirectory()) {
-      walk(absolutePath);
-      continue;
-    }
-    if (entry.isFile() && relativePath.endsWith('.md')) {
-      markdownFiles.push(relativePath);
-    }
-  }
-}
+const markdownFiles = listMarkdownFiles(repoRoot);
 
 function assert(condition, message) {
   if (!condition) {
@@ -37,8 +23,6 @@ function shouldSkipTarget(target) {
     target.startsWith('mailto:')
   );
 }
-
-walk(repoRoot);
 
 const markdownLinkPattern = /!?\[[^\]]*\]\(([^)]+)\)/g;
 let checkedLinks = 0;

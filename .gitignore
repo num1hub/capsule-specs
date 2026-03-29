@@ -6,3 +6,12 @@ Thumbs.db
 node_modules/
 dist/
 coverage/
+
+# Private maintainer workspace.
+# This hidden root may contain local operator, vault, Gemini, export, and other
+# maintainer-only surfaces that must never be pushed as part of the public
+# Capsule-Specs projection surface.
+.egor-n1-maintainer/
+
+# Local all-in-one / long-context review exports.
+capsule-specs-full-repository.txt

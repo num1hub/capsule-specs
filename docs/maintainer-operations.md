@@ -22,6 +22,8 @@ The repo-owned GitHub operations layer lives in [`github-operations.md`](github-
 ## Highest-signal operational rules
 
 - keep the public boundary narrow and explicit
+- treat `main` as the stable public branch and `dream` as the public exploration branch for larger still-public work
+- do not treat `dream` as a private vault or as a bypass around public-boundary, provenance, or verification rules
 - keep `SOURCE_MANIFEST.json` and `PUBLIC_CONTRACT_CATALOG.json` synchronized with public-surface changes
 - keep `PUBLIC_EVIDENCE_STRENGTH_MAP.json` aligned with trust, compatibility, reviewer, and release-evidence surfaces when stronger-source hierarchy changes
 - keep `PUBLIC_ADOPTION_READINESS.json` aligned with audience paths, limitations, release evidence, and maintainer posture when adoption readiness or deferred expectations change
@@ -33,6 +35,12 @@ The repo-owned GitHub operations layer lives in [`github-operations.md`](github-
 ## Why this matters
 
 External programs and contributors need more than docs. They need evidence that the repository is maintained intentionally and that changes move through explicit public-safe workflow rules.
+
+## Public branch note
+
+- `main` is the stable public branch for release-facing and reviewer-facing changes.
+- `dream` is a public exploration branch, not a private maintainer surface.
+- Private operator material and maintainer-only exports stay outside tracked public files.
 
 ## Important boundary
 

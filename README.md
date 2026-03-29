@@ -25,10 +25,23 @@ N1Hub is being built as a portable, validator-backed, open-core knowledge system
 
 This repository is that home.
 
+## Human and agent layers
+
+This public surface is intentionally dual-layer:
+
+- human layer
+  Short orientation, role-specific entry paths, concentrated summaries, and the smallest safe reading set.
+- agent layer
+  Machine-readable maps, stronger-source hierarchy, schemas, OpenAPI, examples, references, and verification-facing artifacts that LLMs and automation can traverse deeply.
+
+Humans should not need to read the whole tree. Agents can traverse the deeper machine-readable surface and return bounded answers back to their operators.
+
 ## Start here
 
 - [`QUICKSTART.md`](QUICKSTART.md) for the fastest safe orientation
 - [`ONBOARDING.md`](ONBOARDING.md) for the full contributor path
+- [`docs/audience-paths.md`](docs/audience-paths.md) for the bounded reviewer, integrator, contributor, tool-builder, and maintainer lanes
+- [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) for the same role-specific entry paths in machine-readable form
 - [`docs/overview.md`](docs/overview.md) for the public boundary
 - [`docs/repository-identity.md`](docs/repository-identity.md) for the canonical public repo identity and URL alignment rules
 - [`docs/projection-doctrine.md`](docs/projection-doctrine.md) for the files-as-projections rule
@@ -94,6 +107,45 @@ This repository is that home.
 - [`docs/compatibility.md`](docs/compatibility.md) for stability expectations
 - [`VERSIONING.md`](VERSIONING.md) for release and contract-change policy
 - [`ROADMAP.md`](ROADMAP.md) for the current evolution path
+
+## Audience golden paths
+
+If you already know why you are here, use the narrowest public lane instead of reading the whole
+front door first:
+
+- reviewers:
+  [`docs/reviewer-guide.md`](docs/reviewer-guide.md),
+  [`PUBLIC_EVALUATION_PACKET.json`](PUBLIC_EVALUATION_PACKET.json)
+- integrators:
+  [`QUICKSTART.md`](QUICKSTART.md),
+  [`docs/integration-guide.md`](docs/integration-guide.md),
+  [`docs/api-envelopes.md`](docs/api-envelopes.md)
+- tool-builders:
+  [`QUICKSTART.md`](QUICKSTART.md),
+  [`docs/schema-family-reference.md`](docs/schema-family-reference.md),
+  [`docs/reference-pack.md`](docs/reference-pack.md)
+- contributors:
+  [`ONBOARDING.md`](ONBOARDING.md),
+  [`CONTRIBUTING.md`](CONTRIBUTING.md),
+  [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md)
+- maintainers:
+  [`MAINTAINERS.md`](MAINTAINERS.md),
+  [`GOVERNANCE.md`](GOVERNANCE.md),
+  [`docs/maintainer-operations.md`](docs/maintainer-operations.md)
+
+If you want the full machine-readable lane map, inspect
+[`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json).
+
+## Public branch model
+
+This repository uses two public branches:
+
+- `main`
+  Stable public branch for reviewer-facing, release-facing, and contributor-safe changes.
+- `dream`
+  Public exploration branch for larger still-public work before it is collapsed into smaller reviewable slices for `main`.
+
+Neither branch is a private vault. Private maintainer material stays outside tracked repo files.
 
 ## Repository layout
 

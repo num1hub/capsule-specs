@@ -11,7 +11,7 @@
     "primary_maintainer": "egor-n1"
   },
   "purpose": {
-    "summary": "Public specification and reference surface for the capsule-first, validator-backed foundations behind N1Hub and CapsuleOS.",
+    "summary": "Public specification and reference surface for the capsule-first, validator-backed foundations behind N1Hub and CapsuleOS, with a human-readable front door and a deeper machine-readable layer for LLMs, automation, and tool-builders.",
     "intended_audiences": [
       "contributors",
       "integrators",
@@ -20,6 +20,7 @@
       "maintainers"
     ],
     "publishes": [
+      "human-readable front-door orientation docs and role-specific entry paths",
       "capsule law docs",
       "curated raw capsule sources for confidence-vector, subtype, and version-lineage semantics",
       "validator-facing docs and OpenAPI",
@@ -108,7 +109,7 @@
     ]
   },
   "surface_summary": {
-    "total_files": 413,
+    "total_files": 414,
     "markdown_files": 103,
     "schema_files": 37,
     "raw_capsule_files": 8,

@@ -2,10 +2,39 @@
 
 Use this guide when you want the shortest safe entry into the repository.
 
+Use the human layer when you want the smallest safe reading set.
+Use the machine-readable layer when an LLM, agent, or automation flow needs the deeper public surface.
+
 ## 1. Understand the repository
 
 - Read [`README.md`](README.md) for the public boundary and current scope.
 - Read [`docs/overview.md`](docs/overview.md) for the purpose of this repository.
+- Inspect [`PUBLIC_AUDIENCE_PATHS.json`](PUBLIC_AUDIENCE_PATHS.json) if you already know your role and want the shortest reviewer, integrator, contributor, tool-builder, or maintainer lane.
+
+### Fast lane selector
+
+If you already know the kind of work you need to do, start narrow:
+
+- reviewers:
+  [`docs/reviewer-guide.md`](docs/reviewer-guide.md),
+  [`PUBLIC_EVALUATION_PACKET.json`](PUBLIC_EVALUATION_PACKET.json)
+- integrators:
+  [`docs/integration-guide.md`](docs/integration-guide.md),
+  [`docs/api-envelopes.md`](docs/api-envelopes.md)
+- tool-builders:
+  [`docs/schema-family-reference.md`](docs/schema-family-reference.md),
+  [`docs/reference-pack.md`](docs/reference-pack.md)
+- contributors:
+  [`ONBOARDING.md`](ONBOARDING.md), [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- maintainers:
+  [`MAINTAINERS.md`](MAINTAINERS.md), [`docs/maintainer-operations.md`](docs/maintainer-operations.md)
+
+### Human vs agent shortcut
+
+- humans:
+  start from `README.md`, this file, and the smallest role-specific lane
+- agents and LLM workflows:
+  start from `PUBLIC_AUDIENCE_PATHS.json`, `PUBLIC_CONTRACT_CATALOG.json`, `PUBLIC_EVIDENCE_STRENGTH_MAP.json`, and the strongest schema/OpenAPI surfaces
 
 ## 2. Learn the core law
 
@@ -61,6 +90,8 @@ Use this guide when you want the shortest safe entry into the repository.
 
 - Read [`CONTRIBUTING.md`](CONTRIBUTING.md).
 - Read [`SECURITY.md`](SECURITY.md) before reporting trust-sensitive problems.
+- Treat `main` as the stable public branch and `dream` as the public exploration branch.
+- Do not use either branch for private operator material or maintainer-only exports.
 - Run `npm run verify:repo` before publishing a serious change to the public surface.
 - Read [`docs/verification.md`](docs/verification.md) if you need to understand what each repo-local check protects.
 - Read [`NOTICE`](NOTICE) if you need the Apache-2 attribution surface for redistribution.

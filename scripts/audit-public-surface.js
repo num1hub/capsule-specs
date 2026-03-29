@@ -2,36 +2,13 @@
 
 const fs = require('fs');
 const path = require('path');
+const { listRepoFiles } = require('./lib/repo-files');
 
 const repoRoot = path.resolve(__dirname, '..');
 const manifestPath = path.join(repoRoot, 'SOURCE_MANIFEST.json');
 
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 const manifestEntries = new Set(Object.keys(manifest));
-
-const ignoredPrefixes = ['.git/', 'node_modules/', 'dist/'];
-const ignoredFiles = new Set(['.codexignore']);
-
-function shouldIgnore(relativePath) {
-  if (ignoredFiles.has(relativePath)) return true;
-  return ignoredPrefixes.some((prefix) => relativePath.startsWith(prefix));
-}
-
-function walk(dir) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  const files = [];
-  for (const entry of entries) {
-    const absolutePath = path.join(dir, entry.name);
-    const relativePath = path.relative(repoRoot, absolutePath).replaceAll(path.sep, '/');
-    if (shouldIgnore(relativePath)) continue;
-    if (entry.isDirectory()) {
-      files.push(...walk(absolutePath));
-    } else {
-      files.push(relativePath);
-    }
-  }
-  return files;
-}
 
 function assert(condition, message) {
   if (!condition) {
@@ -40,7 +17,7 @@ function assert(condition, message) {
   }
 }
 
-const files = walk(repoRoot).sort();
+const files = listRepoFiles(repoRoot);
 
 for (const file of files) {
   assert(manifestEntries.has(file), `missing SOURCE_MANIFEST entry for ${file}`);

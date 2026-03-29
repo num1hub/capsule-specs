@@ -20,6 +20,41 @@ The machine-readable form lives in [`../PUBLIC_AUDIENCE_PATHS.json`](../PUBLIC_A
 
 This layer makes that answer explicit instead of forcing outside readers to infer the right path from folder layout, document names, or maintainer intuition.
 
+It also preserves a clean split between:
+
+- human-safe entry paths
+  the shortest bounded reading lanes for people
+- agent-facing entry paths
+  the machine-readable starts, stronger surfaces, and verification commands that LLMs and automation should follow
+
+## Golden path summary
+
+Use the machine-readable file for the full starting points, strongest surfaces, and verification commands.
+Use this section when you want the shortest human-safe lane first:
+
+- reviewers:
+  [`../README.md`](../README.md), [`reviewer-guide.md`](reviewer-guide.md),
+  [`../PUBLIC_EVALUATION_PACKET.json`](../PUBLIC_EVALUATION_PACKET.json)
+- integrators:
+  [`../QUICKSTART.md`](../QUICKSTART.md), [`integration-guide.md`](integration-guide.md),
+  [`api-envelopes.md`](api-envelopes.md), [`schema-family-reference.md`](schema-family-reference.md)
+- contributors:
+  [`../ONBOARDING.md`](../ONBOARDING.md), [`../CONTRIBUTING.md`](../CONTRIBUTING.md),
+  [`repo-validation-workflow.md`](repo-validation-workflow.md)
+- tool-builders:
+  [`../QUICKSTART.md`](../QUICKSTART.md),
+  [`schema-family-reference.md`](schema-family-reference.md),
+  [`schema-bundles.md`](schema-bundles.md), [`reference-pack.md`](reference-pack.md)
+- maintainers:
+  [`../MAINTAINERS.md`](../MAINTAINERS.md), [`../GOVERNANCE.md`](../GOVERNANCE.md),
+  [`maintainer-operations.md`](maintainer-operations.md)
+
+## Public branch note
+
+- `main` is the stable public branch.
+- `dream` is the public exploration branch for larger still-public work.
+- Neither branch is a private maintainer surface.
+
 ## Relationship to other public surfaces
 
 - [`../PUBLIC_DEPENDENCY_GRAPH.json`](../PUBLIC_DEPENDENCY_GRAPH.json)
