@@ -5,8 +5,12 @@
 [License Apache-2.0](LICENSE)
 [Open Issues](https://github.com/num1hub/capsule-specs/issues)
 [CITATION.cff](CITATION.cff)
+[N1Hub.com](https://n1hub.com)
+[Portal Source](https://github.com/num1hub/N1Hub.com)
 
 `N1Hub Capsule Specs` is the public reference surface for the capsule-first foundations behind N1Hub and CapsuleOS.
+
+The public portal for this repository now lives at `https://n1hub.com`, with open site source in `https://github.com/num1hub/N1Hub.com`.
 
 This repository is intentionally narrow. It does not try to expose the full private application or every internal workflow. Instead, it publishes the highest-signal public artifacts needed to understand the model:
 
