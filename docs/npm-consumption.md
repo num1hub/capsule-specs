@@ -45,11 +45,14 @@ After installing from a local tarball, release artifact, or repository checkout,
 - `@num1hub/capsule-specs/zod`
   Public-safe Zod projection bundle.
 - `@num1hub/capsule-specs/typescript/capsule`
+- `@num1hub/capsule-specs/typescript/archive`
 - `@num1hub/capsule-specs/typescript/client-recipe-index`
 - `@num1hub/capsule-specs/typescript/validator-envelope-families`
 - `@num1hub/capsule-specs/typescript/validator-routes`
 - `@num1hub/capsule-specs/typescript/validator-api`
 - `@num1hub/capsule-specs/zod/capsule`
+- `@num1hub/capsule-specs/zod/archive`
+- `@num1hub/capsule-specs/zod/client-recipe-index`
 - `@num1hub/capsule-specs/zod/validator-api`
 - `@num1hub/capsule-specs/schemas/capsule-schema.json`
 - `@num1hub/capsule-specs/schemas/capsule-schema.bundle.json`
@@ -131,6 +134,18 @@ console.log(publishedClientRecipeIndexCounts.taskEntrypoints);
 ```
 
 These recipes prove that the installed package surface also carries the published machine-readable navigator for `examples/client/` plus a maintained TypeScript projection for its bounded ids and counts. Consumers can recover runtime-lane starts, task entrypoints, and cross-runtime alternatives directly from the packed artifact instead of relying on a repo checkout or prose-only guidance.
+
+## Minimal package-level archive projection example
+
+Copyable version of this example also lives at [`../examples/client/ts-package-parse-archive-bundle.ts`](../examples/client/ts-package-parse-archive-bundle.ts).
+
+That recipe proves the installed package surface exposes:
+
+- `@num1hub/capsule-specs/examples/archive/archive-bundle.sample.json`
+- `@num1hub/capsule-specs/typescript/archive`
+- `@num1hub/capsule-specs/zod/archive`
+
+So a consumer can type and parse the published archive-bundle contract from an installed artifact instead of stopping at raw Ajv validation alone.
 
 ## Minimal package-level OpenAPI example
 

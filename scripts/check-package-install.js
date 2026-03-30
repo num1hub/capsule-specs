@@ -88,6 +88,12 @@ const esmValidateRequestRecipePath = path.join(repoRoot, 'examples', 'client', '
 const esmSupportRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-support-responses.mjs');
 const esmValidateResponseRecipePath = path.join(repoRoot, 'examples', 'client', 'esm-package-validate-response.mjs');
 const typescriptErrorRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-error-responses.ts');
+const typescriptArchiveProjectionRecipePath = path.join(
+  repoRoot,
+  'examples',
+  'client',
+  'ts-package-parse-archive-bundle.ts'
+);
 const typescriptRecipeIndexRecipePath = path.join(repoRoot, 'examples', 'client', 'ts-package-client-recipe-index.ts');
 const typescriptValidateClientRecipeIndexSchemaRecipePath = path.join(
   repoRoot,
@@ -433,6 +439,7 @@ try {
     },
     include: [
       'consumer.ts',
+      'archive-consumer.ts',
       'batch-request-consumer.ts',
       'fix-request-consumer.ts',
       'recipe-index-consumer.ts',
@@ -460,6 +467,11 @@ try {
     typescriptProject
   );
   fs.writeFileSync(path.join(typescriptProject, 'consumer.ts'), fs.readFileSync(typescriptConsumerRecipePath, 'utf8'), 'utf8');
+  fs.writeFileSync(
+    path.join(typescriptProject, 'archive-consumer.ts'),
+    fs.readFileSync(typescriptArchiveProjectionRecipePath, 'utf8'),
+    'utf8'
+  );
   fs.writeFileSync(
     path.join(typescriptProject, 'batch-request-consumer.ts'),
     fs.readFileSync(typescriptBatchRequestRecipePath, 'utf8'),
@@ -546,6 +558,7 @@ try {
   const repoTsc = path.join(repoRoot, 'node_modules', 'typescript', 'bin', 'tsc');
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json'], typescriptProject);
   run(process.execPath, [repoTsc, '--project', 'tsconfig.json', '--noEmit', 'false', '--outDir', 'dist'], typescriptProject);
+  run(process.execPath, ['dist/archive-consumer.js'], typescriptProject);
   run(process.execPath, ['dist/validate-client-recipe-index-consumer.js'], typescriptProject);
   run(process.execPath, ['dist/validate-archive-consumer.js'], typescriptProject);
   run(process.execPath, ['dist/validate-bundles-consumer.js'], typescriptProject);
@@ -557,7 +570,7 @@ try {
   run(process.execPath, ['dist/openapi-codegen-consumer.js'], typescriptProject);
 
   console.log(
-    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, client-recipe navigator, OpenAPI reading and OpenAPI type-generation, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, client-recipe-index, and bundled schema exports, invalid archive, capsule, API, and client-recipe-index schema fixtures, and integrity-seal recipes'
+    'OK: installed packed artifact into fresh CommonJS, ESM, and TypeScript consumer projects with raw capsule, client-recipe navigator, archive projection parsing, OpenAPI reading and OpenAPI type-generation, compact reference-pack, live-client, validator request, validate-response, support-response, and error-response families, raw, archive, client-recipe-index, and bundled schema exports, invalid archive, capsule, API, and client-recipe-index schema fixtures, and integrity-seal recipes'
   );
 } catch (error) {
   console.error(`FAIL: ${error.message}`);

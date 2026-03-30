@@ -8,6 +8,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Public-safe TypeScript interfaces and literal unions for the capsule outer shape.
 - [`../projections/typescript/client-recipe-index.ts`](../projections/typescript/client-recipe-index.ts)
   Shared TypeScript types and bounded constants for the published client-recipe navigator.
+- [`../projections/typescript/archive.ts`](../projections/typescript/archive.ts)
+  Public-safe TypeScript interfaces and bounded literal unions for the archive-bundle portability contract.
 - [`../projections/typescript/validator-api.ts`](../projections/typescript/validator-api.ts)
   Public-safe TypeScript interfaces for validator request and response envelopes.
 - [`../projections/typescript/validator-envelope-families.ts`](../projections/typescript/validator-envelope-families.ts)
@@ -20,6 +22,10 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Public-safe Zod projections for the same outer contract.
 - [`../projections/zod/validator-api.ts`](../projections/zod/validator-api.ts)
   Public-safe Zod projections for validator envelope parsing and validation.
+- [`../projections/zod/archive.ts`](../projections/zod/archive.ts)
+  Public-safe Zod projection for archive-bundle parsing and validation.
+- [`../projections/zod/client-recipe-index.ts`](../projections/zod/client-recipe-index.ts)
+  Public-safe Zod projection for runtime parsing of the published client-recipe navigator.
 - [`../projections/zod/index.ts`](../projections/zod/index.ts)
   Bundle entrypoint for the public-safe Zod surface.
 - [`npm-consumption.md`](npm-consumption.md)
@@ -32,6 +38,12 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal TypeScript recipe for building a validator request envelope from the published API projection.
 - [`../examples/client/ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts)
   Minimal TypeScript recipe for typing the published client-recipe navigator from repo-relative JSON and the shared client-navigator projection.
+- [`../examples/client/zod-parse-client-recipe-index.ts`](../examples/client/zod-parse-client-recipe-index.ts)
+  Minimal Zod recipe for parsing the published client-recipe navigator through the source-level projection.
+- [`../examples/client/ts-parse-archive-bundle.ts`](../examples/client/ts-parse-archive-bundle.ts)
+  Minimal TypeScript recipe for typing the published archive-bundle sample through the source-level projection.
+- [`../examples/client/zod-parse-archive-bundle.ts`](../examples/client/zod-parse-archive-bundle.ts)
+  Minimal Zod recipe for parsing the published archive-bundle sample through the source-level projection.
 - [`../examples/client/ts-build-validate-batch-request.ts`](../examples/client/ts-build-validate-batch-request.ts)
   Minimal TypeScript recipe for building a validator batch request envelope from the published API projection.
 - [`../examples/client/ts-build-validate-fix-request.ts`](../examples/client/ts-build-validate-fix-request.ts)
@@ -84,6 +96,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal TypeScript package-consumer recipe for typed single-request construction through the published capsule and validator API package subpaths.
 - [`../examples/client/ts-package-client-recipe-index.ts`](../examples/client/ts-package-client-recipe-index.ts)
   Minimal TypeScript package-consumer recipe for typing the published client-recipe navigator through the shared package projection and installed JSON asset.
+- [`../examples/client/ts-package-parse-archive-bundle.ts`](../examples/client/ts-package-parse-archive-bundle.ts)
+  Minimal TypeScript package-consumer recipe for typing and parsing the published archive-bundle sample through installed package exports.
 - [`../examples/client/ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts)
   Minimal TypeScript package-consumer recipe for a typed `fetch` client that covers the published validator route family through installed package exports, including the bounded `stats` query path.
 - [`../examples/client/ts-package-parse-validate-requests.ts`](../examples/client/ts-package-parse-validate-requests.ts)
@@ -96,6 +110,8 @@ This repository publishes a narrow projection layer for TypeScript and Zod consu
   Minimal TypeScript package-consumer recipe for typed pass, fail, batch, and fix validator response-family handling through installed package exports.
 - [`../schemas/capsule-schema.json`](../schemas/capsule-schema.json)
   The stronger machine-readable contract surface these projections are aligned to.
+- [`../schemas/archive-bundle.schema.json`](../schemas/archive-bundle.schema.json)
+  The stronger machine-readable contract surface for the archive-bundle portability layer.
 - [`../schemas/validator-api-envelopes.schema.json`](../schemas/validator-api-envelopes.schema.json)
   The stronger machine-readable contract surface for validator request and response envelopes.
 
@@ -107,6 +123,8 @@ JSON Schema is the canonical public machine-readable contract in this repository
 - Zod schemas for local validation and application-level parsing
 - a narrow source-level projection that stays reviewable inside the public repo
 - a source-level TypeScript path for treating the published client-recipe navigator as typed contract data instead of untyped JSON
+- a source-level Zod path for parsing the published client-recipe navigator as bounded contract data instead of relying only on Ajv or unchecked JSON reads
+- a source-level TypeScript and Zod path for parsing the published archive-bundle sample instead of validating it only through raw Ajv
 - a public-safe source-level envelope layer for validator clients that do not want to hand-roll request and response shapes
 - a source-level path for batch and fix validator envelopes that stays aligned to the published sample payload families
 - a source-level TypeScript path for typing the published single, batch, and fix request samples instead of treating TypeScript as construction-only on the request side

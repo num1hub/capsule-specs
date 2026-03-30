@@ -30,6 +30,11 @@
       "require": "./dist/projections/typescript/capsule.js",
       "default": "./dist/projections/typescript/capsule.js"
     },
+    "./typescript/archive": {
+      "types": "./dist/projections/typescript/archive.d.ts",
+      "require": "./dist/projections/typescript/archive.js",
+      "default": "./dist/projections/typescript/archive.js"
+    },
     "./typescript/client-recipe-index": {
       "types": "./dist/projections/typescript/client-recipe-index.d.ts",
       "require": "./dist/projections/typescript/client-recipe-index.js",
@@ -59,6 +64,16 @@
       "types": "./dist/projections/zod/capsule.d.ts",
       "require": "./dist/projections/zod/capsule.js",
       "default": "./dist/projections/zod/capsule.js"
+    },
+    "./zod/archive": {
+      "types": "./dist/projections/zod/archive.d.ts",
+      "require": "./dist/projections/zod/archive.js",
+      "default": "./dist/projections/zod/archive.js"
+    },
+    "./zod/client-recipe-index": {
+      "types": "./dist/projections/zod/client-recipe-index.d.ts",
+      "require": "./dist/projections/zod/client-recipe-index.js",
+      "default": "./dist/projections/zod/client-recipe-index.js"
     },
     "./zod/validator-api": {
       "types": "./dist/projections/zod/validator-api.d.ts",

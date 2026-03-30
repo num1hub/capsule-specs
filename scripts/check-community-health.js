@@ -84,7 +84,7 @@ assert(labelsConfig.includes('contract'), '.github/labels.json must include the 
 assert(milestonesConfig.includes('active_milestones'), '.github/milestones.json must define active milestones');
 assert(milestonesConfig.includes('delivered_milestones'), '.github/milestones.json must define delivered milestones');
 assert(milestonesConfig.includes('v0.2.0 Better Integrator Surfaces'), '.github/milestones.json must retain the delivered Wave 2 milestone');
-assert(milestonesConfig.includes('v0.3.0 Projection-Friendly References'), '.github/milestones.json must retain the active Wave 3 milestone');
+assert(milestonesConfig.includes('v0.3.0 Portability and Extended Projections'), '.github/milestones.json must retain the active Wave 5 milestone');
 assert(integrationTemplate.includes('schemas/validator-api-envelopes.schema.json'), 'integration question template must point to validator-api-envelopes schema');
 assert(contractTemplate.includes('Verification plan'), 'contract change template must demand a verification plan');
 assert(prTemplate.includes('Boundary'), 'pull request template must include a Boundary section');

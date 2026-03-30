@@ -19,15 +19,15 @@ export const publishedClientRecipeTaskIds = [
   "source-request-reading",
   "source-response-reading",
   "raw-schema-validation",
+  "raw-schema-rejection",
+  "compact-reference-discovery",
+  "package-live-clients",
   "integrity-proof",
   "package-recipe-navigation",
-  "package-request-reading",
-  "package-response-reading",
+  "package-typescript-flows",
   "openapi-direct-consumption",
-  "openapi-code-generation",
   "python-recipe-navigation",
-  "python-live-clients",
-  "python-response-reading"
+  "python-live-and-parsing"
 ] as const;
 
 export const publishedClientRecipeRuntimes = [

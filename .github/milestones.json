@@ -1,9 +1,9 @@
 {
   "active_milestones": [
     {
-      "title": "v0.3.0 Projection-Friendly References",
-      "roadmap_wave": "Wave 3: Projection-friendly references",
-      "description": "Public-safe TypeScript and Zod projections, generated reference indexes, and contributor-facing repo-only validation workflows.",
+      "title": "v0.3.0 Portability and Extended Projections",
+      "roadmap_wave": "Wave 5: Portability and Extended Projections",
+      "description": "Public-safe archive-bundle TypeScript and Zod projections, wider client-consumer recipe coverage, and bounded portability-focused package ergonomics.",
       "tracked_issues": [
         3,
         4
