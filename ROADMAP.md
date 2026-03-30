@@ -3,7 +3,7 @@
 This roadmap describes the delivered and next useful waves for the public N1Hub specification surface.
 
 Wave 2, Wave 3, and Wave 4 are delivered in the public `v0.2.0` release.
-The next deliberate move is to widen projection-friendly public references and other public-safe contract families from the stable post-release baseline without reopening the private runtime boundary.
+The next deliberate move is Wave 5: Portability and Extended Projections, widening the remaining public-safe contract ergonomics from the stable post-release baseline without reopening the private runtime boundary.
 
 ## Wave 1: Public foundation
 
@@ -78,3 +78,10 @@ The next deliberate move is to widen projection-friendly public references and o
   Deepened further through [`docs/schema-bundles.md`](docs/schema-bundles.md), the single-file schema bundle artifacts under [`schemas/`](schemas/), and the verifier in [`scripts/check-schema-bundles.js`](scripts/check-schema-bundles.js).
   Deepened further through [`docs/archive-validation-recipes.md`](docs/archive-validation-recipes.md), the archive-bundle Ajv recipes under [`examples/client/`](examples/client/), and the verifier in [`scripts/check-archive-recipes.js`](scripts/check-archive-recipes.js).
   Deepened further through [`docs/invalid-archive-bundle-examples.md`](docs/invalid-archive-bundle-examples.md), [`examples/archive-invalid/`](examples/archive-invalid/), and the verifier in [`scripts/check-invalid-archive-examples.js`](scripts/check-invalid-archive-examples.js).
+
+## Wave 5: Portability and Extended Projections
+
+- add source-level TypeScript and Zod projections for the published archive-bundle portability contract
+- widen the installed-package TypeScript lane so archive-bundle parsing is proven from a fresh consumer install
+- widen the Python raw-JSON lane so archive-bundle consumers have the same public example posture as validator and reference-pack readers
+- close remaining public-safe projection gaps where a bounded schema already exists but the typed convenience layer is still missing

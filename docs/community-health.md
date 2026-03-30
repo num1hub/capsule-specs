@@ -33,6 +33,7 @@ The GitHub issue surface uses a small bounded taxonomy rather than free-form lab
 
 When roadmap waves are open, the maintainer mirrors them through bounded GitHub milestones so contributors can see which public work is active without guessing from prose alone.
 Delivered public milestones can remain tracked in the same file as a bounded historical set so the public roadmap surface preserves recent closure without pretending a delivered wave is still active.
+The current active public wave is `v0.3.0 Portability and Extended Projections`, which widens the public-safe portability and consumer-projection layer from the released `v0.2.0` baseline.
 The repository also keeps GitHub-native hygiene explicit through `CITATION.cff`, `.github/dependabot.yml`, and `.github/release.yml` rather than leaving reuse, update posture, and release-note grouping implicit.
 The maintained GitHub issue surface is also versioned in `.github/labels.json` and `.github/milestones.json` so label taxonomy, active public roadmap waves, and recently delivered public waves do not live only in mutable platform state.
 

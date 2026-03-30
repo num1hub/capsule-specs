@@ -23,12 +23,15 @@ const requiredExports = [
   '.',
   './typescript',
   './typescript/capsule',
+  './typescript/archive',
   './typescript/client-recipe-index',
   './typescript/validator-envelope-families',
   './typescript/validator-routes',
   './typescript/validator-api',
   './zod',
+  './zod/archive',
   './zod/capsule',
+  './zod/client-recipe-index',
   './zod/validator-api',
   './schemas/*',
   './openapi/*',
@@ -52,6 +55,8 @@ const requiredBuiltFiles = [
   'dist/projections/typescript/index.js',
   'dist/projections/typescript/index.d.ts',
   'dist/projections/typescript/capsule.js',
+  'dist/projections/typescript/archive.js',
+  'dist/projections/typescript/archive.d.ts',
   'dist/projections/typescript/client-recipe-index.js',
   'dist/projections/typescript/client-recipe-index.d.ts',
   'dist/projections/typescript/validator-envelope-families.js',
@@ -61,7 +66,11 @@ const requiredBuiltFiles = [
   'dist/projections/typescript/validator-api.js',
   'dist/projections/zod/index.js',
   'dist/projections/zod/index.d.ts',
+  'dist/projections/zod/archive.js',
+  'dist/projections/zod/archive.d.ts',
   'dist/projections/zod/capsule.js',
+  'dist/projections/zod/client-recipe-index.js',
+  'dist/projections/zod/client-recipe-index.d.ts',
   'dist/projections/zod/validator-api.js'
 ];
 
@@ -71,9 +80,12 @@ for (const relativePath of requiredBuiltFiles) {
 
 const rootExports = require('@num1hub/capsule-specs');
 const typescriptProjection = require('@num1hub/capsule-specs/typescript');
+const archiveProjection = require('@num1hub/capsule-specs/typescript/archive');
 const clientRecipeIndexProjection = require('@num1hub/capsule-specs/typescript/client-recipe-index');
 const validatorEnvelopeProjection = require('@num1hub/capsule-specs/typescript/validator-envelope-families');
 const zodProjection = require('@num1hub/capsule-specs/zod');
+const archiveZod = require('@num1hub/capsule-specs/zod/archive');
+const clientRecipeIndexZod = require('@num1hub/capsule-specs/zod/client-recipe-index');
 const validatorZod = require('@num1hub/capsule-specs/zod/validator-api');
 const capsuleSchemaJson = require('@num1hub/capsule-specs/schemas/capsule-schema.json');
 const archiveBundleSchemaJson = require('@num1hub/capsule-specs/schemas/archive-bundle.schema.json');
@@ -113,6 +125,14 @@ const exampleNote = require(path.join(repoRoot, 'examples', 'example-note.capsul
 
 assert(rootExports && rootExports.typescript && rootExports.zod, 'root package export must expose typescript and zod namespaces');
 assert(Array.isArray(typescriptProjection.CAPSULE_TYPES), 'typescript export must expose CAPSULE_TYPES');
+assert(
+  Array.isArray(archiveProjection.archiveTenantScopes) && archiveProjection.archiveTenantScopes.length === 3,
+  'typescript archive export must expose tenant scope constants'
+);
+assert(
+  Array.isArray(archiveProjection.archiveManifestContentClasses) && archiveProjection.archiveManifestContentClasses.length === 4,
+  'typescript archive export must expose manifest content classes'
+);
 assert(
   Array.isArray(typescriptProjection.publishedClientRecipeGroupIds) &&
     typescriptProjection.publishedClientRecipeGroupIds.length === 8,
@@ -161,6 +181,11 @@ assert(
   'typescript export must expose compact route status metadata'
 );
 assert(typeof zodProjection.capsuleSchema?.parse === 'function', 'zod export must expose capsuleSchema.parse');
+assert(typeof archiveZod.archiveBundleSchema?.parse === 'function', 'archive zod export must expose archiveBundleSchema.parse');
+assert(
+  typeof clientRecipeIndexZod.publishedClientRecipeIndexSchema?.parse === 'function',
+  'client recipe-index zod export must expose publishedClientRecipeIndexSchema.parse'
+);
 assert(typeof validatorZod.validateSingleRequestSchema?.parse === 'function', 'validator zod export must expose validateSingleRequestSchema.parse');
 assert(typeof validatorZod.validateBatchRequestSchema?.parse === 'function', 'validator zod export must expose validateBatchRequestSchema.parse');
 assert(typeof validatorZod.validateFixRequestSchema?.parse === 'function', 'validator zod export must expose validateFixRequestSchema.parse');
@@ -266,6 +291,8 @@ assert(
 );
 
 const parsedNote = zodProjection.capsuleSchema.parse(exampleNote);
+const parsedArchiveBundle = archiveZod.archiveBundleSchema.parse(archiveBundleSample);
+const parsedClientRecipeIndex = clientRecipeIndexZod.publishedClientRecipeIndexSchema.parse(recipeIndex);
 const parsedSingleRequest = validatorZod.validateSingleRequestSchema.parse(singleRequestSample);
 const parsedBatchRequest = validatorZod.validateBatchRequestSchema.parse(batchRequestSample);
 const parsedFixRequest = validatorZod.validateFixRequestSchema.parse(fixRequestSample);
@@ -283,6 +310,9 @@ const parsedGatesResponse = validatorZod.gatesResponseSchema.parse(gatesResponse
 const parsedStatsResponse = validatorZod.statsResponseSchema.parse(statsResponseSample);
 
 assert(parsedNote.metadata.capsule_id === exampleNote.metadata.capsule_id, 'built package zod export must parse the example note capsule');
+assert(parsedArchiveBundle.replay.replayMode === 'validate-only', 'built package archive zod export must parse the archive sample');
+assert(parsedArchiveBundle.manifest.some((entry) => entry.contentClass === 'capsules'), 'built package archive zod export must retain the capsules manifest entry');
+assert(parsedClientRecipeIndex.groups.length === 8, 'built package client-recipe-index zod export must parse the recipe navigator');
 assert(parsedSingleRequest.capsule.metadata.capsule_id === 'capsule.example.note.v1', 'built package zod export must parse the single validator request sample');
 assert(parsedBatchRequest.capsules.length === 2, 'built package zod export must parse the batch validator request sample');
 assert(parsedFixRequest.capsule.metadata.capsule_id === 'capsule.example.validator-invalid-g16.v1', 'built package zod export must parse the fix validator request sample');
@@ -352,7 +382,10 @@ const packedFiles = new Set((packOutput[0]?.files || []).map((entry) => entry.pa
 for (const relativePath of [
   'dist/projections/index.js',
   'dist/projections/typescript/capsule.js',
+  'dist/projections/typescript/archive.js',
   'dist/projections/typescript/client-recipe-index.js',
+  'dist/projections/zod/archive.js',
+  'dist/projections/zod/client-recipe-index.js',
   'dist/projections/zod/validator-api.js',
   'docs/npm-consumption.md',
   'docs/archive-validation-recipes.md',
@@ -376,7 +409,10 @@ for (const relativePath of [
   'references/validation-gates.json',
   'references/validator-envelope-families.json',
   'references/validator-routes.json',
+  'projections/typescript/archive.ts',
   'projections/typescript/client-recipe-index.ts',
+  'projections/zod/archive.ts',
+  'projections/zod/client-recipe-index.ts',
   'capsules/capsule.foundation.capsuleos.confidence-vector.v1.json',
   'docs/reference-pack.md',
   'examples/client/ajv-validate-capsule.mjs',
@@ -419,6 +455,7 @@ for (const relativePath of [
   'examples/client/esm-package-error-responses.mjs',
   'examples/client/esm-package-validate-request.mjs',
   'examples/client/python-contract-reference.py',
+  'examples/client/python-parse-archive-bundle.py',
   'examples/client/python-live-validator-client.py',
   'examples/client/python-recompute-integrity-seal.py',
   'examples/client/python-validate-single.py',
@@ -434,6 +471,8 @@ for (const relativePath of [
   'examples/client/esm-package-client-recipe-index.mjs',
   'examples/client/esm-package-support-responses.mjs',
   'examples/client/esm-package-validate-response.mjs',
+  'examples/client/ts-parse-archive-bundle.ts',
+  'examples/client/zod-parse-client-recipe-index.ts',
   'examples/client/zod-parse-validate-response.ts',
   'examples/client/zod-parse-validate-fail-response.ts',
   'examples/client/zod-parse-validate-batch-response.ts',
@@ -441,7 +480,9 @@ for (const relativePath of [
   'examples/client/zod-parse-validate-request.ts',
   'examples/client/zod-parse-validate-batch-request.ts',
   'examples/client/zod-parse-validate-fix-request.ts',
+  'examples/client/zod-parse-archive-bundle.ts',
   'examples/client/ts-client-recipe-index.ts',
+  'examples/client/ts-package-parse-archive-bundle.ts',
   'examples/client/ts-package-ajv-validate-archive-bundle.ts',
   'examples/client/ts-package-ajv-validate-schema-bundles.ts',
   'examples/client/ts-package-ajv-validate-client-recipe-index.ts',

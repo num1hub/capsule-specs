@@ -112,7 +112,7 @@ for (const milestone of milestones.active_milestones) {
     `ROADMAP.md must mention the roadmap wave for active milestone ${milestone.title}`
   );
 }
-assert(contributing.includes('v0.3.0 Projection-Friendly References'), 'CONTRIBUTING.md must mention the active milestone set');
+assert(contributing.includes('v0.3.0 Portability and Extended Projections'), 'CONTRIBUTING.md must mention the active milestone set');
 assert(contributing.includes('v0.2.0 Better Integrator Surfaces'), 'CONTRIBUTING.md must mention the recently delivered milestone set');
 assert(communityDoc.includes('.github/labels.json') && communityDoc.includes('.github/milestones.json'), 'docs/community-health.md must mention .github label and milestone configs');
 assert(maintainerOps.includes('docs/github-operations.md') || maintainerOps.includes('.github/labels.json'), 'docs/maintainer-operations.md must mention the GitHub operations layer');

@@ -46,6 +46,18 @@ assert(
   docs.includes('ts-package-ajv-validate-archive-bundle.ts'),
   'docs/archive-validation-recipes.md must mention ts-package-ajv-validate-archive-bundle.ts'
 );
+assert(
+  docs.includes('ts-parse-archive-bundle.ts'),
+  'docs/archive-validation-recipes.md must mention ts-parse-archive-bundle.ts'
+);
+assert(
+  docs.includes('zod-parse-archive-bundle.ts'),
+  'docs/archive-validation-recipes.md must mention zod-parse-archive-bundle.ts'
+);
+assert(
+  docs.includes('ts-package-parse-archive-bundle.ts'),
+  'docs/archive-validation-recipes.md must mention ts-package-parse-archive-bundle.ts'
+);
 assert(docs.includes('Ajv'), 'docs/archive-validation-recipes.md must mention Ajv');
 assert(docs.includes('ajv-formats'), 'docs/archive-validation-recipes.md must mention ajv-formats');
 assert(docs.includes('installed package'), 'docs/archive-validation-recipes.md must mention installed package usage');

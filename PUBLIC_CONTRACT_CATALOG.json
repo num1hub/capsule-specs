@@ -2104,6 +2104,21 @@
       ]
     },
     {
+      "id": "examples.client.zod-parse-client-recipe-index",
+      "path": "examples/client/zod-parse-client-recipe-index.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
       "id": "examples.client.ts-live-validator-client",
       "path": "examples/client/ts-live-validator-client.ts",
       "kind": "client-recipe",
@@ -5536,6 +5551,111 @@
       ],
       "verify_commands": [
         "npm run check:docs",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "projection.typescript-archive",
+      "path": "projections/typescript/archive.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "projection.zod-archive",
+      "path": "projections/zod/archive.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "projection.zod-client-recipe-index",
+      "path": "projections/zod/client-recipe-index.ts",
+      "kind": "projection",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:catalog",
+        "npm run check:package-surface"
+      ]
+    },
+    {
+      "id": "examples.client.ts-parse-archive-bundle",
+      "path": "examples/client/ts-parse-archive-bundle.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.zod-parse-archive-bundle",
+      "path": "examples/client/zod-parse-archive-bundle.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:client-recipes",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.ts-package-parse-archive-bundle",
+      "path": "examples/client/ts-package-parse-archive-bundle.ts",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:type-projections",
+        "npm run check:package-install",
+        "npm run check:catalog"
+      ]
+    },
+    {
+      "id": "examples.client.python-parse-archive-bundle",
+      "path": "examples/client/python-parse-archive-bundle.py",
+      "kind": "client-recipe",
+      "stability": "maintained",
+      "audiences": [
+        "integrators",
+        "tool-builders"
+      ],
+      "verify_commands": [
+        "npm run check:client-recipes",
+        "npm run check:python-recipes",
         "npm run check:catalog"
       ]
     }

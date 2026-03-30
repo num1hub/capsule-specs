@@ -26,7 +26,7 @@ That file is the machine-readable map for this directory. It groups every non-Ma
 
 The `groups[*].recommended_start` field gives the shortest human-safe file to open for each runtime lane. The `task_entrypoints[*]` section then maps common intents to one recommended file, cross-runtime alternatives, and the supporting docs that explain the surrounding contract.
 
-If you need the navigator itself as a bounded machine-readable contract instead of trusting prose or ad hoc object assumptions, pair [`../examples/client/recipe-index.json`](../examples/client/recipe-index.json) with [`../schemas/client-recipe-index.schema.json`](../schemas/client-recipe-index.schema.json), [`../examples/client/ajv-validate-client-recipe-index.mjs`](../examples/client/ajv-validate-client-recipe-index.mjs), [`../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs`](../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs), [`../examples/client/esm-package-ajv-validate-client-recipe-index.mjs`](../examples/client/esm-package-ajv-validate-client-recipe-index.mjs), or [`../examples/client/ts-package-ajv-validate-client-recipe-index.ts`](../examples/client/ts-package-ajv-validate-client-recipe-index.ts).
+If you need the navigator itself as a bounded machine-readable contract instead of trusting prose or ad hoc object assumptions, pair [`../examples/client/recipe-index.json`](../examples/client/recipe-index.json) with [`../schemas/client-recipe-index.schema.json`](../schemas/client-recipe-index.schema.json), [`../examples/client/zod-parse-client-recipe-index.ts`](../examples/client/zod-parse-client-recipe-index.ts), [`../examples/client/ajv-validate-client-recipe-index.mjs`](../examples/client/ajv-validate-client-recipe-index.mjs), [`../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs`](../examples/client/cjs-package-ajv-validate-client-recipe-index.cjs), [`../examples/client/esm-package-ajv-validate-client-recipe-index.mjs`](../examples/client/esm-package-ajv-validate-client-recipe-index.mjs), or [`../examples/client/ts-package-ajv-validate-client-recipe-index.ts`](../examples/client/ts-package-ajv-validate-client-recipe-index.ts).
 
 ## Fast starts
 
@@ -38,8 +38,8 @@ If you want the quickest path instead of reading the whole directory:
   start with [`curl-validate-batch.sh`](../examples/client/curl-validate-batch.sh) or [`curl-validate-fix.sh`](../examples/client/curl-validate-fix.sh), then move to the Node, Python, or TypeScript alternatives listed in `recipe-index.json`
 - Call the support routes:
   start with [`curl-get-gates.sh`](../examples/client/curl-get-gates.sh) and [`curl-get-stats.sh`](../examples/client/curl-get-stats.sh) for the shortest live route proof, including the bounded `limit` query path on `stats`
-- Read the published client-recipe navigator from source-level TypeScript:
-  start with [`ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts), then move to the request, response, route, or OpenAPI recipes it points toward
+- Read the published client-recipe navigator from source-level TypeScript or Zod:
+  start with [`ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts) or [`zod-parse-client-recipe-index.ts`](../examples/client/zod-parse-client-recipe-index.ts), then move to the request, response, route, or OpenAPI recipes they point toward
 - Read published request families from source-level projections:
   start with [`ts-parse-validate-requests.ts`](../examples/client/ts-parse-validate-requests.ts) or the Zod request parsers
 - Read published response, error, and support families from source-level projections:
@@ -61,14 +61,17 @@ If you already know your runtime, the shortest entry files are:
 
 - shell: [`curl-validate-single.sh`](../examples/client/curl-validate-single.sh)
 - Node: [`node-validate-single.mjs`](../examples/client/node-validate-single.mjs)
-- source-level TypeScript/Zod: [`ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts)
+- source-level TypeScript/Zod: [`ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts) and [`zod-parse-client-recipe-index.ts`](../examples/client/zod-parse-client-recipe-index.ts)
+- source-level archive typing/parsing: [`ts-parse-archive-bundle.ts`](../examples/client/ts-parse-archive-bundle.ts) and [`zod-parse-archive-bundle.ts`](../examples/client/zod-parse-archive-bundle.ts)
 - raw-schema Ajv: [`ajv-validate-capsule.mjs`](../examples/client/ajv-validate-capsule.mjs)
 - integrity proof: [`recompute-integrity-seal.mjs`](../examples/client/recompute-integrity-seal.mjs)
 - Python: [`python-live-validator-client.py`](../examples/client/python-live-validator-client.py)
 - Python navigator: [`python-client-recipe-index.py`](../examples/client/python-client-recipe-index.py)
+- Python archive parsing: [`python-parse-archive-bundle.py`](../examples/client/python-parse-archive-bundle.py)
 - installed-package CommonJS/ESM: [`cjs-package-live-validator-client.cjs`](../examples/client/cjs-package-live-validator-client.cjs)
 - installed-package CommonJS/ESM navigator: [`cjs-package-client-recipe-index.cjs`](../examples/client/cjs-package-client-recipe-index.cjs) and [`esm-package-client-recipe-index.mjs`](../examples/client/esm-package-client-recipe-index.mjs)
 - installed-package TypeScript: [`ts-package-live-validator-client.ts`](../examples/client/ts-package-live-validator-client.ts) and [`ts-package-client-recipe-index.ts`](../examples/client/ts-package-client-recipe-index.ts)
+- installed-package archive typing/parsing: [`ts-package-parse-archive-bundle.ts`](../examples/client/ts-package-parse-archive-bundle.ts)
 
 ## cURL recipes
 
@@ -99,7 +102,10 @@ They are intentionally small and avoid framework assumptions while covering all 
 Source-level consumer examples also live under [`../examples/client/`](../examples/client/):
 
 - [`ts-client-recipe-index.ts`](../examples/client/ts-client-recipe-index.ts)
+- [`zod-parse-client-recipe-index.ts`](../examples/client/zod-parse-client-recipe-index.ts)
+- [`ts-parse-archive-bundle.ts`](../examples/client/ts-parse-archive-bundle.ts)
 - [`ts-capsule-summary.ts`](../examples/client/ts-capsule-summary.ts)
+- [`zod-parse-archive-bundle.ts`](../examples/client/zod-parse-archive-bundle.ts)
 - [`zod-parse-capsule.ts`](../examples/client/zod-parse-capsule.ts)
 - [`ts-openapi-route-summary.ts`](../examples/client/ts-openapi-route-summary.ts)
 - [`openapi-generate-validator-types.mjs`](../examples/client/openapi-generate-validator-types.mjs)
@@ -124,6 +130,7 @@ Source-level consumer examples also live under [`../examples/client/`](../exampl
 - [`zod-parse-support-responses.ts`](../examples/client/zod-parse-support-responses.ts)
 
 These recipes demonstrate how to consume the published projection layer under [`../projections/`](../projections/) when you want typed interfaces or Zod parsing in addition to raw JSON Schema, and how to inspect or generate from the strongest published OpenAPI route surface directly when compact summaries are too lossy. Together they cover the published client-recipe navigator as typed contract data, single, batch, and fix `validate` request families, source-level TypeScript builders plus source-level typed reading of the published request samples, a direct OpenAPI route-summary path, a repo-local OpenAPI code-generation path through `openapi-typescript`, a typed live-client bridge for all published validator routes backed by the shared route projection and the bounded `stats` query path, a typed validator envelope-family discovery path backed by the shared envelope-family projection, a typed validator route-behavior discovery path backed by the shared route projection and compact route pack, typed/parsing paths for the published pass, fail, batch, and fix response families, the published `gates` / `stats` support responses, and the bounded shared generic, unauthorized, forbidden, conflict, and rate-limit error envelopes.
+They also now cover repo-relative TypeScript and Zod parsing for the published archive-bundle portability contract.
 
 ## Raw JSON Schema recipes
 
@@ -164,6 +171,7 @@ If you need a cross-language raw-asset consumption path outside the Node runtime
 
 - [`../examples/client/python-contract-reference.py`](../examples/client/python-contract-reference.py)
 - [`../examples/client/python-client-recipe-index.py`](../examples/client/python-client-recipe-index.py)
+- [`../examples/client/python-parse-archive-bundle.py`](../examples/client/python-parse-archive-bundle.py)
 - [`../examples/client/python-openapi-reference.py`](../examples/client/python-openapi-reference.py)
 - [`../examples/client/python-live-validator-client.py`](../examples/client/python-live-validator-client.py)
 - [`../examples/client/python-recompute-integrity-seal.py`](../examples/client/python-recompute-integrity-seal.py)
@@ -177,7 +185,7 @@ If you need a cross-language raw-asset consumption path outside the Node runtime
 - [`../examples/client/python-parse-support-responses.py`](../examples/client/python-parse-support-responses.py)
 - [`python-consumption.md`](python-consumption.md)
 
-These recipes demonstrate how Python consumers can read the published client-recipe navigator and compact contract-reference JSON files, read the strongest published OpenAPI surface directly, use the published route pack as one reusable full-route live-client bridge, inspect curated raw capsule assets, prepare validator-envelope request flows for `validate`, `batch`, and `fix`, call the published `gates` and `stats` support routes including the bounded `stats` query path, parse published validator response families plus bounded shared and route-specific error envelopes, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
+These recipes demonstrate how Python consumers can read the published client-recipe navigator and archive-bundle sample, read compact contract-reference JSON files, read the strongest published OpenAPI surface directly, use the published route pack as one reusable full-route live-client bridge, inspect curated raw capsule assets, prepare validator-envelope request flows for `validate`, `batch`, and `fix`, call the published `gates` and `stats` support routes including the bounded `stats` query path, parse published validator response families plus bounded shared and route-specific error envelopes, and recompute `integrity_sha3_512` directly from the published four-root payload, both from a repo checkout and from an extracted packed artifact.
 
 ## Package recipes
 
@@ -221,6 +229,7 @@ If you want package-style consumption instead of file-relative source imports, a
 - [`../examples/client/esm-package-validate-response.mjs`](../examples/client/esm-package-validate-response.mjs)
 - [`../examples/client/ts-package-contract-reference.ts`](../examples/client/ts-package-contract-reference.ts)
 - [`../examples/client/ts-package-client-recipe-index.ts`](../examples/client/ts-package-client-recipe-index.ts)
+- [`../examples/client/ts-package-parse-archive-bundle.ts`](../examples/client/ts-package-parse-archive-bundle.ts)
 - [`../examples/client/ts-package-openapi-codegen.ts`](../examples/client/ts-package-openapi-codegen.ts)
 - [`../examples/client/ts-package-openapi-reference.ts`](../examples/client/ts-package-openapi-reference.ts)
 - [`../examples/client/ts-package-error-responses.ts`](../examples/client/ts-package-error-responses.ts)

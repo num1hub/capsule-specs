@@ -16,7 +16,10 @@ const nodeFiles = [
 
 const typeRecipeFiles = [
   'ts-client-recipe-index.ts',
+  'zod-parse-client-recipe-index.ts',
+  'ts-parse-archive-bundle.ts',
   'ts-capsule-summary.ts',
+  'zod-parse-archive-bundle.ts',
   'zod-parse-capsule.ts',
   'ts-openapi-route-summary.ts',
   'openapi-generate-validator-types.mjs',
@@ -84,6 +87,7 @@ const integrityRecipeFiles = [
 
 const pythonRecipeFiles = [
   'python-client-recipe-index.py',
+  'python-parse-archive-bundle.py',
   'python-contract-reference.py',
   'python-openapi-reference.py',
   'python-live-validator-client.py',
@@ -122,6 +126,7 @@ const packageRecipeFiles = [
 ];
 
 const packageTypeRecipeFiles = [
+  'ts-package-parse-archive-bundle.ts',
   'ts-package-client-recipe-index.ts',
   'ts-package-error-responses.ts',
   'ts-package-contract-reference.ts',
@@ -187,7 +192,7 @@ const recipeGroups = [
   {
     id: 'python-consumers',
     title: 'Python consumers',
-    description: 'Cross-language readers, parsers, and live validator flows from repo and packed artifacts.',
+    description: 'Cross-language readers, archive parsers, and live validator flows from repo and packed artifacts.',
     audiences: ['integrators', 'tool-builders'],
     primary_docs: ['docs/python-consumption.md', 'docs/client-recipes.md'],
     recommended_start: 'python-live-validator-client.py',
@@ -205,7 +210,7 @@ const recipeGroups = [
   {
     id: 'package-typescript',
     title: 'TypeScript package consumers',
-    description: 'Installed-package typed request, response, route, navigator, and OpenAPI codegen entrypoints.',
+    description: 'Installed-package typed request, response, archive, route, navigator, and OpenAPI codegen entrypoints.',
     audiences: ['integrators', 'tool-builders'],
     primary_docs: ['docs/npm-consumption.md', 'docs/type-projections.md'],
     recommended_start: 'ts-package-live-validator-client.ts',
@@ -261,12 +266,17 @@ const taskEntrypoints = [
   },
   {
     id: 'source-recipe-navigation',
-    intent: 'Read the published client-recipe navigator through the source-level TypeScript projection before choosing a repo-relative snippet',
+    intent: 'Read the published client-recipe navigator through the source-level TypeScript or Zod projection before choosing a repo-relative snippet',
     primary_group: 'source-level-types',
     recommended: 'ts-client-recipe-index.ts',
-    alternatives: ['ts-parse-validate-requests.ts', 'ts-live-validator-client.ts', 'ts-route-behavior-reference.ts'],
+    alternatives: [
+      'zod-parse-client-recipe-index.ts',
+      'ts-parse-validate-requests.ts',
+      'ts-live-validator-client.ts',
+      'ts-route-behavior-reference.ts'
+    ],
     docs: ['docs/client-recipes.md', 'docs/type-projections.md', 'docs/integration-guide.md'],
-    runtimes: ['typescript']
+    runtimes: ['typescript', 'zod']
   },
   {
     id: 'source-request-reading',

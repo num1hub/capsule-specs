@@ -14,6 +14,9 @@
       "@num1hub/capsule-specs/typescript/capsule": [
         "./projections/typescript/capsule.ts"
       ],
+      "@num1hub/capsule-specs/typescript/archive": [
+        "./projections/typescript/archive.ts"
+      ],
       "@num1hub/capsule-specs/typescript/client-recipe-index": [
         "./projections/typescript/client-recipe-index.ts"
       ],
@@ -31,6 +34,12 @@
       ],
       "@num1hub/capsule-specs/zod/capsule": [
         "./projections/zod/capsule.ts"
+      ],
+      "@num1hub/capsule-specs/zod/archive": [
+        "./projections/zod/archive.ts"
+      ],
+      "@num1hub/capsule-specs/zod/client-recipe-index": [
+        "./projections/zod/client-recipe-index.ts"
       ],
       "@num1hub/capsule-specs/zod/validator-api": [
         "./projections/zod/validator-api.ts"

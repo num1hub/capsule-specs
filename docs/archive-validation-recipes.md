@@ -7,6 +7,7 @@ Use this path when you want:
 - a structural validation path for portability/export bundle payloads
 - a public-safe replay-contract check without depending on private runtime code
 - a copyable Ajv recipe from either a repo checkout or installed package exports
+- a typed TypeScript or Zod read path for the same archive sample without inventing local archive interfaces
 - a clear `Ajv2020 + ajv-formats` path for the archive contract's `date-time` fields
 
 ## What this path is good for
@@ -39,6 +40,12 @@ node examples/client/ajv-validate-archive-bundle.mjs
 
 That recipe validates the published archive-bundle sample directly against the public schema and checks a few high-signal replay fields so downstream consumers can see a realistic positive path.
 
+If you want repo-relative typed parsing instead of raw Ajv validation, also inspect:
+
+- [`../examples/client/ts-parse-archive-bundle.ts`](../examples/client/ts-parse-archive-bundle.ts)
+- [`../examples/client/zod-parse-archive-bundle.ts`](../examples/client/zod-parse-archive-bundle.ts)
+- [`type-projections.md`](type-projections.md)
+
 ## Package-consumer Ajv recipe
 
 If you want the same path from an installed tarball or future package distribution, use:
@@ -55,6 +62,12 @@ That recipe consumes:
 - `@num1hub/capsule-specs/examples/archive/archive-bundle.sample.json`
 
 The fresh-install proof for that path lives in [`../scripts/check-package-install.js`](../scripts/check-package-install.js).
+
+If you want installed-package typed parsing rather than raw Ajv validation, also inspect:
+
+- [`../examples/client/ts-package-parse-archive-bundle.ts`](../examples/client/ts-package-parse-archive-bundle.ts)
+- `@num1hub/capsule-specs/typescript/archive`
+- `@num1hub/capsule-specs/zod/archive`
 
 ## Minimal decision rule
 

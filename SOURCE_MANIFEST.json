@@ -7352,5 +7352,69 @@
     ],
     "transformation_type": "generated",
     "notes": "Versioning and contract-change policy for the public repository surface."
+  },
+  "projections/typescript/archive.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
+    ],
+    "transformation_type": "projection",
+    "notes": "Public-safe TypeScript projection for the published archive-bundle portability contract."
+  },
+  "projections/zod/archive.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/projections/typescript/archive.ts",
+      "/home/n1/codex-workspace/schemas/archive-bundle.schema.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public-safe Zod projection for the published archive-bundle portability contract."
+  },
+  "projections/zod/client-recipe-index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/projections/typescript/client-recipe-index.ts",
+      "/home/n1/codex-workspace/schemas/client-recipe-index.schema.json"
+    ],
+    "transformation_type": "derived",
+    "notes": "Public-safe Zod projection for runtime parsing of the published client-recipe navigator."
+  },
+  "examples/client/ts-parse-archive-bundle.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
+      "/home/n1/codex-workspace/projections/typescript/archive.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Source-level TypeScript recipe for the published archive-bundle portability contract."
+  },
+  "examples/client/zod-parse-archive-bundle.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
+      "/home/n1/codex-workspace/projections/zod/archive.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Source-level Zod recipe for parsing the published archive-bundle portability contract."
+  },
+  "examples/client/ts-package-parse-archive-bundle.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json",
+      "/home/n1/codex-workspace/projections/typescript/archive.ts",
+      "/home/n1/codex-workspace/projections/zod/archive.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "TypeScript package-consumer recipe for typing and parsing the published archive-bundle sample from installed package exports."
+  },
+  "examples/client/python-parse-archive-bundle.py": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/archive/archive-bundle.sample.json"
+    ],
+    "transformation_type": "generated",
+    "notes": "Python repo-checkout and packed-artifact recipe for reading the published archive-bundle sample as raw JSON."
+  },
+  "examples/client/zod-parse-client-recipe-index.ts": {
+    "source_paths": [
+      "/home/n1/codex-workspace/examples/client/recipe-index.json",
+      "/home/n1/codex-workspace/projections/zod/client-recipe-index.ts"
+    ],
+    "transformation_type": "generated",
+    "notes": "Source-level Zod recipe for parsing the published client-recipe navigator."
   }
 }
