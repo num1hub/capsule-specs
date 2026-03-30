@@ -17,8 +17,8 @@
     "license": "Apache-2.0"
   },
   "release": {
-    "latest_tag": "v0.1.0",
-    "latest_release_url": "https://github.com/num1hub/capsule-specs/releases/tag/v0.1.0"
+    "latest_tag": "v0.2.0",
+    "latest_release_url": "https://github.com/num1hub/capsule-specs/releases/tag/v0.2.0"
   },
   "identity_claims": [
     "The canonical public repository identity for this project is num1hub/capsule-specs.",
