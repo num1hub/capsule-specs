@@ -37,7 +37,8 @@ const integrationTemplate = readText('.github/ISSUE_TEMPLATE/integration_questio
 const contractTemplate = readText('.github/ISSUE_TEMPLATE/contract_change.md');
 
 assert(Array.isArray(labels) && labels.length >= 10, '.github/labels.json must define at least 10 labels');
-assert(Array.isArray(milestones.active_milestones) && milestones.active_milestones.length >= 2, '.github/milestones.json must define at least 2 active milestones');
+assert(Array.isArray(milestones.active_milestones) && milestones.active_milestones.length >= 1, '.github/milestones.json must define at least 1 active milestone');
+assert(Array.isArray(milestones.delivered_milestones), '.github/milestones.json must define delivered_milestones');
 assert(Array.isArray(milestones.operating_notes) && milestones.operating_notes.length >= 1, '.github/milestones.json must define operating notes');
 assert(releaseConfigText.includes('changelog:'), '.github/release.yml must define a changelog section');
 assert(releaseConfigText.includes('categories:'), '.github/release.yml must define changelog categories');
@@ -73,7 +74,7 @@ for (const requiredLabel of requiredLabels) {
   assert(labelNames.has(requiredLabel), `required GitHub label missing from .github/labels.json: ${requiredLabel}`);
 }
 
-for (const milestone of milestones.active_milestones) {
+for (const milestone of [...milestones.active_milestones, ...milestones.delivered_milestones]) {
   assert(typeof milestone.title === 'string' && milestone.title.length > 0, 'every milestone must have a title');
   assert(typeof milestone.roadmap_wave === 'string' && milestone.roadmap_wave.length > 0, `milestone ${milestone.title} must have a roadmap_wave`);
   assert(typeof milestone.description === 'string' && milestone.description.length > 0, `milestone ${milestone.title} must have a description`);
@@ -111,7 +112,8 @@ for (const milestone of milestones.active_milestones) {
     `ROADMAP.md must mention the roadmap wave for active milestone ${milestone.title}`
   );
 }
-assert(contributing.includes('v0.2.0 Better Integrator Surfaces') && contributing.includes('v0.3.0 Projection-Friendly References'), 'CONTRIBUTING.md must mention the active milestones');
+assert(contributing.includes('v0.3.0 Projection-Friendly References'), 'CONTRIBUTING.md must mention the active milestone set');
+assert(contributing.includes('v0.2.0 Better Integrator Surfaces'), 'CONTRIBUTING.md must mention the recently delivered milestone set');
 assert(communityDoc.includes('.github/labels.json') && communityDoc.includes('.github/milestones.json'), 'docs/community-health.md must mention .github label and milestone configs');
 assert(maintainerOps.includes('docs/github-operations.md') || maintainerOps.includes('.github/labels.json'), 'docs/maintainer-operations.md must mention the GitHub operations layer');
 assert(releaseEvidence.includes('.github/release.yml') && releaseEvidence.includes('.github/dependabot.yml'), 'docs/release-evidence.md must mention GitHub-native release/update surfaces');
@@ -122,4 +124,4 @@ if (process.exitCode) {
   process.exit(process.exitCode);
 }
 
-console.log(`OK: checked ${labels.length} GitHub labels, ${milestones.active_milestones.length} milestones, and ${releaseCategoryTitles.length} release categories`);
+console.log(`OK: checked ${labels.length} GitHub labels, ${milestones.active_milestones.length} active milestones, ${milestones.delivered_milestones.length} delivered milestones, and ${releaseCategoryTitles.length} release categories`);

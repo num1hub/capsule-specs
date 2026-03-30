@@ -1,15 +1,6 @@
 {
   "active_milestones": [
     {
-      "title": "v0.2.0 Better Integrator Surfaces",
-      "roadmap_wave": "Wave 2: Better integrator surfaces",
-      "description": "Clearer schema commentary, stronger validator envelope docs, broader API sample coverage, and better compatibility notes for downstream integrators.",
-      "tracked_issues": [
-        1,
-        2
-      ]
-    },
-    {
       "title": "v0.3.0 Projection-Friendly References",
       "roadmap_wave": "Wave 3: Projection-friendly references",
       "description": "Public-safe TypeScript and Zod projections, generated reference indexes, and contributor-facing repo-only validation workflows.",
@@ -19,9 +10,21 @@
       ]
     }
   ],
+  "delivered_milestones": [
+    {
+      "title": "v0.2.0 Better Integrator Surfaces",
+      "roadmap_wave": "Wave 2: Better integrator surfaces",
+      "description": "Clearer schema commentary, stronger validator envelope docs, broader API sample coverage, and better compatibility notes for downstream integrators.",
+      "tracked_issues": [
+        1,
+        2
+      ]
+    }
+  ],
   "operating_notes": [
     "Milestones in this file are the maintained public roadmap waves for the GitHub issue surface.",
-    "Issue numbers are intentionally bounded to the current active public work rather than a full private roadmap export.",
-    "If the active public roadmap changes materially, this file, ROADMAP.md, docs/community-health.md, and release-facing summaries should move together."
+    "active_milestones represent currently open public roadmap waves; delivered_milestones preserve recently completed public waves without pretending they are still active.",
+    "Issue numbers are intentionally bounded to the current active public work plus recently delivered public waves rather than a full private roadmap export.",
+    "If the active or delivered public roadmap changes materially, this file, ROADMAP.md, docs/community-health.md, and release-facing summaries should move together."
   ]
 }

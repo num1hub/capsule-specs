@@ -11,7 +11,9 @@ Use a normal GitHub pull request when you are changing public documentation, sch
 When a change affects architectural truth, validation law, or the underlying capsule model, open an issue first and describe the affected boundary and source material. This repository is intentionally projection-oriented, so changes to public files should remain aligned with the upstream source surfaces.
 
 Use the repository issue templates where possible. They keep bug reports, integration questions, and contract-change proposals scoped to the public surface.
-Active public work is grouped under the `v0.2.0 Better Integrator Surfaces` and `v0.3.0 Projection-Friendly References` milestones, with labels such as `area:*`, `kind:*`, and `contract` used to keep issue scope reviewable.
+Current active public work is grouped under the `v0.3.0 Projection-Friendly References` milestone.
+The delivered `v0.2.0 Better Integrator Surfaces` milestone remains recorded in `.github/milestones.json` so the tracked roadmap surface preserves recently completed public work instead of pretending it never existed.
+Labels such as `area:*`, `kind:*`, and `contract` are used to keep issue scope reviewable.
 The repo-owned GitHub operating surface is documented in `.github/labels.json`, `.github/milestones.json`, and `docs/github-operations.md`.
 The contributor-facing repo-only verification flow is documented in [`docs/repo-validation-workflow.md`](docs/repo-validation-workflow.md).
 The package-consumer path for the public projection layer is documented in [`docs/npm-consumption.md`](docs/npm-consumption.md).

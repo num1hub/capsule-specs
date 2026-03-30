@@ -32,8 +32,9 @@ The GitHub issue surface uses a small bounded taxonomy rather than free-form lab
 - `kind:*` labels for integration-facing or release-facing work
 
 When roadmap waves are open, the maintainer mirrors them through bounded GitHub milestones so contributors can see which public work is active without guessing from prose alone.
+Delivered public milestones can remain tracked in the same file as a bounded historical set so the public roadmap surface preserves recent closure without pretending a delivered wave is still active.
 The repository also keeps GitHub-native hygiene explicit through `CITATION.cff`, `.github/dependabot.yml`, and `.github/release.yml` rather than leaving reuse, update posture, and release-note grouping implicit.
-The maintained GitHub issue surface is also versioned in `.github/labels.json` and `.github/milestones.json` so label taxonomy and active public roadmap waves do not live only in mutable platform state.
+The maintained GitHub issue surface is also versioned in `.github/labels.json` and `.github/milestones.json` so label taxonomy, active public roadmap waves, and recently delivered public waves do not live only in mutable platform state.
 
 The bounded public maintainer posture for intake, review, and release work is summarized in [`../PUBLIC_MAINTENANCE_MODEL.json`](../PUBLIC_MAINTENANCE_MODEL.json).
 The bounded contributor and maintainer adoption posture is summarized in [`../PUBLIC_ADOPTION_READINESS.json`](../PUBLIC_ADOPTION_READINESS.json).

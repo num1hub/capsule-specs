@@ -325,4 +325,5 @@ This repository is assembled from public-safe source materials curated out of th
 
 This is the initial public projection of the N1Hub open-core specification surface. The current release focuses on schema, validator-facing contracts, examples, and repository health rather than on the full runtime codebase.
 
-Wave 2 and Wave 3 are delivered. Wave 4 has started through an expanded curated raw capsule set, package-exported raw capsule assets, a compact reference pack for canonical enums and gate maps, fresh Ajv-backed raw-schema consumer recipes, direct archive-bundle validation recipes for portability consumers, explicit schema-invalid archive, capsule, and validator-envelope fixtures, single-file schema bundle artifacts for lower-friction codegen and polyglot consumers, and a cross-language Python raw-asset path for compact references, full published validator route coverage, and public `G16` seal proofs, and should continue widening other public-safe contract families without reopening the private runtime boundary.
+Wave 2, Wave 3, and Wave 4 are delivered in `v0.2.0`.
+The next widening pass should continue projection-friendly references and other public-safe contract families from the stable public baseline without reopening the private runtime boundary.

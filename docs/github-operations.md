@@ -13,6 +13,7 @@ The repo-owned configuration lives in:
 
 - which labels are part of the maintained public taxonomy
 - which milestones correspond to the currently open public roadmap waves
+- which recently delivered milestones remain explicitly tracked in-repo as a bounded public record
 - how `ROADMAP.md` stays aligned with delivered and future waves even after specific issues are delivered and closed
 - how GitHub release notes are grouped
 - how GitHub-native update hygiene is handled
@@ -34,4 +35,4 @@ The same workflow must also fetch full repository history. The public evidence-t
 ## Boundaries
 
 This layer does not claim that every GitHub setting is managed in-repo.
-It only claims that the maintained public label taxonomy, active milestone set, release-note grouping, and update posture are explicit and reviewable.
+It only claims that the maintained public label taxonomy, active milestone set, recently delivered milestone record, release-note grouping, and update posture are explicit and reviewable.
