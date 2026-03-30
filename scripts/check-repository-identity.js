@@ -88,7 +88,7 @@ assert(identity.repository?.name === 'capsule-specs', 'repository identity name 
 assert(identity.repository?.slug === 'num1hub/capsule-specs', 'repository identity slug must be num1hub/capsule-specs');
 assert(identity.repository?.canonical_repo_url === canonicalRepoUrl, 'repository identity canonical_repo_url must match the public GitHub repo');
 assert(identity.repository?.canonical_git_https === canonicalGitUrl, 'repository identity canonical_git_https must match the public GitHub remote');
-assert(identity.repository?.project_homepage === 'https://n1hub.com', 'repository identity project_homepage must point to n1hub.com');
+assert(identity.repository?.project_homepage === 'https://n1hub.com/projects/capsule-specs/', 'repository identity project_homepage must point to the Capsule-Specs portal page on n1hub.com');
 assert(identity.repository?.default_branch === 'main', 'repository identity default_branch must be main');
 assert(identity.repository?.visibility === 'public', 'repository identity visibility must be public');
 
