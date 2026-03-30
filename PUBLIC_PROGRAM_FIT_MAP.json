@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "reviewed_at": "2026-03-26",
   "purpose": "Make the main OSS-support and reviewer-program fit criteria explicit so outside evaluators can see why this public specs surface is credible today without implying acceptance, traction, or hosted-runtime maturity that the repo does not yet prove.",
   "fit_families": [

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 0.2.0 - 2026-03-29
+
+- formalized the maintainer projection loop after wave 4, proving that 22 machine-readable reviewer, trust, governance, and publication-safety summaries can stay as tracked public JSON while being regenerated from bounded maintainer-side capsule sources
 - added a dedicated OpenAPI coherence verifier and wired it through docs, release evidence, and machine-readable discovery surfaces, so compact validator route and envelope-family summaries no longer rely only on the broader reference-pack check to stay subordinate to the stronger published HTTP contract
 - expanded installed-package OpenAPI code-generation coverage with CommonJS and TypeScript recipes plus fresh-install proof, so generator-backed consumers no longer stop at one ESM-only package path after the strongest published OpenAPI artifact
 - added direct repo-local and installed-package OpenAPI code-generation recipes plus a dedicated verifier, so tool-builders can recover generated TypeScript declarations from the strongest published HTTP contract without jumping straight from prose to ad hoc generator wiring

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "reviewed_at": "2026-03-26",
   "objective": "Help reviewers evaluate the public specs surface as a bounded, maintained, evidence-backed OSS contract surface without mistaking it for the full private N1Hub runtime.",
   "claims": [

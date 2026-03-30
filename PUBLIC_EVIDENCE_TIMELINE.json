@@ -1,6 +1,6 @@
 {
-  "version": "0.1.0",
-  "reviewed_at": "2026-03-26",
+  "version": "0.2.0",
+  "reviewed_at": "2026-03-29",
   "purpose": "Provide a bounded, machine-readable summary of how the public specs repository hardened over time so external reviewers can see active maintenance instead of inferring it from raw git history alone.",
   "milestones": [
     {
@@ -243,6 +243,26 @@
         "npm run check:limitations-register"
       ],
       "maintenance_signal": "co-moving release surfaces and public non-promises became explicit reviewer-facing constraints"
+    },
+    {
+      "id": "maintainer-projection-loop-proven",
+      "order": 13,
+      "date": "2026-03-29",
+      "commit": "038be4c27d400bb5388fc1b59eba5cb4b74e0606",
+      "title": "Maintainer projection loop proven",
+      "focus": "Proved that 22 public machine-readable summary layers can remain tracked GitHub artifacts while being regenerated from bounded maintainer-side capsule sources without leaking the private vault.",
+      "strongest_surfaces": [
+        "docs/maintainer-operations.md",
+        "PUBLIC_MAINTENANCE_MODEL.json",
+        "PUBLIC_DECISION_LOG.json",
+        "PUBLIC_BOUNDARY_MAP.json"
+      ],
+      "review_commands": [
+        "npm run check:maintenance-model",
+        "npm run check:evidence-timeline",
+        "npm run verify:repo"
+      ],
+      "maintenance_signal": "public summary surfaces are now demonstrably downstream of governed maintainer-side projection workflows rather than manual JSON editing"
     }
   ],
   "review_commands": [

@@ -42,6 +42,37 @@ External programs and contributors need more than docs. They need evidence that 
 - `dream` is a public exploration branch, not a private maintainer surface.
 - Private operator material and maintainer-only exports stay outside tracked public files.
 
+## Projection workflow note
+
+Some reviewer and governance summary surfaces may be maintained through maintainer-local capsule projection workflows, especially on the public `dream` branch.
+
+Today that projection-active summary set includes:
+
+- `PUBLIC_DECISION_LOG.json`
+- `PUBLIC_EVIDENCE_GAPS_REGISTER.json`
+- `PUBLIC_LIMITATIONS_REGISTER.json`
+- `PUBLIC_CAPABILITY_MATRIX.json`
+- `PUBLIC_ECOSYSTEM_VALUE_MAP.json`
+- `PUBLIC_PROGRAM_FIT_MAP.json`
+- `PUBLIC_REVIEW_SCORECARD.json`
+- `PUBLIC_AUDIENCE_PATHS.json`
+- `PUBLIC_ASSURANCE_CASE.json`
+- `PUBLIC_DEPENDENCY_GRAPH.json`
+- `PUBLIC_TRACEABILITY_MATRIX.json`
+- `PUBLIC_EVIDENCE_STRENGTH_MAP.json`
+- `PUBLIC_UPDATE_COHERENCE_MAP.json`
+- `PUBLIC_ADOPTION_READINESS.json`
+- `PUBLIC_FRESHNESS_MODEL.json`
+- `PUBLIC_MAINTENANCE_MODEL.json`
+- `PUBLIC_CHANGE_CONTROL_MODEL.json`
+- `PUBLIC_OWNERSHIP_MAP.json`
+- `PUBLIC_BOUNDARY_MAP.json`
+- `PUBLIC_PORTABILITY_PROFILE.json`
+- `PUBLIC_PUBLICATION_READINESS.json`
+- `PUBLIC_FAILURE_MODEL.json`
+
+Treat those files as public outputs whose semantic changes must stay aligned with the stronger public docs, schemas, examples, release evidence, and verification surfaces.
+
 ## Important boundary
 
 This layer documents maintainer posture for the public specs surface only. It does not claim a guaranteed SLA for issue response, nor does it expose private internal workflow details from the upstream N1Hub runtime.

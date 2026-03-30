@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "reviewed_at": "2026-03-26",
   "purpose": "Publish bounded publication-state and publication-safety criteria so maintainers and reviewers can see why this public specs surface remains coherent as a live GitHub repository while keeping traction, adoption, and hosted-runtime claims explicitly deferred.",
   "readiness_families": [

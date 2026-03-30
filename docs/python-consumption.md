@@ -71,7 +71,7 @@ Example flow:
 ```bash
 npm pack
 mkdir -p packed-artifact
-tar -xzf num1hub-capsule-specs-0.1.0.tgz -C packed-artifact
+tar -xzf num1hub-capsule-specs-0.2.0.tgz -C packed-artifact
 python3 packed-artifact/package/examples/client/python-client-recipe-index.py
 python3 packed-artifact/package/examples/client/python-contract-reference.py
 python3 packed-artifact/package/examples/client/python-live-validator-client.py
